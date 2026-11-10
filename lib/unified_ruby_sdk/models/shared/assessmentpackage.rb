@@ -7,20 +7,19 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Used by assessment providers to SUBMIT packages to ATS systems
       class AssessmentPackage
         extend T::Sig
         include Crystalline::MetadataFields
 
 
-        field :type, Models::Shared::AssessmentPackageType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': Utils.enum_from_string(Models::Shared::AssessmentPackageType, false) } }
+        field :type, Models::Shared::AssessmentPackageType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::AssessmentPackageType, false) } }
         # Alternative namesidentifiers for this package
         field :aliases, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('aliases') } }
         # Connection ID that this package belongs to
         field :connection_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('connection_id') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Detailed description
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
         # Whether provider redirects user to complete assessment
@@ -44,17 +43,17 @@ module UnifiedRubySDK
         # Questionsinputs needed for this assessment (aligned with verification)
         field :parameters, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AssessmentParameter)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parameters') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :regions, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AssessmentPackageRegion)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('regions') } }
         # Category tags (e.g., "Assessment", "Background Check")
         field :tags, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tags') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Workspace ID that this package belongs to (reference to KmsSpace)
         field :workspace_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('workspace_id') } }
 
-        sig { params(type: Models::Shared::AssessmentPackageType, aliases: T.nilable(T::Array[::String]), connection_id: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), has_redirect_url: T.nilable(T::Boolean), has_target_url: T.nilable(T::Boolean), id: T.nilable(::String), info_url: T.nilable(::String), integration_types: T.nilable(T::Array[::String]), max_score: T.nilable(::Float), metadata: T.nilable(T::Array[Models::Shared::AssessmentMetadata]), name: T.nilable(::String), needs_ip_address: T.nilable(T::Boolean), parameters: T.nilable(T::Array[Models::Shared::AssessmentParameter]), raw: T.nilable(T::Hash[Symbol, ::Object]), regions: T.nilable(T::Array[Models::Shared::AssessmentPackageRegion]), tags: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), workspace_id: T.nilable(::String)).void }
+        sig { params(type: Models::Shared::AssessmentPackageType, aliases: T.nilable(T::Array[::String]), connection_id: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), has_redirect_url: T.nilable(T::Boolean), has_target_url: T.nilable(T::Boolean), id: T.nilable(::String), info_url: T.nilable(::String), integration_types: T.nilable(T::Array[::String]), max_score: T.nilable(::Float), metadata: T.nilable(T::Array[Models::Shared::AssessmentMetadata]), name: T.nilable(::String), needs_ip_address: T.nilable(T::Boolean), parameters: T.nilable(T::Array[Models::Shared::AssessmentParameter]), raw: T.nilable(T::Hash[::Symbol, ::Object]), regions: T.nilable(T::Array[Models::Shared::AssessmentPackageRegion]), tags: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), workspace_id: T.nilable(::String)).void }
         def initialize(type:, aliases: nil, connection_id: nil, created_at: nil, description: nil, has_redirect_url: nil, has_target_url: nil, id: nil, info_url: nil, integration_types: nil, max_score: nil, metadata: nil, name: nil, needs_ip_address: nil, parameters: nil, raw: nil, regions: nil, tags: nil, updated_at: nil, workspace_id: nil)
           @type = type
           @aliases = aliases

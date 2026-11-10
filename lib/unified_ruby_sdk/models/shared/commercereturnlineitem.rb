@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class CommerceReturnLineitem
         extend T::Sig
@@ -24,7 +23,7 @@ module UnifiedRubySDK
 
         field :quantity, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('quantity') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :reason, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reason') } }
 
@@ -34,7 +33,7 @@ module UnifiedRubySDK
 
         field :status, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status') } }
 
-        sig { params(id: T.nilable(::String), item_id: T.nilable(::String), name: T.nilable(::String), order_line_id: T.nilable(::String), quantity: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), reason: T.nilable(::String), refund_amount: T.nilable(::Float), sku: T.nilable(::String), status: T.nilable(::String)).void }
+        sig { params(id: T.nilable(::String), item_id: T.nilable(::String), name: T.nilable(::String), order_line_id: T.nilable(::String), quantity: T.nilable(::Float), raw: T.nilable(T::Hash[::Symbol, ::Object]), reason: T.nilable(::String), refund_amount: T.nilable(::Float), sku: T.nilable(::String), status: T.nilable(::String)).void }
         def initialize(id: nil, item_id: nil, name: nil, order_line_id: nil, quantity: nil, raw: nil, reason: nil, refund_amount: nil, sku: nil, status: nil)
           @id = id
           @item_id = item_id

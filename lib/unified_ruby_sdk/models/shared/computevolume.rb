@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class ComputeVolume
         extend T::Sig
@@ -16,7 +15,7 @@ module UnifiedRubySDK
         # The availability zone within the region, where the vendor places volumes per zone
         field :availability_zone, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('availability_zone') } }
         # When the volume was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Unique identifier for the volume
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # Instances the volume is mounted on
@@ -26,21 +25,21 @@ module UnifiedRubySDK
         # Display name of the volume
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # Raw data from integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # The region the volume lives in
         field :region_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('region_id') } }
         # Provisioned size in MiB
         field :size_mb, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size_mb') } }
         # Normalized volume status
-        field :status, Crystalline::Nilable.new(Models::Shared::ComputeVolumeStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::ComputeVolumeStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::ComputeVolumeStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::ComputeVolumeStatus, true) } }
         # The kind of volume
-        field :type, Crystalline::Nilable.new(Models::Shared::ComputeVolumeType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::ComputeVolumeType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::ComputeVolumeType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::ComputeVolumeType, true) } }
         # When the volume was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Used space in MiB
         field :used_mb, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('used_mb') } }
 
-        sig { params(availability_zone: T.nilable(::String), created_at: T.nilable(::DateTime), id: T.nilable(::String), instance_ids: T.nilable(T::Array[::String]), metadata: T.nilable(T::Array[Models::Shared::ComputeMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), region_id: T.nilable(::String), size_mb: T.nilable(::Float), status: T.nilable(Models::Shared::ComputeVolumeStatus), type: T.nilable(Models::Shared::ComputeVolumeType), updated_at: T.nilable(::DateTime), used_mb: T.nilable(::Float)).void }
+        sig { params(availability_zone: T.nilable(::String), created_at: T.nilable(::DateTime), id: T.nilable(::String), instance_ids: T.nilable(T::Array[::String]), metadata: T.nilable(T::Array[Models::Shared::ComputeMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), region_id: T.nilable(::String), size_mb: T.nilable(::Float), status: T.nilable(Models::Shared::ComputeVolumeStatus), type: T.nilable(Models::Shared::ComputeVolumeType), updated_at: T.nilable(::DateTime), used_mb: T.nilable(::Float)).void }
         def initialize(availability_zone: nil, created_at: nil, id: nil, instance_ids: nil, metadata: nil, name: nil, raw: nil, region_id: nil, size_mb: nil, status: nil, type: nil, updated_at: nil, used_mb: nil)
           @availability_zone = availability_zone
           @created_at = created_at

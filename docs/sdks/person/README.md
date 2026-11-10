@@ -1,5 +1,4 @@
 # Person
-(*person*)
 
 ## Overview
 
@@ -19,15 +18,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListEnrichPeopleRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListEnrichPeopleRequest.new(
+  connection_id: '<id>'
+)
 res = s.person.list_enrich_people(request: req)
 
 unless res.enrich_person.nil?

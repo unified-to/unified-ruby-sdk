@@ -1,5 +1,16 @@
 # CrmEmailType
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CrmEmailType::WORK
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = CrmEmailType.deserialize("custom_value")
+```
+
 
 ## Values
 

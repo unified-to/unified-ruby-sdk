@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class TaskTask
         extend T::Sig
@@ -18,15 +17,15 @@ module UnifiedRubySDK
         # Array of attachment IDs retrieved from StorageFile.Get endpoint
         field :attachment_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('attachment_ids') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :completed_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('completed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :completed_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('completed_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # The user who created this task (reference to HrisEmployee)
         field :creator_user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('creator_user_id') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :due_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('due_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :due_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('due_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Scheduled/planned end of the task (distinct from due_at and completed_at) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :follower_user_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('follower_user_ids') } }
 
@@ -50,11 +49,11 @@ module UnifiedRubySDK
         # (reference to TaskProject)
         field :project_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('project_id') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # Scheduled/planned start of the task (distinct from created_at) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        field :status, Crystalline::Nilable.new(Models::Shared::TaskTaskStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::TaskTaskStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::TaskTaskStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::TaskTaskStatus, true) } }
 
         field :story_points, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('story_points') } }
 
@@ -66,11 +65,11 @@ module UnifiedRubySDK
         # The task/issue type name (e.g. Jira issue type).
         field :type, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
 
-        sig { params(assigned_user_ids: T.nilable(T::Array[::String]), attachment_ids: T.nilable(T::Array[::String]), completed_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), creator_user_id: T.nilable(::String), due_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), follower_user_ids: T.nilable(T::Array[::String]), group_ids: T.nilable(T::Array[::String]), has_children: T.nilable(T::Boolean), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::TaskMetadata]), name: T.nilable(::String), notes: T.nilable(::String), parent_id: T.nilable(::String), priority: T.nilable(::String), progress: T.nilable(::Float), project_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::TaskTaskStatus), story_points: T.nilable(::Float), tags: T.nilable(T::Array[::String]), time_spent: T.nilable(::Float), time_spent_unit: T.nilable(::String), type: T.nilable(::String), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
+        sig { params(assigned_user_ids: T.nilable(T::Array[::String]), attachment_ids: T.nilable(T::Array[::String]), completed_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), creator_user_id: T.nilable(::String), due_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), follower_user_ids: T.nilable(T::Array[::String]), group_ids: T.nilable(T::Array[::String]), has_children: T.nilable(T::Boolean), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::TaskMetadata]), name: T.nilable(::String), notes: T.nilable(::String), parent_id: T.nilable(::String), priority: T.nilable(::String), progress: T.nilable(::Float), project_id: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::TaskTaskStatus), story_points: T.nilable(::Float), tags: T.nilable(T::Array[::String]), time_spent: T.nilable(::Float), time_spent_unit: T.nilable(::String), type: T.nilable(::String), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
         def initialize(assigned_user_ids: nil, attachment_ids: nil, completed_at: nil, created_at: nil, creator_user_id: nil, due_at: nil, end_at: nil, follower_user_ids: nil, group_ids: nil, has_children: nil, id: nil, metadata: nil, name: nil, notes: nil, parent_id: nil, priority: nil, progress: nil, project_id: nil, raw: nil, start_at: nil, status: nil, story_points: nil, tags: nil, time_spent: nil, time_spent_unit: nil, type: nil, updated_at: nil, url: nil)
           @assigned_user_ids = assigned_user_ids
           @attachment_ids = attachment_ids

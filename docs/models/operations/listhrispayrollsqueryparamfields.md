@@ -1,5 +1,13 @@
 # ListHrisPayrollsQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListHrisPayrollsQueryParamFields::ID
+```
+
 
 ## Values
 

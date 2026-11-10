@@ -1,5 +1,4 @@
 # Unified
-(*unified*)
 
 ## Overview
 
@@ -58,17 +57,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Shared::Connection.new(
   categories: [],
   integration_type: '<value>',
-  permissions: [],
+  permissions: []
 )
-
 res = s.unified.create_unified_connection(request: req)
 
 unless res.connection.nil?
@@ -105,11 +103,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.unified.create_unified_connection_reauth(id: '<id>')
 
 unless res.connection_reauth.nil?
@@ -146,13 +143,12 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = []
-
 res = s.unified.create_unified_environment(request: req)
 
 unless res.environments.nil?
@@ -189,20 +185,19 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Shared::SecretsManager.new(
   auth: {
-    "key1": '<value>',
-    "key": '<value>',
+    'key' => '<value>',
+    'key1' => '<value>',
   },
   name: '<value>',
-  type: Models::Shared::SecretsManagerType::AKEYLESS,
+  type: Models::Shared::SecretsManagerType::AKEYLESS
 )
-
 res = s.unified.create_unified_secretsmanager(request: req)
 
 unless res.secrets_manager.nil?
@@ -239,15 +234,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.unified.create_unified_webhook(webhook: Models::Shared::Webhook.new(
   connection_id: '<id>',
   event: Models::Shared::WebhookEvent::CREATED,
-  object_type: Models::Shared::WebhookObjectType::ATS_APPLICATIONSTATUS,
+  object_type: Models::Shared::WebhookObjectType::ATS_APPLICATIONSTATUS
 ))
 
 unless res.webhook.nil?
@@ -285,16 +279,15 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Shared::WorkspaceIntegration.new(
   integration_type: '<value>',
-  is_active: true,
+  is_active: true
 )
-
 res = s.unified.create_unified_workspaceintegration(request: req)
 
 unless res.workspace_integration.nil?
@@ -331,11 +324,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.unified.get_unified_apicall(id: '<id>')
 
 unless res.api_call.nil?
@@ -372,11 +364,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.unified.get_unified_connection(id: '<id>')
 
 unless res.connection.nil?
@@ -387,9 +378,10 @@ end
 
 ### Parameters
 
-| Parameter            | Type                 | Required             | Description          |
-| -------------------- | -------------------- | -------------------- | -------------------- |
-| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Connection |
+| Parameter                                                                                                                             | Type                                                                                                                                  | Required                                                                                                                              | Description                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `id`                                                                                                                                  | *::String*                                                                                                                            | :heavy_check_mark:                                                                                                                    | ID of the Connection                                                                                                                  |
+| `fields_`                                                                                                                             | T::Array<[Models::Operations::GetUnifiedConnectionQueryParamFields](../../models/operations/getunifiedconnectionqueryparamfields.md)> | :heavy_minus_sign:                                                                                                                    | Fields to return. Leave out auth to get connection metadata without credentials                                                       |
 
 ### Response
 
@@ -413,16 +405,15 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::GetUnifiedIntegrationAuthRequest.new(
   integration_type: '<value>',
-  workspace_id: '<id>',
+  workspace_id: '<id>'
 )
-
 res = s.unified.get_unified_integration_auth(request: req)
 
 unless res.res.nil?
@@ -459,11 +450,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.unified.get_unified_issue(id: '<id>')
 
 unless res.issue.nil?
@@ -500,11 +490,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.unified.get_unified_secretsmanager(id: '<id>')
 
 unless res.secrets_manager.nil?
@@ -541,11 +530,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.unified.get_unified_webhook(id: '<id>')
 
 unless res.webhook.nil?
@@ -582,11 +570,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.unified.get_unified_workspaceintegration(id: '<id>')
 
 unless res.workspace_integration.nil?
@@ -623,13 +610,12 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
-req = Models::Operations::ListUnifiedApicallsRequest.new()
-
+req = Models::Operations::ListUnifiedApicallsRequest.new
 res = s.unified.list_unified_apicalls(request: req)
 
 unless res.api_calls.nil?
@@ -666,13 +652,12 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
-req = Models::Operations::ListUnifiedConnectionsRequest.new()
-
+req = Models::Operations::ListUnifiedConnectionsRequest.new
 res = s.unified.list_unified_connections(request: req)
 
 unless res.connections.nil?
@@ -709,12 +694,11 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-res = s.unified.list_unified_environments()
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.unified.list_unified_environments
 
 unless res.environments.nil?
   # handle response
@@ -744,15 +728,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListUnifiedIntegrationWorkspacesRequest.new(
-  workspace_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListUnifiedIntegrationWorkspacesRequest.new(
+  workspace_id: '<id>'
+)
 res = s.unified.list_unified_integration_workspaces(request: req)
 
 unless res.integrations.nil?
@@ -789,13 +772,12 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
-req = Models::Operations::ListUnifiedIntegrationsRequest.new()
-
+req = Models::Operations::ListUnifiedIntegrationsRequest.new
 res = s.unified.list_unified_integrations(request: req)
 
 unless res.integrations.nil?
@@ -832,13 +814,12 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
-req = Models::Operations::ListUnifiedIssuesRequest.new()
-
+req = Models::Operations::ListUnifiedIssuesRequest.new
 res = s.unified.list_unified_issues(request: req)
 
 unless res.issues.nil?
@@ -875,13 +856,12 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
-req = Models::Operations::ListUnifiedNotificationsRequest.new()
-
+req = Models::Operations::ListUnifiedNotificationsRequest.new
 res = s.unified.list_unified_notifications(request: req)
 
 unless res.notifications.nil?
@@ -918,12 +898,11 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-res = s.unified.list_unified_secretsmanager_instructions()
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.unified.list_unified_secretsmanager_instructions
 
 unless res.secrets_manager_instructions_list.nil?
   # handle response
@@ -953,11 +932,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.unified.list_unified_secretsmanager_secrets(secretsmanager_id: '<id>')
 
 unless res.secrets_manager_secrets.nil?
@@ -997,13 +975,12 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
-req = Models::Operations::ListUnifiedSecretsmanagersRequest.new()
-
+req = Models::Operations::ListUnifiedSecretsmanagersRequest.new
 res = s.unified.list_unified_secretsmanagers(request: req)
 
 unless res.secrets_managers.nil?
@@ -1040,13 +1017,12 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
-req = Models::Operations::ListUnifiedWebhooksRequest.new()
-
+req = Models::Operations::ListUnifiedWebhooksRequest.new
 res = s.unified.list_unified_webhooks(request: req)
 
 unless res.webhooks.nil?
@@ -1083,13 +1059,12 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
-req = Models::Operations::ListUnifiedWorkspaceintegrationsRequest.new()
-
+req = Models::Operations::ListUnifiedWorkspaceintegrationsRequest.new
 res = s.unified.list_unified_workspaceintegrations(request: req)
 
 unless res.workspace_integrations.nil?
@@ -1126,15 +1101,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.unified.patch_unified_connection(connection: Models::Shared::Connection.new(
   categories: [],
   integration_type: '<value>',
-  permissions: [],
+  permissions: []
 ), id: '<id>')
 
 unless res.connection.nil?
@@ -1172,15 +1146,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.unified.patch_unified_webhook(webhook: Models::Shared::Webhook.new(
   connection_id: '<id>',
   event: Models::Shared::WebhookEvent::UPDATED,
-  object_type: Models::Shared::WebhookObjectType::MARTECH_MEMBER,
+  object_type: Models::Shared::WebhookObjectType::MARTECH_MEMBER
 ), id: '<id>')
 
 unless res.webhook.nil?
@@ -1218,11 +1191,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.unified.patch_unified_webhook_resume(id: '<id>')
 
 unless res.webhook.nil?
@@ -1259,11 +1231,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.unified.patch_unified_webhook_trigger(id: '<id>')
 
 if res.status_code == 200
@@ -1300,12 +1271,11 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-res = s.unified.patch_unified_workspaceintegration(workspace_integration_patch: Models::Shared::WorkspaceIntegrationPatch.new(), id: '<id>')
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.unified.patch_unified_workspaceintegration(workspace_integration_patch: Models::Shared::WorkspaceIntegrationPatch.new, id: '<id>')
 
 unless res.workspace_integration.nil?
   # handle response
@@ -1342,11 +1312,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.unified.remove_unified_connection(id: '<id>')
 
 if res.status_code == 200
@@ -1383,11 +1352,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.unified.remove_unified_environment(env: '<value>')
 
 unless res.environments.nil?
@@ -1424,11 +1392,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.unified.remove_unified_secretsmanager(id: '<id>')
 
 if res.status_code == 200
@@ -1465,11 +1432,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.unified.remove_unified_webhook(id: '<id>')
 
 if res.status_code == 200
@@ -1506,11 +1472,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.unified.remove_unified_workspaceintegration(id: '<id>')
 
 if res.status_code == 200
@@ -1547,17 +1512,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.unified.update_unified_connection(connection: Models::Shared::Connection.new(
   categories: [],
   integration_type: '<value>',
   permissions: [
     Models::Shared::PropertyConnectionPermissions::PAYMENT_LINK_WRITE,
-  ],
+  ]
 ), id: '<id>')
 
 unless res.connection.nil?
@@ -1595,15 +1559,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.unified.update_unified_webhook(webhook: Models::Shared::Webhook.new(
   connection_id: '<id>',
   event: Models::Shared::WebhookEvent::DELETED,
-  object_type: Models::Shared::WebhookObjectType::GENAI_PROMPT,
+  object_type: Models::Shared::WebhookObjectType::GENAI_PROMPT
 ), id: '<id>')
 
 unless res.webhook.nil?
@@ -1641,11 +1604,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.unified.update_unified_webhook_resume(id: '<id>')
 
 unless res.webhook.nil?
@@ -1682,11 +1644,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.unified.update_unified_webhook_trigger(id: '<id>')
 
 if res.status_code == 200
@@ -1723,14 +1684,13 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.unified.update_unified_workspaceintegration(workspace_integration: Models::Shared::WorkspaceIntegration.new(
   integration_type: '<value>',
-  is_active: false,
+  is_active: false
 ), id: '<id>')
 
 unless res.workspace_integration.nil?

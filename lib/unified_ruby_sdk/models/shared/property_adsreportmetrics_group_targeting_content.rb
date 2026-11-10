@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class PropertyAdsReportMetricsGroupTargetingContent
         extend T::Sig

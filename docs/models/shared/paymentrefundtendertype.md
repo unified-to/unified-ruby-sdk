@@ -2,6 +2,17 @@
 
 Normalized tender category the refund was returned to; mirrors PaymentPayment.tender_type
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PaymentRefundTenderType::CARD
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = PaymentRefundTenderType.deserialize("custom_value")
+```
+
 
 ## Values
 

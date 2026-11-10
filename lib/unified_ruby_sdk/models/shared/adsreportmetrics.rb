@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class AdsReportMetrics
         extend T::Sig
@@ -20,7 +19,7 @@ module UnifiedRubySDK
 
         field :creative, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsCreative), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('creative') } }
 
-        field :dimension, Crystalline::Nilable.new(Models::Shared::Dimension), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('dimension'), 'decoder': Utils.enum_from_string(Models::Shared::Dimension, true) } }
+        field :dimension, Crystalline::Nilable.new(Models::Shared::Dimension), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('dimension'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::Dimension, true) } }
 
         field :dimension_value, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('dimension_value') } }
 
@@ -32,7 +31,7 @@ module UnifiedRubySDK
 
         field :placement, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsPlacement), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('placement') } }
 
-        field :type, Crystalline::Nilable.new(Models::Shared::AdsReportMetricsType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AdsReportMetricsType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::AdsReportMetricsType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::AdsReportMetricsType, true) } }
 
         field :value, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
 

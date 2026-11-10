@@ -1,5 +1,4 @@
 # Bot
-(*bot*)
 
 ## Overview
 
@@ -24,12 +23,11 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-res = s.bot.create_calendar_bot(calendar_bot: Models::Shared::CalendarBot.new(), connection_id: '<id>')
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.bot.create_calendar_bot(calendar_bot: Models::Shared::CalendarBot.new, connection_id: '<id>')
 
 unless res.calendar_bot.nil?
   # handle response
@@ -68,11 +66,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.bot.get_calendar_bot(connection_id: '<id>', id: '<id>')
 
 unless res.calendar_bot.nil?
@@ -112,15 +109,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCalendarBotsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCalendarBotsRequest.new(
+  connection_id: '<id>'
+)
 res = s.bot.list_calendar_bots(request: req)
 
 unless res.calendar_bots.nil?
@@ -157,17 +153,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::PatchCalendarBotRequest.new(
-  calendar_bot: Models::Shared::CalendarBot.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::PatchCalendarBotRequest.new(
+  calendar_bot: Models::Shared::CalendarBot.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.bot.patch_calendar_bot(request: req)
 
 unless res.calendar_bot.nil?
@@ -204,11 +199,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.bot.remove_calendar_bot(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -246,17 +240,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::UpdateCalendarBotRequest.new(
-  calendar_bot: Models::Shared::CalendarBot.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::UpdateCalendarBotRequest.new(
+  calendar_bot: Models::Shared::CalendarBot.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.bot.update_calendar_bot(request: req)
 
 unless res.calendar_bot.nil?

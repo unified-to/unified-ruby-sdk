@@ -1,5 +1,16 @@
 # EmploymentType
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = EmploymentType::FULL_TIME
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = EmploymentType.deserialize("custom_value")
+```
+
 
 ## Values
 

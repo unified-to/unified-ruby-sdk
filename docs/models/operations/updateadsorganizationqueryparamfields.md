@@ -1,5 +1,13 @@
 # UpdateAdsOrganizationQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = UpdateAdsOrganizationQueryParamFields::ID
+```
+
 
 ## Values
 

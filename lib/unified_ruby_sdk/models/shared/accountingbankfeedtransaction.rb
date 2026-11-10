@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class AccountingBankfeedtransaction
         extend T::Sig
@@ -26,7 +25,7 @@ module UnifiedRubySDK
         # matched vendor/customer once reconciled (reference to AccountingContact)
         field :contact_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_id') } }
         # creation timestamp, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # ISO 4217
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
         # bank memo / statement text
@@ -42,19 +41,19 @@ module UnifiedRubySDK
         # ref -> accounting Organization this record belongs to
         field :organization_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization_id') } }
         # when it posted / cleared (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :posted_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('posted_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :posted_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('posted_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # The original data from the integration's API
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # bank reference or check number
         field :reference, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reference') } }
         # when the transaction occurred (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :transaction_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('transaction_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :transaction_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('transaction_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # direction: DEBIT, CREDIT
-        field :type, Crystalline::Nilable.new(Models::Shared::AccountingBankfeedtransactionType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AccountingBankfeedtransactionType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::AccountingBankfeedtransactionType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::AccountingBankfeedtransactionType, true) } }
         # last-update timestamp, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(account_id: T.nilable(::String), amount: T.nilable(::Float), bank_category: T.nilable(::String), bankfeedaccount_id: T.nilable(::String), category_ids: T.nilable(T::Array[::String]), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), is_pending: T.nilable(T::Boolean), merchant_name: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), organization_id: T.nilable(::String), posted_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), transaction_at: T.nilable(::DateTime), type: T.nilable(Models::Shared::AccountingBankfeedtransactionType), updated_at: T.nilable(::DateTime)).void }
+        sig { params(account_id: T.nilable(::String), amount: T.nilable(::Float), bank_category: T.nilable(::String), bankfeedaccount_id: T.nilable(::String), category_ids: T.nilable(T::Array[::String]), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), is_pending: T.nilable(T::Boolean), merchant_name: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), organization_id: T.nilable(::String), posted_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[::Symbol, ::Object]), reference: T.nilable(::String), transaction_at: T.nilable(::DateTime), type: T.nilable(Models::Shared::AccountingBankfeedtransactionType), updated_at: T.nilable(::DateTime)).void }
         def initialize(account_id: nil, amount: nil, bank_category: nil, bankfeedaccount_id: nil, category_ids: nil, contact_id: nil, created_at: nil, currency: nil, description: nil, id: nil, is_pending: nil, merchant_name: nil, metadata: nil, organization_id: nil, posted_at: nil, raw: nil, reference: nil, transaction_at: nil, type: nil, updated_at: nil)
           @account_id = account_id
           @amount = amount

@@ -2,6 +2,17 @@
 
 read-only; controlled by the provider (whether/why the campaign can serve), unlike the user-managed status
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = EffectiveStatus::UNSPECIFIED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = EffectiveStatus.deserialize("custom_value")
+```
+
 
 ## Values
 

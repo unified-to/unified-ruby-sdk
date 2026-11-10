@@ -1,5 +1,13 @@
 # ListClubsLocationsQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListClubsLocationsQueryParamFields::ID
+```
+
 
 ## Values
 

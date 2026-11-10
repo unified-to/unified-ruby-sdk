@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class PropertyReview
         extend T::Sig
@@ -20,7 +19,7 @@ module UnifiedRubySDK
         # the review text
         field :content, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content') } }
         # when the review was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # pointer to the Property Guest who wrote the review
         field :guest_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('guest_id') } }
         # unique identifier for the review
@@ -36,11 +35,11 @@ module UnifiedRubySDK
         # the overall rating
         field :rating, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rating') } }
         # raw data from the integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # pointer to the Property Reservation that was reviewed
         field :reservation_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reservation_id') } }
         # when the host replied (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :responded_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('responded_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :responded_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('responded_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # the host public reply
         field :response, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response') } }
         # the channel the review was posted on, eg. Airbnb
@@ -48,9 +47,9 @@ module UnifiedRubySDK
         # the review title
         field :title, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
         # when the review was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(author_name: T.nilable(::String), category_ratings: T.nilable(T::Array[Models::Shared::PropertyCategoryrating]), content: T.nilable(::String), created_at: T.nilable(::DateTime), guest_id: T.nilable(::String), id: T.nilable(::String), is_public: T.nilable(T::Boolean), listing_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::PropertyMetadata]), private_feedback: T.nilable(::String), rating: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), reservation_id: T.nilable(::String), responded_at: T.nilable(::DateTime), response: T.nilable(::String), source: T.nilable(::String), title: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        sig { params(author_name: T.nilable(::String), category_ratings: T.nilable(T::Array[Models::Shared::PropertyCategoryrating]), content: T.nilable(::String), created_at: T.nilable(::DateTime), guest_id: T.nilable(::String), id: T.nilable(::String), is_public: T.nilable(T::Boolean), listing_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::PropertyMetadata]), private_feedback: T.nilable(::String), rating: T.nilable(::Float), raw: T.nilable(T::Hash[::Symbol, ::Object]), reservation_id: T.nilable(::String), responded_at: T.nilable(::DateTime), response: T.nilable(::String), source: T.nilable(::String), title: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
         def initialize(author_name: nil, category_ratings: nil, content: nil, created_at: nil, guest_id: nil, id: nil, is_public: nil, listing_id: nil, metadata: nil, private_feedback: nil, rating: nil, raw: nil, reservation_id: nil, responded_at: nil, response: nil, source: nil, title: nil, updated_at: nil)
           @author_name = author_name
           @category_ratings = category_ratings

@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class AdsReportMetricsType < T::Enum
-
-
+      class AdsReportMetricsType
+        include ::Crystalline::Enum
         enums do
           CLICKS = new('CLICKS')
           IMPRESSIONS = new('IMPRESSIONS')
@@ -141,6 +139,7 @@ module UnifiedRubySDK
           VISITS = new('VISITS')
           AUDIO_MUTES = new('AUDIO_MUTES')
         end
+        open!
       end
     end
   end

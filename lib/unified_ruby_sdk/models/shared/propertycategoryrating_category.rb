@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # PropertyCategoryratingCategory - the rated category
-      class PropertyCategoryratingCategory < T::Enum
-
-
+      class PropertyCategoryratingCategory
+        include ::Crystalline::Enum
         enums do
           CLEANLINESS = new('CLEANLINESS')
           ACCURACY = new('ACCURACY')
@@ -21,6 +19,7 @@ module UnifiedRubySDK
           VALUE = new('VALUE')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

@@ -1,5 +1,13 @@
 # ListPropertyUnittypesQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListPropertyUnittypesQueryParamFields::ID
+```
+
 
 ## Values
 

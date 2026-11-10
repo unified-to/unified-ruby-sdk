@@ -1,5 +1,13 @@
 # CreateUcRecordingQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreateUcRecordingQueryParamFields::ID
+```
+
 
 ## Values
 

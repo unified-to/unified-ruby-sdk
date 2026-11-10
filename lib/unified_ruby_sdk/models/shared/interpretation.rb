@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Interpretation - Interpretation of the result (e.g. high, low)
-      class Interpretation < T::Enum
-
-
+      class Interpretation
+        include ::Crystalline::Enum
         enums do
           NORMAL = new('NORMAL')
           ABNORMAL = new('ABNORMAL')
@@ -21,6 +19,7 @@ module UnifiedRubySDK
           CRITICAL_HIGH = new('CRITICAL_HIGH')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

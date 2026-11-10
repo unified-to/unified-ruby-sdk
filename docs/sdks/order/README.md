@@ -1,5 +1,4 @@
 # Order
-(*order*)
 
 ## Overview
 
@@ -24,17 +23,16 @@ Creates a AccountingOrder. Provide the unified AccountingOrder fields in the req
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAccountingOrder" method="post" path="/accounting/{connection_id}/order" -->
+<!-- UsageSnippet language="ruby" operationID="createAccountingOrder" method="post" path="/accounting/{connection_id}/order" example="accounting_order" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.order.create_accounting_order(accounting_order: Models::Shared::AccountingOrder.new(
   billing_address: Models::Shared::PropertyAccountingOrderBillingAddress.new(
     address1: '7654 Treutel Square',
@@ -42,11 +40,11 @@ res = s.order.create_accounting_order(accounting_order: Models::Shared::Accounti
     country_code: 'US',
     postal_code: '42190-3694',
     region: 'Maine',
-    region_code: 'OR',
+    region_code: 'OR'
   ),
   created_at: DateTime.iso8601('2020-11-20T03:46:49.837Z'),
   currency: 'GBP',
-  id: 'f9911e72-ed47-4e77-9912-2c2308068cc6',
+  id: '47375fb2-e42c-457b-918e-b30dcdae1338',
   lineitems: [],
   metadata: [],
   posted_at: DateTime.iso8601('2020-11-20T03:46:49.837Z'),
@@ -56,12 +54,12 @@ res = s.order.create_accounting_order(accounting_order: Models::Shared::Accounti
     country_code: 'US',
     postal_code: '56252',
     region: 'Alaska',
-    region_code: 'VT',
+    region_code: 'VT'
   ),
   status: Models::Shared::AccountingOrderStatus::AUTHORIZED,
   total_amount: 0.0,
   type: Models::Shared::AccountingOrderType::SALES,
-  updated_at: DateTime.iso8601('2022-02-12T05:16:56.093Z'),
+  updated_at: DateTime.iso8601('2022-02-12T14:14:29.380Z')
 ), connection_id: '<id>')
 
 unless res.accounting_order.nil?
@@ -95,21 +93,20 @@ Creates a AssessmentOrder. Provide the unified AssessmentOrder fields in the req
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAssessmentOrder" method="post" path="/assessment/{connection_id}/order" -->
+<!-- UsageSnippet language="ruby" operationID="createAssessmentOrder" method="post" path="/assessment/{connection_id}/order" example="assessment_order" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.order.create_assessment_order(assessment_order: Models::Shared::AssessmentOrder.new(
   connection_id: '<id>',
   created_at: DateTime.iso8601('2021-09-18T10:33:57.803Z'),
-  id: 'b6253d9d-0d3b-4a71-857b-3425dda13e8e',
+  id: '62576d03-681c-499b-8f6e-634ed4476b8c',
   metadata: [],
   parameters: [],
   profile_addresses: [],
@@ -136,8 +133,8 @@ res = s.order.create_assessment_order(assessment_order: Models::Shared::Assessme
   response_url: 'https://rowdy-fisherman.biz/',
   status: Models::Shared::AssessmentOrderStatus::REJECTED,
   target_url: 'https://cautious-turret.info',
-  updated_at: DateTime.iso8601('2023-01-30T21:55:20.917Z'),
-  workspace_id: '<id>',
+  updated_at: DateTime.iso8601('2023-01-31T09:29:30.765Z'),
+  workspace_id: '<id>'
 ), connection_id: '<id>')
 
 unless res.assessment_order.nil?
@@ -179,11 +176,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.order.get_accounting_order(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_order.nil?
@@ -223,11 +219,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.order.get_assessment_order(connection_id: '<id>', id: '<id>')
 
 unless res.assessment_order.nil?
@@ -269,15 +264,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingOrdersRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingOrdersRequest.new(
+  connection_id: '<id>'
+)
 res = s.order.list_accounting_orders(request: req)
 
 unless res.accounting_orders.nil?
@@ -310,16 +304,16 @@ Updates the AccountingOrder identified by `id`. Provide the unified AccountingOr
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAccountingOrder" method="patch" path="/accounting/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAccountingOrder" method="patch" path="/accounting/{connection_id}/order/{id}" example="accounting_order" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAccountingOrderRequest.new(
   accounting_order: Models::Shared::AccountingOrder.new(
@@ -329,11 +323,11 @@ req = Models::Operations::PatchAccountingOrderRequest.new(
       country_code: 'US',
       postal_code: '42190-3694',
       region: 'Maine',
-      region_code: 'OR',
+      region_code: 'OR'
     ),
     created_at: DateTime.iso8601('2020-11-20T03:46:49.837Z'),
     currency: 'GBP',
-    id: '37a938a6-8d43-44b0-88b2-9f31477cfa13',
+    id: '5ae9efed-96fc-42fb-88ec-26ab83ee4379',
     lineitems: [],
     metadata: [],
     posted_at: DateTime.iso8601('2020-11-20T03:46:49.837Z'),
@@ -343,17 +337,16 @@ req = Models::Operations::PatchAccountingOrderRequest.new(
       country_code: 'US',
       postal_code: '56252',
       region: 'Alaska',
-      region_code: 'VT',
+      region_code: 'VT'
     ),
     status: Models::Shared::AccountingOrderStatus::AUTHORIZED,
     total_amount: 0.0,
     type: Models::Shared::AccountingOrderType::SALES,
-    updated_at: DateTime.iso8601('2022-02-12T05:16:56.105Z'),
+    updated_at: DateTime.iso8601('2022-02-12T14:14:29.389Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.order.patch_accounting_order(request: req)
 
 unless res.accounting_order.nil?
@@ -384,22 +377,22 @@ Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOr
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAssessmentOrder" method="patch" path="/assessment/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAssessmentOrder" method="patch" path="/assessment/{connection_id}/order/{id}" example="assessment_order" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAssessmentOrderRequest.new(
   assessment_order: Models::Shared::AssessmentOrder.new(
     connection_id: '<id>',
     created_at: DateTime.iso8601('2021-09-18T10:33:57.803Z'),
-    id: 'b10b35d7-d3a5-4bf8-ab65-b653585e03f5',
+    id: '24de5a8d-6a9f-461b-b5cd-9824df2ad910',
     metadata: [],
     parameters: [],
     profile_addresses: [],
@@ -426,13 +419,12 @@ req = Models::Operations::PatchAssessmentOrderRequest.new(
     response_url: 'https://rowdy-fisherman.biz/',
     status: Models::Shared::AssessmentOrderStatus::REJECTED,
     target_url: 'https://cautious-turret.info',
-    updated_at: DateTime.iso8601('2023-01-30T21:55:20.926Z'),
-    workspace_id: '<id>',
+    updated_at: DateTime.iso8601('2023-01-31T09:29:30.777Z'),
+    workspace_id: '<id>'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.order.patch_assessment_order(request: req)
 
 unless res.assessment_order.nil?
@@ -471,11 +463,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.order.remove_accounting_order(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -509,16 +500,16 @@ Updates the AccountingOrder identified by `id`. Provide the unified AccountingOr
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAccountingOrder" method="put" path="/accounting/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAccountingOrder" method="put" path="/accounting/{connection_id}/order/{id}" example="accounting_order" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAccountingOrderRequest.new(
   accounting_order: Models::Shared::AccountingOrder.new(
@@ -528,11 +519,11 @@ req = Models::Operations::UpdateAccountingOrderRequest.new(
       country_code: 'US',
       postal_code: '42190-3694',
       region: 'Maine',
-      region_code: 'OR',
+      region_code: 'OR'
     ),
     created_at: DateTime.iso8601('2020-11-20T03:46:49.837Z'),
     currency: 'GBP',
-    id: '37a938a6-8d43-44b0-88b2-9f31477cfa13',
+    id: '5ae9efed-96fc-42fb-88ec-26ab83ee4379',
     lineitems: [],
     metadata: [],
     posted_at: DateTime.iso8601('2020-11-20T03:46:49.837Z'),
@@ -542,17 +533,16 @@ req = Models::Operations::UpdateAccountingOrderRequest.new(
       country_code: 'US',
       postal_code: '56252',
       region: 'Alaska',
-      region_code: 'VT',
+      region_code: 'VT'
     ),
     status: Models::Shared::AccountingOrderStatus::AUTHORIZED,
     total_amount: 0.0,
     type: Models::Shared::AccountingOrderType::SALES,
-    updated_at: DateTime.iso8601('2022-02-12T05:16:56.105Z'),
+    updated_at: DateTime.iso8601('2022-02-12T14:14:29.389Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.order.update_accounting_order(request: req)
 
 unless res.accounting_order.nil?
@@ -583,22 +573,22 @@ Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOr
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAssessmentOrder" method="put" path="/assessment/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAssessmentOrder" method="put" path="/assessment/{connection_id}/order/{id}" example="assessment_order" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAssessmentOrderRequest.new(
   assessment_order: Models::Shared::AssessmentOrder.new(
     connection_id: '<id>',
     created_at: DateTime.iso8601('2021-09-18T10:33:57.803Z'),
-    id: 'b10b35d7-d3a5-4bf8-ab65-b653585e03f5',
+    id: '24de5a8d-6a9f-461b-b5cd-9824df2ad910',
     metadata: [],
     parameters: [],
     profile_addresses: [],
@@ -625,13 +615,12 @@ req = Models::Operations::UpdateAssessmentOrderRequest.new(
     response_url: 'https://rowdy-fisherman.biz/',
     status: Models::Shared::AssessmentOrderStatus::REJECTED,
     target_url: 'https://cautious-turret.info',
-    updated_at: DateTime.iso8601('2023-01-30T21:55:20.926Z'),
-    workspace_id: '<id>',
+    updated_at: DateTime.iso8601('2023-01-31T09:29:30.777Z'),
+    workspace_id: '<id>'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.order.update_assessment_order(request: req)
 
 unless res.assessment_order.nil?

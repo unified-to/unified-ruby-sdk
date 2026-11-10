@@ -7,24 +7,23 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class PaymentSubscription
         extend T::Sig
         include Crystalline::MetadataFields
 
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :canceled_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('canceled_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :canceled_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('canceled_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # a reference to an Accounting Contact (reference to AccountingContact)
         field :contact_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_id') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :current_period_end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('current_period_end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :current_period_end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('current_period_end_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :current_period_start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('current_period_start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :current_period_start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('current_period_start_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # The day of the month to charge customers on. 1-28 or -1 to indicate the last day of the month. Only applies when the interval_unit is MONTH.
         field :day_of_month, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('day_of_month') } }
         # The day of the week to charge customers on. 1-7 or -1 to indicate the last day of the week. Only applies when the interval_unit is WEEK.
@@ -32,13 +31,13 @@ module UnifiedRubySDK
 
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # The number of intervals between charges within the interval_unit. Defaults to 1.
         field :interval, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('interval') } }
 
-        field :interval_unit, Crystalline::Nilable.new(Models::Shared::IntervalUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('interval_unit'), 'decoder': Utils.enum_from_string(Models::Shared::IntervalUnit, true) } }
+        field :interval_unit, Crystalline::Nilable.new(Models::Shared::IntervalUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('interval_unit'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::IntervalUnit, true) } }
         # a reference to an Accounting Invoice (reference to AccountingInvoice)
         field :invoice_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('invoice_id') } }
 
@@ -48,17 +47,17 @@ module UnifiedRubySDK
         # the month on which to charge a customer (1-12). Only applies when the interval_unit is YEAR.
         field :month, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('month') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        field :status, Crystalline::Nilable.new(Models::Shared::PaymentSubscriptionStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::PaymentSubscriptionStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::PaymentSubscriptionStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PaymentSubscriptionStatus, true) } }
 
         field :total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(canceled_at: T.nilable(::DateTime), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), current_period_end_at: T.nilable(::DateTime), current_period_start_at: T.nilable(::DateTime), day_of_month: T.nilable(::Float), day_of_week: T.nilable(::Float), description: T.nilable(::String), end_at: T.nilable(::DateTime), id: T.nilable(::String), interval: T.nilable(::Float), interval_unit: T.nilable(Models::Shared::IntervalUnit), invoice_id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::PaymentLineitem]), metadata: T.nilable(T::Array[Models::Shared::PaymentMetadata]), month: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::PaymentSubscriptionStatus), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
+        sig { params(canceled_at: T.nilable(::DateTime), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), current_period_end_at: T.nilable(::DateTime), current_period_start_at: T.nilable(::DateTime), day_of_month: T.nilable(::Float), day_of_week: T.nilable(::Float), description: T.nilable(::String), end_at: T.nilable(::DateTime), id: T.nilable(::String), interval: T.nilable(::Float), interval_unit: T.nilable(Models::Shared::IntervalUnit), invoice_id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::PaymentLineitem]), metadata: T.nilable(T::Array[Models::Shared::PaymentMetadata]), month: T.nilable(::Float), raw: T.nilable(T::Hash[::Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::PaymentSubscriptionStatus), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
         def initialize(canceled_at: nil, contact_id: nil, created_at: nil, currency: nil, current_period_end_at: nil, current_period_start_at: nil, day_of_month: nil, day_of_week: nil, description: nil, end_at: nil, id: nil, interval: nil, interval_unit: nil, invoice_id: nil, lineitems: nil, metadata: nil, month: nil, raw: nil, start_at: nil, status: nil, total_amount: nil, updated_at: nil)
           @canceled_at = canceled_at
           @contact_id = contact_id

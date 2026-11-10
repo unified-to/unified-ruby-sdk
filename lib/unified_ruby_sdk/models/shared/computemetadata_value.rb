@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # The label, tag or metadata value
       class ComputeMetadataValue
         extend T::Sig

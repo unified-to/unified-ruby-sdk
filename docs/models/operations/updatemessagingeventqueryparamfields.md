@@ -1,5 +1,13 @@
 # UpdateMessagingEventQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = UpdateMessagingEventQueryParamFields::ID
+```
+
 
 ## Values
 

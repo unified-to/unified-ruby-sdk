@@ -1,5 +1,4 @@
 # Content
-(*content*)
 
 ## Overview
 
@@ -18,17 +17,16 @@ Creates a LmsContent. Provide the unified LmsContent fields in the request body;
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createLmsContent" method="post" path="/lms/{connection_id}/content" -->
+<!-- UsageSnippet language="ruby" operationID="createLmsContent" method="post" path="/lms/{connection_id}/content" example="lms_content" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.content.create_lms_content(lms_content: Models::Shared::LmsContent.new(
   categories: [
     'territo',
@@ -37,7 +35,7 @@ res = s.content.create_lms_content(lms_content: Models::Shared::LmsContent.new(
   description: 'Usque laboriosam ventosus adflicto.',
   difficulty: 'Beginner',
   duration_minutes: 19.0,
-  id: '09fb970f-d2bf-4fe1-a165-4ea158e55169',
+  id: 'dc60108d-7159-4a6a-a210-c4030552402a',
   instructors: [],
   is_active: true,
   languages: [
@@ -48,12 +46,12 @@ res = s.content.create_lms_content(lms_content: Models::Shared::LmsContent.new(
     Models::Shared::LmsContentLocalization.new(
       description: 'Acervus.',
       language: 'es',
-      name: 'talis',
+      name: 'talis'
     ),
     Models::Shared::LmsContentLocalization.new(
       description: 'Ratione.',
       language: 'es',
-      name: 'sint',
+      name: 'sint'
     ),
   ],
   media: [
@@ -67,7 +65,7 @@ res = s.content.create_lms_content(lms_content: Models::Shared::LmsContent.new(
       name: 'subiungo',
       thumbnail_url: 'https://loremflickr.com/2056/3712?lock=5644845642923518',
       type: Models::Shared::LmsMediaType::OTHER,
-      url: 'https://loremflickr.com/2593/1553?lock=8591263400111785',
+      url: 'https://loremflickr.com/2593/1553?lock=8591263400111785'
     ),
     Models::Shared::LmsMedia.new(
       content: 'Terminatio acidus tripudio teres. Compono demum aut aestivus ambitus pecus tergum verumtamen vestrum. Absque adversus desino aut tabernus tollo vigor. Cur agnitio totidem consuasor bene doloribus. Vetus abundans curriculum curatio usitas.',
@@ -79,7 +77,7 @@ res = s.content.create_lms_content(lms_content: Models::Shared::LmsContent.new(
       name: 'beneficium',
       thumbnail_url: 'https://picsum.photos/seed/pNFr1/2597/885',
       type: Models::Shared::LmsMediaType::WEB,
-      url: 'https://loremflickr.com/3597/239?lock=7142808124990633',
+      url: 'https://loremflickr.com/3597/239?lock=7142808124990633'
     ),
     Models::Shared::LmsMedia.new(
       content: 'Coepi demo adversus capillus aro unus templum. Aspicio alius vehemens terminatio varietas vomica. Apud thorax defero decet impedit verbera pauci laboriosam molestiae urbanus. Aveho vergo crux certus nulla caute sophismata. Caute voluptatibus patrocinor demo verumtamen adeo canis sapiente depraedor verus.',
@@ -91,13 +89,13 @@ res = s.content.create_lms_content(lms_content: Models::Shared::LmsContent.new(
       name: 'qui',
       thumbnail_url: 'https://loremflickr.com/1375/3377?lock=6601832177607674',
       type: Models::Shared::LmsMediaType::IMAGE,
-      url: 'https://loremflickr.com/3927/2086?lock=5199784913821481',
+      url: 'https://loremflickr.com/3927/2086?lock=5199784913821481'
     ),
   ],
   metadata: [],
   name: 'ut',
   provider_name: 'Bins LLC',
-  published_at: DateTime.iso8601('2022-09-09T04:04:13.321Z'),
+  published_at: DateTime.iso8601('2022-09-09T17:35:10.641Z'),
   short_description: 'Caritas.',
   skills: [
     'trucido',
@@ -106,13 +104,13 @@ res = s.content.create_lms_content(lms_content: Models::Shared::LmsContent.new(
   subjects: [
     Models::Shared::LmsSubject.new(
       name: 'tibi',
-      rank: 1.0,
+      rank: 1.0
     ),
   ],
   tags: [
     'dens',
   ],
-  updated_at: DateTime.iso8601('2022-10-10T08:47:12.770Z'),
+  updated_at: DateTime.iso8601('2022-10-10T22:55:02.083Z')
 ), connection_id: '<id>')
 
 unless res.lms_content.nil?
@@ -152,11 +150,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.content.get_lms_content(connection_id: '<id>', id: '<id>')
 
 unless res.lms_content.nil?
@@ -196,15 +193,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListLmsContentsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListLmsContentsRequest.new(
+  connection_id: '<id>'
+)
 res = s.content.list_lms_contents(request: req)
 
 unless res.lms_contents.nil?
@@ -235,16 +231,16 @@ Updates the LmsContent identified by `id`. Provide the unified LmsContent fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchLmsContent" method="patch" path="/lms/{connection_id}/content/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchLmsContent" method="patch" path="/lms/{connection_id}/content/{id}" example="lms_content" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchLmsContentRequest.new(
   lms_content: Models::Shared::LmsContent.new(
@@ -255,7 +251,7 @@ req = Models::Operations::PatchLmsContentRequest.new(
     description: 'Usque laboriosam ventosus adflicto.',
     difficulty: 'Beginner',
     duration_minutes: 19.0,
-    id: 'a3902cfd-3226-41f6-95ba-5044271175aa',
+    id: 'add634e4-fc0d-40c3-9909-ee98da89067d',
     instructors: [],
     is_active: true,
     languages: [
@@ -266,12 +262,12 @@ req = Models::Operations::PatchLmsContentRequest.new(
       Models::Shared::LmsContentLocalization.new(
         description: 'Acervus.',
         language: 'es',
-        name: 'talis',
+        name: 'talis'
       ),
       Models::Shared::LmsContentLocalization.new(
         description: 'Ratione.',
         language: 'es',
-        name: 'sint',
+        name: 'sint'
       ),
     ],
     media: [
@@ -285,7 +281,7 @@ req = Models::Operations::PatchLmsContentRequest.new(
         name: 'subiungo',
         thumbnail_url: 'https://loremflickr.com/2056/3712?lock=5644845642923518',
         type: Models::Shared::LmsMediaType::OTHER,
-        url: 'https://loremflickr.com/2593/1553?lock=8591263400111785',
+        url: 'https://loremflickr.com/2593/1553?lock=8591263400111785'
       ),
       Models::Shared::LmsMedia.new(
         content: 'Terminatio acidus tripudio teres. Compono demum aut aestivus ambitus pecus tergum verumtamen vestrum. Absque adversus desino aut tabernus tollo vigor. Cur agnitio totidem consuasor bene doloribus. Vetus abundans curriculum curatio usitas.',
@@ -297,7 +293,7 @@ req = Models::Operations::PatchLmsContentRequest.new(
         name: 'beneficium',
         thumbnail_url: 'https://picsum.photos/seed/pNFr1/2597/885',
         type: Models::Shared::LmsMediaType::WEB,
-        url: 'https://loremflickr.com/3597/239?lock=7142808124990633',
+        url: 'https://loremflickr.com/3597/239?lock=7142808124990633'
       ),
       Models::Shared::LmsMedia.new(
         content: 'Coepi demo adversus capillus aro unus templum. Aspicio alius vehemens terminatio varietas vomica. Apud thorax defero decet impedit verbera pauci laboriosam molestiae urbanus. Aveho vergo crux certus nulla caute sophismata. Caute voluptatibus patrocinor demo verumtamen adeo canis sapiente depraedor verus.',
@@ -309,13 +305,13 @@ req = Models::Operations::PatchLmsContentRequest.new(
         name: 'qui',
         thumbnail_url: 'https://loremflickr.com/1375/3377?lock=6601832177607674',
         type: Models::Shared::LmsMediaType::IMAGE,
-        url: 'https://loremflickr.com/3927/2086?lock=5199784913821481',
+        url: 'https://loremflickr.com/3927/2086?lock=5199784913821481'
       ),
     ],
     metadata: [],
     name: 'ut',
     provider_name: 'Bins LLC',
-    published_at: DateTime.iso8601('2022-09-09T04:04:13.332Z'),
+    published_at: DateTime.iso8601('2022-09-09T17:35:10.650Z'),
     short_description: 'Caritas.',
     skills: [
       'trucido',
@@ -324,18 +320,17 @@ req = Models::Operations::PatchLmsContentRequest.new(
     subjects: [
       Models::Shared::LmsSubject.new(
         name: 'tibi',
-        rank: 1.0,
+        rank: 1.0
       ),
     ],
     tags: [
       'dens',
     ],
-    updated_at: DateTime.iso8601('2022-10-10T08:47:12.782Z'),
+    updated_at: DateTime.iso8601('2022-10-10T22:55:02.093Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.content.patch_lms_content(request: req)
 
 unless res.lms_content.nil?
@@ -372,11 +367,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.content.remove_lms_content(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -408,16 +402,16 @@ Updates the LmsContent identified by `id`. Provide the unified LmsContent fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateLmsContent" method="put" path="/lms/{connection_id}/content/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateLmsContent" method="put" path="/lms/{connection_id}/content/{id}" example="lms_content" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateLmsContentRequest.new(
   lms_content: Models::Shared::LmsContent.new(
@@ -428,7 +422,7 @@ req = Models::Operations::UpdateLmsContentRequest.new(
     description: 'Usque laboriosam ventosus adflicto.',
     difficulty: 'Beginner',
     duration_minutes: 19.0,
-    id: 'a3902cfd-3226-41f6-95ba-5044271175aa',
+    id: 'add634e4-fc0d-40c3-9909-ee98da89067d',
     instructors: [],
     is_active: true,
     languages: [
@@ -439,12 +433,12 @@ req = Models::Operations::UpdateLmsContentRequest.new(
       Models::Shared::LmsContentLocalization.new(
         description: 'Acervus.',
         language: 'es',
-        name: 'talis',
+        name: 'talis'
       ),
       Models::Shared::LmsContentLocalization.new(
         description: 'Ratione.',
         language: 'es',
-        name: 'sint',
+        name: 'sint'
       ),
     ],
     media: [
@@ -458,7 +452,7 @@ req = Models::Operations::UpdateLmsContentRequest.new(
         name: 'subiungo',
         thumbnail_url: 'https://loremflickr.com/2056/3712?lock=5644845642923518',
         type: Models::Shared::LmsMediaType::OTHER,
-        url: 'https://loremflickr.com/2593/1553?lock=8591263400111785',
+        url: 'https://loremflickr.com/2593/1553?lock=8591263400111785'
       ),
       Models::Shared::LmsMedia.new(
         content: 'Terminatio acidus tripudio teres. Compono demum aut aestivus ambitus pecus tergum verumtamen vestrum. Absque adversus desino aut tabernus tollo vigor. Cur agnitio totidem consuasor bene doloribus. Vetus abundans curriculum curatio usitas.',
@@ -470,7 +464,7 @@ req = Models::Operations::UpdateLmsContentRequest.new(
         name: 'beneficium',
         thumbnail_url: 'https://picsum.photos/seed/pNFr1/2597/885',
         type: Models::Shared::LmsMediaType::WEB,
-        url: 'https://loremflickr.com/3597/239?lock=7142808124990633',
+        url: 'https://loremflickr.com/3597/239?lock=7142808124990633'
       ),
       Models::Shared::LmsMedia.new(
         content: 'Coepi demo adversus capillus aro unus templum. Aspicio alius vehemens terminatio varietas vomica. Apud thorax defero decet impedit verbera pauci laboriosam molestiae urbanus. Aveho vergo crux certus nulla caute sophismata. Caute voluptatibus patrocinor demo verumtamen adeo canis sapiente depraedor verus.',
@@ -482,13 +476,13 @@ req = Models::Operations::UpdateLmsContentRequest.new(
         name: 'qui',
         thumbnail_url: 'https://loremflickr.com/1375/3377?lock=6601832177607674',
         type: Models::Shared::LmsMediaType::IMAGE,
-        url: 'https://loremflickr.com/3927/2086?lock=5199784913821481',
+        url: 'https://loremflickr.com/3927/2086?lock=5199784913821481'
       ),
     ],
     metadata: [],
     name: 'ut',
     provider_name: 'Bins LLC',
-    published_at: DateTime.iso8601('2022-09-09T04:04:13.332Z'),
+    published_at: DateTime.iso8601('2022-09-09T17:35:10.650Z'),
     short_description: 'Caritas.',
     skills: [
       'trucido',
@@ -497,18 +491,17 @@ req = Models::Operations::UpdateLmsContentRequest.new(
     subjects: [
       Models::Shared::LmsSubject.new(
         name: 'tibi',
-        rank: 1.0,
+        rank: 1.0
       ),
     ],
     tags: [
       'dens',
     ],
-    updated_at: DateTime.iso8601('2022-10-10T08:47:12.782Z'),
+    updated_at: DateTime.iso8601('2022-10-10T22:55:02.093Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.content.update_lms_content(request: req)
 
 unless res.lms_content.nil?

@@ -1,5 +1,4 @@
 # Repository
-(*repository*)
 
 ## Overview
 
@@ -18,26 +17,25 @@ Creates a RepoRepository. Provide the unified RepoRepository fields in the reque
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createRepoRepository" method="post" path="/repo/{connection_id}/repository" -->
+<!-- UsageSnippet language="ruby" operationID="createRepoRepository" method="post" path="/repo/{connection_id}/repository" example="repo_repository" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.repository.create_repo_repository(repo_repository: Models::Shared::RepoRepository.new(
   created_at: DateTime.iso8601('2023-06-12T09:42:00.080Z'),
   description: 'Sed somnus crastinus armarium.',
-  id: 'd36db5b5-0556-4eb3-827e-70c34758010d',
+  id: '86d0b3d1-276f-431b-9f41-ea45b52e53e8',
   is_private: false,
   metadata: [],
   name: 'bah-bogus',
-  updated_at: DateTime.iso8601('2024-03-05T03:46:13.510Z'),
-  web_url: 'https://neat-birdbath.org',
+  updated_at: DateTime.iso8601('2024-03-05T13:05:02.617Z'),
+  web_url: 'https://neat-birdbath.org'
 ), connection_id: '<id>')
 
 unless res.repo_repository.nil?
@@ -77,11 +75,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.repository.get_repo_repository(connection_id: '<id>', id: '<id>')
 
 unless res.repo_repository.nil?
@@ -121,15 +118,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListRepoRepositoriesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListRepoRepositoriesRequest.new(
+  connection_id: '<id>'
+)
 res = s.repository.list_repo_repositories(request: req)
 
 unless res.repo_repositories.nil?
@@ -160,32 +156,31 @@ Updates the RepoRepository identified by `id`. Provide the unified RepoRepositor
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchRepoRepository" method="patch" path="/repo/{connection_id}/repository/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchRepoRepository" method="patch" path="/repo/{connection_id}/repository/{id}" example="repo_repository" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchRepoRepositoryRequest.new(
   repo_repository: Models::Shared::RepoRepository.new(
     created_at: DateTime.iso8601('2023-06-12T09:42:00.080Z'),
     description: 'Sed somnus crastinus armarium.',
-    id: '9f86acb0-f63b-4fdc-aad0-7cb35b2ce00e',
+    id: 'e94f25a0-08d8-4d68-96ac-243e461af12a',
     is_private: false,
     metadata: [],
     name: 'bah-bogus',
-    updated_at: DateTime.iso8601('2024-03-05T03:46:13.513Z'),
-    web_url: 'https://neat-birdbath.org',
+    updated_at: DateTime.iso8601('2024-03-05T13:05:02.620Z'),
+    web_url: 'https://neat-birdbath.org'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.repository.patch_repo_repository(request: req)
 
 unless res.repo_repository.nil?
@@ -222,11 +217,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.repository.remove_repo_repository(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -258,32 +252,31 @@ Updates the RepoRepository identified by `id`. Provide the unified RepoRepositor
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateRepoRepository" method="put" path="/repo/{connection_id}/repository/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateRepoRepository" method="put" path="/repo/{connection_id}/repository/{id}" example="repo_repository" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateRepoRepositoryRequest.new(
   repo_repository: Models::Shared::RepoRepository.new(
     created_at: DateTime.iso8601('2023-06-12T09:42:00.080Z'),
     description: 'Sed somnus crastinus armarium.',
-    id: '9f86acb0-f63b-4fdc-aad0-7cb35b2ce00e',
+    id: 'e94f25a0-08d8-4d68-96ac-243e461af12a',
     is_private: false,
     metadata: [],
     name: 'bah-bogus',
-    updated_at: DateTime.iso8601('2024-03-05T03:46:13.513Z'),
-    web_url: 'https://neat-birdbath.org',
+    updated_at: DateTime.iso8601('2024-03-05T13:05:02.620Z'),
+    web_url: 'https://neat-birdbath.org'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.repository.update_repo_repository(request: req)
 
 unless res.repo_repository.nil?

@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # ComputeServiceType - The kind of service
-      class ComputeServiceType < T::Enum
-
-
+      class ComputeServiceType
+        include ::Crystalline::Enum
         enums do
           WEB = new('WEB')
           WORKER = new('WORKER')
@@ -20,6 +18,7 @@ module UnifiedRubySDK
           PRIVATE = new('PRIVATE')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

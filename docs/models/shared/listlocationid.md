@@ -1,5 +1,16 @@
 # ListLocationId
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListLocationId::SUPPORTED_REQUIRED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = ListLocationId.deserialize("custom_value")
+```
+
 
 ## Values
 

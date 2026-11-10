@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # HealthcareReportType - Category of the report
-      class HealthcareReportType < T::Enum
-
-
+      class HealthcareReportType
+        include ::Crystalline::Enum
         enums do
           LABORATORY = new('LABORATORY')
           IMAGING = new('IMAGING')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           CARDIOLOGY = new('CARDIOLOGY')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

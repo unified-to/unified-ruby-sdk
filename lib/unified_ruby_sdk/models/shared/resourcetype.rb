@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class ResourceType < T::Enum
-
-
+      class ResourceType
+        include ::Crystalline::Enum
         enums do
           USER = new('User')
           GROUP = new('Group')
         end
+        open!
       end
     end
   end

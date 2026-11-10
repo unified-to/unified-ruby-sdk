@@ -2,6 +2,17 @@
 
 Normalized lifecycle status of a part or document revision
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PlmDocumentStatus::IN_WORK
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = PlmDocumentStatus.deserialize("custom_value")
+```
+
 
 ## Values
 

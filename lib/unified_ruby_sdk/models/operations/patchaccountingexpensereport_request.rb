@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Operations
-    
 
       class PatchAccountingExpensereportRequest
         extend T::Sig

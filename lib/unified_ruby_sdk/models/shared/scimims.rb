@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class ScimIms
         extend T::Sig
@@ -18,7 +17,7 @@ module UnifiedRubySDK
 
         field :primary, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('primary') } }
 
-        field :type, Crystalline::Nilable.new(Models::Shared::ScimImsType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::ScimImsType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::ScimImsType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::ScimImsType, true) } }
 
         field :value, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
 

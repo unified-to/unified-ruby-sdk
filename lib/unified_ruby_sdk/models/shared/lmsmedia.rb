@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class LmsMedia
         extend T::Sig
@@ -24,7 +23,7 @@ module UnifiedRubySDK
 
         field :thumbnail_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('thumbnail_url') } }
 
-        field :type, Crystalline::Nilable.new(Models::Shared::LmsMediaType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::LmsMediaType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::LmsMediaType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::LmsMediaType, true) } }
 
         field :url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
 

@@ -21,24 +21,29 @@ module UnifiedRubySDK
       }.freeze
   
     sig do
-      params(request: Object, nullable: T::Boolean, optional: T::Boolean, request_field_name: Symbol, serialization_method: Symbol)
-        .returns([String, Object, T.nilable(T::Array[T::Array[T.any(T::Array[T.nilable(String)], String)]])])
+      params(request: ::Object, nullable: T::Boolean, optional: T::Boolean, request_field_name: ::Symbol, serialization_method: ::Symbol)
+        .returns([::String, ::Object, T.nilable(T::Array[T::Array[T.any(T::Array[T.nilable(::String)], ::String)]])])
     end
     def self.serialize_request_body(request, nullable, optional, request_field_name, serialization_method)
       return ['', nil, nil] if request.nil? && !nullable && optional
 
       return serialize_content_type(SERIALIZATION_METHOD_TO_CONTENT_TYPE[serialization_method], request) if !request.respond_to?(:fields) || !request.respond_to?(request_field_name)
 
-      request_val = request.send(request_field_name)
-
-      request_metadata = T.let(nil, T.nilable(T::Array[T::Array[T.any(T::Array[T.nilable(String)], String)]]))
+      request_metadata = T.let(nil, T.nilable(T::Array[T::Array[T.any(T::Array[T.nilable(::String)], ::String)]]))
       T.unsafe(request).fields.each do |f|
         if f.name == request_field_name
           request_metadata = f.metadata[:request]
           break
         end
       end
-      raise StandardError, 'invalid request type' if request_metadata.nil?
+      if request_metadata.nil?
+        # Field name collision: model has a field matching request_field_name but without :request metadata.
+        # Serialize the entire object as the request body.
+        return serialize_content_type(SERIALIZATION_METHOD_TO_CONTENT_TYPE[serialization_method], request)
+      end
+
+      request_val = request.send(request_field_name)
+      return ['', nil, nil] if request_val.nil?
 
       serialize_content_type(
         request_metadata.fetch(:media_type, 'application/octet-stream'), request_val
@@ -46,16 +51,16 @@ module UnifiedRubySDK
     end
 
     sig do
-      params(media_type: String, request: Object)
-        .returns([String, Object, T.nilable(T::Array[T::Array[T.any(T::Array[T.nilable(String)], String)]])])
+      params(media_type: ::String, request: ::Object)
+        .returns([::String, ::Object, T.nilable(T::Array[T::Array[T.any(T::Array[T.nilable(::String)], ::String)]])])
     end
     def self.serialize_content_type(media_type, request)
-      return media_type, ::Crystalline.to_json(request), nil if media_type.match('(application|text)\/.*?\+*json.*')
-      return serialize_multipart_form(media_type, request) if media_type.match('multipart\/.*')
-      return media_type, serialize_form_data(request), nil if media_type.match('application\/x-www-form-urlencoded.*')
-      return media_type, request, nil if request.is_a?(String) || request.is_a?(Array)
+      return media_type, ::Crystalline.to_json(request), nil if media_type.match('^(application|text)\/([^+]+\+)*json.*')
+      return serialize_multipart_form(media_type, request) if media_type.match('^multipart\/.*')
+      return media_type, serialize_form_data(request), nil if media_type.match('^application\/x-www-form-urlencoded.*')
+      return media_type, request, nil if request.is_a?(::String) || request.is_a?(::Array)
 
-      raise StandardError, "invalid request body type #{request.class} for mediaType #{media_type}"
+      raise ::StandardError, "invalid request body type #{request.class} for mediaType #{media_type}"
     end
   end
 end

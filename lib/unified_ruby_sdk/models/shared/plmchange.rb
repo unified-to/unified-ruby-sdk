@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # A change request, order or notice
       class PlmChange
         extend T::Sig
@@ -16,21 +15,21 @@ module UnifiedRubySDK
 
         field :affected_items, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::PlmAffectedItem)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('affected_items') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :approved_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('approved_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :approved_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('approved_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # The PlmCategory the change is filed under (reference to AccountingCategory)
         field :category_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('category_id') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :effective_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('effective_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :effective_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('effective_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # When a temporary change (deviation) expires (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :expires_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expires_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :expires_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expires_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :implemented_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('implemented_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :implemented_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('implemented_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::PlmMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
 
@@ -40,19 +39,19 @@ module UnifiedRubySDK
         # Vendor priority value
         field :priority, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('priority') } }
         # Raw data from integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :status, Crystalline::Nilable.new(Models::Shared::PlmChangeStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::PlmChangeStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::PlmChangeStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PlmChangeStatus, true) } }
 
-        field :type, Crystalline::Nilable.new(Models::Shared::PlmChangeType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::PlmChangeType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::PlmChangeType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PlmChangeType, true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
         # Originator (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(affected_items: T.nilable(T::Array[Models::Shared::PlmAffectedItem]), approved_at: T.nilable(::DateTime), category_id: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), effective_at: T.nilable(::DateTime), expires_at: T.nilable(::DateTime), id: T.nilable(::String), implemented_at: T.nilable(::DateTime), metadata: T.nilable(T::Array[Models::Shared::PlmMetadata]), name: T.nilable(::String), number: T.nilable(::String), priority: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::PlmChangeStatus), type: T.nilable(Models::Shared::PlmChangeType), updated_at: T.nilable(::DateTime), url: T.nilable(::String), user_id: T.nilable(::String)).void }
+        sig { params(affected_items: T.nilable(T::Array[Models::Shared::PlmAffectedItem]), approved_at: T.nilable(::DateTime), category_id: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), effective_at: T.nilable(::DateTime), expires_at: T.nilable(::DateTime), id: T.nilable(::String), implemented_at: T.nilable(::DateTime), metadata: T.nilable(T::Array[Models::Shared::PlmMetadata]), name: T.nilable(::String), number: T.nilable(::String), priority: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), status: T.nilable(Models::Shared::PlmChangeStatus), type: T.nilable(Models::Shared::PlmChangeType), updated_at: T.nilable(::DateTime), url: T.nilable(::String), user_id: T.nilable(::String)).void }
         def initialize(affected_items: nil, approved_at: nil, category_id: nil, created_at: nil, description: nil, effective_at: nil, expires_at: nil, id: nil, implemented_at: nil, metadata: nil, name: nil, number: nil, priority: nil, raw: nil, status: nil, type: nil, updated_at: nil, url: nil, user_id: nil)
           @affected_items = affected_items
           @approved_at = approved_at

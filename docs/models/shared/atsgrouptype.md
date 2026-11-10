@@ -1,5 +1,16 @@
 # AtsGroupType
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = AtsGroupType::TEAM
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = AtsGroupType.deserialize("custom_value")
+```
+
 
 ## Values
 

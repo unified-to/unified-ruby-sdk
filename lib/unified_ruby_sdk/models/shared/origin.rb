@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class Origin < T::Enum
-
-
+      class Origin
+        include ::Crystalline::Enum
         enums do
           AGENCY = new('AGENCY')
           APPLIED = new('APPLIED')
@@ -20,6 +18,7 @@ module UnifiedRubySDK
           SOURCED = new('SOURCED')
           UNIVERSITY = new('UNIVERSITY')
         end
+        open!
       end
     end
   end

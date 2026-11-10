@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # ComputeKeyType - The kind of credential
-      class ComputeKeyType < T::Enum
-
-
+      class ComputeKeyType
+        include ::Crystalline::Enum
         enums do
           SSH = new('SSH')
           REGISTRY = new('REGISTRY')
           SECRET = new('SECRET')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class CrmTaxonomy
         extend T::Sig
@@ -22,11 +21,11 @@ module UnifiedRubySDK
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :type, Crystalline::Nilable.new(Models::Shared::CrmTaxonomyType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::CrmTaxonomyType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::CrmTaxonomyType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::CrmTaxonomyType, true) } }
 
-        sig { params(id: ::String, label: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::CrmMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), type: T.nilable(Models::Shared::CrmTaxonomyType)).void }
+        sig { params(id: ::String, label: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::CrmMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), type: T.nilable(Models::Shared::CrmTaxonomyType)).void }
         def initialize(id:, label: nil, metadata: nil, name: nil, raw: nil, type: nil)
           @id = id
           @label = label

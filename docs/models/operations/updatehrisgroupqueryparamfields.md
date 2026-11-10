@@ -1,5 +1,13 @@
 # UpdateHrisGroupQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = UpdateHrisGroupQueryParamFields::ID
+```
+
 
 ## Values
 

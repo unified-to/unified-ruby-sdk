@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Platform-specific metadata
       class PlatformMetadata
         extend T::Sig

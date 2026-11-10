@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # UcFaxStatus - The current or final status of the fax
-      class UcFaxStatus < T::Enum
-
-
+      class UcFaxStatus
+        include ::Crystalline::Enum
         enums do
           QUEUED = new('QUEUED')
           SENDING = new('SENDING')
@@ -22,6 +20,7 @@ module UnifiedRubySDK
           CANCELED = new('CANCELED')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

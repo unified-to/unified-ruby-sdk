@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class PropertyEmail
         extend T::Sig
@@ -16,7 +15,7 @@ module UnifiedRubySDK
         # the email address
         field :email, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('email'), required: true } }
         # the kind of email address
-        field :type, Crystalline::Nilable.new(Models::Shared::PropertyEmailType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyEmailType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::PropertyEmailType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PropertyEmailType, true) } }
 
         sig { params(email: ::String, type: T.nilable(Models::Shared::PropertyEmailType)).void }
         def initialize(email:, type: nil)

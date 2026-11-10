@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class ShippingShipment
         extend T::Sig
@@ -18,7 +17,7 @@ module UnifiedRubySDK
         # Human-readable carrier/provider name when there is no carrier record to reference (e.g. commerce-platform fulfillments)
         field :carrier_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('carrier_name') } }
         # The date that this shipment object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Customs information
         field :customs, Crystalline::Nilable.new(Models::Shared::PropertyShippingShipmentCustoms), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('customs') } }
         # Origin address
@@ -58,13 +57,13 @@ module UnifiedRubySDK
         # Estimated delivery days from the rate
         field :rate_estimated_days, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rate_estimated_days') } }
         # Estimated delivery date from the rate (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :rate_estimated_delivery_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rate_estimated_delivery_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :rate_estimated_delivery_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rate_estimated_delivery_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Optional reference to the selected rate (for traceability)
         field :rate_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rate_id') } }
         # Service name from the rate (e.g., "Priority Mail")
         field :rate_service_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rate_service_name') } }
         # The raw data returned by the integration for this shipment
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # Customer reference number
         field :reference_number, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reference_number') } }
         # Return address (may differ from from_address)
@@ -74,15 +73,15 @@ module UnifiedRubySDK
         # Reason for return
         field :return_reason, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('return_reason') } }
         # Type of return
-        field :return_type, Crystalline::Nilable.new(Models::Shared::ReturnType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('return_type'), 'decoder': Utils.enum_from_string(Models::Shared::ReturnType, true) } }
+        field :return_type, Crystalline::Nilable.new(Models::Shared::ReturnType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('return_type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::ReturnType, true) } }
         # Code for the shipping service used
         field :service_code, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('service_code') } }
         # When shipment was createddispatched (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :shipped_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('shipped_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :shipped_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('shipped_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Array of special instructions
         field :special_instructions, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('special_instructions') } }
         # Current status of the shipment
-        field :status, Crystalline::Nilable.new(Models::Shared::ShippingShipmentStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::ShippingShipmentStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::ShippingShipmentStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::ShippingShipmentStatus, true) } }
         # Destination address
         field :to_address, Crystalline::Nilable.new(Models::Shared::PropertyShippingShipmentToAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('to_address') } }
         # Optional reference to the tracking information
@@ -90,13 +89,13 @@ module UnifiedRubySDK
         # Carrier tracking URL for this shipment
         field :tracking_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tracking_url') } }
         # The last date that this shipment object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Origin warehouselocation ID; points to CommerceLocation
         field :warehouse_location_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('warehouse_location_id') } }
         # Origin warehouse location name
         field :warehouse_location_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('warehouse_location_name') } }
 
-        sig { params(carrier_id: T.nilable(::String), carrier_name: T.nilable(::String), created_at: T.nilable(::DateTime), customs: T.nilable(Models::Shared::PropertyShippingShipmentCustoms), from_address: T.nilable(Models::Shared::PropertyShippingShipmentFromAddress), id: T.nilable(::String), insurance: T.nilable(Models::Shared::PropertyShippingShipmentInsurance), is_adult_signature_required: T.nilable(T::Boolean), is_international: T.nilable(T::Boolean), is_rate_guaranteed: T.nilable(T::Boolean), is_return: T.nilable(T::Boolean), is_signature_required: T.nilable(T::Boolean), label_id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::ShippingShipmentLineitem]), metadata: T.nilable(T::Array[Models::Shared::ShippingMetadata]), order_id: T.nilable(::String), organization_id: T.nilable(::String), original_shipment_id: T.nilable(::String), packages: T.nilable(T::Array[Models::Shared::ShippingPackage]), rate_amount: T.nilable(::Float), rate_currency: T.nilable(::String), rate_estimated_days: T.nilable(::Float), rate_estimated_delivery_at: T.nilable(::DateTime), rate_id: T.nilable(::String), rate_service_name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reference_number: T.nilable(::String), return_address: T.nilable(Models::Shared::PropertyShippingShipmentReturnAddress), return_authorization_number: T.nilable(::String), return_reason: T.nilable(::String), return_type: T.nilable(Models::Shared::ReturnType), service_code: T.nilable(::String), shipped_at: T.nilable(::DateTime), special_instructions: T.nilable(T::Array[::String]), status: T.nilable(Models::Shared::ShippingShipmentStatus), to_address: T.nilable(Models::Shared::PropertyShippingShipmentToAddress), tracking_id: T.nilable(::String), tracking_url: T.nilable(::String), updated_at: T.nilable(::DateTime), warehouse_location_id: T.nilable(::String), warehouse_location_name: T.nilable(::String)).void }
+        sig { params(carrier_id: T.nilable(::String), carrier_name: T.nilable(::String), created_at: T.nilable(::DateTime), customs: T.nilable(Models::Shared::PropertyShippingShipmentCustoms), from_address: T.nilable(Models::Shared::PropertyShippingShipmentFromAddress), id: T.nilable(::String), insurance: T.nilable(Models::Shared::PropertyShippingShipmentInsurance), is_adult_signature_required: T.nilable(T::Boolean), is_international: T.nilable(T::Boolean), is_rate_guaranteed: T.nilable(T::Boolean), is_return: T.nilable(T::Boolean), is_signature_required: T.nilable(T::Boolean), label_id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::ShippingShipmentLineitem]), metadata: T.nilable(T::Array[Models::Shared::ShippingMetadata]), order_id: T.nilable(::String), organization_id: T.nilable(::String), original_shipment_id: T.nilable(::String), packages: T.nilable(T::Array[Models::Shared::ShippingPackage]), rate_amount: T.nilable(::Float), rate_currency: T.nilable(::String), rate_estimated_days: T.nilable(::Float), rate_estimated_delivery_at: T.nilable(::DateTime), rate_id: T.nilable(::String), rate_service_name: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), reference_number: T.nilable(::String), return_address: T.nilable(Models::Shared::PropertyShippingShipmentReturnAddress), return_authorization_number: T.nilable(::String), return_reason: T.nilable(::String), return_type: T.nilable(Models::Shared::ReturnType), service_code: T.nilable(::String), shipped_at: T.nilable(::DateTime), special_instructions: T.nilable(T::Array[::String]), status: T.nilable(Models::Shared::ShippingShipmentStatus), to_address: T.nilable(Models::Shared::PropertyShippingShipmentToAddress), tracking_id: T.nilable(::String), tracking_url: T.nilable(::String), updated_at: T.nilable(::DateTime), warehouse_location_id: T.nilable(::String), warehouse_location_name: T.nilable(::String)).void }
         def initialize(carrier_id: nil, carrier_name: nil, created_at: nil, customs: nil, from_address: nil, id: nil, insurance: nil, is_adult_signature_required: nil, is_international: nil, is_rate_guaranteed: nil, is_return: nil, is_signature_required: nil, label_id: nil, lineitems: nil, metadata: nil, order_id: nil, organization_id: nil, original_shipment_id: nil, packages: nil, rate_amount: nil, rate_currency: nil, rate_estimated_days: nil, rate_estimated_delivery_at: nil, rate_id: nil, rate_service_name: nil, raw: nil, reference_number: nil, return_address: nil, return_authorization_number: nil, return_reason: nil, return_type: nil, service_code: nil, shipped_at: nil, special_instructions: nil, status: nil, to_address: nil, tracking_id: nil, tracking_url: nil, updated_at: nil, warehouse_location_id: nil, warehouse_location_name: nil)
           @carrier_id = carrier_id
           @carrier_name = carrier_name

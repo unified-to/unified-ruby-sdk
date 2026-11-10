@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class EmploymentType < T::Enum
-
-
+      class EmploymentType
+        include ::Crystalline::Enum
         enums do
           FULL_TIME = new('FULL_TIME')
           PART_TIME = new('PART_TIME')
@@ -24,6 +22,7 @@ module UnifiedRubySDK
           FREELANCE = new('FREELANCE')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

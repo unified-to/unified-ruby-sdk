@@ -7,11 +7,8 @@
 module UnifiedRubySDK
   module Models
     module Operations
-    
 
       class CreateAtsCandidateQueryParamFields < T::Enum
-
-
         enums do
           ID = new('id')
           CREATED_AT = new('created_at')
@@ -41,6 +38,8 @@ module UnifiedRubySDK
           JOB_IDS = new('job_ids')
           METADATA = new('metadata')
           SUMMARY = new('summary')
+          IS_PRIVATE = new('is_private')
+          HAS_DO_NOT_CONTACT = new('has_do_not_contact')
           RAW = new('raw')
         end
       end

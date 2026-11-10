@@ -1,5 +1,13 @@
 # ListVerificationPackagesQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListVerificationPackagesQueryParamFields::ID
+```
+
 
 ## Values
 

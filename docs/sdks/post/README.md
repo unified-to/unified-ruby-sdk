@@ -1,5 +1,4 @@
 # Post
-(*post*)
 
 ## Overview
 
@@ -24,12 +23,11 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-res = s.post.create_social_post(social_post: Models::Shared::SocialPost.new(), connection_id: '<id>')
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.post.create_social_post(social_post: Models::Shared::SocialPost.new, connection_id: '<id>')
 
 unless res.social_post.nil?
   # handle response
@@ -68,11 +66,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.post.get_social_post(connection_id: '<id>', id: '<id>')
 
 unless res.social_post.nil?
@@ -112,15 +109,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListSocialPostsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListSocialPostsRequest.new(
+  connection_id: '<id>'
+)
 res = s.post.list_social_posts(request: req)
 
 unless res.social_posts.nil?
@@ -157,17 +153,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::PatchSocialPostRequest.new(
-  social_post: Models::Shared::SocialPost.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::PatchSocialPostRequest.new(
+  social_post: Models::Shared::SocialPost.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.post.patch_social_post(request: req)
 
 unless res.social_post.nil?
@@ -204,11 +199,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.post.remove_social_post(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -246,17 +240,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::UpdateSocialPostRequest.new(
-  social_post: Models::Shared::SocialPost.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::UpdateSocialPostRequest.new(
+  social_post: Models::Shared::SocialPost.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.post.update_social_post(request: req)
 
 unless res.social_post.nil?

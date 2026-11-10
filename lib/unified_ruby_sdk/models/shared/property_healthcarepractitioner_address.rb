@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Work address of the practitioner
       class PropertyHealthcarePractitionerAddress
         extend T::Sig

@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class PropertyShippingTrackingEventLocationAddress
         extend T::Sig

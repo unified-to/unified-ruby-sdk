@@ -1,5 +1,16 @@
 # ListOrderId
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListOrderId::SUPPORTED_REQUIRED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = ListOrderId.deserialize("custom_value")
+```
+
 
 ## Values
 

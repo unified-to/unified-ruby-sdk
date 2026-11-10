@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class VerificationPackage
         extend T::Sig
@@ -16,7 +15,7 @@ module UnifiedRubySDK
         # Name of the verification type
         field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name'), required: true } }
 
-        field :type, Models::Shared::VerificationPackageType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': Utils.enum_from_string(Models::Shared::VerificationPackageType, false) } }
+        field :type, Models::Shared::VerificationPackageType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::VerificationPackageType, false) } }
 
         field :aliases, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('aliases') } }
         # average processing time in minutes
@@ -24,7 +23,7 @@ module UnifiedRubySDK
         # Cost-related information
         field :cost_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cost_amount') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
         # Detailed description
@@ -46,15 +45,15 @@ module UnifiedRubySDK
         # Questions that need to be answered for this verification
         field :parameters, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::VerificationParameter)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parameters') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # Category (Verification, Validation, Background Check)
         field :tags, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tags') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # {country}-{state/province/territory} or just {country} 2-digit ISO codes
         field :valid_regions, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('valid_regions') } }
 
-        sig { params(name: ::String, type: Models::Shared::VerificationPackageType, aliases: T.nilable(T::Array[::String]), average_processing_times: T.nilable(T::Array[Models::Shared::VerificationTime]), cost_amount: T.nilable(::Float), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), has_redirect_url: T.nilable(T::Boolean), has_target_url: T.nilable(T::Boolean), id: T.nilable(::String), info_url: T.nilable(::String), max_score: T.nilable(::Float), metadata: T.nilable(T::Array[Models::Shared::VerificationMetadata]), needs_ip_address: T.nilable(T::Boolean), parameters: T.nilable(T::Array[Models::Shared::VerificationParameter]), raw: T.nilable(T::Hash[Symbol, ::Object]), tags: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), valid_regions: T.nilable(T::Array[::String])).void }
+        sig { params(name: ::String, type: Models::Shared::VerificationPackageType, aliases: T.nilable(T::Array[::String]), average_processing_times: T.nilable(T::Array[Models::Shared::VerificationTime]), cost_amount: T.nilable(::Float), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), has_redirect_url: T.nilable(T::Boolean), has_target_url: T.nilable(T::Boolean), id: T.nilable(::String), info_url: T.nilable(::String), max_score: T.nilable(::Float), metadata: T.nilable(T::Array[Models::Shared::VerificationMetadata]), needs_ip_address: T.nilable(T::Boolean), parameters: T.nilable(T::Array[Models::Shared::VerificationParameter]), raw: T.nilable(T::Hash[::Symbol, ::Object]), tags: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), valid_regions: T.nilable(T::Array[::String])).void }
         def initialize(name:, type:, aliases: nil, average_processing_times: nil, cost_amount: nil, created_at: nil, currency: nil, description: nil, has_redirect_url: nil, has_target_url: nil, id: nil, info_url: nil, max_score: nil, metadata: nil, needs_ip_address: nil, parameters: nil, raw: nil, tags: nil, updated_at: nil, valid_regions: nil)
           @name = name
           @type = type

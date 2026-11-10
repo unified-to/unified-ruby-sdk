@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class AnalyticsMetadata1
         extend T::Sig

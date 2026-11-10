@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # A notification of an event that occurred in you account.
       class Notification
         extend T::Sig
@@ -16,11 +15,11 @@ module UnifiedRubySDK
 
         field :connection_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('connection_id') } }
         # The date that this integration object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Longer description of this notification
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
-        field :event, Crystalline::Nilable.new(Models::Shared::Event), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('event'), 'decoder': Utils.enum_from_string(Models::Shared::Event, true) } }
+        field :event, Crystalline::Nilable.new(Models::Shared::Event), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('event'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::Event, true) } }
         # Unique identifier for this notification object
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
@@ -28,9 +27,9 @@ module UnifiedRubySDK
 
         field :integration_type, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('integration_type') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :sent_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sent_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :sent_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sent_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 

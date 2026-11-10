@@ -1,5 +1,16 @@
 # ClubsMetadataFormat
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ClubsMetadataFormat::TEXT
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = ClubsMetadataFormat.deserialize("custom_value")
+```
+
 
 ## Values
 

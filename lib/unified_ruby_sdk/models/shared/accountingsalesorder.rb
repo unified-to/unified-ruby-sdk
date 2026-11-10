@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class AccountingSalesorder
         extend T::Sig
@@ -20,11 +19,11 @@ module UnifiedRubySDK
 
         field :category_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('category_ids') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :closed_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('closed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :closed_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('closed_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Customer, Supplier (reference to AccountingContact)
         field :contact_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_id') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
         # POS register/terminal/device (HRIS Device)
@@ -36,7 +35,7 @@ module UnifiedRubySDK
 
         field :fees, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingFee)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('fees') } }
 
-        field :fulfillment_type, Crystalline::Nilable.new(Models::Shared::FulfillmentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('fulfillment_type'), 'decoder': Utils.enum_from_string(Models::Shared::FulfillmentType, true) } }
+        field :fulfillment_type, Crystalline::Nilable.new(Models::Shared::FulfillmentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('fulfillment_type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::FulfillmentType, true) } }
 
         field :guest_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('guest_count') } }
 
@@ -56,9 +55,9 @@ module UnifiedRubySDK
         # read-only reciprocal of PaymentPayment.allocations; payments applied to this sales order
         field :payments, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingPaymentReference)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payments') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :posted_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('posted_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :posted_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('posted_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :refunded_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('refunded_amount') } }
 
@@ -68,7 +67,7 @@ module UnifiedRubySDK
 
         field :shipping_address, Crystalline::Nilable.new(Models::Shared::PropertyAccountingSalesorderShippingAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('shipping_address') } }
 
-        field :status, Crystalline::Nilable.new(Models::Shared::AccountingSalesorderStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::AccountingSalesorderStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::AccountingSalesorderStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::AccountingSalesorderStatus, true) } }
         # payment_subscription that generated this order, if recurring
         field :subscription_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subscription_id') } }
         # pre-tax, pre-tip amount
@@ -82,9 +81,9 @@ module UnifiedRubySDK
 
         field :total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(account_id: T.nilable(::String), billing_address: T.nilable(Models::Shared::PropertyAccountingSalesorderBillingAddress), category_ids: T.nilable(T::Array[::String]), closed_at: T.nilable(::DateTime), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), device_id: T.nilable(::String), discount_amount: T.nilable(::Float), employee_user_id: T.nilable(::String), fees: T.nilable(T::Array[Models::Shared::AccountingFee]), fulfillment_type: T.nilable(Models::Shared::FulfillmentType), guest_count: T.nilable(::Float), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingLineitem]), location_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), order_number: T.nilable(::String), organization_id: T.nilable(::String), paid_amount: T.nilable(::Float), payments: T.nilable(T::Array[Models::Shared::AccountingPaymentReference]), posted_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), refunded_amount: T.nilable(::Float), sales_channel: T.nilable(::String), service_charge_amount: T.nilable(::Float), shipping_address: T.nilable(Models::Shared::PropertyAccountingSalesorderShippingAddress), status: T.nilable(Models::Shared::AccountingSalesorderStatus), subscription_id: T.nilable(::String), subtotal_amount: T.nilable(::Float), table_id: T.nilable(::String), tax_amount: T.nilable(::Float), tip_amount: T.nilable(::Float), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
+        sig { params(account_id: T.nilable(::String), billing_address: T.nilable(Models::Shared::PropertyAccountingSalesorderBillingAddress), category_ids: T.nilable(T::Array[::String]), closed_at: T.nilable(::DateTime), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), device_id: T.nilable(::String), discount_amount: T.nilable(::Float), employee_user_id: T.nilable(::String), fees: T.nilable(T::Array[Models::Shared::AccountingFee]), fulfillment_type: T.nilable(Models::Shared::FulfillmentType), guest_count: T.nilable(::Float), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingLineitem]), location_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), order_number: T.nilable(::String), organization_id: T.nilable(::String), paid_amount: T.nilable(::Float), payments: T.nilable(T::Array[Models::Shared::AccountingPaymentReference]), posted_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[::Symbol, ::Object]), refunded_amount: T.nilable(::Float), sales_channel: T.nilable(::String), service_charge_amount: T.nilable(::Float), shipping_address: T.nilable(Models::Shared::PropertyAccountingSalesorderShippingAddress), status: T.nilable(Models::Shared::AccountingSalesorderStatus), subscription_id: T.nilable(::String), subtotal_amount: T.nilable(::Float), table_id: T.nilable(::String), tax_amount: T.nilable(::Float), tip_amount: T.nilable(::Float), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
         def initialize(account_id: nil, billing_address: nil, category_ids: nil, closed_at: nil, contact_id: nil, created_at: nil, currency: nil, device_id: nil, discount_amount: nil, employee_user_id: nil, fees: nil, fulfillment_type: nil, guest_count: nil, id: nil, lineitems: nil, location_id: nil, metadata: nil, order_number: nil, organization_id: nil, paid_amount: nil, payments: nil, posted_at: nil, raw: nil, refunded_amount: nil, sales_channel: nil, service_charge_amount: nil, shipping_address: nil, status: nil, subscription_id: nil, subtotal_amount: nil, table_id: nil, tax_amount: nil, tip_amount: nil, total_amount: nil, updated_at: nil)
           @account_id = account_id
           @billing_address = billing_address

@@ -1,5 +1,16 @@
 # AdsInsertionorderStatus
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = AdsInsertionorderStatus::UNSPECIFIED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = AdsInsertionorderStatus.deserialize("custom_value")
+```
+
 
 ## Values
 

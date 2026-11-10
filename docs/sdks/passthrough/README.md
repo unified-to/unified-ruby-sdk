@@ -1,5 +1,4 @@
 # Passthrough
-(*passthrough*)
 
 ## Overview
 
@@ -26,14 +25,13 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.passthrough.create_passthrough_json(connection_id: '<id>', path: '/var/log')
 
-if res.status_code == 200
+unless res.default_application_json_any.nil?
   # handle response
 end
 
@@ -70,14 +68,13 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.passthrough.create_passthrough_raw(connection_id: '<id>', path: '/var/log')
 
-if res.status_code == 200
+unless res.default_application_json_any.nil?
   # handle response
 end
 
@@ -114,14 +111,13 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.passthrough.list_passthroughs(connection_id: '<id>', path: '/System')
 
-if res.status_code == 200
+unless res.default_application_json_any.nil?
   # handle response
 end
 
@@ -157,14 +153,13 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.passthrough.patch_passthrough_json(connection_id: '<id>', path: '/System')
 
-if res.status_code == 200
+unless res.default_application_json_any.nil?
   # handle response
 end
 
@@ -201,14 +196,13 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.passthrough.patch_passthrough_raw(connection_id: '<id>', path: '/System')
 
-if res.status_code == 200
+unless res.default_application_json_any.nil?
   # handle response
 end
 
@@ -245,14 +239,13 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.passthrough.remove_passthrough(connection_id: '<id>', path: '/bin')
 
-if res.status_code == 200
+unless res.default_application_json_any.nil?
   # handle response
 end
 
@@ -288,14 +281,13 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.passthrough.update_passthrough_json(connection_id: '<id>', path: '/var/tmp')
 
-if res.status_code == 200
+unless res.default_application_json_any.nil?
   # handle response
 end
 
@@ -332,14 +324,13 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.passthrough.update_passthrough_raw(connection_id: '<id>', path: '/var/tmp')
 
-if res.status_code == 200
+unless res.default_application_json_any.nil?
   # handle response
 end
 

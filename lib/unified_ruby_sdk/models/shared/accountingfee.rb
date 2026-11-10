@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class AccountingFee
         extend T::Sig
@@ -16,7 +15,7 @@ module UnifiedRubySDK
 
         field :amount, ::Float, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('amount'), required: true } }
         # Unified fee category
-        field :type, Models::Shared::AccountingFeeType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': Utils.enum_from_string(Models::Shared::AccountingFeeType, false) } }
+        field :type, Models::Shared::AccountingFeeType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::AccountingFeeType, false) } }
         # ISO 4217 currency code, e.g. USD
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
         # The provider's original fee label, e.g. "VAT" or a shipping carrier name

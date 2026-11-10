@@ -1,5 +1,16 @@
 # HrisPayslipDetailType
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = HrisPayslipDetailType::EARNING_SALARY
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = HrisPayslipDetailType.deserialize("custom_value")
+```
+
 
 ## Values
 

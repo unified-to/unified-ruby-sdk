@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # AccountingBankfeedaccountStatus - feed state: ACTIVE, INACTIVE
-      class AccountingBankfeedaccountStatus < T::Enum
-
-
+      class AccountingBankfeedaccountStatus
+        include ::Crystalline::Enum
         enums do
           ACTIVE = new('ACTIVE')
           INACTIVE = new('INACTIVE')
         end
+        open!
       end
     end
   end

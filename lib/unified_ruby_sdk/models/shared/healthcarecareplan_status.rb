@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # HealthcareCareplanStatus - Status of the care plan
-      class HealthcareCareplanStatus < T::Enum
-
-
+      class HealthcareCareplanStatus
+        include ::Crystalline::Enum
         enums do
           DRAFT = new('DRAFT')
           ACTIVE = new('ACTIVE')
@@ -22,6 +20,7 @@ module UnifiedRubySDK
           UNKNOWN = new('UNKNOWN')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

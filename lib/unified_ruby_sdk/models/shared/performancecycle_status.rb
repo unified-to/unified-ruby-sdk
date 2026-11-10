@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PerformanceCycleStatus < T::Enum
-
-
+      class PerformanceCycleStatus
+        include ::Crystalline::Enum
         enums do
           DRAFT = new('DRAFT')
           SCHEDULED = new('SCHEDULED')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           CLOSED = new('CLOSED')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

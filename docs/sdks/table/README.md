@@ -1,5 +1,4 @@
 # Table
-(*table*)
 
 ## Overview
 
@@ -20,44 +19,43 @@ Creates a DatastoreTable. Provide the unified DatastoreTable fields in the reque
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createDatastoreTable" method="post" path="/datastore/{connection_id}/table" -->
+<!-- UsageSnippet language="ruby" operationID="createDatastoreTable" method="post" path="/datastore/{connection_id}/table" example="datastore_table" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.table.create_datastore_table(datastore_table: Models::Shared::DatastoreTable.new(
   created_at: DateTime.iso8601('2022-05-22T04:49:00.762Z'),
   description: 'Quasi adhuc paulatim ducimus carpo vomito magni tantum tubineus corona.',
   fields_: [
     Models::Shared::DatastoreField.new(
       description: 'Antea soluta itaque clamo despecto basium accendo.',
-      id: '89a4672d-817a-4e11-b2c0-0253c5f94faf',
+      id: 'db6f760d-e7f2-41ac-9774-72d40c9bf00b',
       is_indexed: true,
       is_unique: true,
       name: 'Ferry LLC',
       original_type: 'conservo',
       scale: 64.0,
-      type: Models::Shared::DatastoreFieldType::SINGLE_SELECT,
+      type: Models::Shared::DatastoreFieldType::SINGLE_SELECT
     ),
     Models::Shared::DatastoreField.new(
       description: 'Nulla cattus aequus sumo neque alter cauda subseco.',
-      id: '071f2488-29be-42d1-857c-8ad19bb49f14',
+      id: '54c731af-43f7-4e66-adcd-6327c7eeb773',
       is_nullable: true,
       is_unique: true,
       name: 'Hand - Nader',
       original_type: 'conservo',
       precision: 57.0,
-      type: Models::Shared::DatastoreFieldType::SINGLE_SELECT,
+      type: Models::Shared::DatastoreFieldType::SINGLE_SELECT
     ),
     Models::Shared::DatastoreField.new(
       description: 'Utilis callide adhuc verumtamen doloremque ceno sui sint.',
-      id: '19ca3efe-697e-4d58-9841-a146823993ec',
+      id: 'd44eaf36-e0ce-4323-9500-6fbefc32ca1b',
       is_indexed: true,
       is_nullable: true,
       is_unique: true,
@@ -65,42 +63,42 @@ res = s.table.create_datastore_table(datastore_table: Models::Shared::DatastoreT
       name: 'Toy - Kiehn',
       original_type: 'sursum',
       precision: 47.0,
-      type: Models::Shared::DatastoreFieldType::NUMBER,
+      type: Models::Shared::DatastoreFieldType::NUMBER
     ),
     Models::Shared::DatastoreField.new(
       description: 'Audax articulus triumphus tametsi cura tenetur colligo arcesso bestia.',
-      id: 'd46e2c6c-0af9-4b3e-b371-d2b97854f7f5',
+      id: 'd8055d69-49a1-42fb-9702-8d4d13b44140',
       name: 'Gislason, Gorczany and Hegmann',
       original_type: 'tego',
       precision: 94.0,
       scale: 24.0,
-      type: Models::Shared::DatastoreFieldType::RELATION,
+      type: Models::Shared::DatastoreFieldType::RELATION
     ),
     Models::Shared::DatastoreField.new(
       description: 'Communis coma cura audio aduro acer canis expedita.',
-      id: '632146c1-c841-4ba6-9d7c-07c466e3816f',
+      id: 'f9c86c11-ce3c-488c-b021-54d82a2be094',
       is_indexed: true,
       is_primary_key: true,
       is_required: true,
       name: 'Graham, Steuber and Kshlerin',
       original_type: 'defessus',
       scale: 68.0,
-      type: Models::Shared::DatastoreFieldType::EMAIL,
+      type: Models::Shared::DatastoreFieldType::EMAIL
     ),
   ],
-  id: '4a56896c-4702-4c86-98b4-fdcb7806c2b8',
+  id: 'ced6bd91-aec1-460d-bbfd-4ef5be768618',
   metadata: [],
   name: 'Rogahn, Lowe and Heller',
   relationships: [
     Models::Shared::DatastoreRelationship.new(
       field: 'Macejkovic - Shields',
       name: 'Hyatt, Ryan and Nienow',
-      table_id: '4a56896c-4702-4c86-98b4-fdcb7806c2b8',
-      type: Models::Shared::DatastoreRelationshipType::MANY,
+      table_id: 'ced6bd91-aec1-460d-bbfd-4ef5be768618',
+      type: Models::Shared::DatastoreRelationshipType::MANY
     ),
   ],
-  updated_at: DateTime.iso8601('2022-08-13T19:48:22.359Z'),
-  web_url: 'https://nervous-deck.com',
+  updated_at: DateTime.iso8601('2022-08-13T22:02:05.719Z'),
+  web_url: 'https://nervous-deck.com'
 ), connection_id: '<id>')
 
 unless res.datastore_table.nil?
@@ -140,11 +138,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.table.get_commerce_table(connection_id: '<id>', id: '<id>')
 
 unless res.commerce_table.nil?
@@ -184,11 +181,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.table.get_datastore_table(connection_id: '<id>', id: '<id>')
 
 unless res.datastore_table.nil?
@@ -228,15 +224,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCommerceTablesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCommerceTablesRequest.new(
+  connection_id: '<id>'
+)
 res = s.table.list_commerce_tables(request: req)
 
 unless res.commerce_tables.nil?
@@ -273,15 +268,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListDatastoreTablesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListDatastoreTablesRequest.new(
+  connection_id: '<id>'
+)
 res = s.table.list_datastore_tables(request: req)
 
 unless res.datastore_tables.nil?
@@ -312,16 +306,16 @@ Updates the DatastoreTable identified by `id`. Provide the unified DatastoreTabl
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchDatastoreTable" method="patch" path="/datastore/{connection_id}/table/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchDatastoreTable" method="patch" path="/datastore/{connection_id}/table/{id}" example="datastore_table" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchDatastoreTableRequest.new(
   datastore_table: Models::Shared::DatastoreTable.new(
@@ -330,27 +324,27 @@ req = Models::Operations::PatchDatastoreTableRequest.new(
     fields_: [
       Models::Shared::DatastoreField.new(
         description: 'Antea soluta itaque clamo despecto basium accendo.',
-        id: 'a11e5072-a932-4fa5-a307-a3e0e007516a',
+        id: '84da9ca9-087e-48a5-a2b9-839974155775',
         is_indexed: true,
         is_unique: true,
         name: 'Ferry LLC',
         original_type: 'conservo',
         scale: 64.0,
-        type: Models::Shared::DatastoreFieldType::SINGLE_SELECT,
+        type: Models::Shared::DatastoreFieldType::SINGLE_SELECT
       ),
       Models::Shared::DatastoreField.new(
         description: 'Nulla cattus aequus sumo neque alter cauda subseco.',
-        id: '38d23442-6fc6-4c5b-bbad-ab67efb20f35',
+        id: '0a6af5db-d822-47b7-b34d-6198f429b439',
         is_nullable: true,
         is_unique: true,
         name: 'Hand - Nader',
         original_type: 'conservo',
         precision: 57.0,
-        type: Models::Shared::DatastoreFieldType::SINGLE_SELECT,
+        type: Models::Shared::DatastoreFieldType::SINGLE_SELECT
       ),
       Models::Shared::DatastoreField.new(
         description: 'Utilis callide adhuc verumtamen doloremque ceno sui sint.',
-        id: '990641f7-ab1b-4b9b-bce3-6fc8cac44226',
+        id: '49e1330b-78fb-4e62-9102-27f59af529a1',
         is_indexed: true,
         is_nullable: true,
         is_unique: true,
@@ -358,47 +352,46 @@ req = Models::Operations::PatchDatastoreTableRequest.new(
         name: 'Toy - Kiehn',
         original_type: 'sursum',
         precision: 47.0,
-        type: Models::Shared::DatastoreFieldType::NUMBER,
+        type: Models::Shared::DatastoreFieldType::NUMBER
       ),
       Models::Shared::DatastoreField.new(
         description: 'Audax articulus triumphus tametsi cura tenetur colligo arcesso bestia.',
-        id: 'ff0de67f-58c9-4c8a-893c-ac51019c9b56',
+        id: 'f9ff39a7-654b-4b53-9231-7627d473e5cc',
         name: 'Gislason, Gorczany and Hegmann',
         original_type: 'tego',
         precision: 94.0,
         scale: 24.0,
-        type: Models::Shared::DatastoreFieldType::RELATION,
+        type: Models::Shared::DatastoreFieldType::RELATION
       ),
       Models::Shared::DatastoreField.new(
         description: 'Communis coma cura audio aduro acer canis expedita.',
-        id: '9d6b1a1d-7794-41a5-8d66-1274c4cb542f',
+        id: '91681a2f-3913-4579-8f6f-39b3a8c56332',
         is_indexed: true,
         is_primary_key: true,
         is_required: true,
         name: 'Graham, Steuber and Kshlerin',
         original_type: 'defessus',
         scale: 68.0,
-        type: Models::Shared::DatastoreFieldType::EMAIL,
+        type: Models::Shared::DatastoreFieldType::EMAIL
       ),
     ],
-    id: '945d5880-32a4-4959-98fd-6d7063f6f8c6',
+    id: '7d7b5c5e-4456-4d09-86e8-fe0daeec5b0f',
     metadata: [],
     name: 'Rogahn, Lowe and Heller',
     relationships: [
       Models::Shared::DatastoreRelationship.new(
         field: 'Macejkovic - Shields',
         name: 'Hyatt, Ryan and Nienow',
-        table_id: '945d5880-32a4-4959-98fd-6d7063f6f8c6',
-        type: Models::Shared::DatastoreRelationshipType::MANY,
+        table_id: '7d7b5c5e-4456-4d09-86e8-fe0daeec5b0f',
+        type: Models::Shared::DatastoreRelationshipType::MANY
       ),
     ],
-    updated_at: DateTime.iso8601('2022-08-13T19:48:22.361Z'),
-    web_url: 'https://nervous-deck.com',
+    updated_at: DateTime.iso8601('2022-08-13T22:02:05.720Z'),
+    web_url: 'https://nervous-deck.com'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.table.patch_datastore_table(request: req)
 
 unless res.datastore_table.nil?
@@ -435,11 +428,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.table.remove_datastore_table(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -471,16 +463,16 @@ Updates the DatastoreTable identified by `id`. Provide the unified DatastoreTabl
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateDatastoreTable" method="put" path="/datastore/{connection_id}/table/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateDatastoreTable" method="put" path="/datastore/{connection_id}/table/{id}" example="datastore_table" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateDatastoreTableRequest.new(
   datastore_table: Models::Shared::DatastoreTable.new(
@@ -489,27 +481,27 @@ req = Models::Operations::UpdateDatastoreTableRequest.new(
     fields_: [
       Models::Shared::DatastoreField.new(
         description: 'Antea soluta itaque clamo despecto basium accendo.',
-        id: 'a11e5072-a932-4fa5-a307-a3e0e007516a',
+        id: '84da9ca9-087e-48a5-a2b9-839974155775',
         is_indexed: true,
         is_unique: true,
         name: 'Ferry LLC',
         original_type: 'conservo',
         scale: 64.0,
-        type: Models::Shared::DatastoreFieldType::SINGLE_SELECT,
+        type: Models::Shared::DatastoreFieldType::SINGLE_SELECT
       ),
       Models::Shared::DatastoreField.new(
         description: 'Nulla cattus aequus sumo neque alter cauda subseco.',
-        id: '38d23442-6fc6-4c5b-bbad-ab67efb20f35',
+        id: '0a6af5db-d822-47b7-b34d-6198f429b439',
         is_nullable: true,
         is_unique: true,
         name: 'Hand - Nader',
         original_type: 'conservo',
         precision: 57.0,
-        type: Models::Shared::DatastoreFieldType::SINGLE_SELECT,
+        type: Models::Shared::DatastoreFieldType::SINGLE_SELECT
       ),
       Models::Shared::DatastoreField.new(
         description: 'Utilis callide adhuc verumtamen doloremque ceno sui sint.',
-        id: '990641f7-ab1b-4b9b-bce3-6fc8cac44226',
+        id: '49e1330b-78fb-4e62-9102-27f59af529a1',
         is_indexed: true,
         is_nullable: true,
         is_unique: true,
@@ -517,47 +509,46 @@ req = Models::Operations::UpdateDatastoreTableRequest.new(
         name: 'Toy - Kiehn',
         original_type: 'sursum',
         precision: 47.0,
-        type: Models::Shared::DatastoreFieldType::NUMBER,
+        type: Models::Shared::DatastoreFieldType::NUMBER
       ),
       Models::Shared::DatastoreField.new(
         description: 'Audax articulus triumphus tametsi cura tenetur colligo arcesso bestia.',
-        id: 'ff0de67f-58c9-4c8a-893c-ac51019c9b56',
+        id: 'f9ff39a7-654b-4b53-9231-7627d473e5cc',
         name: 'Gislason, Gorczany and Hegmann',
         original_type: 'tego',
         precision: 94.0,
         scale: 24.0,
-        type: Models::Shared::DatastoreFieldType::RELATION,
+        type: Models::Shared::DatastoreFieldType::RELATION
       ),
       Models::Shared::DatastoreField.new(
         description: 'Communis coma cura audio aduro acer canis expedita.',
-        id: '9d6b1a1d-7794-41a5-8d66-1274c4cb542f',
+        id: '91681a2f-3913-4579-8f6f-39b3a8c56332',
         is_indexed: true,
         is_primary_key: true,
         is_required: true,
         name: 'Graham, Steuber and Kshlerin',
         original_type: 'defessus',
         scale: 68.0,
-        type: Models::Shared::DatastoreFieldType::EMAIL,
+        type: Models::Shared::DatastoreFieldType::EMAIL
       ),
     ],
-    id: '945d5880-32a4-4959-98fd-6d7063f6f8c6',
+    id: '7d7b5c5e-4456-4d09-86e8-fe0daeec5b0f',
     metadata: [],
     name: 'Rogahn, Lowe and Heller',
     relationships: [
       Models::Shared::DatastoreRelationship.new(
         field: 'Macejkovic - Shields',
         name: 'Hyatt, Ryan and Nienow',
-        table_id: '945d5880-32a4-4959-98fd-6d7063f6f8c6',
-        type: Models::Shared::DatastoreRelationshipType::MANY,
+        table_id: '7d7b5c5e-4456-4d09-86e8-fe0daeec5b0f',
+        type: Models::Shared::DatastoreRelationshipType::MANY
       ),
     ],
-    updated_at: DateTime.iso8601('2022-08-13T19:48:22.361Z'),
-    web_url: 'https://nervous-deck.com',
+    updated_at: DateTime.iso8601('2022-08-13T22:02:05.720Z'),
+    web_url: 'https://nervous-deck.com'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.table.update_datastore_table(request: req)
 
 unless res.datastore_table.nil?

@@ -1,5 +1,16 @@
 # UcEmailType
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = UcEmailType::WORK
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = UcEmailType.deserialize("custom_value")
+```
+
 
 ## Values
 

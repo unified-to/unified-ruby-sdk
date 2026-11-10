@@ -7,22 +7,21 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class HealthcareImmunization
         extend T::Sig
         include Crystalline::MetadataFields
 
         # When the vaccine was administered (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :administered_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('administered_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :administered_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('administered_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Codings for the vaccine (e.g. CVX)
         field :codes, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HealthcareCode)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('codes') } }
         # When the immunization record was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # The encounter in which the vaccine was administered
         field :encounter_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('encounter_id') } }
         # Vaccine expiration date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :expires_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expires_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :expires_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expires_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Unique identifier for the immunization
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # Where the vaccine was administered
@@ -40,13 +39,13 @@ module UnifiedRubySDK
         # The practitioner who administered the vaccine
         field :practitioner_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('practitioner_id') } }
         # Raw data from integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # Status of the immunization
-        field :status, Crystalline::Nilable.new(Models::Shared::HealthcareImmunizationStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::HealthcareImmunizationStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::HealthcareImmunizationStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::HealthcareImmunizationStatus, true) } }
         # When the immunization record was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(administered_at: T.nilable(::DateTime), codes: T.nilable(T::Array[Models::Shared::HealthcareCode]), created_at: T.nilable(::DateTime), encounter_id: T.nilable(::String), expires_at: T.nilable(::DateTime), id: T.nilable(::String), location_id: T.nilable(::String), lot_number: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HealthcareMetadata]), name: T.nilable(::String), notes: T.nilable(::String), patient_id: T.nilable(::String), practitioner_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::HealthcareImmunizationStatus), updated_at: T.nilable(::DateTime)).void }
+        sig { params(administered_at: T.nilable(::DateTime), codes: T.nilable(T::Array[Models::Shared::HealthcareCode]), created_at: T.nilable(::DateTime), encounter_id: T.nilable(::String), expires_at: T.nilable(::DateTime), id: T.nilable(::String), location_id: T.nilable(::String), lot_number: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HealthcareMetadata]), name: T.nilable(::String), notes: T.nilable(::String), patient_id: T.nilable(::String), practitioner_id: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), status: T.nilable(Models::Shared::HealthcareImmunizationStatus), updated_at: T.nilable(::DateTime)).void }
         def initialize(administered_at: nil, codes: nil, created_at: nil, encounter_id: nil, expires_at: nil, id: nil, location_id: nil, lot_number: nil, metadata: nil, name: nil, notes: nil, patient_id: nil, practitioner_id: nil, raw: nil, status: nil, updated_at: nil)
           @administered_at = administered_at
           @codes = codes

@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class AtsCompensation
         extend T::Sig
@@ -16,13 +15,13 @@ module UnifiedRubySDK
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
-        field :frequency, Crystalline::Nilable.new(Models::Shared::Frequency), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('frequency'), 'decoder': Utils.enum_from_string(Models::Shared::Frequency, true) } }
+        field :frequency, Crystalline::Nilable.new(Models::Shared::Frequency), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('frequency'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::Frequency, true) } }
 
         field :max, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('max') } }
 
         field :min, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('min') } }
 
-        field :type, Crystalline::Nilable.new(Models::Shared::AtsCompensationType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AtsCompensationType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::AtsCompensationType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::AtsCompensationType, true) } }
 
         sig { params(currency: T.nilable(::String), frequency: T.nilable(Models::Shared::Frequency), max: T.nilable(::Float), min: T.nilable(::Float), type: T.nilable(Models::Shared::AtsCompensationType)).void }
         def initialize(currency: nil, frequency: nil, max: nil, min: nil, type: nil)

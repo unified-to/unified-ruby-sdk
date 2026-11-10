@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class CalendarRecordingTranscript
         extend T::Sig
@@ -18,11 +17,11 @@ module UnifiedRubySDK
 
         field :attendee, Crystalline::Nilable.new(Models::Shared::PropertyCalendarRecordingTranscriptAttendee), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('attendee') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # two digit ISO code
         field :language, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('language') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         sig { params(text: ::String, attendee: T.nilable(Models::Shared::PropertyCalendarRecordingTranscriptAttendee), end_at: T.nilable(::DateTime), language: T.nilable(::String), start_at: T.nilable(::DateTime)).void }
         def initialize(text:, attendee: nil, end_at: nil, language: nil, start_at: nil)

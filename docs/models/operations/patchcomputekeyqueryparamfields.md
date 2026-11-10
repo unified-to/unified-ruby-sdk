@@ -1,5 +1,13 @@
 # PatchComputeKeyQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PatchComputeKeyQueryParamFields::ID
+```
+
 
 ## Values
 

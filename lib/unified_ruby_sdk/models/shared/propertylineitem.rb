@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class PropertyLineitem
         extend T::Sig
@@ -22,7 +21,7 @@ module UnifiedRubySDK
         # the line item name, eg. Cleaning fee
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # base price, fee, tax, discount or deposit
-        field :type, Crystalline::Nilable.new(Models::Shared::PropertyLineitemType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyLineitemType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::PropertyLineitemType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PropertyLineitemType, true) } }
 
         sig { params(amount: T.nilable(::Float), description: T.nilable(::String), is_mandatory: T.nilable(T::Boolean), name: T.nilable(::String), type: T.nilable(Models::Shared::PropertyLineitemType)).void }
         def initialize(amount: nil, description: nil, is_mandatory: nil, name: nil, type: nil)

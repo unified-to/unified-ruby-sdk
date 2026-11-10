@@ -1,5 +1,13 @@
 # CreateCdpSourceQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreateCdpSourceQueryParamFields::ID
+```
+
 
 ## Values
 

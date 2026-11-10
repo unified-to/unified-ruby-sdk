@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # PropertyLineitemType - base price, fee, tax, discount or deposit
-      class PropertyLineitemType < T::Enum
-
-
+      class PropertyLineitemType
+        include ::Crystalline::Enum
         enums do
           BASE = new('BASE')
           FEE = new('FEE')
@@ -20,6 +18,7 @@ module UnifiedRubySDK
           DEPOSIT = new('DEPOSIT')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

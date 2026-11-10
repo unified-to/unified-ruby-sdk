@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # HealthcareEncounterType - Class of the encounter (e.g. ambulatory, inpatient)
-      class HealthcareEncounterType < T::Enum
-
-
+      class HealthcareEncounterType
+        include ::Crystalline::Enum
         enums do
           AMBULATORY = new('AMBULATORY')
           EMERGENCY = new('EMERGENCY')
@@ -21,6 +19,7 @@ module UnifiedRubySDK
           VIRTUAL = new('VIRTUAL')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

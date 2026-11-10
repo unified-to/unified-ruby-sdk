@@ -7,14 +7,13 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class CommerceReturn
         extend T::Sig
         include Crystalline::MetadataFields
 
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
@@ -30,19 +29,19 @@ module UnifiedRubySDK
 
         field :order_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('order_id') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :return_by_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('return_by_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :return_by_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('return_by_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        field :status, Crystalline::Nilable.new(Models::Shared::CommerceReturnStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::CommerceReturnStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::CommerceReturnStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::CommerceReturnStatus, true) } }
 
         field :total_refund_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_refund_amount') } }
 
         field :type, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(created_at: T.nilable(::DateTime), currency: T.nilable(::String), customer_email: T.nilable(::String), customer_name: T.nilable(::String), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::CommerceReturnLineitem]), metadata: T.nilable(T::Array[Models::Shared::CommerceMetadata]), order_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), return_by_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::CommerceReturnStatus), total_refund_amount: T.nilable(::Float), type: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        sig { params(created_at: T.nilable(::DateTime), currency: T.nilable(::String), customer_email: T.nilable(::String), customer_name: T.nilable(::String), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::CommerceReturnLineitem]), metadata: T.nilable(T::Array[Models::Shared::CommerceMetadata]), order_id: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), return_by_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::CommerceReturnStatus), total_refund_amount: T.nilable(::Float), type: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
         def initialize(created_at: nil, currency: nil, customer_email: nil, customer_name: nil, id: nil, lineitems: nil, metadata: nil, order_id: nil, raw: nil, return_by_at: nil, status: nil, total_refund_amount: nil, type: nil, updated_at: nil)
           @created_at = created_at
           @currency = currency

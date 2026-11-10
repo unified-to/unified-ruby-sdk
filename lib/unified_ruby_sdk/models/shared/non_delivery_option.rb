@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class NonDeliveryOption < T::Enum
-
-
+      class NonDeliveryOption
+        include ::Crystalline::Enum
         enums do
           RETURN = new('RETURN')
           ABANDON = new('ABANDON')
         end
+        open!
       end
     end
   end

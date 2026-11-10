@@ -1,5 +1,4 @@
 # Crm
-(*crm*)
 
 ## Overview
 
@@ -49,17 +48,16 @@ Creates a CrmCompany. Provide the unified CrmCompany fields in the request body;
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCrmCompany" method="post" path="/crm/{connection_id}/company" -->
+<!-- UsageSnippet language="ruby" operationID="createCrmCompany" method="post" path="/crm/{connection_id}/company" example="crm_company" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.crm.create_crm_company(crm_company: Models::Shared::CrmCompany.new(
   address: Models::Shared::PropertyCrmCompanyAddress.new(
     address1: '3328 Wunsch Flat',
@@ -68,7 +66,7 @@ res = s.crm.create_crm_company(crm_company: Models::Shared::CrmCompany.new(
     country_code: 'US',
     postal_code: '04674',
     region: 'Delaware',
-    region_code: 'NY',
+    region_code: 'NY'
   ),
   created_at: DateTime.iso8601('2020-05-11T18:26:32.925Z'),
   description: 'Venustas cruentus votum patruus terebro.',
@@ -78,19 +76,19 @@ res = s.crm.create_crm_company(crm_company: Models::Shared::CrmCompany.new(
   emails: [
     Models::Shared::CrmEmail.new(
       email: 'info@goodwinsons.com',
-      type: Models::Shared::CrmEmailType::WORK,
+      type: Models::Shared::CrmEmailType::WORK
     ),
     Models::Shared::CrmEmail.new(
       email: 'sales@goodwinsons.com',
-      type: Models::Shared::CrmEmailType::WORK,
+      type: Models::Shared::CrmEmailType::WORK
     ),
     Models::Shared::CrmEmail.new(
       email: 'support@goodwinsons.com',
-      type: Models::Shared::CrmEmailType::WORK,
+      type: Models::Shared::CrmEmailType::WORK
     ),
   ],
   employees: 4177.0,
-  id: 'c95f2169-c2fc-4825-b7d1-3633043ce85c',
+  id: '9d956240-79cc-4d53-85e2-26262d83d931',
   industry: 'Metrics',
   is_active: true,
   link_urls: [
@@ -99,13 +97,13 @@ res = s.crm.create_crm_company(crm_company: Models::Shared::CrmCompany.new(
   metadata: [
     Models::Shared::CrmMetadata.new(
       extra_data: {
-        "display_name": 'Custom Property',
+        'display_name' => 'Custom Property',
       },
       format: Models::Shared::CrmMetadataFormat::TEXT,
-      id: 'dc2e2c3b-6114-4ce6-bb51-2a86c3e0b1c0',
+      id: 'c7ec83ab-3d53-4e39-bd2a-3710d40ce97f',
       namespace: 'custom',
       slug: 'custom_property',
-      value: 'unde',
+      value: 'unde'
     ),
   ],
   name: 'Goodwin and Sons',
@@ -117,14 +115,14 @@ res = s.crm.create_crm_company(crm_company: Models::Shared::CrmCompany.new(
   telephones: [
     Models::Shared::CrmTelephone.new(
       telephone: '(667) 607-5872',
-      type: Models::Shared::CrmTelephoneType::HOME,
+      type: Models::Shared::CrmTelephoneType::HOME
     ),
   ],
   timezone: 'Atlantic/Azores',
-  updated_at: DateTime.iso8601('2025-03-17T08:11:24.451Z'),
+  updated_at: DateTime.iso8601('2025-03-18T16:39:00.603Z'),
   websites: [
     'https://www.goodwinsons.com',
-  ],
+  ]
 ), connection_id: '<id>')
 
 unless res.crm_company.nil?
@@ -158,17 +156,16 @@ Creates a CrmContact. Provide the unified CrmContact fields in the request body;
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCrmContact" method="post" path="/crm/{connection_id}/contact" -->
+<!-- UsageSnippet language="ruby" operationID="createCrmContact" method="post" path="/crm/{connection_id}/contact" example="crm_contact" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.crm.create_crm_contact(crm_contact: Models::Shared::CrmContact.new(
   address: Models::Shared::PropertyCrmContactAddress.new(
     address1: '65838 College Avenue',
@@ -177,18 +174,18 @@ res = s.crm.create_crm_contact(crm_contact: Models::Shared::CrmContact.new(
     country_code: 'US',
     postal_code: '80888-6094',
     region: 'Montana',
-    region_code: 'NM',
+    region_code: 'NM'
   ),
   created_at: DateTime.iso8601('2021-01-02T00:41:38.885Z'),
   department: 'Beauty',
   emails: [
     Models::Shared::CrmEmail.new(
       email: 'mohammad.bartell@hotmail.com',
-      type: Models::Shared::CrmEmailType::HOME,
+      type: Models::Shared::CrmEmailType::HOME
     ),
   ],
   first_name: 'Mohammad',
-  id: '2a8e2074-d6e3-4064-b28a-bfb512357721',
+  id: 'b12f5cd1-ae6f-434b-b664-89b07f7d9639',
   image_url: 'https://avatars.githubusercontent.com/u/26803724',
   last_name: 'Bartell',
   link_urls: [
@@ -197,28 +194,28 @@ res = s.crm.create_crm_contact(crm_contact: Models::Shared::CrmContact.new(
   metadata: [
     Models::Shared::CrmMetadata.new(
       extra_data: {
-        "display_name": 'Custom Property',
+        'display_name' => 'Custom Property',
       },
       format: Models::Shared::CrmMetadataFormat::TEXT,
-      id: 'e6a97c18-d459-4f0b-b354-85b6de89804b',
+      id: '0c6a4612-bd73-4eb7-9817-f6198fd8b75a',
       namespace: 'custom',
       slug: 'custom_property',
-      value: 'antiquus',
+      value: 'antiquus'
     ),
   ],
   name: 'Mohammad Bartell',
   telephones: [
     Models::Shared::CrmTelephone.new(
       telephone: '(254) 404-3529',
-      type: Models::Shared::CrmTelephoneType::OTHER,
+      type: Models::Shared::CrmTelephoneType::OTHER
     ),
     Models::Shared::CrmTelephone.new(
       telephone: '(469) 989-7588',
-      type: Models::Shared::CrmTelephoneType::WORK,
+      type: Models::Shared::CrmTelephoneType::WORK
     ),
   ],
   title: 'National Tactics Analyst',
-  updated_at: DateTime.iso8601('2021-02-24T16:33:46.729Z'),
+  updated_at: DateTime.iso8601('2021-02-24T17:39:18.215Z')
 ), connection_id: '<id>')
 
 unless res.crm_contact.nil?
@@ -252,35 +249,34 @@ Creates a CrmDeal. Provide the unified CrmDeal fields in the request body; they 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCrmDeal" method="post" path="/crm/{connection_id}/deal" -->
+<!-- UsageSnippet language="ruby" operationID="createCrmDeal" method="post" path="/crm/{connection_id}/deal" example="crm_deal" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.crm.create_crm_deal(crm_deal: Models::Shared::CrmDeal.new(
   amount: 98_162.0,
-  closed_at: DateTime.iso8601('2024-03-14T08:44:40.079Z'),
-  closing_at: DateTime.iso8601('2025-09-12T23:25:47.756Z'),
+  closed_at: DateTime.iso8601('2024-03-14T17:46:02.470Z'),
+  closing_at: DateTime.iso8601('2025-09-14T03:55:07.410Z'),
   created_at: DateTime.iso8601('2023-07-04T12:48:48.470Z'),
   currency: 'USD',
   description: 'Comis tepidus sit cavus crustulum trans tubineus adfectus.',
-  id: 'a8259a90-d4b7-4671-aea3-17c4a77bd60a',
+  id: '4cb9c8fa-ace1-4712-a507-2ee2233164ea',
   metadata: [
     Models::Shared::CrmMetadata.new(
       extra_data: {
-        "display_name": 'Custom Property',
+        'display_name' => 'Custom Property',
       },
       format: Models::Shared::CrmMetadataFormat::TEXT,
-      id: 'f691ea61-afea-4af8-bc23-d62e931ee490',
+      id: 'f9096f71-13cb-4138-b864-500e7a141841',
       namespace: 'custom',
       slug: 'custom_property',
-      value: 'conatus',
+      value: 'conatus'
     ),
   ],
   name: 'Stoltenberg - Funk - Luxurious Rubber Chicken',
@@ -290,8 +286,8 @@ res = s.crm.create_crm_deal(crm_deal: Models::Shared::CrmDeal.new(
     'causa',
     'suus',
   ],
-  updated_at: DateTime.iso8601('2024-10-19T05:26:54.252Z'),
-  won_reason: 'Usque libero soleo.',
+  updated_at: DateTime.iso8601('2024-10-19T22:15:04.246Z'),
+  won_reason: 'Usque libero soleo.'
 ), connection_id: '<id>')
 
 unless res.crm_deal.nil?
@@ -325,28 +321,27 @@ Creates a CrmEvent. Provide the unified CrmEvent fields in the request body; the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCrmEvent" method="post" path="/crm/{connection_id}/event" -->
+<!-- UsageSnippet language="ruby" operationID="createCrmEvent" method="post" path="/crm/{connection_id}/event" example="crm_event" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.crm.create_crm_event(crm_event: Models::Shared::CrmEvent.new(
   call: Models::Shared::PropertyCrmEventCall.new(
     description: 'Arbitro aptus.',
     duration: 64.0,
-    start_at: DateTime.iso8601('2024-12-24T09:41:28.595Z'),
+    start_at: DateTime.iso8601('2024-12-25T16:17:09.551Z')
   ),
   created_at: DateTime.iso8601('2020-07-14T04:53:23.784Z'),
-  id: '2e2790c4-8d27-48d0-968d-44a8e54e2dd7',
+  id: '30a8ada4-4269-42d2-b020-912681e2ee65',
   metadata: [],
   type: Models::Shared::CrmEventType::CALL,
-  updated_at: DateTime.iso8601('2026-10-30T11:11:00.595Z'),
+  updated_at: DateTime.iso8601('2026-11-01T06:29:39.157Z')
 ), connection_id: '<id>')
 
 unless res.crm_event.nil?
@@ -380,17 +375,16 @@ Creates a CrmLead. Provide the unified CrmLead fields in the request body; they 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCrmLead" method="post" path="/crm/{connection_id}/lead" -->
+<!-- UsageSnippet language="ruby" operationID="createCrmLead" method="post" path="/crm/{connection_id}/lead" example="crm_lead" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.crm.create_crm_lead(crm_lead: Models::Shared::CrmLead.new(
   address: Models::Shared::PropertyCrmLeadAddress.new(
     address1: '87206 Hudson Street',
@@ -398,18 +392,18 @@ res = s.crm.create_crm_lead(crm_lead: Models::Shared::CrmLead.new(
     country_code: 'US',
     postal_code: '49909-1183',
     region: 'Michigan',
-    region_code: 'MO',
+    region_code: 'MO'
   ),
   company_name: 'Tillman - Wiegand',
   created_at: DateTime.iso8601('2019-10-12T11:27:59.003Z'),
   emails: [
     Models::Shared::CrmEmail.new(
       email: 'velda.sporer@icloud.com',
-      type: Models::Shared::CrmEmailType::WORK,
+      type: Models::Shared::CrmEmailType::WORK
     ),
   ],
   first_name: 'Velda',
-  id: '5841dffb-383b-4eda-8dde-8b222bfc039e',
+  id: 'bf97e836-18bb-4ca8-a948-39fcdda225bd',
   is_active: true,
   last_name: 'Sporer',
   link_urls: [
@@ -418,13 +412,13 @@ res = s.crm.create_crm_lead(crm_lead: Models::Shared::CrmLead.new(
   metadata: [
     Models::Shared::CrmMetadata.new(
       extra_data: {
-        "display_name": 'Custom Property',
+        'display_name' => 'Custom Property',
       },
       format: Models::Shared::CrmMetadataFormat::TEXT,
-      id: 'f3de749c-8618-4ffa-b943-bc23a428d00a',
+      id: 'd7215883-3a53-4622-9d51-3f891d6d99ec',
       namespace: 'custom',
       slug: 'custom_property',
-      value: 'vitiosus',
+      value: 'vitiosus'
     ),
   ],
   name: 'Velda Sporer',
@@ -433,19 +427,19 @@ res = s.crm.create_crm_lead(crm_lead: Models::Shared::CrmLead.new(
   telephones: [
     Models::Shared::CrmTelephone.new(
       telephone: '(841) 271-0595',
-      type: Models::Shared::CrmTelephoneType::FAX,
+      type: Models::Shared::CrmTelephoneType::FAX
     ),
     Models::Shared::CrmTelephone.new(
       telephone: '(664) 498-4952',
-      type: Models::Shared::CrmTelephoneType::HOME,
+      type: Models::Shared::CrmTelephoneType::HOME
     ),
     Models::Shared::CrmTelephone.new(
       telephone: '(281) 288-0037',
-      type: Models::Shared::CrmTelephoneType::OTHER,
+      type: Models::Shared::CrmTelephoneType::OTHER
     ),
   ],
   title: 'International Factors Administrator',
-  updated_at: DateTime.iso8601('2020-05-19T12:24:53.906Z'),
+  updated_at: DateTime.iso8601('2020-05-19T16:07:03.446Z')
 ), connection_id: '<id>')
 
 unless res.crm_lead.nil?
@@ -479,22 +473,21 @@ Creates a CrmPipeline. Provide the unified CrmPipeline fields in the request bod
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCrmPipeline" method="post" path="/crm/{connection_id}/pipeline" -->
+<!-- UsageSnippet language="ruby" operationID="createCrmPipeline" method="post" path="/crm/{connection_id}/pipeline" example="crm_pipeline" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.crm.create_crm_pipeline(crm_pipeline: Models::Shared::CrmPipeline.new(
   created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
   deal_probability: 99.0,
   display_order: 8.0,
-  id: 'd05bcc8c-7c02-42d5-97b8-bf9534faea88',
+  id: '31133682-19d3-4957-a794-6ab07485d7b9',
   is_active: true,
   metadata: [],
   name: 'Small Steel Bacon',
@@ -504,13 +497,13 @@ res = s.crm.create_crm_pipeline(crm_pipeline: Models::Shared::CrmPipeline.new(
       created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
       deal_probability: 84.0,
       display_order: 72.0,
-      id: 'c4a25fa2-cabd-4ca1-a3c8-a1c208113ebf',
+      id: '7c7213e5-5408-458a-93fa-eff39c311419',
       is_closed: true,
       name: 'Veniam.',
-      updated_at: DateTime.iso8601('2025-10-24T09:36:51.042Z'),
+      updated_at: DateTime.iso8601('2025-10-25T17:22:37.681Z')
     ),
   ],
-  updated_at: DateTime.iso8601('2025-11-15T10:10:13.173Z'),
+  updated_at: DateTime.iso8601('2025-11-16T18:36:42.778Z')
 ), connection_id: '<id>')
 
 unless res.crm_pipeline.nil?
@@ -550,11 +543,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.crm.get_crm_company(connection_id: '<id>', id: '<id>')
 
 unless res.crm_company.nil?
@@ -594,11 +586,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.crm.get_crm_contact(connection_id: '<id>', id: '<id>')
 
 unless res.crm_contact.nil?
@@ -638,11 +629,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.crm.get_crm_deal(connection_id: '<id>', id: '<id>')
 
 unless res.crm_deal.nil?
@@ -682,11 +672,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.crm.get_crm_event(connection_id: '<id>', id: '<id>')
 
 unless res.crm_event.nil?
@@ -726,11 +715,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.crm.get_crm_lead(connection_id: '<id>', id: '<id>')
 
 unless res.crm_lead.nil?
@@ -770,11 +758,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.crm.get_crm_pipeline(connection_id: '<id>', id: '<id>')
 
 unless res.crm_pipeline.nil?
@@ -814,15 +801,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCrmCompaniesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCrmCompaniesRequest.new(
+  connection_id: '<id>'
+)
 res = s.crm.list_crm_companies(request: req)
 
 unless res.crm_companies.nil?
@@ -859,15 +845,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCrmContactsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCrmContactsRequest.new(
+  connection_id: '<id>'
+)
 res = s.crm.list_crm_contacts(request: req)
 
 unless res.crm_contacts.nil?
@@ -904,15 +889,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCrmDealsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCrmDealsRequest.new(
+  connection_id: '<id>'
+)
 res = s.crm.list_crm_deals(request: req)
 
 unless res.crm_deals.nil?
@@ -949,15 +933,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCrmEventsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCrmEventsRequest.new(
+  connection_id: '<id>'
+)
 res = s.crm.list_crm_events(request: req)
 
 unless res.crm_events.nil?
@@ -994,15 +977,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCrmLeadsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCrmLeadsRequest.new(
+  connection_id: '<id>'
+)
 res = s.crm.list_crm_leads(request: req)
 
 unless res.crm_leads.nil?
@@ -1039,15 +1021,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCrmPipelinesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCrmPipelinesRequest.new(
+  connection_id: '<id>'
+)
 res = s.crm.list_crm_pipelines(request: req)
 
 unless res.crm_pipelines.nil?
@@ -1084,15 +1065,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCrmTaxonomiesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCrmTaxonomiesRequest.new(
+  connection_id: '<id>'
+)
 res = s.crm.list_crm_taxonomies(request: req)
 
 unless res.crm_taxonomies.nil?
@@ -1123,16 +1103,16 @@ Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCrmCompany" method="patch" path="/crm/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCrmCompany" method="patch" path="/crm/{connection_id}/company/{id}" example="crm_company" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchCrmCompanyRequest.new(
   crm_company: Models::Shared::CrmCompany.new(
@@ -1143,7 +1123,7 @@ req = Models::Operations::PatchCrmCompanyRequest.new(
       country_code: 'US',
       postal_code: '04674',
       region: 'Delaware',
-      region_code: 'NY',
+      region_code: 'NY'
     ),
     created_at: DateTime.iso8601('2020-05-11T18:26:32.925Z'),
     description: 'Venustas cruentus votum patruus terebro.',
@@ -1153,19 +1133,19 @@ req = Models::Operations::PatchCrmCompanyRequest.new(
     emails: [
       Models::Shared::CrmEmail.new(
         email: 'info@goodwinsons.com',
-        type: Models::Shared::CrmEmailType::WORK,
+        type: Models::Shared::CrmEmailType::WORK
       ),
       Models::Shared::CrmEmail.new(
         email: 'sales@goodwinsons.com',
-        type: Models::Shared::CrmEmailType::WORK,
+        type: Models::Shared::CrmEmailType::WORK
       ),
       Models::Shared::CrmEmail.new(
         email: 'support@goodwinsons.com',
-        type: Models::Shared::CrmEmailType::WORK,
+        type: Models::Shared::CrmEmailType::WORK
       ),
     ],
     employees: 4177.0,
-    id: '61b048c9-a3df-4816-826a-3ae3e51e81dd',
+    id: '04b66fc0-3b47-417b-9e93-bef3fc79d8cd',
     industry: 'Metrics',
     is_active: true,
     link_urls: [
@@ -1174,13 +1154,13 @@ req = Models::Operations::PatchCrmCompanyRequest.new(
     metadata: [
       Models::Shared::CrmMetadata.new(
         extra_data: {
-          "display_name": 'Custom Property',
+          'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '56e9cdce-76e3-4158-a28c-b471c5c2b09f',
+        id: '198ad51a-2ce2-43af-879d-4737ef9ab0ba',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'unde',
+        value: 'unde'
       ),
     ],
     name: 'Goodwin and Sons',
@@ -1192,19 +1172,18 @@ req = Models::Operations::PatchCrmCompanyRequest.new(
     telephones: [
       Models::Shared::CrmTelephone.new(
         telephone: '(667) 607-5872',
-        type: Models::Shared::CrmTelephoneType::HOME,
+        type: Models::Shared::CrmTelephoneType::HOME
       ),
     ],
     timezone: 'Atlantic/Azores',
-    updated_at: DateTime.iso8601('2025-03-17T08:11:24.467Z'),
+    updated_at: DateTime.iso8601('2025-03-18T16:39:00.625Z'),
     websites: [
       'https://www.goodwinsons.com',
-    ],
+    ]
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.crm.patch_crm_company(request: req)
 
 unless res.crm_company.nil?
@@ -1235,16 +1214,16 @@ Updates the CrmContact identified by `id`. Provide the unified CrmContact fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCrmContact" method="patch" path="/crm/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCrmContact" method="patch" path="/crm/{connection_id}/contact/{id}" example="crm_contact" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchCrmContactRequest.new(
   crm_contact: Models::Shared::CrmContact.new(
@@ -1255,18 +1234,18 @@ req = Models::Operations::PatchCrmContactRequest.new(
       country_code: 'US',
       postal_code: '80888-6094',
       region: 'Montana',
-      region_code: 'NM',
+      region_code: 'NM'
     ),
     created_at: DateTime.iso8601('2021-01-02T00:41:38.885Z'),
     department: 'Beauty',
     emails: [
       Models::Shared::CrmEmail.new(
         email: 'mohammad.bartell@hotmail.com',
-        type: Models::Shared::CrmEmailType::HOME,
+        type: Models::Shared::CrmEmailType::HOME
       ),
     ],
     first_name: 'Mohammad',
-    id: '972d8e03-ea55-4ab4-b764-740c9ad4b5c1',
+    id: '4067cdb4-2ad8-4e38-842a-faed640aa05c',
     image_url: 'https://avatars.githubusercontent.com/u/26803724',
     last_name: 'Bartell',
     link_urls: [
@@ -1275,33 +1254,32 @@ req = Models::Operations::PatchCrmContactRequest.new(
     metadata: [
       Models::Shared::CrmMetadata.new(
         extra_data: {
-          "display_name": 'Custom Property',
+          'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '45ba4497-12a4-41b9-b894-1267e27b5426',
+        id: '46f36b5f-1c19-4709-a804-c0e7b155410a',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'antiquus',
+        value: 'antiquus'
       ),
     ],
     name: 'Mohammad Bartell',
     telephones: [
       Models::Shared::CrmTelephone.new(
         telephone: '(254) 404-3529',
-        type: Models::Shared::CrmTelephoneType::OTHER,
+        type: Models::Shared::CrmTelephoneType::OTHER
       ),
       Models::Shared::CrmTelephone.new(
         telephone: '(469) 989-7588',
-        type: Models::Shared::CrmTelephoneType::WORK,
+        type: Models::Shared::CrmTelephoneType::WORK
       ),
     ],
     title: 'National Tactics Analyst',
-    updated_at: DateTime.iso8601('2021-02-24T16:33:46.729Z'),
+    updated_at: DateTime.iso8601('2021-02-24T17:39:18.216Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.crm.patch_crm_contact(request: req)
 
 unless res.crm_contact.nil?
@@ -1332,36 +1310,36 @@ Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to ch
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCrmDeal" method="patch" path="/crm/{connection_id}/deal/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCrmDeal" method="patch" path="/crm/{connection_id}/deal/{id}" example="crm_deal" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchCrmDealRequest.new(
   crm_deal: Models::Shared::CrmDeal.new(
     amount: 98_162.0,
-    closed_at: DateTime.iso8601('2024-03-14T08:44:40.082Z'),
-    closing_at: DateTime.iso8601('2025-09-12T23:25:47.765Z'),
+    closed_at: DateTime.iso8601('2024-03-14T17:46:02.474Z'),
+    closing_at: DateTime.iso8601('2025-09-14T03:55:07.423Z'),
     created_at: DateTime.iso8601('2023-07-04T12:48:48.470Z'),
     currency: 'USD',
     description: 'Comis tepidus sit cavus crustulum trans tubineus adfectus.',
-    id: '4e7206e7-34d4-4aa6-a4ef-6c18d9109cdf',
+    id: '6c7e5149-d3be-4a5c-a980-57d01a42fcbb',
     metadata: [
       Models::Shared::CrmMetadata.new(
         extra_data: {
-          "display_name": 'Custom Property',
+          'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '8fe58af4-6174-49dd-9063-da1888be081d',
+        id: 'f9f49767-0359-4ba6-acb2-6315b641a149',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'conatus',
+        value: 'conatus'
       ),
     ],
     name: 'Stoltenberg - Funk - Luxurious Rubber Chicken',
@@ -1371,13 +1349,12 @@ req = Models::Operations::PatchCrmDealRequest.new(
       'causa',
       'suus',
     ],
-    updated_at: DateTime.iso8601('2024-10-19T05:26:54.258Z'),
-    won_reason: 'Usque libero soleo.',
+    updated_at: DateTime.iso8601('2024-10-19T22:15:04.254Z'),
+    won_reason: 'Usque libero soleo.'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.crm.patch_crm_deal(request: req)
 
 unless res.crm_deal.nil?
@@ -1408,34 +1385,33 @@ Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCrmEvent" method="patch" path="/crm/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCrmEvent" method="patch" path="/crm/{connection_id}/event/{id}" example="crm_event" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchCrmEventRequest.new(
   crm_event: Models::Shared::CrmEvent.new(
     call: Models::Shared::PropertyCrmEventCall.new(
       description: 'Arbitro aptus.',
       duration: 64.0,
-      start_at: DateTime.iso8601('2024-12-24T09:41:28.631Z'),
+      start_at: DateTime.iso8601('2024-12-25T16:17:09.582Z')
     ),
     created_at: DateTime.iso8601('2020-07-14T04:53:23.784Z'),
-    id: 'd1cc7dbe-3319-4bde-ac30-e60280a9ee2f',
+    id: '043dc531-a759-4db5-a56e-d3ab980b3fe5',
     metadata: [],
     type: Models::Shared::CrmEventType::CALL,
-    updated_at: DateTime.iso8601('2026-10-30T11:11:00.644Z'),
+    updated_at: DateTime.iso8601('2026-11-01T06:29:39.201Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.crm.patch_crm_event(request: req)
 
 unless res.crm_event.nil?
@@ -1466,16 +1442,16 @@ Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to ch
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCrmLead" method="patch" path="/crm/{connection_id}/lead/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCrmLead" method="patch" path="/crm/{connection_id}/lead/{id}" example="crm_lead" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchCrmLeadRequest.new(
   crm_lead: Models::Shared::CrmLead.new(
@@ -1485,18 +1461,18 @@ req = Models::Operations::PatchCrmLeadRequest.new(
       country_code: 'US',
       postal_code: '49909-1183',
       region: 'Michigan',
-      region_code: 'MO',
+      region_code: 'MO'
     ),
     company_name: 'Tillman - Wiegand',
     created_at: DateTime.iso8601('2019-10-12T11:27:59.003Z'),
     emails: [
       Models::Shared::CrmEmail.new(
         email: 'velda.sporer@icloud.com',
-        type: Models::Shared::CrmEmailType::WORK,
+        type: Models::Shared::CrmEmailType::WORK
       ),
     ],
     first_name: 'Velda',
-    id: '394633c4-86ef-4848-812a-b84238d16abc',
+    id: '0acf7f85-5064-4344-9cf5-dab781a0d3fd',
     is_active: true,
     last_name: 'Sporer',
     link_urls: [
@@ -1505,13 +1481,13 @@ req = Models::Operations::PatchCrmLeadRequest.new(
     metadata: [
       Models::Shared::CrmMetadata.new(
         extra_data: {
-          "display_name": 'Custom Property',
+          'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '8e76d15b-190c-4713-b7a4-58f8fc39799d',
+        id: '39505944-a91a-4e92-a294-4b0ad1b8cd5f',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'vitiosus',
+        value: 'vitiosus'
       ),
     ],
     name: 'Velda Sporer',
@@ -1520,24 +1496,23 @@ req = Models::Operations::PatchCrmLeadRequest.new(
     telephones: [
       Models::Shared::CrmTelephone.new(
         telephone: '(841) 271-0595',
-        type: Models::Shared::CrmTelephoneType::FAX,
+        type: Models::Shared::CrmTelephoneType::FAX
       ),
       Models::Shared::CrmTelephone.new(
         telephone: '(664) 498-4952',
-        type: Models::Shared::CrmTelephoneType::HOME,
+        type: Models::Shared::CrmTelephoneType::HOME
       ),
       Models::Shared::CrmTelephone.new(
         telephone: '(281) 288-0037',
-        type: Models::Shared::CrmTelephoneType::OTHER,
+        type: Models::Shared::CrmTelephoneType::OTHER
       ),
     ],
     title: 'International Factors Administrator',
-    updated_at: DateTime.iso8601('2020-05-19T12:24:53.908Z'),
+    updated_at: DateTime.iso8601('2020-05-19T16:07:03.447Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.crm.patch_crm_lead(request: req)
 
 unless res.crm_lead.nil?
@@ -1568,23 +1543,23 @@ Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCrmPipeline" method="patch" path="/crm/{connection_id}/pipeline/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCrmPipeline" method="patch" path="/crm/{connection_id}/pipeline/{id}" example="crm_pipeline" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchCrmPipelineRequest.new(
   crm_pipeline: Models::Shared::CrmPipeline.new(
     created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
     deal_probability: 99.0,
     display_order: 8.0,
-    id: '8d48a621-a031-4995-ab71-d2323cae0253',
+    id: '1ba968b4-d3a8-49f5-93df-d68019608296',
     is_active: true,
     metadata: [],
     name: 'Small Steel Bacon',
@@ -1594,18 +1569,17 @@ req = Models::Operations::PatchCrmPipelineRequest.new(
         created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
         deal_probability: 84.0,
         display_order: 72.0,
-        id: '170a2b3d-5a83-43a2-9025-a049e25f4e86',
+        id: '33881b0e-da74-411d-b912-fe043709e102',
         is_closed: true,
         name: 'Veniam.',
-        updated_at: DateTime.iso8601('2025-10-24T09:36:51.060Z'),
+        updated_at: DateTime.iso8601('2025-10-25T17:22:37.686Z')
       ),
     ],
-    updated_at: DateTime.iso8601('2025-11-15T10:10:13.190Z'),
+    updated_at: DateTime.iso8601('2025-11-16T18:36:42.783Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.crm.patch_crm_pipeline(request: req)
 
 unless res.crm_pipeline.nil?
@@ -1642,11 +1616,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.crm.remove_crm_company(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1684,11 +1657,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.crm.remove_crm_contact(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1726,11 +1698,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.crm.remove_crm_deal(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1768,11 +1739,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.crm.remove_crm_event(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1810,11 +1780,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.crm.remove_crm_lead(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1852,11 +1821,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.crm.remove_crm_pipeline(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1888,16 +1856,16 @@ Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCrmCompany" method="put" path="/crm/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCrmCompany" method="put" path="/crm/{connection_id}/company/{id}" example="crm_company" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateCrmCompanyRequest.new(
   crm_company: Models::Shared::CrmCompany.new(
@@ -1908,7 +1876,7 @@ req = Models::Operations::UpdateCrmCompanyRequest.new(
       country_code: 'US',
       postal_code: '04674',
       region: 'Delaware',
-      region_code: 'NY',
+      region_code: 'NY'
     ),
     created_at: DateTime.iso8601('2020-05-11T18:26:32.925Z'),
     description: 'Venustas cruentus votum patruus terebro.',
@@ -1918,19 +1886,19 @@ req = Models::Operations::UpdateCrmCompanyRequest.new(
     emails: [
       Models::Shared::CrmEmail.new(
         email: 'info@goodwinsons.com',
-        type: Models::Shared::CrmEmailType::WORK,
+        type: Models::Shared::CrmEmailType::WORK
       ),
       Models::Shared::CrmEmail.new(
         email: 'sales@goodwinsons.com',
-        type: Models::Shared::CrmEmailType::WORK,
+        type: Models::Shared::CrmEmailType::WORK
       ),
       Models::Shared::CrmEmail.new(
         email: 'support@goodwinsons.com',
-        type: Models::Shared::CrmEmailType::WORK,
+        type: Models::Shared::CrmEmailType::WORK
       ),
     ],
     employees: 4177.0,
-    id: '61b048c9-a3df-4816-826a-3ae3e51e81dd',
+    id: '04b66fc0-3b47-417b-9e93-bef3fc79d8cd',
     industry: 'Metrics',
     is_active: true,
     link_urls: [
@@ -1939,13 +1907,13 @@ req = Models::Operations::UpdateCrmCompanyRequest.new(
     metadata: [
       Models::Shared::CrmMetadata.new(
         extra_data: {
-          "display_name": 'Custom Property',
+          'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '56e9cdce-76e3-4158-a28c-b471c5c2b09f',
+        id: '198ad51a-2ce2-43af-879d-4737ef9ab0ba',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'unde',
+        value: 'unde'
       ),
     ],
     name: 'Goodwin and Sons',
@@ -1957,19 +1925,18 @@ req = Models::Operations::UpdateCrmCompanyRequest.new(
     telephones: [
       Models::Shared::CrmTelephone.new(
         telephone: '(667) 607-5872',
-        type: Models::Shared::CrmTelephoneType::HOME,
+        type: Models::Shared::CrmTelephoneType::HOME
       ),
     ],
     timezone: 'Atlantic/Azores',
-    updated_at: DateTime.iso8601('2025-03-17T08:11:24.467Z'),
+    updated_at: DateTime.iso8601('2025-03-18T16:39:00.625Z'),
     websites: [
       'https://www.goodwinsons.com',
-    ],
+    ]
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.crm.update_crm_company(request: req)
 
 unless res.crm_company.nil?
@@ -2000,16 +1967,16 @@ Updates the CrmContact identified by `id`. Provide the unified CrmContact fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCrmContact" method="put" path="/crm/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCrmContact" method="put" path="/crm/{connection_id}/contact/{id}" example="crm_contact" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateCrmContactRequest.new(
   crm_contact: Models::Shared::CrmContact.new(
@@ -2020,18 +1987,18 @@ req = Models::Operations::UpdateCrmContactRequest.new(
       country_code: 'US',
       postal_code: '80888-6094',
       region: 'Montana',
-      region_code: 'NM',
+      region_code: 'NM'
     ),
     created_at: DateTime.iso8601('2021-01-02T00:41:38.885Z'),
     department: 'Beauty',
     emails: [
       Models::Shared::CrmEmail.new(
         email: 'mohammad.bartell@hotmail.com',
-        type: Models::Shared::CrmEmailType::HOME,
+        type: Models::Shared::CrmEmailType::HOME
       ),
     ],
     first_name: 'Mohammad',
-    id: '972d8e03-ea55-4ab4-b764-740c9ad4b5c1',
+    id: '4067cdb4-2ad8-4e38-842a-faed640aa05c',
     image_url: 'https://avatars.githubusercontent.com/u/26803724',
     last_name: 'Bartell',
     link_urls: [
@@ -2040,33 +2007,32 @@ req = Models::Operations::UpdateCrmContactRequest.new(
     metadata: [
       Models::Shared::CrmMetadata.new(
         extra_data: {
-          "display_name": 'Custom Property',
+          'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '45ba4497-12a4-41b9-b894-1267e27b5426',
+        id: '46f36b5f-1c19-4709-a804-c0e7b155410a',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'antiquus',
+        value: 'antiquus'
       ),
     ],
     name: 'Mohammad Bartell',
     telephones: [
       Models::Shared::CrmTelephone.new(
         telephone: '(254) 404-3529',
-        type: Models::Shared::CrmTelephoneType::OTHER,
+        type: Models::Shared::CrmTelephoneType::OTHER
       ),
       Models::Shared::CrmTelephone.new(
         telephone: '(469) 989-7588',
-        type: Models::Shared::CrmTelephoneType::WORK,
+        type: Models::Shared::CrmTelephoneType::WORK
       ),
     ],
     title: 'National Tactics Analyst',
-    updated_at: DateTime.iso8601('2021-02-24T16:33:46.729Z'),
+    updated_at: DateTime.iso8601('2021-02-24T17:39:18.216Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.crm.update_crm_contact(request: req)
 
 unless res.crm_contact.nil?
@@ -2097,36 +2063,36 @@ Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to ch
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCrmDeal" method="put" path="/crm/{connection_id}/deal/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCrmDeal" method="put" path="/crm/{connection_id}/deal/{id}" example="crm_deal" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateCrmDealRequest.new(
   crm_deal: Models::Shared::CrmDeal.new(
     amount: 98_162.0,
-    closed_at: DateTime.iso8601('2024-03-14T08:44:40.082Z'),
-    closing_at: DateTime.iso8601('2025-09-12T23:25:47.765Z'),
+    closed_at: DateTime.iso8601('2024-03-14T17:46:02.474Z'),
+    closing_at: DateTime.iso8601('2025-09-14T03:55:07.423Z'),
     created_at: DateTime.iso8601('2023-07-04T12:48:48.470Z'),
     currency: 'USD',
     description: 'Comis tepidus sit cavus crustulum trans tubineus adfectus.',
-    id: '4e7206e7-34d4-4aa6-a4ef-6c18d9109cdf',
+    id: '6c7e5149-d3be-4a5c-a980-57d01a42fcbb',
     metadata: [
       Models::Shared::CrmMetadata.new(
         extra_data: {
-          "display_name": 'Custom Property',
+          'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '8fe58af4-6174-49dd-9063-da1888be081d',
+        id: 'f9f49767-0359-4ba6-acb2-6315b641a149',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'conatus',
+        value: 'conatus'
       ),
     ],
     name: 'Stoltenberg - Funk - Luxurious Rubber Chicken',
@@ -2136,13 +2102,12 @@ req = Models::Operations::UpdateCrmDealRequest.new(
       'causa',
       'suus',
     ],
-    updated_at: DateTime.iso8601('2024-10-19T05:26:54.258Z'),
-    won_reason: 'Usque libero soleo.',
+    updated_at: DateTime.iso8601('2024-10-19T22:15:04.254Z'),
+    won_reason: 'Usque libero soleo.'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.crm.update_crm_deal(request: req)
 
 unless res.crm_deal.nil?
@@ -2173,34 +2138,33 @@ Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCrmEvent" method="put" path="/crm/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCrmEvent" method="put" path="/crm/{connection_id}/event/{id}" example="crm_event" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateCrmEventRequest.new(
   crm_event: Models::Shared::CrmEvent.new(
     call: Models::Shared::PropertyCrmEventCall.new(
       description: 'Arbitro aptus.',
       duration: 64.0,
-      start_at: DateTime.iso8601('2024-12-24T09:41:28.631Z'),
+      start_at: DateTime.iso8601('2024-12-25T16:17:09.582Z')
     ),
     created_at: DateTime.iso8601('2020-07-14T04:53:23.784Z'),
-    id: 'd1cc7dbe-3319-4bde-ac30-e60280a9ee2f',
+    id: '043dc531-a759-4db5-a56e-d3ab980b3fe5',
     metadata: [],
     type: Models::Shared::CrmEventType::CALL,
-    updated_at: DateTime.iso8601('2026-10-30T11:11:00.644Z'),
+    updated_at: DateTime.iso8601('2026-11-01T06:29:39.201Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.crm.update_crm_event(request: req)
 
 unless res.crm_event.nil?
@@ -2231,16 +2195,16 @@ Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to ch
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCrmLead" method="put" path="/crm/{connection_id}/lead/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCrmLead" method="put" path="/crm/{connection_id}/lead/{id}" example="crm_lead" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateCrmLeadRequest.new(
   crm_lead: Models::Shared::CrmLead.new(
@@ -2250,18 +2214,18 @@ req = Models::Operations::UpdateCrmLeadRequest.new(
       country_code: 'US',
       postal_code: '49909-1183',
       region: 'Michigan',
-      region_code: 'MO',
+      region_code: 'MO'
     ),
     company_name: 'Tillman - Wiegand',
     created_at: DateTime.iso8601('2019-10-12T11:27:59.003Z'),
     emails: [
       Models::Shared::CrmEmail.new(
         email: 'velda.sporer@icloud.com',
-        type: Models::Shared::CrmEmailType::WORK,
+        type: Models::Shared::CrmEmailType::WORK
       ),
     ],
     first_name: 'Velda',
-    id: '394633c4-86ef-4848-812a-b84238d16abc',
+    id: '0acf7f85-5064-4344-9cf5-dab781a0d3fd',
     is_active: true,
     last_name: 'Sporer',
     link_urls: [
@@ -2270,13 +2234,13 @@ req = Models::Operations::UpdateCrmLeadRequest.new(
     metadata: [
       Models::Shared::CrmMetadata.new(
         extra_data: {
-          "display_name": 'Custom Property',
+          'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '8e76d15b-190c-4713-b7a4-58f8fc39799d',
+        id: '39505944-a91a-4e92-a294-4b0ad1b8cd5f',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'vitiosus',
+        value: 'vitiosus'
       ),
     ],
     name: 'Velda Sporer',
@@ -2285,24 +2249,23 @@ req = Models::Operations::UpdateCrmLeadRequest.new(
     telephones: [
       Models::Shared::CrmTelephone.new(
         telephone: '(841) 271-0595',
-        type: Models::Shared::CrmTelephoneType::FAX,
+        type: Models::Shared::CrmTelephoneType::FAX
       ),
       Models::Shared::CrmTelephone.new(
         telephone: '(664) 498-4952',
-        type: Models::Shared::CrmTelephoneType::HOME,
+        type: Models::Shared::CrmTelephoneType::HOME
       ),
       Models::Shared::CrmTelephone.new(
         telephone: '(281) 288-0037',
-        type: Models::Shared::CrmTelephoneType::OTHER,
+        type: Models::Shared::CrmTelephoneType::OTHER
       ),
     ],
     title: 'International Factors Administrator',
-    updated_at: DateTime.iso8601('2020-05-19T12:24:53.908Z'),
+    updated_at: DateTime.iso8601('2020-05-19T16:07:03.447Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.crm.update_crm_lead(request: req)
 
 unless res.crm_lead.nil?
@@ -2333,23 +2296,23 @@ Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCrmPipeline" method="put" path="/crm/{connection_id}/pipeline/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCrmPipeline" method="put" path="/crm/{connection_id}/pipeline/{id}" example="crm_pipeline" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateCrmPipelineRequest.new(
   crm_pipeline: Models::Shared::CrmPipeline.new(
     created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
     deal_probability: 99.0,
     display_order: 8.0,
-    id: '8d48a621-a031-4995-ab71-d2323cae0253',
+    id: '1ba968b4-d3a8-49f5-93df-d68019608296',
     is_active: true,
     metadata: [],
     name: 'Small Steel Bacon',
@@ -2359,18 +2322,17 @@ req = Models::Operations::UpdateCrmPipelineRequest.new(
         created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
         deal_probability: 84.0,
         display_order: 72.0,
-        id: '170a2b3d-5a83-43a2-9025-a049e25f4e86',
+        id: '33881b0e-da74-411d-b912-fe043709e102',
         is_closed: true,
         name: 'Veniam.',
-        updated_at: DateTime.iso8601('2025-10-24T09:36:51.060Z'),
+        updated_at: DateTime.iso8601('2025-10-25T17:22:37.686Z')
       ),
     ],
-    updated_at: DateTime.iso8601('2025-11-15T10:10:13.190Z'),
+    updated_at: DateTime.iso8601('2025-11-16T18:36:42.783Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.crm.update_crm_pipeline(request: req)
 
 unless res.crm_pipeline.nil?

@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # ScimGroupMemberType - NOT STANDARD
-      class ScimGroupMemberType < T::Enum
-
-
+      class ScimGroupMemberType
+        include ::Crystalline::Enum
         enums do
           USER = new('User')
           GROUP = new('Group')
         end
+        open!
       end
     end
   end

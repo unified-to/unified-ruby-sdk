@@ -7,14 +7,13 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class PropertyCalendarBotMeetingMetadata
         extend T::Sig
         include Crystalline::MetadataFields
 
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :ended_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ended_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :ended_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ended_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :host_email, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('host_email') } }
 
@@ -26,7 +25,7 @@ module UnifiedRubySDK
         # 'zoom', 'webex', 'google_meet', etc.
         field :platform, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('platform') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :started_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('started_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :started_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('started_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :title, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
 

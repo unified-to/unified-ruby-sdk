@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class UcScorecardtemplateQuestion
         extend T::Sig
@@ -20,7 +19,7 @@ module UnifiedRubySDK
 
         field :text, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('text') } }
 
-        field :type, Crystalline::Nilable.new(Models::Shared::UcScorecardtemplateQuestionType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::UcScorecardtemplateQuestionType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::UcScorecardtemplateQuestionType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::UcScorecardtemplateQuestionType, true) } }
 
         sig { params(options: T.nilable(T::Array[::String]), question_identifier: T.nilable(::String), text: T.nilable(::String), type: T.nilable(Models::Shared::UcScorecardtemplateQuestionType)).void }
         def initialize(options: nil, question_identifier: nil, text: nil, type: nil)

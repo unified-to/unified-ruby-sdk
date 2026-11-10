@@ -2,6 +2,17 @@
 
 The call-to-action button type
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PropertySocialPostCallToActionType::BOOK
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = PropertySocialPostCallToActionType.deserialize("custom_value")
+```
+
 
 ## Values
 

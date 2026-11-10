@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # AchievementStatus - Progress towards the goal
-      class AchievementStatus < T::Enum
-
-
+      class AchievementStatus
+        include ::Crystalline::Enum
         enums do
           IN_PROGRESS = new('IN_PROGRESS')
           IMPROVING = new('IMPROVING')
@@ -24,6 +22,7 @@ module UnifiedRubySDK
           NOT_ATTAINABLE = new('NOT_ATTAINABLE')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

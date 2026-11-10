@@ -7,14 +7,13 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class DatastoreFilterGroup
         extend T::Sig
         include Crystalline::MetadataFields
 
 
-        field :type, Models::Shared::DatastoreFilterGroupType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': Utils.enum_from_string(Models::Shared::DatastoreFilterGroupType, false) } }
+        field :type, Models::Shared::DatastoreFilterGroupType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::DatastoreFilterGroupType, false) } }
 
         field :and_, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::DatastoreFilterGroup)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('and') } }
 

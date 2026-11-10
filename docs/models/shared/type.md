@@ -2,6 +2,17 @@
 
 Account type, such as BANK. EQUITY, ASSET, ...
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = Type::ACCOUNTS_PAYABLE
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = Type.deserialize("custom_value")
+```
+
 
 ## Values
 

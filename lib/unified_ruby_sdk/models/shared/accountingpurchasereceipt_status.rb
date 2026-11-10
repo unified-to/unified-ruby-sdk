@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class AccountingPurchasereceiptStatus < T::Enum
-
-
+      class AccountingPurchasereceiptStatus
+        include ::Crystalline::Enum
         enums do
           POSTED = new('POSTED')
           CANCELLED = new('CANCELLED')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

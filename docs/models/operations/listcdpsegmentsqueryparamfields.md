@@ -1,5 +1,13 @@
 # ListCdpSegmentsQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListCdpSegmentsQueryParamFields::ID
+```
+
 
 ## Values
 

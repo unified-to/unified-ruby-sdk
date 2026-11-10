@@ -1,5 +1,13 @@
 # CreateAdsCreativeQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreateAdsCreativeQueryParamFields::ID
+```
+
 
 ## Values
 

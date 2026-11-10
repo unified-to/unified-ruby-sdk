@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class VerificationParameter
         extend T::Sig
@@ -26,7 +25,7 @@ module UnifiedRubySDK
         # question to ask the human
         field :public_question, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('public_question') } }
 
-        field :type, Crystalline::Nilable.new(Models::Shared::VerificationParameterType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::VerificationParameterType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::VerificationParameterType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::VerificationParameterType, true) } }
         # {country}-{stateprovince/territory} or just {country} 2-digit ISO codes
         field :valid_regions, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('valid_regions') } }
 

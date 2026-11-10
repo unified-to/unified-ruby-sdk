@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # SocialPostStatus - Publication status of the post
-      class SocialPostStatus < T::Enum
-
-
+      class SocialPostStatus
+        include ::Crystalline::Enum
         enums do
           DRAFT = new('DRAFT')
           SCHEDULED = new('SCHEDULED')
@@ -21,6 +19,7 @@ module UnifiedRubySDK
           DELETED = new('DELETED')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

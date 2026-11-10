@@ -1,5 +1,4 @@
 # Bankfeedtransaction
-(*bankfeedtransaction*)
 
 ## Overview
 
@@ -18,17 +17,16 @@ Creates a AccountingBankfeedtransaction. Provide the unified AccountingBankfeedt
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAccountingBankfeedtransaction" method="post" path="/accounting/{connection_id}/bankfeedtransaction" -->
+<!-- UsageSnippet language="ruby" operationID="createAccountingBankfeedtransaction" method="post" path="/accounting/{connection_id}/bankfeedtransaction" example="accounting_bankfeedtransaction" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.bankfeedtransaction.create_accounting_bankfeedtransaction(accounting_bankfeedtransaction: Models::Shared::AccountingBankfeedtransaction.new(
   amount: 60_889.0,
   bank_category: 'Clothing',
@@ -36,15 +34,15 @@ res = s.bankfeedtransaction.create_accounting_bankfeedtransaction(accounting_ban
   created_at: DateTime.iso8601('2022-03-24T23:41:08.374Z'),
   currency: 'CAD',
   description: 'Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781.',
-  id: '629c339a-be6b-476e-87a2-3dcea58e93c4',
+  id: 'd0196aff-0ec1-451d-939e-1704c1b6deef',
   is_pending: true,
   merchant_name: 'Buckridge - Feest',
   metadata: [],
-  posted_at: DateTime.iso8601('2025-04-27T12:50:03.823Z'),
+  posted_at: DateTime.iso8601('2025-04-28T17:54:05.876Z'),
   reference: '79574105',
-  transaction_at: DateTime.iso8601('2022-07-31T18:56:02.444Z'),
+  transaction_at: DateTime.iso8601('2022-07-31T22:14:54.747Z'),
   type: Models::Shared::AccountingBankfeedtransactionType::CREDIT,
-  updated_at: DateTime.iso8601('2022-05-25T18:25:08.006Z'),
+  updated_at: DateTime.iso8601('2022-05-25T20:00:31.396Z')
 ), connection_id: '<id>')
 
 unless res.accounting_bankfeedtransaction.nil?
@@ -84,11 +82,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.bankfeedtransaction.get_accounting_bankfeedtransaction(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_bankfeedtransaction.nil?
@@ -128,15 +125,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingBankfeedtransactionsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingBankfeedtransactionsRequest.new(
+  connection_id: '<id>'
+)
 res = s.bankfeedtransaction.list_accounting_bankfeedtransactions(request: req)
 
 unless res.accounting_bankfeedtransactions.nil?
@@ -167,16 +163,16 @@ Updates the AccountingBankfeedtransaction identified by `id`. Provide the unifie
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAccountingBankfeedtransaction" method="patch" path="/accounting/{connection_id}/bankfeedtransaction/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAccountingBankfeedtransaction" method="patch" path="/accounting/{connection_id}/bankfeedtransaction/{id}" example="accounting_bankfeedtransaction" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAccountingBankfeedtransactionRequest.new(
   accounting_bankfeedtransaction: Models::Shared::AccountingBankfeedtransaction.new(
@@ -186,20 +182,19 @@ req = Models::Operations::PatchAccountingBankfeedtransactionRequest.new(
     created_at: DateTime.iso8601('2022-03-24T23:41:08.374Z'),
     currency: 'CAD',
     description: 'Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781.',
-    id: '065d2961-8412-4e65-acc5-a6b31599c03b',
+    id: '1b6bfbc7-19cc-43d7-a971-3248cd1822a3',
     is_pending: true,
     merchant_name: 'Buckridge - Feest',
     metadata: [],
-    posted_at: DateTime.iso8601('2025-04-27T12:50:03.838Z'),
+    posted_at: DateTime.iso8601('2025-04-28T17:54:05.887Z'),
     reference: '79574105',
-    transaction_at: DateTime.iso8601('2022-07-31T18:56:02.446Z'),
+    transaction_at: DateTime.iso8601('2022-07-31T22:14:54.748Z'),
     type: Models::Shared::AccountingBankfeedtransactionType::CREDIT,
-    updated_at: DateTime.iso8601('2022-05-25T18:25:08.006Z'),
+    updated_at: DateTime.iso8601('2022-05-25T20:00:31.397Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.bankfeedtransaction.patch_accounting_bankfeedtransaction(request: req)
 
 unless res.accounting_bankfeedtransaction.nil?
@@ -236,11 +231,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.bankfeedtransaction.remove_accounting_bankfeedtransaction(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -272,16 +266,16 @@ Updates the AccountingBankfeedtransaction identified by `id`. Provide the unifie
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAccountingBankfeedtransaction" method="put" path="/accounting/{connection_id}/bankfeedtransaction/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAccountingBankfeedtransaction" method="put" path="/accounting/{connection_id}/bankfeedtransaction/{id}" example="accounting_bankfeedtransaction" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAccountingBankfeedtransactionRequest.new(
   accounting_bankfeedtransaction: Models::Shared::AccountingBankfeedtransaction.new(
@@ -291,20 +285,19 @@ req = Models::Operations::UpdateAccountingBankfeedtransactionRequest.new(
     created_at: DateTime.iso8601('2022-03-24T23:41:08.374Z'),
     currency: 'CAD',
     description: 'Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781.',
-    id: '065d2961-8412-4e65-acc5-a6b31599c03b',
+    id: '1b6bfbc7-19cc-43d7-a971-3248cd1822a3',
     is_pending: true,
     merchant_name: 'Buckridge - Feest',
     metadata: [],
-    posted_at: DateTime.iso8601('2025-04-27T12:50:03.838Z'),
+    posted_at: DateTime.iso8601('2025-04-28T17:54:05.887Z'),
     reference: '79574105',
-    transaction_at: DateTime.iso8601('2022-07-31T18:56:02.446Z'),
+    transaction_at: DateTime.iso8601('2022-07-31T22:14:54.748Z'),
     type: Models::Shared::AccountingBankfeedtransactionType::CREDIT,
-    updated_at: DateTime.iso8601('2022-05-25T18:25:08.006Z'),
+    updated_at: DateTime.iso8601('2022-05-25T20:00:31.397Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.bankfeedtransaction.update_accounting_bankfeedtransaction(request: req)
 
 unless res.accounting_bankfeedtransaction.nil?

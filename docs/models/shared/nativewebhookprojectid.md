@@ -1,5 +1,16 @@
 # NativeWebhookProjectId
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = NativeWebhookProjectId::SUPPORTED_REQUIRED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = NativeWebhookProjectId.deserialize("custom_value")
+```
+
 
 ## Values
 

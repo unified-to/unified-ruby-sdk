@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class PropertyCalendarBotRecordingConfigTranscription
         extend T::Sig
@@ -20,9 +19,9 @@ module UnifiedRubySDK
         # ISO language code (e.g., 'en-US')
         field :language, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('language') } }
 
-        field :mode, Crystalline::Nilable.new(Models::Shared::PropertyCalendarBotRecordingConfigTranscriptionMode), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('mode'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyCalendarBotRecordingConfigTranscriptionMode, true) } }
+        field :mode, Crystalline::Nilable.new(Models::Shared::PropertyCalendarBotRecordingConfigTranscriptionMode), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('mode'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PropertyCalendarBotRecordingConfigTranscriptionMode, true) } }
 
-        field :provider, Crystalline::Nilable.new(Models::Shared::Provider), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('provider'), 'decoder': Utils.enum_from_string(Models::Shared::Provider, true) } }
+        field :provider, Crystalline::Nilable.new(Models::Shared::Provider), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('provider'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::Provider, true) } }
 
         sig { params(enable_speaker_labels: T.nilable(T::Boolean), enable_word_timestamps: T.nilable(T::Boolean), language: T.nilable(::String), mode: T.nilable(Models::Shared::PropertyCalendarBotRecordingConfigTranscriptionMode), provider: T.nilable(Models::Shared::Provider)).void }
         def initialize(enable_speaker_labels: nil, enable_word_timestamps: nil, language: nil, mode: nil, provider: nil)

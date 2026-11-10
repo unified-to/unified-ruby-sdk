@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Type - Account type, such as BANK. EQUITY, ASSET, ...
-      class Type < T::Enum
-
-
+      class Type
+        include ::Crystalline::Enum
         enums do
           ACCOUNTS_PAYABLE = new('ACCOUNTS_PAYABLE')
           ACCOUNTS_RECEIVABLE = new('ACCOUNTS_RECEIVABLE')
@@ -24,6 +22,7 @@ module UnifiedRubySDK
           REVENUE = new('REVENUE')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

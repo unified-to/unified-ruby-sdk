@@ -1,5 +1,4 @@
 # Label
-(*label*)
 
 ## Overview
 
@@ -18,30 +17,29 @@ Creates a ShippingLabel. Provide the unified ShippingLabel fields in the request
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createShippingLabel" method="post" path="/shipping/{connection_id}/label" -->
+<!-- UsageSnippet language="ruby" operationID="createShippingLabel" method="post" path="/shipping/{connection_id}/label" example="shipping_label" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.label.create_shipping_label(shipping_label: Models::Shared::ShippingLabel.new(
   created_at: DateTime.iso8601('2022-11-18T16:45:38.067Z'),
-  id: '1ca40538-f03c-4db2-9b41-dca1bafbd4c8',
+  id: '6479570c-ba85-4bff-93f4-9f4cf90ce458',
   is_voided: false,
   label_cost: 40.83_653_403_213_248,
   label_cost_currency: 'USD',
   label_format: Models::Shared::LabelFormat::PNG,
-  label_url: 'https://labels.example.com/1ca40538-f03c-4db2-9b41-dca1bafbd4c8.pdf',
+  label_url: 'https://labels.example.com/6479570c-ba85-4bff-93f4-9f4cf90ce458.pdf',
   metadata: [],
   service_code: 'Dzy',
   status: Models::Shared::ShippingLabelStatus::EXCEPTION,
   tracking_number: 'ZYV60FOIBUJ6',
-  updated_at: DateTime.iso8601('2024-05-05T21:47:52.191Z'),
+  updated_at: DateTime.iso8601('2024-05-06T13:48:21.495Z')
 ), connection_id: '<id>')
 
 unless res.shipping_label.nil?
@@ -81,11 +79,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.label.get_shipping_label(connection_id: '<id>', id: '<id>')
 
 unless res.shipping_label.nil?
@@ -125,15 +122,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListShippingLabelsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListShippingLabelsRequest.new(
+  connection_id: '<id>'
+)
 res = s.label.list_shipping_labels(request: req)
 
 unless res.shipping_labels.nil?
@@ -164,36 +160,35 @@ Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchShippingLabel" method="patch" path="/shipping/{connection_id}/label/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchShippingLabel" method="patch" path="/shipping/{connection_id}/label/{id}" example="shipping_label" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchShippingLabelRequest.new(
   shipping_label: Models::Shared::ShippingLabel.new(
     created_at: DateTime.iso8601('2022-11-18T16:45:38.067Z'),
-    id: 'c9e2d382-ff6b-4a90-94c3-55b4c718d041',
+    id: '26c5009d-8f8b-4d6f-a9fc-29c36616d5ef',
     is_voided: false,
     label_cost: 40.83_653_403_213_248,
     label_cost_currency: 'USD',
     label_format: Models::Shared::LabelFormat::PNG,
-    label_url: 'https://labels.example.com/c9e2d382-ff6b-4a90-94c3-55b4c718d041.pdf',
+    label_url: 'https://labels.example.com/26c5009d-8f8b-4d6f-a9fc-29c36616d5ef.pdf',
     metadata: [],
     service_code: 'Dzy',
     status: Models::Shared::ShippingLabelStatus::EXCEPTION,
     tracking_number: 'ZYV60FOIBUJ6',
-    updated_at: DateTime.iso8601('2024-05-05T21:47:52.195Z'),
+    updated_at: DateTime.iso8601('2024-05-06T13:48:21.499Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.label.patch_shipping_label(request: req)
 
 unless res.shipping_label.nil?
@@ -230,11 +225,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.label.remove_shipping_label(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -266,36 +260,35 @@ Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateShippingLabel" method="put" path="/shipping/{connection_id}/label/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateShippingLabel" method="put" path="/shipping/{connection_id}/label/{id}" example="shipping_label" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateShippingLabelRequest.new(
   shipping_label: Models::Shared::ShippingLabel.new(
     created_at: DateTime.iso8601('2022-11-18T16:45:38.067Z'),
-    id: 'c9e2d382-ff6b-4a90-94c3-55b4c718d041',
+    id: '26c5009d-8f8b-4d6f-a9fc-29c36616d5ef',
     is_voided: false,
     label_cost: 40.83_653_403_213_248,
     label_cost_currency: 'USD',
     label_format: Models::Shared::LabelFormat::PNG,
-    label_url: 'https://labels.example.com/c9e2d382-ff6b-4a90-94c3-55b4c718d041.pdf',
+    label_url: 'https://labels.example.com/26c5009d-8f8b-4d6f-a9fc-29c36616d5ef.pdf',
     metadata: [],
     service_code: 'Dzy',
     status: Models::Shared::ShippingLabelStatus::EXCEPTION,
     tracking_number: 'ZYV60FOIBUJ6',
-    updated_at: DateTime.iso8601('2024-05-05T21:47:52.195Z'),
+    updated_at: DateTime.iso8601('2024-05-06T13:48:21.499Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.label.update_shipping_label(request: req)
 
 unless res.shipping_label.nil?

@@ -1,5 +1,13 @@
 # GetPaymentRefundQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetPaymentRefundQueryParamFields::ID
+```
+
 
 ## Values
 

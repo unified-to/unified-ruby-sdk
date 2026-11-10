@@ -1,5 +1,13 @@
 # UpdateHrisDocumentQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = UpdateHrisDocumentQueryParamFields::ID
+```
+
 
 ## Values
 

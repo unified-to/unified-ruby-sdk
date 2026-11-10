@@ -1,5 +1,13 @@
 # UpdateHrisDeductionQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = UpdateHrisDeductionQueryParamFields::ID
+```
+
 
 ## Values
 

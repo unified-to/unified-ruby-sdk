@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class AccountingSalesreceipt
         extend T::Sig
@@ -24,7 +23,7 @@ module UnifiedRubySDK
         # customer (reference to AccountingContact)
         field :contact_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_id') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
@@ -46,11 +45,11 @@ module UnifiedRubySDK
 
         field :payment_method, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_method') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :posted_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('posted_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :posted_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('posted_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # (reference to TaskProject)
         field :project_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('project_id') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :receipt_number, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('receipt_number') } }
 
@@ -58,7 +57,7 @@ module UnifiedRubySDK
 
         field :shipping_address, Crystalline::Nilable.new(Models::Shared::PropertyAccountingSalesreceiptShippingAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('shipping_address') } }
 
-        field :status, Crystalline::Nilable.new(Models::Shared::AccountingSalesreceiptStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::AccountingSalesreceiptStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::AccountingSalesreceiptStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::AccountingSalesreceiptStatus, true) } }
 
         field :sub_total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sub_total_amount') } }
 
@@ -66,9 +65,9 @@ module UnifiedRubySDK
 
         field :total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(account_id: T.nilable(::String), attachments: T.nilable(T::Array[Models::Shared::AccountingAttachment]), billing_address: T.nilable(Models::Shared::PropertyAccountingSalesreceiptBillingAddress), category_ids: T.nilable(T::Array[::String]), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), discount_amount: T.nilable(::Float), exchange_rate: T.nilable(::Float), id: T.nilable(::String), is_inclusive_of_tax: T.nilable(T::Boolean), lineitems: T.nilable(T::Array[Models::Shared::AccountingLineitem]), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), notes: T.nilable(::String), organization_id: T.nilable(::String), payment_method: T.nilable(::String), posted_at: T.nilable(::DateTime), project_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), receipt_number: T.nilable(::String), reference: T.nilable(::String), shipping_address: T.nilable(Models::Shared::PropertyAccountingSalesreceiptShippingAddress), status: T.nilable(Models::Shared::AccountingSalesreceiptStatus), sub_total_amount: T.nilable(::Float), tax_amount: T.nilable(::Float), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
+        sig { params(account_id: T.nilable(::String), attachments: T.nilable(T::Array[Models::Shared::AccountingAttachment]), billing_address: T.nilable(Models::Shared::PropertyAccountingSalesreceiptBillingAddress), category_ids: T.nilable(T::Array[::String]), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), discount_amount: T.nilable(::Float), exchange_rate: T.nilable(::Float), id: T.nilable(::String), is_inclusive_of_tax: T.nilable(T::Boolean), lineitems: T.nilable(T::Array[Models::Shared::AccountingLineitem]), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), notes: T.nilable(::String), organization_id: T.nilable(::String), payment_method: T.nilable(::String), posted_at: T.nilable(::DateTime), project_id: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), receipt_number: T.nilable(::String), reference: T.nilable(::String), shipping_address: T.nilable(Models::Shared::PropertyAccountingSalesreceiptShippingAddress), status: T.nilable(Models::Shared::AccountingSalesreceiptStatus), sub_total_amount: T.nilable(::Float), tax_amount: T.nilable(::Float), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
         def initialize(account_id: nil, attachments: nil, billing_address: nil, category_ids: nil, contact_id: nil, created_at: nil, currency: nil, discount_amount: nil, exchange_rate: nil, id: nil, is_inclusive_of_tax: nil, lineitems: nil, metadata: nil, notes: nil, organization_id: nil, payment_method: nil, posted_at: nil, project_id: nil, raw: nil, receipt_number: nil, reference: nil, shipping_address: nil, status: nil, sub_total_amount: nil, tax_amount: nil, total_amount: nil, updated_at: nil)
           @account_id = account_id
           @attachments = attachments

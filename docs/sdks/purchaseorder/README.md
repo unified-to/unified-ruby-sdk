@@ -1,5 +1,4 @@
 # Purchaseorder
-(*purchaseorder*)
 
 ## Overview
 
@@ -18,17 +17,16 @@ Creates a AccountingPurchaseorder. Provide the unified AccountingPurchaseorder f
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAccountingPurchaseorder" method="post" path="/accounting/{connection_id}/purchaseorder" -->
+<!-- UsageSnippet language="ruby" operationID="createAccountingPurchaseorder" method="post" path="/accounting/{connection_id}/purchaseorder" example="accounting_purchaseorder" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.purchaseorder.create_accounting_purchaseorder(accounting_purchaseorder: Models::Shared::AccountingPurchaseorder.new(
   attachments: [],
   billing_address: Models::Shared::PropertyAccountingPurchaseorderBillingAddress.new(
@@ -38,12 +36,12 @@ res = s.purchaseorder.create_accounting_purchaseorder(accounting_purchaseorder: 
     country_code: 'US',
     postal_code: '30337',
     region: 'Nevada',
-    region_code: 'FL',
+    region_code: 'FL'
   ),
   category_ids: [],
   created_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
   currency: 'EUR',
-  id: '48bb344a-56b8-46ca-b993-c0acaceb0c02',
+  id: 'c09aefe6-e6ca-49d8-8b00-83307bd5c157',
   lineitems: [],
   metadata: [],
   posted_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
@@ -53,11 +51,11 @@ res = s.purchaseorder.create_accounting_purchaseorder(accounting_purchaseorder: 
     country_code: 'US',
     postal_code: '92116-5474',
     region: 'Oregon',
-    region_code: 'WY',
+    region_code: 'WY'
   ),
   status: Models::Shared::AccountingPurchaseorderStatus::SUBMITTED,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2021-08-13T09:36:31.460Z'),
+  updated_at: DateTime.iso8601('2021-08-13T14:31:43.281Z')
 ), connection_id: '<id>')
 
 unless res.accounting_purchaseorder.nil?
@@ -97,11 +95,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.purchaseorder.get_accounting_purchaseorder(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_purchaseorder.nil?
@@ -141,15 +138,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingPurchaseordersRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingPurchaseordersRequest.new(
+  connection_id: '<id>'
+)
 res = s.purchaseorder.list_accounting_purchaseorders(request: req)
 
 unless res.accounting_purchaseorders.nil?
@@ -180,16 +176,16 @@ Updates the AccountingPurchaseorder identified by `id`. Provide the unified Acco
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAccountingPurchaseorder" method="patch" path="/accounting/{connection_id}/purchaseorder/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAccountingPurchaseorder" method="patch" path="/accounting/{connection_id}/purchaseorder/{id}" example="accounting_purchaseorder" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAccountingPurchaseorderRequest.new(
   accounting_purchaseorder: Models::Shared::AccountingPurchaseorder.new(
@@ -201,12 +197,12 @@ req = Models::Operations::PatchAccountingPurchaseorderRequest.new(
       country_code: 'US',
       postal_code: '30337',
       region: 'Nevada',
-      region_code: 'FL',
+      region_code: 'FL'
     ),
     category_ids: [],
     created_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
     currency: 'EUR',
-    id: 'dc153403-e41a-4b2c-9daf-9a9871d74361',
+    id: 'c8460e56-9e80-47af-8278-b9bfe8399815',
     lineitems: [],
     metadata: [],
     posted_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
@@ -216,16 +212,15 @@ req = Models::Operations::PatchAccountingPurchaseorderRequest.new(
       country_code: 'US',
       postal_code: '92116-5474',
       region: 'Oregon',
-      region_code: 'WY',
+      region_code: 'WY'
     ),
     status: Models::Shared::AccountingPurchaseorderStatus::SUBMITTED,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2021-08-13T09:36:31.467Z'),
+    updated_at: DateTime.iso8601('2021-08-13T14:31:43.286Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.purchaseorder.patch_accounting_purchaseorder(request: req)
 
 unless res.accounting_purchaseorder.nil?
@@ -262,11 +257,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.purchaseorder.remove_accounting_purchaseorder(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -298,16 +292,16 @@ Updates the AccountingPurchaseorder identified by `id`. Provide the unified Acco
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAccountingPurchaseorder" method="put" path="/accounting/{connection_id}/purchaseorder/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAccountingPurchaseorder" method="put" path="/accounting/{connection_id}/purchaseorder/{id}" example="accounting_purchaseorder" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAccountingPurchaseorderRequest.new(
   accounting_purchaseorder: Models::Shared::AccountingPurchaseorder.new(
@@ -319,12 +313,12 @@ req = Models::Operations::UpdateAccountingPurchaseorderRequest.new(
       country_code: 'US',
       postal_code: '30337',
       region: 'Nevada',
-      region_code: 'FL',
+      region_code: 'FL'
     ),
     category_ids: [],
     created_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
     currency: 'EUR',
-    id: 'dc153403-e41a-4b2c-9daf-9a9871d74361',
+    id: 'c8460e56-9e80-47af-8278-b9bfe8399815',
     lineitems: [],
     metadata: [],
     posted_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
@@ -334,16 +328,15 @@ req = Models::Operations::UpdateAccountingPurchaseorderRequest.new(
       country_code: 'US',
       postal_code: '92116-5474',
       region: 'Oregon',
-      region_code: 'WY',
+      region_code: 'WY'
     ),
     status: Models::Shared::AccountingPurchaseorderStatus::SUBMITTED,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2021-08-13T09:36:31.467Z'),
+    updated_at: DateTime.iso8601('2021-08-13T14:31:43.286Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.purchaseorder.update_accounting_purchaseorder(request: req)
 
 unless res.accounting_purchaseorder.nil?

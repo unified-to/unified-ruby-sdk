@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class UcCallInstructionType < T::Enum
-
-
+      class UcCallInstructionType
+        include ::Crystalline::Enum
         enums do
           SAY = new('SAY')
           PLAY = new('PLAY')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           DIAL = new('DIAL')
           HANGUP = new('HANGUP')
         end
+        open!
       end
     end
   end

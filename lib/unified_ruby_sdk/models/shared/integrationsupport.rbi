@@ -128,6 +128,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_matter_id=(str_); end
   def list_medium(); end
   def list_medium=(str_); end
+  def list_meeting_url(); end
+  def list_meeting_url=(str_); end
   def list_member_id(); end
   def list_member_id=(str_); end
   def list_offset(); end

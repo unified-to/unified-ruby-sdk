@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Tax - Tax describes the tax treatment of the benefit
-      class Tax < T::Enum
-
-
+      class Tax
+        include ::Crystalline::Enum
         enums do
           PRE_TAX = new('PRE_TAX')
           POST_TAX = new('POST_TAX')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           NON_TAXABLE = new('NON_TAXABLE')
           TAX = new('TAX')
         end
+        open!
       end
     end
   end

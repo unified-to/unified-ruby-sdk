@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class HrisTelephoneType < T::Enum
-
-
+      class HrisTelephoneType
+        include ::Crystalline::Enum
         enums do
           WORK = new('WORK')
           HOME = new('HOME')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           FAX = new('FAX')
           MOBILE = new('MOBILE')
         end
+        open!
       end
     end
   end

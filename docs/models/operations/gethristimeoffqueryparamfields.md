@@ -1,5 +1,13 @@
 # GetHrisTimeoffQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetHrisTimeoffQueryParamFields::ID
+```
+
 
 ## Values
 

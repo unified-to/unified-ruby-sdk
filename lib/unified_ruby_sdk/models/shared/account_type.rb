@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # AccountType - CHECKING, SAVINGS, CREDIT_CARD, LOAN, OTHER
-      class AccountType < T::Enum
-
-
+      class AccountType
+        include ::Crystalline::Enum
         enums do
           CHECKING = new('CHECKING')
           SAVINGS = new('SAVINGS')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           LOAN = new('LOAN')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

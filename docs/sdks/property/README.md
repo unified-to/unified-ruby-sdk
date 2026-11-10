@@ -1,5 +1,4 @@
 # Property
-(*property*)
 
 ## Overview
 
@@ -45,24 +44,23 @@ Creates a AnalyticsProperty. Provide the unified AnalyticsProperty fields in the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAnalyticsProperty" method="post" path="/analytics/{connection_id}/property" -->
+<!-- UsageSnippet language="ruby" operationID="createAnalyticsProperty" method="post" path="/analytics/{connection_id}/property" example="analytics_property" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.property.create_analytics_property(analytics_property: Models::Shared::AnalyticsProperty.new(
   created_at: DateTime.iso8601('2021-09-05T19:04:58.430Z'),
   currency: 'USD',
-  id: '7110bdc8-a2c8-42dd-9630-28ec7f0b40e0',
+  id: '6292dcd8-67fb-4537-92c4-e6c39c46bc72',
   name: 'Daniel, Goldner and Dickinson',
   timezone: 'UTC',
-  updated_at: DateTime.iso8601('2021-09-14T22:38:45.958Z'),
+  updated_at: DateTime.iso8601('2021-09-14T22:51:23.712Z')
 ), connection_id: '<id>')
 
 unless res.analytics_property.nil?
@@ -96,44 +94,43 @@ Creates a PropertyConversation. Provide the unified PropertyConversation fields 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createPropertyConversation" method="post" path="/property/{connection_id}/conversation" -->
+<!-- UsageSnippet language="ruby" operationID="createPropertyConversation" method="post" path="/property/{connection_id}/conversation" example="property_conversation" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.property.create_property_conversation(property_conversation: Models::Shared::PropertyConversation.new(
   created_at: DateTime.iso8601('2022-06-20T00:02:46.530Z'),
   guest_name: 'Evie Okuneva',
-  id: '305851d8-09b4-4fae-9458-20398807d4f9',
+  id: '3570e01f-3343-4dde-b59b-9c1c725d5a87',
   is_unread: false,
   messages: [
     Models::Shared::PropertyMessage.new(
       attachments: [],
-      created_at: DateTime.iso8601('2025-04-28T21:51:17.104Z'),
-      id: '201a2baa-f429-46d4-a285-b13ddd585794',
+      created_at: DateTime.iso8601('2025-04-30T02:10:33.945Z'),
+      id: 'bd596697-b852-4458-ac76-a909eaa751c4',
       is_automatic: false,
       message: 'Vinitor caterva amor sophismata admitto colo tempore aufero torrens.',
       sender_name: 'Evie Okuneva',
-      sender_type: Models::Shared::SenderType::GUEST,
+      sender_type: Models::Shared::SenderType::GUEST
     ),
     Models::Shared::PropertyMessage.new(
       attachments: [],
-      created_at: DateTime.iso8601('2026-05-14T13:12:27.824Z'),
-      id: '4670e725-5971-4fe5-b149-dcd7b100c3ba',
+      created_at: DateTime.iso8601('2026-05-16T03:51:21.118Z'),
+      id: '1b99fe84-ef5a-40eb-b223-b721bba999e7',
       message: 'Aequitas torqueo curiositas cimentarius repellendus auditor degero ademptio adnuo.',
       sender_name: 'Ms. Patti Lynch',
-      sender_type: Models::Shared::SenderType::HOST,
+      sender_type: Models::Shared::SenderType::HOST
     ),
   ],
   metadata: [],
   source: 'Airbnb',
-  updated_at: DateTime.iso8601('2026-05-14T13:12:27.824Z'),
+  updated_at: DateTime.iso8601('2026-05-16T03:51:21.118Z')
 ), connection_id: '<id>')
 
 unless res.property_conversation.nil?
@@ -167,17 +164,16 @@ Creates a PropertyGuest. Provide the unified PropertyGuest fields in the request
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createPropertyGuest" method="post" path="/property/{connection_id}/guest" -->
+<!-- UsageSnippet language="ruby" operationID="createPropertyGuest" method="post" path="/property/{connection_id}/guest" example="property_guest" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.property.create_property_guest(property_guest: Models::Shared::PropertyGuest.new(
   address: Models::Shared::PropertyPropertyGuestAddress.new(
     address1: '874 Rice Trafficway',
@@ -185,18 +181,18 @@ res = s.property.create_property_guest(property_guest: Models::Shared::PropertyG
     country: 'Cameroon',
     country_code: 'MX',
     postal_code: '51113-4329',
-    region: 'Missouri',
+    region: 'Missouri'
   ),
   company_name: 'Kertzmann, Bednar and Bashirian',
   created_at: DateTime.iso8601('2021-10-17T05:59:05.070Z'),
   emails: [
     Models::Shared::PropertyEmail.new(
       email: 'melissa.green@icloud.com',
-      type: Models::Shared::PropertyEmailType::HOME,
+      type: Models::Shared::PropertyEmailType::HOME
     ),
   ],
   first_name: 'Melissa',
-  id: '6ebe9f7f-62f5-4cf8-baec-429b07835e68',
+  id: 'a5d09056-f958-4199-a427-840c43f9e18a',
   image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg',
   language: 'es',
   last_name: 'Green',
@@ -207,10 +203,10 @@ res = s.property.create_property_guest(property_guest: Models::Shared::PropertyG
   telephones: [
     Models::Shared::PropertyTelephone.new(
       telephone: '+14564841285',
-      type: Models::Shared::PropertyTelephoneType::MOBILE,
+      type: Models::Shared::PropertyTelephoneType::MOBILE
     ),
   ],
-  updated_at: DateTime.iso8601('2025-07-10T22:07:32.576Z'),
+  updated_at: DateTime.iso8601('2025-07-12T06:10:51.006Z')
 ), connection_id: '<id>')
 
 unless res.property_guest.nil?
@@ -244,17 +240,16 @@ Creates a PropertyListing. Provide the unified PropertyListing fields in the req
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createPropertyListing" method="post" path="/property/{connection_id}/listing" -->
+<!-- UsageSnippet language="ruby" operationID="createPropertyListing" method="post" path="/property/{connection_id}/listing" example="property_listing" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.property.create_property_listing(property_listing: Models::Shared::PropertyListing.new(
   address: Models::Shared::PropertyPropertyListingAddress.new(
     address1: '9262 Bramley Close',
@@ -263,7 +258,7 @@ res = s.property.create_property_listing(property_listing: Models::Shared::Prope
     country_code: 'US',
     postal_code: '53615-4664',
     region: 'Nebraska',
-    region_code: 'IL',
+    region_code: 'IL'
   ),
   amenities: [
     'Wifi',
@@ -276,7 +271,7 @@ res = s.property.create_property_listing(property_listing: Models::Shared::Prope
   channels: [
     Models::Shared::PropertyChannel.new(
       name: 'Booking.com',
-      web_url: 'https://frightened-hyphenation.net/',
+      web_url: 'https://frightened-hyphenation.net/'
     ),
   ],
   check_in_end_time: '22:00',
@@ -287,13 +282,13 @@ res = s.property.create_property_listing(property_listing: Models::Shared::Prope
   currency: 'USD',
   description: 'Cuius deputo cruentus demoror censura caveo sponte statim vespillo cursim. Arbitro barba summopere. Curto vulticulus comparo surgo vociferor carmen deputo defluo.',
   house_rules: 'No smoking. No parties or events.',
-  id: 'aeb00620-2b1c-47d4-934d-dae3ac44ca55',
+  id: '9b46438d-3417-4508-bb5a-fb6fed714108',
   image_urls: [
     'https://loremflickr.com/23/1328?lock=5798241296161663',
     'https://loremflickr.com/12/1312?lock=6354590363728966',
   ],
-  latitude: -5.4_327,
-  longitude: 98.9_045,
+  latitude: -5.4327,
+  longitude: 98.9045,
   max_nights: 15.0,
   max_occupancy: 5.0,
   metadata: [],
@@ -304,8 +299,8 @@ res = s.property.create_property_listing(property_listing: Models::Shared::Prope
   start_price_amount: 470.0,
   timezone: 'America/Los_Angeles',
   type: Models::Shared::PropertyListingType::ROOM,
-  updated_at: DateTime.iso8601('2026-09-16T14:52:32.380Z'),
-  web_url: 'https://tight-pronoun.info/',
+  updated_at: DateTime.iso8601('2026-09-18T09:16:31.964Z'),
+  web_url: 'https://tight-pronoun.info/'
 ), connection_id: '<id>')
 
 unless res.property_listing.nil?
@@ -339,49 +334,48 @@ Creates a PropertyQuote. Provide the unified PropertyQuote fields in the request
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createPropertyQuote" method="post" path="/property/{connection_id}/quote" -->
+<!-- UsageSnippet language="ruby" operationID="createPropertyQuote" method="post" path="/property/{connection_id}/quote" example="property_quote" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.property.create_property_quote(property_quote: Models::Shared::PropertyQuote.new(
   adults: 1.0,
   children: 1.0,
   created_at: DateTime.iso8601('2020-12-18T19:14:11.415Z'),
   currency: 'USD',
   deposit_amount: 594.54,
-  end_at: DateTime.iso8601('2026-11-23'),
+  end_at: DateTime.iso8601('2026-11-25'),
   guests: 2.0,
-  id: '485cf13d-43a1-4c3d-9127-122d7fa6ea7c',
+  id: 'eebe7e43-8ba9-4939-b1c6-de3dcc1bb0e3',
   line_items: [
     Models::Shared::PropertyLineitem.new(
       amount: 1665.0,
       description: '9 nights',
       is_mandatory: true,
       name: 'Accommodation',
-      type: Models::Shared::PropertyLineitemType::BASE,
+      type: Models::Shared::PropertyLineitemType::BASE
     ),
     Models::Shared::PropertyLineitem.new(
       amount: 117.0,
       is_mandatory: true,
       name: 'Cleaning fee',
-      type: Models::Shared::PropertyLineitemType::FEE,
+      type: Models::Shared::PropertyLineitemType::FEE
     ),
     Models::Shared::PropertyLineitem.new(
       amount: 199.8,
       is_mandatory: true,
       name: 'Lodging tax',
-      type: Models::Shared::PropertyLineitemType::TAX,
+      type: Models::Shared::PropertyLineitemType::TAX
     ),
   ],
-  start_at: DateTime.iso8601('2026-11-14'),
-  total_amount: 1_981.8,
+  start_at: DateTime.iso8601('2026-11-16'),
+  total_amount: 1981.8
 ), connection_id: '<id>')
 
 unless res.property_quote.nil?
@@ -415,20 +409,19 @@ Creates a PropertyReservation. Provide the unified PropertyReservation fields in
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createPropertyReservation" method="post" path="/property/{connection_id}/reservation" -->
+<!-- UsageSnippet language="ruby" operationID="createPropertyReservation" method="post" path="/property/{connection_id}/reservation" example="property_reservation" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.property.create_property_reservation(property_reservation: Models::Shared::PropertyReservation.new(
   adults: 4.0,
-  balance_amount: 2_181.6,
+  balance_amount: 2181.6,
   children: 2.0,
   confirmation_code: 'GNLTDDQ88Z',
   created_at: DateTime.iso8601('2022-06-03T01:40:03.655Z'),
@@ -438,32 +431,32 @@ res = s.property.create_property_reservation(property_reservation: Models::Share
   guest_email: 'anya.parisian@hotmail.com',
   guest_name: 'Anya Parisian',
   guests: 6.0,
-  id: '585195d4-b57c-410f-ba4a-171917cecc6f',
+  id: '8cde6b35-c078-424e-9498-1e6bce655450',
   line_items: [
     Models::Shared::PropertyLineitem.new(
       amount: 1980.0,
       description: '11 nights',
       is_mandatory: true,
       name: 'Accommodation',
-      type: Models::Shared::PropertyLineitemType::BASE,
+      type: Models::Shared::PropertyLineitemType::BASE
     ),
     Models::Shared::PropertyLineitem.new(
       amount: 162.0,
       is_mandatory: true,
       name: 'Cleaning fee',
-      type: Models::Shared::PropertyLineitemType::FEE,
+      type: Models::Shared::PropertyLineitemType::FEE
     ),
     Models::Shared::PropertyLineitem.new(
       amount: 237.6,
       is_mandatory: true,
       name: 'Lodging tax',
-      type: Models::Shared::PropertyLineitemType::TAX,
+      type: Models::Shared::PropertyLineitemType::TAX
     ),
     Models::Shared::PropertyLineitem.new(
       amount: -198.0,
       is_mandatory: false,
       name: 'Weekly discount',
-      type: Models::Shared::PropertyLineitemType::DISCOUNT,
+      type: Models::Shared::PropertyLineitemType::DISCOUNT
     ),
   ],
   metadata: [],
@@ -474,9 +467,9 @@ res = s.property.create_property_reservation(property_reservation: Models::Share
   source: 'Vrbo',
   start_at: DateTime.iso8601('2022-09-25T17:17:08.838Z'),
   status: Models::Shared::PropertyReservationStatus::PENDING,
-  total_amount: 2_181.6,
-  updated_at: DateTime.iso8601('2022-11-17T11:32:44.340Z'),
-  web_url: 'https://antique-tennis.biz/',
+  total_amount: 2181.6,
+  updated_at: DateTime.iso8601('2022-11-17T16:02:24.249Z'),
+  web_url: 'https://antique-tennis.biz/'
 ), connection_id: '<id>')
 
 unless res.property_reservation.nil?
@@ -516,11 +509,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.property.get_analytics_property(connection_id: '<id>', id: '<id>')
 
 unless res.analytics_property.nil?
@@ -560,11 +552,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.property.get_property_conversation(connection_id: '<id>', id: '<id>')
 
 unless res.property_conversation.nil?
@@ -604,11 +595,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.property.get_property_guest(connection_id: '<id>', id: '<id>')
 
 unless res.property_guest.nil?
@@ -648,11 +638,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.property.get_property_listing(connection_id: '<id>', id: '<id>')
 
 unless res.property_listing.nil?
@@ -692,11 +681,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.property.get_property_reservation(connection_id: '<id>', id: '<id>')
 
 unless res.property_reservation.nil?
@@ -736,11 +724,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.property.get_property_review(connection_id: '<id>', id: '<id>')
 
 unless res.property_review.nil?
@@ -780,11 +767,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.property.get_property_unittype(connection_id: '<id>', id: '<id>')
 
 unless res.property_unittype.nil?
@@ -824,15 +810,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAnalyticsPropertiesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAnalyticsPropertiesRequest.new(
+  connection_id: '<id>'
+)
 res = s.property.list_analytics_properties(request: req)
 
 unless res.analytics_properties.nil?
@@ -869,15 +854,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListPropertyAvailabilitiesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListPropertyAvailabilitiesRequest.new(
+  connection_id: '<id>'
+)
 res = s.property.list_property_availabilities(request: req)
 
 unless res.property_availabilities.nil?
@@ -914,15 +898,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListPropertyConversationsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListPropertyConversationsRequest.new(
+  connection_id: '<id>'
+)
 res = s.property.list_property_conversations(request: req)
 
 unless res.property_conversations.nil?
@@ -959,15 +942,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListPropertyGuestsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListPropertyGuestsRequest.new(
+  connection_id: '<id>'
+)
 res = s.property.list_property_guests(request: req)
 
 unless res.property_guests.nil?
@@ -1004,15 +986,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListPropertyListingsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListPropertyListingsRequest.new(
+  connection_id: '<id>'
+)
 res = s.property.list_property_listings(request: req)
 
 unless res.property_listings.nil?
@@ -1049,15 +1030,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListPropertyReservationsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListPropertyReservationsRequest.new(
+  connection_id: '<id>'
+)
 res = s.property.list_property_reservations(request: req)
 
 unless res.property_reservations.nil?
@@ -1094,15 +1074,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListPropertyReviewsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListPropertyReviewsRequest.new(
+  connection_id: '<id>'
+)
 res = s.property.list_property_reviews(request: req)
 
 unless res.property_reviews.nil?
@@ -1139,15 +1118,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListPropertyUnittypesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListPropertyUnittypesRequest.new(
+  connection_id: '<id>'
+)
 res = s.property.list_property_unittypes(request: req)
 
 unless res.property_unittypes.nil?
@@ -1178,30 +1156,29 @@ Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsP
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAnalyticsProperty" method="patch" path="/analytics/{connection_id}/property/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAnalyticsProperty" method="patch" path="/analytics/{connection_id}/property/{id}" example="analytics_property" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAnalyticsPropertyRequest.new(
   analytics_property: Models::Shared::AnalyticsProperty.new(
     created_at: DateTime.iso8601('2021-09-05T19:04:58.430Z'),
     currency: 'USD',
-    id: 'a6810209-8e46-438c-9fae-a2191019b59a',
+    id: 'e28bf7ba-f73c-4618-972b-17f0f669e42f',
     name: 'Daniel, Goldner and Dickinson',
     timezone: 'UTC',
-    updated_at: DateTime.iso8601('2021-09-14T22:38:45.958Z'),
+    updated_at: DateTime.iso8601('2021-09-14T22:51:23.712Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.property.patch_analytics_property(request: req)
 
 unless res.analytics_property.nil?
@@ -1232,16 +1209,16 @@ Updates the PropertyGuest identified by `id`. Provide the unified PropertyGuest 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchPropertyGuest" method="patch" path="/property/{connection_id}/guest/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchPropertyGuest" method="patch" path="/property/{connection_id}/guest/{id}" example="property_guest" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchPropertyGuestRequest.new(
   property_guest: Models::Shared::PropertyGuest.new(
@@ -1251,18 +1228,18 @@ req = Models::Operations::PatchPropertyGuestRequest.new(
       country: 'Cameroon',
       country_code: 'MX',
       postal_code: '51113-4329',
-      region: 'Missouri',
+      region: 'Missouri'
     ),
     company_name: 'Kertzmann, Bednar and Bashirian',
     created_at: DateTime.iso8601('2021-10-17T05:59:05.070Z'),
     emails: [
       Models::Shared::PropertyEmail.new(
         email: 'melissa.green@icloud.com',
-        type: Models::Shared::PropertyEmailType::HOME,
+        type: Models::Shared::PropertyEmailType::HOME
       ),
     ],
     first_name: 'Melissa',
-    id: '2eb76b80-ea66-4e1d-b5e8-fb5b0665f296',
+    id: 'a4d6c20b-a8b5-4fa9-969d-555458b5382d',
     image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg',
     language: 'es',
     last_name: 'Green',
@@ -1273,15 +1250,14 @@ req = Models::Operations::PatchPropertyGuestRequest.new(
     telephones: [
       Models::Shared::PropertyTelephone.new(
         telephone: '+14564841285',
-        type: Models::Shared::PropertyTelephoneType::MOBILE,
+        type: Models::Shared::PropertyTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2025-07-10T22:07:32.600Z'),
+    updated_at: DateTime.iso8601('2025-07-12T06:10:51.022Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.property.patch_property_guest(request: req)
 
 unless res.property_guest.nil?
@@ -1312,16 +1288,16 @@ Updates the PropertyListing identified by `id`. Provide the unified PropertyList
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchPropertyListing" method="patch" path="/property/{connection_id}/listing/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchPropertyListing" method="patch" path="/property/{connection_id}/listing/{id}" example="property_listing" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchPropertyListingRequest.new(
   property_listing: Models::Shared::PropertyListing.new(
@@ -1332,7 +1308,7 @@ req = Models::Operations::PatchPropertyListingRequest.new(
       country_code: 'US',
       postal_code: '53615-4664',
       region: 'Nebraska',
-      region_code: 'IL',
+      region_code: 'IL'
     ),
     amenities: [
       'Wifi',
@@ -1345,7 +1321,7 @@ req = Models::Operations::PatchPropertyListingRequest.new(
     channels: [
       Models::Shared::PropertyChannel.new(
         name: 'Booking.com',
-        web_url: 'https://frightened-hyphenation.net/',
+        web_url: 'https://frightened-hyphenation.net/'
       ),
     ],
     check_in_end_time: '22:00',
@@ -1356,13 +1332,13 @@ req = Models::Operations::PatchPropertyListingRequest.new(
     currency: 'USD',
     description: 'Cuius deputo cruentus demoror censura caveo sponte statim vespillo cursim. Arbitro barba summopere. Curto vulticulus comparo surgo vociferor carmen deputo defluo.',
     house_rules: 'No smoking. No parties or events.',
-    id: '25bdc734-2dfe-40fb-93e0-29f5174520e3',
+    id: '61286116-1455-4c8e-8d69-f9cb802e52bb',
     image_urls: [
       'https://loremflickr.com/23/1328?lock=5798241296161663',
       'https://loremflickr.com/12/1312?lock=6354590363728966',
     ],
-    latitude: -5.4_327,
-    longitude: 98.9_045,
+    latitude: -5.4327,
+    longitude: 98.9045,
     max_nights: 15.0,
     max_occupancy: 5.0,
     metadata: [],
@@ -1373,13 +1349,12 @@ req = Models::Operations::PatchPropertyListingRequest.new(
     start_price_amount: 470.0,
     timezone: 'America/Los_Angeles',
     type: Models::Shared::PropertyListingType::ROOM,
-    updated_at: DateTime.iso8601('2026-09-16T14:52:32.422Z'),
-    web_url: 'https://tight-pronoun.info/',
+    updated_at: DateTime.iso8601('2026-09-18T09:16:31.986Z'),
+    web_url: 'https://tight-pronoun.info/'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.property.patch_property_listing(request: req)
 
 unless res.property_listing.nil?
@@ -1410,21 +1385,21 @@ Updates the PropertyReservation identified by `id`. Provide the unified Property
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchPropertyReservation" method="patch" path="/property/{connection_id}/reservation/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchPropertyReservation" method="patch" path="/property/{connection_id}/reservation/{id}" example="property_reservation" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchPropertyReservationRequest.new(
   property_reservation: Models::Shared::PropertyReservation.new(
     adults: 4.0,
-    balance_amount: 2_181.6,
+    balance_amount: 2181.6,
     children: 2.0,
     confirmation_code: 'GNLTDDQ88Z',
     created_at: DateTime.iso8601('2022-06-03T01:40:03.655Z'),
@@ -1434,32 +1409,32 @@ req = Models::Operations::PatchPropertyReservationRequest.new(
     guest_email: 'anya.parisian@hotmail.com',
     guest_name: 'Anya Parisian',
     guests: 6.0,
-    id: 'ce1f5f90-e5d2-4cbe-aa04-59b58ccd96ee',
+    id: '1aed52f2-01b1-4aec-9f15-717593ffc3a1',
     line_items: [
       Models::Shared::PropertyLineitem.new(
         amount: 1980.0,
         description: '11 nights',
         is_mandatory: true,
         name: 'Accommodation',
-        type: Models::Shared::PropertyLineitemType::BASE,
+        type: Models::Shared::PropertyLineitemType::BASE
       ),
       Models::Shared::PropertyLineitem.new(
         amount: 162.0,
         is_mandatory: true,
         name: 'Cleaning fee',
-        type: Models::Shared::PropertyLineitemType::FEE,
+        type: Models::Shared::PropertyLineitemType::FEE
       ),
       Models::Shared::PropertyLineitem.new(
         amount: 237.6,
         is_mandatory: true,
         name: 'Lodging tax',
-        type: Models::Shared::PropertyLineitemType::TAX,
+        type: Models::Shared::PropertyLineitemType::TAX
       ),
       Models::Shared::PropertyLineitem.new(
         amount: -198.0,
         is_mandatory: false,
         name: 'Weekly discount',
-        type: Models::Shared::PropertyLineitemType::DISCOUNT,
+        type: Models::Shared::PropertyLineitemType::DISCOUNT
       ),
     ],
     metadata: [],
@@ -1470,14 +1445,13 @@ req = Models::Operations::PatchPropertyReservationRequest.new(
     source: 'Vrbo',
     start_at: DateTime.iso8601('2022-09-25T17:17:08.838Z'),
     status: Models::Shared::PropertyReservationStatus::PENDING,
-    total_amount: 2_181.6,
-    updated_at: DateTime.iso8601('2022-11-17T11:32:44.344Z'),
-    web_url: 'https://antique-tennis.biz/',
+    total_amount: 2181.6,
+    updated_at: DateTime.iso8601('2022-11-17T16:02:24.250Z'),
+    web_url: 'https://antique-tennis.biz/'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.property.patch_property_reservation(request: req)
 
 unless res.property_reservation.nil?
@@ -1508,16 +1482,16 @@ Updates the PropertyReview identified by `id`. Provide the unified PropertyRevie
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchPropertyReview" method="patch" path="/property/{connection_id}/review/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchPropertyReview" method="patch" path="/property/{connection_id}/review/{id}" example="property_review" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchPropertyReviewRequest.new(
   property_review: Models::Shared::PropertyReview.new(
@@ -1526,45 +1500,44 @@ req = Models::Operations::PatchPropertyReviewRequest.new(
       Models::Shared::PropertyCategoryrating.new(
         category: Models::Shared::PropertyCategoryratingCategory::CLEANLINESS,
         comment: 'Umquam perferendis amitto voluptas sum blanditiis terreo.',
-        rating: 5.0,
+        rating: 5.0
       ),
       Models::Shared::PropertyCategoryrating.new(
         category: Models::Shared::PropertyCategoryratingCategory::ACCURACY,
         comment: 'Capitulus dolorem verus.',
-        rating: 4.0,
+        rating: 4.0
       ),
       Models::Shared::PropertyCategoryrating.new(
         category: Models::Shared::PropertyCategoryratingCategory::COMMUNICATION,
-        rating: 1.0,
+        rating: 1.0
       ),
       Models::Shared::PropertyCategoryrating.new(
         category: Models::Shared::PropertyCategoryratingCategory::CHECKIN,
-        rating: 1.0,
+        rating: 1.0
       ),
       Models::Shared::PropertyCategoryrating.new(
         category: Models::Shared::PropertyCategoryratingCategory::LOCATION,
-        rating: 2.0,
+        rating: 2.0
       ),
       Models::Shared::PropertyCategoryrating.new(
         category: Models::Shared::PropertyCategoryratingCategory::VALUE,
         comment: 'Quos constans aperte tero sollers.',
-        rating: 5.0,
+        rating: 5.0
       ),
     ],
     content: 'Delectus conscendo communis custodia statim. Tutis adsuesco attonbitus comitatus auditor ea tergo nostrum deleo. Comprehendo tertius summopere vaco apparatus incidunt tabula pauci confido colo.',
     created_at: DateTime.iso8601('2022-10-17T11:17:07.682Z'),
-    id: 'f4a7cdb4-5b3d-4b47-8c67-f7a8440e4c3b',
+    id: '84febbd1-a369-4a48-8e80-ac190039b0f0',
     is_public: true,
     metadata: [],
     private_feedback: 'Tripudio neque communis.',
     rating: 3.0,
     source: 'Airbnb',
-    updated_at: DateTime.iso8601('2026-02-26T15:52:30.710Z'),
+    updated_at: DateTime.iso8601('2026-02-28T03:52:46.160Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.property.patch_property_review(request: req)
 
 unless res.property_review.nil?
@@ -1601,11 +1574,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.property.remove_analytics_property(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1643,11 +1615,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.property.remove_property_listing(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1679,30 +1650,29 @@ Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsP
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAnalyticsProperty" method="put" path="/analytics/{connection_id}/property/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAnalyticsProperty" method="put" path="/analytics/{connection_id}/property/{id}" example="analytics_property" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAnalyticsPropertyRequest.new(
   analytics_property: Models::Shared::AnalyticsProperty.new(
     created_at: DateTime.iso8601('2021-09-05T19:04:58.430Z'),
     currency: 'USD',
-    id: 'a6810209-8e46-438c-9fae-a2191019b59a',
+    id: 'e28bf7ba-f73c-4618-972b-17f0f669e42f',
     name: 'Daniel, Goldner and Dickinson',
     timezone: 'UTC',
-    updated_at: DateTime.iso8601('2021-09-14T22:38:45.958Z'),
+    updated_at: DateTime.iso8601('2021-09-14T22:51:23.712Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.property.update_analytics_property(request: req)
 
 unless res.analytics_property.nil?
@@ -1733,16 +1703,16 @@ Updates the PropertyGuest identified by `id`. Provide the unified PropertyGuest 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updatePropertyGuest" method="put" path="/property/{connection_id}/guest/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updatePropertyGuest" method="put" path="/property/{connection_id}/guest/{id}" example="property_guest" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdatePropertyGuestRequest.new(
   property_guest: Models::Shared::PropertyGuest.new(
@@ -1752,18 +1722,18 @@ req = Models::Operations::UpdatePropertyGuestRequest.new(
       country: 'Cameroon',
       country_code: 'MX',
       postal_code: '51113-4329',
-      region: 'Missouri',
+      region: 'Missouri'
     ),
     company_name: 'Kertzmann, Bednar and Bashirian',
     created_at: DateTime.iso8601('2021-10-17T05:59:05.070Z'),
     emails: [
       Models::Shared::PropertyEmail.new(
         email: 'melissa.green@icloud.com',
-        type: Models::Shared::PropertyEmailType::HOME,
+        type: Models::Shared::PropertyEmailType::HOME
       ),
     ],
     first_name: 'Melissa',
-    id: '2eb76b80-ea66-4e1d-b5e8-fb5b0665f296',
+    id: 'a4d6c20b-a8b5-4fa9-969d-555458b5382d',
     image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg',
     language: 'es',
     last_name: 'Green',
@@ -1774,15 +1744,14 @@ req = Models::Operations::UpdatePropertyGuestRequest.new(
     telephones: [
       Models::Shared::PropertyTelephone.new(
         telephone: '+14564841285',
-        type: Models::Shared::PropertyTelephoneType::MOBILE,
+        type: Models::Shared::PropertyTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2025-07-10T22:07:32.600Z'),
+    updated_at: DateTime.iso8601('2025-07-12T06:10:51.022Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.property.update_property_guest(request: req)
 
 unless res.property_guest.nil?
@@ -1813,16 +1782,16 @@ Updates the PropertyListing identified by `id`. Provide the unified PropertyList
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updatePropertyListing" method="put" path="/property/{connection_id}/listing/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updatePropertyListing" method="put" path="/property/{connection_id}/listing/{id}" example="property_listing" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdatePropertyListingRequest.new(
   property_listing: Models::Shared::PropertyListing.new(
@@ -1833,7 +1802,7 @@ req = Models::Operations::UpdatePropertyListingRequest.new(
       country_code: 'US',
       postal_code: '53615-4664',
       region: 'Nebraska',
-      region_code: 'IL',
+      region_code: 'IL'
     ),
     amenities: [
       'Wifi',
@@ -1846,7 +1815,7 @@ req = Models::Operations::UpdatePropertyListingRequest.new(
     channels: [
       Models::Shared::PropertyChannel.new(
         name: 'Booking.com',
-        web_url: 'https://frightened-hyphenation.net/',
+        web_url: 'https://frightened-hyphenation.net/'
       ),
     ],
     check_in_end_time: '22:00',
@@ -1857,13 +1826,13 @@ req = Models::Operations::UpdatePropertyListingRequest.new(
     currency: 'USD',
     description: 'Cuius deputo cruentus demoror censura caveo sponte statim vespillo cursim. Arbitro barba summopere. Curto vulticulus comparo surgo vociferor carmen deputo defluo.',
     house_rules: 'No smoking. No parties or events.',
-    id: '25bdc734-2dfe-40fb-93e0-29f5174520e3',
+    id: '61286116-1455-4c8e-8d69-f9cb802e52bb',
     image_urls: [
       'https://loremflickr.com/23/1328?lock=5798241296161663',
       'https://loremflickr.com/12/1312?lock=6354590363728966',
     ],
-    latitude: -5.4_327,
-    longitude: 98.9_045,
+    latitude: -5.4327,
+    longitude: 98.9045,
     max_nights: 15.0,
     max_occupancy: 5.0,
     metadata: [],
@@ -1874,13 +1843,12 @@ req = Models::Operations::UpdatePropertyListingRequest.new(
     start_price_amount: 470.0,
     timezone: 'America/Los_Angeles',
     type: Models::Shared::PropertyListingType::ROOM,
-    updated_at: DateTime.iso8601('2026-09-16T14:52:32.422Z'),
-    web_url: 'https://tight-pronoun.info/',
+    updated_at: DateTime.iso8601('2026-09-18T09:16:31.986Z'),
+    web_url: 'https://tight-pronoun.info/'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.property.update_property_listing(request: req)
 
 unless res.property_listing.nil?
@@ -1911,21 +1879,21 @@ Updates the PropertyReservation identified by `id`. Provide the unified Property
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updatePropertyReservation" method="put" path="/property/{connection_id}/reservation/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updatePropertyReservation" method="put" path="/property/{connection_id}/reservation/{id}" example="property_reservation" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdatePropertyReservationRequest.new(
   property_reservation: Models::Shared::PropertyReservation.new(
     adults: 4.0,
-    balance_amount: 2_181.6,
+    balance_amount: 2181.6,
     children: 2.0,
     confirmation_code: 'GNLTDDQ88Z',
     created_at: DateTime.iso8601('2022-06-03T01:40:03.655Z'),
@@ -1935,32 +1903,32 @@ req = Models::Operations::UpdatePropertyReservationRequest.new(
     guest_email: 'anya.parisian@hotmail.com',
     guest_name: 'Anya Parisian',
     guests: 6.0,
-    id: 'ce1f5f90-e5d2-4cbe-aa04-59b58ccd96ee',
+    id: '1aed52f2-01b1-4aec-9f15-717593ffc3a1',
     line_items: [
       Models::Shared::PropertyLineitem.new(
         amount: 1980.0,
         description: '11 nights',
         is_mandatory: true,
         name: 'Accommodation',
-        type: Models::Shared::PropertyLineitemType::BASE,
+        type: Models::Shared::PropertyLineitemType::BASE
       ),
       Models::Shared::PropertyLineitem.new(
         amount: 162.0,
         is_mandatory: true,
         name: 'Cleaning fee',
-        type: Models::Shared::PropertyLineitemType::FEE,
+        type: Models::Shared::PropertyLineitemType::FEE
       ),
       Models::Shared::PropertyLineitem.new(
         amount: 237.6,
         is_mandatory: true,
         name: 'Lodging tax',
-        type: Models::Shared::PropertyLineitemType::TAX,
+        type: Models::Shared::PropertyLineitemType::TAX
       ),
       Models::Shared::PropertyLineitem.new(
         amount: -198.0,
         is_mandatory: false,
         name: 'Weekly discount',
-        type: Models::Shared::PropertyLineitemType::DISCOUNT,
+        type: Models::Shared::PropertyLineitemType::DISCOUNT
       ),
     ],
     metadata: [],
@@ -1971,14 +1939,13 @@ req = Models::Operations::UpdatePropertyReservationRequest.new(
     source: 'Vrbo',
     start_at: DateTime.iso8601('2022-09-25T17:17:08.838Z'),
     status: Models::Shared::PropertyReservationStatus::PENDING,
-    total_amount: 2_181.6,
-    updated_at: DateTime.iso8601('2022-11-17T11:32:44.344Z'),
-    web_url: 'https://antique-tennis.biz/',
+    total_amount: 2181.6,
+    updated_at: DateTime.iso8601('2022-11-17T16:02:24.250Z'),
+    web_url: 'https://antique-tennis.biz/'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.property.update_property_reservation(request: req)
 
 unless res.property_reservation.nil?
@@ -2009,16 +1976,16 @@ Updates the PropertyReview identified by `id`. Provide the unified PropertyRevie
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updatePropertyReview" method="put" path="/property/{connection_id}/review/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updatePropertyReview" method="put" path="/property/{connection_id}/review/{id}" example="property_review" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdatePropertyReviewRequest.new(
   property_review: Models::Shared::PropertyReview.new(
@@ -2027,45 +1994,44 @@ req = Models::Operations::UpdatePropertyReviewRequest.new(
       Models::Shared::PropertyCategoryrating.new(
         category: Models::Shared::PropertyCategoryratingCategory::CLEANLINESS,
         comment: 'Umquam perferendis amitto voluptas sum blanditiis terreo.',
-        rating: 5.0,
+        rating: 5.0
       ),
       Models::Shared::PropertyCategoryrating.new(
         category: Models::Shared::PropertyCategoryratingCategory::ACCURACY,
         comment: 'Capitulus dolorem verus.',
-        rating: 4.0,
+        rating: 4.0
       ),
       Models::Shared::PropertyCategoryrating.new(
         category: Models::Shared::PropertyCategoryratingCategory::COMMUNICATION,
-        rating: 1.0,
+        rating: 1.0
       ),
       Models::Shared::PropertyCategoryrating.new(
         category: Models::Shared::PropertyCategoryratingCategory::CHECKIN,
-        rating: 1.0,
+        rating: 1.0
       ),
       Models::Shared::PropertyCategoryrating.new(
         category: Models::Shared::PropertyCategoryratingCategory::LOCATION,
-        rating: 2.0,
+        rating: 2.0
       ),
       Models::Shared::PropertyCategoryrating.new(
         category: Models::Shared::PropertyCategoryratingCategory::VALUE,
         comment: 'Quos constans aperte tero sollers.',
-        rating: 5.0,
+        rating: 5.0
       ),
     ],
     content: 'Delectus conscendo communis custodia statim. Tutis adsuesco attonbitus comitatus auditor ea tergo nostrum deleo. Comprehendo tertius summopere vaco apparatus incidunt tabula pauci confido colo.',
     created_at: DateTime.iso8601('2022-10-17T11:17:07.682Z'),
-    id: 'f4a7cdb4-5b3d-4b47-8c67-f7a8440e4c3b',
+    id: '84febbd1-a369-4a48-8e80-ac190039b0f0',
     is_public: true,
     metadata: [],
     private_feedback: 'Tripudio neque communis.',
     rating: 3.0,
     source: 'Airbnb',
-    updated_at: DateTime.iso8601('2026-02-26T15:52:30.710Z'),
+    updated_at: DateTime.iso8601('2026-02-28T03:52:46.160Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.property.update_property_review(request: req)
 
 unless res.property_review.nil?

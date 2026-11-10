@@ -2,6 +2,17 @@
 
 Status of the coverage
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = HealthcareCoverageStatus::ACTIVE
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = HealthcareCoverageStatus.deserialize("custom_value")
+```
+
 
 ## Values
 

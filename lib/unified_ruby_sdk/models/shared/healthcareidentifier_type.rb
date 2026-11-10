@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # HealthcareIdentifierType - The kind of identifier
-      class HealthcareIdentifierType < T::Enum
-
-
+      class HealthcareIdentifierType
+        include ::Crystalline::Enum
         enums do
           MRN = new('MRN')
           NPI = new('NPI')
@@ -21,6 +19,7 @@ module UnifiedRubySDK
           INSURANCE = new('INSURANCE')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

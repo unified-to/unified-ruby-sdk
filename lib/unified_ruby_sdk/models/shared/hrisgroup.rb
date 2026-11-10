@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class HrisGroup
         extend T::Sig
@@ -16,7 +15,7 @@ module UnifiedRubySDK
         # (reference to HrisCompany)
         field :company_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_id') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
@@ -30,21 +29,21 @@ module UnifiedRubySDK
         # The name of the group (e.g. a team or department)
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # next pay date when type is PAY_GROUP (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :next_paid_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('next_paid_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :next_paid_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('next_paid_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :parent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
         # pay cycle when type is PAY_GROUP
-        field :pay_frequency, Crystalline::Nilable.new(Models::Shared::HrisGroupPayFrequency), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('pay_frequency'), 'decoder': Utils.enum_from_string(Models::Shared::HrisGroupPayFrequency, true) } }
+        field :pay_frequency, Crystalline::Nilable.new(Models::Shared::HrisGroupPayFrequency), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('pay_frequency'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::HrisGroupPayFrequency, true) } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :type, Crystalline::Nilable.new(Models::Shared::HrisGroupType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::HrisGroupType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::HrisGroupType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::HrisGroupType, true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :user_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_ids') } }
 
-        sig { params(company_id: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), manager_ids: T.nilable(T::Array[::String]), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), name: T.nilable(::String), next_paid_at: T.nilable(::DateTime), parent_id: T.nilable(::String), pay_frequency: T.nilable(Models::Shared::HrisGroupPayFrequency), raw: T.nilable(T::Hash[Symbol, ::Object]), type: T.nilable(Models::Shared::HrisGroupType), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
+        sig { params(company_id: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), manager_ids: T.nilable(T::Array[::String]), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), name: T.nilable(::String), next_paid_at: T.nilable(::DateTime), parent_id: T.nilable(::String), pay_frequency: T.nilable(Models::Shared::HrisGroupPayFrequency), raw: T.nilable(T::Hash[::Symbol, ::Object]), type: T.nilable(Models::Shared::HrisGroupType), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
         def initialize(company_id: nil, created_at: nil, description: nil, id: nil, is_active: nil, manager_ids: nil, metadata: nil, name: nil, next_paid_at: nil, parent_id: nil, pay_frequency: nil, raw: nil, type: nil, updated_at: nil, user_ids: nil)
           @company_id = company_id
           @created_at = created_at

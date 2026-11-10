@@ -7,26 +7,25 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class PropertyDatastoreQueryResponseAggregates
         extend T::Sig
         include Crystalline::MetadataFields
 
 
-        field :avg, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Float)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('avg') } }
+        field :avg, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Float)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('avg') } }
 
         field :count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('count') } }
         # Each item is one group row: a map of field name to value
-        field :groups, Crystalline::Nilable.new(Crystalline::Array.new(Crystalline::Hash.new(Symbol, Models::Shared::DatastoreFieldValue))), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('groups') } }
+        field :groups, Crystalline::Nilable.new(Crystalline::Array.new(Crystalline::Hash.new(::Symbol, Models::Shared::DatastoreFieldValue))), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('groups') } }
 
-        field :max, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Float)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('max') } }
+        field :max, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Float)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('max') } }
 
-        field :min, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Float)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('min') } }
+        field :min, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Float)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('min') } }
 
-        field :sum, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Float)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sum') } }
+        field :sum, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Float)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sum') } }
 
-        sig { params(avg: T.nilable(T::Hash[Symbol, ::Float]), count: T.nilable(::Float), groups: T.nilable(T::Array[T::Hash[Symbol, Models::Shared::DatastoreFieldValue]]), max: T.nilable(T::Hash[Symbol, ::Float]), min: T.nilable(T::Hash[Symbol, ::Float]), sum: T.nilable(T::Hash[Symbol, ::Float])).void }
+        sig { params(avg: T.nilable(T::Hash[::Symbol, ::Float]), count: T.nilable(::Float), groups: T.nilable(T::Array[T::Hash[::Symbol, Models::Shared::DatastoreFieldValue]]), max: T.nilable(T::Hash[::Symbol, ::Float]), min: T.nilable(T::Hash[::Symbol, ::Float]), sum: T.nilable(T::Hash[::Symbol, ::Float])).void }
         def initialize(avg: nil, count: nil, groups: nil, max: nil, min: nil, sum: nil)
           @avg = avg
           @count = count

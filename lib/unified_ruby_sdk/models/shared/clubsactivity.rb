@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # ClubActivity (getClubActivitiesById, NO id) and the full DetailedActivity (getActivityById).
       class ClubsActivity
         extend T::Sig
@@ -34,7 +33,7 @@ module UnifiedRubySDK
         # The number of comments for this activity
         field :comment_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('comment_count') } }
         # The date that this activity was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # The description of the activity (DetailedActivity only)
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
         # The activity's distance, in meters
@@ -84,9 +83,9 @@ module UnifiedRubySDK
         # The number of personal records set during this activity
         field :pr_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('pr_count') } }
         # The raw data returned by the integration for this activity
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # When the activity started (UTC) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # The activity's relative effort score
         field :suffer_score, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('suffer_score') } }
         # The timezone of the activity
@@ -94,15 +93,15 @@ module UnifiedRubySDK
         # The activity's total elevation gain, in meters
         field :total_elevation_gain, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_elevation_gain') } }
         # The activity type
-        field :type, Crystalline::Nilable.new(Models::Shared::ClubsActivityType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::ClubsActivityType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::ClubsActivityType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::ClubsActivityType, true) } }
         # The last date that this activity was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # The activity's weighted average power output, in watts
         field :weighted_average_watts, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('weighted_average_watts') } }
         # The activity's workout type
         field :workout_type, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('workout_type') } }
 
-        sig { params(achievement_count: T.nilable(::Float), athlete_count: T.nilable(::Float), athlete_id: T.nilable(::String), athlete_name: T.nilable(::String), average_cadence: T.nilable(::Float), average_heartrate: T.nilable(::Float), average_speed: T.nilable(::Float), average_watts: T.nilable(::Float), calories: T.nilable(::Float), comment_count: T.nilable(::Float), created_at: T.nilable(::DateTime), description: T.nilable(::String), distance: T.nilable(::Float), elapsed_time: T.nilable(::Float), elevation_high: T.nilable(::Float), elevation_low: T.nilable(::Float), group_id: T.nilable(::String), has_heartrate: T.nilable(T::Boolean), id: T.nilable(::String), is_commute: T.nilable(T::Boolean), is_manual: T.nilable(T::Boolean), is_private: T.nilable(T::Boolean), is_trainer: T.nilable(T::Boolean), kilojoules: T.nilable(::Float), kudos_count: T.nilable(::Float), map_polyline: T.nilable(::String), map_summary_polyline: T.nilable(::String), max_heartrate: T.nilable(::Float), max_speed: T.nilable(::Float), max_watts: T.nilable(::Float), metadata: T.nilable(T::Array[Models::Shared::ClubsMetadata]), moving_time: T.nilable(::Float), name: T.nilable(::String), photo_count: T.nilable(::Float), pr_count: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), suffer_score: T.nilable(::Float), timezone: T.nilable(::String), total_elevation_gain: T.nilable(::Float), type: T.nilable(Models::Shared::ClubsActivityType), updated_at: T.nilable(::DateTime), weighted_average_watts: T.nilable(::Float), workout_type: T.nilable(::Float)).void }
+        sig { params(achievement_count: T.nilable(::Float), athlete_count: T.nilable(::Float), athlete_id: T.nilable(::String), athlete_name: T.nilable(::String), average_cadence: T.nilable(::Float), average_heartrate: T.nilable(::Float), average_speed: T.nilable(::Float), average_watts: T.nilable(::Float), calories: T.nilable(::Float), comment_count: T.nilable(::Float), created_at: T.nilable(::DateTime), description: T.nilable(::String), distance: T.nilable(::Float), elapsed_time: T.nilable(::Float), elevation_high: T.nilable(::Float), elevation_low: T.nilable(::Float), group_id: T.nilable(::String), has_heartrate: T.nilable(T::Boolean), id: T.nilable(::String), is_commute: T.nilable(T::Boolean), is_manual: T.nilable(T::Boolean), is_private: T.nilable(T::Boolean), is_trainer: T.nilable(T::Boolean), kilojoules: T.nilable(::Float), kudos_count: T.nilable(::Float), map_polyline: T.nilable(::String), map_summary_polyline: T.nilable(::String), max_heartrate: T.nilable(::Float), max_speed: T.nilable(::Float), max_watts: T.nilable(::Float), metadata: T.nilable(T::Array[Models::Shared::ClubsMetadata]), moving_time: T.nilable(::Float), name: T.nilable(::String), photo_count: T.nilable(::Float), pr_count: T.nilable(::Float), raw: T.nilable(T::Hash[::Symbol, ::Object]), start_at: T.nilable(::DateTime), suffer_score: T.nilable(::Float), timezone: T.nilable(::String), total_elevation_gain: T.nilable(::Float), type: T.nilable(Models::Shared::ClubsActivityType), updated_at: T.nilable(::DateTime), weighted_average_watts: T.nilable(::Float), workout_type: T.nilable(::Float)).void }
         def initialize(achievement_count: nil, athlete_count: nil, athlete_id: nil, athlete_name: nil, average_cadence: nil, average_heartrate: nil, average_speed: nil, average_watts: nil, calories: nil, comment_count: nil, created_at: nil, description: nil, distance: nil, elapsed_time: nil, elevation_high: nil, elevation_low: nil, group_id: nil, has_heartrate: nil, id: nil, is_commute: nil, is_manual: nil, is_private: nil, is_trainer: nil, kilojoules: nil, kudos_count: nil, map_polyline: nil, map_summary_polyline: nil, max_heartrate: nil, max_speed: nil, max_watts: nil, metadata: nil, moving_time: nil, name: nil, photo_count: nil, pr_count: nil, raw: nil, start_at: nil, suffer_score: nil, timezone: nil, total_elevation_gain: nil, type: nil, updated_at: nil, weighted_average_watts: nil, workout_type: nil)
           @achievement_count = achievement_count
           @athlete_count = athlete_count

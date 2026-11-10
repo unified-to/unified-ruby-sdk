@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # CdpMetadataFormat - The data type of the attribute value
-      class CdpMetadataFormat < T::Enum
-
-
+      class CdpMetadataFormat
+        include ::Crystalline::Enum
         enums do
           TEXT = new('TEXT')
           NUMBER = new('NUMBER')
@@ -20,6 +18,7 @@ module UnifiedRubySDK
           ARRAY = new('ARRAY')
           OBJECT = new('OBJECT')
         end
+        open!
       end
     end
   end

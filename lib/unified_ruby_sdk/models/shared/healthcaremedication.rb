@@ -7,18 +7,17 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class HealthcareMedication
         extend T::Sig
         include Crystalline::MetadataFields
 
         # When the medication was prescribed (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :authored_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('authored_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :authored_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('authored_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Codings for the medication (e.g. RxNorm)
         field :codes, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HealthcareCode)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('codes') } }
         # When the medication record was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Free-text dosage instructions (e.g. "1 tablet by mouth twice daily")
         field :dosage, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('dosage') } }
         # Amount of medication per dose
@@ -28,7 +27,7 @@ module UnifiedRubySDK
         # The encounter in which the medication was ordered
         field :encounter_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('encounter_id') } }
         # When the patient should stop taking the medication (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Unique identifier for the medication order/prescription
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # Custom field values
@@ -42,19 +41,19 @@ module UnifiedRubySDK
         # The practitioner who prescribed the medication
         field :practitioner_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('practitioner_id') } }
         # Raw data from integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # Number of refills authorized
         field :refill_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('refill_count') } }
         # How the medication is taken (e.g. oral, intravenous)
         field :route, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('route') } }
         # When the patient should start taking the medication (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Status of the medication order
-        field :status, Crystalline::Nilable.new(Models::Shared::HealthcareMedicationStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::HealthcareMedicationStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::HealthcareMedicationStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::HealthcareMedicationStatus, true) } }
         # When the medication record was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(authored_at: T.nilable(::DateTime), codes: T.nilable(T::Array[Models::Shared::HealthcareCode]), created_at: T.nilable(::DateTime), dosage: T.nilable(::String), dose_number: T.nilable(::Float), dose_unit: T.nilable(::String), encounter_id: T.nilable(::String), end_at: T.nilable(::DateTime), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HealthcareMetadata]), name: T.nilable(::String), notes: T.nilable(::String), patient_id: T.nilable(::String), practitioner_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), refill_count: T.nilable(::Float), route: T.nilable(::String), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::HealthcareMedicationStatus), updated_at: T.nilable(::DateTime)).void }
+        sig { params(authored_at: T.nilable(::DateTime), codes: T.nilable(T::Array[Models::Shared::HealthcareCode]), created_at: T.nilable(::DateTime), dosage: T.nilable(::String), dose_number: T.nilable(::Float), dose_unit: T.nilable(::String), encounter_id: T.nilable(::String), end_at: T.nilable(::DateTime), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HealthcareMetadata]), name: T.nilable(::String), notes: T.nilable(::String), patient_id: T.nilable(::String), practitioner_id: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), refill_count: T.nilable(::Float), route: T.nilable(::String), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::HealthcareMedicationStatus), updated_at: T.nilable(::DateTime)).void }
         def initialize(authored_at: nil, codes: nil, created_at: nil, dosage: nil, dose_number: nil, dose_unit: nil, encounter_id: nil, end_at: nil, id: nil, metadata: nil, name: nil, notes: nil, patient_id: nil, practitioner_id: nil, raw: nil, refill_count: nil, route: nil, start_at: nil, status: nil, updated_at: nil)
           @authored_at = authored_at
           @codes = codes

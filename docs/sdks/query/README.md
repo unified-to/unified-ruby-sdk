@@ -1,5 +1,4 @@
 # Query
-(*query*)
 
 ## Overview
 
@@ -13,28 +12,27 @@ Creates a DatastoreQuery. Provide the unified DatastoreQuery fields in the reque
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createDatastoreQuery" method="post" path="/datastore/{connection_id}/query" -->
+<!-- UsageSnippet language="ruby" operationID="createDatastoreQuery" method="post" path="/datastore/{connection_id}/query" example="datastore_query" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.query.create_datastore_query(datastore_query: Models::Shared::DatastoreQuery.new(
   metadata: [],
   query: Models::Shared::PropertyDatastoreQueryQuery.new(
     filter: Models::Shared::PropertyDatastoreQueryQueryFilter.new(
-      type: Models::Shared::PropertyDatastoreQueryQueryFilterType::OR,
+      type: Models::Shared::PropertyDatastoreQueryQueryFilterType::OR
     ),
     select: [
       '*',
     ],
-    sql: '',
-  ),
+    sql: ''
+  )
 ), connection_id: '<id>')
 
 unless res.datastore_query.nil?

@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class EmploymentStatus < T::Enum
-
-
+      class EmploymentStatus
+        include ::Crystalline::Enum
         enums do
           ACTIVE = new('ACTIVE')
           INACTIVE = new('INACTIVE')
         end
+        open!
       end
     end
   end

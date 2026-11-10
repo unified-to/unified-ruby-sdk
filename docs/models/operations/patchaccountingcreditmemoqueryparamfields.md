@@ -1,5 +1,13 @@
 # PatchAccountingCreditmemoQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PatchAccountingCreditmemoQueryParamFields::ID
+```
+
 
 ## Values
 

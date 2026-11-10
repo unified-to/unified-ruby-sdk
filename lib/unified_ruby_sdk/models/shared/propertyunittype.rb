@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class PropertyUnittype
         extend T::Sig
@@ -24,7 +23,7 @@ module UnifiedRubySDK
         # the cleaning fee
         field :cleaning_fee_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cleaning_fee_amount') } }
         # when the unit type was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # ISO 4217 currency code
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
         # free-text description of the unit type
@@ -48,15 +47,15 @@ module UnifiedRubySDK
         # the unit type (room type) name
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # raw data from the integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # the lowest nightly price
         field :start_price_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_price_amount') } }
         # number of bookable units of this type
         field :unit_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('unit_count') } }
         # when the unit type was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(amenities: T.nilable(T::Array[::String]), bathrooms: T.nilable(::Float), bedrooms: T.nilable(::Float), beds: T.nilable(::Float), cleaning_fee_amount: T.nilable(::Float), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), extra_person_fee_amount: T.nilable(::Float), id: T.nilable(::String), image_urls: T.nilable(T::Array[::String]), listing_id: T.nilable(::String), max_nights: T.nilable(::Float), max_occupancy: T.nilable(::Float), metadata: T.nilable(T::Array[Models::Shared::PropertyMetadata]), min_nights: T.nilable(::Float), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), start_price_amount: T.nilable(::Float), unit_count: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
+        sig { params(amenities: T.nilable(T::Array[::String]), bathrooms: T.nilable(::Float), bedrooms: T.nilable(::Float), beds: T.nilable(::Float), cleaning_fee_amount: T.nilable(::Float), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), extra_person_fee_amount: T.nilable(::Float), id: T.nilable(::String), image_urls: T.nilable(T::Array[::String]), listing_id: T.nilable(::String), max_nights: T.nilable(::Float), max_occupancy: T.nilable(::Float), metadata: T.nilable(T::Array[Models::Shared::PropertyMetadata]), min_nights: T.nilable(::Float), name: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), start_price_amount: T.nilable(::Float), unit_count: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
         def initialize(amenities: nil, bathrooms: nil, bedrooms: nil, beds: nil, cleaning_fee_amount: nil, created_at: nil, currency: nil, description: nil, extra_person_fee_amount: nil, id: nil, image_urls: nil, listing_id: nil, max_nights: nil, max_occupancy: nil, metadata: nil, min_nights: nil, name: nil, raw: nil, start_price_amount: nil, unit_count: nil, updated_at: nil)
           @amenities = amenities
           @bathrooms = bathrooms

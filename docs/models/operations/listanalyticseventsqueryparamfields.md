@@ -1,5 +1,13 @@
 # ListAnalyticsEventsQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListAnalyticsEventsQueryParamFields::ID
+```
+
 
 ## Values
 

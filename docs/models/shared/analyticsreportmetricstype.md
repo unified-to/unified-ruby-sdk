@@ -2,6 +2,17 @@
 
 Traffic metrics
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = AnalyticsReportMetricsType::USERS
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = AnalyticsReportMetricsType.deserialize("custom_value")
+```
+
 
 ## Values
 

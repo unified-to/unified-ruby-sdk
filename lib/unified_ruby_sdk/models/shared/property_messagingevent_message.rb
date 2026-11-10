@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class PropertyMessagingEventMessage
         extend T::Sig
@@ -22,7 +21,7 @@ module UnifiedRubySDK
         # Represents all channels to which the message is sent. Identifies the channels where the message is posted.  To send to the "Draft" channel/folder, use a channel ID "DRAFT".
         field :channels, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::MessagingReference)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('channels') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # for email systems, this field represents the To value
         field :destination_members, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::MessagingMember)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('destination_members') } }
 
@@ -48,7 +47,7 @@ module UnifiedRubySDK
         # Represents the ID of the immediate predecessor message in the thread. Identifies a specific message to which the current message directly replies.
         field :parent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :reactions, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::MessagingReaction)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reactions') } }
         # eg. RFC822 MessageID
@@ -56,11 +55,11 @@ module UnifiedRubySDK
 
         field :subject, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subject') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
-        sig { params(attachments: T.nilable(T::Array[Models::Shared::MessagingAttachment]), author_member: T.nilable(Models::Shared::PropertyMessagingEventMessageAuthorMember), buttons: T.nilable(T::Array[Models::Shared::MessagingButton]), channels: T.nilable(T::Array[Models::Shared::MessagingReference]), created_at: T.nilable(::DateTime), destination_members: T.nilable(T::Array[Models::Shared::MessagingMember]), has_children: T.nilable(T::Boolean), hidden_members: T.nilable(T::Array[Models::Shared::MessagingMember]), id: T.nilable(::String), is_unread: T.nilable(T::Boolean), mentioned_members: T.nilable(T::Array[Models::Shared::MessagingMember]), message: T.nilable(::String), message_html: T.nilable(::String), message_markdown: T.nilable(::String), message_thread_identifier: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::MessagingMetadata]), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reactions: T.nilable(T::Array[Models::Shared::MessagingReaction]), reference: T.nilable(::String), subject: T.nilable(::String), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
+        sig { params(attachments: T.nilable(T::Array[Models::Shared::MessagingAttachment]), author_member: T.nilable(Models::Shared::PropertyMessagingEventMessageAuthorMember), buttons: T.nilable(T::Array[Models::Shared::MessagingButton]), channels: T.nilable(T::Array[Models::Shared::MessagingReference]), created_at: T.nilable(::DateTime), destination_members: T.nilable(T::Array[Models::Shared::MessagingMember]), has_children: T.nilable(T::Boolean), hidden_members: T.nilable(T::Array[Models::Shared::MessagingMember]), id: T.nilable(::String), is_unread: T.nilable(T::Boolean), mentioned_members: T.nilable(T::Array[Models::Shared::MessagingMember]), message: T.nilable(::String), message_html: T.nilable(::String), message_markdown: T.nilable(::String), message_thread_identifier: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::MessagingMetadata]), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), reactions: T.nilable(T::Array[Models::Shared::MessagingReaction]), reference: T.nilable(::String), subject: T.nilable(::String), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
         def initialize(attachments: nil, author_member: nil, buttons: nil, channels: nil, created_at: nil, destination_members: nil, has_children: nil, hidden_members: nil, id: nil, is_unread: nil, mentioned_members: nil, message: nil, message_html: nil, message_markdown: nil, message_thread_identifier: nil, metadata: nil, parent_id: nil, raw: nil, reactions: nil, reference: nil, subject: nil, updated_at: nil, web_url: nil)
           @attachments = attachments
           @author_member = author_member

@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class AccountingAccountTaxonomyType < T::Enum
-
-
+      class AccountingAccountTaxonomyType
+        include ::Crystalline::Enum
         enums do
           CLASSIFICATION = new('CLASSIFICATION')
           GROUP = new('GROUP')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           SYSTEM_ROLE = new('SYSTEM_ROLE')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # ComputeServiceStatus - Normalized status; set to SUSPENDED or LIVE on update to suspend or resume
-      class ComputeServiceStatus < T::Enum
-
-
+      class ComputeServiceStatus
+        include ::Crystalline::Enum
         enums do
           CREATING = new('CREATING')
           DEPLOYING = new('DEPLOYING')
@@ -20,6 +18,7 @@ module UnifiedRubySDK
           FAILED = new('FAILED')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

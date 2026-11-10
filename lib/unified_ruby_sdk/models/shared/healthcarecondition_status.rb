@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # HealthcareConditionStatus - Clinical status of the condition
-      class HealthcareConditionStatus < T::Enum
-
-
+      class HealthcareConditionStatus
+        include ::Crystalline::Enum
         enums do
           ACTIVE = new('ACTIVE')
           RECURRENCE = new('RECURRENCE')
@@ -21,6 +19,7 @@ module UnifiedRubySDK
           RESOLVED = new('RESOLVED')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

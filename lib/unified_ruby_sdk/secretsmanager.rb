@@ -23,7 +23,7 @@ module UnifiedRubySDK
       
     end
 
-    sig { params(base_url: String, url_variables: T.nilable(T::Hash[Symbol, T.any(String, T::Enum)])).returns(String) }
+    sig { params(base_url: ::String, url_variables: T.nilable(T::Hash[::Symbol, T.any(::String, T::Enum)])).returns(::String) }
     def get_url(base_url:, url_variables: nil)
       sd_base_url, sd_options = @sdk_configuration.get_server_details
 
@@ -39,22 +39,24 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Shared::SecretsManager, timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateUnifiedSecretsmanagerResponse) }
-    def create_unified_secretsmanager(request:, timeout_ms: nil)
+
+
+    sig { params(request: Models::Shared::SecretsManager, timeout_ms: T.nilable(::Integer), http_headers: T.nilable(T::Hash[T.any(::String, ::Symbol), ::String])).returns(Models::Operations::CreateUnifiedSecretsmanagerResponse) }
+    def create_unified_secretsmanager(request:, timeout_ms: nil, http_headers: nil)
       # create_unified_secretsmanager - Create secrets manager
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = "#{base_url}/unified/secretsmanager"
       headers = {}
-      headers = T.cast(headers, T::Hash[String, String])
+      headers = T.cast(headers, T::Hash[::String, ::String])
       req_content_type, data, form = Utils.serialize_request_body(request, false, false, :request, :json)
       headers['content-type'] = req_content_type
-      raise StandardError, 'request body is required' if data.nil? && form.nil?
+      raise ::StandardError, 'request body is required' if data.nil? && form.nil?
 
-      if form
+      if form && !form.empty?
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
+        body = ::URI.encode_www_form(T.cast(data, T::Hash[::Symbol, ::Object]))
       else
         body = data
       end
@@ -65,28 +67,31 @@ module UnifiedRubySDK
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
-      
+
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
         config: @sdk_configuration,
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'createUnifiedSecretsmanager',
         security_source: @sdk_configuration.security_source
       )
 
-      error = T.let(nil, T.nilable(StandardError))
+      error = T.let(nil, T.nilable(::StandardError))
       http_response = T.let(nil, T.nilable(Faraday::Response))
       
-      
+
       begin
         http_response = T.must(connection).post(url) do |req|
           req.body = body
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           Utils.configure_request_security(req, security)
+          http_headers&.each do |key, value|
+            req.headers[key.to_s] = value
+          end
 
           @sdk_configuration.hooks.before_request(
             hook_ctx: SDKHooks::BeforeRequestHookContext.new(
@@ -95,7 +100,7 @@ module UnifiedRubySDK
             request: req
           )
         end
-      rescue StandardError => e
+      rescue ::StandardError => e
         error = e
       ensure
         if http_response.nil? || Utils.error_status?(http_response.status)
@@ -114,13 +119,13 @@ module UnifiedRubySDK
             response: http_response
           )
         end
-        
+
         if http_response.nil?
           raise error if !error.nil?
           raise 'no response'
         end
       end
-      
+
       content_type = http_response.headers.fetch('Content-Type', 'application/octet-stream')
       if Utils.match_status_code(http_response.status, ['200'])
         if Utils.match_content_type(content_type, 'application/json')
@@ -131,7 +136,7 @@ module UnifiedRubySDK
             response: http_response
           )
           response_data = http_response.env.response_body
-          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::SecretsManager)
+          obj = Crystalline.unmarshal_json(::JSON.parse(response_data), Models::Shared::SecretsManager)
           response = Models::Operations::CreateUnifiedSecretsmanagerResponse.new(
             status_code: http_response.status,
             content_type: content_type,
@@ -154,8 +159,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUnifiedSecretsmanagerResponse) }
-    def get_unified_secretsmanager(id:, timeout_ms: nil)
+    sig { params(id: ::String, timeout_ms: T.nilable(::Integer), http_headers: T.nilable(T::Hash[T.any(::String, ::Symbol), ::String])).returns(Models::Operations::GetUnifiedSecretsmanagerResponse) }
+    def get_unified_secretsmanager(id:, timeout_ms: nil, http_headers: nil)
       # get_unified_secretsmanager - Retrieve secrets manager
       request = Models::Operations::GetUnifiedSecretsmanagerRequest.new(
         id: id
@@ -169,7 +174,7 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      headers = T.cast(headers, T::Hash[String, String])
+      headers = T.cast(headers, T::Hash[::String, ::String])
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -177,27 +182,30 @@ module UnifiedRubySDK
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
-      
+
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
         config: @sdk_configuration,
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'getUnifiedSecretsmanager',
         security_source: @sdk_configuration.security_source
       )
 
-      error = T.let(nil, T.nilable(StandardError))
+      error = T.let(nil, T.nilable(::StandardError))
       http_response = T.let(nil, T.nilable(Faraday::Response))
       
-      
+
       begin
         http_response = T.must(connection).get(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           Utils.configure_request_security(req, security)
+          http_headers&.each do |key, value|
+            req.headers[key.to_s] = value
+          end
 
           @sdk_configuration.hooks.before_request(
             hook_ctx: SDKHooks::BeforeRequestHookContext.new(
@@ -206,7 +214,7 @@ module UnifiedRubySDK
             request: req
           )
         end
-      rescue StandardError => e
+      rescue ::StandardError => e
         error = e
       ensure
         if http_response.nil? || Utils.error_status?(http_response.status)
@@ -225,13 +233,13 @@ module UnifiedRubySDK
             response: http_response
           )
         end
-        
+
         if http_response.nil?
           raise error if !error.nil?
           raise 'no response'
         end
       end
-      
+
       content_type = http_response.headers.fetch('Content-Type', 'application/octet-stream')
       if Utils.match_status_code(http_response.status, ['200'])
         if Utils.match_content_type(content_type, 'application/json')
@@ -242,7 +250,7 @@ module UnifiedRubySDK
             response: http_response
           )
           response_data = http_response.env.response_body
-          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::SecretsManager)
+          obj = Crystalline.unmarshal_json(::JSON.parse(response_data), Models::Shared::SecretsManager)
           response = Models::Operations::GetUnifiedSecretsmanagerResponse.new(
             status_code: http_response.status,
             content_type: content_type,
@@ -265,14 +273,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUnifiedSecretsmanagerInstructionsResponse) }
-    def list_unified_secretsmanager_instructions(timeout_ms: nil)
+    sig { params(timeout_ms: T.nilable(::Integer), http_headers: T.nilable(T::Hash[T.any(::String, ::Symbol), ::String])).returns(Models::Operations::ListUnifiedSecretsmanagerInstructionsResponse) }
+    def list_unified_secretsmanager_instructions(timeout_ms: nil, http_headers: nil)
       # list_unified_secretsmanager_instructions - List secrets manager setup instructions
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = "#{base_url}/unified/secretsmanager/instructions"
       headers = {}
-      headers = T.cast(headers, T::Hash[String, String])
+      headers = T.cast(headers, T::Hash[::String, ::String])
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -280,27 +288,30 @@ module UnifiedRubySDK
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
-      
+
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
         config: @sdk_configuration,
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'listUnifiedSecretsmanagerInstructions',
         security_source: @sdk_configuration.security_source
       )
 
-      error = T.let(nil, T.nilable(StandardError))
+      error = T.let(nil, T.nilable(::StandardError))
       http_response = T.let(nil, T.nilable(Faraday::Response))
       
-      
+
       begin
         http_response = T.must(connection).get(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           Utils.configure_request_security(req, security)
+          http_headers&.each do |key, value|
+            req.headers[key.to_s] = value
+          end
 
           @sdk_configuration.hooks.before_request(
             hook_ctx: SDKHooks::BeforeRequestHookContext.new(
@@ -309,7 +320,7 @@ module UnifiedRubySDK
             request: req
           )
         end
-      rescue StandardError => e
+      rescue ::StandardError => e
         error = e
       ensure
         if http_response.nil? || Utils.error_status?(http_response.status)
@@ -328,13 +339,13 @@ module UnifiedRubySDK
             response: http_response
           )
         end
-        
+
         if http_response.nil?
           raise error if !error.nil?
           raise 'no response'
         end
       end
-      
+
       content_type = http_response.headers.fetch('Content-Type', 'application/octet-stream')
       if Utils.match_status_code(http_response.status, ['200'])
         if Utils.match_content_type(content_type, 'application/json')
@@ -345,7 +356,7 @@ module UnifiedRubySDK
             response: http_response
           )
           response_data = http_response.env.response_body
-          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::SecretsManagerInstructions))
+          obj = Crystalline.unmarshal_json(::JSON.parse(response_data), Crystalline::Array.new(Models::Shared::SecretsManagerInstructions))
           response = Models::Operations::ListUnifiedSecretsmanagerInstructionsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
@@ -368,8 +379,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(secretsmanager_id: ::String, limit: T.nilable(::Float), offset: T.nilable(::Float), query: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUnifiedSecretsmanagerSecretsResponse) }
-    def list_unified_secretsmanager_secrets(secretsmanager_id:, limit: nil, offset: nil, query: nil, timeout_ms: nil)
+    sig { params(secretsmanager_id: ::String, limit: T.nilable(::Float), offset: T.nilable(::Float), query: T.nilable(::String), timeout_ms: T.nilable(::Integer), http_headers: T.nilable(T::Hash[T.any(::String, ::Symbol), ::String])).returns(Models::Operations::ListUnifiedSecretsmanagerSecretsResponse) }
+    def list_unified_secretsmanager_secrets(secretsmanager_id:, limit: nil, offset: nil, query: nil, timeout_ms: nil, http_headers: nil)
       # list_unified_secretsmanager_secrets - List secrets in a secrets manager
       request = Models::Operations::ListUnifiedSecretsmanagerSecretsRequest.new(
         secretsmanager_id: secretsmanager_id,
@@ -381,7 +392,7 @@ module UnifiedRubySDK
       base_url = Utils.template_url(url, params)
       url = "#{base_url}/unified/secretsmanager/secrets"
       headers = {}
-      headers = T.cast(headers, T::Hash[String, String])
+      headers = T.cast(headers, T::Hash[::String, ::String])
       query_params = Utils.get_query_params(Models::Operations::ListUnifiedSecretsmanagerSecretsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -390,28 +401,31 @@ module UnifiedRubySDK
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
-      
+
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
         config: @sdk_configuration,
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'listUnifiedSecretsmanagerSecrets',
         security_source: @sdk_configuration.security_source
       )
 
-      error = T.let(nil, T.nilable(StandardError))
+      error = T.let(nil, T.nilable(::StandardError))
       http_response = T.let(nil, T.nilable(Faraday::Response))
       
-      
+
       begin
         http_response = T.must(connection).get(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           req.params = query_params
           Utils.configure_request_security(req, security)
+          http_headers&.each do |key, value|
+            req.headers[key.to_s] = value
+          end
 
           @sdk_configuration.hooks.before_request(
             hook_ctx: SDKHooks::BeforeRequestHookContext.new(
@@ -420,7 +434,7 @@ module UnifiedRubySDK
             request: req
           )
         end
-      rescue StandardError => e
+      rescue ::StandardError => e
         error = e
       ensure
         if http_response.nil? || Utils.error_status?(http_response.status)
@@ -439,13 +453,13 @@ module UnifiedRubySDK
             response: http_response
           )
         end
-        
+
         if http_response.nil?
           raise error if !error.nil?
           raise 'no response'
         end
       end
-      
+
       content_type = http_response.headers.fetch('Content-Type', 'application/octet-stream')
       if Utils.match_status_code(http_response.status, ['200'])
         if Utils.match_content_type(content_type, 'application/json')
@@ -456,7 +470,7 @@ module UnifiedRubySDK
             response: http_response
           )
           response_data = http_response.env.response_body
-          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::SecretsManagerSecret))
+          obj = Crystalline.unmarshal_json(::JSON.parse(response_data), Crystalline::Array.new(Models::Shared::SecretsManagerSecret))
           response = Models::Operations::ListUnifiedSecretsmanagerSecretsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
@@ -479,14 +493,14 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListUnifiedSecretsmanagersRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUnifiedSecretsmanagersResponse) }
-    def list_unified_secretsmanagers(request:, timeout_ms: nil)
+    sig { params(request: Models::Operations::ListUnifiedSecretsmanagersRequest, timeout_ms: T.nilable(::Integer), http_headers: T.nilable(T::Hash[T.any(::String, ::Symbol), ::String])).returns(Models::Operations::ListUnifiedSecretsmanagersResponse) }
+    def list_unified_secretsmanagers(request:, timeout_ms: nil, http_headers: nil)
       # list_unified_secretsmanagers - List secrets managers
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = "#{base_url}/unified/secretsmanager"
       headers = {}
-      headers = T.cast(headers, T::Hash[String, String])
+      headers = T.cast(headers, T::Hash[::String, ::String])
       query_params = Utils.get_query_params(Models::Operations::ListUnifiedSecretsmanagersRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
@@ -495,28 +509,31 @@ module UnifiedRubySDK
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
-      
+
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
         config: @sdk_configuration,
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'listUnifiedSecretsmanagers',
         security_source: @sdk_configuration.security_source
       )
 
-      error = T.let(nil, T.nilable(StandardError))
+      error = T.let(nil, T.nilable(::StandardError))
       http_response = T.let(nil, T.nilable(Faraday::Response))
       
-      
+
       begin
         http_response = T.must(connection).get(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           req.params = query_params
           Utils.configure_request_security(req, security)
+          http_headers&.each do |key, value|
+            req.headers[key.to_s] = value
+          end
 
           @sdk_configuration.hooks.before_request(
             hook_ctx: SDKHooks::BeforeRequestHookContext.new(
@@ -525,7 +542,7 @@ module UnifiedRubySDK
             request: req
           )
         end
-      rescue StandardError => e
+      rescue ::StandardError => e
         error = e
       ensure
         if http_response.nil? || Utils.error_status?(http_response.status)
@@ -544,13 +561,13 @@ module UnifiedRubySDK
             response: http_response
           )
         end
-        
+
         if http_response.nil?
           raise error if !error.nil?
           raise 'no response'
         end
       end
-      
+
       content_type = http_response.headers.fetch('Content-Type', 'application/octet-stream')
       if Utils.match_status_code(http_response.status, ['200'])
         if Utils.match_content_type(content_type, 'application/json')
@@ -561,7 +578,7 @@ module UnifiedRubySDK
             response: http_response
           )
           response_data = http_response.env.response_body
-          obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::SecretsManager))
+          obj = Crystalline.unmarshal_json(::JSON.parse(response_data), Crystalline::Array.new(Models::Shared::SecretsManager))
           response = Models::Operations::ListUnifiedSecretsmanagersResponse.new(
             status_code: http_response.status,
             content_type: content_type,
@@ -584,8 +601,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveUnifiedSecretsmanagerResponse) }
-    def remove_unified_secretsmanager(id:, timeout_ms: nil)
+    sig { params(id: ::String, timeout_ms: T.nilable(::Integer), http_headers: T.nilable(T::Hash[T.any(::String, ::Symbol), ::String])).returns(Models::Operations::RemoveUnifiedSecretsmanagerResponse) }
+    def remove_unified_secretsmanager(id:, timeout_ms: nil, http_headers: nil)
       # remove_unified_secretsmanager - Remove secrets manager
       request = Models::Operations::RemoveUnifiedSecretsmanagerRequest.new(
         id: id
@@ -599,7 +616,7 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      headers = T.cast(headers, T::Hash[String, String])
+      headers = T.cast(headers, T::Hash[::String, ::String])
       headers['Accept'] = '*/*'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -607,27 +624,30 @@ module UnifiedRubySDK
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
-      
+
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
         config: @sdk_configuration,
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'removeUnifiedSecretsmanager',
         security_source: @sdk_configuration.security_source
       )
 
-      error = T.let(nil, T.nilable(StandardError))
+      error = T.let(nil, T.nilable(::StandardError))
       http_response = T.let(nil, T.nilable(Faraday::Response))
       
-      
+
       begin
         http_response = T.must(connection).delete(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           Utils.configure_request_security(req, security)
+          http_headers&.each do |key, value|
+            req.headers[key.to_s] = value
+          end
 
           @sdk_configuration.hooks.before_request(
             hook_ctx: SDKHooks::BeforeRequestHookContext.new(
@@ -636,7 +656,7 @@ module UnifiedRubySDK
             request: req
           )
         end
-      rescue StandardError => e
+      rescue ::StandardError => e
         error = e
       ensure
         if http_response.nil? || Utils.error_status?(http_response.status)
@@ -655,13 +675,13 @@ module UnifiedRubySDK
             response: http_response
           )
         end
-        
+
         if http_response.nil?
           raise error if !error.nil?
           raise 'no response'
         end
       end
-      
+
       content_type = http_response.headers.fetch('Content-Type', 'application/octet-stream')
       if Utils.match_status_code(http_response.status, ['200'])
         http_response = @sdk_configuration.hooks.after_success(
@@ -695,5 +715,5 @@ module UnifiedRubySDK
         )
       end
     end
-  end
+end
 end

@@ -1,5 +1,4 @@
 # Transaction
-(*transaction*)
 
 ## Overview
 
@@ -18,29 +17,28 @@ Creates a AccountingTransaction. Provide the unified AccountingTransaction field
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAccountingTransaction" method="post" path="/accounting/{connection_id}/transaction" -->
+<!-- UsageSnippet language="ruby" operationID="createAccountingTransaction" method="post" path="/accounting/{connection_id}/transaction" example="accounting_transaction" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.transaction.create_accounting_transaction(accounting_transaction: Models::Shared::AccountingTransaction.new(
   created_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-  id: '931c4282-4c11-44ac-b4a7-78e5f84465bd',
+  id: '9fea1f93-a00b-4817-b347-dcdc03bfd69c',
   lineitems: [
     Models::Shared::AccountingTransactionLineItem.new(
       category_ids: [],
       description: 'The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability',
-      id: '2ad354c7-689e-43bd-9298-61aa40380df7',
+      id: 'b57ccd22-92cb-443c-84b4-44f915d9554d',
       name: 'Shirt',
       total_amount: 10_184.0,
       unit_amount: 536.0,
-      unit_quantity: 19.0,
+      unit_quantity: 19.0
     ),
   ],
   memo: 'deposit of ISK 792.81 at Fritsch - Dooley charged to account ending in 7879 using card ending in ****3230.',
@@ -48,7 +46,7 @@ res = s.transaction.create_accounting_transaction(accounting_transaction: Models
   tax_amount: 0.0,
   total_amount: 10_184.0,
   transaction_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-  updated_at: DateTime.iso8601('2019-10-14T09:27:23.926Z'),
+  updated_at: DateTime.iso8601('2019-10-14T09:46:21.813Z')
 ), connection_id: '<id>')
 
 unless res.accounting_transaction.nil?
@@ -88,11 +86,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.transaction.get_accounting_transaction(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_transaction.nil?
@@ -132,15 +129,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingTransactionsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingTransactionsRequest.new(
+  connection_id: '<id>'
+)
 res = s.transaction.list_accounting_transactions(request: req)
 
 unless res.accounting_transactions.nil?
@@ -171,30 +167,30 @@ Updates the AccountingTransaction identified by `id`. Provide the unified Accoun
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAccountingTransaction" method="patch" path="/accounting/{connection_id}/transaction/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAccountingTransaction" method="patch" path="/accounting/{connection_id}/transaction/{id}" example="accounting_transaction" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAccountingTransactionRequest.new(
   accounting_transaction: Models::Shared::AccountingTransaction.new(
     created_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-    id: '8a49ca85-6ad6-4fd1-ba5d-5e1803188d9e',
+    id: '0bd6c7ee-4cb8-49a3-923c-204dd35e8857',
     lineitems: [
       Models::Shared::AccountingTransactionLineItem.new(
         category_ids: [],
         description: 'The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability',
-        id: 'a844abb5-995d-465a-97bd-ed3b6b6c3b9b',
+        id: 'bfdd8bbe-e56e-446c-bd58-43b664bfd8cc',
         name: 'Shirt',
         total_amount: 10_184.0,
         unit_amount: 536.0,
-        unit_quantity: 19.0,
+        unit_quantity: 19.0
       ),
     ],
     memo: 'deposit of ISK 792.81 at Fritsch - Dooley charged to account ending in 7879 using card ending in ****3230.',
@@ -202,12 +198,11 @@ req = Models::Operations::PatchAccountingTransactionRequest.new(
     tax_amount: 0.0,
     total_amount: 10_184.0,
     transaction_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-    updated_at: DateTime.iso8601('2019-10-14T09:27:23.927Z'),
+    updated_at: DateTime.iso8601('2019-10-14T09:46:21.813Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.transaction.patch_accounting_transaction(request: req)
 
 unless res.accounting_transaction.nil?
@@ -244,11 +239,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.transaction.remove_accounting_transaction(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -280,30 +274,30 @@ Updates the AccountingTransaction identified by `id`. Provide the unified Accoun
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAccountingTransaction" method="put" path="/accounting/{connection_id}/transaction/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAccountingTransaction" method="put" path="/accounting/{connection_id}/transaction/{id}" example="accounting_transaction" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAccountingTransactionRequest.new(
   accounting_transaction: Models::Shared::AccountingTransaction.new(
     created_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-    id: '8a49ca85-6ad6-4fd1-ba5d-5e1803188d9e',
+    id: '0bd6c7ee-4cb8-49a3-923c-204dd35e8857',
     lineitems: [
       Models::Shared::AccountingTransactionLineItem.new(
         category_ids: [],
         description: 'The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability',
-        id: 'a844abb5-995d-465a-97bd-ed3b6b6c3b9b',
+        id: 'bfdd8bbe-e56e-446c-bd58-43b664bfd8cc',
         name: 'Shirt',
         total_amount: 10_184.0,
         unit_amount: 536.0,
-        unit_quantity: 19.0,
+        unit_quantity: 19.0
       ),
     ],
     memo: 'deposit of ISK 792.81 at Fritsch - Dooley charged to account ending in 7879 using card ending in ****3230.',
@@ -311,12 +305,11 @@ req = Models::Operations::UpdateAccountingTransactionRequest.new(
     tax_amount: 0.0,
     total_amount: 10_184.0,
     transaction_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-    updated_at: DateTime.iso8601('2019-10-14T09:27:23.927Z'),
+    updated_at: DateTime.iso8601('2019-10-14T09:46:21.813Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.transaction.update_accounting_transaction(request: req)
 
 unless res.accounting_transaction.nil?

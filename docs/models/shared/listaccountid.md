@@ -1,5 +1,16 @@
 # ListAccountId
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListAccountId::SUPPORTED_REQUIRED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = ListAccountId.deserialize("custom_value")
+```
+
 
 ## Values
 

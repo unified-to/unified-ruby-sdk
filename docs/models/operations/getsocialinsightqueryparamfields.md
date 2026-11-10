@@ -1,5 +1,13 @@
 # GetSocialInsightQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetSocialInsightQueryParamFields::ID
+```
+
 
 ## Values
 

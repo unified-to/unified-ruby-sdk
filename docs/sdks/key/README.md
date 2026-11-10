@@ -1,5 +1,4 @@
 # Key
-(*key*)
 
 ## Overview
 
@@ -18,24 +17,23 @@ Creates a ComputeKey. Provide the unified ComputeKey fields in the request body;
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createComputeKey" method="post" path="/compute/{connection_id}/key" -->
+<!-- UsageSnippet language="ruby" operationID="createComputeKey" method="post" path="/compute/{connection_id}/key" example="compute_key" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.key.create_compute_key(compute_key: Models::Shared::ComputeKey.new(
   created_at: DateTime.iso8601('2023-08-19T14:31:46.492Z'),
-  id: '2882c0e6-1265-4883-8662-bece73481a3c',
+  id: '0a409f83-959e-4826-a25c-c821edbe2efd',
   metadata: [],
   name: 'nienow-secret',
   type: Models::Shared::ComputeKeyType::SECRET,
-  updated_at: DateTime.iso8601('2024-10-13T18:30:41.150Z'),
+  updated_at: DateTime.iso8601('2024-10-14T10:04:05.259Z')
 ), connection_id: '<id>')
 
 unless res.compute_key.nil?
@@ -75,11 +73,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.key.get_compute_key(connection_id: '<id>', id: '<id>')
 
 unless res.compute_key.nil?
@@ -119,15 +116,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListComputeKeysRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListComputeKeysRequest.new(
+  connection_id: '<id>'
+)
 res = s.key.list_compute_keys(request: req)
 
 unless res.compute_keys.nil?
@@ -158,30 +154,29 @@ Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchComputeKey" method="patch" path="/compute/{connection_id}/key/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchComputeKey" method="patch" path="/compute/{connection_id}/key/{id}" example="compute_key" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchComputeKeyRequest.new(
   compute_key: Models::Shared::ComputeKey.new(
     created_at: DateTime.iso8601('2023-08-19T14:31:46.492Z'),
-    id: '21239a69-d1d7-4c76-9300-0186839c34ba',
+    id: '68fea412-d6b4-4d84-bab6-977959440a42',
     metadata: [],
     name: 'nienow-secret',
     type: Models::Shared::ComputeKeyType::SECRET,
-    updated_at: DateTime.iso8601('2024-10-13T18:30:41.156Z'),
+    updated_at: DateTime.iso8601('2024-10-14T10:04:05.264Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.key.patch_compute_key(request: req)
 
 unless res.compute_key.nil?
@@ -218,11 +213,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.key.remove_compute_key(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -254,30 +248,29 @@ Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateComputeKey" method="put" path="/compute/{connection_id}/key/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateComputeKey" method="put" path="/compute/{connection_id}/key/{id}" example="compute_key" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateComputeKeyRequest.new(
   compute_key: Models::Shared::ComputeKey.new(
     created_at: DateTime.iso8601('2023-08-19T14:31:46.492Z'),
-    id: '21239a69-d1d7-4c76-9300-0186839c34ba',
+    id: '68fea412-d6b4-4d84-bab6-977959440a42',
     metadata: [],
     name: 'nienow-secret',
     type: Models::Shared::ComputeKeyType::SECRET,
-    updated_at: DateTime.iso8601('2024-10-13T18:30:41.156Z'),
+    updated_at: DateTime.iso8601('2024-10-14T10:04:05.264Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.key.update_compute_key(request: req)
 
 unless res.compute_key.nil?

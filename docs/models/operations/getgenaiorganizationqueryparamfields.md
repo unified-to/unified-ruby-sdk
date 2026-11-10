@@ -1,5 +1,13 @@
 # GetGenaiOrganizationQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetGenaiOrganizationQueryParamFields::ID
+```
+
 
 ## Values
 

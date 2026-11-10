@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class DatastoreQuery
         extend T::Sig
@@ -20,13 +19,13 @@ module UnifiedRubySDK
         # What to run: a raw `sql` statement, or a structured query (select, filter, sort, limit/offset, aggregate)
         field :query, Crystalline::Nilable.new(Models::Shared::PropertyDatastoreQueryQuery), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('query') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :response, Crystalline::Nilable.new(Models::Shared::PropertyDatastoreQueryResponse), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response') } }
 
         field :table_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('table_id') } }
 
-        sig { params(database_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::DatastoreMetadata]), query: T.nilable(Models::Shared::PropertyDatastoreQueryQuery), raw: T.nilable(T::Hash[Symbol, ::Object]), response: T.nilable(Models::Shared::PropertyDatastoreQueryResponse), table_id: T.nilable(::String)).void }
+        sig { params(database_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::DatastoreMetadata]), query: T.nilable(Models::Shared::PropertyDatastoreQueryQuery), raw: T.nilable(T::Hash[::Symbol, ::Object]), response: T.nilable(Models::Shared::PropertyDatastoreQueryResponse), table_id: T.nilable(::String)).void }
         def initialize(database_id: nil, metadata: nil, query: nil, raw: nil, response: nil, table_id: nil)
           @database_id = database_id
           @metadata = metadata

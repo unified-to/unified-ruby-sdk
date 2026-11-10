@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class ShippingPackage
         extend T::Sig
@@ -24,7 +23,7 @@ module UnifiedRubySDK
         # Length of the package
         field :length, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('length') } }
         # Unit for dimensions (cm, inch)
-        field :size_unit, Crystalline::Nilable.new(Models::Shared::ShippingPackageSizeUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size_unit'), 'decoder': Utils.enum_from_string(Models::Shared::ShippingPackageSizeUnit, true) } }
+        field :size_unit, Crystalline::Nilable.new(Models::Shared::ShippingPackageSizeUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size_unit'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::ShippingPackageSizeUnit, true) } }
         # Package-level tracking (for multi-package shipments)
         field :tracking_number, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tracking_number') } }
         # Declared value of the package
@@ -32,7 +31,7 @@ module UnifiedRubySDK
         # Weight of the package
         field :weight, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('weight') } }
         # Unit for weight (g, kg, oz, lb)
-        field :weight_unit, Crystalline::Nilable.new(Models::Shared::ShippingPackageWeightUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('weight_unit'), 'decoder': Utils.enum_from_string(Models::Shared::ShippingPackageWeightUnit, true) } }
+        field :weight_unit, Crystalline::Nilable.new(Models::Shared::ShippingPackageWeightUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('weight_unit'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::ShippingPackageWeightUnit, true) } }
         # Width of the package
         field :width, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('width') } }
 

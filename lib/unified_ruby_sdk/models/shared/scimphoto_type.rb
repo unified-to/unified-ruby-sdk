@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class ScimPhotoType < T::Enum
-
-
+      class ScimPhotoType
+        include ::Crystalline::Enum
         enums do
           PHOTO = new('photo')
           THUMBNAIL = new('thumbnail')
         end
+        open!
       end
     end
   end

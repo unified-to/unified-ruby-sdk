@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class HrisGroupType < T::Enum
-
-
+      class HrisGroupType
+        include ::Crystalline::Enum
         enums do
           TEAM = new('TEAM')
           GROUP = new('GROUP')
@@ -22,6 +20,7 @@ module UnifiedRubySDK
           SUB_DEPARTMENT = new('SUB_DEPARTMENT')
           PAY_GROUP = new('PAY_GROUP')
         end
+        open!
       end
     end
   end

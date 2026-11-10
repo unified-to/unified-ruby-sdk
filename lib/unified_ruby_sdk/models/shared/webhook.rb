@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # A webhook is used to POST new, updated, or deleted records to your server.
       class Webhook
         extend T::Sig
@@ -16,25 +15,25 @@ module UnifiedRubySDK
 
         field :connection_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('connection_id'), required: true } }
         # The event to subscribe to. "deleted" is supported on native webhooks, and on virtual webhooks where the integration supports it. Check the integration's Feature Support tab.
-        field :event, Models::Shared::WebhookEvent, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('event'), required: true, 'decoder': Utils.enum_from_string(Models::Shared::WebhookEvent, false) } }
+        field :event, Models::Shared::WebhookEvent, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('event'), required: true, 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::WebhookEvent, false) } }
         # The object to return (eg. CRM "contact")
-        field :object_type, Models::Shared::WebhookObjectType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('object_type'), required: true, 'decoder': Utils.enum_from_string(Models::Shared::WebhookObjectType, false) } }
+        field :object_type, Models::Shared::WebhookObjectType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('object_type'), required: true, 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::WebhookObjectType, false) } }
         # Read-only. The time Unified.to last recorded a check on this webhook. Behaviour varies by webhook implementation, so don't use this field to tell whether a webhook is still running. Use is_healthy, and subscribe to WEBHOOK_UNHEALTHY on the notifications webhook, to monitor health. (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :checked_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('checked_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :checked_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('checked_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :db_name_prefix, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('db_name_prefix') } }
 
         field :db_schema, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('db_schema') } }
 
-        field :db_type, Crystalline::Nilable.new(Models::Shared::DbType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('db_type'), 'decoder': Utils.enum_from_string(Models::Shared::DbType, true) } }
+        field :db_type, Crystalline::Nilable.new(Models::Shared::DbType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('db_type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::DbType, true) } }
 
         field :db_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('db_url') } }
 
         field :fields_, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('fields') } }
         # Supported on virtual webhooks, and on native webhooks for many integrations. Check the integration's Feature Support tab for which filters apply. Filters the integration doesn't support are accepted but have no effect. Some integrations require a filter; if it's missing, create returns an error naming the integration and the filter.
-        field :filters, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('filters') } }
+        field :filters, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('filters') } }
         # The URL of the webhook
         field :hook_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('hook_url') } }
 
@@ -54,15 +53,15 @@ module UnifiedRubySDK
         # An array of the most recent virtual webhook runs
         field :runs, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('runs') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # "native" registers with the integration, which sends events as they happen. "virtual" checks for changes on "interval". Optional on create; if omitted, Unified.to picks a supported type for the object. Requesting a type the integration doesn't support returns 400. Set on create only: changes sent on update are ignored without an error. Delete and recreate the webhook to change type.
-        field :webhook_type, Crystalline::Nilable.new(Models::Shared::WebhookType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('webhook_type'), 'decoder': Utils.enum_from_string(Models::Shared::WebhookType, true) } }
+        field :webhook_type, Crystalline::Nilable.new(Models::Shared::WebhookType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('webhook_type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::WebhookType, true) } }
         # (reference to KmsSpace)
         field :workspace_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('workspace_id') } }
 
         field :environment, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('environment') } }
 
-        sig { params(connection_id: ::String, event: Models::Shared::WebhookEvent, object_type: Models::Shared::WebhookObjectType, checked_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), db_name_prefix: T.nilable(::String), db_schema: T.nilable(::String), db_type: T.nilable(Models::Shared::DbType), db_url: T.nilable(::String), fields_: T.nilable(::String), filters: T.nilable(T::Hash[Symbol, ::String]), hook_url: T.nilable(::String), id: T.nilable(::String), integration_type: T.nilable(::String), interval: T.nilable(::Float), is_beta: T.nilable(T::Boolean), is_healthy: T.nilable(T::Boolean), is_paused: T.nilable(T::Boolean), page_max_limit: T.nilable(::Float), runs: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), webhook_type: T.nilable(Models::Shared::WebhookType), workspace_id: T.nilable(::String), environment: T.nilable(::String)).void }
+        sig { params(connection_id: ::String, event: Models::Shared::WebhookEvent, object_type: Models::Shared::WebhookObjectType, checked_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), db_name_prefix: T.nilable(::String), db_schema: T.nilable(::String), db_type: T.nilable(Models::Shared::DbType), db_url: T.nilable(::String), fields_: T.nilable(::String), filters: T.nilable(T::Hash[::Symbol, ::String]), hook_url: T.nilable(::String), id: T.nilable(::String), integration_type: T.nilable(::String), interval: T.nilable(::Float), is_beta: T.nilable(T::Boolean), is_healthy: T.nilable(T::Boolean), is_paused: T.nilable(T::Boolean), page_max_limit: T.nilable(::Float), runs: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), webhook_type: T.nilable(Models::Shared::WebhookType), workspace_id: T.nilable(::String), environment: T.nilable(::String)).void }
         def initialize(connection_id:, event:, object_type:, checked_at: nil, created_at: nil, db_name_prefix: nil, db_schema: nil, db_type: nil, db_url: nil, fields_: nil, filters: nil, hook_url: nil, id: nil, integration_type: nil, interval: nil, is_beta: nil, is_healthy: nil, is_paused: nil, page_max_limit: nil, runs: nil, updated_at: nil, webhook_type: nil, workspace_id: nil, environment: 'Production')
           @connection_id = connection_id
           @event = event

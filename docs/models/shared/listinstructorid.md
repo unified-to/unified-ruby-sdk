@@ -1,5 +1,16 @@
 # ListInstructorId
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListInstructorId::SUPPORTED_REQUIRED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = ListInstructorId.deserialize("custom_value")
+```
+
 
 ## Values
 

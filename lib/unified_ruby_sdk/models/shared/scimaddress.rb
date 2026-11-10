@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class ScimAddress
         extend T::Sig
@@ -26,7 +25,7 @@ module UnifiedRubySDK
         # could be multi-line
         field :street_address, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('streetAddress') } }
 
-        field :type, Crystalline::Nilable.new(Models::Shared::ScimAddressType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::ScimAddressType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::ScimAddressType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::ScimAddressType, true) } }
 
         sig { params(country: T.nilable(::String), formatted: T.nilable(::String), locality: T.nilable(::String), postal_code: T.nilable(::String), region: T.nilable(::String), street_address: T.nilable(::String), type: T.nilable(Models::Shared::ScimAddressType)).void }
         def initialize(country: nil, formatted: nil, locality: nil, postal_code: nil, region: nil, street_address: nil, type: nil)

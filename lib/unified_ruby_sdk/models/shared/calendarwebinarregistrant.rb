@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class CalendarWebinarRegistrant
         extend T::Sig
@@ -18,11 +17,11 @@ module UnifiedRubySDK
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :registered_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('registered_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :registered_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('registered_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :registration_reference, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('registration_reference') } }
 
-        field :registration_status, Crystalline::Nilable.new(Models::Shared::RegistrationStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('registration_status'), 'decoder': Utils.enum_from_string(Models::Shared::RegistrationStatus, true) } }
+        field :registration_status, Crystalline::Nilable.new(Models::Shared::RegistrationStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('registration_status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::RegistrationStatus, true) } }
 
         sig { params(email: T.nilable(::String), name: T.nilable(::String), registered_at: T.nilable(::DateTime), registration_reference: T.nilable(::String), registration_status: T.nilable(Models::Shared::RegistrationStatus)).void }
         def initialize(email: nil, name: nil, registered_at: nil, registration_reference: nil, registration_status: nil)

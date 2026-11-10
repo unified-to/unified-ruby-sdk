@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # SigningSignatoryRole - Role of the signatory
-      class SigningSignatoryRole < T::Enum
-
-
+      class SigningSignatoryRole
+        include ::Crystalline::Enum
         enums do
           SIGNER = new('SIGNER')
           CC = new('CC')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           IN_PERSON_SIGNER = new('IN_PERSON_SIGNER')
           VIEWER = new('VIEWER')
         end
+        open!
       end
     end
   end

@@ -1,5 +1,13 @@
 # ListPlmPartsQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListPlmPartsQueryParamFields::ID
+```
+
 
 ## Values
 

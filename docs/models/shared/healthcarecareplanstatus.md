@@ -2,6 +2,17 @@
 
 Status of the care plan
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = HealthcareCareplanStatus::DRAFT
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = HealthcareCareplanStatus.deserialize("custom_value")
+```
+
 
 ## Values
 

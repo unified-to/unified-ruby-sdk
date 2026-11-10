@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class AtsActivityType < T::Enum
-
-
+      class AtsActivityType
+        include ::Crystalline::Enum
         enums do
           NOTE = new('NOTE')
           TASK = new('TASK')
           EMAIL = new('EMAIL')
         end
+        open!
       end
     end
   end

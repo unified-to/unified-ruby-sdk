@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class Recommendation < T::Enum
-
-
+      class Recommendation
+        include ::Crystalline::Enum
         enums do
           DEFINITELY_NO = new('DEFINITELY_NO')
           NO = new('NO')
           YES = new('YES')
           STRONG_YES = new('STRONG_YES')
         end
+        open!
       end
     end
   end

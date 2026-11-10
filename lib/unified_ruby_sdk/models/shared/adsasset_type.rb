@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class AdsAssetType < T::Enum
-
-
+      class AdsAssetType
+        include ::Crystalline::Enum
         enums do
           IMAGE = new('IMAGE')
           VIDEO = new('VIDEO')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           MEDIA_BUNDLE = new('MEDIA_BUNDLE')
           TEXT = new('TEXT')
         end
+        open!
       end
     end
   end

@@ -1,5 +1,13 @@
 # CreateAccountingExpensereportQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreateAccountingExpensereportQueryParamFields::ID
+```
+
 
 ## Values
 

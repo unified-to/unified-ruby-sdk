@@ -1,5 +1,4 @@
 # Campaign
-(*campaign*)
 
 ## Overview
 
@@ -24,36 +23,35 @@ Creates a AdsCampaign. Provide the unified AdsCampaign fields in the request bod
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAdsCampaign" method="post" path="/ads/{connection_id}/campaign" -->
+<!-- UsageSnippet language="ruby" operationID="createAdsCampaign" method="post" path="/ads/{connection_id}/campaign" example="ads_campaign" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.campaign.create_ads_campaign(ads_campaign: Models::Shared::AdsCampaign.new(
-  budget_amount: 8_743.179_536_121_897,
+  budget_amount: 8743.179_536_121_897,
   budget_period: Models::Shared::BudgetPeriod::MONTHLY,
   category: 'CREDIT',
   created_at: DateTime.iso8601('2022-05-21T08:51:41.868Z'),
   currency: 'USD',
   effective_status: Models::Shared::EffectiveStatus::NOT_ELIGIBLE,
-  end_at: DateTime.iso8601('2025-06-14T00:19:21.799Z'),
-  id: '11c6dbc7-0b4f-482c-a6fd-df577020033f',
+  end_at: DateTime.iso8601('2025-06-15T06:08:51.719Z'),
+  id: '5b6ede85-0f7d-40f2-aea5-22c9b714ee82',
   labels: [
     'comedo',
   ],
   metadata: [],
   name: 'Emard Inc',
-  start_at: DateTime.iso8601('2022-07-22T04:06:21.637Z'),
+  start_at: DateTime.iso8601('2022-07-22T05:45:08.216Z'),
   status: Models::Shared::AdsCampaignStatus::PROCESSING_FAILED,
-  targeting: Models::Shared::PropertyAdsCampaignTargeting.new(),
-  total_spend_amount: 2_349.8_642_875_347_286,
-  updated_at: DateTime.iso8601('2026-01-17T03:36:44.517Z'),
+  targeting: Models::Shared::PropertyAdsCampaignTargeting.new,
+  total_spend_amount: 2349.8_642_875_347_286,
+  updated_at: DateTime.iso8601('2026-01-18T15:13:17.115Z')
 ), connection_id: '<id>')
 
 unless res.ads_campaign.nil?
@@ -87,22 +85,21 @@ Creates a MarketingCampaign. Provide the unified MarketingCampaign fields in the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createMartechCampaign" method="post" path="/martech/{connection_id}/campaign" -->
+<!-- UsageSnippet language="ruby" operationID="createMartechCampaign" method="post" path="/martech/{connection_id}/campaign" example="martech_campaign" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.campaign.create_martech_campaign(marketing_campaign: Models::Shared::MarketingCampaign.new(
   created_at: DateTime.iso8601('2019-05-19T11:18:15.589Z'),
   from_email: 'graham.mertz@gmail.com',
   from_name: 'Graham Mertz',
-  id: 'c98666fb-466a-4355-8f75-73faa16a44f4',
+  id: 'f87e84be-e6a5-4faa-a84b-dd823aaa8a60',
   metadata: [],
   name: 'Consequatur atqui sustineo.',
   preview_text: 'Auctus votum ver umbra corroboro turpis spoliatio tamen strues auxilium benigne tempus error eaque suasoria.',
@@ -111,7 +108,7 @@ res = s.campaign.create_martech_campaign(marketing_campaign: Models::Shared::Mar
   status: Models::Shared::MarketingCampaignStatus::SCHEDULED,
   subject_line: 'Trepide utpote conculco tibi solio supplanto peior tibi.',
   type: 'absplit',
-  updated_at: DateTime.iso8601('2022-06-30T00:52:16.807Z'),
+  updated_at: DateTime.iso8601('2022-06-30T18:59:23.305Z')
 ), connection_id: '<id>')
 
 unless res.marketing_campaign.nil?
@@ -151,11 +148,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.campaign.get_ads_campaign(connection_id: '<id>', id: '<id>')
 
 unless res.ads_campaign.nil?
@@ -195,11 +191,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.campaign.get_martech_campaign(connection_id: '<id>', id: '<id>')
 
 unless res.marketing_campaign.nil?
@@ -239,15 +234,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAdsCampaignsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAdsCampaignsRequest.new(
+  connection_id: '<id>'
+)
 res = s.campaign.list_ads_campaigns(request: req)
 
 unless res.ads_campaigns.nil?
@@ -284,15 +278,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListMartechCampaignsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListMartechCampaignsRequest.new(
+  connection_id: '<id>'
+)
 res = s.campaign.list_martech_campaigns(request: req)
 
 unless res.marketing_campaigns.nil?
@@ -323,42 +316,41 @@ Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAdsCampaign" method="patch" path="/ads/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAdsCampaign" method="patch" path="/ads/{connection_id}/campaign/{id}" example="ads_campaign" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAdsCampaignRequest.new(
   ads_campaign: Models::Shared::AdsCampaign.new(
-    budget_amount: 8_743.179_536_121_897,
+    budget_amount: 8743.179_536_121_897,
     budget_period: Models::Shared::BudgetPeriod::MONTHLY,
     category: 'CREDIT',
     created_at: DateTime.iso8601('2022-05-21T08:51:41.868Z'),
     currency: 'USD',
     effective_status: Models::Shared::EffectiveStatus::NOT_ELIGIBLE,
-    end_at: DateTime.iso8601('2025-06-14T00:19:21.895Z'),
-    id: '173d2964-e788-49e4-97aa-9f5c04f362bd',
+    end_at: DateTime.iso8601('2025-06-15T06:08:51.816Z'),
+    id: 'da1f540d-b8d4-486a-bd76-7a1c2d00e569',
     labels: [
       'comedo',
     ],
     metadata: [],
     name: 'Emard Inc',
-    start_at: DateTime.iso8601('2022-07-22T04:06:21.642Z'),
+    start_at: DateTime.iso8601('2022-07-22T05:45:08.221Z'),
     status: Models::Shared::AdsCampaignStatus::PROCESSING_FAILED,
-    targeting: Models::Shared::PropertyAdsCampaignTargeting.new(),
-    total_spend_amount: 2_349.8_642_875_347_286,
-    updated_at: DateTime.iso8601('2026-01-17T03:36:44.632Z'),
+    targeting: Models::Shared::PropertyAdsCampaignTargeting.new,
+    total_spend_amount: 2349.8_642_875_347_286,
+    updated_at: DateTime.iso8601('2026-01-18T15:13:17.230Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.campaign.patch_ads_campaign(request: req)
 
 unless res.ads_campaign.nil?
@@ -389,23 +381,23 @@ Updates the MarketingCampaign identified by `id`. Provide the unified MarketingC
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchMartechCampaign" method="patch" path="/martech/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchMartechCampaign" method="patch" path="/martech/{connection_id}/campaign/{id}" example="martech_campaign" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchMartechCampaignRequest.new(
   marketing_campaign: Models::Shared::MarketingCampaign.new(
     created_at: DateTime.iso8601('2019-05-19T11:18:15.589Z'),
     from_email: 'graham.mertz@gmail.com',
     from_name: 'Graham Mertz',
-    id: '761ab71d-fa57-496c-99c9-e052e9744130',
+    id: '79c79a5b-b7b9-4fcd-b731-378742c04f41',
     metadata: [],
     name: 'Consequatur atqui sustineo.',
     preview_text: 'Auctus votum ver umbra corroboro turpis spoliatio tamen strues auxilium benigne tempus error eaque suasoria.',
@@ -414,12 +406,11 @@ req = Models::Operations::PatchMartechCampaignRequest.new(
     status: Models::Shared::MarketingCampaignStatus::SCHEDULED,
     subject_line: 'Trepide utpote conculco tibi solio supplanto peior tibi.',
     type: 'absplit',
-    updated_at: DateTime.iso8601('2022-06-30T00:52:16.814Z'),
+    updated_at: DateTime.iso8601('2022-06-30T18:59:23.311Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.campaign.patch_martech_campaign(request: req)
 
 unless res.marketing_campaign.nil?
@@ -456,11 +447,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.campaign.remove_ads_campaign(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -498,11 +488,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.campaign.remove_martech_campaign(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -534,42 +523,41 @@ Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAdsCampaign" method="put" path="/ads/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAdsCampaign" method="put" path="/ads/{connection_id}/campaign/{id}" example="ads_campaign" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAdsCampaignRequest.new(
   ads_campaign: Models::Shared::AdsCampaign.new(
-    budget_amount: 8_743.179_536_121_897,
+    budget_amount: 8743.179_536_121_897,
     budget_period: Models::Shared::BudgetPeriod::MONTHLY,
     category: 'CREDIT',
     created_at: DateTime.iso8601('2022-05-21T08:51:41.868Z'),
     currency: 'USD',
     effective_status: Models::Shared::EffectiveStatus::NOT_ELIGIBLE,
-    end_at: DateTime.iso8601('2025-06-14T00:19:21.895Z'),
-    id: '173d2964-e788-49e4-97aa-9f5c04f362bd',
+    end_at: DateTime.iso8601('2025-06-15T06:08:51.816Z'),
+    id: 'da1f540d-b8d4-486a-bd76-7a1c2d00e569',
     labels: [
       'comedo',
     ],
     metadata: [],
     name: 'Emard Inc',
-    start_at: DateTime.iso8601('2022-07-22T04:06:21.642Z'),
+    start_at: DateTime.iso8601('2022-07-22T05:45:08.221Z'),
     status: Models::Shared::AdsCampaignStatus::PROCESSING_FAILED,
-    targeting: Models::Shared::PropertyAdsCampaignTargeting.new(),
-    total_spend_amount: 2_349.8_642_875_347_286,
-    updated_at: DateTime.iso8601('2026-01-17T03:36:44.632Z'),
+    targeting: Models::Shared::PropertyAdsCampaignTargeting.new,
+    total_spend_amount: 2349.8_642_875_347_286,
+    updated_at: DateTime.iso8601('2026-01-18T15:13:17.230Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.campaign.update_ads_campaign(request: req)
 
 unless res.ads_campaign.nil?
@@ -600,23 +588,23 @@ Updates the MarketingCampaign identified by `id`. Provide the unified MarketingC
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateMartechCampaign" method="put" path="/martech/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateMartechCampaign" method="put" path="/martech/{connection_id}/campaign/{id}" example="martech_campaign" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateMartechCampaignRequest.new(
   marketing_campaign: Models::Shared::MarketingCampaign.new(
     created_at: DateTime.iso8601('2019-05-19T11:18:15.589Z'),
     from_email: 'graham.mertz@gmail.com',
     from_name: 'Graham Mertz',
-    id: '761ab71d-fa57-496c-99c9-e052e9744130',
+    id: '79c79a5b-b7b9-4fcd-b731-378742c04f41',
     metadata: [],
     name: 'Consequatur atqui sustineo.',
     preview_text: 'Auctus votum ver umbra corroboro turpis spoliatio tamen strues auxilium benigne tempus error eaque suasoria.',
@@ -625,12 +613,11 @@ req = Models::Operations::UpdateMartechCampaignRequest.new(
     status: Models::Shared::MarketingCampaignStatus::SCHEDULED,
     subject_line: 'Trepide utpote conculco tibi solio supplanto peior tibi.',
     type: 'absplit',
-    updated_at: DateTime.iso8601('2022-06-30T00:52:16.814Z'),
+    updated_at: DateTime.iso8601('2022-06-30T18:59:23.311Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.campaign.update_martech_campaign(request: req)
 
 unless res.marketing_campaign.nil?

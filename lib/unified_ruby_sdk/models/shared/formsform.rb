@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class FormsForm
         extend T::Sig
@@ -18,7 +17,7 @@ module UnifiedRubySDK
 
         field :confirmation_redirect_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('confirmation_redirect_url') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
@@ -40,13 +39,13 @@ module UnifiedRubySDK
 
         field :published_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('published_url') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :response_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response_count') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(confirmation_message: T.nilable(::String), confirmation_redirect_url: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), fields_: T.nilable(T::Array[Models::Shared::FormField]), has_multiple_submissions: T.nilable(T::Boolean), has_progress_bar: T.nilable(T::Boolean), has_shuffle_questions: T.nilable(T::Boolean), id: T.nilable(::String), is_active: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::FormsMetadata]), name: T.nilable(::String), published_url: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), response_count: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
+        sig { params(confirmation_message: T.nilable(::String), confirmation_redirect_url: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), fields_: T.nilable(T::Array[Models::Shared::FormField]), has_multiple_submissions: T.nilable(T::Boolean), has_progress_bar: T.nilable(T::Boolean), has_shuffle_questions: T.nilable(T::Boolean), id: T.nilable(::String), is_active: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::FormsMetadata]), name: T.nilable(::String), published_url: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), response_count: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
         def initialize(confirmation_message: nil, confirmation_redirect_url: nil, created_at: nil, description: nil, fields_: nil, has_multiple_submissions: nil, has_progress_bar: nil, has_shuffle_questions: nil, id: nil, is_active: nil, metadata: nil, name: nil, published_url: nil, raw: nil, response_count: nil, updated_at: nil)
           @confirmation_message = confirmation_message
           @confirmation_redirect_url = confirmation_redirect_url

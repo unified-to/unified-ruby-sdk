@@ -1,5 +1,13 @@
 # ListAccountingJournalsQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListAccountingJournalsQueryParamFields::ID
+```
+
 
 ## Values
 

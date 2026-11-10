@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PropertyAdsGroupTargetingBrandSafetyPublisherVisibilityCategories < T::Enum
-
-
+      class PropertyAdsGroupTargetingBrandSafetyPublisherVisibilityCategories
+        include ::Crystalline::Enum
         enums do
           LIMITED = new('limited')
           STANDARD = new('standard')
           EXPANDED = new('expanded')
         end
+        open!
       end
     end
   end

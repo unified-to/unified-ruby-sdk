@@ -1,5 +1,4 @@
 # Visitor
-(*visitor*)
 
 ## Overview
 
@@ -18,28 +17,27 @@ Creates a AnalyticsVisitor. Provide the unified AnalyticsVisitor fields in the r
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAnalyticsVisitor" method="post" path="/analytics/{connection_id}/visitor" -->
+<!-- UsageSnippet language="ruby" operationID="createAnalyticsVisitor" method="post" path="/analytics/{connection_id}/visitor" example="analytics_visitor" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.visitor.create_analytics_visitor(analytics_visitor: Models::Shared::AnalyticsVisitor.new(
   created_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
   email: 'desiree.o.hara@icloud.com',
   first_seen_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
-  id: 'b0d91122-1dd7-4265-9417-4bd734fa18f9',
-  last_seen_at: DateTime.iso8601('2025-01-25T03:26:30.597Z'),
+  id: '1621ba91-b9a9-4093-9dcd-f0abf048fb81',
+  last_seen_at: DateTime.iso8601('2025-01-26T11:05:13.802Z'),
   metadata: {
-    "segment": Models::Shared::PropertyAnalyticsVisitorMetadata.new(),
+    'segment' => Models::Shared::PropertyAnalyticsVisitorMetadata.new,
   },
   total_events: 2916.0,
-  updated_at: DateTime.iso8601('2025-07-14T21:39:02.382Z'),
+  updated_at: DateTime.iso8601('2025-07-16T08:23:38.196Z')
 ), connection_id: '<id>')
 
 unless res.analytics_visitor.nil?
@@ -79,11 +77,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.visitor.get_analytics_visitor(connection_id: '<id>', id: '<id>')
 
 unless res.analytics_visitor.nil?
@@ -123,15 +120,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAnalyticsVisitorsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAnalyticsVisitorsRequest.new(
+  connection_id: '<id>'
+)
 res = s.visitor.list_analytics_visitors(request: req)
 
 unless res.analytics_visitors.nil?
@@ -162,34 +158,33 @@ Updates the AnalyticsVisitor identified by `id`. Provide the unified AnalyticsVi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAnalyticsVisitor" method="patch" path="/analytics/{connection_id}/visitor/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAnalyticsVisitor" method="patch" path="/analytics/{connection_id}/visitor/{id}" example="analytics_visitor" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAnalyticsVisitorRequest.new(
   analytics_visitor: Models::Shared::AnalyticsVisitor.new(
     created_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
     email: 'desiree.o.hara@icloud.com',
     first_seen_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
-    id: 'e0d4b192-27b4-4d84-89ce-43e82c915af3',
-    last_seen_at: DateTime.iso8601('2025-01-25T03:26:30.603Z'),
+    id: '61cd52e9-7420-4810-a1da-28adb86d8600',
+    last_seen_at: DateTime.iso8601('2025-01-26T11:05:13.808Z'),
     metadata: {
-      "segment": Models::Shared::PropertyAnalyticsVisitorMetadata.new(),
+      'segment' => Models::Shared::PropertyAnalyticsVisitorMetadata.new,
     },
     total_events: 2916.0,
-    updated_at: DateTime.iso8601('2025-07-14T21:39:02.390Z'),
+    updated_at: DateTime.iso8601('2025-07-16T08:23:38.204Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.visitor.patch_analytics_visitor(request: req)
 
 unless res.analytics_visitor.nil?
@@ -226,11 +221,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.visitor.remove_analytics_visitor(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -262,34 +256,33 @@ Updates the AnalyticsVisitor identified by `id`. Provide the unified AnalyticsVi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAnalyticsVisitor" method="put" path="/analytics/{connection_id}/visitor/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAnalyticsVisitor" method="put" path="/analytics/{connection_id}/visitor/{id}" example="analytics_visitor" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAnalyticsVisitorRequest.new(
   analytics_visitor: Models::Shared::AnalyticsVisitor.new(
     created_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
     email: 'desiree.o.hara@icloud.com',
     first_seen_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
-    id: 'e0d4b192-27b4-4d84-89ce-43e82c915af3',
-    last_seen_at: DateTime.iso8601('2025-01-25T03:26:30.603Z'),
+    id: '61cd52e9-7420-4810-a1da-28adb86d8600',
+    last_seen_at: DateTime.iso8601('2025-01-26T11:05:13.808Z'),
     metadata: {
-      "segment": Models::Shared::PropertyAnalyticsVisitorMetadata.new(),
+      'segment' => Models::Shared::PropertyAnalyticsVisitorMetadata.new,
     },
     total_events: 2916.0,
-    updated_at: DateTime.iso8601('2025-07-14T21:39:02.390Z'),
+    updated_at: DateTime.iso8601('2025-07-16T08:23:38.204Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.visitor.update_analytics_visitor(request: req)
 
 unless res.analytics_visitor.nil?

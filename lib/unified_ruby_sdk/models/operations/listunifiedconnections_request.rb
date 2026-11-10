@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Operations
-    
 
       class ListUnifiedConnectionsRequest
         extend T::Sig
@@ -19,6 +18,8 @@ module UnifiedRubySDK
         field :env, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'env', 'style': 'form', 'explode': true } }
         # Filter the results to only those integrations for your user referenced by this value
         field :external_xref, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'external_xref', 'style': 'form', 'explode': true } }
+        # Fields to return. Leave out auth to get connection metadata without credentials
+        field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(Models::Operations::ListUnifiedConnectionsQueryParamFields)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
         field :limit, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }
 
@@ -30,11 +31,12 @@ module UnifiedRubySDK
         # Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_gte, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
-        sig { params(categories: T.nilable(T::Array[Models::Operations::Categories]), env: T.nilable(::String), external_xref: T.nilable(::String), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::String)).void }
-        def initialize(categories: nil, env: nil, external_xref: nil, limit: nil, offset: nil, order: nil, sort: nil, updated_gte: nil)
+        sig { params(categories: T.nilable(T::Array[Models::Operations::Categories]), env: T.nilable(::String), external_xref: T.nilable(::String), fields_: T.nilable(T::Array[Models::Operations::ListUnifiedConnectionsQueryParamFields]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::String)).void }
+        def initialize(categories: nil, env: nil, external_xref: nil, fields_: nil, limit: nil, offset: nil, order: nil, sort: nil, updated_gte: nil)
           @categories = categories
           @env = env
           @external_xref = external_xref
+          @fields_ = fields_
           @limit = limit
           @offset = offset
           @order = order
@@ -48,6 +50,7 @@ module UnifiedRubySDK
           return false unless @categories == other.categories
           return false unless @env == other.env
           return false unless @external_xref == other.external_xref
+          return false unless @fields_ == other.fields_
           return false unless @limit == other.limit
           return false unless @offset == other.offset
           return false unless @order == other.order

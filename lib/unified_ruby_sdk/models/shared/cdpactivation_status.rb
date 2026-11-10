@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # CdpActivationStatus - The current status of the activation
-      class CdpActivationStatus < T::Enum
-
-
+      class CdpActivationStatus
+        include ::Crystalline::Enum
         enums do
           ACTIVE = new('ACTIVE')
           PAUSED = new('PAUSED')
           ERROR = new('ERROR')
           PENDING = new('PENDING')
         end
+        open!
       end
     end
   end

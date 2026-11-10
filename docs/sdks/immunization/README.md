@@ -1,5 +1,4 @@
 # Immunization
-(*immunization*)
 
 ## Overview
 
@@ -20,11 +19,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.immunization.get_healthcare_immunization(connection_id: '<id>', id: '<id>')
 
 unless res.healthcare_immunization.nil?
@@ -64,15 +62,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHealthcareImmunizationsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHealthcareImmunizationsRequest.new(
+  connection_id: '<id>'
+)
 res = s.immunization.list_healthcare_immunizations(request: req)
 
 unless res.healthcare_immunizations.nil?

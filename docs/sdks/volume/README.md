@@ -1,5 +1,4 @@
 # Volume
-(*volume*)
 
 ## Overview
 
@@ -18,28 +17,27 @@ Creates a ComputeVolume. Provide the unified ComputeVolume fields in the request
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createComputeVolume" method="post" path="/compute/{connection_id}/volume" -->
+<!-- UsageSnippet language="ruby" operationID="createComputeVolume" method="post" path="/compute/{connection_id}/volume" example="compute_volume" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.volume.create_compute_volume(compute_volume: Models::Shared::ComputeVolume.new(
   created_at: DateTime.iso8601('2022-11-15T15:12:48.055Z'),
-  id: '2b27386c-ae7c-4ae1-962a-4dbf133fb488',
+  id: 'ccde5300-206a-4b64-a1e7-b93e84db823a',
   instance_ids: [],
   metadata: [],
   name: 'vol-solum',
   size_mb: 1_024_000.0,
   status: Models::Shared::ComputeVolumeStatus::OTHER,
   type: Models::Shared::ComputeVolumeType::HIGH_PERFORMANCE,
-  updated_at: DateTime.iso8601('2024-02-15T21:15:48.876Z'),
-  used_mb: 524_986.0,
+  updated_at: DateTime.iso8601('2024-02-16T10:56:12.112Z'),
+  used_mb: 524_986.0
 ), connection_id: '<id>')
 
 unless res.compute_volume.nil?
@@ -79,11 +77,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.volume.get_compute_volume(connection_id: '<id>', id: '<id>')
 
 unless res.compute_volume.nil?
@@ -123,15 +120,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListComputeVolumesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListComputeVolumesRequest.new(
+  connection_id: '<id>'
+)
 res = s.volume.list_compute_volumes(request: req)
 
 unless res.compute_volumes.nil?
@@ -162,34 +158,33 @@ Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchComputeVolume" method="patch" path="/compute/{connection_id}/volume/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchComputeVolume" method="patch" path="/compute/{connection_id}/volume/{id}" example="compute_volume" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchComputeVolumeRequest.new(
   compute_volume: Models::Shared::ComputeVolume.new(
     created_at: DateTime.iso8601('2022-11-15T15:12:48.055Z'),
-    id: 'cba36509-03f5-40e7-9bce-1e80f4a50d6b',
+    id: 'a6c5701c-f285-404c-8907-52797200f5ee',
     instance_ids: [],
     metadata: [],
     name: 'vol-solum',
     size_mb: 1_024_000.0,
     status: Models::Shared::ComputeVolumeStatus::OTHER,
     type: Models::Shared::ComputeVolumeType::HIGH_PERFORMANCE,
-    updated_at: DateTime.iso8601('2024-02-15T21:15:48.882Z'),
-    used_mb: 524_986.0,
+    updated_at: DateTime.iso8601('2024-02-16T10:56:12.116Z'),
+    used_mb: 524_986.0
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.volume.patch_compute_volume(request: req)
 
 unless res.compute_volume.nil?
@@ -226,11 +221,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.volume.remove_compute_volume(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -262,34 +256,33 @@ Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateComputeVolume" method="put" path="/compute/{connection_id}/volume/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateComputeVolume" method="put" path="/compute/{connection_id}/volume/{id}" example="compute_volume" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateComputeVolumeRequest.new(
   compute_volume: Models::Shared::ComputeVolume.new(
     created_at: DateTime.iso8601('2022-11-15T15:12:48.055Z'),
-    id: 'cba36509-03f5-40e7-9bce-1e80f4a50d6b',
+    id: 'a6c5701c-f285-404c-8907-52797200f5ee',
     instance_ids: [],
     metadata: [],
     name: 'vol-solum',
     size_mb: 1_024_000.0,
     status: Models::Shared::ComputeVolumeStatus::OTHER,
     type: Models::Shared::ComputeVolumeType::HIGH_PERFORMANCE,
-    updated_at: DateTime.iso8601('2024-02-15T21:15:48.882Z'),
-    used_mb: 524_986.0,
+    updated_at: DateTime.iso8601('2024-02-16T10:56:12.116Z'),
+    used_mb: 524_986.0
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.volume.update_compute_volume(request: req)
 
 unless res.compute_volume.nil?

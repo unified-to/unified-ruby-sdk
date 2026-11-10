@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class PaymentPayoutLineitem
         extend T::Sig
@@ -24,7 +23,7 @@ module UnifiedRubySDK
         # id of the settled object -- a PaymentPayment or PaymentRefund for PAYMENT / REFUND lines
         field :object_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('object_id') } }
         # What this payout line settles
-        field :object_type, Crystalline::Nilable.new(Models::Shared::PaymentPayoutLineitemObjectType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('object_type'), 'decoder': Utils.enum_from_string(Models::Shared::PaymentPayoutLineitemObjectType, true) } }
+        field :object_type, Crystalline::Nilable.new(Models::Shared::PaymentPayoutLineitemObjectType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('object_type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PaymentPayoutLineitemObjectType, true) } }
 
         sig { params(amount: T.nilable(::Float), currency: T.nilable(::String), fee_amount: T.nilable(::Float), net_amount: T.nilable(::Float), object_id: T.nilable(::String), object_type: T.nilable(Models::Shared::PaymentPayoutLineitemObjectType)).void }
         def initialize(amount: nil, currency: nil, fee_amount: nil, net_amount: nil, object_id: nil, object_type: nil)

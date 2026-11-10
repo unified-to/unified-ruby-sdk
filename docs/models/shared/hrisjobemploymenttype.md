@@ -1,5 +1,16 @@
 # HrisJobEmploymentType
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = HrisJobEmploymentType::FULL_TIME
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = HrisJobEmploymentType.deserialize("custom_value")
+```
+
 
 ## Values
 

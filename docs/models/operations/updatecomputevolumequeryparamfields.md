@@ -1,5 +1,13 @@
 # UpdateComputeVolumeQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = UpdateComputeVolumeQueryParamFields::ID
+```
+
 
 ## Values
 

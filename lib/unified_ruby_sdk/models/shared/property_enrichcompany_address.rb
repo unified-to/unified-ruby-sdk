@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # The address of the company
       class PropertyEnrichCompanyAddress
         extend T::Sig

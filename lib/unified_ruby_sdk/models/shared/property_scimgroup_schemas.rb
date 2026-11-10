@@ -7,14 +7,13 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PropertyScimGroupSchemas < T::Enum
-
-
+      class PropertyScimGroupSchemas
+        include ::Crystalline::Enum
         enums do
           URN_IETF_PARAMS_SCIM_SCHEMAS_CORE_2_0_GROUP = new('urn:ietf:params:scim:schemas:core:2.0:Group')
         end
+        open!
       end
     end
   end

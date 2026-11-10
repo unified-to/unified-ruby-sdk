@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Unit - Unit of quantity
-      class Unit < T::Enum
-
-
+      class Unit
+        include ::Crystalline::Enum
         enums do
           GPU_HOUR = new('GPU_HOUR')
           VCPU_SECOND = new('VCPU_SECOND')
@@ -21,6 +19,7 @@ module UnifiedRubySDK
           SECOND = new('SECOND')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

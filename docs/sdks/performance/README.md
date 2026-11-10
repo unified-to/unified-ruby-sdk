@@ -1,5 +1,4 @@
 # Performance
-(*performance*)
 
 ## Overview
 
@@ -25,20 +24,19 @@ Creates a PerformanceFeedback. Provide the unified PerformanceFeedback fields in
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createPerformanceFeedback" method="post" path="/performance/{connection_id}/feedback" -->
+<!-- UsageSnippet language="ruby" operationID="createPerformanceFeedback" method="post" path="/performance/{connection_id}/feedback" example="performance_feedback" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.performance.create_performance_feedback(performance_feedback: Models::Shared::PerformanceFeedback.new(
   created_at: DateTime.iso8601('2023-04-11T16:21:53.862Z'),
-  id: 'bc8f8014-b646-451c-8bbd-85d5e72b3d8c',
+  id: '592f326f-38bd-45e7-af14-3adee3007199',
   is_visible: true,
   message: 'Tabernus corpus voluptate aestus.',
   metadata: [],
@@ -47,8 +45,8 @@ res = s.performance.create_performance_feedback(performance_feedback: Models::Sh
     'hexagon',
   ],
   type: Models::Shared::PerformanceFeedbackType::PRAISE,
-  updated_at: DateTime.iso8601('2025-09-17T00:46:22.558Z'),
-  user_id: '<id>',
+  updated_at: DateTime.iso8601('2025-09-18T06:21:30.143Z'),
+  user_id: '<id>'
 ), connection_id: '<id>')
 
 unless res.performance_feedback.nil?
@@ -82,61 +80,60 @@ Creates a PerformanceGoal. Provide the unified PerformanceGoal fields in the req
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createPerformanceGoal" method="post" path="/performance/{connection_id}/goal" -->
+<!-- UsageSnippet language="ruby" operationID="createPerformanceGoal" method="post" path="/performance/{connection_id}/goal" example="performance_goal" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.performance.create_performance_goal(performance_goal: Models::Shared::PerformanceGoal.new(
   created_at: DateTime.iso8601('2020-01-09T20:43:07.380Z'),
   description: 'Suscipit suspendo vulnero vel facere valeo vallum degero.',
-  due_at: DateTime.iso8601('2026-08-17T03:13:10.947Z'),
-  id: 'aa8db101-ba31-4e4b-ae8d-c769c0752ae3',
+  due_at: DateTime.iso8601('2026-08-18T21:14:51.097Z'),
+  id: '5538b902-6fc6-4da1-8298-1ee1eafa6873',
   metadata: [],
   milestones: [
     Models::Shared::PerformanceGoalMilestone.new(
       current_value: 10.0,
-      due_at: DateTime.iso8601('2026-06-21T19:37:18.430Z'),
-      id: '7011eb97-e44f-4223-9579-71647ad8e384',
+      due_at: DateTime.iso8601('2026-06-23T12:40:04.881Z'),
+      id: '8ccea602-e754-4ea3-b1bb-a1770736c74c',
       is_completed: true,
       name: 'Team-oriented secondary matrix',
       target_value: 32.0,
       unit: '%',
-      weight: 7.0,
+      weight: 7.0
     ),
     Models::Shared::PerformanceGoalMilestone.new(
       current_value: 0.0,
-      due_at: DateTime.iso8601('2026-08-26T21:51:13.251Z'),
-      id: 'b2f3b42b-9a58-490d-8fba-3b41a11277a0',
+      due_at: DateTime.iso8601('2026-08-28T16:03:06.842Z'),
+      id: '65a59f47-0a8a-4b94-a37c-905985f4a05b',
       is_completed: true,
       name: 'Exclusive client-server conglomeration',
       target_value: 32.0,
-      weight: 5.0,
+      weight: 5.0
     ),
     Models::Shared::PerformanceGoalMilestone.new(
       current_value: 31.0,
       description: 'Hic explicabo odit.',
-      due_at: DateTime.iso8601('2026-10-29T08:17:00.945Z'),
-      id: '390ab1a3-4307-4378-afca-772f1012bf68',
+      due_at: DateTime.iso8601('2026-10-31T03:35:14.870Z'),
+      id: 'fb966c86-ed29-45b3-8462-804a451ea35b',
       is_completed: true,
       name: 'Synchronised immersive success',
       target_value: 32.0,
-      weight: 5.0,
+      weight: 5.0
     ),
   ],
   name: 'Proactive national protocol',
   progress: 3.0,
-  start_at: DateTime.iso8601('2025-08-07T21:35:26.801Z'),
+  start_at: DateTime.iso8601('2025-08-09T09:05:44.836Z'),
   status: Models::Shared::PerformanceGoalStatus::CLOSED,
   type: Models::Shared::PerformanceGoalSchemasType::COMPANY,
-  updated_at: DateTime.iso8601('2022-09-20T13:29:55.081Z'),
-  weight: 5.0,
+  updated_at: DateTime.iso8601('2022-09-21T06:39:42.055Z'),
+  weight: 5.0
 ), connection_id: '<id>')
 
 unless res.performance_goal.nil?
@@ -176,11 +173,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.performance.get_performance_cycle(connection_id: '<id>', id: '<id>')
 
 unless res.performance_cycle.nil?
@@ -220,11 +216,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.performance.get_performance_feedback(connection_id: '<id>', id: '<id>')
 
 unless res.performance_feedback.nil?
@@ -264,11 +259,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.performance.get_performance_goal(connection_id: '<id>', id: '<id>')
 
 unless res.performance_goal.nil?
@@ -308,11 +302,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.performance.get_performance_review(connection_id: '<id>', id: '<id>')
 
 unless res.performance_review.nil?
@@ -352,15 +345,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListPerformanceCyclesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListPerformanceCyclesRequest.new(
+  connection_id: '<id>'
+)
 res = s.performance.list_performance_cycles(request: req)
 
 unless res.performance_cycles.nil?
@@ -397,15 +389,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListPerformanceFeedbacksRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListPerformanceFeedbacksRequest.new(
+  connection_id: '<id>'
+)
 res = s.performance.list_performance_feedbacks(request: req)
 
 unless res.performance_feedbacks.nil?
@@ -442,15 +433,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListPerformanceGoalsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListPerformanceGoalsRequest.new(
+  connection_id: '<id>'
+)
 res = s.performance.list_performance_goals(request: req)
 
 unless res.performance_goals.nil?
@@ -487,15 +477,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListPerformanceReviewsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListPerformanceReviewsRequest.new(
+  connection_id: '<id>'
+)
 res = s.performance.list_performance_reviews(request: req)
 
 unless res.performance_reviews.nil?
@@ -526,67 +515,66 @@ Updates the PerformanceGoal identified by `id`. Provide the unified PerformanceG
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchPerformanceGoal" method="patch" path="/performance/{connection_id}/goal/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchPerformanceGoal" method="patch" path="/performance/{connection_id}/goal/{id}" example="performance_goal" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchPerformanceGoalRequest.new(
   performance_goal: Models::Shared::PerformanceGoal.new(
     created_at: DateTime.iso8601('2020-01-09T20:43:07.380Z'),
     description: 'Suscipit suspendo vulnero vel facere valeo vallum degero.',
-    due_at: DateTime.iso8601('2026-08-17T03:13:10.974Z'),
-    id: 'd32b0abd-1b9f-466e-b23b-8173e8264f15',
+    due_at: DateTime.iso8601('2026-08-18T21:14:51.118Z'),
+    id: '86ae05e4-9899-4956-b392-4b9c7c9ec495',
     metadata: [],
     milestones: [
       Models::Shared::PerformanceGoalMilestone.new(
         current_value: 10.0,
-        due_at: DateTime.iso8601('2026-06-21T19:37:18.455Z'),
-        id: '0e88e869-586d-4b51-88c6-004b4afbd8f3',
+        due_at: DateTime.iso8601('2026-06-23T12:40:04.901Z'),
+        id: 'fb7b03cd-cbe2-4187-bf6d-bf6cef365231',
         is_completed: true,
         name: 'Team-oriented secondary matrix',
         target_value: 32.0,
         unit: '%',
-        weight: 7.0,
+        weight: 7.0
       ),
       Models::Shared::PerformanceGoalMilestone.new(
         current_value: 0.0,
-        due_at: DateTime.iso8601('2026-08-26T21:51:13.277Z'),
-        id: 'e606893b-b76e-4352-a0af-4bc65ebf0333',
+        due_at: DateTime.iso8601('2026-08-28T16:03:06.863Z'),
+        id: 'a546348e-350a-49e1-8ff5-0e75a77e2d0d',
         is_completed: true,
         name: 'Exclusive client-server conglomeration',
         target_value: 32.0,
-        weight: 5.0,
+        weight: 5.0
       ),
       Models::Shared::PerformanceGoalMilestone.new(
         current_value: 31.0,
         description: 'Hic explicabo odit.',
-        due_at: DateTime.iso8601('2026-10-29T08:17:00.972Z'),
-        id: '9fa5cc0f-4882-4d8d-b1f0-f7259911883c',
+        due_at: DateTime.iso8601('2026-10-31T03:35:14.891Z'),
+        id: 'f2342a71-1138-4464-8948-b177123e4aa1',
         is_completed: true,
         name: 'Synchronised immersive success',
         target_value: 32.0,
-        weight: 5.0,
+        weight: 5.0
       ),
     ],
     name: 'Proactive national protocol',
     progress: 3.0,
-    start_at: DateTime.iso8601('2025-08-07T21:35:26.824Z'),
+    start_at: DateTime.iso8601('2025-08-09T09:05:44.854Z'),
     status: Models::Shared::PerformanceGoalStatus::CLOSED,
     type: Models::Shared::PerformanceGoalSchemasType::COMPANY,
-    updated_at: DateTime.iso8601('2022-09-20T13:29:55.091Z'),
-    weight: 5.0,
+    updated_at: DateTime.iso8601('2022-09-21T06:39:42.063Z'),
+    weight: 5.0
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.performance.patch_performance_goal(request: req)
 
 unless res.performance_goal.nil?
@@ -623,11 +611,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.performance.remove_performance_goal(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -659,67 +646,66 @@ Updates the PerformanceGoal identified by `id`. Provide the unified PerformanceG
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updatePerformanceGoal" method="put" path="/performance/{connection_id}/goal/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updatePerformanceGoal" method="put" path="/performance/{connection_id}/goal/{id}" example="performance_goal" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdatePerformanceGoalRequest.new(
   performance_goal: Models::Shared::PerformanceGoal.new(
     created_at: DateTime.iso8601('2020-01-09T20:43:07.380Z'),
     description: 'Suscipit suspendo vulnero vel facere valeo vallum degero.',
-    due_at: DateTime.iso8601('2026-08-17T03:13:10.974Z'),
-    id: 'd32b0abd-1b9f-466e-b23b-8173e8264f15',
+    due_at: DateTime.iso8601('2026-08-18T21:14:51.118Z'),
+    id: '86ae05e4-9899-4956-b392-4b9c7c9ec495',
     metadata: [],
     milestones: [
       Models::Shared::PerformanceGoalMilestone.new(
         current_value: 10.0,
-        due_at: DateTime.iso8601('2026-06-21T19:37:18.455Z'),
-        id: '0e88e869-586d-4b51-88c6-004b4afbd8f3',
+        due_at: DateTime.iso8601('2026-06-23T12:40:04.901Z'),
+        id: 'fb7b03cd-cbe2-4187-bf6d-bf6cef365231',
         is_completed: true,
         name: 'Team-oriented secondary matrix',
         target_value: 32.0,
         unit: '%',
-        weight: 7.0,
+        weight: 7.0
       ),
       Models::Shared::PerformanceGoalMilestone.new(
         current_value: 0.0,
-        due_at: DateTime.iso8601('2026-08-26T21:51:13.277Z'),
-        id: 'e606893b-b76e-4352-a0af-4bc65ebf0333',
+        due_at: DateTime.iso8601('2026-08-28T16:03:06.863Z'),
+        id: 'a546348e-350a-49e1-8ff5-0e75a77e2d0d',
         is_completed: true,
         name: 'Exclusive client-server conglomeration',
         target_value: 32.0,
-        weight: 5.0,
+        weight: 5.0
       ),
       Models::Shared::PerformanceGoalMilestone.new(
         current_value: 31.0,
         description: 'Hic explicabo odit.',
-        due_at: DateTime.iso8601('2026-10-29T08:17:00.972Z'),
-        id: '9fa5cc0f-4882-4d8d-b1f0-f7259911883c',
+        due_at: DateTime.iso8601('2026-10-31T03:35:14.891Z'),
+        id: 'f2342a71-1138-4464-8948-b177123e4aa1',
         is_completed: true,
         name: 'Synchronised immersive success',
         target_value: 32.0,
-        weight: 5.0,
+        weight: 5.0
       ),
     ],
     name: 'Proactive national protocol',
     progress: 3.0,
-    start_at: DateTime.iso8601('2025-08-07T21:35:26.824Z'),
+    start_at: DateTime.iso8601('2025-08-09T09:05:44.854Z'),
     status: Models::Shared::PerformanceGoalStatus::CLOSED,
     type: Models::Shared::PerformanceGoalSchemasType::COMPANY,
-    updated_at: DateTime.iso8601('2022-09-20T13:29:55.091Z'),
-    weight: 5.0,
+    updated_at: DateTime.iso8601('2022-09-21T06:39:42.063Z'),
+    weight: 5.0
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.performance.update_performance_goal(request: req)
 
 unless res.performance_goal.nil?

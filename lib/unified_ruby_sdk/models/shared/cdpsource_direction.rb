@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # CdpSourceDirection - SOURCE, or BIDIRECTIONAL for import+export connectors
-      class CdpSourceDirection < T::Enum
-
-
+      class CdpSourceDirection
+        include ::Crystalline::Enum
         enums do
           SOURCE = new('SOURCE')
           DESTINATION = new('DESTINATION')
           BIDIRECTIONAL = new('BIDIRECTIONAL')
         end
+        open!
       end
     end
   end

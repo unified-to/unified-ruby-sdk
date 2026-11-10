@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # PaymentRefundTenderType - Normalized tender category the refund was returned to; mirrors PaymentPayment.tender_type
-      class PaymentRefundTenderType < T::Enum
-
-
+      class PaymentRefundTenderType
+        include ::Crystalline::Enum
         enums do
           CARD = new('CARD')
           CASH = new('CASH')
@@ -24,6 +22,7 @@ module UnifiedRubySDK
           EXTERNAL = new('EXTERNAL')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

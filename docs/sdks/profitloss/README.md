@@ -1,5 +1,4 @@
 # Profitloss
-(*profitloss*)
 
 ## Overview
 
@@ -20,11 +19,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.profitloss.get_accounting_profitloss(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_profitloss.nil?
@@ -64,15 +62,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingProfitlossesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingProfitlossesRequest.new(
+  connection_id: '<id>'
+)
 res = s.profitloss.list_accounting_profitlosses(request: req)
 
 unless res.accounting_profitlosses.nil?

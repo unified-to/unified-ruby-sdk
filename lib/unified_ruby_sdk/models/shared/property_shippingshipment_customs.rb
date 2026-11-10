@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Customs information
       class PropertyShippingShipmentCustoms
         extend T::Sig
@@ -16,17 +15,17 @@ module UnifiedRubySDK
         # Customs declared value
         field :amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('amount') } }
 
-        field :contents_type, Crystalline::Nilable.new(Models::Shared::ContentsType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contents_type'), 'decoder': Utils.enum_from_string(Models::Shared::ContentsType, true) } }
+        field :contents_type, Crystalline::Nilable.new(Models::Shared::ContentsType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contents_type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::ContentsType, true) } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
         # Explanation of contents
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
-        field :duties_paid_by, Crystalline::Nilable.new(Models::Shared::DutiesPaidBy), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('duties_paid_by'), 'decoder': Utils.enum_from_string(Models::Shared::DutiesPaidBy, true) } }
+        field :duties_paid_by, Crystalline::Nilable.new(Models::Shared::DutiesPaidBy), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('duties_paid_by'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::DutiesPaidBy, true) } }
         # Customs items
         field :items, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ShippingCustomsItem)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('items') } }
 
-        field :non_delivery_option, Crystalline::Nilable.new(Models::Shared::NonDeliveryOption), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('non_delivery_option'), 'decoder': Utils.enum_from_string(Models::Shared::NonDeliveryOption, true) } }
+        field :non_delivery_option, Crystalline::Nilable.new(Models::Shared::NonDeliveryOption), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('non_delivery_option'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::NonDeliveryOption, true) } }
         # Importer EORI number
         field :recipient_eori, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('recipient_eori') } }
         # Importer tax ID
@@ -38,7 +37,7 @@ module UnifiedRubySDK
         # Exporter tax ID
         field :shipper_tax_number, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('shipper_tax_number') } }
 
-        field :taxes_paid_by, Crystalline::Nilable.new(Models::Shared::TaxesPaidBy), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('taxes_paid_by'), 'decoder': Utils.enum_from_string(Models::Shared::TaxesPaidBy, true) } }
+        field :taxes_paid_by, Crystalline::Nilable.new(Models::Shared::TaxesPaidBy), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('taxes_paid_by'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::TaxesPaidBy, true) } }
 
         sig { params(amount: T.nilable(::Float), contents_type: T.nilable(Models::Shared::ContentsType), currency: T.nilable(::String), description: T.nilable(::String), duties_paid_by: T.nilable(Models::Shared::DutiesPaidBy), items: T.nilable(T::Array[Models::Shared::ShippingCustomsItem]), non_delivery_option: T.nilable(Models::Shared::NonDeliveryOption), recipient_eori: T.nilable(::String), recipient_tax_number: T.nilable(::String), restrictions: T.nilable(T::Array[::String]), shipper_eori: T.nilable(::String), shipper_tax_number: T.nilable(::String), taxes_paid_by: T.nilable(Models::Shared::TaxesPaidBy)).void }
         def initialize(amount: nil, contents_type: nil, currency: nil, description: nil, duties_paid_by: nil, items: nil, non_delivery_option: nil, recipient_eori: nil, recipient_tax_number: nil, restrictions: nil, shipper_eori: nil, shipper_tax_number: nil, taxes_paid_by: nil)

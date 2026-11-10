@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class CalendarEventStatus < T::Enum
-
-
+      class CalendarEventStatus
+        include ::Crystalline::Enum
         enums do
           CANCELED = new('CANCELED')
           CONFIRMED = new('CONFIRMED')
           TENTATIVE = new('TENTATIVE')
         end
+        open!
       end
     end
   end

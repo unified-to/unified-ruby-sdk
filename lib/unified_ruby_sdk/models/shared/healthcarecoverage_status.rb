@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # HealthcareCoverageStatus - Status of the coverage
-      class HealthcareCoverageStatus < T::Enum
-
-
+      class HealthcareCoverageStatus
+        include ::Crystalline::Enum
         enums do
           ACTIVE = new('ACTIVE')
           CANCELLED = new('CANCELLED')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           ENTERED_IN_ERROR = new('ENTERED_IN_ERROR')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

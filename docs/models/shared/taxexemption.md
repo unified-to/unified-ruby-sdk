@@ -1,5 +1,16 @@
 # TaxExemption
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = TaxExemption::FEDERAL_GOV
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = TaxExemption.deserialize("custom_value")
+```
+
 
 ## Values
 

@@ -7,19 +7,13 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class Provider < T::Enum
-
-
+      class Provider
+        include ::Crystalline::Enum
         enums do
           MEETING_CAPTIONS = new('MEETING_CAPTIONS')
-          AWS_TRANSCRIBE = new('AWS_TRANSCRIBE')
-          GOOGLE_SPEECH = new('GOOGLE_SPEECH')
-          ASSEMBLYAI = new('ASSEMBLYAI')
-          DEEPGRAM = new('DEEPGRAM')
-          CUSTOM = new('CUSTOM')
         end
+        open!
       end
     end
   end

@@ -1,5 +1,13 @@
 # CreateGenaiEmbeddingQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreateGenaiEmbeddingQueryParamFields::MODEL_ID
+```
+
 
 ## Values
 

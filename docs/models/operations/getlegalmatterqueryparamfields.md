@@ -1,5 +1,13 @@
 # GetLegalMatterQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetLegalMatterQueryParamFields::ID
+```
+
 
 ## Values
 

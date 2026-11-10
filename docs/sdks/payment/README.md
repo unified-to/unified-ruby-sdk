@@ -1,5 +1,4 @@
 # Payment
-(*payment*)
 
 ## Overview
 
@@ -34,53 +33,52 @@ Creates a PaymentLink. Provide the unified PaymentLink fields in the request bod
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createPaymentLink" method="post" path="/payment/{connection_id}/link" -->
+<!-- UsageSnippet language="ruby" operationID="createPaymentLink" method="post" path="/payment/{connection_id}/link" example="payment_link" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.payment.create_payment_link(payment_link: Models::Shared::PaymentLink.new(
   amount: 17_001.68,
   created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
   currency: 'CAD',
   description: 'Savor the tender essence in our Ball, designed for dim culinary adventures',
-  id: '31c00d44-32e1-4f25-b39c-2bf580d50c71',
+  id: 'abeddf22-4460-4498-b1f6-cf335a4012b0',
   is_active: true,
   is_chargeable_now: true,
   lineitems: [
     Models::Shared::PaymentLineitem.new(
       created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-      id: 'fe0461f8-a88a-40bb-a17a-99a1ae422671',
+      id: '47c4976b-149c-4025-8e40-c787b9b7c179',
       item_description: 'Discover the worst new Computer with an exciting mix of Steel ingredients',
       item_name: 'Soft Marble Cheese',
       tax_amount: 0.0,
       total_amount: 9342.0,
       unit_amount: 519.0,
       unit_quantity: 18.0,
-      updated_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
+      updated_at: DateTime.iso8601('2023-06-04T16:11:45.685Z')
     ),
     Models::Shared::PaymentLineitem.new(
       created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
       discount_amount: 424.32,
-      id: '36a7011e-aefa-4360-a17d-21f99847af48',
+      id: 'b73de4f9-2dff-4527-81ff-5ae72b7997a6',
       item_description: 'Innovative Shoes featuring utilized technology and Cotton construction',
       item_name: 'Sleek Aluminum Shoes',
       notes: 'Cervus decretum viridis doloremque.',
       tax_amount: 0.0,
-      total_amount: 6_647.68,
+      total_amount: 6647.68,
       unit_amount: 884.0,
       unit_quantity: 8.0,
-      updated_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
+      updated_at: DateTime.iso8601('2023-06-04T16:11:45.685Z')
     ),
     Models::Shared::PaymentLineitem.new(
       created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-      id: '248b3a1f-c668-496c-ba79-5b0decf860f2',
+      id: '2939ad7a-cf43-49c5-a940-e24cc38941d5',
       item_description: 'Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance',
       item_name: 'Elegant Concrete Gloves',
       notes: 'Desipio usque vacuus currus cetera testimonium.',
@@ -88,13 +86,13 @@ res = s.payment.create_payment_link(payment_link: Models::Shared::PaymentLink.ne
       total_amount: 1012.0,
       unit_amount: 506.0,
       unit_quantity: 2.0,
-      updated_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
+      updated_at: DateTime.iso8601('2023-06-04T16:11:45.685Z')
     ),
   ],
   metadata: [],
   success_url: 'https://tinted-jet.info',
-  updated_at: DateTime.iso8601('2024-04-18T05:27:33.306Z'),
-  url: 'https://pay.example.com/31c00d44-32e1-4f25-b39c-2bf580d50c71',
+  updated_at: DateTime.iso8601('2024-04-18T16:30:46.548Z'),
+  url: 'https://pay.example.com/abeddf22-4460-4498-b1f6-cf335a4012b0'
 ), connection_id: '<id>')
 
 unless res.payment_link.nil?
@@ -128,17 +126,16 @@ Creates a PaymentPayment. Provide the unified PaymentPayment fields in the reque
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createPaymentPayment" method="post" path="/payment/{connection_id}/payment" -->
+<!-- UsageSnippet language="ruby" operationID="createPaymentPayment" method="post" path="/payment/{connection_id}/payment" example="payment_payment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.payment.create_payment_payment(payment_payment: Models::Shared::PaymentPayment.new(
   allocations: [],
   card_brand: 'MASTERCARD',
@@ -146,8 +143,8 @@ res = s.payment.create_payment_payment(payment_payment: Models::Shared::PaymentP
   category_ids: [],
   created_at: DateTime.iso8601('2022-03-10T00:19:42.086Z'),
   currency: 'EUR',
-  fee_amount: 2_055.82,
-  id: 'd76b205c-59a5-42e2-b707-a1243a1d0376',
+  fee_amount: 2055.82,
+  id: 'b74d5143-a992-4471-806f-46e03d873672',
   metadata: [],
   net_amount: 68_824.18,
   notes: 'Bibo tactus vilicus.',
@@ -159,7 +156,7 @@ res = s.payment.create_payment_payment(payment_payment: Models::Shared::PaymentP
   tip_amount: 0.0,
   total_amount: 70_880.0,
   type: Models::Shared::PaymentPaymentType::INVOICE,
-  updated_at: DateTime.iso8601('2025-10-22T18:28:31.929Z'),
+  updated_at: DateTime.iso8601('2025-10-24T04:12:56.626Z')
 ), connection_id: '<id>')
 
 unless res.payment_payment.nil?
@@ -193,17 +190,16 @@ Creates a PaymentSubscription. Provide the unified PaymentSubscription fields in
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createPaymentSubscription" method="post" path="/payment/{connection_id}/subscription" -->
+<!-- UsageSnippet language="ruby" operationID="createPaymentSubscription" method="post" path="/payment/{connection_id}/subscription" example="payment_subscription" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.payment.create_payment_subscription(payment_subscription: Models::Shared::PaymentSubscription.new(
   created_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
   currency: 'USD',
@@ -211,7 +207,7 @@ res = s.payment.create_payment_subscription(payment_subscription: Models::Shared
   current_period_start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
   day_of_month: 8.0,
   description: 'Innovative Mouse featuring important technology and Bamboo construction',
-  id: 'ee74ac00-4667-4919-942f-e006c3a21228',
+  id: '08f4adca-c960-407e-b79e-c545ea9c6a07',
   interval: 1.0,
   interval_unit: Models::Shared::IntervalUnit::YEAR,
   lineitems: [],
@@ -220,7 +216,7 @@ res = s.payment.create_payment_subscription(payment_subscription: Models::Shared
   start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
   status: Models::Shared::PaymentSubscriptionStatus::ACTIVE,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2023-10-06T18:47:43.089Z'),
+  updated_at: DateTime.iso8601('2023-10-06T23:56:08.307Z')
 ), connection_id: '<id>')
 
 unless res.payment_subscription.nil?
@@ -260,11 +256,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.payment.get_payment_link(connection_id: '<id>', id: '<id>')
 
 unless res.payment_link.nil?
@@ -304,11 +299,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.payment.get_payment_payment(connection_id: '<id>', id: '<id>')
 
 unless res.payment_payment.nil?
@@ -348,11 +342,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.payment.get_payment_payout(connection_id: '<id>', id: '<id>')
 
 unless res.payment_payout.nil?
@@ -392,11 +385,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.payment.get_payment_refund(connection_id: '<id>', id: '<id>')
 
 unless res.payment_refund.nil?
@@ -436,11 +428,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.payment.get_payment_subscription(connection_id: '<id>', id: '<id>')
 
 unless res.payment_subscription.nil?
@@ -480,15 +471,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListPaymentLinksRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListPaymentLinksRequest.new(
+  connection_id: '<id>'
+)
 res = s.payment.list_payment_links(request: req)
 
 unless res.payment_links.nil?
@@ -525,15 +515,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListPaymentPaymentsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListPaymentPaymentsRequest.new(
+  connection_id: '<id>'
+)
 res = s.payment.list_payment_payments(request: req)
 
 unless res.payment_payments.nil?
@@ -570,15 +559,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListPaymentPayoutsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListPaymentPayoutsRequest.new(
+  connection_id: '<id>'
+)
 res = s.payment.list_payment_payouts(request: req)
 
 unless res.payment_payouts.nil?
@@ -615,15 +603,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListPaymentRefundsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListPaymentRefundsRequest.new(
+  connection_id: '<id>'
+)
 res = s.payment.list_payment_refunds(request: req)
 
 unless res.payment_refunds.nil?
@@ -660,15 +647,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListPaymentSubscriptionsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListPaymentSubscriptionsRequest.new(
+  connection_id: '<id>'
+)
 res = s.payment.list_payment_subscriptions(request: req)
 
 unless res.payment_subscriptions.nil?
@@ -699,16 +685,16 @@ Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchPaymentLink" method="patch" path="/payment/{connection_id}/link/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchPaymentLink" method="patch" path="/payment/{connection_id}/link/{id}" example="payment_link" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchPaymentLinkRequest.new(
   payment_link: Models::Shared::PaymentLink.new(
@@ -716,37 +702,37 @@ req = Models::Operations::PatchPaymentLinkRequest.new(
     created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
     currency: 'CAD',
     description: 'Savor the tender essence in our Ball, designed for dim culinary adventures',
-    id: 'c68999ca-3130-469d-84f1-1787cdf6e842',
+    id: '0b779f7a-52ed-4184-b7ef-2e3799f1689b',
     is_active: true,
     is_chargeable_now: true,
     lineitems: [
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-        id: 'a546f474-f215-44d1-ab5f-06535c87f9e3',
+        id: 'a9663abc-5af5-4a4a-a97a-f67aa4bce987',
         item_description: 'Discover the worst new Computer with an exciting mix of Steel ingredients',
         item_name: 'Soft Marble Cheese',
         tax_amount: 0.0,
         total_amount: 9342.0,
         unit_amount: 519.0,
         unit_quantity: 18.0,
-        updated_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
+        updated_at: DateTime.iso8601('2023-06-04T16:11:45.685Z')
       ),
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
         discount_amount: 424.32,
-        id: '3875734a-eaf6-4429-981e-e9f021aad3f0',
+        id: '2799b592-914b-4ac6-8898-77686d539d7e',
         item_description: 'Innovative Shoes featuring utilized technology and Cotton construction',
         item_name: 'Sleek Aluminum Shoes',
         notes: 'Cervus decretum viridis doloremque.',
         tax_amount: 0.0,
-        total_amount: 6_647.68,
+        total_amount: 6647.68,
         unit_amount: 884.0,
         unit_quantity: 8.0,
-        updated_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
+        updated_at: DateTime.iso8601('2023-06-04T16:11:45.685Z')
       ),
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-        id: '30ebabfb-4ba1-4177-a123-42efd6e01272',
+        id: '75bba503-2eab-4e63-97b9-09efe286b86c',
         item_description: 'Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance',
         item_name: 'Elegant Concrete Gloves',
         notes: 'Desipio usque vacuus currus cetera testimonium.',
@@ -754,18 +740,17 @@ req = Models::Operations::PatchPaymentLinkRequest.new(
         total_amount: 1012.0,
         unit_amount: 506.0,
         unit_quantity: 2.0,
-        updated_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
+        updated_at: DateTime.iso8601('2023-06-04T16:11:45.685Z')
       ),
     ],
     metadata: [],
     success_url: 'https://tinted-jet.info',
-    updated_at: DateTime.iso8601('2024-04-18T05:27:33.314Z'),
-    url: 'https://pay.example.com/c68999ca-3130-469d-84f1-1787cdf6e842',
+    updated_at: DateTime.iso8601('2024-04-18T16:30:46.554Z'),
+    url: 'https://pay.example.com/0b779f7a-52ed-4184-b7ef-2e3799f1689b'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.payment.patch_payment_link(request: req)
 
 unless res.payment_link.nil?
@@ -796,16 +781,16 @@ Updates the PaymentPayment identified by `id`. Provide the unified PaymentPaymen
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchPaymentPayment" method="patch" path="/payment/{connection_id}/payment/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchPaymentPayment" method="patch" path="/payment/{connection_id}/payment/{id}" example="payment_payment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchPaymentPaymentRequest.new(
   payment_payment: Models::Shared::PaymentPayment.new(
@@ -815,8 +800,8 @@ req = Models::Operations::PatchPaymentPaymentRequest.new(
     category_ids: [],
     created_at: DateTime.iso8601('2022-03-10T00:19:42.086Z'),
     currency: 'EUR',
-    fee_amount: 2_055.82,
-    id: '4a9b43ab-136c-4788-89e7-7827ee3fc952',
+    fee_amount: 2055.82,
+    id: 'c00e2f9a-2170-4e96-a61b-85966f5d484e',
     metadata: [],
     net_amount: 68_824.18,
     notes: 'Bibo tactus vilicus.',
@@ -828,12 +813,11 @@ req = Models::Operations::PatchPaymentPaymentRequest.new(
     tip_amount: 0.0,
     total_amount: 70_880.0,
     type: Models::Shared::PaymentPaymentType::INVOICE,
-    updated_at: DateTime.iso8601('2025-10-22T18:28:31.957Z'),
+    updated_at: DateTime.iso8601('2025-10-24T04:12:56.645Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.payment.patch_payment_payment(request: req)
 
 unless res.payment_payment.nil?
@@ -864,16 +848,16 @@ Updates the PaymentSubscription identified by `id`. Provide the unified PaymentS
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchPaymentSubscription" method="patch" path="/payment/{connection_id}/subscription/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchPaymentSubscription" method="patch" path="/payment/{connection_id}/subscription/{id}" example="payment_subscription" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchPaymentSubscriptionRequest.new(
   payment_subscription: Models::Shared::PaymentSubscription.new(
@@ -883,7 +867,7 @@ req = Models::Operations::PatchPaymentSubscriptionRequest.new(
     current_period_start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     day_of_month: 8.0,
     description: 'Innovative Mouse featuring important technology and Bamboo construction',
-    id: '98858235-bf3e-4d14-b138-41b505d8107d',
+    id: 'bd2b5548-a343-4150-80fa-95ab43904dd3',
     interval: 1.0,
     interval_unit: Models::Shared::IntervalUnit::YEAR,
     lineitems: [],
@@ -892,12 +876,11 @@ req = Models::Operations::PatchPaymentSubscriptionRequest.new(
     start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     status: Models::Shared::PaymentSubscriptionStatus::ACTIVE,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-10-06T18:47:43.093Z'),
+    updated_at: DateTime.iso8601('2023-10-06T23:56:08.309Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.payment.patch_payment_subscription(request: req)
 
 unless res.payment_subscription.nil?
@@ -934,11 +917,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.payment.remove_payment_link(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -976,11 +958,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.payment.remove_payment_payment(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1018,11 +999,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.payment.remove_payment_subscription(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1054,16 +1034,16 @@ Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updatePaymentLink" method="put" path="/payment/{connection_id}/link/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updatePaymentLink" method="put" path="/payment/{connection_id}/link/{id}" example="payment_link" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdatePaymentLinkRequest.new(
   payment_link: Models::Shared::PaymentLink.new(
@@ -1071,37 +1051,37 @@ req = Models::Operations::UpdatePaymentLinkRequest.new(
     created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
     currency: 'CAD',
     description: 'Savor the tender essence in our Ball, designed for dim culinary adventures',
-    id: 'c68999ca-3130-469d-84f1-1787cdf6e842',
+    id: '0b779f7a-52ed-4184-b7ef-2e3799f1689b',
     is_active: true,
     is_chargeable_now: true,
     lineitems: [
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-        id: 'a546f474-f215-44d1-ab5f-06535c87f9e3',
+        id: 'a9663abc-5af5-4a4a-a97a-f67aa4bce987',
         item_description: 'Discover the worst new Computer with an exciting mix of Steel ingredients',
         item_name: 'Soft Marble Cheese',
         tax_amount: 0.0,
         total_amount: 9342.0,
         unit_amount: 519.0,
         unit_quantity: 18.0,
-        updated_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
+        updated_at: DateTime.iso8601('2023-06-04T16:11:45.685Z')
       ),
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
         discount_amount: 424.32,
-        id: '3875734a-eaf6-4429-981e-e9f021aad3f0',
+        id: '2799b592-914b-4ac6-8898-77686d539d7e',
         item_description: 'Innovative Shoes featuring utilized technology and Cotton construction',
         item_name: 'Sleek Aluminum Shoes',
         notes: 'Cervus decretum viridis doloremque.',
         tax_amount: 0.0,
-        total_amount: 6_647.68,
+        total_amount: 6647.68,
         unit_amount: 884.0,
         unit_quantity: 8.0,
-        updated_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
+        updated_at: DateTime.iso8601('2023-06-04T16:11:45.685Z')
       ),
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-        id: '30ebabfb-4ba1-4177-a123-42efd6e01272',
+        id: '75bba503-2eab-4e63-97b9-09efe286b86c',
         item_description: 'Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance',
         item_name: 'Elegant Concrete Gloves',
         notes: 'Desipio usque vacuus currus cetera testimonium.',
@@ -1109,18 +1089,17 @@ req = Models::Operations::UpdatePaymentLinkRequest.new(
         total_amount: 1012.0,
         unit_amount: 506.0,
         unit_quantity: 2.0,
-        updated_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
+        updated_at: DateTime.iso8601('2023-06-04T16:11:45.685Z')
       ),
     ],
     metadata: [],
     success_url: 'https://tinted-jet.info',
-    updated_at: DateTime.iso8601('2024-04-18T05:27:33.314Z'),
-    url: 'https://pay.example.com/c68999ca-3130-469d-84f1-1787cdf6e842',
+    updated_at: DateTime.iso8601('2024-04-18T16:30:46.554Z'),
+    url: 'https://pay.example.com/0b779f7a-52ed-4184-b7ef-2e3799f1689b'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.payment.update_payment_link(request: req)
 
 unless res.payment_link.nil?
@@ -1151,16 +1130,16 @@ Updates the PaymentPayment identified by `id`. Provide the unified PaymentPaymen
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updatePaymentPayment" method="put" path="/payment/{connection_id}/payment/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updatePaymentPayment" method="put" path="/payment/{connection_id}/payment/{id}" example="payment_payment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdatePaymentPaymentRequest.new(
   payment_payment: Models::Shared::PaymentPayment.new(
@@ -1170,8 +1149,8 @@ req = Models::Operations::UpdatePaymentPaymentRequest.new(
     category_ids: [],
     created_at: DateTime.iso8601('2022-03-10T00:19:42.086Z'),
     currency: 'EUR',
-    fee_amount: 2_055.82,
-    id: '4a9b43ab-136c-4788-89e7-7827ee3fc952',
+    fee_amount: 2055.82,
+    id: 'c00e2f9a-2170-4e96-a61b-85966f5d484e',
     metadata: [],
     net_amount: 68_824.18,
     notes: 'Bibo tactus vilicus.',
@@ -1183,12 +1162,11 @@ req = Models::Operations::UpdatePaymentPaymentRequest.new(
     tip_amount: 0.0,
     total_amount: 70_880.0,
     type: Models::Shared::PaymentPaymentType::INVOICE,
-    updated_at: DateTime.iso8601('2025-10-22T18:28:31.957Z'),
+    updated_at: DateTime.iso8601('2025-10-24T04:12:56.645Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.payment.update_payment_payment(request: req)
 
 unless res.payment_payment.nil?
@@ -1219,16 +1197,16 @@ Updates the PaymentSubscription identified by `id`. Provide the unified PaymentS
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updatePaymentSubscription" method="put" path="/payment/{connection_id}/subscription/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updatePaymentSubscription" method="put" path="/payment/{connection_id}/subscription/{id}" example="payment_subscription" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdatePaymentSubscriptionRequest.new(
   payment_subscription: Models::Shared::PaymentSubscription.new(
@@ -1238,7 +1216,7 @@ req = Models::Operations::UpdatePaymentSubscriptionRequest.new(
     current_period_start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     day_of_month: 8.0,
     description: 'Innovative Mouse featuring important technology and Bamboo construction',
-    id: '98858235-bf3e-4d14-b138-41b505d8107d',
+    id: 'bd2b5548-a343-4150-80fa-95ab43904dd3',
     interval: 1.0,
     interval_unit: Models::Shared::IntervalUnit::YEAR,
     lineitems: [],
@@ -1247,12 +1225,11 @@ req = Models::Operations::UpdatePaymentSubscriptionRequest.new(
     start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     status: Models::Shared::PaymentSubscriptionStatus::ACTIVE,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-10-06T18:47:43.093Z'),
+    updated_at: DateTime.iso8601('2023-10-06T23:56:08.309Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.payment.update_payment_subscription(request: req)
 
 unless res.payment_subscription.nil?

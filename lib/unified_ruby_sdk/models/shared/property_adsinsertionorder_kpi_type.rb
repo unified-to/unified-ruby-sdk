@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PropertyAdsInsertionorderKpiType < T::Enum
-
-
+      class PropertyAdsInsertionorderKpiType
+        include ::Crystalline::Enum
         enums do
           UNSPECIFIED = new('UNSPECIFIED')
           CPM = new('CPM')
@@ -35,6 +33,7 @@ module UnifiedRubySDK
           CUSTOM_IMPRESSION_VALUE_OVER_COST = new('CUSTOM_IMPRESSION_VALUE_OVER_COST')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

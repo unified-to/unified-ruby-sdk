@@ -1,5 +1,4 @@
 # Ats
-(*ats*)
 
 ## Overview
 
@@ -62,21 +61,20 @@ Creates a AtsActivity. Provide the unified AtsActivity fields in the request bod
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAtsActivity" method="post" path="/ats/{connection_id}/activity" -->
+<!-- UsageSnippet language="ruby" operationID="createAtsActivity" method="post" path="/ats/{connection_id}/activity" example="ats_activity" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ats.create_ats_activity(ats_activity: Models::Shared::AtsActivity.new(
   created_at: DateTime.iso8601('2022-08-07T03:16:43.865Z'),
   description: 'Sapiente.',
-  id: 'c0c24e8f-72f7-4118-994a-5979f6b18d3a',
+  id: '25d3ffbd-8140-4418-9869-3e3589be6815',
   is_private: false,
   metadata: [
     Models::Shared::AtsMetadata.new(
@@ -84,16 +82,16 @@ res = s.ats.create_ats_activity(ats_activity: Models::Shared::AtsActivity.new(
 
       },
       format: Models::Shared::AtsMetadataFormat::TEXT,
-      id: 'b9308041-c076-45b8-a1b3-ba6d88fa60e4',
+      id: '6063a209-f53e-461a-925a-3b54e1f18ef5',
       namespace: 'activity',
       slug: 'cimentarius',
-      value: 'Reprehenderit verto.',
+      value: 'Reprehenderit verto.'
     ),
   ],
   sub_type: 'TASK',
   title: 'Venio blandior aureus.',
   type: Models::Shared::AtsActivityType::TASK,
-  updated_at: DateTime.iso8601('2026-04-20T19:27:41.530Z'),
+  updated_at: DateTime.iso8601('2026-04-22T09:17:47.551Z')
 ), connection_id: '<id>')
 
 unless res.ats_activity.nil?
@@ -127,44 +125,43 @@ Creates a AtsApplication. Provide the unified AtsApplication fields in the reque
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAtsApplication" method="post" path="/ats/{connection_id}/application" -->
+<!-- UsageSnippet language="ruby" operationID="createAtsApplication" method="post" path="/ats/{connection_id}/application" example="ats_application" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ats.create_ats_application(ats_application: Models::Shared::AtsApplication.new(
   answers: [],
-  applied_at: DateTime.iso8601('2025-10-12T02:38:14.150Z'),
+  applied_at: DateTime.iso8601('2025-10-13T06:51:13.161Z'),
   created_at: DateTime.iso8601('2023-10-17T07:19:48.787Z'),
-  hired_at: DateTime.iso8601('2026-05-28T23:46:32.962Z'),
-  id: '4f1727e9-e5cf-4c59-95e8-64c4b53e8e1b',
+  hired_at: DateTime.iso8601('2026-05-30T12:53:24.681Z'),
+  id: '1465bd58-0346-4e89-9524-bfb3bb8301dd',
   metadata: [
     Models::Shared::AtsMetadata.new(
       extra_data: {
 
       },
       format: Models::Shared::AtsMetadataFormat::TEXT,
-      id: '7996752f-395c-452e-b0d2-0e8a806039d2',
+      id: '76a20603-9164-49d0-a1ae-7071891934bd',
       namespace: 'application',
       slug: 'stella',
-      value: 'Caput.',
+      value: 'Caput.'
     ),
   ],
   offers: [],
   original_status: 'vomica',
   original_substatus: 'allatus',
-  rejected_at: DateTime.iso8601('2026-10-30T09:20:20.718Z'),
+  rejected_at: DateTime.iso8601('2026-11-01T04:27:21.072Z'),
   rejected_reason: 'Cometes amplitudo videlicet talio.',
   source: 'credo',
   status: Models::Shared::AtsApplicationStatus::REVIEWING,
   summary: 'Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.',
-  updated_at: DateTime.iso8601('2026-11-06T08:24:55.669Z'),
+  updated_at: DateTime.iso8601('2026-11-08T03:48:10.313Z')
 ), connection_id: '<id>')
 
 unless res.ats_application.nil?
@@ -198,17 +195,16 @@ Creates a AtsCandidate. Provide the unified AtsCandidate fields in the request b
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAtsCandidate" method="post" path="/ats/{connection_id}/candidate" -->
+<!-- UsageSnippet language="ruby" operationID="createAtsCandidate" method="post" path="/ats/{connection_id}/candidate" example="ats_candidate" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ats.create_ats_candidate(ats_candidate: Models::Shared::AtsCandidate.new(
   address: Models::Shared::PropertyAtsCandidateAddress.new(
     address1: '6790 S 1st Street',
@@ -216,7 +212,7 @@ res = s.ats.create_ats_candidate(ats_candidate: Models::Shared::AtsCandidate.new
     country_code: 'US',
     postal_code: '91605',
     region: 'Idaho',
-    region_code: 'HI',
+    region_code: 'HI'
   ),
   company_name: 'Lehner and Sons',
   created_at: DateTime.iso8601('2023-10-16T05:42:56.049Z'),
@@ -228,7 +224,7 @@ res = s.ats.create_ats_candidate(ats_candidate: Models::Shared::AtsCandidate.new
       field_of_study: 'curtus',
       institution: 'Abbott - Batz',
       level: 'phd',
-      start_at: DateTime.iso8601('1994-06-09T13:31:39.059Z'),
+      start_at: DateTime.iso8601('1994-06-09T13:31:39.059Z')
     ),
     Models::Shared::AtsCandidateEducation.new(
       degree: 'blah cappelletti',
@@ -236,14 +232,14 @@ res = s.ats.create_ats_candidate(ats_candidate: Models::Shared::AtsCandidate.new
       field_of_study: 'crustulum',
       institution: 'Herman, Franey and Lebsack',
       level: 'highschool',
-      start_at: DateTime.iso8601('1992-11-28T20:23:20.311Z'),
+      start_at: DateTime.iso8601('1992-11-28T20:23:20.311Z')
     ),
   ],
   emails: [
     Models::Shared::AtsEmail.new(
       email: 'ardith.beatty@outlook.com',
       name: 'Ardith Beatty',
-      type: Models::Shared::AtsEmailType::HOME,
+      type: Models::Shared::AtsEmailType::HOME
     ),
   ],
   experiences: [
@@ -251,18 +247,20 @@ res = s.ats.create_ats_candidate(ats_candidate: Models::Shared::AtsCandidate.new
       company_name: 'Kutch, Lind and Marks',
       end_at: DateTime.iso8601('1974-03-01T17:02:58.824Z'),
       start_at: DateTime.iso8601('1999-09-21T22:12:51.663Z'),
-      title: 'Lead Security Technician',
+      title: 'Lead Security Technician'
     ),
     Models::Shared::AtsCandidateExperience.new(
       company_name: 'Trantow, Sipes and Witting',
       end_at: DateTime.iso8601('2004-10-14T14:01:00.717Z'),
       start_at: DateTime.iso8601('1996-12-15T04:12:04.582Z'),
-      title: 'Regional Applications Planner',
+      title: 'Regional Applications Planner'
     ),
   ],
   first_name: 'Ardith',
-  id: '62ac5338-df7c-4342-aff2-913242c267a6',
+  has_do_not_contact: false,
+  id: '61dff435-bb21-457f-8dbf-7d503575f8ca',
   image_url: 'https://avatars.githubusercontent.com/u/27464445',
+  is_private: true,
   job_ids: [],
   last_name: 'Beatty',
   link_urls: [
@@ -274,10 +272,10 @@ res = s.ats.create_ats_candidate(ats_candidate: Models::Shared::AtsCandidate.new
 
       },
       format: Models::Shared::AtsMetadataFormat::TEXT,
-      id: 'df01ae86-8402-4bea-9821-a2b927fd8b6e',
+      id: '2f7fb378-0bc6-4dff-a8d4-76423a34d161',
       namespace: 'custom',
       slug: 'custom_field',
-      value: 'officia',
+      value: 'officia'
     ),
   ],
   name: 'Ardith Beatty',
@@ -297,12 +295,12 @@ res = s.ats.create_ats_candidate(ats_candidate: Models::Shared::AtsCandidate.new
   telephones: [
     Models::Shared::AtsTelephone.new(
       telephone: '(837) 251-3896',
-      type: Models::Shared::AtsTelephoneType::MOBILE,
+      type: Models::Shared::AtsTelephoneType::MOBILE
     ),
   ],
   title: 'Customer Division Producer',
-  updated_at: DateTime.iso8601('2024-05-02T02:48:23.164Z'),
-  web_url: 'https://fragrant-husband.net/',
+  updated_at: DateTime.iso8601('2024-05-02T10:31:50.474Z'),
+  web_url: 'https://fragrant-husband.net/'
 ), connection_id: '<id>')
 
 unless res.ats_candidate.nil?
@@ -336,24 +334,23 @@ Creates a AtsCompany. Provide the unified AtsCompany fields in the request body;
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAtsCompany" method="post" path="/ats/{connection_id}/company" -->
+<!-- UsageSnippet language="ruby" operationID="createAtsCompany" method="post" path="/ats/{connection_id}/company" example="ats_company" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ats.create_ats_company(ats_company: Models::Shared::AtsCompany.new(
   created_at: DateTime.iso8601('2019-04-22T03:50:02.920Z'),
-  id: '7ddcdc96-22cd-4fc4-822d-70539198f80b',
+  id: 'fb2b20f3-c568-40ee-8b9a-7892124921dc',
   name: 'Gulgowski, Dibbert and Wilderman',
   phone: '1-882-360-2010',
-  updated_at: DateTime.iso8601('2020-10-04T20:08:40.664Z'),
-  website_url: 'https://www.gulgowskidibbert.com',
+  updated_at: DateTime.iso8601('2020-10-05T04:31:44.522Z'),
+  website_url: 'https://www.gulgowskidibbert.com'
 ), connection_id: '<id>')
 
 unless res.ats_company.nil?
@@ -387,25 +384,24 @@ Creates a AtsDocument. Provide the unified AtsDocument fields in the request bod
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAtsDocument" method="post" path="/ats/{connection_id}/document" -->
+<!-- UsageSnippet language="ruby" operationID="createAtsDocument" method="post" path="/ats/{connection_id}/document" example="ats_document" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ats.create_ats_document(ats_document: Models::Shared::AtsDocument.new(
   created_at: DateTime.iso8601('2021-08-20T08:00:27.437Z'),
   document_url: 'https://vengeful-lashes.biz',
   filename: 'lonzo_schowalter_resume.pdf',
-  id: '381243a5-97a4-4040-9bf5-811a044c9fa3',
+  id: '0a16b94d-ee51-4c75-b6d9-12dcddd42da4',
   metadata: [],
   type: Models::Shared::AtsDocumentType::COVER_LETTER,
-  updated_at: DateTime.iso8601('2022-12-11T23:30:24.114Z'),
+  updated_at: DateTime.iso8601('2022-12-12T10:25:27.881Z')
 ), connection_id: '<id>')
 
 unless res.ats_document.nil?
@@ -439,27 +435,26 @@ Creates a AtsInterview. Provide the unified AtsInterview fields in the request b
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAtsInterview" method="post" path="/ats/{connection_id}/interview" -->
+<!-- UsageSnippet language="ruby" operationID="createAtsInterview" method="post" path="/ats/{connection_id}/interview" example="ats_interview" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ats.create_ats_interview(ats_interview: Models::Shared::AtsInterview.new(
   created_at: DateTime.iso8601('2021-11-28T03:14:47.774Z'),
   end_at: DateTime.iso8601('2021-12-08T06:33:19.583Z'),
-  id: '56ab8684-0db3-4623-a94e-6028b0d2f8cc',
+  id: 'beaccb31-663c-4228-a7db-486a327758b2',
   location: '26596 Halle Trafficway',
   meeting_url: 'https://immaculate-foodstuffs.biz',
   metadata: [],
   start_at: DateTime.iso8601('2021-12-08T06:03:19.583Z'),
   status: Models::Shared::AtsInterviewStatus::SCHEDULED,
-  updated_at: DateTime.iso8601('2023-09-30T18:12:10.039Z'),
+  updated_at: DateTime.iso8601('2023-10-01T10:22:06.267Z')
 ), connection_id: '<id>')
 
 unless res.ats_interview.nil?
@@ -493,17 +488,16 @@ Creates a AtsJob. Provide the unified AtsJob fields in the request body; they ar
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAtsJob" method="post" path="/ats/{connection_id}/job" -->
+<!-- UsageSnippet language="ruby" operationID="createAtsJob" method="post" path="/ats/{connection_id}/job" example="ats_job" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ats.create_ats_job(ats_job: Models::Shared::AtsJob.new(
   addresses: [
     Models::Shared::AtsAddress.new(
@@ -512,7 +506,7 @@ res = s.ats.create_ats_job(ats_job: Models::Shared::AtsJob.new(
       country_code: 'US',
       postal_code: '89776-0669',
       region: 'Mississippi',
-      region_code: 'FL',
+      region_code: 'FL'
     ),
   ],
   compensation: [
@@ -521,33 +515,33 @@ res = s.ats.create_ats_job(ats_job: Models::Shared::AtsJob.new(
       frequency: Models::Shared::Frequency::DAY,
       max: 174_303.0,
       min: 174_042.0,
-      type: Models::Shared::AtsCompensationType::BONUS,
+      type: Models::Shared::AtsCompensationType::BONUS
     ),
     Models::Shared::AtsCompensation.new(
       currency: 'MZN',
       frequency: Models::Shared::Frequency::MONTH,
       max: 171_171.0,
       min: 151_975.0,
-      type: Models::Shared::AtsCompensationType::SALARY,
+      type: Models::Shared::AtsCompensationType::SALARY
     ),
   ],
   created_at: DateTime.iso8601('2023-06-16T12:51:44.518Z'),
   description: 'Global',
   employment_type: Models::Shared::EmploymentType::FREELANCE,
   hiring_managers: [],
-  id: 'd18e22a1-ff8d-4f9c-a991-1fa575ae33e7',
+  id: '01cdf777-0403-4f44-9712-c89df7780ef9',
   industry: 'Handcrafted Bamboo Soap',
   language_locale: 'en',
   metadata: [
     Models::Shared::AtsMetadata.new(
       extra_data: {
-        "display_name": 'Custom Property',
+        'display_name' => 'Custom Property',
       },
       format: Models::Shared::AtsMetadataFormat::TEXT,
-      id: '11188b48-3e7b-40c8-98c6-5b23567ab80c',
+      id: '1fa83b2d-bc33-42e6-92a8-26c8e271f91d',
       namespace: 'custom',
       slug: 'custom_property',
-      value: 'desolo',
+      value: 'desolo'
     ),
   ],
   minimum_degree: 'Bachelor',
@@ -557,8 +551,8 @@ res = s.ats.create_ats_job(ats_job: Models::Shared::AtsJob.new(
   openings: [
     Models::Shared::AtsJobOpening.new(
       close_reason: 'Admoveo trado textilis.',
-      opened_at: DateTime.iso8601('2026-06-24T19:11:52.808Z'),
-      status: Models::Shared::AtsJobOpeningStatus::OPEN,
+      opened_at: DateTime.iso8601('2026-06-26T09:52:55.437Z'),
+      status: Models::Shared::AtsJobOpeningStatus::OPEN
     ),
   ],
   postings: [
@@ -569,16 +563,16 @@ res = s.ats.create_ats_job(ats_job: Models::Shared::AtsJob.new(
         country_code: 'US',
         postal_code: '98754',
         region: 'Wisconsin',
-        region_code: 'CO',
+        region_code: 'CO'
       ),
-      created_at: DateTime.iso8601('2026-08-19T18:47:20.545Z'),
+      created_at: DateTime.iso8601('2026-08-21T11:26:03.383Z'),
       description: 'Beatus eum volutabrum balbus victus ipsa tubineus claustrum.',
-      id: 'de7ee025-64fe-4303-9e9f-660284f0b4f3',
+      id: '37145f1d-7a2c-43cf-bcd6-3d226904b2b4',
       is_active: false,
       location: '1725 Hessel Keys',
       name: 'International Identity Manager',
       posting_url: 'https://obedient-yak.com',
-      updated_at: DateTime.iso8601('2026-09-15T11:59:18.530Z'),
+      updated_at: DateTime.iso8601('2026-09-17T05:34:10.698Z')
     ),
   ],
   public_job_urls: [
@@ -588,7 +582,7 @@ res = s.ats.create_ats_job(ats_job: Models::Shared::AtsJob.new(
   questions: [
     Models::Shared::AtsJobQuestion.new(
       description: 'Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.',
-      id: 'c8af20e4-4b35-4fad-9450-83776a2fc0d5',
+      id: 'd8febb09-542b-43b3-8a68-0d913efdc143',
       max_length: 117.0,
       min_length: 1.0,
       options: [
@@ -598,10 +592,10 @@ res = s.ats.create_ats_job(ats_job: Models::Shared::AtsJob.new(
       prompt: 'Totam maxime tres tergiversatio.',
       question: 'Doloribus mollitia.',
       required: true,
-      type: Models::Shared::AtsJobQuestionType::TEXT,
+      type: Models::Shared::AtsJobQuestionType::TEXT
     ),
     Models::Shared::AtsJobQuestion.new(
-      id: '16d36235-b3d5-40d1-b2c1-05653ca52096',
+      id: '63d5dd0f-ebf4-4fdd-9d56-390fbfd987e5',
       max_length: 453.0,
       min_length: 1.0,
       options: [
@@ -610,11 +604,11 @@ res = s.ats.create_ats_job(ats_job: Models::Shared::AtsJob.new(
       prompt: 'Veritatis sodalitas nemo natus attonbitus reprehenderit voro depono.',
       question: 'Nam.',
       required: false,
-      type: Models::Shared::AtsJobQuestionType::TEXT,
+      type: Models::Shared::AtsJobQuestionType::TEXT
     ),
     Models::Shared::AtsJobQuestion.new(
       description: 'Taceo rem compello spectaculum mollitia arcus compello.',
-      id: '3708c269-fc97-4e6d-8fe4-253f8c762a3f',
+      id: '64693ed0-a86a-441f-a6c6-2a73f7d0e4c5',
       max_length: 66.0,
       min_length: 1.0,
       options: [
@@ -623,7 +617,7 @@ res = s.ats.create_ats_job(ats_job: Models::Shared::AtsJob.new(
       prompt: 'Tum tamisium autus.',
       question: 'Confero trepide.',
       required: false,
-      type: Models::Shared::AtsJobQuestionType::TEXT,
+      type: Models::Shared::AtsJobQuestionType::TEXT
     ),
   ],
   skills: [
@@ -632,7 +626,7 @@ res = s.ats.create_ats_job(ats_job: Models::Shared::AtsJob.new(
   ],
   status: Models::Shared::AtsJobStatus::ARCHIVED,
   summary: 'Crepusculum adsuesco vere.',
-  updated_at: DateTime.iso8601('2026-03-14T18:01:21.485Z'),
+  updated_at: DateTime.iso8601('2026-03-16T05:07:54.357Z')
 ), connection_id: '<id>')
 
 unless res.ats_job.nil?
@@ -666,35 +660,34 @@ Creates a AtsScorecard. Provide the unified AtsScorecard fields in the request b
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAtsScorecard" method="post" path="/ats/{connection_id}/scorecard" -->
+<!-- UsageSnippet language="ruby" operationID="createAtsScorecard" method="post" path="/ats/{connection_id}/scorecard" example="ats_scorecard" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ats.create_ats_scorecard(ats_scorecard: Models::Shared::AtsScorecard.new(
   comment: 'Maiores enim.',
   created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
-  id: '898a21da-f110-4ca9-9af1-3ded641b098f',
+  id: 'a67ba59d-bbce-4ca4-8f8b-c11b10657db8',
   metadata: [],
   questions: [
     Models::Shared::AtsScorecardQuestion.new(
       description: 'Sulum textor eveniet facere vita.',
-      text: 'Aliquam.',
+      text: 'Aliquam.'
     ),
     Models::Shared::AtsScorecardQuestion.new(
       answer: 'Decretum.',
       description: 'Conatus cicuta doloremque statua bonus.',
-      text: 'Pecto vulpes libero vomer comburo.',
+      text: 'Pecto vulpes libero vomer comburo.'
     ),
   ],
   recommendation: Models::Shared::Recommendation::STRONG_YES,
-  updated_at: DateTime.iso8601('2023-06-10T19:29:41.904Z'),
+  updated_at: DateTime.iso8601('2023-06-11T07:29:30.805Z')
 ), connection_id: '<id>')
 
 unless res.ats_scorecard.nil?
@@ -734,11 +727,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ats.get_ats_activity(connection_id: '<id>', id: '<id>')
 
 unless res.ats_activity.nil?
@@ -778,11 +770,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ats.get_ats_application(connection_id: '<id>', id: '<id>')
 
 unless res.ats_application.nil?
@@ -822,11 +813,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ats.get_ats_applicationstatus(connection_id: '<id>', id: '<id>')
 
 unless res.ats_status.nil?
@@ -866,11 +856,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ats.get_ats_candidate(connection_id: '<id>', id: '<id>')
 
 unless res.ats_candidate.nil?
@@ -910,11 +899,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ats.get_ats_company(connection_id: '<id>', id: '<id>')
 
 unless res.ats_company.nil?
@@ -954,11 +942,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ats.get_ats_document(connection_id: '<id>', id: '<id>')
 
 unless res.ats_document.nil?
@@ -998,11 +985,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ats.get_ats_interview(connection_id: '<id>', id: '<id>')
 
 unless res.ats_interview.nil?
@@ -1042,11 +1028,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ats.get_ats_job(connection_id: '<id>', id: '<id>')
 
 unless res.ats_job.nil?
@@ -1086,11 +1071,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ats.get_ats_scorecard(connection_id: '<id>', id: '<id>')
 
 unless res.ats_scorecard.nil?
@@ -1130,15 +1114,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAtsActivitiesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAtsActivitiesRequest.new(
+  connection_id: '<id>'
+)
 res = s.ats.list_ats_activities(request: req)
 
 unless res.ats_activities.nil?
@@ -1175,15 +1158,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAtsApplicationsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAtsApplicationsRequest.new(
+  connection_id: '<id>'
+)
 res = s.ats.list_ats_applications(request: req)
 
 unless res.ats_applications.nil?
@@ -1220,15 +1202,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAtsApplicationstatusesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAtsApplicationstatusesRequest.new(
+  connection_id: '<id>'
+)
 res = s.ats.list_ats_applicationstatuses(request: req)
 
 unless res.ats_statuses.nil?
@@ -1265,15 +1246,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAtsCandidatesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAtsCandidatesRequest.new(
+  connection_id: '<id>'
+)
 res = s.ats.list_ats_candidates(request: req)
 
 unless res.ats_candidates.nil?
@@ -1310,15 +1290,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAtsCompaniesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAtsCompaniesRequest.new(
+  connection_id: '<id>'
+)
 res = s.ats.list_ats_companies(request: req)
 
 unless res.ats_companies.nil?
@@ -1355,15 +1334,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAtsDocumentsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAtsDocumentsRequest.new(
+  connection_id: '<id>'
+)
 res = s.ats.list_ats_documents(request: req)
 
 unless res.ats_documents.nil?
@@ -1400,15 +1378,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAtsInterviewsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAtsInterviewsRequest.new(
+  connection_id: '<id>'
+)
 res = s.ats.list_ats_interviews(request: req)
 
 unless res.ats_interviews.nil?
@@ -1445,15 +1422,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAtsJobsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAtsJobsRequest.new(
+  connection_id: '<id>'
+)
 res = s.ats.list_ats_jobs(request: req)
 
 unless res.ats_jobs.nil?
@@ -1490,15 +1466,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAtsScorecardsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAtsScorecardsRequest.new(
+  connection_id: '<id>'
+)
 res = s.ats.list_ats_scorecards(request: req)
 
 unless res.ats_scorecards.nil?
@@ -1529,22 +1504,22 @@ Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAtsActivity" method="patch" path="/ats/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAtsActivity" method="patch" path="/ats/{connection_id}/activity/{id}" example="ats_activity" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAtsActivityRequest.new(
   ats_activity: Models::Shared::AtsActivity.new(
     created_at: DateTime.iso8601('2022-08-07T03:16:43.865Z'),
     description: 'Sapiente.',
-    id: '5dd49ad4-0f71-47b3-9b00-2f1bc65c61a7',
+    id: '21ddcf60-b42f-4d98-ac8a-14c444562969',
     is_private: false,
     metadata: [
       Models::Shared::AtsMetadata.new(
@@ -1552,21 +1527,20 @@ req = Models::Operations::PatchAtsActivityRequest.new(
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '1cc40937-5e0f-47f2-8eff-5d3c7abec405',
+        id: 'd1ac8e69-aaed-4f27-bb5b-c4768373867b',
         namespace: 'activity',
         slug: 'cimentarius',
-        value: 'Reprehenderit verto.',
+        value: 'Reprehenderit verto.'
       ),
     ],
     sub_type: 'TASK',
     title: 'Venio blandior aureus.',
     type: Models::Shared::AtsActivityType::TASK,
-    updated_at: DateTime.iso8601('2026-04-20T19:27:41.556Z'),
+    updated_at: DateTime.iso8601('2026-04-22T09:17:47.571Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.ats.patch_ats_activity(request: req)
 
 unless res.ats_activity.nil?
@@ -1597,50 +1571,49 @@ Updates the AtsApplication identified by `id`. Provide the unified AtsApplicatio
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAtsApplication" method="patch" path="/ats/{connection_id}/application/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAtsApplication" method="patch" path="/ats/{connection_id}/application/{id}" example="ats_application" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAtsApplicationRequest.new(
   ats_application: Models::Shared::AtsApplication.new(
     answers: [],
-    applied_at: DateTime.iso8601('2025-10-12T02:38:14.169Z'),
+    applied_at: DateTime.iso8601('2025-10-13T06:51:13.172Z'),
     created_at: DateTime.iso8601('2023-10-17T07:19:48.787Z'),
-    hired_at: DateTime.iso8601('2026-05-28T23:46:32.987Z'),
-    id: '8ae1dea2-5a5f-47e3-9e4e-ece500524f25',
+    hired_at: DateTime.iso8601('2026-05-30T12:53:24.696Z'),
+    id: '42b2a5d5-cfdc-4c78-af0f-4e8baf6659db',
     metadata: [
       Models::Shared::AtsMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '4945b45a-0d1b-45e6-8fce-1e819704b63f',
+        id: 'a2ef5923-ae5e-4cc5-bc15-381a30148323',
         namespace: 'application',
         slug: 'stella',
-        value: 'Caput.',
+        value: 'Caput.'
       ),
     ],
     offers: [],
     original_status: 'vomica',
     original_substatus: 'allatus',
-    rejected_at: DateTime.iso8601('2026-10-30T09:20:20.747Z'),
+    rejected_at: DateTime.iso8601('2026-11-01T04:27:21.089Z'),
     rejected_reason: 'Cometes amplitudo videlicet talio.',
     source: 'credo',
     status: Models::Shared::AtsApplicationStatus::REVIEWING,
     summary: 'Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.',
-    updated_at: DateTime.iso8601('2026-11-06T08:24:55.698Z'),
+    updated_at: DateTime.iso8601('2026-11-08T03:48:10.330Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.ats.patch_ats_application(request: req)
 
 unless res.ats_application.nil?
@@ -1671,16 +1644,16 @@ Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAtsCandidate" method="patch" path="/ats/{connection_id}/candidate/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAtsCandidate" method="patch" path="/ats/{connection_id}/candidate/{id}" example="ats_candidate" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAtsCandidateRequest.new(
   ats_candidate: Models::Shared::AtsCandidate.new(
@@ -1690,7 +1663,7 @@ req = Models::Operations::PatchAtsCandidateRequest.new(
       country_code: 'US',
       postal_code: '91605',
       region: 'Idaho',
-      region_code: 'HI',
+      region_code: 'HI'
     ),
     company_name: 'Lehner and Sons',
     created_at: DateTime.iso8601('2023-10-16T05:42:56.049Z'),
@@ -1702,7 +1675,7 @@ req = Models::Operations::PatchAtsCandidateRequest.new(
         field_of_study: 'curtus',
         institution: 'Abbott - Batz',
         level: 'phd',
-        start_at: DateTime.iso8601('1994-06-09T13:31:39.059Z'),
+        start_at: DateTime.iso8601('1994-06-09T13:31:39.059Z')
       ),
       Models::Shared::AtsCandidateEducation.new(
         degree: 'blah cappelletti',
@@ -1710,14 +1683,14 @@ req = Models::Operations::PatchAtsCandidateRequest.new(
         field_of_study: 'crustulum',
         institution: 'Herman, Franey and Lebsack',
         level: 'highschool',
-        start_at: DateTime.iso8601('1992-11-28T20:23:20.311Z'),
+        start_at: DateTime.iso8601('1992-11-28T20:23:20.311Z')
       ),
     ],
     emails: [
       Models::Shared::AtsEmail.new(
         email: 'ardith.beatty@outlook.com',
         name: 'Ardith Beatty',
-        type: Models::Shared::AtsEmailType::HOME,
+        type: Models::Shared::AtsEmailType::HOME
       ),
     ],
     experiences: [
@@ -1725,18 +1698,20 @@ req = Models::Operations::PatchAtsCandidateRequest.new(
         company_name: 'Kutch, Lind and Marks',
         end_at: DateTime.iso8601('1974-03-01T17:02:58.824Z'),
         start_at: DateTime.iso8601('1999-09-21T22:12:51.663Z'),
-        title: 'Lead Security Technician',
+        title: 'Lead Security Technician'
       ),
       Models::Shared::AtsCandidateExperience.new(
         company_name: 'Trantow, Sipes and Witting',
         end_at: DateTime.iso8601('2004-10-14T14:01:00.717Z'),
         start_at: DateTime.iso8601('1996-12-15T04:12:04.582Z'),
-        title: 'Regional Applications Planner',
+        title: 'Regional Applications Planner'
       ),
     ],
     first_name: 'Ardith',
-    id: '20bdeeca-e6ec-4a1b-aba3-27cd12045787',
+    has_do_not_contact: false,
+    id: 'b859bafb-f3d4-4fab-9e22-cac90bd83bab',
     image_url: 'https://avatars.githubusercontent.com/u/27464445',
+    is_private: true,
     job_ids: [],
     last_name: 'Beatty',
     link_urls: [
@@ -1748,10 +1723,10 @@ req = Models::Operations::PatchAtsCandidateRequest.new(
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '2162737a-65e8-465b-9d99-57c325894774',
+        id: '313fc5b6-a2bf-431c-9afd-c6514585bebd',
         namespace: 'custom',
         slug: 'custom_field',
-        value: 'officia',
+        value: 'officia'
       ),
     ],
     name: 'Ardith Beatty',
@@ -1771,17 +1746,16 @@ req = Models::Operations::PatchAtsCandidateRequest.new(
     telephones: [
       Models::Shared::AtsTelephone.new(
         telephone: '(837) 251-3896',
-        type: Models::Shared::AtsTelephoneType::MOBILE,
+        type: Models::Shared::AtsTelephoneType::MOBILE
       ),
     ],
     title: 'Customer Division Producer',
-    updated_at: DateTime.iso8601('2024-05-02T02:48:23.171Z'),
-    web_url: 'https://fragrant-husband.net/',
+    updated_at: DateTime.iso8601('2024-05-02T10:31:50.481Z'),
+    web_url: 'https://fragrant-husband.net/'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.ats.patch_ats_candidate(request: req)
 
 unless res.ats_candidate.nil?
@@ -1812,30 +1786,29 @@ Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAtsCompany" method="patch" path="/ats/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAtsCompany" method="patch" path="/ats/{connection_id}/company/{id}" example="ats_company" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAtsCompanyRequest.new(
   ats_company: Models::Shared::AtsCompany.new(
     created_at: DateTime.iso8601('2019-04-22T03:50:02.920Z'),
-    id: '7ceedfc6-59a0-4bb8-b325-5fc8977d3535',
+    id: '048e6138-7c87-4b82-ba77-b37995125bf5',
     name: 'Gulgowski, Dibbert and Wilderman',
     phone: '1-882-360-2010',
-    updated_at: DateTime.iso8601('2020-10-04T20:08:40.668Z'),
-    website_url: 'https://www.gulgowskidibbert.com',
+    updated_at: DateTime.iso8601('2020-10-05T04:31:44.524Z'),
+    website_url: 'https://www.gulgowskidibbert.com'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.ats.patch_ats_company(request: req)
 
 unless res.ats_company.nil?
@@ -1866,31 +1839,30 @@ Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAtsDocument" method="patch" path="/ats/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAtsDocument" method="patch" path="/ats/{connection_id}/document/{id}" example="ats_document" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAtsDocumentRequest.new(
   ats_document: Models::Shared::AtsDocument.new(
     created_at: DateTime.iso8601('2021-08-20T08:00:27.437Z'),
     document_url: 'https://vengeful-lashes.biz',
     filename: 'lonzo_schowalter_resume.pdf',
-    id: '35cb7b32-f2a0-448c-91d9-6d5330abbfaa',
+    id: '01848573-9e6f-4a51-ac6b-89c78b273696',
     metadata: [],
     type: Models::Shared::AtsDocumentType::COVER_LETTER,
-    updated_at: DateTime.iso8601('2022-12-11T23:30:24.118Z'),
+    updated_at: DateTime.iso8601('2022-12-12T10:25:27.883Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.ats.patch_ats_document(request: req)
 
 unless res.ats_document.nil?
@@ -1921,33 +1893,32 @@ Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAtsInterview" method="patch" path="/ats/{connection_id}/interview/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAtsInterview" method="patch" path="/ats/{connection_id}/interview/{id}" example="ats_interview" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAtsInterviewRequest.new(
   ats_interview: Models::Shared::AtsInterview.new(
     created_at: DateTime.iso8601('2021-11-28T03:14:47.774Z'),
     end_at: DateTime.iso8601('2021-12-08T06:33:19.583Z'),
-    id: 'be4445cd-a6c1-4140-8fd8-22bfc1408316',
+    id: '8333919a-2d90-47bc-a5c7-5533f929ec7b',
     location: '26596 Halle Trafficway',
     meeting_url: 'https://immaculate-foodstuffs.biz',
     metadata: [],
     start_at: DateTime.iso8601('2021-12-08T06:03:19.583Z'),
     status: Models::Shared::AtsInterviewStatus::SCHEDULED,
-    updated_at: DateTime.iso8601('2023-09-30T18:12:10.045Z'),
+    updated_at: DateTime.iso8601('2023-10-01T10:22:06.271Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.ats.patch_ats_interview(request: req)
 
 unless res.ats_interview.nil?
@@ -1978,16 +1949,16 @@ Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to chan
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAtsJob" method="patch" path="/ats/{connection_id}/job/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAtsJob" method="patch" path="/ats/{connection_id}/job/{id}" example="ats_job" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAtsJobRequest.new(
   ats_job: Models::Shared::AtsJob.new(
@@ -1998,7 +1969,7 @@ req = Models::Operations::PatchAtsJobRequest.new(
         country_code: 'US',
         postal_code: '89776-0669',
         region: 'Mississippi',
-        region_code: 'FL',
+        region_code: 'FL'
       ),
     ],
     compensation: [
@@ -2007,33 +1978,33 @@ req = Models::Operations::PatchAtsJobRequest.new(
         frequency: Models::Shared::Frequency::DAY,
         max: 174_303.0,
         min: 174_042.0,
-        type: Models::Shared::AtsCompensationType::BONUS,
+        type: Models::Shared::AtsCompensationType::BONUS
       ),
       Models::Shared::AtsCompensation.new(
         currency: 'MZN',
         frequency: Models::Shared::Frequency::MONTH,
         max: 171_171.0,
         min: 151_975.0,
-        type: Models::Shared::AtsCompensationType::SALARY,
+        type: Models::Shared::AtsCompensationType::SALARY
       ),
     ],
     created_at: DateTime.iso8601('2023-06-16T12:51:44.518Z'),
     description: 'Global',
     employment_type: Models::Shared::EmploymentType::FREELANCE,
     hiring_managers: [],
-    id: 'e0c6c841-9965-4cc3-b68a-dedce51514f0',
+    id: 'b379d661-72e4-43c9-ba69-81b1544009be',
     industry: 'Handcrafted Bamboo Soap',
     language_locale: 'en',
     metadata: [
       Models::Shared::AtsMetadata.new(
         extra_data: {
-          "display_name": 'Custom Property',
+          'display_name' => 'Custom Property',
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: 'fa8ca8f8-83e3-4d2f-abf5-a7d4bf859594',
+        id: 'c0445a3d-baa8-47a2-8b7e-b43c054440dd',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'desolo',
+        value: 'desolo'
       ),
     ],
     minimum_degree: 'Bachelor',
@@ -2043,8 +2014,8 @@ req = Models::Operations::PatchAtsJobRequest.new(
     openings: [
       Models::Shared::AtsJobOpening.new(
         close_reason: 'Admoveo trado textilis.',
-        opened_at: DateTime.iso8601('2026-06-24T19:11:52.874Z'),
-        status: Models::Shared::AtsJobOpeningStatus::OPEN,
+        opened_at: DateTime.iso8601('2026-06-26T09:52:55.484Z'),
+        status: Models::Shared::AtsJobOpeningStatus::OPEN
       ),
     ],
     postings: [
@@ -2055,16 +2026,16 @@ req = Models::Operations::PatchAtsJobRequest.new(
           country_code: 'US',
           postal_code: '98754',
           region: 'Wisconsin',
-          region_code: 'CO',
+          region_code: 'CO'
         ),
-        created_at: DateTime.iso8601('2026-08-19T18:47:20.614Z'),
+        created_at: DateTime.iso8601('2026-08-21T11:26:03.432Z'),
         description: 'Beatus eum volutabrum balbus victus ipsa tubineus claustrum.',
-        id: 'e48352d1-2490-433f-a12b-9964e7e0efd7',
+        id: '82a90589-0cf9-4ea4-9bd8-f0fa428ff580',
         is_active: false,
         location: '1725 Hessel Keys',
         name: 'International Identity Manager',
         posting_url: 'https://obedient-yak.com',
-        updated_at: DateTime.iso8601('2026-09-15T11:59:18.600Z'),
+        updated_at: DateTime.iso8601('2026-09-17T05:34:10.747Z')
       ),
     ],
     public_job_urls: [
@@ -2074,7 +2045,7 @@ req = Models::Operations::PatchAtsJobRequest.new(
     questions: [
       Models::Shared::AtsJobQuestion.new(
         description: 'Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.',
-        id: 'b5783fe0-6aa0-4e6d-a221-001afa00ef4f',
+        id: '269ba6e5-c18f-4e1a-b683-6dac8bd57a0e',
         max_length: 117.0,
         min_length: 1.0,
         options: [
@@ -2084,10 +2055,10 @@ req = Models::Operations::PatchAtsJobRequest.new(
         prompt: 'Totam maxime tres tergiversatio.',
         question: 'Doloribus mollitia.',
         required: true,
-        type: Models::Shared::AtsJobQuestionType::TEXT,
+        type: Models::Shared::AtsJobQuestionType::TEXT
       ),
       Models::Shared::AtsJobQuestion.new(
-        id: '56460aac-52f7-4d9b-995c-5ed87f4e035d',
+        id: 'ce3dc60d-5199-4fe9-b21a-6124885d8b80',
         max_length: 453.0,
         min_length: 1.0,
         options: [
@@ -2096,11 +2067,11 @@ req = Models::Operations::PatchAtsJobRequest.new(
         prompt: 'Veritatis sodalitas nemo natus attonbitus reprehenderit voro depono.',
         question: 'Nam.',
         required: false,
-        type: Models::Shared::AtsJobQuestionType::TEXT,
+        type: Models::Shared::AtsJobQuestionType::TEXT
       ),
       Models::Shared::AtsJobQuestion.new(
         description: 'Taceo rem compello spectaculum mollitia arcus compello.',
-        id: '78367075-6be3-4256-be46-ac6a1cf254a8',
+        id: '1aaba1c1-fd26-4b0e-82cf-b304985e67ee',
         max_length: 66.0,
         min_length: 1.0,
         options: [
@@ -2109,7 +2080,7 @@ req = Models::Operations::PatchAtsJobRequest.new(
         prompt: 'Tum tamisium autus.',
         question: 'Confero trepide.',
         required: false,
-        type: Models::Shared::AtsJobQuestionType::TEXT,
+        type: Models::Shared::AtsJobQuestionType::TEXT
       ),
     ],
     skills: [
@@ -2118,12 +2089,11 @@ req = Models::Operations::PatchAtsJobRequest.new(
     ],
     status: Models::Shared::AtsJobStatus::ARCHIVED,
     summary: 'Crepusculum adsuesco vere.',
-    updated_at: DateTime.iso8601('2026-03-14T18:01:21.544Z'),
+    updated_at: DateTime.iso8601('2026-03-16T05:07:54.399Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.ats.patch_ats_job(request: req)
 
 unless res.ats_job.nil?
@@ -2154,41 +2124,40 @@ Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAtsScorecard" method="patch" path="/ats/{connection_id}/scorecard/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAtsScorecard" method="patch" path="/ats/{connection_id}/scorecard/{id}" example="ats_scorecard" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAtsScorecardRequest.new(
   ats_scorecard: Models::Shared::AtsScorecard.new(
     comment: 'Maiores enim.',
     created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
-    id: 'bccbb015-e70b-4899-aeb6-484c54347266',
+    id: 'fde2a8c5-e220-4190-965b-ec6facfa7c51',
     metadata: [],
     questions: [
       Models::Shared::AtsScorecardQuestion.new(
         description: 'Sulum textor eveniet facere vita.',
-        text: 'Aliquam.',
+        text: 'Aliquam.'
       ),
       Models::Shared::AtsScorecardQuestion.new(
         answer: 'Decretum.',
         description: 'Conatus cicuta doloremque statua bonus.',
-        text: 'Pecto vulpes libero vomer comburo.',
+        text: 'Pecto vulpes libero vomer comburo.'
       ),
     ],
     recommendation: Models::Shared::Recommendation::STRONG_YES,
-    updated_at: DateTime.iso8601('2023-06-10T19:29:41.911Z'),
+    updated_at: DateTime.iso8601('2023-06-11T07:29:30.808Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.ats.patch_ats_scorecard(request: req)
 
 unless res.ats_scorecard.nil?
@@ -2225,11 +2194,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ats.remove_ats_activity(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -2267,11 +2235,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ats.remove_ats_application(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -2309,11 +2276,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ats.remove_ats_candidate(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -2351,11 +2317,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ats.remove_ats_company(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -2393,11 +2358,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ats.remove_ats_document(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -2435,11 +2399,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ats.remove_ats_interview(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -2477,11 +2440,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ats.remove_ats_job(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -2519,11 +2481,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ats.remove_ats_scorecard(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -2555,22 +2516,22 @@ Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAtsActivity" method="put" path="/ats/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAtsActivity" method="put" path="/ats/{connection_id}/activity/{id}" example="ats_activity" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAtsActivityRequest.new(
   ats_activity: Models::Shared::AtsActivity.new(
     created_at: DateTime.iso8601('2022-08-07T03:16:43.865Z'),
     description: 'Sapiente.',
-    id: '5dd49ad4-0f71-47b3-9b00-2f1bc65c61a7',
+    id: '21ddcf60-b42f-4d98-ac8a-14c444562969',
     is_private: false,
     metadata: [
       Models::Shared::AtsMetadata.new(
@@ -2578,21 +2539,20 @@ req = Models::Operations::UpdateAtsActivityRequest.new(
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '1cc40937-5e0f-47f2-8eff-5d3c7abec405',
+        id: 'd1ac8e69-aaed-4f27-bb5b-c4768373867b',
         namespace: 'activity',
         slug: 'cimentarius',
-        value: 'Reprehenderit verto.',
+        value: 'Reprehenderit verto.'
       ),
     ],
     sub_type: 'TASK',
     title: 'Venio blandior aureus.',
     type: Models::Shared::AtsActivityType::TASK,
-    updated_at: DateTime.iso8601('2026-04-20T19:27:41.556Z'),
+    updated_at: DateTime.iso8601('2026-04-22T09:17:47.571Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.ats.update_ats_activity(request: req)
 
 unless res.ats_activity.nil?
@@ -2623,50 +2583,49 @@ Updates the AtsApplication identified by `id`. Provide the unified AtsApplicatio
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAtsApplication" method="put" path="/ats/{connection_id}/application/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAtsApplication" method="put" path="/ats/{connection_id}/application/{id}" example="ats_application" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAtsApplicationRequest.new(
   ats_application: Models::Shared::AtsApplication.new(
     answers: [],
-    applied_at: DateTime.iso8601('2025-10-12T02:38:14.169Z'),
+    applied_at: DateTime.iso8601('2025-10-13T06:51:13.172Z'),
     created_at: DateTime.iso8601('2023-10-17T07:19:48.787Z'),
-    hired_at: DateTime.iso8601('2026-05-28T23:46:32.987Z'),
-    id: '8ae1dea2-5a5f-47e3-9e4e-ece500524f25',
+    hired_at: DateTime.iso8601('2026-05-30T12:53:24.696Z'),
+    id: '42b2a5d5-cfdc-4c78-af0f-4e8baf6659db',
     metadata: [
       Models::Shared::AtsMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '4945b45a-0d1b-45e6-8fce-1e819704b63f',
+        id: 'a2ef5923-ae5e-4cc5-bc15-381a30148323',
         namespace: 'application',
         slug: 'stella',
-        value: 'Caput.',
+        value: 'Caput.'
       ),
     ],
     offers: [],
     original_status: 'vomica',
     original_substatus: 'allatus',
-    rejected_at: DateTime.iso8601('2026-10-30T09:20:20.747Z'),
+    rejected_at: DateTime.iso8601('2026-11-01T04:27:21.089Z'),
     rejected_reason: 'Cometes amplitudo videlicet talio.',
     source: 'credo',
     status: Models::Shared::AtsApplicationStatus::REVIEWING,
     summary: 'Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.',
-    updated_at: DateTime.iso8601('2026-11-06T08:24:55.698Z'),
+    updated_at: DateTime.iso8601('2026-11-08T03:48:10.330Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.ats.update_ats_application(request: req)
 
 unless res.ats_application.nil?
@@ -2697,16 +2656,16 @@ Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAtsCandidate" method="put" path="/ats/{connection_id}/candidate/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAtsCandidate" method="put" path="/ats/{connection_id}/candidate/{id}" example="ats_candidate" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAtsCandidateRequest.new(
   ats_candidate: Models::Shared::AtsCandidate.new(
@@ -2716,7 +2675,7 @@ req = Models::Operations::UpdateAtsCandidateRequest.new(
       country_code: 'US',
       postal_code: '91605',
       region: 'Idaho',
-      region_code: 'HI',
+      region_code: 'HI'
     ),
     company_name: 'Lehner and Sons',
     created_at: DateTime.iso8601('2023-10-16T05:42:56.049Z'),
@@ -2728,7 +2687,7 @@ req = Models::Operations::UpdateAtsCandidateRequest.new(
         field_of_study: 'curtus',
         institution: 'Abbott - Batz',
         level: 'phd',
-        start_at: DateTime.iso8601('1994-06-09T13:31:39.059Z'),
+        start_at: DateTime.iso8601('1994-06-09T13:31:39.059Z')
       ),
       Models::Shared::AtsCandidateEducation.new(
         degree: 'blah cappelletti',
@@ -2736,14 +2695,14 @@ req = Models::Operations::UpdateAtsCandidateRequest.new(
         field_of_study: 'crustulum',
         institution: 'Herman, Franey and Lebsack',
         level: 'highschool',
-        start_at: DateTime.iso8601('1992-11-28T20:23:20.311Z'),
+        start_at: DateTime.iso8601('1992-11-28T20:23:20.311Z')
       ),
     ],
     emails: [
       Models::Shared::AtsEmail.new(
         email: 'ardith.beatty@outlook.com',
         name: 'Ardith Beatty',
-        type: Models::Shared::AtsEmailType::HOME,
+        type: Models::Shared::AtsEmailType::HOME
       ),
     ],
     experiences: [
@@ -2751,18 +2710,20 @@ req = Models::Operations::UpdateAtsCandidateRequest.new(
         company_name: 'Kutch, Lind and Marks',
         end_at: DateTime.iso8601('1974-03-01T17:02:58.824Z'),
         start_at: DateTime.iso8601('1999-09-21T22:12:51.663Z'),
-        title: 'Lead Security Technician',
+        title: 'Lead Security Technician'
       ),
       Models::Shared::AtsCandidateExperience.new(
         company_name: 'Trantow, Sipes and Witting',
         end_at: DateTime.iso8601('2004-10-14T14:01:00.717Z'),
         start_at: DateTime.iso8601('1996-12-15T04:12:04.582Z'),
-        title: 'Regional Applications Planner',
+        title: 'Regional Applications Planner'
       ),
     ],
     first_name: 'Ardith',
-    id: '20bdeeca-e6ec-4a1b-aba3-27cd12045787',
+    has_do_not_contact: false,
+    id: 'b859bafb-f3d4-4fab-9e22-cac90bd83bab',
     image_url: 'https://avatars.githubusercontent.com/u/27464445',
+    is_private: true,
     job_ids: [],
     last_name: 'Beatty',
     link_urls: [
@@ -2774,10 +2735,10 @@ req = Models::Operations::UpdateAtsCandidateRequest.new(
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '2162737a-65e8-465b-9d99-57c325894774',
+        id: '313fc5b6-a2bf-431c-9afd-c6514585bebd',
         namespace: 'custom',
         slug: 'custom_field',
-        value: 'officia',
+        value: 'officia'
       ),
     ],
     name: 'Ardith Beatty',
@@ -2797,17 +2758,16 @@ req = Models::Operations::UpdateAtsCandidateRequest.new(
     telephones: [
       Models::Shared::AtsTelephone.new(
         telephone: '(837) 251-3896',
-        type: Models::Shared::AtsTelephoneType::MOBILE,
+        type: Models::Shared::AtsTelephoneType::MOBILE
       ),
     ],
     title: 'Customer Division Producer',
-    updated_at: DateTime.iso8601('2024-05-02T02:48:23.171Z'),
-    web_url: 'https://fragrant-husband.net/',
+    updated_at: DateTime.iso8601('2024-05-02T10:31:50.481Z'),
+    web_url: 'https://fragrant-husband.net/'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.ats.update_ats_candidate(request: req)
 
 unless res.ats_candidate.nil?
@@ -2838,30 +2798,29 @@ Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAtsCompany" method="put" path="/ats/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAtsCompany" method="put" path="/ats/{connection_id}/company/{id}" example="ats_company" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAtsCompanyRequest.new(
   ats_company: Models::Shared::AtsCompany.new(
     created_at: DateTime.iso8601('2019-04-22T03:50:02.920Z'),
-    id: '7ceedfc6-59a0-4bb8-b325-5fc8977d3535',
+    id: '048e6138-7c87-4b82-ba77-b37995125bf5',
     name: 'Gulgowski, Dibbert and Wilderman',
     phone: '1-882-360-2010',
-    updated_at: DateTime.iso8601('2020-10-04T20:08:40.668Z'),
-    website_url: 'https://www.gulgowskidibbert.com',
+    updated_at: DateTime.iso8601('2020-10-05T04:31:44.524Z'),
+    website_url: 'https://www.gulgowskidibbert.com'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.ats.update_ats_company(request: req)
 
 unless res.ats_company.nil?
@@ -2892,31 +2851,30 @@ Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAtsDocument" method="put" path="/ats/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAtsDocument" method="put" path="/ats/{connection_id}/document/{id}" example="ats_document" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAtsDocumentRequest.new(
   ats_document: Models::Shared::AtsDocument.new(
     created_at: DateTime.iso8601('2021-08-20T08:00:27.437Z'),
     document_url: 'https://vengeful-lashes.biz',
     filename: 'lonzo_schowalter_resume.pdf',
-    id: '35cb7b32-f2a0-448c-91d9-6d5330abbfaa',
+    id: '01848573-9e6f-4a51-ac6b-89c78b273696',
     metadata: [],
     type: Models::Shared::AtsDocumentType::COVER_LETTER,
-    updated_at: DateTime.iso8601('2022-12-11T23:30:24.118Z'),
+    updated_at: DateTime.iso8601('2022-12-12T10:25:27.883Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.ats.update_ats_document(request: req)
 
 unless res.ats_document.nil?
@@ -2947,33 +2905,32 @@ Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAtsInterview" method="put" path="/ats/{connection_id}/interview/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAtsInterview" method="put" path="/ats/{connection_id}/interview/{id}" example="ats_interview" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAtsInterviewRequest.new(
   ats_interview: Models::Shared::AtsInterview.new(
     created_at: DateTime.iso8601('2021-11-28T03:14:47.774Z'),
     end_at: DateTime.iso8601('2021-12-08T06:33:19.583Z'),
-    id: 'be4445cd-a6c1-4140-8fd8-22bfc1408316',
+    id: '8333919a-2d90-47bc-a5c7-5533f929ec7b',
     location: '26596 Halle Trafficway',
     meeting_url: 'https://immaculate-foodstuffs.biz',
     metadata: [],
     start_at: DateTime.iso8601('2021-12-08T06:03:19.583Z'),
     status: Models::Shared::AtsInterviewStatus::SCHEDULED,
-    updated_at: DateTime.iso8601('2023-09-30T18:12:10.045Z'),
+    updated_at: DateTime.iso8601('2023-10-01T10:22:06.271Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.ats.update_ats_interview(request: req)
 
 unless res.ats_interview.nil?
@@ -3004,16 +2961,16 @@ Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to chan
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAtsJob" method="put" path="/ats/{connection_id}/job/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAtsJob" method="put" path="/ats/{connection_id}/job/{id}" example="ats_job" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAtsJobRequest.new(
   ats_job: Models::Shared::AtsJob.new(
@@ -3024,7 +2981,7 @@ req = Models::Operations::UpdateAtsJobRequest.new(
         country_code: 'US',
         postal_code: '89776-0669',
         region: 'Mississippi',
-        region_code: 'FL',
+        region_code: 'FL'
       ),
     ],
     compensation: [
@@ -3033,33 +2990,33 @@ req = Models::Operations::UpdateAtsJobRequest.new(
         frequency: Models::Shared::Frequency::DAY,
         max: 174_303.0,
         min: 174_042.0,
-        type: Models::Shared::AtsCompensationType::BONUS,
+        type: Models::Shared::AtsCompensationType::BONUS
       ),
       Models::Shared::AtsCompensation.new(
         currency: 'MZN',
         frequency: Models::Shared::Frequency::MONTH,
         max: 171_171.0,
         min: 151_975.0,
-        type: Models::Shared::AtsCompensationType::SALARY,
+        type: Models::Shared::AtsCompensationType::SALARY
       ),
     ],
     created_at: DateTime.iso8601('2023-06-16T12:51:44.518Z'),
     description: 'Global',
     employment_type: Models::Shared::EmploymentType::FREELANCE,
     hiring_managers: [],
-    id: 'e0c6c841-9965-4cc3-b68a-dedce51514f0',
+    id: 'b379d661-72e4-43c9-ba69-81b1544009be',
     industry: 'Handcrafted Bamboo Soap',
     language_locale: 'en',
     metadata: [
       Models::Shared::AtsMetadata.new(
         extra_data: {
-          "display_name": 'Custom Property',
+          'display_name' => 'Custom Property',
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: 'fa8ca8f8-83e3-4d2f-abf5-a7d4bf859594',
+        id: 'c0445a3d-baa8-47a2-8b7e-b43c054440dd',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'desolo',
+        value: 'desolo'
       ),
     ],
     minimum_degree: 'Bachelor',
@@ -3069,8 +3026,8 @@ req = Models::Operations::UpdateAtsJobRequest.new(
     openings: [
       Models::Shared::AtsJobOpening.new(
         close_reason: 'Admoveo trado textilis.',
-        opened_at: DateTime.iso8601('2026-06-24T19:11:52.874Z'),
-        status: Models::Shared::AtsJobOpeningStatus::OPEN,
+        opened_at: DateTime.iso8601('2026-06-26T09:52:55.484Z'),
+        status: Models::Shared::AtsJobOpeningStatus::OPEN
       ),
     ],
     postings: [
@@ -3081,16 +3038,16 @@ req = Models::Operations::UpdateAtsJobRequest.new(
           country_code: 'US',
           postal_code: '98754',
           region: 'Wisconsin',
-          region_code: 'CO',
+          region_code: 'CO'
         ),
-        created_at: DateTime.iso8601('2026-08-19T18:47:20.614Z'),
+        created_at: DateTime.iso8601('2026-08-21T11:26:03.432Z'),
         description: 'Beatus eum volutabrum balbus victus ipsa tubineus claustrum.',
-        id: 'e48352d1-2490-433f-a12b-9964e7e0efd7',
+        id: '82a90589-0cf9-4ea4-9bd8-f0fa428ff580',
         is_active: false,
         location: '1725 Hessel Keys',
         name: 'International Identity Manager',
         posting_url: 'https://obedient-yak.com',
-        updated_at: DateTime.iso8601('2026-09-15T11:59:18.600Z'),
+        updated_at: DateTime.iso8601('2026-09-17T05:34:10.747Z')
       ),
     ],
     public_job_urls: [
@@ -3100,7 +3057,7 @@ req = Models::Operations::UpdateAtsJobRequest.new(
     questions: [
       Models::Shared::AtsJobQuestion.new(
         description: 'Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.',
-        id: 'b5783fe0-6aa0-4e6d-a221-001afa00ef4f',
+        id: '269ba6e5-c18f-4e1a-b683-6dac8bd57a0e',
         max_length: 117.0,
         min_length: 1.0,
         options: [
@@ -3110,10 +3067,10 @@ req = Models::Operations::UpdateAtsJobRequest.new(
         prompt: 'Totam maxime tres tergiversatio.',
         question: 'Doloribus mollitia.',
         required: true,
-        type: Models::Shared::AtsJobQuestionType::TEXT,
+        type: Models::Shared::AtsJobQuestionType::TEXT
       ),
       Models::Shared::AtsJobQuestion.new(
-        id: '56460aac-52f7-4d9b-995c-5ed87f4e035d',
+        id: 'ce3dc60d-5199-4fe9-b21a-6124885d8b80',
         max_length: 453.0,
         min_length: 1.0,
         options: [
@@ -3122,11 +3079,11 @@ req = Models::Operations::UpdateAtsJobRequest.new(
         prompt: 'Veritatis sodalitas nemo natus attonbitus reprehenderit voro depono.',
         question: 'Nam.',
         required: false,
-        type: Models::Shared::AtsJobQuestionType::TEXT,
+        type: Models::Shared::AtsJobQuestionType::TEXT
       ),
       Models::Shared::AtsJobQuestion.new(
         description: 'Taceo rem compello spectaculum mollitia arcus compello.',
-        id: '78367075-6be3-4256-be46-ac6a1cf254a8',
+        id: '1aaba1c1-fd26-4b0e-82cf-b304985e67ee',
         max_length: 66.0,
         min_length: 1.0,
         options: [
@@ -3135,7 +3092,7 @@ req = Models::Operations::UpdateAtsJobRequest.new(
         prompt: 'Tum tamisium autus.',
         question: 'Confero trepide.',
         required: false,
-        type: Models::Shared::AtsJobQuestionType::TEXT,
+        type: Models::Shared::AtsJobQuestionType::TEXT
       ),
     ],
     skills: [
@@ -3144,12 +3101,11 @@ req = Models::Operations::UpdateAtsJobRequest.new(
     ],
     status: Models::Shared::AtsJobStatus::ARCHIVED,
     summary: 'Crepusculum adsuesco vere.',
-    updated_at: DateTime.iso8601('2026-03-14T18:01:21.544Z'),
+    updated_at: DateTime.iso8601('2026-03-16T05:07:54.399Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.ats.update_ats_job(request: req)
 
 unless res.ats_job.nil?
@@ -3180,41 +3136,40 @@ Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAtsScorecard" method="put" path="/ats/{connection_id}/scorecard/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAtsScorecard" method="put" path="/ats/{connection_id}/scorecard/{id}" example="ats_scorecard" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAtsScorecardRequest.new(
   ats_scorecard: Models::Shared::AtsScorecard.new(
     comment: 'Maiores enim.',
     created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
-    id: 'bccbb015-e70b-4899-aeb6-484c54347266',
+    id: 'fde2a8c5-e220-4190-965b-ec6facfa7c51',
     metadata: [],
     questions: [
       Models::Shared::AtsScorecardQuestion.new(
         description: 'Sulum textor eveniet facere vita.',
-        text: 'Aliquam.',
+        text: 'Aliquam.'
       ),
       Models::Shared::AtsScorecardQuestion.new(
         answer: 'Decretum.',
         description: 'Conatus cicuta doloremque statua bonus.',
-        text: 'Pecto vulpes libero vomer comburo.',
+        text: 'Pecto vulpes libero vomer comburo.'
       ),
     ],
     recommendation: Models::Shared::Recommendation::STRONG_YES,
-    updated_at: DateTime.iso8601('2023-06-10T19:29:41.911Z'),
+    updated_at: DateTime.iso8601('2023-06-11T07:29:30.808Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.ats.update_ats_scorecard(request: req)
 
 unless res.ats_scorecard.nil?

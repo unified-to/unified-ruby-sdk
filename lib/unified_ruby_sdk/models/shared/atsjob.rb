@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class AtsJob
         extend T::Sig
@@ -16,17 +15,17 @@ module UnifiedRubySDK
 
         field :addresses, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AtsAddress)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('addresses') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :closed_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('closed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :closed_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('closed_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # id value of the company associated with the job in the ATS (reference to AtsCompany)
         field :company_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_id') } }
 
         field :compensation, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AtsCompensation)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('compensation') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
-        field :employment_type, Crystalline::Nilable.new(Models::Shared::EmploymentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employment_type'), 'decoder': Utils.enum_from_string(Models::Shared::EmploymentType, true) } }
+        field :employment_type, Crystalline::Nilable.new(Models::Shared::EmploymentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employment_type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::EmploymentType, true) } }
         # The departments/divisions/teams that this job belongs to
         field :groups, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AtsGroup)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('groups') } }
 
@@ -58,7 +57,7 @@ module UnifiedRubySDK
 
         field :questions, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AtsJobQuestion)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('questions') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :recruiter_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('recruiter_ids') } }
 
@@ -66,15 +65,15 @@ module UnifiedRubySDK
 
         field :skills, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('skills') } }
 
-        field :status, Crystalline::Nilable.new(Models::Shared::AtsJobStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::AtsJobStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::AtsJobStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::AtsJobStatus, true) } }
         # Short job blurb (distinct from full description when both exist)
         field :summary, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('summary') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # User id of the job owner in the ATS (references an HRIS employee) (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(addresses: T.nilable(T::Array[Models::Shared::AtsAddress]), closed_at: T.nilable(::DateTime), company_id: T.nilable(::String), compensation: T.nilable(T::Array[Models::Shared::AtsCompensation]), created_at: T.nilable(::DateTime), description: T.nilable(::String), employment_type: T.nilable(Models::Shared::EmploymentType), groups: T.nilable(T::Array[Models::Shared::AtsGroup]), hiring_manager_ids: T.nilable(T::Array[::String]), hiring_managers: T.nilable(T::Array[Models::Shared::AtsReference]), id: T.nilable(::String), industry: T.nilable(::String), language_locale: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AtsMetadata]), minimum_degree: T.nilable(::String), minimum_experience_years: T.nilable(::Float), name: T.nilable(::String), number_of_openings: T.nilable(::Float), openings: T.nilable(T::Array[Models::Shared::AtsJobOpening]), postings: T.nilable(T::Array[Models::Shared::AtsJobPosting]), public_job_urls: T.nilable(T::Array[::String]), questions: T.nilable(T::Array[Models::Shared::AtsJobQuestion]), raw: T.nilable(T::Hash[Symbol, ::Object]), recruiter_ids: T.nilable(T::Array[::String]), remote: T.nilable(T::Boolean), skills: T.nilable(T::Array[::String]), status: T.nilable(Models::Shared::AtsJobStatus), summary: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        sig { params(addresses: T.nilable(T::Array[Models::Shared::AtsAddress]), closed_at: T.nilable(::DateTime), company_id: T.nilable(::String), compensation: T.nilable(T::Array[Models::Shared::AtsCompensation]), created_at: T.nilable(::DateTime), description: T.nilable(::String), employment_type: T.nilable(Models::Shared::EmploymentType), groups: T.nilable(T::Array[Models::Shared::AtsGroup]), hiring_manager_ids: T.nilable(T::Array[::String]), hiring_managers: T.nilable(T::Array[Models::Shared::AtsReference]), id: T.nilable(::String), industry: T.nilable(::String), language_locale: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AtsMetadata]), minimum_degree: T.nilable(::String), minimum_experience_years: T.nilable(::Float), name: T.nilable(::String), number_of_openings: T.nilable(::Float), openings: T.nilable(T::Array[Models::Shared::AtsJobOpening]), postings: T.nilable(T::Array[Models::Shared::AtsJobPosting]), public_job_urls: T.nilable(T::Array[::String]), questions: T.nilable(T::Array[Models::Shared::AtsJobQuestion]), raw: T.nilable(T::Hash[::Symbol, ::Object]), recruiter_ids: T.nilable(T::Array[::String]), remote: T.nilable(T::Boolean), skills: T.nilable(T::Array[::String]), status: T.nilable(Models::Shared::AtsJobStatus), summary: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
         def initialize(addresses: nil, closed_at: nil, company_id: nil, compensation: nil, created_at: nil, description: nil, employment_type: nil, groups: nil, hiring_manager_ids: nil, hiring_managers: nil, id: nil, industry: nil, language_locale: nil, metadata: nil, minimum_degree: nil, minimum_experience_years: nil, name: nil, number_of_openings: nil, openings: nil, postings: nil, public_job_urls: nil, questions: nil, raw: nil, recruiter_ids: nil, remote: nil, skills: nil, status: nil, summary: nil, updated_at: nil, user_id: nil)
           @addresses = addresses
           @closed_at = closed_at

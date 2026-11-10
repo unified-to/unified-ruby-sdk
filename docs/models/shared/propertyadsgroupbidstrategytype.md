@@ -1,5 +1,16 @@
 # PropertyAdsGroupBidStrategyType
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PropertyAdsGroupBidStrategyType::FIXED_BID
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = PropertyAdsGroupBidStrategyType.deserialize("custom_value")
+```
+
 
 ## Values
 

@@ -1,5 +1,4 @@
 # Practicearea
-(*practicearea*)
 
 ## Overview
 
@@ -18,25 +17,24 @@ Creates a LegalPracticearea. Provide the unified LegalPracticearea fields in the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createLegalPracticearea" method="post" path="/legal/{connection_id}/practicearea" -->
+<!-- UsageSnippet language="ruby" operationID="createLegalPracticearea" method="post" path="/legal/{connection_id}/practicearea" example="legal_practicearea" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.practicearea.create_legal_practicearea(legal_practicearea: Models::Shared::LegalPracticearea.new(
   code: 'QCA',
   created_at: DateTime.iso8601('2023-01-28T21:00:26.264Z'),
-  id: 'b48e8968-f01b-422c-b368-eeb8900ecf3b',
+  id: '8c7cc059-208f-47fd-bb36-7b3063c9ab53',
   metadata: [],
   name: 'witty Law',
   type: Models::Shared::LegalPracticeareaType::EDUCATION,
-  updated_at: DateTime.iso8601('2025-09-09T20:46:31.407Z'),
+  updated_at: DateTime.iso8601('2025-09-11T02:52:06.547Z')
 ), connection_id: '<id>')
 
 unless res.legal_practicearea.nil?
@@ -76,11 +74,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.practicearea.get_legal_practicearea(connection_id: '<id>', id: '<id>')
 
 unless res.legal_practicearea.nil?
@@ -120,15 +117,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListLegalPracticeareasRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListLegalPracticeareasRequest.new(
+  connection_id: '<id>'
+)
 res = s.practicearea.list_legal_practiceareas(request: req)
 
 unless res.legal_practiceareas.nil?
@@ -159,31 +155,30 @@ Updates the LegalPracticearea identified by `id`. Provide the unified LegalPract
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchLegalPracticearea" method="patch" path="/legal/{connection_id}/practicearea/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchLegalPracticearea" method="patch" path="/legal/{connection_id}/practicearea/{id}" example="legal_practicearea" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchLegalPracticeareaRequest.new(
   legal_practicearea: Models::Shared::LegalPracticearea.new(
     code: 'QCA',
     created_at: DateTime.iso8601('2023-01-28T21:00:26.264Z'),
-    id: 'd76c2c43-50bf-4759-8bbb-c770721b9e59',
+    id: '258cd8a3-cf38-4cee-9957-791859f47091',
     metadata: [],
     name: 'witty Law',
     type: Models::Shared::LegalPracticeareaType::EDUCATION,
-    updated_at: DateTime.iso8601('2025-09-09T20:46:31.422Z'),
+    updated_at: DateTime.iso8601('2025-09-11T02:52:06.556Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.practicearea.patch_legal_practicearea(request: req)
 
 unless res.legal_practicearea.nil?
@@ -220,11 +215,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.practicearea.remove_legal_practicearea(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -256,31 +250,30 @@ Updates the LegalPracticearea identified by `id`. Provide the unified LegalPract
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateLegalPracticearea" method="put" path="/legal/{connection_id}/practicearea/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateLegalPracticearea" method="put" path="/legal/{connection_id}/practicearea/{id}" example="legal_practicearea" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateLegalPracticeareaRequest.new(
   legal_practicearea: Models::Shared::LegalPracticearea.new(
     code: 'QCA',
     created_at: DateTime.iso8601('2023-01-28T21:00:26.264Z'),
-    id: 'd76c2c43-50bf-4759-8bbb-c770721b9e59',
+    id: '258cd8a3-cf38-4cee-9957-791859f47091',
     metadata: [],
     name: 'witty Law',
     type: Models::Shared::LegalPracticeareaType::EDUCATION,
-    updated_at: DateTime.iso8601('2025-09-09T20:46:31.422Z'),
+    updated_at: DateTime.iso8601('2025-09-11T02:52:06.556Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.practicearea.update_legal_practicearea(request: req)
 
 unless res.legal_practicearea.nil?

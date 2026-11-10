@@ -1,5 +1,4 @@
 # Quote
-(*quote*)
 
 ## Overview
 
@@ -25,12 +24,11 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-res = s.quote.create_accounting_quote(accounting_quote: Models::Shared::AccountingQuote.new(), connection_id: '<id>')
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.quote.create_accounting_quote(accounting_quote: Models::Shared::AccountingQuote.new, connection_id: '<id>')
 
 unless res.accounting_quote.nil?
   # handle response
@@ -63,49 +61,48 @@ Creates a PropertyQuote. Provide the unified PropertyQuote fields in the request
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createPropertyQuote" method="post" path="/property/{connection_id}/quote" -->
+<!-- UsageSnippet language="ruby" operationID="createPropertyQuote" method="post" path="/property/{connection_id}/quote" example="property_quote" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.quote.create_property_quote(property_quote: Models::Shared::PropertyQuote.new(
   adults: 1.0,
   children: 1.0,
   created_at: DateTime.iso8601('2020-12-18T19:14:11.415Z'),
   currency: 'USD',
   deposit_amount: 594.54,
-  end_at: DateTime.iso8601('2026-11-23'),
+  end_at: DateTime.iso8601('2026-11-25'),
   guests: 2.0,
-  id: '485cf13d-43a1-4c3d-9127-122d7fa6ea7c',
+  id: 'eebe7e43-8ba9-4939-b1c6-de3dcc1bb0e3',
   line_items: [
     Models::Shared::PropertyLineitem.new(
       amount: 1665.0,
       description: '9 nights',
       is_mandatory: true,
       name: 'Accommodation',
-      type: Models::Shared::PropertyLineitemType::BASE,
+      type: Models::Shared::PropertyLineitemType::BASE
     ),
     Models::Shared::PropertyLineitem.new(
       amount: 117.0,
       is_mandatory: true,
       name: 'Cleaning fee',
-      type: Models::Shared::PropertyLineitemType::FEE,
+      type: Models::Shared::PropertyLineitemType::FEE
     ),
     Models::Shared::PropertyLineitem.new(
       amount: 199.8,
       is_mandatory: true,
       name: 'Lodging tax',
-      type: Models::Shared::PropertyLineitemType::TAX,
+      type: Models::Shared::PropertyLineitemType::TAX
     ),
   ],
-  start_at: DateTime.iso8601('2026-11-14'),
-  total_amount: 1_981.8,
+  start_at: DateTime.iso8601('2026-11-16'),
+  total_amount: 1981.8
 ), connection_id: '<id>')
 
 unless res.property_quote.nil?
@@ -145,11 +142,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.quote.get_accounting_quote(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_quote.nil?
@@ -189,15 +185,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingQuotesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingQuotesRequest.new(
+  connection_id: '<id>'
+)
 res = s.quote.list_accounting_quotes(request: req)
 
 unless res.accounting_quotes.nil?
@@ -234,17 +229,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::PatchAccountingQuoteRequest.new(
-  accounting_quote: Models::Shared::AccountingQuote.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::PatchAccountingQuoteRequest.new(
+  accounting_quote: Models::Shared::AccountingQuote.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.quote.patch_accounting_quote(request: req)
 
 unless res.accounting_quote.nil?
@@ -281,11 +275,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.quote.remove_accounting_quote(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -323,17 +316,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::UpdateAccountingQuoteRequest.new(
-  accounting_quote: Models::Shared::AccountingQuote.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::UpdateAccountingQuoteRequest.new(
+  accounting_quote: Models::Shared::AccountingQuote.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.quote.update_accounting_quote(request: req)
 
 unless res.accounting_quote.nil?

@@ -1,5 +1,13 @@
 # UpdateGenaiTaskQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = UpdateGenaiTaskQueryParamFields::ID
+```
+
 
 ## Values
 

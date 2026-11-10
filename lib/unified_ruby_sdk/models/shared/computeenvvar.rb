@@ -7,14 +7,13 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class ComputeEnvvar
         extend T::Sig
         include Crystalline::MetadataFields
 
         # When the variable was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Environments the variable applies to
         field :environments, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::PropertyComputeEnvvarEnvironments)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('environments') } }
         # Unique identifier for the environment variable
@@ -26,15 +25,15 @@ module UnifiedRubySDK
         # Variable name
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # Raw data from integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # The service the variable belongs to
         field :service_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('service_id') } }
         # When the variable was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Variable value (write-only; never returned)
         field :value, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
 
-        sig { params(created_at: T.nilable(::DateTime), environments: T.nilable(T::Array[Models::Shared::PropertyComputeEnvvarEnvironments]), id: T.nilable(::String), is_secret: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::ComputeMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), service_id: T.nilable(::String), updated_at: T.nilable(::DateTime), value: T.nilable(::String)).void }
+        sig { params(created_at: T.nilable(::DateTime), environments: T.nilable(T::Array[Models::Shared::PropertyComputeEnvvarEnvironments]), id: T.nilable(::String), is_secret: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::ComputeMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), service_id: T.nilable(::String), updated_at: T.nilable(::DateTime), value: T.nilable(::String)).void }
         def initialize(created_at: nil, environments: nil, id: nil, is_secret: nil, metadata: nil, name: nil, raw: nil, service_id: nil, updated_at: nil, value: nil)
           @created_at = created_at
           @environments = environments

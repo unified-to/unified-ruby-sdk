@@ -1,5 +1,13 @@
 # ListTaskChangesQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListTaskChangesQueryParamFields::ID
+```
+
 
 ## Values
 

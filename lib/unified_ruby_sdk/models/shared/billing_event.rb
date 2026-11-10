@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # BillingEvent - Billing events for ads_group (what you pay for; cross-platform; platform-specific values allowed as pass-through)
-      class BillingEvent < T::Enum
-
-
+      class BillingEvent
+        include ::Crystalline::Enum
         enums do
           IMPRESSIONS = new('IMPRESSIONS')
           LINK_CLICKS = new('LINK_CLICKS')
@@ -24,6 +22,7 @@ module UnifiedRubySDK
           PURCHASE = new('PURCHASE')
           NONE = new('NONE')
         end
+        open!
       end
     end
   end

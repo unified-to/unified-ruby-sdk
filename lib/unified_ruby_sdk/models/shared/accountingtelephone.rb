@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class AccountingTelephone
         extend T::Sig
@@ -16,7 +15,7 @@ module UnifiedRubySDK
 
         field :telephone, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephone') } }
 
-        field :type, Crystalline::Nilable.new(Models::Shared::AccountingTelephoneType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AccountingTelephoneType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::AccountingTelephoneType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::AccountingTelephoneType, true) } }
 
         sig { params(telephone: T.nilable(::String), type: T.nilable(Models::Shared::AccountingTelephoneType)).void }
         def initialize(telephone: nil, type: nil)

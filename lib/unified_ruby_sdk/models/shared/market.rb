@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Market - Pricing market the instance runs in
-      class Market < T::Enum
-
-
+      class Market
+        include ::Crystalline::Enum
         enums do
           ON_DEMAND = new('ON_DEMAND')
           SPOT = new('SPOT')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           COMMUNITY = new('COMMUNITY')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

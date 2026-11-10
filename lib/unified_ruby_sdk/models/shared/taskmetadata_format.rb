@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # TaskMetadataFormat - The data type of the custom field, which determines how `value` is formatted.
-      class TaskMetadataFormat < T::Enum
-
-
+      class TaskMetadataFormat
+        include ::Crystalline::Enum
         enums do
           TEXT = new('TEXT')
           NUMBER = new('NUMBER')
@@ -27,6 +25,7 @@ module UnifiedRubySDK
           CURRENCY = new('CURRENCY')
           URL = new('URL')
         end
+        open!
       end
     end
   end

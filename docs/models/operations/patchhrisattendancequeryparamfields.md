@@ -1,5 +1,13 @@
 # PatchHrisAttendanceQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PatchHrisAttendanceQueryParamFields::ID
+```
+
 
 ## Values
 

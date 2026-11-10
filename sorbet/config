@@ -2,3 +2,9 @@
 .
 --ignore=tmp/
 --ignore=vendor/
+# prism 1.7.0 aliasing error: https://github.com/ruby/prism/issues/3833
+--suppress-error-code=4022
+# Ruby 4.0 / rdoc 7.0.3 error suppression
+--suppress-payload-superclass-redefinition-for=RDoc::Markup::BlankLine
+--suppress-payload-superclass-redefinition-for=RDoc::Markup::HardBreak
+--suppress-payload-superclass-redefinition-for=RDoc::Markup::Heading

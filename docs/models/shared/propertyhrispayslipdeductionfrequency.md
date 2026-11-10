@@ -2,6 +2,17 @@
 
 Frequency for this deduction (should always be set, matches IHrisBenefit.frequency)
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PropertyHrisPayslipDeductionFrequency::ONE_TIME
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = PropertyHrisPayslipDeductionFrequency.deserialize("custom_value")
+```
+
 
 ## Values
 

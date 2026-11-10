@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class PropertyMessage
         extend T::Sig
@@ -16,7 +15,7 @@ module UnifiedRubySDK
         # files attached to the message
         field :attachments, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::PropertyAttachment)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('attachments') } }
         # when the message was sent (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # unique identifier for the message
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # whether the message was sent automatically
@@ -28,11 +27,11 @@ module UnifiedRubySDK
         # the name of the sender
         field :sender_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sender_name') } }
         # whether the guest, host or system sent the message
-        field :sender_type, Crystalline::Nilable.new(Models::Shared::SenderType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sender_type'), 'decoder': Utils.enum_from_string(Models::Shared::SenderType, true) } }
+        field :sender_type, Crystalline::Nilable.new(Models::Shared::SenderType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sender_type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::SenderType, true) } }
         # the message subject
         field :subject, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subject') } }
         # when the message was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         sig { params(attachments: T.nilable(T::Array[Models::Shared::PropertyAttachment]), created_at: T.nilable(::DateTime), id: T.nilable(::String), is_automatic: T.nilable(T::Boolean), is_unread: T.nilable(T::Boolean), message: T.nilable(::String), sender_name: T.nilable(::String), sender_type: T.nilable(Models::Shared::SenderType), subject: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
         def initialize(attachments: nil, created_at: nil, id: nil, is_automatic: nil, is_unread: nil, message: nil, sender_name: nil, sender_type: nil, subject: nil, updated_at: nil)

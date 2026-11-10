@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class AccountingJournal
         extend T::Sig
@@ -18,7 +17,7 @@ module UnifiedRubySDK
 
         field :category_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('category_ids') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
@@ -36,17 +35,17 @@ module UnifiedRubySDK
 
         field :organization_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization_id') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :posted_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('posted_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :posted_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('posted_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # (reference to TaskProject)
         field :project_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('project_id') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :reference, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reference') } }
 
         field :source, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('source') } }
         # Posting state of the journal entry
-        field :status, Crystalline::Nilable.new(Models::Shared::AccountingJournalStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::AccountingJournalStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::AccountingJournalStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::AccountingJournalStatus, true) } }
 
         field :tax_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tax_amount') } }
 
@@ -54,9 +53,9 @@ module UnifiedRubySDK
         # Total of the debit lines; equals the total of the credit lines
         field :total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(attachments: T.nilable(T::Array[Models::Shared::AccountingAttachment]), category_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), exchange_rate: T.nilable(::Float), id: T.nilable(::String), is_inclusive_of_tax: T.nilable(T::Boolean), lineitems: T.nilable(T::Array[Models::Shared::AccountingJournalLineitem]), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), organization_id: T.nilable(::String), posted_at: T.nilable(::DateTime), project_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), source: T.nilable(::String), status: T.nilable(Models::Shared::AccountingJournalStatus), tax_amount: T.nilable(::Float), taxrate_id: T.nilable(::String), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
+        sig { params(attachments: T.nilable(T::Array[Models::Shared::AccountingAttachment]), category_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), exchange_rate: T.nilable(::Float), id: T.nilable(::String), is_inclusive_of_tax: T.nilable(T::Boolean), lineitems: T.nilable(T::Array[Models::Shared::AccountingJournalLineitem]), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), organization_id: T.nilable(::String), posted_at: T.nilable(::DateTime), project_id: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), reference: T.nilable(::String), source: T.nilable(::String), status: T.nilable(Models::Shared::AccountingJournalStatus), tax_amount: T.nilable(::Float), taxrate_id: T.nilable(::String), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
         def initialize(attachments: nil, category_ids: nil, created_at: nil, currency: nil, description: nil, exchange_rate: nil, id: nil, is_inclusive_of_tax: nil, lineitems: nil, metadata: nil, organization_id: nil, posted_at: nil, project_id: nil, raw: nil, reference: nil, source: nil, status: nil, tax_amount: nil, taxrate_id: nil, total_amount: nil, updated_at: nil)
           @attachments = attachments
           @category_ids = category_ids

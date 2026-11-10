@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class HrisEmail
         extend T::Sig
@@ -16,7 +15,7 @@ module UnifiedRubySDK
 
         field :email, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('email'), required: true } }
 
-        field :type, Crystalline::Nilable.new(Models::Shared::HrisEmailType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::HrisEmailType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::HrisEmailType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::HrisEmailType, true) } }
 
         sig { params(email: ::String, type: T.nilable(Models::Shared::HrisEmailType)).void }
         def initialize(email:, type: nil)

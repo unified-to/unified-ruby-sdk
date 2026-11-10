@@ -1,5 +1,4 @@
 # Kms
-(*kms*)
 
 ## Overview
 
@@ -30,25 +29,24 @@ Creates a KmsComment. Provide the unified KmsComment fields in the request body;
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createKmsComment" method="post" path="/kms/{connection_id}/comment" -->
+<!-- UsageSnippet language="ruby" operationID="createKmsComment" method="post" path="/kms/{connection_id}/comment" example="kms_comment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.kms.create_kms_comment(kms_comment: Models::Shared::KmsComment.new(
   content: 'Decimus tolero viriliter usque.',
   content_type: Models::Shared::ContentType::HTML,
   created_at: DateTime.iso8601('2022-08-26T14:40:49.732Z'),
-  id: 'df29b125-0fa5-43ad-acc1-aa2734d6e333',
+  id: 'f735f24d-4c20-4850-b0ac-df487c9f95a8',
   metadata: [],
   type: Models::Shared::KmsCommentType::PAGE,
-  updated_at: DateTime.iso8601('2023-12-02T00:09:52.267Z'),
+  updated_at: DateTime.iso8601('2023-12-02T13:15:42.753Z')
 ), connection_id: '<id>')
 
 unless res.kms_comment.nil?
@@ -82,28 +80,27 @@ Creates a KmsPage. Provide the unified KmsPage fields in the request body; they 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createKmsPage" method="post" path="/kms/{connection_id}/page" -->
+<!-- UsageSnippet language="ruby" operationID="createKmsPage" method="post" path="/kms/{connection_id}/page" example="kms_page" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.kms.create_kms_page(kms_page: Models::Shared::KmsPage.new(
   created_at: DateTime.iso8601('2019-05-20T18:06:50.749Z'),
   download_url: 'https://agitated-validity.info',
   has_children: true,
-  id: '4f78bfc9-df95-45e7-8070-6be1b93c35a1',
+  id: 'd0b0199b-e86b-4e1b-b0e2-10436bac54e3',
   is_active: true,
   metadata: [],
   title: 'even minister extract',
   type: Models::Shared::KmsPageType::HTML,
-  updated_at: DateTime.iso8601('2025-10-25T13:05:48.197Z'),
-  web_url: 'https://another-petticoat.info',
+  updated_at: DateTime.iso8601('2025-10-27T02:32:24.139Z'),
+  web_url: 'https://another-petticoat.info'
 ), connection_id: '<id>')
 
 unless res.kms_page.nil?
@@ -137,25 +134,24 @@ Creates a KmsSpace. Provide the unified KmsSpace fields in the request body; the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createKmsSpace" method="post" path="/kms/{connection_id}/space" -->
+<!-- UsageSnippet language="ruby" operationID="createKmsSpace" method="post" path="/kms/{connection_id}/space" example="kms_space" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.kms.create_kms_space(kms_space: Models::Shared::KmsSpace.new(
   created_at: DateTime.iso8601('2022-10-31T00:56:54.246Z'),
   description: 'Acer.',
-  id: '211646ac-ca44-4c4e-9bec-4130a88a3b5b',
+  id: '8fb15653-b12c-4bf5-9b16-cf473f42e8a6',
   is_active: false,
   metadata: [],
   name: 'into nor afore',
-  updated_at: DateTime.iso8601('2026-01-14T02:15:44.454Z'),
+  updated_at: DateTime.iso8601('2026-01-15T12:54:32.127Z')
 ), connection_id: '<id>')
 
 unless res.kms_space.nil?
@@ -195,11 +191,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.kms.get_kms_comment(connection_id: '<id>', id: '<id>')
 
 unless res.kms_comment.nil?
@@ -239,11 +234,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.kms.get_kms_page(connection_id: '<id>', id: '<id>')
 
 unless res.kms_page.nil?
@@ -283,11 +277,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.kms.get_kms_space(connection_id: '<id>', id: '<id>')
 
 unless res.kms_space.nil?
@@ -327,15 +320,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListKmsCommentsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListKmsCommentsRequest.new(
+  connection_id: '<id>'
+)
 res = s.kms.list_kms_comments(request: req)
 
 unless res.kms_comments.nil?
@@ -372,15 +364,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListKmsPagesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListKmsPagesRequest.new(
+  connection_id: '<id>'
+)
 res = s.kms.list_kms_pages(request: req)
 
 unless res.kms_pages.nil?
@@ -417,15 +408,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListKmsSpacesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListKmsSpacesRequest.new(
+  connection_id: '<id>'
+)
 res = s.kms.list_kms_spaces(request: req)
 
 unless res.kms_spaces.nil?
@@ -456,31 +446,30 @@ Updates the KmsComment identified by `id`. Provide the unified KmsComment fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchKmsComment" method="patch" path="/kms/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchKmsComment" method="patch" path="/kms/{connection_id}/comment/{id}" example="kms_comment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchKmsCommentRequest.new(
   kms_comment: Models::Shared::KmsComment.new(
     content: 'Decimus tolero viriliter usque.',
     content_type: Models::Shared::ContentType::HTML,
     created_at: DateTime.iso8601('2022-08-26T14:40:49.732Z'),
-    id: '29411751-fb47-453d-8c5a-a221a1358ced',
+    id: 'c03d0b41-9425-4f98-8693-052f9722a879',
     metadata: [],
     type: Models::Shared::KmsCommentType::PAGE,
-    updated_at: DateTime.iso8601('2023-12-02T00:09:52.272Z'),
+    updated_at: DateTime.iso8601('2023-12-02T13:15:42.757Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.kms.patch_kms_comment(request: req)
 
 unless res.kms_comment.nil?
@@ -511,34 +500,33 @@ Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to ch
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchKmsPage" method="patch" path="/kms/{connection_id}/page/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchKmsPage" method="patch" path="/kms/{connection_id}/page/{id}" example="kms_page" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchKmsPageRequest.new(
   kms_page: Models::Shared::KmsPage.new(
     created_at: DateTime.iso8601('2019-05-20T18:06:50.749Z'),
     download_url: 'https://agitated-validity.info',
     has_children: true,
-    id: '4db88ee1-be2d-4ae8-8acf-1452febba926',
+    id: 'c7a654e4-efac-49e2-afac-ced838ac1630',
     is_active: true,
     metadata: [],
     title: 'even minister extract',
     type: Models::Shared::KmsPageType::HTML,
-    updated_at: DateTime.iso8601('2025-10-25T13:05:48.213Z'),
-    web_url: 'https://another-petticoat.info',
+    updated_at: DateTime.iso8601('2025-10-27T02:32:24.151Z'),
+    web_url: 'https://another-petticoat.info'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.kms.patch_kms_page(request: req)
 
 unless res.kms_page.nil?
@@ -569,31 +557,30 @@ Updates the KmsSpace identified by `id`. Provide the unified KmsSpace fields to 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchKmsSpace" method="patch" path="/kms/{connection_id}/space/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchKmsSpace" method="patch" path="/kms/{connection_id}/space/{id}" example="kms_space" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchKmsSpaceRequest.new(
   kms_space: Models::Shared::KmsSpace.new(
     created_at: DateTime.iso8601('2022-10-31T00:56:54.246Z'),
     description: 'Acer.',
-    id: 'c410d478-0a5b-46ec-9d0e-b69d0a326565',
+    id: '847749d1-e91e-44ae-89a0-aa590c709b1d',
     is_active: false,
     metadata: [],
     name: 'into nor afore',
-    updated_at: DateTime.iso8601('2026-01-14T02:15:44.467Z'),
+    updated_at: DateTime.iso8601('2026-01-15T12:54:32.137Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.kms.patch_kms_space(request: req)
 
 unless res.kms_space.nil?
@@ -630,11 +617,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.kms.remove_kms_comment(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -672,11 +658,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.kms.remove_kms_page(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -714,11 +699,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.kms.remove_kms_space(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -750,31 +734,30 @@ Updates the KmsComment identified by `id`. Provide the unified KmsComment fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateKmsComment" method="put" path="/kms/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateKmsComment" method="put" path="/kms/{connection_id}/comment/{id}" example="kms_comment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateKmsCommentRequest.new(
   kms_comment: Models::Shared::KmsComment.new(
     content: 'Decimus tolero viriliter usque.',
     content_type: Models::Shared::ContentType::HTML,
     created_at: DateTime.iso8601('2022-08-26T14:40:49.732Z'),
-    id: '29411751-fb47-453d-8c5a-a221a1358ced',
+    id: 'c03d0b41-9425-4f98-8693-052f9722a879',
     metadata: [],
     type: Models::Shared::KmsCommentType::PAGE,
-    updated_at: DateTime.iso8601('2023-12-02T00:09:52.272Z'),
+    updated_at: DateTime.iso8601('2023-12-02T13:15:42.757Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.kms.update_kms_comment(request: req)
 
 unless res.kms_comment.nil?
@@ -805,34 +788,33 @@ Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to ch
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateKmsPage" method="put" path="/kms/{connection_id}/page/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateKmsPage" method="put" path="/kms/{connection_id}/page/{id}" example="kms_page" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateKmsPageRequest.new(
   kms_page: Models::Shared::KmsPage.new(
     created_at: DateTime.iso8601('2019-05-20T18:06:50.749Z'),
     download_url: 'https://agitated-validity.info',
     has_children: true,
-    id: '4db88ee1-be2d-4ae8-8acf-1452febba926',
+    id: 'c7a654e4-efac-49e2-afac-ced838ac1630',
     is_active: true,
     metadata: [],
     title: 'even minister extract',
     type: Models::Shared::KmsPageType::HTML,
-    updated_at: DateTime.iso8601('2025-10-25T13:05:48.213Z'),
-    web_url: 'https://another-petticoat.info',
+    updated_at: DateTime.iso8601('2025-10-27T02:32:24.151Z'),
+    web_url: 'https://another-petticoat.info'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.kms.update_kms_page(request: req)
 
 unless res.kms_page.nil?
@@ -863,31 +845,30 @@ Updates the KmsSpace identified by `id`. Provide the unified KmsSpace fields to 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateKmsSpace" method="put" path="/kms/{connection_id}/space/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateKmsSpace" method="put" path="/kms/{connection_id}/space/{id}" example="kms_space" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateKmsSpaceRequest.new(
   kms_space: Models::Shared::KmsSpace.new(
     created_at: DateTime.iso8601('2022-10-31T00:56:54.246Z'),
     description: 'Acer.',
-    id: 'c410d478-0a5b-46ec-9d0e-b69d0a326565',
+    id: '847749d1-e91e-44ae-89a0-aa590c709b1d',
     is_active: false,
     metadata: [],
     name: 'into nor afore',
-    updated_at: DateTime.iso8601('2026-01-14T02:15:44.467Z'),
+    updated_at: DateTime.iso8601('2026-01-15T12:54:32.137Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.kms.update_kms_space(request: req)
 
 unless res.kms_space.nil?

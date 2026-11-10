@@ -52,5 +52,18 @@ module Crystalline
     def self.get_union_types(t)
       t.types
     end
+
+    def self.boolean?(t)
+      t.instance_of? Crystalline::Boolean
+    end
+
+    def self.to_boolean(value)
+      case value
+      when true, false
+        value
+      else
+        raise TypeError, "Cannot convert #{value.inspect} to boolean. The value is of type #{value.class}"
+      end
+    end
   end
 end

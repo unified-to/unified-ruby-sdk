@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # AuthType - the authentication method to use for this workspace integration; when set, it overrides the default auth-method selection (e.g. force 'token' even when Unified OAUTH credentials exist)
-      class AuthType < T::Enum
-
-
+      class AuthType
+        include ::Crystalline::Enum
         enums do
           OAUTH2 = new('oauth2')
           OTHER = new('other')
           TOKEN = new('token')
         end
+        open!
       end
     end
   end

@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PropertyAdsReportMetricsCampaignTargetingGeographicPresenceType < T::Enum
-
-
+      class PropertyAdsReportMetricsCampaignTargetingGeographicPresenceType
+        include ::Crystalline::Enum
         enums do
           PRESENCE = new('PRESENCE')
           PRESENCE_OR_INTEREST = new('PRESENCE_OR_INTEREST')
         end
+        open!
       end
     end
   end

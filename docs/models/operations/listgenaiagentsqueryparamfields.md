@@ -1,5 +1,13 @@
 # ListGenaiAgentsQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListGenaiAgentsQueryParamFields::ID
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # ListHrisTaxonomiesQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListHrisTaxonomiesQueryParamFields::ID
+```
+
 
 ## Values
 

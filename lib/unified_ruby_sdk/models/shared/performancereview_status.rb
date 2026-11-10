@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PerformanceReviewStatus < T::Enum
-
-
+      class PerformanceReviewStatus
+        include ::Crystalline::Enum
         enums do
           DRAFT = new('DRAFT')
           IN_PROGRESS = new('IN_PROGRESS')
@@ -21,6 +19,7 @@ module UnifiedRubySDK
           ACKNOWLEDGED = new('ACKNOWLEDGED')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

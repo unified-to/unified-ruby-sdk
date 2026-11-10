@@ -7,14 +7,13 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class PropertyConversation
         extend T::Sig
         include Crystalline::MetadataFields
 
         # when the conversation was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # the guest email address
         field :guest_email, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('guest_email') } }
         # pointer to the Property Guest in this conversation
@@ -34,15 +33,15 @@ module UnifiedRubySDK
         # custom field values
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::PropertyMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # raw data from the integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # pointer to the Property Reservation this conversation is about
         field :reservation_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reservation_id') } }
         # the channel the conversation happens on, eg. Airbnb, email or SMS
         field :source, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('source') } }
         # when the conversation was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(created_at: T.nilable(::DateTime), guest_email: T.nilable(::String), guest_id: T.nilable(::String), guest_name: T.nilable(::String), guest_phone: T.nilable(::String), id: T.nilable(::String), is_unread: T.nilable(T::Boolean), listing_id: T.nilable(::String), messages: T.nilable(T::Array[Models::Shared::PropertyMessage]), metadata: T.nilable(T::Array[Models::Shared::PropertyMetadata]), raw: T.nilable(T::Hash[Symbol, ::Object]), reservation_id: T.nilable(::String), source: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        sig { params(created_at: T.nilable(::DateTime), guest_email: T.nilable(::String), guest_id: T.nilable(::String), guest_name: T.nilable(::String), guest_phone: T.nilable(::String), id: T.nilable(::String), is_unread: T.nilable(T::Boolean), listing_id: T.nilable(::String), messages: T.nilable(T::Array[Models::Shared::PropertyMessage]), metadata: T.nilable(T::Array[Models::Shared::PropertyMetadata]), raw: T.nilable(T::Hash[::Symbol, ::Object]), reservation_id: T.nilable(::String), source: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
         def initialize(created_at: nil, guest_email: nil, guest_id: nil, guest_name: nil, guest_phone: nil, id: nil, is_unread: nil, listing_id: nil, messages: nil, metadata: nil, raw: nil, reservation_id: nil, source: nil, updated_at: nil)
           @created_at = created_at
           @guest_email = guest_email

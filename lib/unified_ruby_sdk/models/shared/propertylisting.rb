@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class PropertyListing
         extend T::Sig
@@ -36,7 +35,7 @@ module UnifiedRubySDK
         # the cleaning fee
         field :cleaning_fee_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cleaning_fee_amount') } }
         # when the listing was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # ISO 4217 currency code
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
         # free-text description of the listing
@@ -70,7 +69,7 @@ module UnifiedRubySDK
         # the average guest rating
         field :rating, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rating') } }
         # raw data from the integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # the number of guest reviews
         field :review_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('review_count') } }
         # the lowest nightly price
@@ -78,15 +77,15 @@ module UnifiedRubySDK
         # IANA time zone of the listing
         field :timezone, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('timezone') } }
         # the normalized property type
-        field :type, Crystalline::Nilable.new(Models::Shared::PropertyListingType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyListingType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::PropertyListingType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PropertyListingType, true) } }
         # Property Unittypes (room types) of this listing
         field :unittype_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('unittype_ids') } }
         # when the listing was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # the listing URL
         field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
-        sig { params(address: T.nilable(Models::Shared::PropertyPropertyListingAddress), amenities: T.nilable(T::Array[::String]), bathrooms: T.nilable(::Float), bedrooms: T.nilable(::Float), beds: T.nilable(::Float), cancellation_policy: T.nilable(::String), channels: T.nilable(T::Array[Models::Shared::PropertyChannel]), check_in_end_time: T.nilable(::String), check_in_start_time: T.nilable(::String), check_out_time: T.nilable(::String), cleaning_fee_amount: T.nilable(::Float), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), house_rules: T.nilable(::String), id: T.nilable(::String), image_urls: T.nilable(T::Array[::String]), internal_name: T.nilable(::String), is_active: T.nilable(T::Boolean), latitude: T.nilable(::Float), longitude: T.nilable(::Float), max_nights: T.nilable(::Float), max_occupancy: T.nilable(::Float), metadata: T.nilable(T::Array[Models::Shared::PropertyMetadata]), min_nights: T.nilable(::Float), name: T.nilable(::String), owner_user_ids: T.nilable(T::Array[::String]), rating: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), review_count: T.nilable(::Float), start_price_amount: T.nilable(::Float), timezone: T.nilable(::String), type: T.nilable(Models::Shared::PropertyListingType), unittype_ids: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
+        sig { params(address: T.nilable(Models::Shared::PropertyPropertyListingAddress), amenities: T.nilable(T::Array[::String]), bathrooms: T.nilable(::Float), bedrooms: T.nilable(::Float), beds: T.nilable(::Float), cancellation_policy: T.nilable(::String), channels: T.nilable(T::Array[Models::Shared::PropertyChannel]), check_in_end_time: T.nilable(::String), check_in_start_time: T.nilable(::String), check_out_time: T.nilable(::String), cleaning_fee_amount: T.nilable(::Float), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), house_rules: T.nilable(::String), id: T.nilable(::String), image_urls: T.nilable(T::Array[::String]), internal_name: T.nilable(::String), is_active: T.nilable(T::Boolean), latitude: T.nilable(::Float), longitude: T.nilable(::Float), max_nights: T.nilable(::Float), max_occupancy: T.nilable(::Float), metadata: T.nilable(T::Array[Models::Shared::PropertyMetadata]), min_nights: T.nilable(::Float), name: T.nilable(::String), owner_user_ids: T.nilable(T::Array[::String]), rating: T.nilable(::Float), raw: T.nilable(T::Hash[::Symbol, ::Object]), review_count: T.nilable(::Float), start_price_amount: T.nilable(::Float), timezone: T.nilable(::String), type: T.nilable(Models::Shared::PropertyListingType), unittype_ids: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
         def initialize(address: nil, amenities: nil, bathrooms: nil, bedrooms: nil, beds: nil, cancellation_policy: nil, channels: nil, check_in_end_time: nil, check_in_start_time: nil, check_out_time: nil, cleaning_fee_amount: nil, created_at: nil, currency: nil, description: nil, house_rules: nil, id: nil, image_urls: nil, internal_name: nil, is_active: nil, latitude: nil, longitude: nil, max_nights: nil, max_occupancy: nil, metadata: nil, min_nights: nil, name: nil, owner_user_ids: nil, rating: nil, raw: nil, review_count: nil, start_price_amount: nil, timezone: nil, type: nil, unittype_ids: nil, updated_at: nil, web_url: nil)
           @address = address
           @amenities = amenities

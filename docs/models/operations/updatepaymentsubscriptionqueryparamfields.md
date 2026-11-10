@@ -1,5 +1,13 @@
 # UpdatePaymentSubscriptionQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = UpdatePaymentSubscriptionQueryParamFields::ID
+```
+
 
 ## Values
 

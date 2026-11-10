@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # WeekStart - week start day, defaults to undefined (no week start day)
-      class WeekStart < T::Enum
-
-
+      class WeekStart
+        include ::Crystalline::Enum
         enums do
           SU = new('SU')
           MO = new('MO')
@@ -21,6 +19,7 @@ module UnifiedRubySDK
           FR = new('FR')
           SA = new('SA')
         end
+        open!
       end
     end
   end

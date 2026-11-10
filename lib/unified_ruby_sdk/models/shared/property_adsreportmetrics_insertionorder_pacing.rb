@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class PropertyAdsReportMetricsInsertionorderPacing
         extend T::Sig
@@ -18,7 +17,7 @@ module UnifiedRubySDK
 
         field :daily_max_impressions, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('daily_max_impressions') } }
 
-        field :period, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsInsertionorderPacingPeriod), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('period'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyAdsReportMetricsInsertionorderPacingPeriod, true) } }
+        field :period, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsInsertionorderPacingPeriod), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('period'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PropertyAdsReportMetricsInsertionorderPacingPeriod, true) } }
 
         field :type, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
 

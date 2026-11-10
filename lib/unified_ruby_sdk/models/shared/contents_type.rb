@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class ContentsType < T::Enum
-
-
+      class ContentsType
+        include ::Crystalline::Enum
         enums do
           MERCHANDISE = new('MERCHANDISE')
           DOCUMENTS = new('DOCUMENTS')
@@ -20,6 +18,7 @@ module UnifiedRubySDK
           SAMPLE = new('SAMPLE')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

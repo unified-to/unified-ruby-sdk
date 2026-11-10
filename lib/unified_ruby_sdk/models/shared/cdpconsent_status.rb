@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # CdpConsentStatus - The consent status for this purpose
-      class CdpConsentStatus < T::Enum
-
-
+      class CdpConsentStatus
+        include ::Crystalline::Enum
         enums do
           GRANTED = new('GRANTED')
           DENIED = new('DENIED')
           PENDING = new('PENDING')
         end
+        open!
       end
     end
   end

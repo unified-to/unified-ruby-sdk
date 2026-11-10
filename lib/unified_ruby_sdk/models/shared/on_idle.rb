@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # OnIdle - What happens when the instance is idle
-      class OnIdle < T::Enum
-
-
+      class OnIdle
+        include ::Crystalline::Enum
         enums do
           TERMINATE = new('TERMINATE')
           PAUSE = new('PAUSE')
           STOP = new('STOP')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

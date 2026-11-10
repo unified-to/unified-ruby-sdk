@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class PropertyReservation
         extend T::Sig
@@ -18,17 +17,17 @@ module UnifiedRubySDK
         # the remaining balance
         field :balance_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('balance_amount') } }
         # when the reservation was cancelled (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :cancelled_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cancelled_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :cancelled_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cancelled_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # number of children
         field :children, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('children') } }
         # the booking channel confirmation code
         field :confirmation_code, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('confirmation_code') } }
         # when the reservation was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # ISO 4217 currency code
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
         # the departure (check-out) date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # the guest estimated arrival time (HH:mm, local time)
         field :estimated_arrival_time, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('estimated_arrival_time') } }
         # the guest estimated departure time (HH:mm, local time)
@@ -62,23 +61,23 @@ module UnifiedRubySDK
         # number of pets
         field :pets, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('pets') } }
         # raw data from the integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # the booking channel, eg. Airbnb, Booking.com or direct
         field :source, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('source') } }
         # the arrival (check-in) date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # the reservation status
-        field :status, Crystalline::Nilable.new(Models::Shared::PropertyReservationStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyReservationStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::PropertyReservationStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PropertyReservationStatus, true) } }
         # the total price of the reservation
         field :total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
         # Property Unittypes (room types) that are booked
         field :unittype_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('unittype_ids') } }
         # when the reservation was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # the reservation URL
         field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
-        sig { params(adults: T.nilable(::Float), balance_amount: T.nilable(::Float), cancelled_at: T.nilable(::DateTime), children: T.nilable(::Float), confirmation_code: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), end_at: T.nilable(::DateTime), estimated_arrival_time: T.nilable(::String), estimated_departure_time: T.nilable(::String), guest_email: T.nilable(::String), guest_id: T.nilable(::String), guest_name: T.nilable(::String), guest_phone: T.nilable(::String), guests: T.nilable(::Float), id: T.nilable(::String), infants: T.nilable(::Float), line_items: T.nilable(T::Array[Models::Shared::PropertyLineitem]), listing_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::PropertyMetadata]), nights: T.nilable(::Float), notes: T.nilable(::String), paid_amount: T.nilable(::Float), pets: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), source: T.nilable(::String), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::PropertyReservationStatus), total_amount: T.nilable(::Float), unittype_ids: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
+        sig { params(adults: T.nilable(::Float), balance_amount: T.nilable(::Float), cancelled_at: T.nilable(::DateTime), children: T.nilable(::Float), confirmation_code: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), end_at: T.nilable(::DateTime), estimated_arrival_time: T.nilable(::String), estimated_departure_time: T.nilable(::String), guest_email: T.nilable(::String), guest_id: T.nilable(::String), guest_name: T.nilable(::String), guest_phone: T.nilable(::String), guests: T.nilable(::Float), id: T.nilable(::String), infants: T.nilable(::Float), line_items: T.nilable(T::Array[Models::Shared::PropertyLineitem]), listing_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::PropertyMetadata]), nights: T.nilable(::Float), notes: T.nilable(::String), paid_amount: T.nilable(::Float), pets: T.nilable(::Float), raw: T.nilable(T::Hash[::Symbol, ::Object]), source: T.nilable(::String), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::PropertyReservationStatus), total_amount: T.nilable(::Float), unittype_ids: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
         def initialize(adults: nil, balance_amount: nil, cancelled_at: nil, children: nil, confirmation_code: nil, created_at: nil, currency: nil, end_at: nil, estimated_arrival_time: nil, estimated_departure_time: nil, guest_email: nil, guest_id: nil, guest_name: nil, guest_phone: nil, guests: nil, id: nil, infants: nil, line_items: nil, listing_id: nil, metadata: nil, nights: nil, notes: nil, paid_amount: nil, pets: nil, raw: nil, source: nil, start_at: nil, status: nil, total_amount: nil, unittype_ids: nil, updated_at: nil, web_url: nil)
           @adults = adults
           @balance_amount = balance_amount

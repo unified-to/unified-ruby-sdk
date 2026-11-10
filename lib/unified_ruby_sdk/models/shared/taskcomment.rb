@@ -7,14 +7,13 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class TaskComment
         extend T::Sig
         include Crystalline::MetadataFields
 
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :has_children, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('has_children') } }
 
@@ -24,19 +23,19 @@ module UnifiedRubySDK
 
         field :parent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # (reference to TaskTask)
         field :task_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('task_id') } }
         # The comment's text
         field :text, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('text') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
         field :user_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_name') } }
 
-        sig { params(created_at: T.nilable(::DateTime), has_children: T.nilable(T::Boolean), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::TaskMetadata]), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), task_id: T.nilable(::String), text: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), user_name: T.nilable(::String)).void }
+        sig { params(created_at: T.nilable(::DateTime), has_children: T.nilable(T::Boolean), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::TaskMetadata]), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), task_id: T.nilable(::String), text: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), user_name: T.nilable(::String)).void }
         def initialize(created_at: nil, has_children: nil, id: nil, metadata: nil, parent_id: nil, raw: nil, task_id: nil, text: nil, updated_at: nil, user_id: nil, user_name: nil)
           @created_at = created_at
           @has_children = has_children

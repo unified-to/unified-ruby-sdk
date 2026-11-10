@@ -2,6 +2,17 @@
 
 how often the employee is paid (eg. BIWEEKLY)
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PayFrequency::ONE_TIME
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = PayFrequency.deserialize("custom_value")
+```
+
 
 ## Values
 

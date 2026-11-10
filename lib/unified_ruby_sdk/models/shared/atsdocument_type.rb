@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # AtsDocumentType - The kind of document
-      class AtsDocumentType < T::Enum
-
-
+      class AtsDocumentType
+        include ::Crystalline::Enum
         enums do
           RESUME = new('RESUME')
           COVER_LETTER = new('COVER_LETTER')
@@ -20,6 +18,7 @@ module UnifiedRubySDK
           TAKE_HOME_TEST = new('TAKE_HOME_TEST')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

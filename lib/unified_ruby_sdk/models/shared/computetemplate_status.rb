@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # ComputeTemplateStatus - Normalized build status
-      class ComputeTemplateStatus < T::Enum
-
-
+      class ComputeTemplateStatus
+        include ::Crystalline::Enum
         enums do
           PENDING = new('PENDING')
           BUILDING = new('BUILDING')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           FAILED = new('FAILED')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

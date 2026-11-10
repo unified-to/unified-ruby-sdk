@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # AccountingQuoteStatus - where EXPIRED is derived (expires_at < now), the source status is preserved in raw
-      class AccountingQuoteStatus < T::Enum
-
-
+      class AccountingQuoteStatus
+        include ::Crystalline::Enum
         enums do
           DRAFT = new('DRAFT')
           SENT = new('SENT')
@@ -22,6 +20,7 @@ module UnifiedRubySDK
           VOIDED = new('VOIDED')
           DELETED = new('DELETED')
         end
+        open!
       end
     end
   end

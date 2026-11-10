@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class HealthcarePractitioner
         extend T::Sig
@@ -16,13 +15,13 @@ module UnifiedRubySDK
         # Work address of the practitioner
         field :address, Crystalline::Nilable.new(Models::Shared::PropertyHealthcarePractitionerAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address') } }
         # When the practitioner record was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Email addresses of the practitioner
         field :emails, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HealthcareEmail)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
         # Given name of the practitioner
         field :first_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('first_name') } }
         # Administrative gender of the practitioner
-        field :gender, Crystalline::Nilable.new(Models::Shared::HealthcarePractitionerGender), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gender'), 'decoder': Utils.enum_from_string(Models::Shared::HealthcarePractitionerGender, true) } }
+        field :gender, Crystalline::Nilable.new(Models::Shared::HealthcarePractitionerGender), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gender'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::HealthcarePractitionerGender, true) } }
         # Unique identifier for the practitioner
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # Business identifiers (e.g. NPI)
@@ -44,7 +43,7 @@ module UnifiedRubySDK
         # Codings for certifications, licenses and degrees
         field :qualifications, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HealthcareCode)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('qualifications') } }
         # Raw data from integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # Codings for the practitioner's specialties
         field :specialties, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HealthcareCode)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('specialties') } }
         # Phone numbers of the practitioner
@@ -52,9 +51,9 @@ module UnifiedRubySDK
         # Professional title or prefix (e.g. Dr.)
         field :title, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
         # When the practitioner record was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(address: T.nilable(Models::Shared::PropertyHealthcarePractitionerAddress), created_at: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::HealthcareEmail]), first_name: T.nilable(::String), gender: T.nilable(Models::Shared::HealthcarePractitionerGender), id: T.nilable(::String), identifiers: T.nilable(T::Array[Models::Shared::HealthcareIdentifier]), image_url: T.nilable(::String), is_active: T.nilable(T::Boolean), languages: T.nilable(T::Array[::String]), last_name: T.nilable(::String), location_ids: T.nilable(T::Array[::String]), metadata: T.nilable(T::Array[Models::Shared::HealthcareMetadata]), name: T.nilable(::String), qualifications: T.nilable(T::Array[Models::Shared::HealthcareCode]), raw: T.nilable(T::Hash[Symbol, ::Object]), specialties: T.nilable(T::Array[Models::Shared::HealthcareCode]), telephones: T.nilable(T::Array[Models::Shared::HealthcareTelephone]), title: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        sig { params(address: T.nilable(Models::Shared::PropertyHealthcarePractitionerAddress), created_at: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::HealthcareEmail]), first_name: T.nilable(::String), gender: T.nilable(Models::Shared::HealthcarePractitionerGender), id: T.nilable(::String), identifiers: T.nilable(T::Array[Models::Shared::HealthcareIdentifier]), image_url: T.nilable(::String), is_active: T.nilable(T::Boolean), languages: T.nilable(T::Array[::String]), last_name: T.nilable(::String), location_ids: T.nilable(T::Array[::String]), metadata: T.nilable(T::Array[Models::Shared::HealthcareMetadata]), name: T.nilable(::String), qualifications: T.nilable(T::Array[Models::Shared::HealthcareCode]), raw: T.nilable(T::Hash[::Symbol, ::Object]), specialties: T.nilable(T::Array[Models::Shared::HealthcareCode]), telephones: T.nilable(T::Array[Models::Shared::HealthcareTelephone]), title: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
         def initialize(address: nil, created_at: nil, emails: nil, first_name: nil, gender: nil, id: nil, identifiers: nil, image_url: nil, is_active: nil, languages: nil, last_name: nil, location_ids: nil, metadata: nil, name: nil, qualifications: nil, raw: nil, specialties: nil, telephones: nil, title: nil, updated_at: nil)
           @address = address
           @created_at = created_at

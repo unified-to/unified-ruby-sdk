@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Also called timesheets
       class HrisAttendance
         extend T::Sig
@@ -16,13 +15,13 @@ module UnifiedRubySDK
         # (reference to HrisEmployee)
         field :employee_user_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employee_user_id'), required: true } }
         # clock-out (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :end_at, ::DateTime, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), required: true, 'decoder': Utils.datetime_from_iso_format(false) } }
+        field :end_at, ::DateTime, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), required: true, 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(false) } }
         # clock-in (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :start_at, ::DateTime, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), required: true, 'decoder': Utils.datetime_from_iso_format(false) } }
+        field :start_at, ::DateTime, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), required: true, 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(false) } }
 
         field :address, Crystalline::Nilable.new(Models::Shared::PropertyHrisAttendanceAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :approved_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('approved_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :approved_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('approved_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # (reference to HrisEmployee)
         field :approver_user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('approver_user_id') } }
 
@@ -30,7 +29,7 @@ module UnifiedRubySDK
         # (reference to HrisCompany)
         field :company_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_id') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # pairs with hourly_rate and tip amounts
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
         # cash tips declared by the employee for this attendance record
@@ -52,17 +51,17 @@ module UnifiedRubySDK
         # card/non-cash tips attributed to this attendance record
         field :non_cash_tips_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('non_cash_tips_amount') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :status, Crystalline::Nilable.new(Models::Shared::HrisAttendanceStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::HrisAttendanceStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::HrisAttendanceStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::HrisAttendanceStatus, true) } }
         # the scheduled hris_timeshift this attendance record fulfils
         field :timeshift_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('timeshift_id') } }
 
         field :timezone, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('timezone') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(employee_user_id: ::String, end_at: ::DateTime, start_at: ::DateTime, address: T.nilable(Models::Shared::PropertyHrisAttendanceAddress), approved_at: T.nilable(::DateTime), approver_user_id: T.nilable(::String), breaks: T.nilable(T::Array[Models::Shared::HrisAttendanceBreak]), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), declared_tips_amount: T.nilable(::Float), group_id: T.nilable(::String), hourly_rate: T.nilable(::Float), hours: T.nilable(::Float), id: T.nilable(::String), job_name: T.nilable(::String), location_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), non_cash_tips_amount: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::HrisAttendanceStatus), timeshift_id: T.nilable(::String), timezone: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        sig { params(employee_user_id: ::String, end_at: ::DateTime, start_at: ::DateTime, address: T.nilable(Models::Shared::PropertyHrisAttendanceAddress), approved_at: T.nilable(::DateTime), approver_user_id: T.nilable(::String), breaks: T.nilable(T::Array[Models::Shared::HrisAttendanceBreak]), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), declared_tips_amount: T.nilable(::Float), group_id: T.nilable(::String), hourly_rate: T.nilable(::Float), hours: T.nilable(::Float), id: T.nilable(::String), job_name: T.nilable(::String), location_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), non_cash_tips_amount: T.nilable(::Float), raw: T.nilable(T::Hash[::Symbol, ::Object]), status: T.nilable(Models::Shared::HrisAttendanceStatus), timeshift_id: T.nilable(::String), timezone: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
         def initialize(employee_user_id:, end_at:, start_at:, address: nil, approved_at: nil, approver_user_id: nil, breaks: nil, company_id: nil, created_at: nil, currency: nil, declared_tips_amount: nil, group_id: nil, hourly_rate: nil, hours: nil, id: nil, job_name: nil, location_id: nil, metadata: nil, non_cash_tips_amount: nil, raw: nil, status: nil, timeshift_id: nil, timezone: nil, updated_at: nil)
           @employee_user_id = employee_user_id
           @end_at = end_at

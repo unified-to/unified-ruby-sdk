@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class UcScorecardtemplateQuestionType < T::Enum
-
-
+      class UcScorecardtemplateQuestionType
+        include ::Crystalline::Enum
         enums do
           RATING = new('RATING')
           YES_NO = new('YES_NO')
           TEXT = new('TEXT')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

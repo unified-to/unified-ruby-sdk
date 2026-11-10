@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # HealthcareAllergyStatus - Clinical status of the allergy
-      class HealthcareAllergyStatus < T::Enum
-
-
+      class HealthcareAllergyStatus
+        include ::Crystalline::Enum
         enums do
           ACTIVE = new('ACTIVE')
           INACTIVE = new('INACTIVE')
           RESOLVED = new('RESOLVED')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

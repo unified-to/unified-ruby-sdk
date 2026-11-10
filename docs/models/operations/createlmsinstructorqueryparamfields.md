@@ -1,5 +1,13 @@
 # CreateLmsInstructorQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreateLmsInstructorQueryParamFields::ID
+```
+
 
 ## Values
 

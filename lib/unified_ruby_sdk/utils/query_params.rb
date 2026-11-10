@@ -3,7 +3,6 @@
 # typed: true
 # frozen_string_literal: true
 
-require 'cgi'
 require 'date'
 require 'base64'
 require 'sorbet-runtime'
@@ -12,14 +11,17 @@ module UnifiedRubySDK
   module Utils
     extend T::Sig
 
-    sig { params(clazz: Object, query_params: Object, url_override: T.nilable(::String), gbls: T.nilable(T::Hash[Symbol, T::Hash[Symbol, T::Hash[Symbol, Object]]])).returns(T::Hash[T.any(String, Symbol), T::Array[String]]) }
+    sig { params(clazz: ::Object, query_params: ::Object, url_override: T.nilable(::String), gbls: T.nilable(T::Hash[::Symbol, T::Hash[::Symbol, T::Hash[::Symbol, ::Object]]])).returns(T::Hash[T.any(::String, ::Symbol), T::Array[::String]]) }
     def self.get_query_params(clazz, query_params, url_override = nil, gbls = nil)
-      parsed_params = T.let({}, T::Hash[T.any(String, Symbol), T::Array[String]])
+      parsed_params = T.let({}, T::Hash[T.any(::String, ::Symbol), T::Array[::String]])
       if !url_override.nil?
-        parsed_url = URI.parse url_override
-        parsed_params = CGI.parse parsed_url.query
+        parsed_url = ::URI.parse url_override
+        ::URI.decode_www_form(parsed_url.query.to_s).each do |key, value|
+          parsed_params[key] ||= []
+          T.must(parsed_params[key]) << value
+        end
       end
-      params = T.let({}, T::Hash[T.any(String, Symbol), T::Array[String]])
+      params = T.let({}, T::Hash[T.any(::String, ::Symbol), T::Array[::String]])
       T.unsafe(clazz).fields.each do |f|
         request_metadata = f.metadata[:request]
         next if !request_metadata.nil?
@@ -53,7 +55,7 @@ module UnifiedRubySDK
               metadata, f_name, value, '|'
             )
           else
-            raise StandardError, 'not yet implemented'
+            raise ::StandardError, 'not yet implemented'
           end
         end
       end
@@ -61,11 +63,11 @@ module UnifiedRubySDK
     end
 
     sig do
-      params(metadata: T::Hash[Symbol, String], field_name: String, obj: Object)
-        .returns(T::Hash[T.any(String, Symbol), T::Array[String]])
+      params(metadata: T::Hash[::Symbol, ::String], field_name: ::String, obj: ::Object)
+        .returns(T::Hash[T.any(::String, ::Symbol), T::Array[::String]])
     end
     def self._get_deep_object_query_params(metadata, field_name, obj)
-      params = T.let({}, T::Hash[T.any(String, Symbol), T::Array[String]])
+      params = T.let({}, T::Hash[T.any(::String, ::Symbol), T::Array[::String]])
 
       return params if obj.nil?
 
@@ -78,7 +80,7 @@ module UnifiedRubySDK
           next if val.nil?
 
           key = "#{metadata.fetch(:field_name, field_name)}[#{obj_param_metadata.fetch(:field_name, obj_field.name)}]"
-          if val.is_a? Array
+          if val.is_a? ::Array
             val.each do |v|
               next if v.nil?
 
@@ -90,12 +92,12 @@ module UnifiedRubySDK
             params[key] = [val_to_string(val)]
           end
         end
-      elsif obj.is_a? Hash
+      elsif obj.is_a? ::Hash
         obj.each do |key, value|
           next if value.nil?
 
           param_key = "#{metadata.fetch(:field_name, field_name)}[#{key}]"
-          if value.is_a? Array
+          if value.is_a? ::Array
             value.each do |val|
               next if val.nil?
 
@@ -113,8 +115,8 @@ module UnifiedRubySDK
 
 
     sig do
-      params(metadata: T::Hash[Symbol, String], field_name: String, obj: Object, delimiter: String)
-        .returns(T::Hash[T.any(String, Symbol), T::Array[String]])
+      params(metadata: T::Hash[::Symbol, ::String], field_name: ::String, obj: ::Object, delimiter: ::String)
+        .returns(T::Hash[T.any(::String, ::Symbol), T::Array[::String]])
     end
     def self._get_delimited_query_params(metadata, field_name, obj, delimiter)
       get_query_param_field_name = lambda do |obj_field|

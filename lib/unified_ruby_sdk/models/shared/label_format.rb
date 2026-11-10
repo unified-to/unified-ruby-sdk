@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # LabelFormat - Format of the label (PDF, PNG, ZPL, EPL2)
-      class LabelFormat < T::Enum
-
-
+      class LabelFormat
+        include ::Crystalline::Enum
         enums do
           PDF = new('PDF')
           PNG = new('PNG')
@@ -22,6 +20,7 @@ module UnifiedRubySDK
           PNG_4_X6 = new('PNG_4X6')
           PNG_4_X8 = new('PNG_4X8')
         end
+        open!
       end
     end
   end

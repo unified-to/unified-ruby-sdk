@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PropertyWorkspaceIntegrationPatchCategories < T::Enum
-
-
+      class PropertyWorkspaceIntegrationPatchCategories
+        include ::Crystalline::Enum
         enums do
           PASSTHROUGH = new('passthrough')
           HRIS = new('hris')
@@ -54,6 +52,7 @@ module UnifiedRubySDK
           PROPERTY = new('property')
           PLM = new('plm')
         end
+        open!
       end
     end
   end

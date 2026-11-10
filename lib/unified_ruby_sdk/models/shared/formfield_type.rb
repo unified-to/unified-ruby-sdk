@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class FormFieldType < T::Enum
-
-
+      class FormFieldType
+        include ::Crystalline::Enum
         enums do
           TEXT = new('TEXT')
           TEXTAREA = new('TEXTAREA')
@@ -32,6 +30,7 @@ module UnifiedRubySDK
           SECTION_HEADER = new('SECTION_HEADER')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

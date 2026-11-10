@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PropertyAdsReportMetricsAdAdType < T::Enum
-
-
+      class PropertyAdsReportMetricsAdAdType
+        include ::Crystalline::Enum
         enums do
           TEXT = new('TEXT')
           IMAGE = new('IMAGE')
@@ -31,6 +29,7 @@ module UnifiedRubySDK
           DOOH = new('DOOH')
           PERFORMANCE_MAX = new('PERFORMANCE_MAX')
         end
+        open!
       end
     end
   end

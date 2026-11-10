@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # LegalMatterStatus - the matter status
-      class LegalMatterStatus < T::Enum
-
-
+      class LegalMatterStatus
+        include ::Crystalline::Enum
         enums do
           PENDING = new('PENDING')
           OPEN = new('OPEN')
           CLOSED = new('CLOSED')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

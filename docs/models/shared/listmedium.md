@@ -1,5 +1,16 @@
 # ListMedium
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListMedium::SUPPORTED_REQUIRED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = ListMedium.deserialize("custom_value")
+```
+
 
 ## Values
 

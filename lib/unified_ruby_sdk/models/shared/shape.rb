@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class Shape < T::Enum
-
-
+      class Shape
+        include ::Crystalline::Enum
         enums do
           ROUND = new('ROUND')
           SQUARE = new('SQUARE')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           OVAL = new('OVAL')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

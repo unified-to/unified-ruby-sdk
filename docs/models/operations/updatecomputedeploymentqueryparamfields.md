@@ -1,5 +1,13 @@
 # UpdateComputeDeploymentQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = UpdateComputeDeploymentQueryParamFields::ID
+```
+
 
 ## Values
 

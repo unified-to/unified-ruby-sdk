@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # OnExpire - What happens when the instance expires
-      class OnExpire < T::Enum
-
-
+      class OnExpire
+        include ::Crystalline::Enum
         enums do
           TERMINATE = new('TERMINATE')
           PAUSE = new('PAUSE')
           STOP = new('STOP')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

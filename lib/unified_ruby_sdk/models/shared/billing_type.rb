@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class BillingType < T::Enum
-
-
+      class BillingType
+        include ::Crystalline::Enum
         enums do
           FIXED_PRICE = new('FIXED_PRICE')
           TIME_AND_MATERIALS = new('TIME_AND_MATERIALS')
           MILESTONE = new('MILESTONE')
           NON_BILLABLE = new('NON_BILLABLE')
         end
+        open!
       end
     end
   end

@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PropertyAdsReportMetricsGroupBudgetAllocationType < T::Enum
-
-
+      class PropertyAdsReportMetricsGroupBudgetAllocationType
+        include ::Crystalline::Enum
         enums do
           UNSPECIFIED = new('UNSPECIFIED')
           AUTOMATIC = new('AUTOMATIC')
           FIXED = new('FIXED')
           UNLIMITED = new('UNLIMITED')
         end
+        open!
       end
     end
   end

@@ -11,26 +11,27 @@ generation:
     requestResponseComponentNamesFeb2024: false
     securityFeb2025: false
     sharedErrorComponentsApr2025: false
+    sharedNestedComponentsJan2026: false
     nameOverrideFeb2026: false
     openSingleValueEnumsOct2026: false
-    sharedNestedComponentsJan2026: false
   auth:
     oAuth2ClientCredentialsEnabled: false
     oAuth2PasswordEnabled: false
+    hoistGlobalSecurity: true
+  schemas:
+    allOfMergeStrategy: shallowMerge
+  requestBodyFieldName: ""
+  versioningStrategy: automatic
+  persistentEdits: {}
   tests:
     generateTests: true
     generateNewTests: false
     skipResponseBodyAssertions: false
   baseServerURL: ""
   flattenGlobalSecurity: true
-  persistentEdits: {}
-  requestBodyFieldName: ""
-  schemas:
-    allOfMergeStrategy: shallowMerge
   telemetryEnabled: false
-  versioningStrategy: automatic
 ruby:
-  version: 0.68.18
+  version: 0.69.0
   additionalDependencies:
     development: {}
     runtime: {}

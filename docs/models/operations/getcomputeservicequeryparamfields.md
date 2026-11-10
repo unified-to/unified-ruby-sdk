@@ -1,5 +1,13 @@
 # GetComputeServiceQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetComputeServiceQueryParamFields::ID
+```
+
 
 ## Values
 

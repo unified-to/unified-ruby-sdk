@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class HrisPayslipDetail
         extend T::Sig
@@ -40,7 +39,7 @@ module UnifiedRubySDK
         # pay rate for hourly/unit-based lines
         field :rate_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rate_amount') } }
 
-        field :type, Crystalline::Nilable.new(Models::Shared::HrisPayslipDetailType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::HrisPayslipDetailType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::HrisPayslipDetailType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::HrisPayslipDetailType, true) } }
         # year-to-date amount for this line
         field :ytd_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ytd_amount') } }
 

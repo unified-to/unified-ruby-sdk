@@ -1,5 +1,16 @@
 # PerformanceGoalType
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PerformanceGoalType::UNSPECIFIED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = PerformanceGoalType.deserialize("custom_value")
+```
+
 
 ## Values
 

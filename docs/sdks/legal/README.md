@@ -1,5 +1,4 @@
 # Legal
-(*legal*)
 
 ## Overview
 
@@ -36,23 +35,22 @@ Creates a LegalExpense. Provide the unified LegalExpense fields in the request b
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createLegalExpense" method="post" path="/legal/{connection_id}/expense" -->
+<!-- UsageSnippet language="ruby" operationID="createLegalExpense" method="post" path="/legal/{connection_id}/expense" example="legal_expense" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.legal.create_legal_expense(legal_expense: Models::Shared::LegalExpense.new(
   category: 'Kids',
   created_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
   currency: 'MVR',
   description: 'Temporibus agnitio sui.',
-  id: 'd0d94662-ed1d-4c88-8dd8-f9d28ef48435',
+  id: '9a9dbd11-d128-4ed3-af58-5d5c90641d15',
   incurred_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
   is_billed: false,
   metadata: [],
@@ -60,7 +58,7 @@ res = s.legal.create_legal_expense(legal_expense: Models::Shared::LegalExpense.n
   quantity: 3.0,
   total_amount: 300.0,
   type: Models::Shared::LegalExpenseType::OTHER,
-  updated_at: DateTime.iso8601('2024-04-10T19:25:36.476Z'),
+  updated_at: DateTime.iso8601('2024-04-11T20:13:22.583Z')
 ), connection_id: '<id>')
 
 unless res.legal_expense.nil?
@@ -94,17 +92,16 @@ Creates a LegalMatter. Provide the unified LegalMatter fields in the request bod
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createLegalMatter" method="post" path="/legal/{connection_id}/matter" -->
+<!-- UsageSnippet language="ruby" operationID="createLegalMatter" method="post" path="/legal/{connection_id}/matter" example="legal_matter" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.legal.create_legal_matter(legal_matter: Models::Shared::LegalMatter.new(
   billing_method: Models::Shared::BillingMethod::OTHER,
   client_reference: 'qSrjIBAD',
@@ -113,21 +110,21 @@ res = s.legal.create_legal_matter(legal_matter: Models::Shared::LegalMatter.new(
   created_at: DateTime.iso8601('2023-05-28T04:10:42.375Z'),
   currency: 'BOB',
   description: 'Speciosus cresco aut cotidie temeritas arma.',
-  id: '6c5dc57c-93ef-41a0-be59-7a66cd7f2051',
+  id: '5bb74761-d2c0-4bf8-866c-5b01a6ee8f59',
   metadata: [],
   name: 'Walter v. Franecki - Spinka',
   number: '2023-3062',
-  opened_at: DateTime.iso8601('2023-07-05T20:18:09.922Z'),
+  opened_at: DateTime.iso8601('2023-07-05T21:38:11.995Z'),
   parties: [
     Models::Shared::LegalParty.new(
       description: 'Urban Walter',
-      role: Models::Shared::LegalPartyRole::EXPERT,
+      role: Models::Shared::LegalPartyRole::EXPERT
     ),
   ],
   stage: 'currus',
   status: Models::Shared::LegalMatterStatus::OPEN,
-  statute_of_limitations_at: DateTime.iso8601('2027-07-17T21:20:18.449Z'),
-  updated_at: DateTime.iso8601('2023-07-18T04:32:46.767Z'),
+  statute_of_limitations_at: DateTime.iso8601('2027-07-19T16:49:40.400Z'),
+  updated_at: DateTime.iso8601('2023-07-18T06:18:21.591Z')
 ), connection_id: '<id>')
 
 unless res.legal_matter.nil?
@@ -161,25 +158,24 @@ Creates a LegalPracticearea. Provide the unified LegalPracticearea fields in the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createLegalPracticearea" method="post" path="/legal/{connection_id}/practicearea" -->
+<!-- UsageSnippet language="ruby" operationID="createLegalPracticearea" method="post" path="/legal/{connection_id}/practicearea" example="legal_practicearea" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.legal.create_legal_practicearea(legal_practicearea: Models::Shared::LegalPracticearea.new(
   code: 'QCA',
   created_at: DateTime.iso8601('2023-01-28T21:00:26.264Z'),
-  id: 'b48e8968-f01b-422c-b368-eeb8900ecf3b',
+  id: '8c7cc059-208f-47fd-bb36-7b3063c9ab53',
   metadata: [],
   name: 'witty Law',
   type: Models::Shared::LegalPracticeareaType::EDUCATION,
-  updated_at: DateTime.iso8601('2025-09-09T20:46:31.407Z'),
+  updated_at: DateTime.iso8601('2025-09-11T02:52:06.547Z')
 ), connection_id: '<id>')
 
 unless res.legal_practicearea.nil?
@@ -213,30 +209,29 @@ Creates a LegalTimeentry. Provide the unified LegalTimeentry fields in the reque
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createLegalTimeentry" method="post" path="/legal/{connection_id}/timeentry" -->
+<!-- UsageSnippet language="ruby" operationID="createLegalTimeentry" method="post" path="/legal/{connection_id}/timeentry" example="legal_timeentry" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.legal.create_legal_timeentry(legal_timeentry: Models::Shared::LegalTimeentry.new(
   billable_minutes: 390.0,
   created_at: DateTime.iso8601('2022-05-06T03:26:03.756Z'),
   currency: 'ZAR',
   description: 'Ea derideo adulatio torrens.',
-  id: '96c9c243-3f89-40d6-9561-13ac4d32ee60',
+  id: '2863a02a-88a8-42a3-8ef6-80f5057091d7',
   is_billable: true,
   metadata: [],
   minutes: 390.0,
   rate_amount: 637.0,
-  total_amount: 4_140.5,
-  updated_at: DateTime.iso8601('2022-06-30T17:12:26.307Z'),
-  worked_at: DateTime.iso8601('2022-05-06T03:26:03.756Z'),
+  total_amount: 4140.5,
+  updated_at: DateTime.iso8601('2022-06-30T18:40:26.373Z'),
+  worked_at: DateTime.iso8601('2022-05-06T03:26:03.756Z')
 ), connection_id: '<id>')
 
 unless res.legal_timeentry.nil?
@@ -276,11 +271,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.legal.get_legal_expense(connection_id: '<id>', id: '<id>')
 
 unless res.legal_expense.nil?
@@ -320,11 +314,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.legal.get_legal_matter(connection_id: '<id>', id: '<id>')
 
 unless res.legal_matter.nil?
@@ -364,11 +357,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.legal.get_legal_practicearea(connection_id: '<id>', id: '<id>')
 
 unless res.legal_practicearea.nil?
@@ -408,11 +400,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.legal.get_legal_timeentry(connection_id: '<id>', id: '<id>')
 
 unless res.legal_timeentry.nil?
@@ -452,15 +443,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListLegalExpensesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListLegalExpensesRequest.new(
+  connection_id: '<id>'
+)
 res = s.legal.list_legal_expenses(request: req)
 
 unless res.legal_expenses.nil?
@@ -497,15 +487,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListLegalMattersRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListLegalMattersRequest.new(
+  connection_id: '<id>'
+)
 res = s.legal.list_legal_matters(request: req)
 
 unless res.legal_matters.nil?
@@ -542,15 +531,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListLegalPracticeareasRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListLegalPracticeareasRequest.new(
+  connection_id: '<id>'
+)
 res = s.legal.list_legal_practiceareas(request: req)
 
 unless res.legal_practiceareas.nil?
@@ -587,15 +575,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListLegalTimeentriesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListLegalTimeentriesRequest.new(
+  connection_id: '<id>'
+)
 res = s.legal.list_legal_timeentries(request: req)
 
 unless res.legal_timeentries.nil?
@@ -626,16 +613,16 @@ Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchLegalExpense" method="patch" path="/legal/{connection_id}/expense/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchLegalExpense" method="patch" path="/legal/{connection_id}/expense/{id}" example="legal_expense" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchLegalExpenseRequest.new(
   legal_expense: Models::Shared::LegalExpense.new(
@@ -643,7 +630,7 @@ req = Models::Operations::PatchLegalExpenseRequest.new(
     created_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
     currency: 'MVR',
     description: 'Temporibus agnitio sui.',
-    id: '60d5f229-dcd5-433f-b286-910e8aea2789',
+    id: '2799a125-275a-4e1e-ae72-3eb7321e3a6e',
     incurred_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
     is_billed: false,
     metadata: [],
@@ -651,12 +638,11 @@ req = Models::Operations::PatchLegalExpenseRequest.new(
     quantity: 3.0,
     total_amount: 300.0,
     type: Models::Shared::LegalExpenseType::OTHER,
-    updated_at: DateTime.iso8601('2024-04-10T19:25:36.489Z'),
+    updated_at: DateTime.iso8601('2024-04-11T20:13:22.590Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.legal.patch_legal_expense(request: req)
 
 unless res.legal_expense.nil?
@@ -687,16 +673,16 @@ Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchLegalMatter" method="patch" path="/legal/{connection_id}/matter/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchLegalMatter" method="patch" path="/legal/{connection_id}/matter/{id}" example="legal_matter" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchLegalMatterRequest.new(
   legal_matter: Models::Shared::LegalMatter.new(
@@ -707,26 +693,25 @@ req = Models::Operations::PatchLegalMatterRequest.new(
     created_at: DateTime.iso8601('2023-05-28T04:10:42.375Z'),
     currency: 'BOB',
     description: 'Speciosus cresco aut cotidie temeritas arma.',
-    id: '88822d4b-d984-4804-a431-93782184a28e',
+    id: 'f129b05d-040f-4d63-a1de-2f0988deab44',
     metadata: [],
     name: 'Walter v. Franecki - Spinka',
     number: '2023-3062',
-    opened_at: DateTime.iso8601('2023-07-05T20:18:09.923Z'),
+    opened_at: DateTime.iso8601('2023-07-05T21:38:11.996Z'),
     parties: [
       Models::Shared::LegalParty.new(
         description: 'Urban Walter',
-        role: Models::Shared::LegalPartyRole::EXPERT,
+        role: Models::Shared::LegalPartyRole::EXPERT
       ),
     ],
     stage: 'currus',
     status: Models::Shared::LegalMatterStatus::OPEN,
-    statute_of_limitations_at: DateTime.iso8601('2027-07-17T21:20:18.477Z'),
-    updated_at: DateTime.iso8601('2023-07-18T04:32:46.768Z'),
+    statute_of_limitations_at: DateTime.iso8601('2027-07-19T16:49:40.416Z'),
+    updated_at: DateTime.iso8601('2023-07-18T06:18:21.592Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.legal.patch_legal_matter(request: req)
 
 unless res.legal_matter.nil?
@@ -757,31 +742,30 @@ Updates the LegalPracticearea identified by `id`. Provide the unified LegalPract
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchLegalPracticearea" method="patch" path="/legal/{connection_id}/practicearea/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchLegalPracticearea" method="patch" path="/legal/{connection_id}/practicearea/{id}" example="legal_practicearea" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchLegalPracticeareaRequest.new(
   legal_practicearea: Models::Shared::LegalPracticearea.new(
     code: 'QCA',
     created_at: DateTime.iso8601('2023-01-28T21:00:26.264Z'),
-    id: 'd76c2c43-50bf-4759-8bbb-c770721b9e59',
+    id: '258cd8a3-cf38-4cee-9957-791859f47091',
     metadata: [],
     name: 'witty Law',
     type: Models::Shared::LegalPracticeareaType::EDUCATION,
-    updated_at: DateTime.iso8601('2025-09-09T20:46:31.422Z'),
+    updated_at: DateTime.iso8601('2025-09-11T02:52:06.556Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.legal.patch_legal_practicearea(request: req)
 
 unless res.legal_practicearea.nil?
@@ -812,16 +796,16 @@ Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentr
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchLegalTimeentry" method="patch" path="/legal/{connection_id}/timeentry/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchLegalTimeentry" method="patch" path="/legal/{connection_id}/timeentry/{id}" example="legal_timeentry" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchLegalTimeentryRequest.new(
   legal_timeentry: Models::Shared::LegalTimeentry.new(
@@ -829,19 +813,18 @@ req = Models::Operations::PatchLegalTimeentryRequest.new(
     created_at: DateTime.iso8601('2022-05-06T03:26:03.756Z'),
     currency: 'ZAR',
     description: 'Ea derideo adulatio torrens.',
-    id: '5fe4dda9-eba7-4b02-8f77-20c89ba5f74f',
+    id: '95fd6f1b-4826-4539-8033-c74b9fe30b8f',
     is_billable: true,
     metadata: [],
     minutes: 390.0,
     rate_amount: 637.0,
-    total_amount: 4_140.5,
-    updated_at: DateTime.iso8601('2022-06-30T17:12:26.307Z'),
-    worked_at: DateTime.iso8601('2022-05-06T03:26:03.756Z'),
+    total_amount: 4140.5,
+    updated_at: DateTime.iso8601('2022-06-30T18:40:26.374Z'),
+    worked_at: DateTime.iso8601('2022-05-06T03:26:03.756Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.legal.patch_legal_timeentry(request: req)
 
 unless res.legal_timeentry.nil?
@@ -878,11 +861,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.legal.remove_legal_expense(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -920,11 +902,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.legal.remove_legal_matter(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -962,11 +943,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.legal.remove_legal_practicearea(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1004,11 +984,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.legal.remove_legal_timeentry(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1040,16 +1019,16 @@ Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateLegalExpense" method="put" path="/legal/{connection_id}/expense/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateLegalExpense" method="put" path="/legal/{connection_id}/expense/{id}" example="legal_expense" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateLegalExpenseRequest.new(
   legal_expense: Models::Shared::LegalExpense.new(
@@ -1057,7 +1036,7 @@ req = Models::Operations::UpdateLegalExpenseRequest.new(
     created_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
     currency: 'MVR',
     description: 'Temporibus agnitio sui.',
-    id: '60d5f229-dcd5-433f-b286-910e8aea2789',
+    id: '2799a125-275a-4e1e-ae72-3eb7321e3a6e',
     incurred_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
     is_billed: false,
     metadata: [],
@@ -1065,12 +1044,11 @@ req = Models::Operations::UpdateLegalExpenseRequest.new(
     quantity: 3.0,
     total_amount: 300.0,
     type: Models::Shared::LegalExpenseType::OTHER,
-    updated_at: DateTime.iso8601('2024-04-10T19:25:36.489Z'),
+    updated_at: DateTime.iso8601('2024-04-11T20:13:22.590Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.legal.update_legal_expense(request: req)
 
 unless res.legal_expense.nil?
@@ -1101,16 +1079,16 @@ Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateLegalMatter" method="put" path="/legal/{connection_id}/matter/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateLegalMatter" method="put" path="/legal/{connection_id}/matter/{id}" example="legal_matter" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateLegalMatterRequest.new(
   legal_matter: Models::Shared::LegalMatter.new(
@@ -1121,26 +1099,25 @@ req = Models::Operations::UpdateLegalMatterRequest.new(
     created_at: DateTime.iso8601('2023-05-28T04:10:42.375Z'),
     currency: 'BOB',
     description: 'Speciosus cresco aut cotidie temeritas arma.',
-    id: '88822d4b-d984-4804-a431-93782184a28e',
+    id: 'f129b05d-040f-4d63-a1de-2f0988deab44',
     metadata: [],
     name: 'Walter v. Franecki - Spinka',
     number: '2023-3062',
-    opened_at: DateTime.iso8601('2023-07-05T20:18:09.923Z'),
+    opened_at: DateTime.iso8601('2023-07-05T21:38:11.996Z'),
     parties: [
       Models::Shared::LegalParty.new(
         description: 'Urban Walter',
-        role: Models::Shared::LegalPartyRole::EXPERT,
+        role: Models::Shared::LegalPartyRole::EXPERT
       ),
     ],
     stage: 'currus',
     status: Models::Shared::LegalMatterStatus::OPEN,
-    statute_of_limitations_at: DateTime.iso8601('2027-07-17T21:20:18.477Z'),
-    updated_at: DateTime.iso8601('2023-07-18T04:32:46.768Z'),
+    statute_of_limitations_at: DateTime.iso8601('2027-07-19T16:49:40.416Z'),
+    updated_at: DateTime.iso8601('2023-07-18T06:18:21.592Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.legal.update_legal_matter(request: req)
 
 unless res.legal_matter.nil?
@@ -1171,31 +1148,30 @@ Updates the LegalPracticearea identified by `id`. Provide the unified LegalPract
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateLegalPracticearea" method="put" path="/legal/{connection_id}/practicearea/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateLegalPracticearea" method="put" path="/legal/{connection_id}/practicearea/{id}" example="legal_practicearea" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateLegalPracticeareaRequest.new(
   legal_practicearea: Models::Shared::LegalPracticearea.new(
     code: 'QCA',
     created_at: DateTime.iso8601('2023-01-28T21:00:26.264Z'),
-    id: 'd76c2c43-50bf-4759-8bbb-c770721b9e59',
+    id: '258cd8a3-cf38-4cee-9957-791859f47091',
     metadata: [],
     name: 'witty Law',
     type: Models::Shared::LegalPracticeareaType::EDUCATION,
-    updated_at: DateTime.iso8601('2025-09-09T20:46:31.422Z'),
+    updated_at: DateTime.iso8601('2025-09-11T02:52:06.556Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.legal.update_legal_practicearea(request: req)
 
 unless res.legal_practicearea.nil?
@@ -1226,16 +1202,16 @@ Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentr
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateLegalTimeentry" method="put" path="/legal/{connection_id}/timeentry/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateLegalTimeentry" method="put" path="/legal/{connection_id}/timeentry/{id}" example="legal_timeentry" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateLegalTimeentryRequest.new(
   legal_timeentry: Models::Shared::LegalTimeentry.new(
@@ -1243,19 +1219,18 @@ req = Models::Operations::UpdateLegalTimeentryRequest.new(
     created_at: DateTime.iso8601('2022-05-06T03:26:03.756Z'),
     currency: 'ZAR',
     description: 'Ea derideo adulatio torrens.',
-    id: '5fe4dda9-eba7-4b02-8f77-20c89ba5f74f',
+    id: '95fd6f1b-4826-4539-8033-c74b9fe30b8f',
     is_billable: true,
     metadata: [],
     minutes: 390.0,
     rate_amount: 637.0,
-    total_amount: 4_140.5,
-    updated_at: DateTime.iso8601('2022-06-30T17:12:26.307Z'),
-    worked_at: DateTime.iso8601('2022-05-06T03:26:03.756Z'),
+    total_amount: 4140.5,
+    updated_at: DateTime.iso8601('2022-06-30T18:40:26.374Z'),
+    worked_at: DateTime.iso8601('2022-05-06T03:26:03.756Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.legal.update_legal_timeentry(request: req)
 
 unless res.legal_timeentry.nil?

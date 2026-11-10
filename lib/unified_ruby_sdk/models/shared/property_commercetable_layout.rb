@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # position and shape of the table on its floorplan
       class PropertyCommerceTableLayout
         extend T::Sig
@@ -18,7 +17,7 @@ module UnifiedRubySDK
         # degrees
         field :rotation, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rotation') } }
 
-        field :shape, Crystalline::Nilable.new(Models::Shared::Shape), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('shape'), 'decoder': Utils.enum_from_string(Models::Shared::Shape, true) } }
+        field :shape, Crystalline::Nilable.new(Models::Shared::Shape), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('shape'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::Shape, true) } }
 
         field :width, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('width') } }
         # horizontal position on the floorplan, in the provider's floorplan units

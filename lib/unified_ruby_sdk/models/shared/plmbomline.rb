@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # One parent to child usage in a bill of materials
       class PlmBomline
         extend T::Sig
@@ -18,11 +17,11 @@ module UnifiedRubySDK
         # Pinned child revision, when the line pins one
         field :child_revision, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('child_revision') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :effective_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('effective_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :effective_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('effective_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :expires_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expires_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :expires_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expires_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # Find or item number on the BOM
@@ -34,15 +33,15 @@ module UnifiedRubySDK
 
         field :quantity, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('quantity') } }
         # Raw data from integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :reference_designators, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reference_designators') } }
 
         field :unit_of_measure, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('unit_of_measure') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(child_part_id: T.nilable(::String), child_revision: T.nilable(::String), created_at: T.nilable(::DateTime), effective_at: T.nilable(::DateTime), expires_at: T.nilable(::DateTime), id: T.nilable(::String), line_number: T.nilable(::String), notes: T.nilable(::String), parent_part_id: T.nilable(::String), quantity: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), reference_designators: T.nilable(T::Array[::String]), unit_of_measure: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        sig { params(child_part_id: T.nilable(::String), child_revision: T.nilable(::String), created_at: T.nilable(::DateTime), effective_at: T.nilable(::DateTime), expires_at: T.nilable(::DateTime), id: T.nilable(::String), line_number: T.nilable(::String), notes: T.nilable(::String), parent_part_id: T.nilable(::String), quantity: T.nilable(::Float), raw: T.nilable(T::Hash[::Symbol, ::Object]), reference_designators: T.nilable(T::Array[::String]), unit_of_measure: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
         def initialize(child_part_id: nil, child_revision: nil, created_at: nil, effective_at: nil, expires_at: nil, id: nil, line_number: nil, notes: nil, parent_part_id: nil, quantity: nil, raw: nil, reference_designators: nil, unit_of_measure: nil, updated_at: nil)
           @child_part_id = child_part_id
           @child_revision = child_revision

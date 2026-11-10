@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # ComputeMode - How the segment membership is computed (REALTIME or BATCH)
-      class ComputeMode < T::Enum
-
-
+      class ComputeMode
+        include ::Crystalline::Enum
         enums do
           REALTIME = new('REALTIME')
           BATCH = new('BATCH')
         end
+        open!
       end
     end
   end

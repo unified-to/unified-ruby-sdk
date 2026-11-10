@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PropertyAdsReportMetricsGroupFrequencyCapTimeUnit < T::Enum
-
-
+      class PropertyAdsReportMetricsGroupFrequencyCapTimeUnit
+        include ::Crystalline::Enum
         enums do
           UNSPECIFIED = new('UNSPECIFIED')
           LIFETIME = new('LIFETIME')
@@ -21,6 +19,7 @@ module UnifiedRubySDK
           HOURS = new('HOURS')
           MINUTES = new('MINUTES')
         end
+        open!
       end
     end
   end

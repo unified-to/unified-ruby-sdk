@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class PaymentPayment
         extend T::Sig
@@ -28,7 +27,7 @@ module UnifiedRubySDK
         # (reference to AccountingContact)
         field :contact_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_id') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # POS terminal/register/device (hr device)
         field :device_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('device_id') } }
         # Exchange rate to the base/home currency at the payment date
@@ -52,31 +51,31 @@ module UnifiedRubySDK
         # reference to an AccountingOrganization
         field :organization_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization_id') } }
         # Date and time the payment was made (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :paid_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('paid_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :paid_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('paid_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :payment_method, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_method') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :reference, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reference') } }
         # reference to an AccountingSalesorder, e.g. the POS order this payment settled
         field :salesorder_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('salesorder_id') } }
 
-        field :status, Crystalline::Nilable.new(Models::Shared::PaymentPaymentStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::PaymentPaymentStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::PaymentPaymentStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PaymentPaymentStatus, true) } }
         # normalized tender category; the provider's original label stays in payment_method
-        field :tender_type, Crystalline::Nilable.new(Models::Shared::TenderType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tender_type'), 'decoder': Utils.enum_from_string(Models::Shared::TenderType, true) } }
+        field :tender_type, Crystalline::Nilable.new(Models::Shared::TenderType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tender_type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::TenderType, true) } }
 
         field :tip_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tip_amount') } }
         # The amount paid, in the payment's currency
         field :total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
 
-        field :type, Crystalline::Nilable.new(Models::Shared::PaymentPaymentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::PaymentPaymentType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::PaymentPaymentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PaymentPaymentType, true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
-        sig { params(account_id: T.nilable(::String), allocations: T.nilable(T::Array[Models::Shared::PaymentAllocation]), bill_id: T.nilable(::String), card_brand: T.nilable(::String), card_last4: T.nilable(::String), category_ids: T.nilable(T::Array[::String]), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), device_id: T.nilable(::String), exchange_rate: T.nilable(::Float), fee_amount: T.nilable(::Float), id: T.nilable(::String), invoice_id: T.nilable(::String), link_id: T.nilable(::String), location_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::PaymentMetadata]), net_amount: T.nilable(::Float), notes: T.nilable(::String), organization_id: T.nilable(::String), paid_at: T.nilable(::DateTime), payment_method: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), salesorder_id: T.nilable(::String), status: T.nilable(Models::Shared::PaymentPaymentStatus), tender_type: T.nilable(Models::Shared::TenderType), tip_amount: T.nilable(::Float), total_amount: T.nilable(::Float), type: T.nilable(Models::Shared::PaymentPaymentType), updated_at: T.nilable(::DateTime), currency: T.nilable(::String)).void }
+        sig { params(account_id: T.nilable(::String), allocations: T.nilable(T::Array[Models::Shared::PaymentAllocation]), bill_id: T.nilable(::String), card_brand: T.nilable(::String), card_last4: T.nilable(::String), category_ids: T.nilable(T::Array[::String]), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), device_id: T.nilable(::String), exchange_rate: T.nilable(::Float), fee_amount: T.nilable(::Float), id: T.nilable(::String), invoice_id: T.nilable(::String), link_id: T.nilable(::String), location_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::PaymentMetadata]), net_amount: T.nilable(::Float), notes: T.nilable(::String), organization_id: T.nilable(::String), paid_at: T.nilable(::DateTime), payment_method: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), reference: T.nilable(::String), salesorder_id: T.nilable(::String), status: T.nilable(Models::Shared::PaymentPaymentStatus), tender_type: T.nilable(Models::Shared::TenderType), tip_amount: T.nilable(::Float), total_amount: T.nilable(::Float), type: T.nilable(Models::Shared::PaymentPaymentType), updated_at: T.nilable(::DateTime), currency: T.nilable(::String)).void }
         def initialize(account_id: nil, allocations: nil, bill_id: nil, card_brand: nil, card_last4: nil, category_ids: nil, contact_id: nil, created_at: nil, device_id: nil, exchange_rate: nil, fee_amount: nil, id: nil, invoice_id: nil, link_id: nil, location_id: nil, metadata: nil, net_amount: nil, notes: nil, organization_id: nil, paid_at: nil, payment_method: nil, raw: nil, reference: nil, salesorder_id: nil, status: nil, tender_type: nil, tip_amount: nil, total_amount: nil, type: nil, updated_at: nil, currency: 'USD')
           @account_id = account_id
           @allocations = allocations

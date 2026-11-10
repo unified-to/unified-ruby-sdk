@@ -1,5 +1,13 @@
 # GetAtsDocumentQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetAtsDocumentQueryParamFields::ID
+```
+
 
 ## Values
 

@@ -1,5 +1,4 @@
 # Organization
-(*organization*)
 
 ## Overview
 
@@ -32,28 +31,27 @@ Creates a AdsOrganization. Provide the unified AdsOrganization fields in the req
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAdsOrganization" method="post" path="/ads/{connection_id}/organization" -->
+<!-- UsageSnippet language="ruby" operationID="createAdsOrganization" method="post" path="/ads/{connection_id}/organization" example="ads_organization" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.organization.create_ads_organization(ads_organization: Models::Shared::AdsOrganization.new(
   account_number: 'LQUJx8zQBW',
   created_at: DateTime.iso8601('2020-07-23T21:47:11.440Z'),
   currency: 'USD',
-  id: '2502c597-0615-4a93-b7a0-700a503c58fd',
+  id: '31aea20c-2857-4746-9944-246c335a1785',
   managers: [],
   metadata: [],
   name: 'Ankunding Inc',
   status: Models::Shared::AdsOrganizationStatus::PROCESSING,
   timezone: 'Europe/Chisinau',
-  updated_at: DateTime.iso8601('2026-04-15T10:02:01.977Z'),
+  updated_at: DateTime.iso8601('2026-04-17T01:35:49.388Z')
 ), connection_id: '<id>')
 
 unless res.ads_organization.nil?
@@ -87,24 +85,23 @@ Creates a GenaiOrganization. Provide the unified GenaiOrganization fields in the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createGenaiOrganization" method="post" path="/genai/{connection_id}/organization" -->
+<!-- UsageSnippet language="ruby" operationID="createGenaiOrganization" method="post" path="/genai/{connection_id}/organization" example="genai_organization" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.organization.create_genai_organization(genai_organization: Models::Shared::GenaiOrganization.new(
   created_at: DateTime.iso8601('2020-10-27T16:03:47.122Z'),
   description: 'Voluptates abeo subseco.',
-  id: 'e96f7de1-ca23-4097-995b-83d6fd0db7b7',
+  id: 'e2f13a5d-3855-4e58-85ed-01128e2123ef',
   is_active: false,
   name: 'officially about',
-  updated_at: DateTime.iso8601('2023-02-02T14:02:23.593Z'),
+  updated_at: DateTime.iso8601('2023-02-03T06:22:53.337Z')
 ), connection_id: '<id>')
 
 unless res.genai_organization.nil?
@@ -138,26 +135,25 @@ Creates a RepoOrganization. Provide the unified RepoOrganization fields in the r
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createRepoOrganization" method="post" path="/repo/{connection_id}/organization" -->
+<!-- UsageSnippet language="ruby" operationID="createRepoOrganization" method="post" path="/repo/{connection_id}/organization" example="repo_organization" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.organization.create_repo_organization(repo_organization: Models::Shared::RepoOrganization.new(
   avatar_url: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
   created_at: DateTime.iso8601('2022-07-07T00:18:40.748Z'),
   description: 'Trepide defendo supra testimonium ager.',
-  id: '94ff5b4e-8e01-4be4-a46d-51acffbfe156',
+  id: '4ee05343-2df1-4129-98a9-235b01b66b6b',
   metadata: [],
   name: 'Denesik - Lemke',
-  updated_at: DateTime.iso8601('2023-08-26T14:40:01.516Z'),
-  web_url: 'https://turbulent-overheard.biz',
+  updated_at: DateTime.iso8601('2023-08-27T02:03:47.907Z'),
+  web_url: 'https://turbulent-overheard.biz'
 ), connection_id: '<id>')
 
 unless res.repo_organization.nil?
@@ -197,11 +193,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.organization.get_accounting_organization(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_organization.nil?
@@ -241,11 +236,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.organization.get_ads_organization(connection_id: '<id>', id: '<id>')
 
 unless res.ads_organization.nil?
@@ -285,11 +279,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.organization.get_genai_organization(connection_id: '<id>', id: '<id>')
 
 unless res.genai_organization.nil?
@@ -329,11 +322,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.organization.get_repo_organization(connection_id: '<id>', id: '<id>')
 
 unless res.repo_organization.nil?
@@ -373,15 +365,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingOrganizationsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingOrganizationsRequest.new(
+  connection_id: '<id>'
+)
 res = s.organization.list_accounting_organizations(request: req)
 
 unless res.accounting_organizations.nil?
@@ -418,15 +409,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAdsOrganizationsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAdsOrganizationsRequest.new(
+  connection_id: '<id>'
+)
 res = s.organization.list_ads_organizations(request: req)
 
 unless res.ads_organizations.nil?
@@ -463,15 +453,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListGenaiOrganizationsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListGenaiOrganizationsRequest.new(
+  connection_id: '<id>'
+)
 res = s.organization.list_genai_organizations(request: req)
 
 unless res.genai_organizations.nil?
@@ -508,15 +497,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListRepoOrganizationsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListRepoOrganizationsRequest.new(
+  connection_id: '<id>'
+)
 res = s.organization.list_repo_organizations(request: req)
 
 unless res.repo_organizations.nil?
@@ -547,34 +535,33 @@ Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganizat
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAdsOrganization" method="patch" path="/ads/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAdsOrganization" method="patch" path="/ads/{connection_id}/organization/{id}" example="ads_organization" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAdsOrganizationRequest.new(
   ads_organization: Models::Shared::AdsOrganization.new(
     account_number: 'LQUJx8zQBW',
     created_at: DateTime.iso8601('2020-07-23T21:47:11.440Z'),
     currency: 'USD',
-    id: '92299613-3bf3-42ae-b449-54ac28881565',
+    id: 'ad9c7ad0-9c2d-4337-b65b-1a10b3174192',
     managers: [],
     metadata: [],
     name: 'Ankunding Inc',
     status: Models::Shared::AdsOrganizationStatus::PROCESSING,
     timezone: 'Europe/Chisinau',
-    updated_at: DateTime.iso8601('2026-04-15T10:02:01.992Z'),
+    updated_at: DateTime.iso8601('2026-04-17T01:35:49.401Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.organization.patch_ads_organization(request: req)
 
 unless res.ads_organization.nil?
@@ -605,30 +592,29 @@ Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrgan
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchGenaiOrganization" method="patch" path="/genai/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchGenaiOrganization" method="patch" path="/genai/{connection_id}/organization/{id}" example="genai_organization" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchGenaiOrganizationRequest.new(
   genai_organization: Models::Shared::GenaiOrganization.new(
     created_at: DateTime.iso8601('2020-10-27T16:03:47.122Z'),
     description: 'Voluptates abeo subseco.',
-    id: 'd111179b-2c07-43f7-b681-3276cb885761',
+    id: '0b5679cf-c3bc-4261-bd05-772af0e2bdcc',
     is_active: false,
     name: 'officially about',
-    updated_at: DateTime.iso8601('2023-02-02T14:02:23.595Z'),
+    updated_at: DateTime.iso8601('2023-02-03T06:22:53.339Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.organization.patch_genai_organization(request: req)
 
 unless res.genai_organization.nil?
@@ -659,32 +645,31 @@ Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganiz
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchRepoOrganization" method="patch" path="/repo/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchRepoOrganization" method="patch" path="/repo/{connection_id}/organization/{id}" example="repo_organization" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchRepoOrganizationRequest.new(
   repo_organization: Models::Shared::RepoOrganization.new(
     avatar_url: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
     created_at: DateTime.iso8601('2022-07-07T00:18:40.748Z'),
     description: 'Trepide defendo supra testimonium ager.',
-    id: 'c5286224-31e1-49ba-824b-e181817a33ba',
+    id: 'a37ddbf1-7a9b-423b-a04f-7689a85f7566',
     metadata: [],
     name: 'Denesik - Lemke',
-    updated_at: DateTime.iso8601('2023-08-26T14:40:01.519Z'),
-    web_url: 'https://turbulent-overheard.biz',
+    updated_at: DateTime.iso8601('2023-08-27T02:03:47.910Z'),
+    web_url: 'https://turbulent-overheard.biz'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.organization.patch_repo_organization(request: req)
 
 unless res.repo_organization.nil?
@@ -721,11 +706,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.organization.remove_ads_organization(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -763,11 +747,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.organization.remove_genai_organization(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -805,11 +788,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.organization.remove_repo_organization(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -841,34 +823,33 @@ Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganizat
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAdsOrganization" method="put" path="/ads/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAdsOrganization" method="put" path="/ads/{connection_id}/organization/{id}" example="ads_organization" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAdsOrganizationRequest.new(
   ads_organization: Models::Shared::AdsOrganization.new(
     account_number: 'LQUJx8zQBW',
     created_at: DateTime.iso8601('2020-07-23T21:47:11.440Z'),
     currency: 'USD',
-    id: '92299613-3bf3-42ae-b449-54ac28881565',
+    id: 'ad9c7ad0-9c2d-4337-b65b-1a10b3174192',
     managers: [],
     metadata: [],
     name: 'Ankunding Inc',
     status: Models::Shared::AdsOrganizationStatus::PROCESSING,
     timezone: 'Europe/Chisinau',
-    updated_at: DateTime.iso8601('2026-04-15T10:02:01.992Z'),
+    updated_at: DateTime.iso8601('2026-04-17T01:35:49.401Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.organization.update_ads_organization(request: req)
 
 unless res.ads_organization.nil?
@@ -899,30 +880,29 @@ Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrgan
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateGenaiOrganization" method="put" path="/genai/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateGenaiOrganization" method="put" path="/genai/{connection_id}/organization/{id}" example="genai_organization" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateGenaiOrganizationRequest.new(
   genai_organization: Models::Shared::GenaiOrganization.new(
     created_at: DateTime.iso8601('2020-10-27T16:03:47.122Z'),
     description: 'Voluptates abeo subseco.',
-    id: 'd111179b-2c07-43f7-b681-3276cb885761',
+    id: '0b5679cf-c3bc-4261-bd05-772af0e2bdcc',
     is_active: false,
     name: 'officially about',
-    updated_at: DateTime.iso8601('2023-02-02T14:02:23.595Z'),
+    updated_at: DateTime.iso8601('2023-02-03T06:22:53.339Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.organization.update_genai_organization(request: req)
 
 unless res.genai_organization.nil?
@@ -953,32 +933,31 @@ Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganiz
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateRepoOrganization" method="put" path="/repo/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateRepoOrganization" method="put" path="/repo/{connection_id}/organization/{id}" example="repo_organization" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateRepoOrganizationRequest.new(
   repo_organization: Models::Shared::RepoOrganization.new(
     avatar_url: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
     created_at: DateTime.iso8601('2022-07-07T00:18:40.748Z'),
     description: 'Trepide defendo supra testimonium ager.',
-    id: 'c5286224-31e1-49ba-824b-e181817a33ba',
+    id: 'a37ddbf1-7a9b-423b-a04f-7689a85f7566',
     metadata: [],
     name: 'Denesik - Lemke',
-    updated_at: DateTime.iso8601('2023-08-26T14:40:01.519Z'),
-    web_url: 'https://turbulent-overheard.biz',
+    updated_at: DateTime.iso8601('2023-08-27T02:03:47.910Z'),
+    web_url: 'https://turbulent-overheard.biz'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.organization.update_repo_organization(request: req)
 
 unless res.repo_organization.nil?

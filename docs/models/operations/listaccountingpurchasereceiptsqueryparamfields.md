@@ -1,5 +1,13 @@
 # ListAccountingPurchasereceiptsQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListAccountingPurchasereceiptsQueryParamFields::ID
+```
+
 
 ## Values
 

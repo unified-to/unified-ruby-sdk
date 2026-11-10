@@ -1,5 +1,16 @@
 # ListSize
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListSize::SUPPORTED_REQUIRED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = ListSize.deserialize("custom_value")
+```
+
 
 ## Values
 

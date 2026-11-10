@@ -1,5 +1,4 @@
 # Embedding
-(*embedding*)
 
 ## Overview
 
@@ -13,30 +12,29 @@ Creates a GenaiEmbedding. Provide the unified GenaiEmbedding fields in the reque
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createGenaiEmbedding" method="post" path="/genai/{connection_id}/embedding" -->
+<!-- UsageSnippet language="ruby" operationID="createGenaiEmbedding" method="post" path="/genai/{connection_id}/embedding" example="genai_embedding" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.embedding.create_genai_embedding(genai_embedding: Models::Shared::GenaiEmbedding.new(
   content: [
     Models::Shared::GenaiEmbeddingContent.new(
-      text: 'Utrimque temptatio pecco demulceo.',
+      text: 'Utrimque temptatio pecco demulceo.'
     ),
   ],
   dimension: 423.0,
   embeddings: 'Est.',
   enconding_format: Models::Shared::EncondingFormat::FLOAT,
-  id: '2a4c5e30-952e-4981-a530-ddeedd22bda7',
+  id: '9ede3df0-4c3d-4769-a337-f26601032e32',
   max_tokens: 223.0,
   tokens_used: 836.0,
-  type: 'classification',
+  type: 'classification'
 ), connection_id: '<id>')
 
 unless res.genai_embedding.nil?

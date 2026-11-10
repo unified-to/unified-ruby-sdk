@@ -7,11 +7,8 @@
 module UnifiedRubySDK
   module Models
     module Operations
-    
 
       class CreateShippingRateQueryParamFields < T::Enum
-
-
         enums do
           SHIPMENT_ID = new('shipment_id')
           CURRENCY = new('currency')

@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Origin address
       class PropertyShippingShipmentFromAddress
         extend T::Sig

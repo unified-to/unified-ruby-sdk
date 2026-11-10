@@ -1,5 +1,13 @@
 # PatchCommerceCollectionQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PatchCommerceCollectionQueryParamFields::ID
+```
+
 
 ## Values
 

@@ -7,14 +7,13 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class PaymentAllocation
         extend T::Sig
         include Crystalline::MetadataFields
 
         # Date and time when the payment was applied, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :allocated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('allocated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :allocated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('allocated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # The amount of the payment applied to this object
         field :amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('amount') } }
         # ISO 4217 currency code of the applied amount
@@ -24,7 +23,7 @@ module UnifiedRubySDK
         # The id of the object this payment was applied to
         field :object_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('object_id') } }
         # The type of object this payment was applied to
-        field :object_type, Crystalline::Nilable.new(Models::Shared::PaymentAllocationObjectType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('object_type'), 'decoder': Utils.enum_from_string(Models::Shared::PaymentAllocationObjectType, true) } }
+        field :object_type, Crystalline::Nilable.new(Models::Shared::PaymentAllocationObjectType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('object_type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PaymentAllocationObjectType, true) } }
 
         sig { params(allocated_at: T.nilable(::DateTime), amount: T.nilable(::Float), currency: T.nilable(::String), exchange_rate: T.nilable(::Float), object_id: T.nilable(::String), object_type: T.nilable(Models::Shared::PaymentAllocationObjectType)).void }
         def initialize(allocated_at: nil, amount: nil, currency: nil, exchange_rate: nil, object_id: nil, object_type: nil)

@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class HrisEarningStatus < T::Enum
-
-
+      class HrisEarningStatus
+        include ::Crystalline::Enum
         enums do
           PENDING = new('PENDING')
           ACTIVE = new('ACTIVE')
@@ -20,6 +18,7 @@ module UnifiedRubySDK
           CANCELLED = new('CANCELLED')
           FAILED = new('FAILED')
         end
+        open!
       end
     end
   end

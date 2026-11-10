@@ -2,6 +2,17 @@
 
 Class of the encounter (e.g. ambulatory, inpatient)
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = HealthcareEncounterType::AMBULATORY
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = HealthcareEncounterType.deserialize("custom_value")
+```
+
 
 ## Values
 

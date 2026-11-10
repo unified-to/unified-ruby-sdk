@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # PropertyCrmEventTaskStatus - The event task's status
-      class PropertyCrmEventTaskStatus < T::Enum
-
-
+      class PropertyCrmEventTaskStatus
+        include ::Crystalline::Enum
         enums do
           COMPLETED = new('COMPLETED')
           NOT_STARTED = new('NOT_STARTED')
           WORK_IN_PROGRESS = new('WORK_IN_PROGRESS')
           DEFERRED = new('DEFERRED')
         end
+        open!
       end
     end
   end

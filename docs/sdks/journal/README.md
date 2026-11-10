@@ -1,5 +1,4 @@
 # Journal
-(*journal*)
 
 ## Overview
 
@@ -18,33 +17,32 @@ Creates a AccountingJournal. Provide the unified AccountingJournal fields in the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAccountingJournal" method="post" path="/accounting/{connection_id}/journal" -->
+<!-- UsageSnippet language="ruby" operationID="createAccountingJournal" method="post" path="/accounting/{connection_id}/journal" example="accounting_journal" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.journal.create_accounting_journal(accounting_journal: Models::Shared::AccountingJournal.new(
   attachments: [],
   category_ids: [],
   created_at: DateTime.iso8601('2020-02-20T15:14:55.881Z'),
   currency: 'CAD',
   description: 'Cilicium minima calco constans adipisci.',
-  id: '80929ac2-afbd-4333-9748-cc2d03315e4b',
+  id: '753dd4e0-3d8d-482c-ac35-d3c003e2667e',
   is_inclusive_of_tax: true,
   lineitems: [],
   metadata: [],
-  posted_at: DateTime.iso8601('2023-11-17T00:32:19.384Z'),
+  posted_at: DateTime.iso8601('2023-11-18T00:44:33.123Z'),
   reference: 'JE-78884',
   source: 'crustulum',
   status: Models::Shared::AccountingJournalStatus::VOID,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2022-01-16T05:02:16.979Z'),
+  updated_at: DateTime.iso8601('2022-01-16T17:22:05.864Z')
 ), connection_id: '<id>')
 
 unless res.accounting_journal.nil?
@@ -84,11 +82,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.journal.get_accounting_journal(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_journal.nil?
@@ -128,15 +125,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingJournalsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingJournalsRequest.new(
+  connection_id: '<id>'
+)
 res = s.journal.list_accounting_journals(request: req)
 
 unless res.accounting_journals.nil?
@@ -167,16 +163,16 @@ Updates the AccountingJournal identified by `id`. Provide the unified Accounting
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAccountingJournal" method="patch" path="/accounting/{connection_id}/journal/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAccountingJournal" method="patch" path="/accounting/{connection_id}/journal/{id}" example="accounting_journal" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAccountingJournalRequest.new(
   accounting_journal: Models::Shared::AccountingJournal.new(
@@ -185,21 +181,20 @@ req = Models::Operations::PatchAccountingJournalRequest.new(
     created_at: DateTime.iso8601('2020-02-20T15:14:55.881Z'),
     currency: 'CAD',
     description: 'Cilicium minima calco constans adipisci.',
-    id: '93a59944-8bb0-42bf-ac7a-5facc9458549',
+    id: '500e693a-af0c-43f2-9871-a59605e86d28',
     is_inclusive_of_tax: true,
     lineitems: [],
     metadata: [],
-    posted_at: DateTime.iso8601('2023-11-17T00:32:19.404Z'),
+    posted_at: DateTime.iso8601('2023-11-18T00:44:33.137Z'),
     reference: 'JE-78884',
     source: 'crustulum',
     status: Models::Shared::AccountingJournalStatus::VOID,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2022-01-16T05:02:16.989Z'),
+    updated_at: DateTime.iso8601('2022-01-16T17:22:05.872Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.journal.patch_accounting_journal(request: req)
 
 unless res.accounting_journal.nil?
@@ -236,11 +231,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.journal.remove_accounting_journal(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -272,16 +266,16 @@ Updates the AccountingJournal identified by `id`. Provide the unified Accounting
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAccountingJournal" method="put" path="/accounting/{connection_id}/journal/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAccountingJournal" method="put" path="/accounting/{connection_id}/journal/{id}" example="accounting_journal" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAccountingJournalRequest.new(
   accounting_journal: Models::Shared::AccountingJournal.new(
@@ -290,21 +284,20 @@ req = Models::Operations::UpdateAccountingJournalRequest.new(
     created_at: DateTime.iso8601('2020-02-20T15:14:55.881Z'),
     currency: 'CAD',
     description: 'Cilicium minima calco constans adipisci.',
-    id: '93a59944-8bb0-42bf-ac7a-5facc9458549',
+    id: '500e693a-af0c-43f2-9871-a59605e86d28',
     is_inclusive_of_tax: true,
     lineitems: [],
     metadata: [],
-    posted_at: DateTime.iso8601('2023-11-17T00:32:19.404Z'),
+    posted_at: DateTime.iso8601('2023-11-18T00:44:33.137Z'),
     reference: 'JE-78884',
     source: 'crustulum',
     status: Models::Shared::AccountingJournalStatus::VOID,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2022-01-16T05:02:16.989Z'),
+    updated_at: DateTime.iso8601('2022-01-16T17:22:05.872Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.journal.update_accounting_journal(request: req)
 
 unless res.accounting_journal.nil?

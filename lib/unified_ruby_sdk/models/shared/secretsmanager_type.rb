@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class SecretsManagerType < T::Enum
-
-
+      class SecretsManagerType
+        include ::Crystalline::Enum
         enums do
           AWS = new('aws')
           AZURE = new('azure')
@@ -25,6 +23,7 @@ module UnifiedRubySDK
           PIPEDREAM = new('pipedream')
           ALIBABACLOUD = new('alibabacloud')
         end
+        open!
       end
     end
   end

@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class ContentType < T::Enum
-
-
+      class ContentType
+        include ::Crystalline::Enum
         enums do
           HTML = new('HTML')
           MARKDOWN = new('MARKDOWN')
           TEXT = new('TEXT')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

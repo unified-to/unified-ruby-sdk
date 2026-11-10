@@ -2,6 +2,17 @@
 
 The data type of the custom field, which determines how `value` is formatted.
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = TaskMetadataFormat::TEXT
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = TaskMetadataFormat.deserialize("custom_value")
+```
+
 
 ## Values
 

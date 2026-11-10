@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class SocialPost
         extend T::Sig
@@ -18,7 +17,7 @@ module UnifiedRubySDK
         # Call-to-action button on the post
         field :call_to_action, Crystalline::Nilable.new(Models::Shared::PropertySocialPostCallToAction), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('call_to_action') } }
         # When the post was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Unique identifier for the post
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # Language code of the post content
@@ -34,21 +33,21 @@ module UnifiedRubySDK
         # The social profile (page/handle/listing) that owns this post
         field :profile_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('profile_id') } }
         # Raw data from integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # When the post is scheduled to publish (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :scheduled_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('scheduled_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :scheduled_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('scheduled_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Publication status of the post
-        field :status, Crystalline::Nilable.new(Models::Shared::SocialPostStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::SocialPostStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::SocialPostStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::SocialPostStatus, true) } }
         # Optional post title/headline
         field :title, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
         # The kind of post
-        field :type, Crystalline::Nilable.new(Models::Shared::SocialPostType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::SocialPostType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::SocialPostType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::SocialPostType, true) } }
         # When the post was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Public permalink to the post
         field :url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
 
-        sig { params(body: T.nilable(::String), call_to_action: T.nilable(Models::Shared::PropertySocialPostCallToAction), created_at: T.nilable(::DateTime), id: T.nilable(::String), language: T.nilable(::String), media: T.nilable(T::Array[Models::Shared::SocialMedia]), metadata: T.nilable(T::Array[Models::Shared::SocialMetadata]), metrics: T.nilable(Models::Shared::PropertySocialPostMetrics), parent_id: T.nilable(::String), profile_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), scheduled_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::SocialPostStatus), title: T.nilable(::String), type: T.nilable(Models::Shared::SocialPostType), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
+        sig { params(body: T.nilable(::String), call_to_action: T.nilable(Models::Shared::PropertySocialPostCallToAction), created_at: T.nilable(::DateTime), id: T.nilable(::String), language: T.nilable(::String), media: T.nilable(T::Array[Models::Shared::SocialMedia]), metadata: T.nilable(T::Array[Models::Shared::SocialMetadata]), metrics: T.nilable(Models::Shared::PropertySocialPostMetrics), parent_id: T.nilable(::String), profile_id: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), scheduled_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::SocialPostStatus), title: T.nilable(::String), type: T.nilable(Models::Shared::SocialPostType), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
         def initialize(body: nil, call_to_action: nil, created_at: nil, id: nil, language: nil, media: nil, metadata: nil, metrics: nil, parent_id: nil, profile_id: nil, raw: nil, scheduled_at: nil, status: nil, title: nil, type: nil, updated_at: nil, url: nil)
           @body = body
           @call_to_action = call_to_action

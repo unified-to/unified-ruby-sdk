@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class CdpProfileSegment
         extend T::Sig
         include Crystalline::MetadataFields
 
         # When the profile's membership expires (if applicable) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :expires_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expires_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :expires_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expires_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # When the profile joined the segment (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :joined_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('joined_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :joined_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('joined_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # The name of the segment/audience
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # The segment/audience this profile belongs to; points to CdpSegment

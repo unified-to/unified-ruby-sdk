@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Optimization (Meta: targeting_automation; Google: observation vs targeting mode)
       class PropertyAdsReportMetricsGroupTargetingOptimization
         extend T::Sig
@@ -18,7 +17,7 @@ module UnifiedRubySDK
 
         field :advantage_placements, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('advantage_placements') } }
         # Google: bid_only falsetrue
-        field :mode, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsGroupTargetingOptimizationMode), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('mode'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyAdsReportMetricsGroupTargetingOptimizationMode, true) } }
+        field :mode, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsGroupTargetingOptimizationMode), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('mode'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PropertyAdsReportMetricsGroupTargetingOptimizationMode, true) } }
 
         field :targeting_optimization_expansion_all, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('targeting_optimization_expansion_all') } }
 

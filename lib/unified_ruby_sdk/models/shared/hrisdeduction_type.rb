@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class HrisDeductionType < T::Enum
-
-
+      class HrisDeductionType
+        include ::Crystalline::Enum
         enums do
           FIXED = new('FIXED')
           PERCENTAGE = new('PERCENTAGE')
         end
+        open!
       end
     end
   end

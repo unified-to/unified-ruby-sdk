@@ -7,14 +7,13 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class TicketingCustomer
         extend T::Sig
         include Crystalline::MetadataFields
 
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :emails, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::TicketingEmail)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
 
@@ -24,15 +23,15 @@ module UnifiedRubySDK
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :tags, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tags') } }
 
         field :telephones, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::TicketingTelephone)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephones') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(created_at: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::TicketingEmail]), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::TicketingMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), tags: T.nilable(T::Array[::String]), telephones: T.nilable(T::Array[Models::Shared::TicketingTelephone]), updated_at: T.nilable(::DateTime)).void }
+        sig { params(created_at: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::TicketingEmail]), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::TicketingMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), tags: T.nilable(T::Array[::String]), telephones: T.nilable(T::Array[Models::Shared::TicketingTelephone]), updated_at: T.nilable(::DateTime)).void }
         def initialize(created_at: nil, emails: nil, id: nil, metadata: nil, name: nil, raw: nil, tags: nil, telephones: nil, updated_at: nil)
           @created_at = created_at
           @emails = emails

@@ -1,5 +1,13 @@
 # CreatePlmPartQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreatePlmPartQueryParamFields::ID
+```
+
 
 ## Values
 

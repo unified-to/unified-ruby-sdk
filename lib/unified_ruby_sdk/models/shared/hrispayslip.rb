@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class HrisPayslip
         extend T::Sig
@@ -16,7 +15,7 @@ module UnifiedRubySDK
         # (reference to HrisCompany)
         field :company_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_id') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
         # The ID (and optionally name) of the employee deduction (if this detail represents a deduction)
@@ -32,7 +31,7 @@ module UnifiedRubySDK
         # total employer-paid taxes
         field :employer_tax_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employer_tax_amount') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :gross_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gross_amount') } }
         # year-to-date gross pay as of this payslip
@@ -50,25 +49,25 @@ module UnifiedRubySDK
         # year-to-date net pay as of this payslip
         field :net_ytd_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('net_ytd_amount') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :paid_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('paid_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :paid_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('paid_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :payment_reference, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_reference') } }
 
-        field :payment_type, Crystalline::Nilable.new(Models::Shared::PaymentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_type'), 'decoder': Utils.enum_from_string(Models::Shared::PaymentType, true) } }
+        field :payment_type, Crystalline::Nilable.new(Models::Shared::PaymentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PaymentType, true) } }
         # the hris_payroll (pay run) this payslip belongs to
         field :payroll_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payroll_id') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        field :type, Crystalline::Nilable.new(Models::Shared::HrisPayslipType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::HrisPayslipType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::HrisPayslipType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::HrisPayslipType, true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # the employee (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(company_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), deduction: T.nilable(Models::Shared::PropertyHrisPayslipDeduction), deduction_amount: T.nilable(::Float), details: T.nilable(T::Array[Models::Shared::HrisPayslipDetail]), employee_tax_amount: T.nilable(::Float), employer_contribution_amount: T.nilable(::Float), employer_tax_amount: T.nilable(::Float), end_at: T.nilable(::DateTime), gross_amount: T.nilable(::Float), gross_ytd_amount: T.nilable(::Float), group_id: T.nilable(::String), hours: T.nilable(::Float), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), net_amount: T.nilable(::Float), net_ytd_amount: T.nilable(::Float), paid_at: T.nilable(::DateTime), payment_reference: T.nilable(::String), payment_type: T.nilable(Models::Shared::PaymentType), payroll_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), type: T.nilable(Models::Shared::HrisPayslipType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        sig { params(company_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), deduction: T.nilable(Models::Shared::PropertyHrisPayslipDeduction), deduction_amount: T.nilable(::Float), details: T.nilable(T::Array[Models::Shared::HrisPayslipDetail]), employee_tax_amount: T.nilable(::Float), employer_contribution_amount: T.nilable(::Float), employer_tax_amount: T.nilable(::Float), end_at: T.nilable(::DateTime), gross_amount: T.nilable(::Float), gross_ytd_amount: T.nilable(::Float), group_id: T.nilable(::String), hours: T.nilable(::Float), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), net_amount: T.nilable(::Float), net_ytd_amount: T.nilable(::Float), paid_at: T.nilable(::DateTime), payment_reference: T.nilable(::String), payment_type: T.nilable(Models::Shared::PaymentType), payroll_id: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), start_at: T.nilable(::DateTime), type: T.nilable(Models::Shared::HrisPayslipType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
         def initialize(company_id: nil, created_at: nil, currency: nil, deduction: nil, deduction_amount: nil, details: nil, employee_tax_amount: nil, employer_contribution_amount: nil, employer_tax_amount: nil, end_at: nil, gross_amount: nil, gross_ytd_amount: nil, group_id: nil, hours: nil, id: nil, metadata: nil, net_amount: nil, net_ytd_amount: nil, paid_at: nil, payment_reference: nil, payment_type: nil, payroll_id: nil, raw: nil, start_at: nil, type: nil, updated_at: nil, user_id: nil)
           @company_id = company_id
           @created_at = created_at

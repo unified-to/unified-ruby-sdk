@@ -1,5 +1,13 @@
 # CreateAccountingPaymenttermQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreateAccountingPaymenttermQueryParamFields::ID
+```
+
 
 ## Values
 

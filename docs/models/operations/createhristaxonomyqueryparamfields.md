@@ -1,5 +1,13 @@
 # CreateHrisTaxonomyQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreateHrisTaxonomyQueryParamFields::ID
+```
+
 
 ## Values
 

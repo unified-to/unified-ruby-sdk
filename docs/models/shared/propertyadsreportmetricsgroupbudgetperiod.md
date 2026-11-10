@@ -1,5 +1,16 @@
 # PropertyAdsReportMetricsGroupBudgetPeriod
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PropertyAdsReportMetricsGroupBudgetPeriod::DAILY
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = PropertyAdsReportMetricsGroupBudgetPeriod.deserialize("custom_value")
+```
+
 
 ## Values
 

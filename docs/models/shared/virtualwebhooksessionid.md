@@ -1,5 +1,16 @@
 # VirtualWebhookSessionId
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = VirtualWebhookSessionId::SUPPORTED_REQUIRED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = VirtualWebhookSessionId.deserialize("custom_value")
+```
+
 
 ## Values
 

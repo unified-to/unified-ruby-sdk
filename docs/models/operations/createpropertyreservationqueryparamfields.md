@@ -1,5 +1,13 @@
 # CreatePropertyReservationQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreatePropertyReservationQueryParamFields::ID
+```
+
 
 ## Values
 

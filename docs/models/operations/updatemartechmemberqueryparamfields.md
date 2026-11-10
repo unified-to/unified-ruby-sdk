@@ -1,5 +1,13 @@
 # UpdateMartechMemberQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = UpdateMartechMemberQueryParamFields::ID
+```
+
 
 ## Values
 

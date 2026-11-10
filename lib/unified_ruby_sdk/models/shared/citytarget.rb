@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class CityTarget
         extend T::Sig
@@ -20,7 +19,7 @@ module UnifiedRubySDK
 
         field :radius, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('radius') } }
 
-        field :radius_unit, Crystalline::Nilable.new(Models::Shared::RadiusUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('radius_unit'), 'decoder': Utils.enum_from_string(Models::Shared::RadiusUnit, true) } }
+        field :radius_unit, Crystalline::Nilable.new(Models::Shared::RadiusUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('radius_unit'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::RadiusUnit, true) } }
 
         sig { params(id: ::String, name: T.nilable(::String), radius: T.nilable(::Float), radius_unit: T.nilable(Models::Shared::RadiusUnit)).void }
         def initialize(id:, name: nil, radius: nil, radius_unit: nil)

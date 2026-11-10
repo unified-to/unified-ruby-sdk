@@ -1,5 +1,13 @@
 # PatchDatastoreTableQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PatchDatastoreTableQueryParamFields::ID
+```
+
 
 ## Values
 

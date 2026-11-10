@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # ClubsEventType - The event type
-      class ClubsEventType < T::Enum
-
-
+      class ClubsEventType
+        include ::Crystalline::Enum
         enums do
           GAME = new('GAME')
           PRACTICE = new('PRACTICE')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

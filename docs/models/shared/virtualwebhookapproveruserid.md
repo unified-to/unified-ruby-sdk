@@ -1,5 +1,16 @@
 # VirtualWebhookApproverUserId
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = VirtualWebhookApproverUserId::SUPPORTED_REQUIRED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = VirtualWebhookApproverUserId.deserialize("custom_value")
+```
+
 
 ## Values
 

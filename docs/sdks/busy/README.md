@@ -1,5 +1,4 @@
 # Busy
-(*busy*)
 
 ## Overview
 
@@ -19,15 +18,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCalendarBusiesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCalendarBusiesRequest.new(
+  connection_id: '<id>'
+)
 res = s.busy.list_calendar_busies(request: req)
 
 unless res.calendar_busies.nil?

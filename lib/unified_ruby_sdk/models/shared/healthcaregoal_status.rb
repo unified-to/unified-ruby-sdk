@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # HealthcareGoalStatus - Lifecycle status of the goal
-      class HealthcareGoalStatus < T::Enum
-
-
+      class HealthcareGoalStatus
+        include ::Crystalline::Enum
         enums do
           PROPOSED = new('PROPOSED')
           PLANNED = new('PLANNED')
@@ -24,6 +22,7 @@ module UnifiedRubySDK
           REJECTED = new('REJECTED')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class HealthcareReport
         extend T::Sig
@@ -18,13 +17,13 @@ module UnifiedRubySDK
         # Clinical conclusion or interpretation of the report
         field :conclusion, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('conclusion') } }
         # When the report record was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # The encounter the report relates to
         field :encounter_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('encounter_id') } }
         # Unique identifier for the report
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # When the report was released (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :issued_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('issued_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :issued_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('issued_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Custom field values
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HealthcareMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # Human-readable name of the report (e.g. Complete blood count)
@@ -32,21 +31,21 @@ module UnifiedRubySDK
         # The individual results included in the report
         field :observation_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('observation_ids') } }
         # When the specimen was taken or the study was performed (effective time) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :observed_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('observed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :observed_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('observed_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # The patient the report is about
         field :patient_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('patient_id') } }
         # The practitioners responsible for the report
         field :practitioner_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('practitioner_ids') } }
         # Raw data from integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # Status of the report
-        field :status, Crystalline::Nilable.new(Models::Shared::HealthcareReportStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::HealthcareReportStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::HealthcareReportStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::HealthcareReportStatus, true) } }
         # Category of the report
-        field :type, Crystalline::Nilable.new(Models::Shared::HealthcareReportType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::HealthcareReportType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::HealthcareReportType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::HealthcareReportType, true) } }
         # When the report record was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(codes: T.nilable(T::Array[Models::Shared::HealthcareCode]), conclusion: T.nilable(::String), created_at: T.nilable(::DateTime), encounter_id: T.nilable(::String), id: T.nilable(::String), issued_at: T.nilable(::DateTime), metadata: T.nilable(T::Array[Models::Shared::HealthcareMetadata]), name: T.nilable(::String), observation_ids: T.nilable(T::Array[::String]), observed_at: T.nilable(::DateTime), patient_id: T.nilable(::String), practitioner_ids: T.nilable(T::Array[::String]), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::HealthcareReportStatus), type: T.nilable(Models::Shared::HealthcareReportType), updated_at: T.nilable(::DateTime)).void }
+        sig { params(codes: T.nilable(T::Array[Models::Shared::HealthcareCode]), conclusion: T.nilable(::String), created_at: T.nilable(::DateTime), encounter_id: T.nilable(::String), id: T.nilable(::String), issued_at: T.nilable(::DateTime), metadata: T.nilable(T::Array[Models::Shared::HealthcareMetadata]), name: T.nilable(::String), observation_ids: T.nilable(T::Array[::String]), observed_at: T.nilable(::DateTime), patient_id: T.nilable(::String), practitioner_ids: T.nilable(T::Array[::String]), raw: T.nilable(T::Hash[::Symbol, ::Object]), status: T.nilable(Models::Shared::HealthcareReportStatus), type: T.nilable(Models::Shared::HealthcareReportType), updated_at: T.nilable(::DateTime)).void }
         def initialize(codes: nil, conclusion: nil, created_at: nil, encounter_id: nil, id: nil, issued_at: nil, metadata: nil, name: nil, observation_ids: nil, observed_at: nil, patient_id: nil, practitioner_ids: nil, raw: nil, status: nil, type: nil, updated_at: nil)
           @codes = codes
           @conclusion = conclusion

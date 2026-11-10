@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class TaxExemption < T::Enum
-
-
+      class TaxExemption
+        include ::Crystalline::Enum
         enums do
           FEDERAL_GOV = new('FEDERAL_GOV')
           REGION_GOV = new('REGION_GOV')
@@ -25,6 +23,7 @@ module UnifiedRubySDK
           FOREIGN = new('FOREIGN')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

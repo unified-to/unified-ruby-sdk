@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class FulfillmentType < T::Enum
-
-
+      class FulfillmentType
+        include ::Crystalline::Enum
         enums do
           DINE_IN = new('DINE_IN')
           TAKEOUT = new('TAKEOUT')
@@ -22,6 +20,7 @@ module UnifiedRubySDK
           DIGITAL = new('DIGITAL')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

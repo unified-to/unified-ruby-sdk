@@ -1,5 +1,4 @@
 # Template
-(*template*)
 
 ## Overview
 
@@ -20,29 +19,27 @@ Creates a ComputeTemplate. Provide the unified ComputeTemplate fields in the req
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createComputeTemplate" method="post" path="/compute/{connection_id}/template" -->
+<!-- UsageSnippet language="ruby" operationID="createComputeTemplate" method="post" path="/compute/{connection_id}/template" example="compute_template" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.template.create_compute_template(compute_template: Models::Shared::ComputeTemplate.new(
   cpu_count: 4.0,
   created_at: DateTime.iso8601('2023-02-23T03:28:59.864Z'),
   disk_mb: 10_240.0,
-  dockerfile: 'FROM ubuntu:24.04\n" +
-  "RUN apt-get update',
+  dockerfile: "FROM ubuntu:24.04\nRUN apt-get update",
   gpu_count: 2.0,
   gpu_model: Models::Shared::ComputeTemplateGpuModel::NVIDIA_GH200,
-  id: 'da6f8d0d-2c12-4843-b806-47222865700a',
+  id: 'ecddd852-21c2-4fbd-b984-0fd246aefae0',
   image: 'perfumed-molasses/cohibeo:5.2',
   is_public: false,
-  last_used_at: DateTime.iso8601('2026-04-08T20:29:50.356Z'),
+  last_used_at: DateTime.iso8601('2026-04-10T09:06:47.095Z'),
   memory_mb: 8192.0,
   metadata: [],
   name: 'multi-byte-card',
@@ -50,7 +47,7 @@ res = s.template.create_compute_template(compute_template: Models::Shared::Compu
     8080.0,
   ],
   status: Models::Shared::ComputeTemplateStatus::OTHER,
-  updated_at: DateTime.iso8601('2025-02-23T00:42:53.258Z'),
+  updated_at: DateTime.iso8601('2025-02-24T00:10:31.992Z')
 ), connection_id: '<id>')
 
 unless res.compute_template.nil?
@@ -90,11 +87,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.template.get_compute_template(connection_id: '<id>', id: '<id>')
 
 unless res.compute_template.nil?
@@ -134,11 +130,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.template.get_signing_template(connection_id: '<id>', id: '<id>')
 
 unless res.signing_template.nil?
@@ -178,15 +173,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListComputeTemplatesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListComputeTemplatesRequest.new(
+  connection_id: '<id>'
+)
 res = s.template.list_compute_templates(request: req)
 
 unless res.compute_templates.nil?
@@ -223,15 +217,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListSigningTemplatesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListSigningTemplatesRequest.new(
+  connection_id: '<id>'
+)
 res = s.template.list_signing_templates(request: req)
 
 unless res.signing_templates.nil?
@@ -262,30 +255,29 @@ Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTempl
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchComputeTemplate" method="patch" path="/compute/{connection_id}/template/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchComputeTemplate" method="patch" path="/compute/{connection_id}/template/{id}" example="compute_template" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchComputeTemplateRequest.new(
   compute_template: Models::Shared::ComputeTemplate.new(
     cpu_count: 4.0,
     created_at: DateTime.iso8601('2023-02-23T03:28:59.864Z'),
     disk_mb: 10_240.0,
-    dockerfile: 'FROM ubuntu:24.04\n" +
-    "RUN apt-get update',
+    dockerfile: "FROM ubuntu:24.04\nRUN apt-get update",
     gpu_count: 2.0,
     gpu_model: Models::Shared::ComputeTemplateGpuModel::NVIDIA_GH200,
-    id: '0c561398-e692-45f7-ab65-f31fdca2e5ce',
+    id: 'ee9878b4-8ac9-4ed6-b3d9-b7a77d0f3227',
     image: 'perfumed-molasses/cohibeo:5.2',
     is_public: false,
-    last_used_at: DateTime.iso8601('2026-04-08T20:29:50.378Z'),
+    last_used_at: DateTime.iso8601('2026-04-10T09:06:47.106Z'),
     memory_mb: 8192.0,
     metadata: [],
     name: 'multi-byte-card',
@@ -293,12 +285,11 @@ req = Models::Operations::PatchComputeTemplateRequest.new(
       8080.0,
     ],
     status: Models::Shared::ComputeTemplateStatus::OTHER,
-    updated_at: DateTime.iso8601('2025-02-23T00:42:53.272Z'),
+    updated_at: DateTime.iso8601('2025-02-24T00:10:31.999Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.template.patch_compute_template(request: req)
 
 unless res.compute_template.nil?
@@ -335,11 +326,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.template.remove_compute_template(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -371,30 +361,29 @@ Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTempl
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateComputeTemplate" method="put" path="/compute/{connection_id}/template/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateComputeTemplate" method="put" path="/compute/{connection_id}/template/{id}" example="compute_template" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateComputeTemplateRequest.new(
   compute_template: Models::Shared::ComputeTemplate.new(
     cpu_count: 4.0,
     created_at: DateTime.iso8601('2023-02-23T03:28:59.864Z'),
     disk_mb: 10_240.0,
-    dockerfile: 'FROM ubuntu:24.04\n" +
-    "RUN apt-get update',
+    dockerfile: "FROM ubuntu:24.04\nRUN apt-get update",
     gpu_count: 2.0,
     gpu_model: Models::Shared::ComputeTemplateGpuModel::NVIDIA_GH200,
-    id: '0c561398-e692-45f7-ab65-f31fdca2e5ce',
+    id: 'ee9878b4-8ac9-4ed6-b3d9-b7a77d0f3227',
     image: 'perfumed-molasses/cohibeo:5.2',
     is_public: false,
-    last_used_at: DateTime.iso8601('2026-04-08T20:29:50.378Z'),
+    last_used_at: DateTime.iso8601('2026-04-10T09:06:47.106Z'),
     memory_mb: 8192.0,
     metadata: [],
     name: 'multi-byte-card',
@@ -402,12 +391,11 @@ req = Models::Operations::UpdateComputeTemplateRequest.new(
       8080.0,
     ],
     status: Models::Shared::ComputeTemplateStatus::OTHER,
-    updated_at: DateTime.iso8601('2025-02-23T00:42:53.272Z'),
+    updated_at: DateTime.iso8601('2025-02-24T00:10:31.999Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.template.update_compute_template(request: req)
 
 unless res.compute_template.nil?

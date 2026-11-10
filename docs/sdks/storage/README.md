@@ -1,5 +1,4 @@
 # Storage
-(*storage*)
 
 ## Overview
 
@@ -18,23 +17,22 @@ Creates a StorageFile. Provide the unified StorageFile fields in the request bod
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createStorageFile" method="post" path="/storage/{connection_id}/file" -->
+<!-- UsageSnippet language="ruby" operationID="createStorageFile" method="post" path="/storage/{connection_id}/file" example="storage_file" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.storage.create_storage_file(storage_file: Models::Shared::StorageFile.new(
   created_at: DateTime.iso8601('2021-09-12T16:48:23.774Z'),
   description: 'Deprimo crastinus cupiditate debilito cimentarius virgo acidus.',
   download_url: 'https://clueless-laughter.biz',
   hash: 'd9d88dda7bc0acaa8472fdef2307f94a1fc355ce',
-  id: 'd06d12d3-f120-4530-8c1d-8b657b338a60',
+  id: 'aa3c281d-c732-400f-8c65-289b2fb2eaca',
   metadata: [],
   mime_type: 'application/pdf',
   name: 'softly.pdf',
@@ -43,9 +41,9 @@ res = s.storage.create_storage_file(storage_file: Models::Shared::StorageFile.ne
     'suasoria',
   ],
   type: Models::Shared::StorageFileType::FOLDER,
-  updated_at: DateTime.iso8601('2023-02-10T17:59:35.901Z'),
+  updated_at: DateTime.iso8601('2023-02-11T05:54:36.495Z'),
   version: '1',
-  web_url: 'https://faraway-inspection.org',
+  web_url: 'https://faraway-inspection.org'
 ), connection_id: '<id>')
 
 unless res.storage_file.nil?
@@ -85,11 +83,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.storage.get_storage_file(connection_id: '<id>', id: '<id>')
 
 unless res.storage_file.nil?
@@ -129,15 +126,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListStorageFilesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListStorageFilesRequest.new(
+  connection_id: '<id>'
+)
 res = s.storage.list_storage_files(request: req)
 
 unless res.storage_files.nil?
@@ -168,16 +164,16 @@ Updates the StorageFile identified by `id`. Provide the unified StorageFile fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchStorageFile" method="patch" path="/storage/{connection_id}/file/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchStorageFile" method="patch" path="/storage/{connection_id}/file/{id}" example="storage_file" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchStorageFileRequest.new(
   storage_file: Models::Shared::StorageFile.new(
@@ -185,7 +181,7 @@ req = Models::Operations::PatchStorageFileRequest.new(
     description: 'Deprimo crastinus cupiditate debilito cimentarius virgo acidus.',
     download_url: 'https://clueless-laughter.biz',
     hash: 'd9d88dda7bc0acaa8472fdef2307f94a1fc355ce',
-    id: 'fd48b5f6-4905-465e-b67d-ec42bc14e2fc',
+    id: '5f3573d3-5e2d-4e47-8e9c-5cf622f01b43',
     metadata: [],
     mime_type: 'application/pdf',
     name: 'softly.pdf',
@@ -194,14 +190,13 @@ req = Models::Operations::PatchStorageFileRequest.new(
       'suasoria',
     ],
     type: Models::Shared::StorageFileType::FOLDER,
-    updated_at: DateTime.iso8601('2023-02-10T17:59:35.909Z'),
+    updated_at: DateTime.iso8601('2023-02-11T05:54:36.503Z'),
     version: '1',
-    web_url: 'https://faraway-inspection.org',
+    web_url: 'https://faraway-inspection.org'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.storage.patch_storage_file(request: req)
 
 unless res.storage_file.nil?
@@ -238,11 +233,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.storage.remove_storage_file(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -274,16 +268,16 @@ Updates the StorageFile identified by `id`. Provide the unified StorageFile fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateStorageFile" method="put" path="/storage/{connection_id}/file/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateStorageFile" method="put" path="/storage/{connection_id}/file/{id}" example="storage_file" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateStorageFileRequest.new(
   storage_file: Models::Shared::StorageFile.new(
@@ -291,7 +285,7 @@ req = Models::Operations::UpdateStorageFileRequest.new(
     description: 'Deprimo crastinus cupiditate debilito cimentarius virgo acidus.',
     download_url: 'https://clueless-laughter.biz',
     hash: 'd9d88dda7bc0acaa8472fdef2307f94a1fc355ce',
-    id: 'fd48b5f6-4905-465e-b67d-ec42bc14e2fc',
+    id: '5f3573d3-5e2d-4e47-8e9c-5cf622f01b43',
     metadata: [],
     mime_type: 'application/pdf',
     name: 'softly.pdf',
@@ -300,14 +294,13 @@ req = Models::Operations::UpdateStorageFileRequest.new(
       'suasoria',
     ],
     type: Models::Shared::StorageFileType::FOLDER,
-    updated_at: DateTime.iso8601('2023-02-10T17:59:35.909Z'),
+    updated_at: DateTime.iso8601('2023-02-11T05:54:36.503Z'),
     version: '1',
-    web_url: 'https://faraway-inspection.org',
+    web_url: 'https://faraway-inspection.org'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.storage.update_storage_file(request: req)
 
 unless res.storage_file.nil?

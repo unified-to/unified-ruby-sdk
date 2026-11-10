@@ -1,5 +1,4 @@
 # Device
-(*device*)
 
 ## Overview
 
@@ -18,17 +17,16 @@ Creates a HrisDevice. Provide the unified HrisDevice fields in the request body;
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisDevice" method="post" path="/hris/{connection_id}/device" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisDevice" method="post" path="/hris/{connection_id}/device" example="hris_device" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.device.create_hris_device(hris_device: Models::Shared::HrisDevice.new(
   admin_user_ids: [],
   asset_tag: 'fJNacaaoWi',
@@ -38,7 +36,7 @@ res = s.device.create_hris_device(hris_device: Models::Shared::HrisDevice.new(
   has_hd_encrypted: true,
   has_password_manager: true,
   has_screenlock: false,
-  id: 'b08dcf72-4784-4908-9ae2-cfd3e215514f',
+  id: '506f00a7-e0b8-4665-937d-10b3e4d783f6',
   is_missing: false,
   manufacturer: 'Hackett Inc',
   metadata: [],
@@ -46,8 +44,8 @@ res = s.device.create_hris_device(hris_device: Models::Shared::HrisDevice.new(
   name: 'august-laptop',
   os: 'transmitter',
   os_version: '8.4.8',
-  updated_at: DateTime.iso8601('2023-06-18T19:49:11.772Z'),
-  version: '4.15.7',
+  updated_at: DateTime.iso8601('2023-06-19T19:53:29.540Z'),
+  version: '4.15.7'
 ), connection_id: '<id>')
 
 unless res.hris_device.nil?
@@ -87,11 +85,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.device.get_hris_device(connection_id: '<id>', id: '<id>')
 
 unless res.hris_device.nil?
@@ -131,15 +128,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHrisDevicesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHrisDevicesRequest.new(
+  connection_id: '<id>'
+)
 res = s.device.list_hris_devices(request: req)
 
 unless res.hris_devices.nil?
@@ -170,16 +166,16 @@ Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHrisDevice" method="patch" path="/hris/{connection_id}/device/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHrisDevice" method="patch" path="/hris/{connection_id}/device/{id}" example="hris_device" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchHrisDeviceRequest.new(
   hris_device: Models::Shared::HrisDevice.new(
@@ -191,7 +187,7 @@ req = Models::Operations::PatchHrisDeviceRequest.new(
     has_hd_encrypted: true,
     has_password_manager: true,
     has_screenlock: false,
-    id: '3f2bff73-c125-4af0-a0eb-962e234492f5',
+    id: '2283e701-97ba-4e65-ab11-c5fdae4565be',
     is_missing: false,
     manufacturer: 'Hackett Inc',
     metadata: [],
@@ -199,13 +195,12 @@ req = Models::Operations::PatchHrisDeviceRequest.new(
     name: 'august-laptop',
     os: 'transmitter',
     os_version: '8.4.8',
-    updated_at: DateTime.iso8601('2023-06-18T19:49:11.782Z'),
-    version: '4.15.7',
+    updated_at: DateTime.iso8601('2023-06-19T19:53:29.551Z'),
+    version: '4.15.7'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.device.patch_hris_device(request: req)
 
 unless res.hris_device.nil?
@@ -242,11 +237,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.device.remove_hris_device(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -278,16 +272,16 @@ Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHrisDevice" method="put" path="/hris/{connection_id}/device/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHrisDevice" method="put" path="/hris/{connection_id}/device/{id}" example="hris_device" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateHrisDeviceRequest.new(
   hris_device: Models::Shared::HrisDevice.new(
@@ -299,7 +293,7 @@ req = Models::Operations::UpdateHrisDeviceRequest.new(
     has_hd_encrypted: true,
     has_password_manager: true,
     has_screenlock: false,
-    id: '3f2bff73-c125-4af0-a0eb-962e234492f5',
+    id: '2283e701-97ba-4e65-ab11-c5fdae4565be',
     is_missing: false,
     manufacturer: 'Hackett Inc',
     metadata: [],
@@ -307,13 +301,12 @@ req = Models::Operations::UpdateHrisDeviceRequest.new(
     name: 'august-laptop',
     os: 'transmitter',
     os_version: '8.4.8',
-    updated_at: DateTime.iso8601('2023-06-18T19:49:11.782Z'),
-    version: '4.15.7',
+    updated_at: DateTime.iso8601('2023-06-19T19:53:29.551Z'),
+    version: '4.15.7'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.device.update_hris_device(request: req)
 
 unless res.hris_device.nil?

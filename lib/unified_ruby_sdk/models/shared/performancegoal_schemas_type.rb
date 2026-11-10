@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PerformanceGoalSchemasType < T::Enum
-
-
+      class PerformanceGoalSchemasType
+        include ::Crystalline::Enum
         enums do
           INDIVIDUAL = new('INDIVIDUAL')
           TEAM = new('TEAM')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           COMPANY = new('COMPANY')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

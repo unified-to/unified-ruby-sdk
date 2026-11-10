@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class AtsEmail
         extend T::Sig
@@ -18,7 +17,7 @@ module UnifiedRubySDK
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-        field :type, Crystalline::Nilable.new(Models::Shared::AtsEmailType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AtsEmailType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::AtsEmailType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::AtsEmailType, true) } }
 
         sig { params(email: ::String, name: T.nilable(::String), type: T.nilable(Models::Shared::AtsEmailType)).void }
         def initialize(email:, name: nil, type: nil)

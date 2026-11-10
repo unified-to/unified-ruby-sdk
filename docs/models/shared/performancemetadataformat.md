@@ -1,5 +1,16 @@
 # PerformanceMetadataFormat
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PerformanceMetadataFormat::TEXT
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = PerformanceMetadataFormat.deserialize("custom_value")
+```
+
 
 ## Values
 

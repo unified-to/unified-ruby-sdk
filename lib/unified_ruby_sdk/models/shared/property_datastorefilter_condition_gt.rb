@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class PropertyDatastoreFilterConditionGt
         extend T::Sig

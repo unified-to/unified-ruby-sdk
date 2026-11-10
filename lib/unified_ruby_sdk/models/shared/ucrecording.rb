@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class UcRecording
         extend T::Sig
@@ -20,11 +19,11 @@ module UnifiedRubySDK
         # opaque identifier shared across legs of one interaction
         field :conversation_identifier, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('conversation_identifier') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :expires_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expires_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :expires_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expires_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
@@ -32,13 +31,13 @@ module UnifiedRubySDK
 
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::UcMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        field :type, Crystalline::Nilable.new(Models::Shared::UcRecordingType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::UcRecordingType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::UcRecordingType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::UcRecordingType, true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # reference to HrisEmployee (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
@@ -48,7 +47,7 @@ module UnifiedRubySDK
 
         field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
-        sig { params(call_id: T.nilable(::String), contacts: T.nilable(T::Array[Models::Shared::UcContact]), conversation_identifier: T.nilable(::String), created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), expires_at: T.nilable(::DateTime), id: T.nilable(::String), media: T.nilable(T::Array[Models::Shared::UcRecordingMedia]), metadata: T.nilable(T::Array[Models::Shared::UcMetadata]), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), type: T.nilable(Models::Shared::UcRecordingType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), user_name: T.nilable(::String), user_phone: T.nilable(::String), web_url: T.nilable(::String)).void }
+        sig { params(call_id: T.nilable(::String), contacts: T.nilable(T::Array[Models::Shared::UcContact]), conversation_identifier: T.nilable(::String), created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), expires_at: T.nilable(::DateTime), id: T.nilable(::String), media: T.nilable(T::Array[Models::Shared::UcRecordingMedia]), metadata: T.nilable(T::Array[Models::Shared::UcMetadata]), raw: T.nilable(T::Hash[::Symbol, ::Object]), start_at: T.nilable(::DateTime), type: T.nilable(Models::Shared::UcRecordingType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), user_name: T.nilable(::String), user_phone: T.nilable(::String), web_url: T.nilable(::String)).void }
         def initialize(call_id: nil, contacts: nil, conversation_identifier: nil, created_at: nil, end_at: nil, expires_at: nil, id: nil, media: nil, metadata: nil, raw: nil, start_at: nil, type: nil, updated_at: nil, user_id: nil, user_name: nil, user_phone: nil, web_url: nil)
           @call_id = call_id
           @contacts = contacts

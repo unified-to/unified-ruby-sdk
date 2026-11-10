@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # AccountingOrganizationType - Entity type within a consolidation hierarchy
-      class AccountingOrganizationType < T::Enum
-
-
+      class AccountingOrganizationType
+        include ::Crystalline::Enum
         enums do
           COMPANY = new('COMPANY')
           SUBSIDIARY = new('SUBSIDIARY')
           DIVISION = new('DIVISION')
           LOCATION = new('LOCATION')
         end
+        open!
       end
     end
   end

@@ -1,5 +1,4 @@
 # Task
-(*task*)
 
 ## Overview
 
@@ -38,22 +37,21 @@ Creates a GenaiTask. Provide the unified GenaiTask fields in the request body; t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createGenaiTask" method="post" path="/genai/{connection_id}/task" -->
+<!-- UsageSnippet language="ruby" operationID="createGenaiTask" method="post" path="/genai/{connection_id}/task" example="genai_task" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.task.create_genai_task(genai_task: Models::Shared::GenaiTask.new(
-  completed_at: DateTime.iso8601('2025-10-16T22:32:24.229Z'),
+  completed_at: DateTime.iso8601('2025-10-18T10:22:35.838Z'),
   created_at: DateTime.iso8601('2020-10-25T20:19:33.247Z'),
   files_changed: 19.0,
-  id: '21497b6e-6908-48ba-8b61-2a4d7f40fe4d',
+  id: '26495ced-7e82-4f46-8e3b-f7b0ea8c2645',
   instructions: 'Benigne canonicus officiis solvo adsidue deleo angustus.',
   lines_added: 244.0,
   lines_deleted: 118.0,
@@ -61,20 +59,20 @@ res = s.task.create_genai_task(genai_task: Models::Shared::GenaiTask.new(
     Models::Shared::GenaiContent.new(
       content: 'Stultus esse cursim stabilis tenetur amet contigo tristis.',
       images: [],
-      role: Models::Shared::Role::ASSISTANT,
+      role: Models::Shared::Role::ASSISTANT
     ),
   ],
   name: 'connect multi-byte port',
   pullrequest_url: 'https://github.com/berenice.satterfield/joshingly-ignorance/pull/383',
   repo_url: 'https://github.com/berenice.satterfield/joshingly-ignorance',
   source_branch_identifier: 'main',
-  started_at: DateTime.iso8601('2024-06-01T18:29:31.167Z'),
+  started_at: DateTime.iso8601('2024-06-02T20:25:29.336Z'),
   status: Models::Shared::GenaiTaskStatus::BLOCKED,
   summary: 'Cur aeternus cogito vesper.',
   target_branch_identifier: 'agent/joshingly-ignorance',
   tokens_used: 2165.0,
-  updated_at: DateTime.iso8601('2023-03-05T17:19:33.983Z'),
-  web_url: 'https://inexperienced-adrenalin.biz/',
+  updated_at: DateTime.iso8601('2023-03-06T10:18:15.189Z'),
+  web_url: 'https://inexperienced-adrenalin.biz/'
 ), connection_id: '<id>')
 
 unless res.genai_task.nil?
@@ -108,24 +106,23 @@ Creates a TaskComment. Provide the unified TaskComment fields in the request bod
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createTaskComment" method="post" path="/task/{connection_id}/comment" -->
+<!-- UsageSnippet language="ruby" operationID="createTaskComment" method="post" path="/task/{connection_id}/comment" example="task_comment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.task.create_task_comment(task_comment: Models::Shared::TaskComment.new(
   created_at: DateTime.iso8601('2019-10-12T20:33:37.879Z'),
   has_children: true,
-  id: '3736aafa-2d9b-4975-abca-6262ea6ba878',
+  id: '462ea52d-a7fe-4033-b97e-c59f324f04d2',
   metadata: [],
   text: 'Colo ulciscor sublime tabernus.',
-  updated_at: DateTime.iso8601('2021-10-08T16:17:15.400Z'),
+  updated_at: DateTime.iso8601('2021-10-09T04:31:10.756Z')
 ), connection_id: '<id>')
 
 unless res.task_comment.nil?
@@ -159,47 +156,46 @@ Creates a TaskProject. Provide the unified TaskProject fields in the request bod
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createTaskProject" method="post" path="/task/{connection_id}/project" -->
+<!-- UsageSnippet language="ruby" operationID="createTaskProject" method="post" path="/task/{connection_id}/project" example="task_project" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.task.create_task_project(task_project: Models::Shared::TaskProject.new(
   created_at: DateTime.iso8601('2023-06-23T16:39:40.446Z'),
   description: 'Valetudo aggredior accommodo curiositas vox.',
   has_children: false,
   has_tasks: false,
-  id: 'f1195fc2-641a-436c-8833-c9f317281d08',
+  id: 'c4074abe-3363-42d7-b9ea-ffaac0a8006e',
   metadata: [
     Models::Shared::TaskMetadata.new(
       extra_data: {
 
       },
       format: Models::Shared::TaskMetadataFormat::TEXT,
-      id: '156babff-008b-4004-aa3b-e87e265bde0d',
+      id: '60209634-5a9e-49d2-a672-7b6df66f1eed',
       namespace: 'custom',
       slug: 'decens',
-      value: 'uterque',
+      value: 'uterque'
     ),
     Models::Shared::TaskMetadata.new(
       extra_data: {
 
       },
       format: Models::Shared::TaskMetadataFormat::TEXT,
-      id: '6825e874-26d4-4d9e-9e51-b6b933f7bcfb',
+      id: '0434740a-4a20-4f55-8a96-3ff5cbbc431b',
       namespace: 'custom',
       slug: 'benevolentia',
-      value: 'pariatur',
+      value: 'pariatur'
     ),
   ],
   name: 'Garden',
-  updated_at: DateTime.iso8601('2023-10-13T07:45:43.016Z'),
+  updated_at: DateTime.iso8601('2023-10-13T11:41:42.476Z')
 ), connection_id: '<id>')
 
 unless res.task_project.nil?
@@ -233,29 +229,28 @@ Creates a TaskTask. Provide the unified TaskTask fields in the request body; the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createTaskTask" method="post" path="/task/{connection_id}/task" -->
+<!-- UsageSnippet language="ruby" operationID="createTaskTask" method="post" path="/task/{connection_id}/task" example="task_task" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.task.create_task_task(task_task: Models::Shared::TaskTask.new(
   attachment_ids: [],
   created_at: DateTime.iso8601('2019-01-31T08:34:55.626Z'),
-  due_at: DateTime.iso8601('2025-09-27T20:16:39.025Z'),
+  due_at: DateTime.iso8601('2025-09-29T09:05:39.019Z'),
   has_children: true,
-  id: 'a8cf204a-9569-443a-a562-15cc84a30a47',
+  id: 'b16da73c-38a4-4b14-8382-145e21c01493',
   metadata: [],
   name: 'I\'ll compress the optical IB interface, that should capacitor the JBOD system!',
   notes: 'Argentum ventosus rem talis neque thymbra. Absconditus peccatus crustulum tollo cometes volva vacuus eos cedo. Somnus utpote coadunatio denuncio adopto autus sono atrocitas. Concido rerum cura aveho torqueo tempore tubineus vomer tempore suscipit. Clibanus valetudo vulnero pauper caput absorbeo correptius vir deduco.',
   priority: 'MEDIUM',
   progress: 33.0,
-  start_at: DateTime.iso8601('2025-08-30T10:25:10.063Z'),
+  start_at: DateTime.iso8601('2025-08-31T23:14:10.057Z'),
   status: Models::Shared::TaskTaskStatus::OPENED,
   story_points: 0.0,
   tags: [
@@ -265,8 +260,8 @@ res = s.task.create_task_task(task_task: Models::Shared::TaskTask.new(
   time_spent: 5359.0,
   time_spent_unit: 'SECONDS',
   type: 'magni',
-  updated_at: DateTime.iso8601('2022-04-14T22:08:07.780Z'),
-  url: 'https://elementary-utilization.net/',
+  updated_at: DateTime.iso8601('2022-04-15T16:03:14.298Z'),
+  url: 'https://elementary-utilization.net/'
 ), connection_id: '<id>')
 
 unless res.task_task.nil?
@@ -306,11 +301,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.task.get_genai_task(connection_id: '<id>', id: '<id>')
 
 unless res.genai_task.nil?
@@ -350,11 +344,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.task.get_task_change(connection_id: '<id>', id: '<id>')
 
 unless res.task_change.nil?
@@ -394,11 +387,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.task.get_task_comment(connection_id: '<id>', id: '<id>')
 
 unless res.task_comment.nil?
@@ -438,11 +430,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.task.get_task_project(connection_id: '<id>', id: '<id>')
 
 unless res.task_project.nil?
@@ -482,11 +473,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.task.get_task_task(connection_id: '<id>', id: '<id>')
 
 unless res.task_task.nil?
@@ -526,15 +516,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListGenaiTasksRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListGenaiTasksRequest.new(
+  connection_id: '<id>'
+)
 res = s.task.list_genai_tasks(request: req)
 
 unless res.genai_tasks.nil?
@@ -571,15 +560,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListTaskChangesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListTaskChangesRequest.new(
+  connection_id: '<id>'
+)
 res = s.task.list_task_changes(request: req)
 
 unless res.task_changes.nil?
@@ -616,15 +604,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListTaskCommentsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListTaskCommentsRequest.new(
+  connection_id: '<id>'
+)
 res = s.task.list_task_comments(request: req)
 
 unless res.task_comments.nil?
@@ -661,15 +648,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListTaskProjectsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListTaskProjectsRequest.new(
+  connection_id: '<id>'
+)
 res = s.task.list_task_projects(request: req)
 
 unless res.task_projects.nil?
@@ -706,15 +692,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListTaskTasksRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListTaskTasksRequest.new(
+  connection_id: '<id>'
+)
 res = s.task.list_task_tasks(request: req)
 
 unless res.task_tasks.nil?
@@ -745,23 +730,23 @@ Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchGenaiTask" method="patch" path="/genai/{connection_id}/task/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchGenaiTask" method="patch" path="/genai/{connection_id}/task/{id}" example="genai_task" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchGenaiTaskRequest.new(
   genai_task: Models::Shared::GenaiTask.new(
-    completed_at: DateTime.iso8601('2025-10-16T22:32:24.247Z'),
+    completed_at: DateTime.iso8601('2025-10-18T10:22:35.853Z'),
     created_at: DateTime.iso8601('2020-10-25T20:19:33.247Z'),
     files_changed: 19.0,
-    id: '5160e514-0fd3-41a1-aad0-dbd5a985e556',
+    id: '8c2c367c-2c4a-466c-a2ff-8891f659eb74',
     instructions: 'Benigne canonicus officiis solvo adsidue deleo angustus.',
     lines_added: 244.0,
     lines_deleted: 118.0,
@@ -769,25 +754,24 @@ req = Models::Operations::PatchGenaiTaskRequest.new(
       Models::Shared::GenaiContent.new(
         content: 'Stultus esse cursim stabilis tenetur amet contigo tristis.',
         images: [],
-        role: Models::Shared::Role::ASSISTANT,
+        role: Models::Shared::Role::ASSISTANT
       ),
     ],
     name: 'connect multi-byte port',
     pullrequest_url: 'https://github.com/berenice.satterfield/joshingly-ignorance/pull/383',
     repo_url: 'https://github.com/berenice.satterfield/joshingly-ignorance',
     source_branch_identifier: 'main',
-    started_at: DateTime.iso8601('2024-06-01T18:29:31.180Z'),
+    started_at: DateTime.iso8601('2024-06-02T20:25:29.347Z'),
     status: Models::Shared::GenaiTaskStatus::BLOCKED,
     summary: 'Cur aeternus cogito vesper.',
     target_branch_identifier: 'agent/joshingly-ignorance',
     tokens_used: 2165.0,
-    updated_at: DateTime.iso8601('2023-03-05T17:19:33.992Z'),
-    web_url: 'https://inexperienced-adrenalin.biz/',
+    updated_at: DateTime.iso8601('2023-03-06T10:18:15.196Z'),
+    web_url: 'https://inexperienced-adrenalin.biz/'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.task.patch_genai_task(request: req)
 
 unless res.genai_task.nil?
@@ -818,30 +802,29 @@ Updates the TaskComment identified by `id`. Provide the unified TaskComment fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchTaskComment" method="patch" path="/task/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchTaskComment" method="patch" path="/task/{connection_id}/comment/{id}" example="task_comment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchTaskCommentRequest.new(
   task_comment: Models::Shared::TaskComment.new(
     created_at: DateTime.iso8601('2019-10-12T20:33:37.879Z'),
     has_children: true,
-    id: 'dd5eb970-6cf6-40bd-88f4-646220ce18d8',
+    id: 'c0053c2c-8e04-49f0-905f-858f4942546e',
     metadata: [],
     text: 'Colo ulciscor sublime tabernus.',
-    updated_at: DateTime.iso8601('2021-10-08T16:17:15.404Z'),
+    updated_at: DateTime.iso8601('2021-10-09T04:31:10.758Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.task.patch_task_comment(request: req)
 
 unless res.task_comment.nil?
@@ -872,16 +855,16 @@ Updates the TaskProject identified by `id`. Provide the unified TaskProject fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchTaskProject" method="patch" path="/task/{connection_id}/project/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchTaskProject" method="patch" path="/task/{connection_id}/project/{id}" example="task_project" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchTaskProjectRequest.new(
   task_project: Models::Shared::TaskProject.new(
@@ -889,36 +872,35 @@ req = Models::Operations::PatchTaskProjectRequest.new(
     description: 'Valetudo aggredior accommodo curiositas vox.',
     has_children: false,
     has_tasks: false,
-    id: '714f75d7-da0c-4bc0-bfe0-69e23d151eab',
+    id: '4d3deaa2-8801-4c98-ba89-ca45a8adbc65',
     metadata: [
       Models::Shared::TaskMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: 'eded9270-940a-46bc-829b-de5b705c04ae',
+        id: 'b066ebdd-a56a-4c0d-9584-873a3887c411',
         namespace: 'custom',
         slug: 'decens',
-        value: 'uterque',
+        value: 'uterque'
       ),
       Models::Shared::TaskMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: '16ec6e99-9971-4daa-973d-f8f756f899ad',
+        id: 'a7e6b7b7-ed8b-444d-80f6-ade32d6a9bc4',
         namespace: 'custom',
         slug: 'benevolentia',
-        value: 'pariatur',
+        value: 'pariatur'
       ),
     ],
     name: 'Garden',
-    updated_at: DateTime.iso8601('2023-10-13T07:45:43.017Z'),
+    updated_at: DateTime.iso8601('2023-10-13T11:41:42.477Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.task.patch_task_project(request: req)
 
 unless res.task_project.nil?
@@ -949,30 +931,30 @@ Updates the TaskTask identified by `id`. Provide the unified TaskTask fields to 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchTaskTask" method="patch" path="/task/{connection_id}/task/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchTaskTask" method="patch" path="/task/{connection_id}/task/{id}" example="task_task" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchTaskTaskRequest.new(
   task_task: Models::Shared::TaskTask.new(
     attachment_ids: [],
     created_at: DateTime.iso8601('2019-01-31T08:34:55.626Z'),
-    due_at: DateTime.iso8601('2025-09-27T20:16:39.046Z'),
+    due_at: DateTime.iso8601('2025-09-29T09:05:39.031Z'),
     has_children: true,
-    id: 'a28192b8-632e-409a-b68c-e356e82d94b5',
+    id: '8b0bb953-09a8-4ae2-a46b-3422385b6e33',
     metadata: [],
     name: 'I\'ll compress the optical IB interface, that should capacitor the JBOD system!',
     notes: 'Argentum ventosus rem talis neque thymbra. Absconditus peccatus crustulum tollo cometes volva vacuus eos cedo. Somnus utpote coadunatio denuncio adopto autus sono atrocitas. Concido rerum cura aveho torqueo tempore tubineus vomer tempore suscipit. Clibanus valetudo vulnero pauper caput absorbeo correptius vir deduco.',
     priority: 'MEDIUM',
     progress: 33.0,
-    start_at: DateTime.iso8601('2025-08-30T10:25:10.084Z'),
+    start_at: DateTime.iso8601('2025-08-31T23:14:10.069Z'),
     status: Models::Shared::TaskTaskStatus::OPENED,
     story_points: 0.0,
     tags: [
@@ -982,13 +964,12 @@ req = Models::Operations::PatchTaskTaskRequest.new(
     time_spent: 5359.0,
     time_spent_unit: 'SECONDS',
     type: 'magni',
-    updated_at: DateTime.iso8601('2022-04-14T22:08:07.790Z'),
-    url: 'https://elementary-utilization.net/',
+    updated_at: DateTime.iso8601('2022-04-15T16:03:14.304Z'),
+    url: 'https://elementary-utilization.net/'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.task.patch_task_task(request: req)
 
 unless res.task_task.nil?
@@ -1025,11 +1006,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.task.remove_genai_task(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1067,11 +1047,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.task.remove_task_comment(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1109,11 +1088,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.task.remove_task_project(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1151,11 +1129,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.task.remove_task_task(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1187,23 +1164,23 @@ Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateGenaiTask" method="put" path="/genai/{connection_id}/task/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateGenaiTask" method="put" path="/genai/{connection_id}/task/{id}" example="genai_task" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateGenaiTaskRequest.new(
   genai_task: Models::Shared::GenaiTask.new(
-    completed_at: DateTime.iso8601('2025-10-16T22:32:24.247Z'),
+    completed_at: DateTime.iso8601('2025-10-18T10:22:35.853Z'),
     created_at: DateTime.iso8601('2020-10-25T20:19:33.247Z'),
     files_changed: 19.0,
-    id: '5160e514-0fd3-41a1-aad0-dbd5a985e556',
+    id: '8c2c367c-2c4a-466c-a2ff-8891f659eb74',
     instructions: 'Benigne canonicus officiis solvo adsidue deleo angustus.',
     lines_added: 244.0,
     lines_deleted: 118.0,
@@ -1211,25 +1188,24 @@ req = Models::Operations::UpdateGenaiTaskRequest.new(
       Models::Shared::GenaiContent.new(
         content: 'Stultus esse cursim stabilis tenetur amet contigo tristis.',
         images: [],
-        role: Models::Shared::Role::ASSISTANT,
+        role: Models::Shared::Role::ASSISTANT
       ),
     ],
     name: 'connect multi-byte port',
     pullrequest_url: 'https://github.com/berenice.satterfield/joshingly-ignorance/pull/383',
     repo_url: 'https://github.com/berenice.satterfield/joshingly-ignorance',
     source_branch_identifier: 'main',
-    started_at: DateTime.iso8601('2024-06-01T18:29:31.180Z'),
+    started_at: DateTime.iso8601('2024-06-02T20:25:29.347Z'),
     status: Models::Shared::GenaiTaskStatus::BLOCKED,
     summary: 'Cur aeternus cogito vesper.',
     target_branch_identifier: 'agent/joshingly-ignorance',
     tokens_used: 2165.0,
-    updated_at: DateTime.iso8601('2023-03-05T17:19:33.992Z'),
-    web_url: 'https://inexperienced-adrenalin.biz/',
+    updated_at: DateTime.iso8601('2023-03-06T10:18:15.196Z'),
+    web_url: 'https://inexperienced-adrenalin.biz/'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.task.update_genai_task(request: req)
 
 unless res.genai_task.nil?
@@ -1260,30 +1236,29 @@ Updates the TaskComment identified by `id`. Provide the unified TaskComment fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateTaskComment" method="put" path="/task/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateTaskComment" method="put" path="/task/{connection_id}/comment/{id}" example="task_comment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateTaskCommentRequest.new(
   task_comment: Models::Shared::TaskComment.new(
     created_at: DateTime.iso8601('2019-10-12T20:33:37.879Z'),
     has_children: true,
-    id: 'dd5eb970-6cf6-40bd-88f4-646220ce18d8',
+    id: 'c0053c2c-8e04-49f0-905f-858f4942546e',
     metadata: [],
     text: 'Colo ulciscor sublime tabernus.',
-    updated_at: DateTime.iso8601('2021-10-08T16:17:15.404Z'),
+    updated_at: DateTime.iso8601('2021-10-09T04:31:10.758Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.task.update_task_comment(request: req)
 
 unless res.task_comment.nil?
@@ -1314,16 +1289,16 @@ Updates the TaskProject identified by `id`. Provide the unified TaskProject fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateTaskProject" method="put" path="/task/{connection_id}/project/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateTaskProject" method="put" path="/task/{connection_id}/project/{id}" example="task_project" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateTaskProjectRequest.new(
   task_project: Models::Shared::TaskProject.new(
@@ -1331,36 +1306,35 @@ req = Models::Operations::UpdateTaskProjectRequest.new(
     description: 'Valetudo aggredior accommodo curiositas vox.',
     has_children: false,
     has_tasks: false,
-    id: '714f75d7-da0c-4bc0-bfe0-69e23d151eab',
+    id: '4d3deaa2-8801-4c98-ba89-ca45a8adbc65',
     metadata: [
       Models::Shared::TaskMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: 'eded9270-940a-46bc-829b-de5b705c04ae',
+        id: 'b066ebdd-a56a-4c0d-9584-873a3887c411',
         namespace: 'custom',
         slug: 'decens',
-        value: 'uterque',
+        value: 'uterque'
       ),
       Models::Shared::TaskMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: '16ec6e99-9971-4daa-973d-f8f756f899ad',
+        id: 'a7e6b7b7-ed8b-444d-80f6-ade32d6a9bc4',
         namespace: 'custom',
         slug: 'benevolentia',
-        value: 'pariatur',
+        value: 'pariatur'
       ),
     ],
     name: 'Garden',
-    updated_at: DateTime.iso8601('2023-10-13T07:45:43.017Z'),
+    updated_at: DateTime.iso8601('2023-10-13T11:41:42.477Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.task.update_task_project(request: req)
 
 unless res.task_project.nil?
@@ -1391,30 +1365,30 @@ Updates the TaskTask identified by `id`. Provide the unified TaskTask fields to 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateTaskTask" method="put" path="/task/{connection_id}/task/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateTaskTask" method="put" path="/task/{connection_id}/task/{id}" example="task_task" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateTaskTaskRequest.new(
   task_task: Models::Shared::TaskTask.new(
     attachment_ids: [],
     created_at: DateTime.iso8601('2019-01-31T08:34:55.626Z'),
-    due_at: DateTime.iso8601('2025-09-27T20:16:39.046Z'),
+    due_at: DateTime.iso8601('2025-09-29T09:05:39.031Z'),
     has_children: true,
-    id: 'a28192b8-632e-409a-b68c-e356e82d94b5',
+    id: '8b0bb953-09a8-4ae2-a46b-3422385b6e33',
     metadata: [],
     name: 'I\'ll compress the optical IB interface, that should capacitor the JBOD system!',
     notes: 'Argentum ventosus rem talis neque thymbra. Absconditus peccatus crustulum tollo cometes volva vacuus eos cedo. Somnus utpote coadunatio denuncio adopto autus sono atrocitas. Concido rerum cura aveho torqueo tempore tubineus vomer tempore suscipit. Clibanus valetudo vulnero pauper caput absorbeo correptius vir deduco.',
     priority: 'MEDIUM',
     progress: 33.0,
-    start_at: DateTime.iso8601('2025-08-30T10:25:10.084Z'),
+    start_at: DateTime.iso8601('2025-08-31T23:14:10.069Z'),
     status: Models::Shared::TaskTaskStatus::OPENED,
     story_points: 0.0,
     tags: [
@@ -1424,13 +1398,12 @@ req = Models::Operations::UpdateTaskTaskRequest.new(
     time_spent: 5359.0,
     time_spent_unit: 'SECONDS',
     type: 'magni',
-    updated_at: DateTime.iso8601('2022-04-14T22:08:07.790Z'),
-    url: 'https://elementary-utilization.net/',
+    updated_at: DateTime.iso8601('2022-04-15T16:03:14.304Z'),
+    url: 'https://elementary-utilization.net/'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.task.update_task_task(request: req)
 
 unless res.task_task.nil?

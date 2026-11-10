@@ -1,5 +1,13 @@
 # PatchAtsInterviewQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PatchAtsInterviewQueryParamFields::ID
+```
+
 
 ## Values
 

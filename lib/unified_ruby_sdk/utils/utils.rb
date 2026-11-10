@@ -11,24 +11,54 @@ require 'sorbet-runtime'
 
 module UnifiedRubySDK
   module Utils
-    include Kernel
+    include ::Kernel
     extend T::Sig
 
-    sig { params(val: Object).returns(String) }
+    sig { params(val: ::Object).returns(::String) }
     def self.val_to_string(val)
       if val.class.respond_to?(:enums)
         T.unsafe(val).serialize.to_s
-      elsif val.is_a? DateTime
-        val.strftime('%Y-%m-%dT%H:%M:%S.%NZ')
+      elsif val.is_a? ::DateTime
+        val.strftime('%Y-%m-%dT%H:%M:%S.%NZ').sub(/(\.\d*[1-9])0+Z\z/, '\1Z').sub(/\.0+Z\z/, 'Z')
       else
         val.to_s
 
       end
     end
 
+    MIME_TYPES = {
+      '.json' => 'application/json',
+      '.xml' => 'application/xml',
+      '.pdf' => 'application/pdf',
+      '.zip' => 'application/zip',
+      '.gz' => 'application/gzip',
+      '.csv' => 'text/csv',
+      '.txt' => 'text/plain',
+      '.html' => 'text/html',
+      '.htm' => 'text/html',
+      '.css' => 'text/css',
+      '.js' => 'application/javascript',
+      '.png' => 'image/png',
+      '.jpg' => 'image/jpeg',
+      '.jpeg' => 'image/jpeg',
+      '.gif' => 'image/gif',
+      '.svg' => 'image/svg+xml',
+      '.webp' => 'image/webp',
+      '.mp3' => 'audio/mpeg',
+      '.mp4' => 'video/mp4',
+      '.yaml' => 'application/yaml',
+      '.yml' => 'application/yaml',
+    }.freeze
+
+    sig { params(filename: ::String).returns(::String) }
+    def self.mime_type_for_filename(filename)
+      ext = ::File.extname(filename).downcase
+      MIME_TYPES.fetch(ext, 'application/octet-stream')
+    end
+
     sig do
-      params(metadata: T::Hash[Symbol, String], field_name: String, obj: Object)
-        .returns(T::Hash[Symbol, T::Array[String]])
+      params(metadata: T::Hash[::Symbol, ::String], field_name: ::String, obj: ::Object)
+        .returns(T::Hash[::Symbol, T::Array[::String]])
     end
     def self._get_serialized_params(metadata, field_name, obj)
       params = {}
@@ -40,7 +70,7 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(status: Integer).returns(T::Boolean) }
+    sig { params(status: ::Integer).returns(T::Boolean) }
     def self.error_status?(status)
       status_major = status / 100
       return true if status_major == 4
@@ -49,19 +79,23 @@ module UnifiedRubySDK
       false
     end
 
-    sig { params(content_type: String, pattern: String).returns(T::Boolean) }
+    sig { params(content_type: ::String, pattern: ::String).returns(T::Boolean) }
     def self.match_content_type(content_type, pattern)
-      return true if content_type == pattern || ['*', '*/*'].include?(pattern)
+      return true if ['*', '*/*'].include?(pattern)
+
+      # Media types are case-insensitive (RFC 9110 section 8.3.1).
+      pattern = pattern.strip.downcase
+      return true if content_type.strip.downcase == pattern
 
       pieces = content_type.split(';')
       pieces.each do |piece|
-        return true if pattern == piece.strip
+        return true if pattern == piece.strip.downcase
       end
 
       false
     end
 
-    sig { params(status_code: Integer, status_codes: T::Array[String]).returns(T::Boolean) }
+    sig { params(status_code: ::Integer, status_codes: T::Array[::String]).returns(T::Boolean) }
     def self.match_status_code(status_code, status_codes)
       return true if status_codes.include? 'default'
       status_code = status_code.to_s
@@ -72,43 +106,55 @@ module UnifiedRubySDK
       false
     end
 
-    sig { params(optional: T::Boolean).returns(T.proc.params(s: String).returns(T.nilable(DateTime))) }
+    sig { params(optional: T::Boolean).returns(T.proc.params(s: ::String).returns(T.nilable(::DateTime))) }
     def self.datetime_from_iso_format(optional)
-      Kernel.lambda do |s|
+      ::Kernel.lambda do |s|
         return nil if optional && s.nil?
 
-        return DateTime.strptime(s, '%Y-%m-%dT%H:%M:%S.%NZ')
+        return ::DateTime.strptime(s, '%Y-%m-%dT%H:%M:%S.%NZ')
       end
     end
 
-    sig { params(optional: T::Boolean).returns(T.proc.params(s: String).returns(T.nilable(Date))) }
+    sig { params(optional: T::Boolean).returns(T.proc.params(s: ::String).returns(T.nilable(::Date))) }
     def self.date_from_iso_format(optional)
-      Kernel.lambda do |s|
+      ::Kernel.lambda do |s|
         return nil if optional && s.nil?
 
-        return Date.iso8601(s)
+        return ::Date.iso8601(s)
       end
     end
 
     sig do
       params(enum_type: T.class_of(T::Enum), optional: T::Boolean)
-        .returns(T.nilable(T.proc.params(s: String).returns(T.nilable(T::Enum))))
+        .returns(T.nilable(T.proc.params(s: ::String).returns(T.nilable(T::Enum))))
     end
     def self.enum_from_string(enum_type, optional)
-      Kernel.lambda do |s|
+      ::Kernel.lambda do |s|
         return nil if optional && s.nil?
 
         return enum_type.deserialize(s)
       end
     end
 
-    sig { params(name: String).returns(T.proc.returns(String)) }
+    sig do
+      params(enum_type: ::Module, optional: T::Boolean)
+        .returns(T.proc.params(s: ::String).returns(T.untyped))
+    end
+    def self.open_enum_from_string(enum_type, optional)
+      ::Kernel.lambda do |s|
+        return nil if optional && s.nil?
+
+        return T.unsafe(enum_type).deserialize(s)
+      end
+    end
+
+    sig { params(name: ::String).returns(T.proc.returns(::String)) }
     def self.field_name(name)
-      T.let(proc { name }, T.proc.returns(String))
+      T.let(proc { name }, T.proc.returns(::String))
     end
 
 
-    sig { params(field: ::Crystalline::MetadataFields::Field, data_class: Object).returns(Object) }
+    sig { params(field: ::Crystalline::MetadataFields::Field, data_class: ::Object).returns(::Object) }
     def self.parse_field(field, data_class)
       field_metadata = field.metadata[:metadata_string]
       return nil if field_metadata.nil?
@@ -120,8 +166,8 @@ module UnifiedRubySDK
     end
 
     sig do
-      params(form: T::Array[T::Array[T.any(String, T::Array[T.nilable(String)])]])
-        .returns(T::Hash[Symbol, Object])
+      params(form: T::Array[T::Array[T.any(::String, T::Array[T.nilable(::String)])]])
+        .returns(T::Hash[::Symbol, ::Object])
     end
     def self.encode_form(form)
       payload = {}
@@ -132,7 +178,7 @@ module UnifiedRubySDK
             # Handle multiple values for the same field name (arrays)
             if payload.key?(field_name)
               # Convert to array if not already
-              unless payload[field_name].is_a?(Array)
+              unless payload[field_name].is_a?(::Array)
                 payload[field_name] = [payload[field_name]]
               end
               payload[field_name] << field[1]
@@ -142,14 +188,14 @@ module UnifiedRubySDK
           else
             # Handle file uploads
             file_part = Faraday::Multipart::FilePart.new(
-              StringIO.new(T.must(field[1])),
-              'application/octet-stream',
+              ::StringIO.new(T.must(field[1])),
+              mime_type_for_filename(T.must(field[0])),
               field[0]
             )
             
             # Handle multiple files for the same field name (arrays)
             if payload.key?(field_name)
-              unless payload[field_name].is_a?(Array)
+              unless payload[field_name].is_a?(::Array)
                 payload[field_name] = [payload[field_name]]
               end
               payload[field_name] << file_part
@@ -158,11 +204,11 @@ module UnifiedRubySDK
             end
           end
         elsif field.length == 3
-          param_part = Faraday::Multipart::ParamPart.new(field[1].to_json, field[2])
+          param_part = Faraday::Multipart::ParamPart.new(field[1], field[2])
           
           # Handle multiple values for the same field name (arrays)
           if payload.key?(field_name)
-            unless payload[field_name].is_a?(Array)
+            unless payload[field_name].is_a?(::Array)
               payload[field_name] = [payload[field_name]]
             end
             payload[field_name] << param_part
@@ -174,7 +220,7 @@ module UnifiedRubySDK
       payload
     end
 
-    sig { params(param_name: Symbol, value: Object, param_type: String, gbls: T.nilable(T::Hash[Symbol, T::Hash[Symbol, T::Hash[Symbol, Object]]])).returns(Object) }
+    sig { params(param_name: ::Symbol, value: ::Object, param_type: ::String, gbls: T.nilable(T::Hash[::Symbol, T::Hash[::Symbol, T::Hash[::Symbol, ::Object]]])).returns(::Object) }
     def self._populate_from_globals(param_name, value, param_type, gbls)
       if value.nil? && !gbls.nil?
         global_value = gbls.dig(:parameters, param_type.to_sym, param_name.to_sym)

@@ -1,5 +1,4 @@
 # Page
-(*page*)
 
 ## Overview
 
@@ -18,28 +17,27 @@ Creates a KmsPage. Provide the unified KmsPage fields in the request body; they 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createKmsPage" method="post" path="/kms/{connection_id}/page" -->
+<!-- UsageSnippet language="ruby" operationID="createKmsPage" method="post" path="/kms/{connection_id}/page" example="kms_page" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.page.create_kms_page(kms_page: Models::Shared::KmsPage.new(
   created_at: DateTime.iso8601('2019-05-20T18:06:50.749Z'),
   download_url: 'https://agitated-validity.info',
   has_children: true,
-  id: '4f78bfc9-df95-45e7-8070-6be1b93c35a1',
+  id: 'd0b0199b-e86b-4e1b-b0e2-10436bac54e3',
   is_active: true,
   metadata: [],
   title: 'even minister extract',
   type: Models::Shared::KmsPageType::HTML,
-  updated_at: DateTime.iso8601('2025-10-25T13:05:48.197Z'),
-  web_url: 'https://another-petticoat.info',
+  updated_at: DateTime.iso8601('2025-10-27T02:32:24.139Z'),
+  web_url: 'https://another-petticoat.info'
 ), connection_id: '<id>')
 
 unless res.kms_page.nil?
@@ -79,11 +77,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.page.get_kms_page(connection_id: '<id>', id: '<id>')
 
 unless res.kms_page.nil?
@@ -123,15 +120,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListKmsPagesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListKmsPagesRequest.new(
+  connection_id: '<id>'
+)
 res = s.page.list_kms_pages(request: req)
 
 unless res.kms_pages.nil?
@@ -162,34 +158,33 @@ Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to ch
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchKmsPage" method="patch" path="/kms/{connection_id}/page/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchKmsPage" method="patch" path="/kms/{connection_id}/page/{id}" example="kms_page" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchKmsPageRequest.new(
   kms_page: Models::Shared::KmsPage.new(
     created_at: DateTime.iso8601('2019-05-20T18:06:50.749Z'),
     download_url: 'https://agitated-validity.info',
     has_children: true,
-    id: '4db88ee1-be2d-4ae8-8acf-1452febba926',
+    id: 'c7a654e4-efac-49e2-afac-ced838ac1630',
     is_active: true,
     metadata: [],
     title: 'even minister extract',
     type: Models::Shared::KmsPageType::HTML,
-    updated_at: DateTime.iso8601('2025-10-25T13:05:48.213Z'),
-    web_url: 'https://another-petticoat.info',
+    updated_at: DateTime.iso8601('2025-10-27T02:32:24.151Z'),
+    web_url: 'https://another-petticoat.info'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.page.patch_kms_page(request: req)
 
 unless res.kms_page.nil?
@@ -226,11 +221,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.page.remove_kms_page(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -262,34 +256,33 @@ Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to ch
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateKmsPage" method="put" path="/kms/{connection_id}/page/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateKmsPage" method="put" path="/kms/{connection_id}/page/{id}" example="kms_page" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateKmsPageRequest.new(
   kms_page: Models::Shared::KmsPage.new(
     created_at: DateTime.iso8601('2019-05-20T18:06:50.749Z'),
     download_url: 'https://agitated-validity.info',
     has_children: true,
-    id: '4db88ee1-be2d-4ae8-8acf-1452febba926',
+    id: 'c7a654e4-efac-49e2-afac-ced838ac1630',
     is_active: true,
     metadata: [],
     title: 'even minister extract',
     type: Models::Shared::KmsPageType::HTML,
-    updated_at: DateTime.iso8601('2025-10-25T13:05:48.213Z'),
-    web_url: 'https://another-petticoat.info',
+    updated_at: DateTime.iso8601('2025-10-27T02:32:24.151Z'),
+    web_url: 'https://another-petticoat.info'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.page.update_kms_page(request: req)
 
 unless res.kms_page.nil?

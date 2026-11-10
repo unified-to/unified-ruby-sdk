@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class AccountingVendorcredit
         extend T::Sig
@@ -26,11 +25,11 @@ module UnifiedRubySDK
         # (reference to AccountingContact)
         field :contact_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_id') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :due_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('due_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :due_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('due_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
@@ -42,17 +41,17 @@ module UnifiedRubySDK
 
         field :organization_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization_id') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :posted_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('posted_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :posted_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('posted_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :status, Crystalline::Nilable.new(Models::Shared::AccountingVendorcreditStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::AccountingVendorcreditStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::AccountingVendorcreditStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::AccountingVendorcreditStatus, true) } }
 
         field :total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(account_id: T.nilable(::String), applications: T.nilable(T::Array[Models::Shared::AccountingCreditApplication]), apply_amount: T.nilable(::Float), balance_amount: T.nilable(::Float), bill_id: T.nilable(::String), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), due_at: T.nilable(::DateTime), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingLineitem]), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), notes: T.nilable(::String), organization_id: T.nilable(::String), posted_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::AccountingVendorcreditStatus), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
+        sig { params(account_id: T.nilable(::String), applications: T.nilable(T::Array[Models::Shared::AccountingCreditApplication]), apply_amount: T.nilable(::Float), balance_amount: T.nilable(::Float), bill_id: T.nilable(::String), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), due_at: T.nilable(::DateTime), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingLineitem]), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), notes: T.nilable(::String), organization_id: T.nilable(::String), posted_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[::Symbol, ::Object]), status: T.nilable(Models::Shared::AccountingVendorcreditStatus), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
         def initialize(account_id: nil, applications: nil, apply_amount: nil, balance_amount: nil, bill_id: nil, contact_id: nil, created_at: nil, currency: nil, due_at: nil, id: nil, lineitems: nil, metadata: nil, notes: nil, organization_id: nil, posted_at: nil, raw: nil, status: nil, total_amount: nil, updated_at: nil)
           @account_id = account_id
           @applications = applications

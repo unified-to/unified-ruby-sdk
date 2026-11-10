@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PaymentRefundStatus < T::Enum
-
-
+      class PaymentRefundStatus
+        include ::Crystalline::Enum
         enums do
           SUCCEEDED = new('SUCCEEDED')
           PENDING = new('PENDING')
           FAILED = new('FAILED')
           CANCELED = new('CANCELED')
         end
+        open!
       end
     end
   end

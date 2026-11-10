@@ -1,5 +1,4 @@
 # Purchasereceipt
-(*purchasereceipt*)
 
 ## Overview
 
@@ -20,11 +19,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.purchasereceipt.get_accounting_purchasereceipt(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_purchasereceipt.nil?
@@ -64,15 +62,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingPurchasereceiptsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingPurchasereceiptsRequest.new(
+  connection_id: '<id>'
+)
 res = s.purchasereceipt.list_accounting_purchasereceipts(request: req)
 
 unless res.accounting_purchasereceipts.nil?

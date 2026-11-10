@@ -1,5 +1,13 @@
 # UpdateCommerceItemvariantQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = UpdateCommerceItemvariantQueryParamFields::ID
+```
+
 
 ## Values
 

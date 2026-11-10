@@ -1,5 +1,4 @@
 # Appointment
-(*appointment*)
 
 ## Overview
 
@@ -18,22 +17,21 @@ Creates a HealthcareAppointment. Provide the unified HealthcareAppointment field
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHealthcareAppointment" method="post" path="/healthcare/{connection_id}/appointment" -->
+<!-- UsageSnippet language="ruby" operationID="createHealthcareAppointment" method="post" path="/healthcare/{connection_id}/appointment" example="healthcare_appointment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.appointment.create_healthcare_appointment(healthcare_appointment: Models::Shared::HealthcareAppointment.new(
   created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
   description: 'clarus aptus cetera',
   end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-  id: 'b52dea76-4eca-4482-a41a-4f7fb8814469',
+  id: '8225e3a9-9beb-4e44-98ed-de93d02f935c',
   is_virtual: true,
   meeting_url: 'https://expensive-slipper.name/',
   metadata: [],
@@ -43,13 +41,13 @@ res = s.appointment.create_healthcare_appointment(healthcare_appointment: Models
     Models::Shared::HealthcareCode.new(
       code: '12762740',
       display: 'New patient visit',
-      system: 'http://snomed.info/sct',
+      system: 'http://snomed.info/sct'
     ),
   ],
   slot_ids: [],
   start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
   status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-  updated_at: DateTime.iso8601('2026-10-10T19:28:58.776Z'),
+  updated_at: DateTime.iso8601('2026-10-12T14:00:06.755Z')
 ), connection_id: '<id>')
 
 unless res.healthcare_appointment.nil?
@@ -89,11 +87,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.appointment.get_healthcare_appointment(connection_id: '<id>', id: '<id>')
 
 unless res.healthcare_appointment.nil?
@@ -133,15 +130,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHealthcareAppointmentsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHealthcareAppointmentsRequest.new(
+  connection_id: '<id>'
+)
 res = s.appointment.list_healthcare_appointments(request: req)
 
 unless res.healthcare_appointments.nil?
@@ -172,23 +168,23 @@ Updates the HealthcareAppointment identified by `id`. Provide the unified Health
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHealthcareAppointment" method="patch" path="/healthcare/{connection_id}/appointment/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHealthcareAppointment" method="patch" path="/healthcare/{connection_id}/appointment/{id}" example="healthcare_appointment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchHealthcareAppointmentRequest.new(
   healthcare_appointment: Models::Shared::HealthcareAppointment.new(
     created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
     description: 'clarus aptus cetera',
     end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-    id: 'c02cae83-a2ac-40e8-9cff-ecaeb1c3655a',
+    id: 'b000e651-26e3-405d-8b1b-a18d6e6458ec',
     is_virtual: true,
     meeting_url: 'https://expensive-slipper.name/',
     metadata: [],
@@ -198,18 +194,17 @@ req = Models::Operations::PatchHealthcareAppointmentRequest.new(
       Models::Shared::HealthcareCode.new(
         code: '12762740',
         display: 'New patient visit',
-        system: 'http://snomed.info/sct',
+        system: 'http://snomed.info/sct'
       ),
     ],
     slot_ids: [],
     start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
     status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-    updated_at: DateTime.iso8601('2026-10-10T19:28:58.805Z'),
+    updated_at: DateTime.iso8601('2026-10-12T14:00:06.772Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.appointment.patch_healthcare_appointment(request: req)
 
 unless res.healthcare_appointment.nil?
@@ -246,11 +241,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.appointment.remove_healthcare_appointment(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -282,23 +276,23 @@ Updates the HealthcareAppointment identified by `id`. Provide the unified Health
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHealthcareAppointment" method="put" path="/healthcare/{connection_id}/appointment/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHealthcareAppointment" method="put" path="/healthcare/{connection_id}/appointment/{id}" example="healthcare_appointment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateHealthcareAppointmentRequest.new(
   healthcare_appointment: Models::Shared::HealthcareAppointment.new(
     created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
     description: 'clarus aptus cetera',
     end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-    id: 'c02cae83-a2ac-40e8-9cff-ecaeb1c3655a',
+    id: 'b000e651-26e3-405d-8b1b-a18d6e6458ec',
     is_virtual: true,
     meeting_url: 'https://expensive-slipper.name/',
     metadata: [],
@@ -308,18 +302,17 @@ req = Models::Operations::UpdateHealthcareAppointmentRequest.new(
       Models::Shared::HealthcareCode.new(
         code: '12762740',
         display: 'New patient visit',
-        system: 'http://snomed.info/sct',
+        system: 'http://snomed.info/sct'
       ),
     ],
     slot_ids: [],
     start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
     status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-    updated_at: DateTime.iso8601('2026-10-10T19:28:58.805Z'),
+    updated_at: DateTime.iso8601('2026-10-12T14:00:06.772Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.appointment.update_healthcare_appointment(request: req)
 
 unless res.healthcare_appointment.nil?

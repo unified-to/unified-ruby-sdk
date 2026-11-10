@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class HealthcareCoverage
         extend T::Sig
@@ -16,9 +15,9 @@ module UnifiedRubySDK
         # Codings for the type of coverage (e.g. Medicare, commercial PPO)
         field :codes, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HealthcareCode)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('codes') } }
         # When the coverage record was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # When the coverage ends (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Group number of the plan (reference to HrisGroup)
         field :group_identifier, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('group_identifier') } }
         # Name of the employer group or plan group
@@ -40,19 +39,19 @@ module UnifiedRubySDK
         # Order in which the coverage is applied (1 = primary)
         field :priority, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('priority') } }
         # Raw data from integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # Relationship of the patient to the policy holder
-        field :relationship, Crystalline::Nilable.new(Models::Shared::Relationship), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('relationship'), 'decoder': Utils.enum_from_string(Models::Shared::Relationship, true) } }
+        field :relationship, Crystalline::Nilable.new(Models::Shared::Relationship), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('relationship'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::Relationship, true) } }
         # When the coverage starts (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Status of the coverage
-        field :status, Crystalline::Nilable.new(Models::Shared::HealthcareCoverageStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::HealthcareCoverageStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::HealthcareCoverageStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::HealthcareCoverageStatus, true) } }
         # Name of the policy holder
         field :subscriber_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subscriber_name') } }
         # When the coverage record was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(codes: T.nilable(T::Array[Models::Shared::HealthcareCode]), created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), group_identifier: T.nilable(::String), group_name: T.nilable(::String), id: T.nilable(::String), identifiers: T.nilable(T::Array[Models::Shared::HealthcareIdentifier]), member_identifier: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HealthcareMetadata]), patient_id: T.nilable(::String), payer_name: T.nilable(::String), plan_name: T.nilable(::String), priority: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), relationship: T.nilable(Models::Shared::Relationship), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::HealthcareCoverageStatus), subscriber_name: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        sig { params(codes: T.nilable(T::Array[Models::Shared::HealthcareCode]), created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), group_identifier: T.nilable(::String), group_name: T.nilable(::String), id: T.nilable(::String), identifiers: T.nilable(T::Array[Models::Shared::HealthcareIdentifier]), member_identifier: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HealthcareMetadata]), patient_id: T.nilable(::String), payer_name: T.nilable(::String), plan_name: T.nilable(::String), priority: T.nilable(::Float), raw: T.nilable(T::Hash[::Symbol, ::Object]), relationship: T.nilable(Models::Shared::Relationship), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::HealthcareCoverageStatus), subscriber_name: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
         def initialize(codes: nil, created_at: nil, end_at: nil, group_identifier: nil, group_name: nil, id: nil, identifiers: nil, member_identifier: nil, metadata: nil, patient_id: nil, payer_name: nil, plan_name: nil, priority: nil, raw: nil, relationship: nil, start_at: nil, status: nil, subscriber_name: nil, updated_at: nil)
           @codes = codes
           @created_at = created_at

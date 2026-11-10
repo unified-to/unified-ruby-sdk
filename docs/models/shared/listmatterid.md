@@ -1,5 +1,16 @@
 # ListMatterId
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListMatterId::SUPPORTED_REQUIRED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = ListMatterId.deserialize("custom_value")
+```
+
 
 ## Values
 

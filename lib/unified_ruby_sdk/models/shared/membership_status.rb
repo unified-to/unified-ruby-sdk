@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # MembershipStatus - The authenticated user's membership status
-      class MembershipStatus < T::Enum
-
-
+      class MembershipStatus
+        include ::Crystalline::Enum
         enums do
           MEMBER = new('MEMBER')
           PENDING = new('PENDING')
           NONE = new('NONE')
         end
+        open!
       end
     end
   end

@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # ComputeDeploymentStatus - Normalized deployment status; set to CANCELED on update to cancel
-      class ComputeDeploymentStatus < T::Enum
-
-
+      class ComputeDeploymentStatus
+        include ::Crystalline::Enum
         enums do
           QUEUED = new('QUEUED')
           BUILDING = new('BUILDING')
@@ -22,6 +20,7 @@ module UnifiedRubySDK
           SUPERSEDED = new('SUPERSEDED')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

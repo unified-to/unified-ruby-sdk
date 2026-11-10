@@ -1,5 +1,4 @@
 # Webhook
-(*webhook*)
 
 ## Overview
 
@@ -28,15 +27,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.webhook.create_unified_webhook(webhook: Models::Shared::Webhook.new(
   connection_id: '<id>',
   event: Models::Shared::WebhookEvent::CREATED,
-  object_type: Models::Shared::WebhookObjectType::ATS_APPLICATIONSTATUS,
+  object_type: Models::Shared::WebhookObjectType::ATS_APPLICATIONSTATUS
 ))
 
 unless res.webhook.nil?
@@ -74,11 +72,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.webhook.get_unified_webhook(id: '<id>')
 
 unless res.webhook.nil?
@@ -115,13 +112,12 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
-req = Models::Operations::ListUnifiedWebhooksRequest.new()
-
+req = Models::Operations::ListUnifiedWebhooksRequest.new
 res = s.webhook.list_unified_webhooks(request: req)
 
 unless res.webhooks.nil?
@@ -158,15 +154,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.webhook.patch_unified_webhook(webhook: Models::Shared::Webhook.new(
   connection_id: '<id>',
   event: Models::Shared::WebhookEvent::UPDATED,
-  object_type: Models::Shared::WebhookObjectType::MARTECH_MEMBER,
+  object_type: Models::Shared::WebhookObjectType::MARTECH_MEMBER
 ), id: '<id>')
 
 unless res.webhook.nil?
@@ -204,11 +199,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.webhook.patch_unified_webhook_resume(id: '<id>')
 
 unless res.webhook.nil?
@@ -245,11 +239,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.webhook.patch_unified_webhook_trigger(id: '<id>')
 
 if res.status_code == 200
@@ -286,11 +279,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.webhook.remove_unified_webhook(id: '<id>')
 
 if res.status_code == 200
@@ -327,15 +319,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.webhook.update_unified_webhook(webhook: Models::Shared::Webhook.new(
   connection_id: '<id>',
   event: Models::Shared::WebhookEvent::DELETED,
-  object_type: Models::Shared::WebhookObjectType::GENAI_PROMPT,
+  object_type: Models::Shared::WebhookObjectType::GENAI_PROMPT
 ), id: '<id>')
 
 unless res.webhook.nil?
@@ -373,11 +364,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.webhook.update_unified_webhook_resume(id: '<id>')
 
 unless res.webhook.nil?
@@ -414,11 +404,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.webhook.update_unified_webhook_trigger(id: '<id>')
 
 if res.status_code == 200

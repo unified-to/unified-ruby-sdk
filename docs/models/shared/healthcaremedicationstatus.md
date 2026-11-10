@@ -2,6 +2,17 @@
 
 Status of the medication order
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = HealthcareMedicationStatus::DRAFT
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = HealthcareMedicationStatus.deserialize("custom_value")
+```
+
 
 ## Values
 

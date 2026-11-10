@@ -1,5 +1,13 @@
 # GetCalendarWebinarQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetCalendarWebinarQueryParamFields::ID
+```
+
 
 ## Values
 

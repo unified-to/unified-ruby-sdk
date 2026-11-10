@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # AccountingTransactionStatus - Posting state of the transaction
-      class AccountingTransactionStatus < T::Enum
-
-
+      class AccountingTransactionStatus
+        include ::Crystalline::Enum
         enums do
           PENDING = new('PENDING')
           POSTED = new('POSTED')
           VOID = new('VOID')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

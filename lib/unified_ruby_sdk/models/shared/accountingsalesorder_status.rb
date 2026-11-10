@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class AccountingSalesorderStatus < T::Enum
-
-
+      class AccountingSalesorderStatus
+        include ::Crystalline::Enum
         enums do
           DRAFT = new('DRAFT')
           VOIDED = new('VOIDED')
@@ -26,6 +24,7 @@ module UnifiedRubySDK
           COMPLETED = new('COMPLETED')
           CANCELED = new('CANCELED')
         end
+        open!
       end
     end
   end

@@ -1,5 +1,13 @@
 # GetAccountingCreditmemoQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetAccountingCreditmemoQueryParamFields::ID
+```
+
 
 ## Values
 

@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PropertyAdsReportMetricsInsertionorderPacingPeriod < T::Enum
-
-
+      class PropertyAdsReportMetricsInsertionorderPacingPeriod
+        include ::Crystalline::Enum
         enums do
           UNSPECIFIED = new('UNSPECIFIED')
           DAILY = new('DAILY')
           FLIGHT = new('FLIGHT')
         end
+        open!
       end
     end
   end

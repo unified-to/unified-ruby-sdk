@@ -1,5 +1,13 @@
 # PatchAtsScorecardQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PatchAtsScorecardQueryParamFields::ID
+```
+
 
 ## Values
 

@@ -1,5 +1,16 @@
 # ScimImsType
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ScimImsType::AIM
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = ScimImsType.deserialize("custom_value")
+```
+
 
 ## Values
 

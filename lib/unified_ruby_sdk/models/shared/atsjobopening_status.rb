@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class AtsJobOpeningStatus < T::Enum
-
-
+      class AtsJobOpeningStatus
+        include ::Crystalline::Enum
         enums do
           OPEN = new('OPEN')
           CLOSED = new('CLOSED')
         end
+        open!
       end
     end
   end

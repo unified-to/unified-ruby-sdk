@@ -1,5 +1,4 @@
 # Feedback
-(*feedback*)
 
 ## Overview
 
@@ -15,20 +14,19 @@ Creates a PerformanceFeedback. Provide the unified PerformanceFeedback fields in
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createPerformanceFeedback" method="post" path="/performance/{connection_id}/feedback" -->
+<!-- UsageSnippet language="ruby" operationID="createPerformanceFeedback" method="post" path="/performance/{connection_id}/feedback" example="performance_feedback" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.feedback.create_performance_feedback(performance_feedback: Models::Shared::PerformanceFeedback.new(
   created_at: DateTime.iso8601('2023-04-11T16:21:53.862Z'),
-  id: 'bc8f8014-b646-451c-8bbd-85d5e72b3d8c',
+  id: '592f326f-38bd-45e7-af14-3adee3007199',
   is_visible: true,
   message: 'Tabernus corpus voluptate aestus.',
   metadata: [],
@@ -37,8 +35,8 @@ res = s.feedback.create_performance_feedback(performance_feedback: Models::Share
     'hexagon',
   ],
   type: Models::Shared::PerformanceFeedbackType::PRAISE,
-  updated_at: DateTime.iso8601('2025-09-17T00:46:22.558Z'),
-  user_id: '<id>',
+  updated_at: DateTime.iso8601('2025-09-18T06:21:30.143Z'),
+  user_id: '<id>'
 ), connection_id: '<id>')
 
 unless res.performance_feedback.nil?
@@ -78,11 +76,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.feedback.get_performance_feedback(connection_id: '<id>', id: '<id>')
 
 unless res.performance_feedback.nil?
@@ -122,15 +119,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListPerformanceFeedbacksRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListPerformanceFeedbacksRequest.new(
+  connection_id: '<id>'
+)
 res = s.feedback.list_performance_feedbacks(request: req)
 
 unless res.performance_feedbacks.nil?

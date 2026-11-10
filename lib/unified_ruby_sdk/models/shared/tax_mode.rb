@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # TaxMode - INCLUSIVE / EXCLUSIVE / NONE; maps Xero LineAmountTypes (a boolean cannot represent NoTax)
-      class TaxMode < T::Enum
-
-
+      class TaxMode
+        include ::Crystalline::Enum
         enums do
           INCLUSIVE = new('INCLUSIVE')
           EXCLUSIVE = new('EXCLUSIVE')
           NONE = new('NONE')
         end
+        open!
       end
     end
   end

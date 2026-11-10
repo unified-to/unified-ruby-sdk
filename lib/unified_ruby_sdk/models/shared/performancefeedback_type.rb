@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # PerformanceFeedbackType - praise/recognition, constructive feedback, or a response to a feedback request
-      class PerformanceFeedbackType < T::Enum
-
-
+      class PerformanceFeedbackType
+        include ::Crystalline::Enum
         enums do
           PRAISE = new('PRAISE')
           FEEDBACK = new('FEEDBACK')
           REQUESTED = new('REQUESTED')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

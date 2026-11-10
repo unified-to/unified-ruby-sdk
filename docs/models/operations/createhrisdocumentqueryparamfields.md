@@ -1,5 +1,13 @@
 # CreateHrisDocumentQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreateHrisDocumentQueryParamFields::ID
+```
+
 
 ## Values
 

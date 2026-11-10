@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # HealthcareProcedureStatus - Status of the procedure
-      class HealthcareProcedureStatus < T::Enum
-
-
+      class HealthcareProcedureStatus
+        include ::Crystalline::Enum
         enums do
           PREPARATION = new('PREPARATION')
           IN_PROGRESS = new('IN_PROGRESS')
@@ -23,6 +21,7 @@ module UnifiedRubySDK
           UNKNOWN = new('UNKNOWN')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # PropertyAdsReportMetricsGroupTargetingOptimizationMode - Google: bid_only falsetrue
-      class PropertyAdsReportMetricsGroupTargetingOptimizationMode < T::Enum
-
-
+      class PropertyAdsReportMetricsGroupTargetingOptimizationMode
+        include ::Crystalline::Enum
         enums do
           TARGETING = new('TARGETING')
           OBSERVATION = new('OBSERVATION')
         end
+        open!
       end
     end
   end

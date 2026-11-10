@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class GenaiAnswer
         extend T::Sig
@@ -16,7 +15,7 @@ module UnifiedRubySDK
         # The id of the genai_prompt question that this answers.
         field :id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id'), required: true } }
 
-        field :type, Models::Shared::GenaiAnswerType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': Utils.enum_from_string(Models::Shared::GenaiAnswerType, false) } }
+        field :type, Models::Shared::GenaiAnswerType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::GenaiAnswerType, false) } }
         # 0-1: how certain the model is of the answer.
         field :confidence, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('confidence') } }
         # CHOICE/SCORE: the probability of every option or level.

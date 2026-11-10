@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class Frequency < T::Enum
-
-
+      class Frequency
+        include ::Crystalline::Enum
         enums do
           ONE_TIME = new('ONE_TIME')
           DAY = new('DAY')
@@ -21,6 +19,7 @@ module UnifiedRubySDK
           MONTH = new('MONTH')
           WEEK = new('WEEK')
         end
+        open!
       end
     end
   end

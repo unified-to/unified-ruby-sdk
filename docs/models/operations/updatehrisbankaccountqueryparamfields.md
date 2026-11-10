@@ -1,5 +1,13 @@
 # UpdateHrisBankaccountQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = UpdateHrisBankaccountQueryParamFields::ID
+```
+
 
 ## Values
 

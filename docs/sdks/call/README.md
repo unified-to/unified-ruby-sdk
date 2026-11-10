@@ -1,5 +1,4 @@
 # Call
-(*call*)
 
 ## Overview
 
@@ -17,27 +16,26 @@ Creates a UcCall. Provide the unified UcCall fields in the request body; they ar
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createUcCall" method="post" path="/uc/{connection_id}/call" -->
+<!-- UsageSnippet language="ruby" operationID="createUcCall" method="post" path="/uc/{connection_id}/call" example="uc_call" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.call.create_uc_call(uc_call: Models::Shared::UcCall.new(
-  answer_at: DateTime.iso8601('2025-05-24T19:51:29.905Z'),
+  answer_at: DateTime.iso8601('2025-05-25T21:27:34.694Z'),
   contacts: [],
-  conversation_identifier: 'c462146b-b4aa-44e9-9340-6213a3edd0b7',
+  conversation_identifier: '43069f11-b035-4bb8-a2fd-46eebdfc147e',
   cost_amount: 1.564,
   created_at: DateTime.iso8601('2023-04-22T19:05:34.882Z'),
   currency: 'USD',
   duration_seconds: 2556.0,
-  end_at: DateTime.iso8601('2024-06-05T01:36:21.959Z'),
-  id: 'c462146b-b4aa-44e9-9340-6213a3edd0b7',
+  end_at: DateTime.iso8601('2024-06-05T15:20:16.866Z'),
+  id: '43069f11-b035-4bb8-a2fd-46eebdfc147e',
   is_private: false,
   metadata: [
     Models::Shared::UcMetadata.new(
@@ -45,21 +43,21 @@ res = s.call.create_uc_call(uc_call: Models::Shared::UcCall.new(
 
       },
       format: Models::Shared::UcMetadataFormat::PRICE,
-      id: '157d753d-a933-4b5b-ba60-9a89f33f95e5',
+      id: '5969e892-19fc-4d05-9dc9-4e9aa3c18559',
       namespace: 'custom',
       slug: 'custom_field',
-      value: 'tui',
+      value: 'tui'
     ),
   ],
-  start_at: DateTime.iso8601('2023-12-20T23:14:48.844Z'),
+  start_at: DateTime.iso8601('2023-12-21T07:22:20.348Z'),
   status: Models::Shared::UcCallStatus::IN_PROGRESS,
   telephone: Models::Shared::PropertyUcCallTelephone.new(
     telephone: '(493) 534-0768',
-    type: Models::Shared::PropertyUcCallTelephoneType::MOBILE,
+    type: Models::Shared::PropertyUcCallTelephoneType::MOBILE
   ),
   type: Models::Shared::UcCallType::INBOUND,
-  updated_at: DateTime.iso8601('2023-08-04T21:12:22.796Z'),
-  user_phone: '819-894-3317 x163',
+  updated_at: DateTime.iso8601('2023-08-05T00:41:55.342Z'),
+  user_phone: '819-894-3317 x163'
 ), connection_id: '<id>')
 
 unless res.uc_call.nil?
@@ -99,11 +97,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.call.get_uc_call(connection_id: '<id>', id: '<id>')
 
 unless res.uc_call.nil?
@@ -143,15 +140,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListUcCallsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListUcCallsRequest.new(
+  connection_id: '<id>'
+)
 res = s.call.list_uc_calls(request: req)
 
 unless res.uc_calls.nil?
@@ -182,28 +178,28 @@ Updates the UcCall identified by `id`. Provide the unified UcCall fields to chan
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchUcCall" method="patch" path="/uc/{connection_id}/call/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchUcCall" method="patch" path="/uc/{connection_id}/call/{id}" example="uc_call" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchUcCallRequest.new(
   uc_call: Models::Shared::UcCall.new(
-    answer_at: DateTime.iso8601('2025-05-24T19:51:29.932Z'),
+    answer_at: DateTime.iso8601('2025-05-25T21:27:34.721Z'),
     contacts: [],
-    conversation_identifier: '8c50f735-7036-42eb-8888-0eaa34086963',
+    conversation_identifier: '5be0c5d0-d83b-4e49-9422-9cae1e4e21b6',
     cost_amount: 1.564,
     created_at: DateTime.iso8601('2023-04-22T19:05:34.882Z'),
     currency: 'USD',
     duration_seconds: 2556.0,
-    end_at: DateTime.iso8601('2024-06-05T01:36:21.973Z'),
-    id: '8c50f735-7036-42eb-8888-0eaa34086963',
+    end_at: DateTime.iso8601('2024-06-05T15:20:16.880Z'),
+    id: '5be0c5d0-d83b-4e49-9422-9cae1e4e21b6',
     is_private: false,
     metadata: [
       Models::Shared::UcMetadata.new(
@@ -211,26 +207,25 @@ req = Models::Operations::PatchUcCallRequest.new(
 
         },
         format: Models::Shared::UcMetadataFormat::PRICE,
-        id: '259a3d5f-70bf-4a37-9142-02398e5267e2',
+        id: '399b4372-3592-42ea-98d6-231ba5260ed8',
         namespace: 'custom',
         slug: 'custom_field',
-        value: 'tui',
+        value: 'tui'
       ),
     ],
-    start_at: DateTime.iso8601('2023-12-20T23:14:48.852Z'),
+    start_at: DateTime.iso8601('2023-12-21T07:22:20.357Z'),
     status: Models::Shared::UcCallStatus::IN_PROGRESS,
     telephone: Models::Shared::PropertyUcCallTelephone.new(
       telephone: '(493) 534-0768',
-      type: Models::Shared::PropertyUcCallTelephoneType::MOBILE,
+      type: Models::Shared::PropertyUcCallTelephoneType::MOBILE
     ),
     type: Models::Shared::UcCallType::INBOUND,
-    updated_at: DateTime.iso8601('2023-08-04T21:12:22.799Z'),
-    user_phone: '819-894-3317 x163',
+    updated_at: DateTime.iso8601('2023-08-05T00:41:55.346Z'),
+    user_phone: '819-894-3317 x163'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.call.patch_uc_call(request: req)
 
 unless res.uc_call.nil?
@@ -261,28 +256,28 @@ Updates the UcCall identified by `id`. Provide the unified UcCall fields to chan
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateUcCall" method="put" path="/uc/{connection_id}/call/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateUcCall" method="put" path="/uc/{connection_id}/call/{id}" example="uc_call" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateUcCallRequest.new(
   uc_call: Models::Shared::UcCall.new(
-    answer_at: DateTime.iso8601('2025-05-24T19:51:29.932Z'),
+    answer_at: DateTime.iso8601('2025-05-25T21:27:34.721Z'),
     contacts: [],
-    conversation_identifier: '8c50f735-7036-42eb-8888-0eaa34086963',
+    conversation_identifier: '5be0c5d0-d83b-4e49-9422-9cae1e4e21b6',
     cost_amount: 1.564,
     created_at: DateTime.iso8601('2023-04-22T19:05:34.882Z'),
     currency: 'USD',
     duration_seconds: 2556.0,
-    end_at: DateTime.iso8601('2024-06-05T01:36:21.973Z'),
-    id: '8c50f735-7036-42eb-8888-0eaa34086963',
+    end_at: DateTime.iso8601('2024-06-05T15:20:16.880Z'),
+    id: '5be0c5d0-d83b-4e49-9422-9cae1e4e21b6',
     is_private: false,
     metadata: [
       Models::Shared::UcMetadata.new(
@@ -290,26 +285,25 @@ req = Models::Operations::UpdateUcCallRequest.new(
 
         },
         format: Models::Shared::UcMetadataFormat::PRICE,
-        id: '259a3d5f-70bf-4a37-9142-02398e5267e2',
+        id: '399b4372-3592-42ea-98d6-231ba5260ed8',
         namespace: 'custom',
         slug: 'custom_field',
-        value: 'tui',
+        value: 'tui'
       ),
     ],
-    start_at: DateTime.iso8601('2023-12-20T23:14:48.852Z'),
+    start_at: DateTime.iso8601('2023-12-21T07:22:20.357Z'),
     status: Models::Shared::UcCallStatus::IN_PROGRESS,
     telephone: Models::Shared::PropertyUcCallTelephone.new(
       telephone: '(493) 534-0768',
-      type: Models::Shared::PropertyUcCallTelephoneType::MOBILE,
+      type: Models::Shared::PropertyUcCallTelephoneType::MOBILE
     ),
     type: Models::Shared::UcCallType::INBOUND,
-    updated_at: DateTime.iso8601('2023-08-04T21:12:22.799Z'),
-    user_phone: '819-894-3317 x163',
+    updated_at: DateTime.iso8601('2023-08-05T00:41:55.346Z'),
+    user_phone: '819-894-3317 x163'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.call.update_uc_call(request: req)
 
 unless res.uc_call.nil?

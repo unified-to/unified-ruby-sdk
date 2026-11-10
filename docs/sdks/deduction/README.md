@@ -1,5 +1,4 @@
 # Deduction
-(*deduction*)
 
 ## Overview
 
@@ -18,17 +17,16 @@ Creates a HrisDeduction. Provide the unified HrisDeduction fields in the request
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisDeduction" method="post" path="/hris/{connection_id}/deduction" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisDeduction" method="post" path="/hris/{connection_id}/deduction" example="hris_deduction" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.deduction.create_hris_deduction(hris_deduction: Models::Shared::HrisDeduction.new(
   amount: 564.0,
   coverage_level: Models::Shared::HrisDeductionCoverageLevel::EMPLOYEE_CHILD,
@@ -37,14 +35,14 @@ res = s.deduction.create_hris_deduction(hris_deduction: Models::Shared::HrisDedu
   employer_type: Models::Shared::EmployerType::PERCENTAGE,
   frequency: Models::Shared::HrisDeductionFrequency::ONE_TIME,
   garnishment_type: Models::Shared::GarnishmentType::CHILD_SUPPORT,
-  id: 'ffa9a1cc-9ecc-4143-8ad1-2721e8e28652',
+  id: 'f8fff0f0-009d-49b7-a41e-400c9314cf9e',
   is_active: true,
   max_amount: 21_794.0,
   metadata: [],
   notes: 'Carmen desidero.',
-  start_at: DateTime.iso8601('2025-03-29T18:57:36.859Z'),
+  start_at: DateTime.iso8601('2025-03-31T04:04:17.071Z'),
   type: Models::Shared::HrisDeductionType::FIXED,
-  updated_at: DateTime.iso8601('2024-04-02T23:36:48.377Z'),
+  updated_at: DateTime.iso8601('2024-04-04T02:22:08.450Z')
 ), connection_id: '<id>')
 
 unless res.hris_deduction.nil?
@@ -84,11 +82,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.deduction.get_hris_deduction(connection_id: '<id>', id: '<id>')
 
 unless res.hris_deduction.nil?
@@ -128,15 +125,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHrisDeductionsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHrisDeductionsRequest.new(
+  connection_id: '<id>'
+)
 res = s.deduction.list_hris_deductions(request: req)
 
 unless res.hris_deductions.nil?
@@ -167,16 +163,16 @@ Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHrisDeduction" method="patch" path="/hris/{connection_id}/deduction/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHrisDeduction" method="patch" path="/hris/{connection_id}/deduction/{id}" example="hris_deduction" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchHrisDeductionRequest.new(
   hris_deduction: Models::Shared::HrisDeduction.new(
@@ -187,19 +183,18 @@ req = Models::Operations::PatchHrisDeductionRequest.new(
     employer_type: Models::Shared::EmployerType::PERCENTAGE,
     frequency: Models::Shared::HrisDeductionFrequency::ONE_TIME,
     garnishment_type: Models::Shared::GarnishmentType::CHILD_SUPPORT,
-    id: 'f4b9dfb4-61a3-44f2-bc05-5de30e05ed43',
+    id: '906658fd-3e8e-43a0-ac2e-0d56f684fcc7',
     is_active: true,
     max_amount: 21_794.0,
     metadata: [],
     notes: 'Carmen desidero.',
-    start_at: DateTime.iso8601('2025-03-29T18:57:36.881Z'),
+    start_at: DateTime.iso8601('2025-03-31T04:04:17.086Z'),
     type: Models::Shared::HrisDeductionType::FIXED,
-    updated_at: DateTime.iso8601('2024-04-02T23:36:48.395Z'),
+    updated_at: DateTime.iso8601('2024-04-04T02:22:08.462Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.deduction.patch_hris_deduction(request: req)
 
 unless res.hris_deduction.nil?
@@ -236,11 +231,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.deduction.remove_hris_deduction(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -272,16 +266,16 @@ Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHrisDeduction" method="put" path="/hris/{connection_id}/deduction/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHrisDeduction" method="put" path="/hris/{connection_id}/deduction/{id}" example="hris_deduction" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateHrisDeductionRequest.new(
   hris_deduction: Models::Shared::HrisDeduction.new(
@@ -292,19 +286,18 @@ req = Models::Operations::UpdateHrisDeductionRequest.new(
     employer_type: Models::Shared::EmployerType::PERCENTAGE,
     frequency: Models::Shared::HrisDeductionFrequency::ONE_TIME,
     garnishment_type: Models::Shared::GarnishmentType::CHILD_SUPPORT,
-    id: 'f4b9dfb4-61a3-44f2-bc05-5de30e05ed43',
+    id: '906658fd-3e8e-43a0-ac2e-0d56f684fcc7',
     is_active: true,
     max_amount: 21_794.0,
     metadata: [],
     notes: 'Carmen desidero.',
-    start_at: DateTime.iso8601('2025-03-29T18:57:36.881Z'),
+    start_at: DateTime.iso8601('2025-03-31T04:04:17.086Z'),
     type: Models::Shared::HrisDeductionType::FIXED,
-    updated_at: DateTime.iso8601('2024-04-02T23:36:48.395Z'),
+    updated_at: DateTime.iso8601('2024-04-04T02:22:08.462Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.deduction.update_hris_deduction(request: req)
 
 unless res.hris_deduction.nil?

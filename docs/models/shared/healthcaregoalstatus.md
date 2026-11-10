@@ -2,6 +2,17 @@
 
 Lifecycle status of the goal
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = HealthcareGoalStatus::PROPOSED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = HealthcareGoalStatus.deserialize("custom_value")
+```
+
 
 ## Values
 

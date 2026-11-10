@@ -12,7 +12,7 @@ module UnifiedRubySDK
   module Utils
     extend T::Sig
 
-    sig { params(headers_params: Object, gbls: T.nilable(T::Hash[Symbol, T::Hash[Symbol, T::Hash[Symbol, Object]]])).returns(T::Hash[Symbol, String]) }
+    sig { params(headers_params: ::Object, gbls: T.nilable(T::Hash[::Symbol, T::Hash[::Symbol, T::Hash[::Symbol, ::Object]]])).returns(T::Hash[::Symbol, ::String]) }
     def self.get_headers(headers_params, gbls = nil)
       return {} if headers_params.nil?
 
@@ -28,7 +28,7 @@ module UnifiedRubySDK
       headers
     end
 
-    sig { params(explode: T::Boolean, obj: Object).returns(T.nilable(String)) }
+    sig { params(explode: T::Boolean, obj: ::Object).returns(T.nilable(::String)) }
     def self._serialize_header(explode, obj)
       return '' if obj.nil?
 
@@ -53,7 +53,7 @@ module UnifiedRubySDK
         end
 
         items.join(',') if !items.empty?
-      elsif obj.is_a? Hash
+      elsif obj.is_a? ::Hash
         items = []
         obj.each do |key, value|
           next if value.nil?
@@ -67,7 +67,7 @@ module UnifiedRubySDK
         end
 
         items.join(',') if !items.empty?
-      elsif obj.is_a? Array
+      elsif obj.is_a? ::Array
         items = obj.filter { |v| !v.nil? }.map { |v| val_to_string(v) }.join(',')
       else
         val_to_string(obj)

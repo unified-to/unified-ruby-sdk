@@ -1,5 +1,4 @@
 # Creditmemo
-(*creditmemo*)
 
 ## Overview
 
@@ -18,17 +17,16 @@ Creates a AccountingCreditmemo. Provide the unified AccountingCreditmemo fields 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAccountingCreditmemo" method="post" path="/accounting/{connection_id}/creditmemo" -->
+<!-- UsageSnippet language="ruby" operationID="createAccountingCreditmemo" method="post" path="/accounting/{connection_id}/creditmemo" example="accounting_creditmemo" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.creditmemo.create_accounting_creditmemo(accounting_creditmemo: Models::Shared::AccountingCreditmemo.new(
   applications: [],
   attachments: [],
@@ -37,7 +35,7 @@ res = s.creditmemo.create_accounting_creditmemo(accounting_creditmemo: Models::S
   creditmemo_number: 'CM-99537',
   currency: 'AUD',
   discount_amount: 0.0,
-  id: '999bc00e-1df0-4491-8614-9b1155129c32',
+  id: '02a64db9-e2b6-4bb5-a41c-902cfce8f7ae',
   lineitems: [],
   metadata: [],
   notes: 'Hic vorax dedecor amo adfero torqueo quas victoria.',
@@ -46,7 +44,7 @@ res = s.creditmemo.create_accounting_creditmemo(accounting_creditmemo: Models::S
   status: Models::Shared::AccountingCreditmemoStatus::AUTHORIZED,
   tax_amount: 0.0,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2025-09-23T12:18:07.177Z'),
+  updated_at: DateTime.iso8601('2025-09-24T16:10:31.485Z')
 ), connection_id: '<id>')
 
 unless res.accounting_creditmemo.nil?
@@ -86,11 +84,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.creditmemo.get_accounting_creditmemo(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_creditmemo.nil?
@@ -130,15 +127,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingCreditmemoesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingCreditmemoesRequest.new(
+  connection_id: '<id>'
+)
 res = s.creditmemo.list_accounting_creditmemoes(request: req)
 
 unless res.accounting_creditmemoes.nil?
@@ -169,16 +165,16 @@ Updates the AccountingCreditmemo identified by `id`. Provide the unified Account
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAccountingCreditmemo" method="patch" path="/accounting/{connection_id}/creditmemo/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAccountingCreditmemo" method="patch" path="/accounting/{connection_id}/creditmemo/{id}" example="accounting_creditmemo" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAccountingCreditmemoRequest.new(
   accounting_creditmemo: Models::Shared::AccountingCreditmemo.new(
@@ -189,7 +185,7 @@ req = Models::Operations::PatchAccountingCreditmemoRequest.new(
     creditmemo_number: 'CM-99537',
     currency: 'AUD',
     discount_amount: 0.0,
-    id: '2cd62ef3-e7a7-4229-aba2-f41eec99af8b',
+    id: '700fcaa6-802d-4e9f-be0a-fdcc3a62bff7',
     lineitems: [],
     metadata: [],
     notes: 'Hic vorax dedecor amo adfero torqueo quas victoria.',
@@ -198,12 +194,11 @@ req = Models::Operations::PatchAccountingCreditmemoRequest.new(
     status: Models::Shared::AccountingCreditmemoStatus::AUTHORIZED,
     tax_amount: 0.0,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2025-09-23T12:18:07.213Z'),
+    updated_at: DateTime.iso8601('2025-09-24T16:10:31.512Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.creditmemo.patch_accounting_creditmemo(request: req)
 
 unless res.accounting_creditmemo.nil?
@@ -240,11 +235,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.creditmemo.remove_accounting_creditmemo(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -276,16 +270,16 @@ Updates the AccountingCreditmemo identified by `id`. Provide the unified Account
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAccountingCreditmemo" method="put" path="/accounting/{connection_id}/creditmemo/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAccountingCreditmemo" method="put" path="/accounting/{connection_id}/creditmemo/{id}" example="accounting_creditmemo" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAccountingCreditmemoRequest.new(
   accounting_creditmemo: Models::Shared::AccountingCreditmemo.new(
@@ -296,7 +290,7 @@ req = Models::Operations::UpdateAccountingCreditmemoRequest.new(
     creditmemo_number: 'CM-99537',
     currency: 'AUD',
     discount_amount: 0.0,
-    id: '2cd62ef3-e7a7-4229-aba2-f41eec99af8b',
+    id: '700fcaa6-802d-4e9f-be0a-fdcc3a62bff7',
     lineitems: [],
     metadata: [],
     notes: 'Hic vorax dedecor amo adfero torqueo quas victoria.',
@@ -305,12 +299,11 @@ req = Models::Operations::UpdateAccountingCreditmemoRequest.new(
     status: Models::Shared::AccountingCreditmemoStatus::AUTHORIZED,
     tax_amount: 0.0,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2025-09-23T12:18:07.213Z'),
+    updated_at: DateTime.iso8601('2025-09-24T16:10:31.512Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.creditmemo.update_accounting_creditmemo(request: req)
 
 unless res.accounting_creditmemo.nil?

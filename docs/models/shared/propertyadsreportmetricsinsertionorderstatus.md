@@ -1,5 +1,16 @@
 # PropertyAdsReportMetricsInsertionorderStatus
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PropertyAdsReportMetricsInsertionorderStatus::UNSPECIFIED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = PropertyAdsReportMetricsInsertionorderStatus.deserialize("custom_value")
+```
+
 
 ## Values
 

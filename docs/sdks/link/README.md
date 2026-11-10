@@ -1,5 +1,4 @@
 # Link
-(*link*)
 
 ## Overview
 
@@ -24,29 +23,28 @@ Creates a CalendarLink. Provide the unified CalendarLink fields in the request b
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCalendarLink" method="post" path="/calendar/{connection_id}/link" -->
+<!-- UsageSnippet language="ruby" operationID="createCalendarLink" method="post" path="/calendar/{connection_id}/link" example="calendar_link" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.link.create_calendar_link(calendar_link: Models::Shared::CalendarLink.new(
   created_at: '2023-03-07T13:34:11.959Z',
   description: 'Vitium clibanus laboriosam uxor denuncio.',
   duration: 74.0,
-  id: 'e79669ec-364f-4bf0-a5ca-ef9f9dc837f9',
+  id: '799ecddd-05a6-4bc8-8ec8-c176ef2a98e5',
   is_active: true,
   metadata: [],
   name: 'Sopor sopor ancilla animus anser dignissimos vito confero utilis.',
   price_amount: 44.0,
   price_currency: 'USD',
-  updated_at: '2024-03-20T21:55:46.575Z',
-  url: 'https://annual-apricot.info/',
+  updated_at: '2024-03-21T10:13:08.729Z',
+  url: 'https://annual-apricot.info/'
 ), connection_id: '<id>')
 
 unless res.calendar_link.nil?
@@ -80,53 +78,52 @@ Creates a PaymentLink. Provide the unified PaymentLink fields in the request bod
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createPaymentLink" method="post" path="/payment/{connection_id}/link" -->
+<!-- UsageSnippet language="ruby" operationID="createPaymentLink" method="post" path="/payment/{connection_id}/link" example="payment_link" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.link.create_payment_link(payment_link: Models::Shared::PaymentLink.new(
   amount: 17_001.68,
   created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
   currency: 'CAD',
   description: 'Savor the tender essence in our Ball, designed for dim culinary adventures',
-  id: '31c00d44-32e1-4f25-b39c-2bf580d50c71',
+  id: 'abeddf22-4460-4498-b1f6-cf335a4012b0',
   is_active: true,
   is_chargeable_now: true,
   lineitems: [
     Models::Shared::PaymentLineitem.new(
       created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-      id: 'fe0461f8-a88a-40bb-a17a-99a1ae422671',
+      id: '47c4976b-149c-4025-8e40-c787b9b7c179',
       item_description: 'Discover the worst new Computer with an exciting mix of Steel ingredients',
       item_name: 'Soft Marble Cheese',
       tax_amount: 0.0,
       total_amount: 9342.0,
       unit_amount: 519.0,
       unit_quantity: 18.0,
-      updated_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
+      updated_at: DateTime.iso8601('2023-06-04T16:11:45.685Z')
     ),
     Models::Shared::PaymentLineitem.new(
       created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
       discount_amount: 424.32,
-      id: '36a7011e-aefa-4360-a17d-21f99847af48',
+      id: 'b73de4f9-2dff-4527-81ff-5ae72b7997a6',
       item_description: 'Innovative Shoes featuring utilized technology and Cotton construction',
       item_name: 'Sleek Aluminum Shoes',
       notes: 'Cervus decretum viridis doloremque.',
       tax_amount: 0.0,
-      total_amount: 6_647.68,
+      total_amount: 6647.68,
       unit_amount: 884.0,
       unit_quantity: 8.0,
-      updated_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
+      updated_at: DateTime.iso8601('2023-06-04T16:11:45.685Z')
     ),
     Models::Shared::PaymentLineitem.new(
       created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-      id: '248b3a1f-c668-496c-ba79-5b0decf860f2',
+      id: '2939ad7a-cf43-49c5-a940-e24cc38941d5',
       item_description: 'Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance',
       item_name: 'Elegant Concrete Gloves',
       notes: 'Desipio usque vacuus currus cetera testimonium.',
@@ -134,13 +131,13 @@ res = s.link.create_payment_link(payment_link: Models::Shared::PaymentLink.new(
       total_amount: 1012.0,
       unit_amount: 506.0,
       unit_quantity: 2.0,
-      updated_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
+      updated_at: DateTime.iso8601('2023-06-04T16:11:45.685Z')
     ),
   ],
   metadata: [],
   success_url: 'https://tinted-jet.info',
-  updated_at: DateTime.iso8601('2024-04-18T05:27:33.306Z'),
-  url: 'https://pay.example.com/31c00d44-32e1-4f25-b39c-2bf580d50c71',
+  updated_at: DateTime.iso8601('2024-04-18T16:30:46.548Z'),
+  url: 'https://pay.example.com/abeddf22-4460-4498-b1f6-cf335a4012b0'
 ), connection_id: '<id>')
 
 unless res.payment_link.nil?
@@ -180,11 +177,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.link.get_calendar_link(connection_id: '<id>', id: '<id>')
 
 unless res.calendar_link.nil?
@@ -224,11 +220,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.link.get_payment_link(connection_id: '<id>', id: '<id>')
 
 unless res.payment_link.nil?
@@ -268,15 +263,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCalendarLinksRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCalendarLinksRequest.new(
+  connection_id: '<id>'
+)
 res = s.link.list_calendar_links(request: req)
 
 unless res.calendar_links.nil?
@@ -313,15 +307,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListPaymentLinksRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListPaymentLinksRequest.new(
+  connection_id: '<id>'
+)
 res = s.link.list_payment_links(request: req)
 
 unless res.payment_links.nil?
@@ -352,35 +345,34 @@ Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCalendarLink" method="patch" path="/calendar/{connection_id}/link/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCalendarLink" method="patch" path="/calendar/{connection_id}/link/{id}" example="calendar_link" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchCalendarLinkRequest.new(
   calendar_link: Models::Shared::CalendarLink.new(
     created_at: '2023-03-07T13:34:11.959Z',
     description: 'Vitium clibanus laboriosam uxor denuncio.',
     duration: 74.0,
-    id: 'eab9d10d-56d9-45a1-981c-794e053c8a4a',
+    id: '2ed2732b-674b-422f-8404-269f1a6cc6ad',
     is_active: true,
     metadata: [],
     name: 'Sopor sopor ancilla animus anser dignissimos vito confero utilis.',
     price_amount: 44.0,
     price_currency: 'USD',
-    updated_at: '2024-03-20T21:55:46.579Z',
-    url: 'https://annual-apricot.info/',
+    updated_at: '2024-03-21T10:13:08.732Z',
+    url: 'https://annual-apricot.info/'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.link.patch_calendar_link(request: req)
 
 unless res.calendar_link.nil?
@@ -411,16 +403,16 @@ Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchPaymentLink" method="patch" path="/payment/{connection_id}/link/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchPaymentLink" method="patch" path="/payment/{connection_id}/link/{id}" example="payment_link" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchPaymentLinkRequest.new(
   payment_link: Models::Shared::PaymentLink.new(
@@ -428,37 +420,37 @@ req = Models::Operations::PatchPaymentLinkRequest.new(
     created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
     currency: 'CAD',
     description: 'Savor the tender essence in our Ball, designed for dim culinary adventures',
-    id: 'c68999ca-3130-469d-84f1-1787cdf6e842',
+    id: '0b779f7a-52ed-4184-b7ef-2e3799f1689b',
     is_active: true,
     is_chargeable_now: true,
     lineitems: [
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-        id: 'a546f474-f215-44d1-ab5f-06535c87f9e3',
+        id: 'a9663abc-5af5-4a4a-a97a-f67aa4bce987',
         item_description: 'Discover the worst new Computer with an exciting mix of Steel ingredients',
         item_name: 'Soft Marble Cheese',
         tax_amount: 0.0,
         total_amount: 9342.0,
         unit_amount: 519.0,
         unit_quantity: 18.0,
-        updated_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
+        updated_at: DateTime.iso8601('2023-06-04T16:11:45.685Z')
       ),
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
         discount_amount: 424.32,
-        id: '3875734a-eaf6-4429-981e-e9f021aad3f0',
+        id: '2799b592-914b-4ac6-8898-77686d539d7e',
         item_description: 'Innovative Shoes featuring utilized technology and Cotton construction',
         item_name: 'Sleek Aluminum Shoes',
         notes: 'Cervus decretum viridis doloremque.',
         tax_amount: 0.0,
-        total_amount: 6_647.68,
+        total_amount: 6647.68,
         unit_amount: 884.0,
         unit_quantity: 8.0,
-        updated_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
+        updated_at: DateTime.iso8601('2023-06-04T16:11:45.685Z')
       ),
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-        id: '30ebabfb-4ba1-4177-a123-42efd6e01272',
+        id: '75bba503-2eab-4e63-97b9-09efe286b86c',
         item_description: 'Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance',
         item_name: 'Elegant Concrete Gloves',
         notes: 'Desipio usque vacuus currus cetera testimonium.',
@@ -466,18 +458,17 @@ req = Models::Operations::PatchPaymentLinkRequest.new(
         total_amount: 1012.0,
         unit_amount: 506.0,
         unit_quantity: 2.0,
-        updated_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
+        updated_at: DateTime.iso8601('2023-06-04T16:11:45.685Z')
       ),
     ],
     metadata: [],
     success_url: 'https://tinted-jet.info',
-    updated_at: DateTime.iso8601('2024-04-18T05:27:33.314Z'),
-    url: 'https://pay.example.com/c68999ca-3130-469d-84f1-1787cdf6e842',
+    updated_at: DateTime.iso8601('2024-04-18T16:30:46.554Z'),
+    url: 'https://pay.example.com/0b779f7a-52ed-4184-b7ef-2e3799f1689b'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.link.patch_payment_link(request: req)
 
 unless res.payment_link.nil?
@@ -514,11 +505,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.link.remove_calendar_link(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -556,11 +546,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.link.remove_payment_link(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -592,35 +581,34 @@ Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCalendarLink" method="put" path="/calendar/{connection_id}/link/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCalendarLink" method="put" path="/calendar/{connection_id}/link/{id}" example="calendar_link" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateCalendarLinkRequest.new(
   calendar_link: Models::Shared::CalendarLink.new(
     created_at: '2023-03-07T13:34:11.959Z',
     description: 'Vitium clibanus laboriosam uxor denuncio.',
     duration: 74.0,
-    id: 'eab9d10d-56d9-45a1-981c-794e053c8a4a',
+    id: '2ed2732b-674b-422f-8404-269f1a6cc6ad',
     is_active: true,
     metadata: [],
     name: 'Sopor sopor ancilla animus anser dignissimos vito confero utilis.',
     price_amount: 44.0,
     price_currency: 'USD',
-    updated_at: '2024-03-20T21:55:46.579Z',
-    url: 'https://annual-apricot.info/',
+    updated_at: '2024-03-21T10:13:08.732Z',
+    url: 'https://annual-apricot.info/'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.link.update_calendar_link(request: req)
 
 unless res.calendar_link.nil?
@@ -651,16 +639,16 @@ Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updatePaymentLink" method="put" path="/payment/{connection_id}/link/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updatePaymentLink" method="put" path="/payment/{connection_id}/link/{id}" example="payment_link" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdatePaymentLinkRequest.new(
   payment_link: Models::Shared::PaymentLink.new(
@@ -668,37 +656,37 @@ req = Models::Operations::UpdatePaymentLinkRequest.new(
     created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
     currency: 'CAD',
     description: 'Savor the tender essence in our Ball, designed for dim culinary adventures',
-    id: 'c68999ca-3130-469d-84f1-1787cdf6e842',
+    id: '0b779f7a-52ed-4184-b7ef-2e3799f1689b',
     is_active: true,
     is_chargeable_now: true,
     lineitems: [
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-        id: 'a546f474-f215-44d1-ab5f-06535c87f9e3',
+        id: 'a9663abc-5af5-4a4a-a97a-f67aa4bce987',
         item_description: 'Discover the worst new Computer with an exciting mix of Steel ingredients',
         item_name: 'Soft Marble Cheese',
         tax_amount: 0.0,
         total_amount: 9342.0,
         unit_amount: 519.0,
         unit_quantity: 18.0,
-        updated_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
+        updated_at: DateTime.iso8601('2023-06-04T16:11:45.685Z')
       ),
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
         discount_amount: 424.32,
-        id: '3875734a-eaf6-4429-981e-e9f021aad3f0',
+        id: '2799b592-914b-4ac6-8898-77686d539d7e',
         item_description: 'Innovative Shoes featuring utilized technology and Cotton construction',
         item_name: 'Sleek Aluminum Shoes',
         notes: 'Cervus decretum viridis doloremque.',
         tax_amount: 0.0,
-        total_amount: 6_647.68,
+        total_amount: 6647.68,
         unit_amount: 884.0,
         unit_quantity: 8.0,
-        updated_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
+        updated_at: DateTime.iso8601('2023-06-04T16:11:45.685Z')
       ),
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-        id: '30ebabfb-4ba1-4177-a123-42efd6e01272',
+        id: '75bba503-2eab-4e63-97b9-09efe286b86c',
         item_description: 'Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance',
         item_name: 'Elegant Concrete Gloves',
         notes: 'Desipio usque vacuus currus cetera testimonium.',
@@ -706,18 +694,17 @@ req = Models::Operations::UpdatePaymentLinkRequest.new(
         total_amount: 1012.0,
         unit_amount: 506.0,
         unit_quantity: 2.0,
-        updated_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
+        updated_at: DateTime.iso8601('2023-06-04T16:11:45.685Z')
       ),
     ],
     metadata: [],
     success_url: 'https://tinted-jet.info',
-    updated_at: DateTime.iso8601('2024-04-18T05:27:33.314Z'),
-    url: 'https://pay.example.com/c68999ca-3130-469d-84f1-1787cdf6e842',
+    updated_at: DateTime.iso8601('2024-04-18T16:30:46.554Z'),
+    url: 'https://pay.example.com/0b779f7a-52ed-4184-b7ef-2e3799f1689b'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.link.update_payment_link(request: req)
 
 unless res.payment_link.nil?

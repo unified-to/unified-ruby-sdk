@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class Priority < T::Enum
-
-
+      class Priority
+        include ::Crystalline::Enum
         enums do
           HIGH = new('HIGH')
           MEDIUM = new('MEDIUM')
           LOW = new('LOW')
         end
+        open!
       end
     end
   end

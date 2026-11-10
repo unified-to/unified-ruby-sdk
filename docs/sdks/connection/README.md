@@ -1,5 +1,4 @@
 # Connection
-(*connection*)
 
 ## Overview
 
@@ -25,17 +24,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Shared::Connection.new(
   categories: [],
   integration_type: '<value>',
-  permissions: [],
+  permissions: []
 )
-
 res = s.connection.create_unified_connection(request: req)
 
 unless res.connection.nil?
@@ -72,11 +70,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.connection.create_unified_connection_reauth(id: '<id>')
 
 unless res.connection_reauth.nil?
@@ -113,11 +110,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.connection.get_unified_connection(id: '<id>')
 
 unless res.connection.nil?
@@ -128,9 +124,10 @@ end
 
 ### Parameters
 
-| Parameter            | Type                 | Required             | Description          |
-| -------------------- | -------------------- | -------------------- | -------------------- |
-| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Connection |
+| Parameter                                                                                                                             | Type                                                                                                                                  | Required                                                                                                                              | Description                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `id`                                                                                                                                  | *::String*                                                                                                                            | :heavy_check_mark:                                                                                                                    | ID of the Connection                                                                                                                  |
+| `fields_`                                                                                                                             | T::Array<[Models::Operations::GetUnifiedConnectionQueryParamFields](../../models/operations/getunifiedconnectionqueryparamfields.md)> | :heavy_minus_sign:                                                                                                                    | Fields to return. Leave out auth to get connection metadata without credentials                                                       |
 
 ### Response
 
@@ -154,13 +151,12 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
-req = Models::Operations::ListUnifiedConnectionsRequest.new()
-
+req = Models::Operations::ListUnifiedConnectionsRequest.new
 res = s.connection.list_unified_connections(request: req)
 
 unless res.connections.nil?
@@ -197,15 +193,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.connection.patch_unified_connection(connection: Models::Shared::Connection.new(
   categories: [],
   integration_type: '<value>',
-  permissions: [],
+  permissions: []
 ), id: '<id>')
 
 unless res.connection.nil?
@@ -243,11 +238,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.connection.remove_unified_connection(id: '<id>')
 
 if res.status_code == 200
@@ -284,17 +278,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.connection.update_unified_connection(connection: Models::Shared::Connection.new(
   categories: [],
   integration_type: '<value>',
   permissions: [
     Models::Shared::PropertyConnectionPermissions::PAYMENT_LINK_WRITE,
-  ],
+  ]
 ), id: '<id>')
 
 unless res.connection.nil?

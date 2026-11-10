@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class HrisEarning
         extend T::Sig
@@ -18,13 +17,13 @@ module UnifiedRubySDK
         # (reference to HrisCompany)
         field :company_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_id') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
         # recurring: last effective date (empty = until stopped) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # ONE_TIME for a single addition to the next unprocessed pay run, otherwise recurring
-        field :frequency, Crystalline::Nilable.new(Models::Shared::HrisEarningFrequency), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('frequency'), 'decoder': Utils.enum_from_string(Models::Shared::HrisEarningFrequency, true) } }
+        field :frequency, Crystalline::Nilable.new(Models::Shared::HrisEarningFrequency), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('frequency'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::HrisEarningFrequency, true) } }
 
         field :hours, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('hours') } }
 
@@ -42,17 +41,17 @@ module UnifiedRubySDK
         # rate per hour/unit
         field :rate_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rate_amount') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # recurring: first effective date; ONE_TIME: requested pay date (empty = next unprocessed pay run) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        field :status, Crystalline::Nilable.new(Models::Shared::HrisEarningStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::HrisEarningStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::HrisEarningStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::HrisEarningStatus, true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # employee ID (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(amount: T.nilable(::Float), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), end_at: T.nilable(::DateTime), frequency: T.nilable(Models::Shared::HrisEarningFrequency), hours: T.nilable(::Float), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), notes: T.nilable(::String), paycode_id: T.nilable(::String), payroll_id: T.nilable(::String), payslip_id: T.nilable(::String), rate_amount: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::HrisEarningStatus), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        sig { params(amount: T.nilable(::Float), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), end_at: T.nilable(::DateTime), frequency: T.nilable(Models::Shared::HrisEarningFrequency), hours: T.nilable(::Float), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), notes: T.nilable(::String), paycode_id: T.nilable(::String), payroll_id: T.nilable(::String), payslip_id: T.nilable(::String), rate_amount: T.nilable(::Float), raw: T.nilable(T::Hash[::Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::HrisEarningStatus), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
         def initialize(amount: nil, company_id: nil, created_at: nil, currency: nil, end_at: nil, frequency: nil, hours: nil, id: nil, metadata: nil, notes: nil, paycode_id: nil, payroll_id: nil, payslip_id: nil, rate_amount: nil, raw: nil, start_at: nil, status: nil, updated_at: nil, user_id: nil)
           @amount = amount
           @company_id = company_id

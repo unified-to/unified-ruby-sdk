@@ -1,5 +1,13 @@
 # CreateCdpEventQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreateCdpEventQueryParamFields::ID
+```
+
 
 ## Values
 

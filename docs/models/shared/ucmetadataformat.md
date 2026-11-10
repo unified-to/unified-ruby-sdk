@@ -1,5 +1,16 @@
 # UcMetadataFormat
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = UcMetadataFormat::TEXT
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = UcMetadataFormat.deserialize("custom_value")
+```
+
 
 ## Values
 

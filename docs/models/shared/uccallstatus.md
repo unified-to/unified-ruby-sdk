@@ -2,6 +2,17 @@
 
 The current or final status of the call
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = UcCallStatus::QUEUED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = UcCallStatus.deserialize("custom_value")
+```
+
 
 ## Values
 

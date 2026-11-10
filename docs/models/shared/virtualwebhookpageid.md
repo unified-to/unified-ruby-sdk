@@ -1,5 +1,16 @@
 # VirtualWebhookPageId
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = VirtualWebhookPageId::SUPPORTED_REQUIRED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = VirtualWebhookPageId.deserialize("custom_value")
+```
+
 
 ## Values
 

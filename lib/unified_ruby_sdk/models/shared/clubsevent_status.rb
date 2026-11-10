@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # ClubsEventStatus - The event status
-      class ClubsEventStatus < T::Enum
-
-
+      class ClubsEventStatus
+        include ::Crystalline::Enum
         enums do
           SCHEDULED = new('SCHEDULED')
           CANCELED = new('CANCELED')
           TBD = new('TBD')
           FINAL = new('FINAL')
         end
+        open!
       end
     end
   end

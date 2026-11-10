@@ -1,5 +1,4 @@
 # Assessment
-(*assessment*)
 
 ## Overview
 
@@ -22,21 +21,20 @@ Creates a AssessmentOrder. Provide the unified AssessmentOrder fields in the req
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAssessmentOrder" method="post" path="/assessment/{connection_id}/order" -->
+<!-- UsageSnippet language="ruby" operationID="createAssessmentOrder" method="post" path="/assessment/{connection_id}/order" example="assessment_order" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.assessment.create_assessment_order(assessment_order: Models::Shared::AssessmentOrder.new(
   connection_id: '<id>',
   created_at: DateTime.iso8601('2021-09-18T10:33:57.803Z'),
-  id: 'b6253d9d-0d3b-4a71-857b-3425dda13e8e',
+  id: '62576d03-681c-499b-8f6e-634ed4476b8c',
   metadata: [],
   parameters: [],
   profile_addresses: [],
@@ -63,8 +61,8 @@ res = s.assessment.create_assessment_order(assessment_order: Models::Shared::Ass
   response_url: 'https://rowdy-fisherman.biz/',
   status: Models::Shared::AssessmentOrderStatus::REJECTED,
   target_url: 'https://cautious-turret.info',
-  updated_at: DateTime.iso8601('2023-01-30T21:55:20.917Z'),
-  workspace_id: '<id>',
+  updated_at: DateTime.iso8601('2023-01-31T09:29:30.765Z'),
+  workspace_id: '<id>'
 ), connection_id: '<id>')
 
 unless res.assessment_order.nil?
@@ -98,17 +96,16 @@ Create an assessment package
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAssessmentPackage" method="post" path="/assessment/{connection_id}/package" -->
+<!-- UsageSnippet language="ruby" operationID="createAssessmentPackage" method="post" path="/assessment/{connection_id}/package" example="assessment_package" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.assessment.create_assessment_package(assessment_package: Models::Shared::AssessmentPackage.new(
   aliases: [
     'quia',
@@ -117,7 +114,7 @@ res = s.assessment.create_assessment_package(assessment_package: Models::Shared:
   description: 'Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.',
   has_redirect_url: true,
   has_target_url: false,
-  id: '54f53986-c02c-496a-88a7-92de0ecf07d1',
+  id: '7e346520-deb1-4689-95cc-c065ca70d745',
   info_url: 'https://ugly-instance.biz/',
   integration_types: [
     'viridis',
@@ -132,7 +129,7 @@ res = s.assessment.create_assessment_package(assessment_package: Models::Shared:
     'clamo',
   ],
   type: Models::Shared::AssessmentPackageType::VIDEO_INTERVIEW,
-  updated_at: DateTime.iso8601('2023-09-29T12:09:16.064Z'),
+  updated_at: DateTime.iso8601('2023-09-29T21:35:06.577Z')
 ), connection_id: '<id>')
 
 unless res.assessment_package.nil?
@@ -170,11 +167,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.assessment.get_assessment_order(connection_id: '<id>', id: '<id>')
 
 unless res.assessment_order.nil?
@@ -214,11 +210,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.assessment.get_assessment_package(connection_id: '<id>', id: '<id>')
 
 unless res.assessment_package.nil?
@@ -256,11 +251,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.assessment.list_assessment_packages(connection_id: '<id>')
 
 unless res.assessment_packages.nil?
@@ -293,22 +287,22 @@ Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOr
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAssessmentOrder" method="patch" path="/assessment/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAssessmentOrder" method="patch" path="/assessment/{connection_id}/order/{id}" example="assessment_order" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAssessmentOrderRequest.new(
   assessment_order: Models::Shared::AssessmentOrder.new(
     connection_id: '<id>',
     created_at: DateTime.iso8601('2021-09-18T10:33:57.803Z'),
-    id: 'b10b35d7-d3a5-4bf8-ab65-b653585e03f5',
+    id: '24de5a8d-6a9f-461b-b5cd-9824df2ad910',
     metadata: [],
     parameters: [],
     profile_addresses: [],
@@ -335,13 +329,12 @@ req = Models::Operations::PatchAssessmentOrderRequest.new(
     response_url: 'https://rowdy-fisherman.biz/',
     status: Models::Shared::AssessmentOrderStatus::REJECTED,
     target_url: 'https://cautious-turret.info',
-    updated_at: DateTime.iso8601('2023-01-30T21:55:20.926Z'),
-    workspace_id: '<id>',
+    updated_at: DateTime.iso8601('2023-01-31T09:29:30.777Z'),
+    workspace_id: '<id>'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.assessment.patch_assessment_order(request: req)
 
 unless res.assessment_order.nil?
@@ -372,17 +365,16 @@ Update an assessment package
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAssessmentPackage" method="patch" path="/assessment/{connection_id}/package/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAssessmentPackage" method="patch" path="/assessment/{connection_id}/package/{id}" example="assessment_package" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.assessment.patch_assessment_package(assessment_package: Models::Shared::AssessmentPackage.new(
   aliases: [
     'quia',
@@ -391,7 +383,7 @@ res = s.assessment.patch_assessment_package(assessment_package: Models::Shared::
   description: 'Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.',
   has_redirect_url: true,
   has_target_url: false,
-  id: 'f0d81bbc-86f6-4944-90df-d31081e51996',
+  id: '16e754b7-24a8-46ce-81c3-640155ddb24f',
   info_url: 'https://ugly-instance.biz/',
   integration_types: [
     'viridis',
@@ -406,7 +398,7 @@ res = s.assessment.patch_assessment_package(assessment_package: Models::Shared::
     'clamo',
   ],
   type: Models::Shared::AssessmentPackageType::VIDEO_INTERVIEW,
-  updated_at: DateTime.iso8601('2023-09-29T12:09:16.068Z'),
+  updated_at: DateTime.iso8601('2023-09-29T21:35:06.580Z')
 ), connection_id: '<id>', id: '<id>')
 
 unless res.assessment_package.nil?
@@ -445,11 +437,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.assessment.remove_assessment_package(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -481,22 +472,22 @@ Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOr
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAssessmentOrder" method="put" path="/assessment/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAssessmentOrder" method="put" path="/assessment/{connection_id}/order/{id}" example="assessment_order" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAssessmentOrderRequest.new(
   assessment_order: Models::Shared::AssessmentOrder.new(
     connection_id: '<id>',
     created_at: DateTime.iso8601('2021-09-18T10:33:57.803Z'),
-    id: 'b10b35d7-d3a5-4bf8-ab65-b653585e03f5',
+    id: '24de5a8d-6a9f-461b-b5cd-9824df2ad910',
     metadata: [],
     parameters: [],
     profile_addresses: [],
@@ -523,13 +514,12 @@ req = Models::Operations::UpdateAssessmentOrderRequest.new(
     response_url: 'https://rowdy-fisherman.biz/',
     status: Models::Shared::AssessmentOrderStatus::REJECTED,
     target_url: 'https://cautious-turret.info',
-    updated_at: DateTime.iso8601('2023-01-30T21:55:20.926Z'),
-    workspace_id: '<id>',
+    updated_at: DateTime.iso8601('2023-01-31T09:29:30.777Z'),
+    workspace_id: '<id>'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.assessment.update_assessment_order(request: req)
 
 unless res.assessment_order.nil?
@@ -560,17 +550,16 @@ Update an assessment package
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAssessmentPackage" method="put" path="/assessment/{connection_id}/package/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAssessmentPackage" method="put" path="/assessment/{connection_id}/package/{id}" example="assessment_package" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.assessment.update_assessment_package(assessment_package: Models::Shared::AssessmentPackage.new(
   aliases: [
     'quia',
@@ -579,7 +568,7 @@ res = s.assessment.update_assessment_package(assessment_package: Models::Shared:
   description: 'Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.',
   has_redirect_url: true,
   has_target_url: false,
-  id: 'f0d81bbc-86f6-4944-90df-d31081e51996',
+  id: '16e754b7-24a8-46ce-81c3-640155ddb24f',
   info_url: 'https://ugly-instance.biz/',
   integration_types: [
     'viridis',
@@ -594,7 +583,7 @@ res = s.assessment.update_assessment_package(assessment_package: Models::Shared:
     'clamo',
   ],
   type: Models::Shared::AssessmentPackageType::VIDEO_INTERVIEW,
-  updated_at: DateTime.iso8601('2023-09-29T12:09:16.068Z'),
+  updated_at: DateTime.iso8601('2023-09-29T21:35:06.580Z')
 ), connection_id: '<id>', id: '<id>')
 
 unless res.assessment_package.nil?

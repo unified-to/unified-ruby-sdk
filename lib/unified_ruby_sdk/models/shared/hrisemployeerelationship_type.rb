@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class HrisEmployeerelationshipType < T::Enum
-
-
+      class HrisEmployeerelationshipType
+        include ::Crystalline::Enum
         enums do
           EMERGENCY = new('EMERGENCY')
           SPOUSE = new('SPOUSE')
@@ -21,6 +19,7 @@ module UnifiedRubySDK
           FRIEND = new('FRIEND')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

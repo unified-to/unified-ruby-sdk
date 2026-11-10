@@ -7,24 +7,23 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class LegalMatter
         extend T::Sig
         include Crystalline::MetadataFields
 
         # how the matter is billed
-        field :billing_method, Crystalline::Nilable.new(Models::Shared::BillingMethod), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('billing_method'), 'decoder': Utils.enum_from_string(Models::Shared::BillingMethod, true) } }
+        field :billing_method, Crystalline::Nilable.new(Models::Shared::BillingMethod), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('billing_method'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::BillingMethod, true) } }
         # the client's own reference number for this matter
         field :client_reference, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('client_reference') } }
         # when the matter was closed (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :closed_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('closed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :closed_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('closed_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # CRM Companies that are clients on this matter
         field :company_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_ids') } }
         # CRM Contacts that are clients on this matter
         field :contact_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_ids') } }
         # when the matter was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # ISO 4217 currency code
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
         # free-text description of the matter
@@ -40,31 +39,31 @@ module UnifiedRubySDK
         # the firm's display/matter number
         field :number, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('number') } }
         # when the matter was opened (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :opened_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('opened_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :opened_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('opened_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # HR Employee who is the originating attorney (reference to HrisEmployee)
         field :originating_user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('originating_user_id') } }
         # all people and organizations related to this matter, with their role
         field :parties, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::LegalParty)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parties') } }
         # when the matter became pending (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :pending_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('pending_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :pending_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('pending_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # pointer to the Legal Practicearea object
         field :practicearea_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('practicearea_id') } }
         # raw data from the integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # the matter stage name
         field :stage, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('stage') } }
         # the matter status
-        field :status, Crystalline::Nilable.new(Models::Shared::LegalMatterStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::LegalMatterStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::LegalMatterStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::LegalMatterStatus, true) } }
         # statute of limitations deadline for the matter (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :statute_of_limitations_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('statute_of_limitations_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :statute_of_limitations_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('statute_of_limitations_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # when the matter was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # HR Employee who is the responsible attorney (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
         # other HR Employees assigned to this matter
         field :user_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_ids') } }
 
-        sig { params(billing_method: T.nilable(Models::Shared::BillingMethod), client_reference: T.nilable(::String), closed_at: T.nilable(::DateTime), company_ids: T.nilable(T::Array[::String]), contact_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), is_billable: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::LegalMetadata]), name: T.nilable(::String), number: T.nilable(::String), opened_at: T.nilable(::DateTime), originating_user_id: T.nilable(::String), parties: T.nilable(T::Array[Models::Shared::LegalParty]), pending_at: T.nilable(::DateTime), practicearea_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), stage: T.nilable(::String), status: T.nilable(Models::Shared::LegalMatterStatus), statute_of_limitations_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), user_ids: T.nilable(T::Array[::String])).void }
+        sig { params(billing_method: T.nilable(Models::Shared::BillingMethod), client_reference: T.nilable(::String), closed_at: T.nilable(::DateTime), company_ids: T.nilable(T::Array[::String]), contact_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), is_billable: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::LegalMetadata]), name: T.nilable(::String), number: T.nilable(::String), opened_at: T.nilable(::DateTime), originating_user_id: T.nilable(::String), parties: T.nilable(T::Array[Models::Shared::LegalParty]), pending_at: T.nilable(::DateTime), practicearea_id: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), stage: T.nilable(::String), status: T.nilable(Models::Shared::LegalMatterStatus), statute_of_limitations_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), user_ids: T.nilable(T::Array[::String])).void }
         def initialize(billing_method: nil, client_reference: nil, closed_at: nil, company_ids: nil, contact_ids: nil, created_at: nil, currency: nil, description: nil, id: nil, is_billable: nil, metadata: nil, name: nil, number: nil, opened_at: nil, originating_user_id: nil, parties: nil, pending_at: nil, practicearea_id: nil, raw: nil, stage: nil, status: nil, statute_of_limitations_at: nil, updated_at: nil, user_id: nil, user_ids: nil)
           @billing_method = billing_method
           @client_reference = client_reference

@@ -2,6 +2,17 @@
 
 Optimization goals for ads_group (cross-platform; platform-specific values allowed as pass-through)
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = OptimizationGoal::REACH
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = OptimizationGoal.deserialize("custom_value")
+```
+
 
 ## Values
 

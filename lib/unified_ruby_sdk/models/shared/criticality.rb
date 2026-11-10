@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Criticality - Potential severity of future reactions
-      class Criticality < T::Enum
-
-
+      class Criticality
+        include ::Crystalline::Enum
         enums do
           LOW = new('LOW')
           HIGH = new('HIGH')
           UNABLE_TO_ASSESS = new('UNABLE_TO_ASSESS')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

@@ -1,5 +1,13 @@
 # UpdateCalendarBotQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = UpdateCalendarBotQueryParamFields::ID
+```
+
 
 ## Values
 

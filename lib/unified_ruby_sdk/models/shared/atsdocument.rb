@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class AtsDocument
         extend T::Sig
@@ -18,7 +17,7 @@ module UnifiedRubySDK
         # The ID of the candidate the document belongs to (an AtsCandidate ID)
         field :candidate_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('candidate_id') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # base64 encoded file contents used for create/update actions. Use this field to send an attachment e.g. a resume, a profile, or other text content
         field :document_data, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('document_data') } }
         # This link expires after 1 hour. 
@@ -32,15 +31,15 @@ module UnifiedRubySDK
 
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AtsMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # The kind of document
-        field :type, Crystalline::Nilable.new(Models::Shared::AtsDocumentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AtsDocumentType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::AtsDocumentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::AtsDocumentType, true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(application_id: T.nilable(::String), candidate_id: T.nilable(::String), created_at: T.nilable(::DateTime), document_data: T.nilable(::String), document_url: T.nilable(::String), filename: T.nilable(::String), id: T.nilable(::String), job_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AtsMetadata]), raw: T.nilable(T::Hash[Symbol, ::Object]), type: T.nilable(Models::Shared::AtsDocumentType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        sig { params(application_id: T.nilable(::String), candidate_id: T.nilable(::String), created_at: T.nilable(::DateTime), document_data: T.nilable(::String), document_url: T.nilable(::String), filename: T.nilable(::String), id: T.nilable(::String), job_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AtsMetadata]), raw: T.nilable(T::Hash[::Symbol, ::Object]), type: T.nilable(Models::Shared::AtsDocumentType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
         def initialize(application_id: nil, candidate_id: nil, created_at: nil, document_data: nil, document_url: nil, filename: nil, id: nil, job_id: nil, metadata: nil, raw: nil, type: nil, updated_at: nil, user_id: nil)
           @application_id = application_id
           @candidate_id = candidate_id

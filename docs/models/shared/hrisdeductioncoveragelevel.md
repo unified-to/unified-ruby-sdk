@@ -2,6 +2,17 @@
 
 Level selected by employee (e.g. "FAMILY", "EMPLOYEE_ONLY", or other)
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = HrisDeductionCoverageLevel::EMPLOYEE_ONLY
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = HrisDeductionCoverageLevel.deserialize("custom_value")
+```
+
 
 ## Values
 

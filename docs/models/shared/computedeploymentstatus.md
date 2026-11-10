@@ -2,6 +2,17 @@
 
 Normalized deployment status; set to CANCELED on update to cancel
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ComputeDeploymentStatus::QUEUED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = ComputeDeploymentStatus.deserialize("custom_value")
+```
+
 
 ## Values
 

@@ -2,6 +2,17 @@
 
 Targeting search types for ads_target list endpoint (Meta: adinterest, adbehavior, adlocale, adgeolocation; Google: geoTargetConstants, user_interest, topic_constant, language_constant)
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = AdsTargetType::INTEREST
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = AdsTargetType.deserialize("custom_value")
+```
+
 
 ## Values
 

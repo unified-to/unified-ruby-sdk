@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class LmsTelephone
         extend T::Sig
@@ -16,7 +15,7 @@ module UnifiedRubySDK
 
         field :telephone, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephone'), required: true } }
 
-        field :type, Crystalline::Nilable.new(Models::Shared::LmsTelephoneType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::LmsTelephoneType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::LmsTelephoneType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::LmsTelephoneType, true) } }
 
         sig { params(telephone: ::String, type: T.nilable(Models::Shared::LmsTelephoneType)).void }
         def initialize(telephone:, type: nil)

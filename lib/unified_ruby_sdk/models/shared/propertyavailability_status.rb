@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # PropertyAvailabilityStatus - whether the period is available, booked or blocked
-      class PropertyAvailabilityStatus < T::Enum
-
-
+      class PropertyAvailabilityStatus
+        include ::Crystalline::Enum
         enums do
           AVAILABLE = new('AVAILABLE')
           UNAVAILABLE = new('UNAVAILABLE')
           BLOCKED = new('BLOCKED')
         end
+        open!
       end
     end
   end

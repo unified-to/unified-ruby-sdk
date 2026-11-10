@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class AtsInterviewStatus < T::Enum
-
-
+      class AtsInterviewStatus
+        include ::Crystalline::Enum
         enums do
           SCHEDULED = new('SCHEDULED')
           AWAITING_FEEDBACK = new('AWAITING_FEEDBACK')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           CANCELED = new('CANCELED')
           NEEDS_SCHEDULING = new('NEEDS_SCHEDULING')
         end
+        open!
       end
     end
   end

@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Mode - Google: bid_only falsetrue
-      class Mode < T::Enum
-
-
+      class Mode
+        include ::Crystalline::Enum
         enums do
           TARGETING = new('TARGETING')
           OBSERVATION = new('OBSERVATION')
         end
+        open!
       end
     end
   end

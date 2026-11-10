@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # HealthcareDocumentStatus - Status of the document
-      class HealthcareDocumentStatus < T::Enum
-
-
+      class HealthcareDocumentStatus
+        include ::Crystalline::Enum
         enums do
           CURRENT = new('CURRENT')
           SUPERSEDED = new('SUPERSEDED')
           ENTERED_IN_ERROR = new('ENTERED_IN_ERROR')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

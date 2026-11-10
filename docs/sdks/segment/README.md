@@ -1,5 +1,4 @@
 # Segment
-(*segment*)
 
 ## Overview
 
@@ -24,12 +23,11 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-res = s.segment.create_cdp_segment(cdp_segment: Models::Shared::CdpSegment.new(), connection_id: '<id>')
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.segment.create_cdp_segment(cdp_segment: Models::Shared::CdpSegment.new, connection_id: '<id>')
 
 unless res.cdp_segment.nil?
   # handle response
@@ -68,11 +66,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.segment.get_cdp_segment(connection_id: '<id>', id: '<id>')
 
 unless res.cdp_segment.nil?
@@ -112,15 +109,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCdpSegmentsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCdpSegmentsRequest.new(
+  connection_id: '<id>'
+)
 res = s.segment.list_cdp_segments(request: req)
 
 unless res.cdp_segments.nil?
@@ -157,17 +153,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::PatchCdpSegmentRequest.new(
-  cdp_segment: Models::Shared::CdpSegment.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::PatchCdpSegmentRequest.new(
+  cdp_segment: Models::Shared::CdpSegment.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.segment.patch_cdp_segment(request: req)
 
 unless res.cdp_segment.nil?
@@ -204,11 +199,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.segment.remove_cdp_segment(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -246,17 +240,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::UpdateCdpSegmentRequest.new(
-  cdp_segment: Models::Shared::CdpSegment.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::UpdateCdpSegmentRequest.new(
+  cdp_segment: Models::Shared::CdpSegment.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.segment.update_cdp_segment(request: req)
 
 unless res.cdp_segment.nil?

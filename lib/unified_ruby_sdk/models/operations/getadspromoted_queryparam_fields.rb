@@ -7,11 +7,8 @@
 module UnifiedRubySDK
   module Models
     module Operations
-    
 
       class GetAdsPromotedQueryParamFields < T::Enum
-
-
         enums do
           ID = new('id')
           NAME = new('name')

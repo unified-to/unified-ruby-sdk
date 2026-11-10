@@ -1,5 +1,13 @@
 # PatchAtsCandidateQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PatchAtsCandidateQueryParamFields::ID
+```
+
 
 ## Values
 
@@ -33,4 +41,6 @@
 | `JOB_IDS`             | job_ids               |
 | `METADATA`            | metadata              |
 | `SUMMARY`             | summary               |
+| `IS_PRIVATE`          | is_private            |
+| `HAS_DO_NOT_CONTACT`  | has_do_not_contact    |
 | `RAW`                 | raw                   |

@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # VerificationRequestResponseStatus - Background checks and compliance checks return CLEARFLAGGED or PASS/FAIL or YES/NO
-      class VerificationRequestResponseStatus < T::Enum
-
-
+      class VerificationRequestResponseStatus
+        include ::Crystalline::Enum
         enums do
           COMPLETED = new('COMPLETED')
           FAILED = new('FAILED')
           PASSED = new('PASSED')
           PENDING = new('PENDING')
         end
+        open!
       end
     end
   end

@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class CrmLead
         extend T::Sig
@@ -22,7 +21,7 @@ module UnifiedRubySDK
         # (reference to CrmContact)
         field :contact_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_id') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # (reference to HrisEmployee)
         field :creator_user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('creator_user_id') } }
 
@@ -42,7 +41,7 @@ module UnifiedRubySDK
         # The lead's full name
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :source, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('source') } }
 
@@ -52,11 +51,11 @@ module UnifiedRubySDK
         # The job title of the lead
         field :title, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(address: T.nilable(Models::Shared::PropertyCrmLeadAddress), company_id: T.nilable(::String), company_name: T.nilable(::String), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), creator_user_id: T.nilable(::String), emails: T.nilable(T::Array[Models::Shared::CrmEmail]), first_name: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), last_name: T.nilable(::String), link_urls: T.nilable(T::Array[::String]), metadata: T.nilable(T::Array[Models::Shared::CrmMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), source: T.nilable(::String), status: T.nilable(::String), telephones: T.nilable(T::Array[Models::Shared::CrmTelephone]), title: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        sig { params(address: T.nilable(Models::Shared::PropertyCrmLeadAddress), company_id: T.nilable(::String), company_name: T.nilable(::String), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), creator_user_id: T.nilable(::String), emails: T.nilable(T::Array[Models::Shared::CrmEmail]), first_name: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), last_name: T.nilable(::String), link_urls: T.nilable(T::Array[::String]), metadata: T.nilable(T::Array[Models::Shared::CrmMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), source: T.nilable(::String), status: T.nilable(::String), telephones: T.nilable(T::Array[Models::Shared::CrmTelephone]), title: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
         def initialize(address: nil, company_id: nil, company_name: nil, contact_id: nil, created_at: nil, creator_user_id: nil, emails: nil, first_name: nil, id: nil, is_active: nil, last_name: nil, link_urls: nil, metadata: nil, name: nil, raw: nil, source: nil, status: nil, telephones: nil, title: nil, updated_at: nil, user_id: nil)
           @address = address
           @company_id = company_id

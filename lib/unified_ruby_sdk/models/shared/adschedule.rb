@@ -7,14 +7,13 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class AdSchedule
         extend T::Sig
         include Crystalline::MetadataFields
 
 
-        field :day_of_week, Models::Shared::DayOfWeek, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('day_of_week'), required: true, 'decoder': Utils.enum_from_string(Models::Shared::DayOfWeek, false) } }
+        field :day_of_week, Models::Shared::DayOfWeek, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('day_of_week'), required: true, 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::DayOfWeek, false) } }
         # 0-24 (24 = end of day)
         field :end_hour, ::Float, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_hour'), required: true } }
         # 0-23

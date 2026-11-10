@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # CreativeSelection - Creative rotation strategy (LinkedIn creativeSelection)
-      class CreativeSelection < T::Enum
-
-
+      class CreativeSelection
+        include ::Crystalline::Enum
         enums do
           OPTIMIZED = new('OPTIMIZED')
           ROUND_ROBIN = new('ROUND_ROBIN')
         end
+        open!
       end
     end
   end

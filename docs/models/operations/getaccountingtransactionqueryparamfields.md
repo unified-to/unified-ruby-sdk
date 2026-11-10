@@ -1,5 +1,13 @@
 # GetAccountingTransactionQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetAccountingTransactionQueryParamFields::ID
+```
+
 
 ## Values
 

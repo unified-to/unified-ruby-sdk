@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # The email object, when type = email
       class PropertyCrmEventEmail
         extend T::Sig

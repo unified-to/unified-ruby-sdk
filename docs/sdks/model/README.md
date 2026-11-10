@@ -1,5 +1,4 @@
 # Model
-(*model*)
 
 ## Overview
 
@@ -20,11 +19,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.model.get_genai_model(connection_id: '<id>', id: '<id>')
 
 unless res.genai_model.nil?
@@ -64,15 +62,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListGenaiModelsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListGenaiModelsRequest.new(
+  connection_id: '<id>'
+)
 res = s.model.list_genai_models(request: req)
 
 unless res.genai_models.nil?

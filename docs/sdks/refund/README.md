@@ -1,5 +1,4 @@
 # Refund
-(*refund*)
 
 ## Overview
 
@@ -20,11 +19,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.refund.get_payment_refund(connection_id: '<id>', id: '<id>')
 
 unless res.payment_refund.nil?
@@ -64,15 +62,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListPaymentRefundsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListPaymentRefundsRequest.new(
+  connection_id: '<id>'
+)
 res = s.refund.list_payment_refunds(request: req)
 
 unless res.payment_refunds.nil?

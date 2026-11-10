@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # CommerceTableStatus - current occupancy
-      class CommerceTableStatus < T::Enum
-
-
+      class CommerceTableStatus
+        include ::Crystalline::Enum
         enums do
           AVAILABLE = new('AVAILABLE')
           OCCUPIED = new('OCCUPIED')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           INACTIVE = new('INACTIVE')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

@@ -1,5 +1,13 @@
 # UpdateAtsJobQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = UpdateAtsJobQueryParamFields::ID
+```
+
 
 ## Values
 

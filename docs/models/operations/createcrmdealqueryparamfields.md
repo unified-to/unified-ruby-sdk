@@ -1,5 +1,13 @@
 # CreateCrmDealQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreateCrmDealQueryParamFields::ID
+```
+
 
 ## Values
 

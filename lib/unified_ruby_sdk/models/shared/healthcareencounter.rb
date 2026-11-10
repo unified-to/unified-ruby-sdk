@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class HealthcareEncounter
         extend T::Sig
@@ -18,9 +17,9 @@ module UnifiedRubySDK
         # Conditions diagnosed or addressed during the encounter
         field :condition_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('condition_ids') } }
         # When the encounter record was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # When the encounter ended (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Unique identifier for the encounter
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # Where the encounter took place
@@ -32,19 +31,19 @@ module UnifiedRubySDK
         # The practitioners who participated in the encounter
         field :practitioner_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('practitioner_ids') } }
         # Raw data from integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # Codings for the reason for the encounter
         field :reasons, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HealthcareCode)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reasons') } }
         # When the encounter started (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Status of the encounter
-        field :status, Crystalline::Nilable.new(Models::Shared::HealthcareEncounterStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::HealthcareEncounterStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::HealthcareEncounterStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::HealthcareEncounterStatus, true) } }
         # Class of the encounter (e.g. ambulatory, inpatient)
-        field :type, Crystalline::Nilable.new(Models::Shared::HealthcareEncounterType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::HealthcareEncounterType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::HealthcareEncounterType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::HealthcareEncounterType, true) } }
         # When the encounter record was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(appointment_id: T.nilable(::String), condition_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), id: T.nilable(::String), location_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HealthcareMetadata]), patient_id: T.nilable(::String), practitioner_ids: T.nilable(T::Array[::String]), raw: T.nilable(T::Hash[Symbol, ::Object]), reasons: T.nilable(T::Array[Models::Shared::HealthcareCode]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::HealthcareEncounterStatus), type: T.nilable(Models::Shared::HealthcareEncounterType), updated_at: T.nilable(::DateTime)).void }
+        sig { params(appointment_id: T.nilable(::String), condition_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), id: T.nilable(::String), location_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HealthcareMetadata]), patient_id: T.nilable(::String), practitioner_ids: T.nilable(T::Array[::String]), raw: T.nilable(T::Hash[::Symbol, ::Object]), reasons: T.nilable(T::Array[Models::Shared::HealthcareCode]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::HealthcareEncounterStatus), type: T.nilable(Models::Shared::HealthcareEncounterType), updated_at: T.nilable(::DateTime)).void }
         def initialize(appointment_id: nil, condition_ids: nil, created_at: nil, end_at: nil, id: nil, location_id: nil, metadata: nil, patient_id: nil, practitioner_ids: nil, raw: nil, reasons: nil, start_at: nil, status: nil, type: nil, updated_at: nil)
           @appointment_id = appointment_id
           @condition_ids = condition_ids

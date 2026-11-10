@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class HrisTimeshift
         extend T::Sig
@@ -16,7 +15,7 @@ module UnifiedRubySDK
         # (reference to HrisEmployee)
         field :employee_user_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employee_user_id'), required: true } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :approved_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('approved_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :approved_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('approved_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # (reference to HrisEmployee)
         field :approver_user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('approver_user_id') } }
         # (reference to HrisCompany)
@@ -24,9 +23,9 @@ module UnifiedRubySDK
 
         field :compensation, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HrisCompensation)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('compensation') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # department, team, etc. (reference to HrisGroup)
         field :group_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('group_id') } }
 
@@ -40,13 +39,13 @@ module UnifiedRubySDK
 
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HrisMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(employee_user_id: ::String, approved_at: T.nilable(::DateTime), approver_user_id: T.nilable(::String), company_id: T.nilable(::String), compensation: T.nilable(T::Array[Models::Shared::HrisCompensation]), created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), group_id: T.nilable(::String), hours: T.nilable(::Float), id: T.nilable(::String), is_approved: T.nilable(T::Boolean), location_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime)).void }
+        sig { params(employee_user_id: ::String, approved_at: T.nilable(::DateTime), approver_user_id: T.nilable(::String), company_id: T.nilable(::String), compensation: T.nilable(T::Array[Models::Shared::HrisCompensation]), created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), group_id: T.nilable(::String), hours: T.nilable(::Float), id: T.nilable(::String), is_approved: T.nilable(T::Boolean), location_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), raw: T.nilable(T::Hash[::Symbol, ::Object]), start_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime)).void }
         def initialize(employee_user_id:, approved_at: nil, approver_user_id: nil, company_id: nil, compensation: nil, created_at: nil, end_at: nil, group_id: nil, hours: nil, id: nil, is_approved: nil, location_id: nil, metadata: nil, raw: nil, start_at: nil, updated_at: nil)
           @employee_user_id = employee_user_id
           @approved_at = approved_at

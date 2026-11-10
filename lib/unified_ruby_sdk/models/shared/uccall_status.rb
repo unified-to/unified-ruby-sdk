@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # UcCallStatus - The current or final status of the call
-      class UcCallStatus < T::Enum
-
-
+      class UcCallStatus
+        include ::Crystalline::Enum
         enums do
           QUEUED = new('QUEUED')
           RINGING = new('RINGING')
@@ -23,6 +21,7 @@ module UnifiedRubySDK
           CANCELED = new('CANCELED')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

@@ -1,5 +1,13 @@
 # CreateDatastoreTableQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreateDatastoreTableQueryParamFields::ID
+```
+
 
 ## Values
 

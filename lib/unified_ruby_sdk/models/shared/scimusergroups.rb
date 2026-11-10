@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class ScimUserGroups
         extend T::Sig
@@ -20,7 +19,7 @@ module UnifiedRubySDK
 
         field :display, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('display') } }
 
-        field :type, Crystalline::Nilable.new(Models::Shared::ScimUserGroupsType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::ScimUserGroupsType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::ScimUserGroupsType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::ScimUserGroupsType, true) } }
 
         sig { params(value: ::String, dollar_ref: T.nilable(::String), display: T.nilable(::String), type: T.nilable(Models::Shared::ScimUserGroupsType)).void }
         def initialize(value:, dollar_ref: nil, display: nil, type: nil)

@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PropertyAdsInsertionorderBidStrategyPerformanceGoalType < T::Enum
-
-
+      class PropertyAdsInsertionorderBidStrategyPerformanceGoalType
+        include ::Crystalline::Enum
         enums do
           UNSPECIFIED = new('UNSPECIFIED')
           CPA = new('CPA')
@@ -23,6 +21,7 @@ module UnifiedRubySDK
           AV_VIEWED = new('AV_VIEWED')
           REACH = new('REACH')
         end
+        open!
       end
     end
   end

@@ -1,5 +1,4 @@
 # Insertionorder
-(*insertionorder*)
 
 ## Overview
 
@@ -18,24 +17,23 @@ Creates a AdsInsertionorder. Provide the unified AdsInsertionorder fields in the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAdsInsertionorder" method="post" path="/ads/{connection_id}/insertionorder" -->
+<!-- UsageSnippet language="ruby" operationID="createAdsInsertionorder" method="post" path="/ads/{connection_id}/insertionorder" example="ads_insertionorder" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.insertionorder.create_ads_insertionorder(ads_insertionorder: Models::Shared::AdsInsertionorder.new(
   created_at: DateTime.iso8601('2021-04-10T06:57:36.611Z'),
-  id: '5241f94a-ad3c-473d-87b7-1dad02dbff6b',
+  id: '0f6ef8d0-040a-4b7c-89df-9326b3be924b',
   metadata: [],
   name: 'Kunde, Smith and Reinger',
   status: Models::Shared::AdsInsertionorderStatus::UNSPECIFIED,
-  updated_at: DateTime.iso8601('2021-04-28T23:58:39.018Z'),
+  updated_at: DateTime.iso8601('2021-04-29T00:22:35.785Z')
 ), connection_id: '<id>')
 
 unless res.ads_insertionorder.nil?
@@ -75,11 +73,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.insertionorder.get_ads_insertionorder(connection_id: '<id>', id: '<id>')
 
 unless res.ads_insertionorder.nil?
@@ -119,15 +116,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAdsInsertionordersRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAdsInsertionordersRequest.new(
+  connection_id: '<id>'
+)
 res = s.insertionorder.list_ads_insertionorders(request: req)
 
 unless res.ads_insertionorders.nil?
@@ -158,30 +154,29 @@ Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInserti
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAdsInsertionorder" method="patch" path="/ads/{connection_id}/insertionorder/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAdsInsertionorder" method="patch" path="/ads/{connection_id}/insertionorder/{id}" example="ads_insertionorder" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAdsInsertionorderRequest.new(
   ads_insertionorder: Models::Shared::AdsInsertionorder.new(
     created_at: DateTime.iso8601('2021-04-10T06:57:36.611Z'),
-    id: 'e38290d6-7f4a-44da-b06b-159546d2b116',
+    id: 'd50e9652-2b9a-4862-a2cd-050077af54c0',
     metadata: [],
     name: 'Kunde, Smith and Reinger',
     status: Models::Shared::AdsInsertionorderStatus::UNSPECIFIED,
-    updated_at: DateTime.iso8601('2021-04-28T23:58:39.018Z'),
+    updated_at: DateTime.iso8601('2021-04-29T00:22:35.786Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.insertionorder.patch_ads_insertionorder(request: req)
 
 unless res.ads_insertionorder.nil?
@@ -218,11 +213,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.insertionorder.remove_ads_insertionorder(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -254,30 +248,29 @@ Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInserti
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAdsInsertionorder" method="put" path="/ads/{connection_id}/insertionorder/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAdsInsertionorder" method="put" path="/ads/{connection_id}/insertionorder/{id}" example="ads_insertionorder" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAdsInsertionorderRequest.new(
   ads_insertionorder: Models::Shared::AdsInsertionorder.new(
     created_at: DateTime.iso8601('2021-04-10T06:57:36.611Z'),
-    id: 'e38290d6-7f4a-44da-b06b-159546d2b116',
+    id: 'd50e9652-2b9a-4862-a2cd-050077af54c0',
     metadata: [],
     name: 'Kunde, Smith and Reinger',
     status: Models::Shared::AdsInsertionorderStatus::UNSPECIFIED,
-    updated_at: DateTime.iso8601('2021-04-28T23:58:39.018Z'),
+    updated_at: DateTime.iso8601('2021-04-29T00:22:35.786Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.insertionorder.update_ads_insertionorder(request: req)
 
 unless res.ads_insertionorder.nil?

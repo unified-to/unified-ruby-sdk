@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # PropertyReservationStatus - the reservation status
-      class PropertyReservationStatus < T::Enum
-
-
+      class PropertyReservationStatus
+        include ::Crystalline::Enum
         enums do
           INQUIRY = new('INQUIRY')
           PENDING = new('PENDING')
@@ -22,6 +20,7 @@ module UnifiedRubySDK
           NO_SHOW = new('NO_SHOW')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

@@ -1,5 +1,4 @@
 # Instructor
-(*instructor*)
 
 ## Overview
 
@@ -18,24 +17,23 @@ Creates a LmsInstructor. Provide the unified LmsInstructor fields in the request
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createLmsInstructor" method="post" path="/lms/{connection_id}/instructor" -->
+<!-- UsageSnippet language="ruby" operationID="createLmsInstructor" method="post" path="/lms/{connection_id}/instructor" example="lms_instructor" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.instructor.create_lms_instructor(lms_instructor: Models::Shared::LmsInstructor.new(
   created_at: DateTime.iso8601('2021-10-12T16:38:54.979Z'),
   emails: [
-    Models::Shared::LmsEmail.new(),
+    Models::Shared::LmsEmail.new,
   ],
   first_name: 'Deangelo',
-  id: 'f26d9915-e0f7-407a-a37b-89a8d3a577dd',
+  id: 'f94337f3-d5d6-4abf-bc5e-8327de724ff4',
   image_url: 'https://avatars.githubusercontent.com/u/95131132',
   last_name: 'Ritchie',
   metadata: [],
@@ -43,15 +41,15 @@ res = s.instructor.create_lms_instructor(lms_instructor: Models::Shared::LmsInst
   telephones: [
     Models::Shared::LmsTelephone.new(
       telephone: '(605) 752-8163',
-      type: Models::Shared::LmsTelephoneType::WORK,
+      type: Models::Shared::LmsTelephoneType::WORK
     ),
     Models::Shared::LmsTelephone.new(
       telephone: '(430) 415-2451',
-      type: Models::Shared::LmsTelephoneType::HOME,
+      type: Models::Shared::LmsTelephoneType::HOME
     ),
   ],
   title: 'Regional Security Agent',
-  updated_at: DateTime.iso8601('2025-08-07T17:40:50.661Z'),
+  updated_at: DateTime.iso8601('2025-08-09T02:25:00.638Z')
 ), connection_id: '<id>')
 
 unless res.lms_instructor.nil?
@@ -91,11 +89,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.instructor.get_lms_instructor(connection_id: '<id>', id: '<id>')
 
 unless res.lms_instructor.nil?
@@ -135,15 +132,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListLmsInstructorsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListLmsInstructorsRequest.new(
+  connection_id: '<id>'
+)
 res = s.instructor.list_lms_instructors(request: req)
 
 unless res.lms_instructors.nil?
@@ -174,25 +170,25 @@ Updates the LmsInstructor identified by `id`. Provide the unified LmsInstructor 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchLmsInstructor" method="patch" path="/lms/{connection_id}/instructor/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchLmsInstructor" method="patch" path="/lms/{connection_id}/instructor/{id}" example="lms_instructor" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchLmsInstructorRequest.new(
   lms_instructor: Models::Shared::LmsInstructor.new(
     created_at: DateTime.iso8601('2021-10-12T16:38:54.979Z'),
     emails: [
-      Models::Shared::LmsEmail.new(),
+      Models::Shared::LmsEmail.new,
     ],
     first_name: 'Deangelo',
-    id: '4030ccba-36ca-4dac-9500-04b3e11f39ca',
+    id: '0c4dcc90-c19d-4d4f-ba89-a9abf98acc77',
     image_url: 'https://avatars.githubusercontent.com/u/95131132',
     last_name: 'Ritchie',
     metadata: [],
@@ -200,20 +196,19 @@ req = Models::Operations::PatchLmsInstructorRequest.new(
     telephones: [
       Models::Shared::LmsTelephone.new(
         telephone: '(605) 752-8163',
-        type: Models::Shared::LmsTelephoneType::WORK,
+        type: Models::Shared::LmsTelephoneType::WORK
       ),
       Models::Shared::LmsTelephone.new(
         telephone: '(430) 415-2451',
-        type: Models::Shared::LmsTelephoneType::HOME,
+        type: Models::Shared::LmsTelephoneType::HOME
       ),
     ],
     title: 'Regional Security Agent',
-    updated_at: DateTime.iso8601('2025-08-07T17:40:50.675Z'),
+    updated_at: DateTime.iso8601('2025-08-09T02:25:00.648Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.instructor.patch_lms_instructor(request: req)
 
 unless res.lms_instructor.nil?
@@ -250,11 +245,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.instructor.remove_lms_instructor(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -286,25 +280,25 @@ Updates the LmsInstructor identified by `id`. Provide the unified LmsInstructor 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateLmsInstructor" method="put" path="/lms/{connection_id}/instructor/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateLmsInstructor" method="put" path="/lms/{connection_id}/instructor/{id}" example="lms_instructor" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateLmsInstructorRequest.new(
   lms_instructor: Models::Shared::LmsInstructor.new(
     created_at: DateTime.iso8601('2021-10-12T16:38:54.979Z'),
     emails: [
-      Models::Shared::LmsEmail.new(),
+      Models::Shared::LmsEmail.new,
     ],
     first_name: 'Deangelo',
-    id: '4030ccba-36ca-4dac-9500-04b3e11f39ca',
+    id: '0c4dcc90-c19d-4d4f-ba89-a9abf98acc77',
     image_url: 'https://avatars.githubusercontent.com/u/95131132',
     last_name: 'Ritchie',
     metadata: [],
@@ -312,20 +306,19 @@ req = Models::Operations::UpdateLmsInstructorRequest.new(
     telephones: [
       Models::Shared::LmsTelephone.new(
         telephone: '(605) 752-8163',
-        type: Models::Shared::LmsTelephoneType::WORK,
+        type: Models::Shared::LmsTelephoneType::WORK
       ),
       Models::Shared::LmsTelephone.new(
         telephone: '(430) 415-2451',
-        type: Models::Shared::LmsTelephoneType::HOME,
+        type: Models::Shared::LmsTelephoneType::HOME
       ),
     ],
     title: 'Regional Security Agent',
-    updated_at: DateTime.iso8601('2025-08-07T17:40:50.675Z'),
+    updated_at: DateTime.iso8601('2025-08-09T02:25:00.648Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.instructor.update_lms_instructor(request: req)
 
 unless res.lms_instructor.nil?

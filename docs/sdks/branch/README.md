@@ -1,5 +1,4 @@
 # Branch
-(*branch*)
 
 ## Overview
 
@@ -18,24 +17,23 @@ Creates a RepoBranch. Provide the unified RepoBranch fields in the request body;
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createRepoBranch" method="post" path="/repo/{connection_id}/branch" -->
+<!-- UsageSnippet language="ruby" operationID="createRepoBranch" method="post" path="/repo/{connection_id}/branch" example="repo_branch" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.branch.create_repo_branch(repo_branch: Models::Shared::RepoBranch.new(
   created_at: DateTime.iso8601('2019-02-24T09:33:48.540Z'),
-  id: 'a9ea707c-27f4-4333-926b-d6866e7f86f2',
+  id: '44466354-b7bb-4b22-b1cf-ba2e2be81dc3',
   metadata: [],
   name: 'transmitter-calculate',
   repo_id: '<id>',
-  updated_at: DateTime.iso8601('2020-01-09T11:45:40.638Z'),
+  updated_at: DateTime.iso8601('2020-01-09T16:41:30.164Z')
 ), connection_id: '<id>')
 
 unless res.repo_branch.nil?
@@ -75,11 +73,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.branch.get_repo_branch(connection_id: '<id>', id: '<id>')
 
 unless res.repo_branch.nil?
@@ -119,15 +116,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListRepoBranchesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListRepoBranchesRequest.new(
+  connection_id: '<id>'
+)
 res = s.branch.list_repo_branches(request: req)
 
 unless res.repo_branches.nil?
@@ -158,30 +154,29 @@ Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchRepoBranch" method="patch" path="/repo/{connection_id}/branch/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchRepoBranch" method="patch" path="/repo/{connection_id}/branch/{id}" example="repo_branch" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchRepoBranchRequest.new(
   repo_branch: Models::Shared::RepoBranch.new(
     created_at: DateTime.iso8601('2019-02-24T09:33:48.540Z'),
-    id: '0483891c-0e1f-4dd3-b6d2-0e3a7bf95bc3',
+    id: 'de22307a-7a6c-43ea-bc24-6eae9fbcf704',
     metadata: [],
     name: 'transmitter-calculate',
     repo_id: '<id>',
-    updated_at: DateTime.iso8601('2020-01-09T11:45:40.638Z'),
+    updated_at: DateTime.iso8601('2020-01-09T16:41:30.165Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.branch.patch_repo_branch(request: req)
 
 unless res.repo_branch.nil?
@@ -218,11 +213,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.branch.remove_repo_branch(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -254,30 +248,29 @@ Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateRepoBranch" method="put" path="/repo/{connection_id}/branch/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateRepoBranch" method="put" path="/repo/{connection_id}/branch/{id}" example="repo_branch" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateRepoBranchRequest.new(
   repo_branch: Models::Shared::RepoBranch.new(
     created_at: DateTime.iso8601('2019-02-24T09:33:48.540Z'),
-    id: '0483891c-0e1f-4dd3-b6d2-0e3a7bf95bc3',
+    id: 'de22307a-7a6c-43ea-bc24-6eae9fbcf704',
     metadata: [],
     name: 'transmitter-calculate',
     repo_id: '<id>',
-    updated_at: DateTime.iso8601('2020-01-09T11:45:40.638Z'),
+    updated_at: DateTime.iso8601('2020-01-09T16:41:30.165Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.branch.update_repo_branch(request: req)
 
 unless res.repo_branch.nil?

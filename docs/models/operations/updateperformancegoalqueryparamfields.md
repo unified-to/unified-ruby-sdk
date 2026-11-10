@@ -1,5 +1,13 @@
 # UpdatePerformanceGoalQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = UpdatePerformanceGoalQueryParamFields::ID
+```
+
 
 ## Values
 

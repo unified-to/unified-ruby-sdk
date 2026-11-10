@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class ComputeEndpoint
         extend T::Sig
@@ -18,7 +17,7 @@ module UnifiedRubySDK
         # The port inside the instance
         field :port, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('port') } }
         # The protocol served on this port
-        field :protocol, Crystalline::Nilable.new(Models::Shared::Protocol), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('protocol'), 'decoder': Utils.enum_from_string(Models::Shared::Protocol, true) } }
+        field :protocol, Crystalline::Nilable.new(Models::Shared::Protocol), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('protocol'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::Protocol, true) } }
         # Public or proxied URL for this port
         field :url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
 

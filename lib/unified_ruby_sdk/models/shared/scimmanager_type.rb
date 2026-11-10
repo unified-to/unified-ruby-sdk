@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class ScimManagerType < T::Enum
-
-
+      class ScimManagerType
+        include ::Crystalline::Enum
         enums do
           DIRECT = new('direct')
           INDIRECT = new('indirect')
         end
+        open!
       end
     end
   end

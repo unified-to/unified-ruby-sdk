@@ -1,5 +1,13 @@
 # PatchCrmLeadQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PatchCrmLeadQueryParamFields::ID
+```
+
 
 ## Values
 

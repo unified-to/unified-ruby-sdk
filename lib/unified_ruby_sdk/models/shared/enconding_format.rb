@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class EncondingFormat < T::Enum
-
-
+      class EncondingFormat
+        include ::Crystalline::Enum
         enums do
           FLOAT = new('FLOAT')
           UINT8 = new('UINT8')
@@ -20,6 +18,7 @@ module UnifiedRubySDK
           UBINARY = new('UBINARY')
           BASE64 = new('BASE64')
         end
+        open!
       end
     end
   end

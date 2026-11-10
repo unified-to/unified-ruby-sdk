@@ -1,5 +1,4 @@
 # Scorecard
-(*scorecard*)
 
 ## Overview
 
@@ -20,35 +19,34 @@ Creates a AtsScorecard. Provide the unified AtsScorecard fields in the request b
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAtsScorecard" method="post" path="/ats/{connection_id}/scorecard" -->
+<!-- UsageSnippet language="ruby" operationID="createAtsScorecard" method="post" path="/ats/{connection_id}/scorecard" example="ats_scorecard" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.scorecard.create_ats_scorecard(ats_scorecard: Models::Shared::AtsScorecard.new(
   comment: 'Maiores enim.',
   created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
-  id: '898a21da-f110-4ca9-9af1-3ded641b098f',
+  id: 'a67ba59d-bbce-4ca4-8f8b-c11b10657db8',
   metadata: [],
   questions: [
     Models::Shared::AtsScorecardQuestion.new(
       description: 'Sulum textor eveniet facere vita.',
-      text: 'Aliquam.',
+      text: 'Aliquam.'
     ),
     Models::Shared::AtsScorecardQuestion.new(
       answer: 'Decretum.',
       description: 'Conatus cicuta doloremque statua bonus.',
-      text: 'Pecto vulpes libero vomer comburo.',
+      text: 'Pecto vulpes libero vomer comburo.'
     ),
   ],
   recommendation: Models::Shared::Recommendation::STRONG_YES,
-  updated_at: DateTime.iso8601('2023-06-10T19:29:41.904Z'),
+  updated_at: DateTime.iso8601('2023-06-11T07:29:30.805Z')
 ), connection_id: '<id>')
 
 unless res.ats_scorecard.nil?
@@ -88,11 +86,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.scorecard.get_ats_scorecard(connection_id: '<id>', id: '<id>')
 
 unless res.ats_scorecard.nil?
@@ -132,11 +129,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.scorecard.get_uc_scorecard(connection_id: '<id>', id: '<id>')
 
 unless res.uc_scorecard.nil?
@@ -176,15 +172,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAtsScorecardsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAtsScorecardsRequest.new(
+  connection_id: '<id>'
+)
 res = s.scorecard.list_ats_scorecards(request: req)
 
 unless res.ats_scorecards.nil?
@@ -221,15 +216,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListUcScorecardsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListUcScorecardsRequest.new(
+  connection_id: '<id>'
+)
 res = s.scorecard.list_uc_scorecards(request: req)
 
 unless res.uc_scorecards.nil?
@@ -260,41 +254,40 @@ Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAtsScorecard" method="patch" path="/ats/{connection_id}/scorecard/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAtsScorecard" method="patch" path="/ats/{connection_id}/scorecard/{id}" example="ats_scorecard" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAtsScorecardRequest.new(
   ats_scorecard: Models::Shared::AtsScorecard.new(
     comment: 'Maiores enim.',
     created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
-    id: 'bccbb015-e70b-4899-aeb6-484c54347266',
+    id: 'fde2a8c5-e220-4190-965b-ec6facfa7c51',
     metadata: [],
     questions: [
       Models::Shared::AtsScorecardQuestion.new(
         description: 'Sulum textor eveniet facere vita.',
-        text: 'Aliquam.',
+        text: 'Aliquam.'
       ),
       Models::Shared::AtsScorecardQuestion.new(
         answer: 'Decretum.',
         description: 'Conatus cicuta doloremque statua bonus.',
-        text: 'Pecto vulpes libero vomer comburo.',
+        text: 'Pecto vulpes libero vomer comburo.'
       ),
     ],
     recommendation: Models::Shared::Recommendation::STRONG_YES,
-    updated_at: DateTime.iso8601('2023-06-10T19:29:41.911Z'),
+    updated_at: DateTime.iso8601('2023-06-11T07:29:30.808Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.scorecard.patch_ats_scorecard(request: req)
 
 unless res.ats_scorecard.nil?
@@ -331,11 +324,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.scorecard.remove_ats_scorecard(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -367,41 +359,40 @@ Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAtsScorecard" method="put" path="/ats/{connection_id}/scorecard/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAtsScorecard" method="put" path="/ats/{connection_id}/scorecard/{id}" example="ats_scorecard" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAtsScorecardRequest.new(
   ats_scorecard: Models::Shared::AtsScorecard.new(
     comment: 'Maiores enim.',
     created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
-    id: 'bccbb015-e70b-4899-aeb6-484c54347266',
+    id: 'fde2a8c5-e220-4190-965b-ec6facfa7c51',
     metadata: [],
     questions: [
       Models::Shared::AtsScorecardQuestion.new(
         description: 'Sulum textor eveniet facere vita.',
-        text: 'Aliquam.',
+        text: 'Aliquam.'
       ),
       Models::Shared::AtsScorecardQuestion.new(
         answer: 'Decretum.',
         description: 'Conatus cicuta doloremque statua bonus.',
-        text: 'Pecto vulpes libero vomer comburo.',
+        text: 'Pecto vulpes libero vomer comburo.'
       ),
     ],
     recommendation: Models::Shared::Recommendation::STRONG_YES,
-    updated_at: DateTime.iso8601('2023-06-10T19:29:41.911Z'),
+    updated_at: DateTime.iso8601('2023-06-11T07:29:30.808Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.scorecard.update_ats_scorecard(request: req)
 
 unless res.ats_scorecard.nil?

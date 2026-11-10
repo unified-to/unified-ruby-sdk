@@ -1,5 +1,4 @@
 # Contact
-(*contact*)
 
 ## Overview
 
@@ -30,17 +29,16 @@ Creates a AccountingContact. Provide the unified AccountingContact fields in the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAccountingContact" method="post" path="/accounting/{connection_id}/contact" -->
+<!-- UsageSnippet language="ruby" operationID="createAccountingContact" method="post" path="/accounting/{connection_id}/contact" example="accounting_contact" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.contact.create_accounting_contact(accounting_contact: Models::Shared::AccountingContact.new(
   associated_contacts: [],
   balance_amount: 55_574.0,
@@ -50,7 +48,7 @@ res = s.contact.create_accounting_contact(accounting_contact: Models::Shared::Ac
     country_code: 'US',
     postal_code: '50764-5226',
     region: 'Washington',
-    region_code: 'CA',
+    region_code: 'CA'
   ),
   company_name: 'Kertzmann Group',
   created_at: DateTime.iso8601('2021-08-15T14:56:50.258Z'),
@@ -58,15 +56,15 @@ res = s.contact.create_accounting_contact(accounting_contact: Models::Shared::Ac
   emails: [
     Models::Shared::AccountingEmail.new(
       email: 'delores.reynolds@kertzmanngroup.com',
-      type: Models::Shared::AccountingEmailType::WORK,
+      type: Models::Shared::AccountingEmailType::WORK
     ),
     Models::Shared::AccountingEmail.new(
       email: 'accounts@kertzmanngroup.com',
-      type: Models::Shared::AccountingEmailType::OTHER,
+      type: Models::Shared::AccountingEmailType::OTHER
     ),
   ],
   first_name: 'Delores',
-  id: '2f6d4731-f405-4c86-ba9b-c4f76a26f8d4',
+  id: 'dd7ccea0-cee7-4765-b5a9-024b9f806933',
   identification: '531850872',
   is_active: true,
   is_customer: true,
@@ -77,9 +75,9 @@ res = s.contact.create_accounting_contact(accounting_contact: Models::Shared::Ac
   payment_methods: [
     Models::Shared::AccountingContactPaymentMethod.new(
       default: true,
-      id: 'a340078d-74eb-4bdc-b818-cbbf66aba15f',
+      id: '06bfd16c-7f85-41bd-8a63-e0ec94a0c27c',
       name: 'Visa 7844',
-      type: Models::Shared::AccountingContactPaymentMethodType::CARD,
+      type: Models::Shared::AccountingContactPaymentMethodType::CARD
     ),
   ],
   portal_url: 'https://kertzmanngroup.com/billing',
@@ -89,18 +87,18 @@ res = s.contact.create_accounting_contact(accounting_contact: Models::Shared::Ac
     country_code: 'US',
     postal_code: '55878-6806',
     region: 'Florida',
-    region_code: 'OK',
+    region_code: 'OK'
   ),
   tax_exemption: Models::Shared::TaxExemption::FOREIGN,
   tax_number: '867556410',
   telephones: [
     Models::Shared::AccountingTelephone.new(
       telephone: '(432) 760-1716',
-      type: Models::Shared::AccountingTelephoneType::FAX,
+      type: Models::Shared::AccountingTelephoneType::FAX
     ),
   ],
-  updated_at: DateTime.iso8601('2023-12-28T11:14:49.650Z'),
-  website: 'https://kertzmanngroup.com',
+  updated_at: DateTime.iso8601('2023-12-29T06:55:30.745Z'),
+  website: 'https://kertzmanngroup.com'
 ), connection_id: '<id>')
 
 unless res.accounting_contact.nil?
@@ -134,17 +132,16 @@ Creates a CrmContact. Provide the unified CrmContact fields in the request body;
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCrmContact" method="post" path="/crm/{connection_id}/contact" -->
+<!-- UsageSnippet language="ruby" operationID="createCrmContact" method="post" path="/crm/{connection_id}/contact" example="crm_contact" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.contact.create_crm_contact(crm_contact: Models::Shared::CrmContact.new(
   address: Models::Shared::PropertyCrmContactAddress.new(
     address1: '65838 College Avenue',
@@ -153,18 +150,18 @@ res = s.contact.create_crm_contact(crm_contact: Models::Shared::CrmContact.new(
     country_code: 'US',
     postal_code: '80888-6094',
     region: 'Montana',
-    region_code: 'NM',
+    region_code: 'NM'
   ),
   created_at: DateTime.iso8601('2021-01-02T00:41:38.885Z'),
   department: 'Beauty',
   emails: [
     Models::Shared::CrmEmail.new(
       email: 'mohammad.bartell@hotmail.com',
-      type: Models::Shared::CrmEmailType::HOME,
+      type: Models::Shared::CrmEmailType::HOME
     ),
   ],
   first_name: 'Mohammad',
-  id: '2a8e2074-d6e3-4064-b28a-bfb512357721',
+  id: 'b12f5cd1-ae6f-434b-b664-89b07f7d9639',
   image_url: 'https://avatars.githubusercontent.com/u/26803724',
   last_name: 'Bartell',
   link_urls: [
@@ -173,28 +170,28 @@ res = s.contact.create_crm_contact(crm_contact: Models::Shared::CrmContact.new(
   metadata: [
     Models::Shared::CrmMetadata.new(
       extra_data: {
-        "display_name": 'Custom Property',
+        'display_name' => 'Custom Property',
       },
       format: Models::Shared::CrmMetadataFormat::TEXT,
-      id: 'e6a97c18-d459-4f0b-b354-85b6de89804b',
+      id: '0c6a4612-bd73-4eb7-9817-f6198fd8b75a',
       namespace: 'custom',
       slug: 'custom_property',
-      value: 'antiquus',
+      value: 'antiquus'
     ),
   ],
   name: 'Mohammad Bartell',
   telephones: [
     Models::Shared::CrmTelephone.new(
       telephone: '(254) 404-3529',
-      type: Models::Shared::CrmTelephoneType::OTHER,
+      type: Models::Shared::CrmTelephoneType::OTHER
     ),
     Models::Shared::CrmTelephone.new(
       telephone: '(469) 989-7588',
-      type: Models::Shared::CrmTelephoneType::WORK,
+      type: Models::Shared::CrmTelephoneType::WORK
     ),
   ],
   title: 'National Tactics Analyst',
-  updated_at: DateTime.iso8601('2021-02-24T16:33:46.729Z'),
+  updated_at: DateTime.iso8601('2021-02-24T17:39:18.215Z')
 ), connection_id: '<id>')
 
 unless res.crm_contact.nil?
@@ -228,47 +225,46 @@ Creates a UcContact. Provide the unified UcContact fields in the request body; t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createUcContact" method="post" path="/uc/{connection_id}/contact" -->
+<!-- UsageSnippet language="ruby" operationID="createUcContact" method="post" path="/uc/{connection_id}/contact" example="uc_contact" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.contact.create_uc_contact(uc_contact: Models::Shared::UcContact.new(
   company: 'Tillman Group',
   created_at: DateTime.iso8601('2019-10-28T11:06:56.460Z'),
   emails: [
     Models::Shared::UcEmail.new(
       email: 'Luther_Rogahn32@yahoo.com',
-      type: Models::Shared::UcEmailType::WORK,
+      type: Models::Shared::UcEmailType::WORK
     ),
   ],
   first_name: 'Luther',
-  id: 'd708c619-2c41-4602-b862-9055f6baea3e',
+  id: '2fd72b4b-e7f5-45c2-957a-c11d298bbd04',
   last_name: 'Rogahn',
   metadata: [],
   name: 'Luther Rogahn',
   telephones: [
     Models::Shared::UcTelephone.new(
       telephone: '(809) 992-1681',
-      type: Models::Shared::UcTelephoneType::FAX,
+      type: Models::Shared::UcTelephoneType::FAX
     ),
     Models::Shared::UcTelephone.new(
       telephone: '(868) 238-2746',
-      type: Models::Shared::UcTelephoneType::HOME,
+      type: Models::Shared::UcTelephoneType::HOME
     ),
     Models::Shared::UcTelephone.new(
       telephone: '(219) 736-0357',
-      type: Models::Shared::UcTelephoneType::MOBILE,
+      type: Models::Shared::UcTelephoneType::MOBILE
     ),
   ],
   title: 'Chief Optimization Executive',
-  updated_at: DateTime.iso8601('2023-12-19T13:49:10.415Z'),
+  updated_at: DateTime.iso8601('2023-12-20T15:26:22.060Z')
 ), connection_id: '<id>')
 
 unless res.uc_contact.nil?
@@ -308,11 +304,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.contact.get_accounting_contact(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_contact.nil?
@@ -352,11 +347,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.contact.get_crm_contact(connection_id: '<id>', id: '<id>')
 
 unless res.crm_contact.nil?
@@ -396,11 +390,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.contact.get_uc_contact(connection_id: '<id>', id: '<id>')
 
 unless res.uc_contact.nil?
@@ -440,15 +433,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingContactsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingContactsRequest.new(
+  connection_id: '<id>'
+)
 res = s.contact.list_accounting_contacts(request: req)
 
 unless res.accounting_contacts.nil?
@@ -485,15 +477,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCrmContactsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCrmContactsRequest.new(
+  connection_id: '<id>'
+)
 res = s.contact.list_crm_contacts(request: req)
 
 unless res.crm_contacts.nil?
@@ -530,15 +521,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListUcContactsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListUcContactsRequest.new(
+  connection_id: '<id>'
+)
 res = s.contact.list_uc_contacts(request: req)
 
 unless res.uc_contacts.nil?
@@ -569,16 +559,16 @@ Updates the AccountingContact identified by `id`. Provide the unified Accounting
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAccountingContact" method="patch" path="/accounting/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAccountingContact" method="patch" path="/accounting/{connection_id}/contact/{id}" example="accounting_contact" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAccountingContactRequest.new(
   accounting_contact: Models::Shared::AccountingContact.new(
@@ -590,7 +580,7 @@ req = Models::Operations::PatchAccountingContactRequest.new(
       country_code: 'US',
       postal_code: '50764-5226',
       region: 'Washington',
-      region_code: 'CA',
+      region_code: 'CA'
     ),
     company_name: 'Kertzmann Group',
     created_at: DateTime.iso8601('2021-08-15T14:56:50.258Z'),
@@ -598,15 +588,15 @@ req = Models::Operations::PatchAccountingContactRequest.new(
     emails: [
       Models::Shared::AccountingEmail.new(
         email: 'delores.reynolds@kertzmanngroup.com',
-        type: Models::Shared::AccountingEmailType::WORK,
+        type: Models::Shared::AccountingEmailType::WORK
       ),
       Models::Shared::AccountingEmail.new(
         email: 'accounts@kertzmanngroup.com',
-        type: Models::Shared::AccountingEmailType::OTHER,
+        type: Models::Shared::AccountingEmailType::OTHER
       ),
     ],
     first_name: 'Delores',
-    id: 'a08966fd-4ea7-48b7-ac2b-d5b6b595affb',
+    id: '90e1a5c0-fae8-424a-870e-e6b9fee9fe07',
     identification: '531850872',
     is_active: true,
     is_customer: true,
@@ -617,9 +607,9 @@ req = Models::Operations::PatchAccountingContactRequest.new(
     payment_methods: [
       Models::Shared::AccountingContactPaymentMethod.new(
         default: true,
-        id: 'b4dbd23d-74e2-4960-bea3-a87c7a9d7655',
+        id: 'f78084ea-d876-4f6d-a847-98f2b77a5bd5',
         name: 'Visa 7844',
-        type: Models::Shared::AccountingContactPaymentMethodType::CARD,
+        type: Models::Shared::AccountingContactPaymentMethodType::CARD
       ),
     ],
     portal_url: 'https://kertzmanngroup.com/billing',
@@ -629,23 +619,22 @@ req = Models::Operations::PatchAccountingContactRequest.new(
       country_code: 'US',
       postal_code: '55878-6806',
       region: 'Florida',
-      region_code: 'OK',
+      region_code: 'OK'
     ),
     tax_exemption: Models::Shared::TaxExemption::FOREIGN,
     tax_number: '867556410',
     telephones: [
       Models::Shared::AccountingTelephone.new(
         telephone: '(432) 760-1716',
-        type: Models::Shared::AccountingTelephoneType::FAX,
+        type: Models::Shared::AccountingTelephoneType::FAX
       ),
     ],
-    updated_at: DateTime.iso8601('2023-12-28T11:14:49.676Z'),
-    website: 'https://kertzmanngroup.com',
+    updated_at: DateTime.iso8601('2023-12-29T06:55:30.765Z'),
+    website: 'https://kertzmanngroup.com'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.contact.patch_accounting_contact(request: req)
 
 unless res.accounting_contact.nil?
@@ -676,16 +665,16 @@ Updates the CrmContact identified by `id`. Provide the unified CrmContact fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCrmContact" method="patch" path="/crm/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCrmContact" method="patch" path="/crm/{connection_id}/contact/{id}" example="crm_contact" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchCrmContactRequest.new(
   crm_contact: Models::Shared::CrmContact.new(
@@ -696,18 +685,18 @@ req = Models::Operations::PatchCrmContactRequest.new(
       country_code: 'US',
       postal_code: '80888-6094',
       region: 'Montana',
-      region_code: 'NM',
+      region_code: 'NM'
     ),
     created_at: DateTime.iso8601('2021-01-02T00:41:38.885Z'),
     department: 'Beauty',
     emails: [
       Models::Shared::CrmEmail.new(
         email: 'mohammad.bartell@hotmail.com',
-        type: Models::Shared::CrmEmailType::HOME,
+        type: Models::Shared::CrmEmailType::HOME
       ),
     ],
     first_name: 'Mohammad',
-    id: '972d8e03-ea55-4ab4-b764-740c9ad4b5c1',
+    id: '4067cdb4-2ad8-4e38-842a-faed640aa05c',
     image_url: 'https://avatars.githubusercontent.com/u/26803724',
     last_name: 'Bartell',
     link_urls: [
@@ -716,33 +705,32 @@ req = Models::Operations::PatchCrmContactRequest.new(
     metadata: [
       Models::Shared::CrmMetadata.new(
         extra_data: {
-          "display_name": 'Custom Property',
+          'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '45ba4497-12a4-41b9-b894-1267e27b5426',
+        id: '46f36b5f-1c19-4709-a804-c0e7b155410a',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'antiquus',
+        value: 'antiquus'
       ),
     ],
     name: 'Mohammad Bartell',
     telephones: [
       Models::Shared::CrmTelephone.new(
         telephone: '(254) 404-3529',
-        type: Models::Shared::CrmTelephoneType::OTHER,
+        type: Models::Shared::CrmTelephoneType::OTHER
       ),
       Models::Shared::CrmTelephone.new(
         telephone: '(469) 989-7588',
-        type: Models::Shared::CrmTelephoneType::WORK,
+        type: Models::Shared::CrmTelephoneType::WORK
       ),
     ],
     title: 'National Tactics Analyst',
-    updated_at: DateTime.iso8601('2021-02-24T16:33:46.729Z'),
+    updated_at: DateTime.iso8601('2021-02-24T17:39:18.216Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.contact.patch_crm_contact(request: req)
 
 unless res.crm_contact.nil?
@@ -773,16 +761,16 @@ Updates the UcContact identified by `id`. Provide the unified UcContact fields t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchUcContact" method="patch" path="/uc/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchUcContact" method="patch" path="/uc/{connection_id}/contact/{id}" example="uc_contact" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchUcContactRequest.new(
   uc_contact: Models::Shared::UcContact.new(
@@ -791,35 +779,34 @@ req = Models::Operations::PatchUcContactRequest.new(
     emails: [
       Models::Shared::UcEmail.new(
         email: 'Luther_Rogahn32@yahoo.com',
-        type: Models::Shared::UcEmailType::WORK,
+        type: Models::Shared::UcEmailType::WORK
       ),
     ],
     first_name: 'Luther',
-    id: '8ec83ce6-8e90-45fd-bae4-725df8231833',
+    id: 'e74b9051-98ad-4b9d-8e2e-bf14fd7ce474',
     last_name: 'Rogahn',
     metadata: [],
     name: 'Luther Rogahn',
     telephones: [
       Models::Shared::UcTelephone.new(
         telephone: '(809) 992-1681',
-        type: Models::Shared::UcTelephoneType::FAX,
+        type: Models::Shared::UcTelephoneType::FAX
       ),
       Models::Shared::UcTelephone.new(
         telephone: '(868) 238-2746',
-        type: Models::Shared::UcTelephoneType::HOME,
+        type: Models::Shared::UcTelephoneType::HOME
       ),
       Models::Shared::UcTelephone.new(
         telephone: '(219) 736-0357',
-        type: Models::Shared::UcTelephoneType::MOBILE,
+        type: Models::Shared::UcTelephoneType::MOBILE
       ),
     ],
     title: 'Chief Optimization Executive',
-    updated_at: DateTime.iso8601('2023-12-19T13:49:10.430Z'),
+    updated_at: DateTime.iso8601('2023-12-20T15:26:22.068Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.contact.patch_uc_contact(request: req)
 
 unless res.uc_contact.nil?
@@ -856,11 +843,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.contact.remove_accounting_contact(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -898,11 +884,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.contact.remove_crm_contact(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -940,11 +925,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.contact.remove_uc_contact(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -976,16 +960,16 @@ Updates the AccountingContact identified by `id`. Provide the unified Accounting
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAccountingContact" method="put" path="/accounting/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAccountingContact" method="put" path="/accounting/{connection_id}/contact/{id}" example="accounting_contact" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAccountingContactRequest.new(
   accounting_contact: Models::Shared::AccountingContact.new(
@@ -997,7 +981,7 @@ req = Models::Operations::UpdateAccountingContactRequest.new(
       country_code: 'US',
       postal_code: '50764-5226',
       region: 'Washington',
-      region_code: 'CA',
+      region_code: 'CA'
     ),
     company_name: 'Kertzmann Group',
     created_at: DateTime.iso8601('2021-08-15T14:56:50.258Z'),
@@ -1005,15 +989,15 @@ req = Models::Operations::UpdateAccountingContactRequest.new(
     emails: [
       Models::Shared::AccountingEmail.new(
         email: 'delores.reynolds@kertzmanngroup.com',
-        type: Models::Shared::AccountingEmailType::WORK,
+        type: Models::Shared::AccountingEmailType::WORK
       ),
       Models::Shared::AccountingEmail.new(
         email: 'accounts@kertzmanngroup.com',
-        type: Models::Shared::AccountingEmailType::OTHER,
+        type: Models::Shared::AccountingEmailType::OTHER
       ),
     ],
     first_name: 'Delores',
-    id: 'a08966fd-4ea7-48b7-ac2b-d5b6b595affb',
+    id: '90e1a5c0-fae8-424a-870e-e6b9fee9fe07',
     identification: '531850872',
     is_active: true,
     is_customer: true,
@@ -1024,9 +1008,9 @@ req = Models::Operations::UpdateAccountingContactRequest.new(
     payment_methods: [
       Models::Shared::AccountingContactPaymentMethod.new(
         default: true,
-        id: 'b4dbd23d-74e2-4960-bea3-a87c7a9d7655',
+        id: 'f78084ea-d876-4f6d-a847-98f2b77a5bd5',
         name: 'Visa 7844',
-        type: Models::Shared::AccountingContactPaymentMethodType::CARD,
+        type: Models::Shared::AccountingContactPaymentMethodType::CARD
       ),
     ],
     portal_url: 'https://kertzmanngroup.com/billing',
@@ -1036,23 +1020,22 @@ req = Models::Operations::UpdateAccountingContactRequest.new(
       country_code: 'US',
       postal_code: '55878-6806',
       region: 'Florida',
-      region_code: 'OK',
+      region_code: 'OK'
     ),
     tax_exemption: Models::Shared::TaxExemption::FOREIGN,
     tax_number: '867556410',
     telephones: [
       Models::Shared::AccountingTelephone.new(
         telephone: '(432) 760-1716',
-        type: Models::Shared::AccountingTelephoneType::FAX,
+        type: Models::Shared::AccountingTelephoneType::FAX
       ),
     ],
-    updated_at: DateTime.iso8601('2023-12-28T11:14:49.676Z'),
-    website: 'https://kertzmanngroup.com',
+    updated_at: DateTime.iso8601('2023-12-29T06:55:30.765Z'),
+    website: 'https://kertzmanngroup.com'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.contact.update_accounting_contact(request: req)
 
 unless res.accounting_contact.nil?
@@ -1083,16 +1066,16 @@ Updates the CrmContact identified by `id`. Provide the unified CrmContact fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCrmContact" method="put" path="/crm/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCrmContact" method="put" path="/crm/{connection_id}/contact/{id}" example="crm_contact" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateCrmContactRequest.new(
   crm_contact: Models::Shared::CrmContact.new(
@@ -1103,18 +1086,18 @@ req = Models::Operations::UpdateCrmContactRequest.new(
       country_code: 'US',
       postal_code: '80888-6094',
       region: 'Montana',
-      region_code: 'NM',
+      region_code: 'NM'
     ),
     created_at: DateTime.iso8601('2021-01-02T00:41:38.885Z'),
     department: 'Beauty',
     emails: [
       Models::Shared::CrmEmail.new(
         email: 'mohammad.bartell@hotmail.com',
-        type: Models::Shared::CrmEmailType::HOME,
+        type: Models::Shared::CrmEmailType::HOME
       ),
     ],
     first_name: 'Mohammad',
-    id: '972d8e03-ea55-4ab4-b764-740c9ad4b5c1',
+    id: '4067cdb4-2ad8-4e38-842a-faed640aa05c',
     image_url: 'https://avatars.githubusercontent.com/u/26803724',
     last_name: 'Bartell',
     link_urls: [
@@ -1123,33 +1106,32 @@ req = Models::Operations::UpdateCrmContactRequest.new(
     metadata: [
       Models::Shared::CrmMetadata.new(
         extra_data: {
-          "display_name": 'Custom Property',
+          'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '45ba4497-12a4-41b9-b894-1267e27b5426',
+        id: '46f36b5f-1c19-4709-a804-c0e7b155410a',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'antiquus',
+        value: 'antiquus'
       ),
     ],
     name: 'Mohammad Bartell',
     telephones: [
       Models::Shared::CrmTelephone.new(
         telephone: '(254) 404-3529',
-        type: Models::Shared::CrmTelephoneType::OTHER,
+        type: Models::Shared::CrmTelephoneType::OTHER
       ),
       Models::Shared::CrmTelephone.new(
         telephone: '(469) 989-7588',
-        type: Models::Shared::CrmTelephoneType::WORK,
+        type: Models::Shared::CrmTelephoneType::WORK
       ),
     ],
     title: 'National Tactics Analyst',
-    updated_at: DateTime.iso8601('2021-02-24T16:33:46.729Z'),
+    updated_at: DateTime.iso8601('2021-02-24T17:39:18.216Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.contact.update_crm_contact(request: req)
 
 unless res.crm_contact.nil?
@@ -1180,16 +1162,16 @@ Updates the UcContact identified by `id`. Provide the unified UcContact fields t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateUcContact" method="put" path="/uc/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateUcContact" method="put" path="/uc/{connection_id}/contact/{id}" example="uc_contact" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateUcContactRequest.new(
   uc_contact: Models::Shared::UcContact.new(
@@ -1198,35 +1180,34 @@ req = Models::Operations::UpdateUcContactRequest.new(
     emails: [
       Models::Shared::UcEmail.new(
         email: 'Luther_Rogahn32@yahoo.com',
-        type: Models::Shared::UcEmailType::WORK,
+        type: Models::Shared::UcEmailType::WORK
       ),
     ],
     first_name: 'Luther',
-    id: '8ec83ce6-8e90-45fd-bae4-725df8231833',
+    id: 'e74b9051-98ad-4b9d-8e2e-bf14fd7ce474',
     last_name: 'Rogahn',
     metadata: [],
     name: 'Luther Rogahn',
     telephones: [
       Models::Shared::UcTelephone.new(
         telephone: '(809) 992-1681',
-        type: Models::Shared::UcTelephoneType::FAX,
+        type: Models::Shared::UcTelephoneType::FAX
       ),
       Models::Shared::UcTelephone.new(
         telephone: '(868) 238-2746',
-        type: Models::Shared::UcTelephoneType::HOME,
+        type: Models::Shared::UcTelephoneType::HOME
       ),
       Models::Shared::UcTelephone.new(
         telephone: '(219) 736-0357',
-        type: Models::Shared::UcTelephoneType::MOBILE,
+        type: Models::Shared::UcTelephoneType::MOBILE
       ),
     ],
     title: 'Chief Optimization Executive',
-    updated_at: DateTime.iso8601('2023-12-19T13:49:10.430Z'),
+    updated_at: DateTime.iso8601('2023-12-20T15:26:22.068Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.contact.update_uc_contact(request: req)
 
 unless res.uc_contact.nil?

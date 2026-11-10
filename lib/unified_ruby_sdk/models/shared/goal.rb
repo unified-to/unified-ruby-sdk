@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class Goal < T::Enum
-
-
+      class Goal
+        include ::Crystalline::Enum
         enums do
           UNSPECIFIED = new('UNSPECIFIED')
           BRAND_AWARENESS = new('BRAND_AWARENESS')
@@ -22,6 +20,7 @@ module UnifiedRubySDK
           SALES = new('SALES')
           APP_PROMOTION = new('APP_PROMOTION')
         end
+        open!
       end
     end
   end

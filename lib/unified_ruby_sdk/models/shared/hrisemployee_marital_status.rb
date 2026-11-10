@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class HrisEmployeeMaritalStatus < T::Enum
-
-
+      class HrisEmployeeMaritalStatus
+        include ::Crystalline::Enum
         enums do
           MARRIED = new('MARRIED')
           SINGLE = new('SINGLE')
         end
+        open!
       end
     end
   end

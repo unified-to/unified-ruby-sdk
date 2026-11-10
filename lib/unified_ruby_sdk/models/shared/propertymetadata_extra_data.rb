@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # additional data about the custom field
       class PropertyMetadataExtraData
         extend T::Sig

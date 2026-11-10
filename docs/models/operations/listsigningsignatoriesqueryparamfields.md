@@ -1,5 +1,13 @@
 # ListSigningSignatoriesQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListSigningSignatoriesQueryParamFields::ID
+```
+
 
 ## Values
 

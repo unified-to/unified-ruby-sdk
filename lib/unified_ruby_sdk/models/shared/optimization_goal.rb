@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # OptimizationGoal - Optimization goals for ads_group (cross-platform; platform-specific values allowed as pass-through)
-      class OptimizationGoal < T::Enum
-
-
+      class OptimizationGoal
+        include ::Crystalline::Enum
         enums do
           REACH = new('REACH')
           IMPRESSIONS = new('IMPRESSIONS')
@@ -26,6 +24,7 @@ module UnifiedRubySDK
           PAGE_LIKES = new('PAGE_LIKES')
           MESSAGES = new('MESSAGES')
         end
+        open!
       end
     end
   end

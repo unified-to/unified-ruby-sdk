@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class AtsJobStatus < T::Enum
-
-
+      class AtsJobStatus
+        include ::Crystalline::Enum
         enums do
           ARCHIVED = new('ARCHIVED')
           PENDING = new('PENDING')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           OPEN = new('OPEN')
           CLOSED = new('CLOSED')
         end
+        open!
       end
     end
   end

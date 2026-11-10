@@ -1,5 +1,4 @@
 # Conversation
-(*conversation*)
 
 ## Overview
 
@@ -15,44 +14,43 @@ Creates a PropertyConversation. Provide the unified PropertyConversation fields 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createPropertyConversation" method="post" path="/property/{connection_id}/conversation" -->
+<!-- UsageSnippet language="ruby" operationID="createPropertyConversation" method="post" path="/property/{connection_id}/conversation" example="property_conversation" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.conversation.create_property_conversation(property_conversation: Models::Shared::PropertyConversation.new(
   created_at: DateTime.iso8601('2022-06-20T00:02:46.530Z'),
   guest_name: 'Evie Okuneva',
-  id: '305851d8-09b4-4fae-9458-20398807d4f9',
+  id: '3570e01f-3343-4dde-b59b-9c1c725d5a87',
   is_unread: false,
   messages: [
     Models::Shared::PropertyMessage.new(
       attachments: [],
-      created_at: DateTime.iso8601('2025-04-28T21:51:17.104Z'),
-      id: '201a2baa-f429-46d4-a285-b13ddd585794',
+      created_at: DateTime.iso8601('2025-04-30T02:10:33.945Z'),
+      id: 'bd596697-b852-4458-ac76-a909eaa751c4',
       is_automatic: false,
       message: 'Vinitor caterva amor sophismata admitto colo tempore aufero torrens.',
       sender_name: 'Evie Okuneva',
-      sender_type: Models::Shared::SenderType::GUEST,
+      sender_type: Models::Shared::SenderType::GUEST
     ),
     Models::Shared::PropertyMessage.new(
       attachments: [],
-      created_at: DateTime.iso8601('2026-05-14T13:12:27.824Z'),
-      id: '4670e725-5971-4fe5-b149-dcd7b100c3ba',
+      created_at: DateTime.iso8601('2026-05-16T03:51:21.118Z'),
+      id: '1b99fe84-ef5a-40eb-b223-b721bba999e7',
       message: 'Aequitas torqueo curiositas cimentarius repellendus auditor degero ademptio adnuo.',
       sender_name: 'Ms. Patti Lynch',
-      sender_type: Models::Shared::SenderType::HOST,
+      sender_type: Models::Shared::SenderType::HOST
     ),
   ],
   metadata: [],
   source: 'Airbnb',
-  updated_at: DateTime.iso8601('2026-05-14T13:12:27.824Z'),
+  updated_at: DateTime.iso8601('2026-05-16T03:51:21.118Z')
 ), connection_id: '<id>')
 
 unless res.property_conversation.nil?
@@ -92,11 +90,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.conversation.get_property_conversation(connection_id: '<id>', id: '<id>')
 
 unless res.property_conversation.nil?
@@ -136,15 +133,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListPropertyConversationsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListPropertyConversationsRequest.new(
+  connection_id: '<id>'
+)
 res = s.conversation.list_property_conversations(request: req)
 
 unless res.property_conversations.nil?

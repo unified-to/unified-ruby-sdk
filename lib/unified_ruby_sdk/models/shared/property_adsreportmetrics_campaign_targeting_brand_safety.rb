@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Brand safety (Meta: excluded_publisher_categories, etc.; Google
       class PropertyAdsReportMetricsCampaignTargetingBrandSafety
         extend T::Sig

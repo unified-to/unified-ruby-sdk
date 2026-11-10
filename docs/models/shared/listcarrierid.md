@@ -1,5 +1,16 @@
 # ListCarrierId
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListCarrierId::SUPPORTED_REQUIRED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = ListCarrierId.deserialize("custom_value")
+```
+
 
 ## Values
 

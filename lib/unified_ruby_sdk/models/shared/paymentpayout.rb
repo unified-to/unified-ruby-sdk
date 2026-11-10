@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class PaymentPayout
         extend T::Sig
@@ -16,7 +15,7 @@ module UnifiedRubySDK
         # ref -> AccountingAccount; the destination account (reference to AccountingAccount)
         field :account_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('account_id') } }
         # Date the funds land in the destination account (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :arrival_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('arrival_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :arrival_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('arrival_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at') } }
 
@@ -34,15 +33,15 @@ module UnifiedRubySDK
 
         field :notes, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :status, Crystalline::Nilable.new(Models::Shared::PaymentPayoutStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::PaymentPayoutStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::PaymentPayoutStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PaymentPayoutStatus, true) } }
 
         field :total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at') } }
 
-        sig { params(account_id: T.nilable(::String), arrival_at: T.nilable(::DateTime), created_at: T.nilable(::String), currency: T.nilable(::String), fee_amount: T.nilable(::Float), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::PaymentPayoutLineitem]), metadata: T.nilable(T::Array[Models::Shared::PaymentMetadata]), net_amount: T.nilable(::Float), notes: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::PaymentPayoutStatus), total_amount: T.nilable(::Float), updated_at: T.nilable(::String)).void }
+        sig { params(account_id: T.nilable(::String), arrival_at: T.nilable(::DateTime), created_at: T.nilable(::String), currency: T.nilable(::String), fee_amount: T.nilable(::Float), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::PaymentPayoutLineitem]), metadata: T.nilable(T::Array[Models::Shared::PaymentMetadata]), net_amount: T.nilable(::Float), notes: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), status: T.nilable(Models::Shared::PaymentPayoutStatus), total_amount: T.nilable(::Float), updated_at: T.nilable(::String)).void }
         def initialize(account_id: nil, arrival_at: nil, created_at: nil, currency: nil, fee_amount: nil, id: nil, lineitems: nil, metadata: nil, net_amount: nil, notes: nil, raw: nil, status: nil, total_amount: nil, updated_at: nil)
           @account_id = account_id
           @arrival_at = arrival_at

@@ -1,5 +1,16 @@
 # PropertyComputeRegionGpuModels
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PropertyComputeRegionGpuModels::NVIDIA_GB300
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = PropertyComputeRegionGpuModels.deserialize("custom_value")
+```
+
 
 ## Values
 

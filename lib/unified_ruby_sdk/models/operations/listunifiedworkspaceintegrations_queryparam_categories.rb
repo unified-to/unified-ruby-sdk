@@ -7,11 +7,8 @@
 module UnifiedRubySDK
   module Models
     module Operations
-    
 
       class ListUnifiedWorkspaceintegrationsQueryParamCategories < T::Enum
-
-
         enums do
           PASSTHROUGH = new('passthrough')
           HRIS = new('hris')

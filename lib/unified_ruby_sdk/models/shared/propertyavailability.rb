@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class PropertyAvailability
         extend T::Sig
@@ -16,7 +15,7 @@ module UnifiedRubySDK
         # ISO 4217 currency code
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
         # the end of the availability period (exclusive) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # pointer to the Property Listing
         field :listing_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('listing_id') } }
         # maximum length of stay, in nights, for arrivals in this period
@@ -26,19 +25,19 @@ module UnifiedRubySDK
         # the nightly price
         field :price_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('price_amount') } }
         # raw data from the integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # Property Reservations that occupy this period
         field :reservation_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reservation_ids') } }
         # the start of the availability period (inclusive) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # whether the period is available, booked or blocked
-        field :status, Crystalline::Nilable.new(Models::Shared::PropertyAvailabilityStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyAvailabilityStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::PropertyAvailabilityStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PropertyAvailabilityStatus, true) } }
         # number of units available
         field :units_available, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('units_available') } }
         # pointer to the Property Unittype (room type)
         field :unittype_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('unittype_id') } }
 
-        sig { params(currency: T.nilable(::String), end_at: T.nilable(::DateTime), listing_id: T.nilable(::String), max_nights: T.nilable(::Float), min_nights: T.nilable(::Float), price_amount: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), reservation_ids: T.nilable(T::Array[::String]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::PropertyAvailabilityStatus), units_available: T.nilable(::Float), unittype_id: T.nilable(::String)).void }
+        sig { params(currency: T.nilable(::String), end_at: T.nilable(::DateTime), listing_id: T.nilable(::String), max_nights: T.nilable(::Float), min_nights: T.nilable(::Float), price_amount: T.nilable(::Float), raw: T.nilable(T::Hash[::Symbol, ::Object]), reservation_ids: T.nilable(T::Array[::String]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::PropertyAvailabilityStatus), units_available: T.nilable(::Float), unittype_id: T.nilable(::String)).void }
         def initialize(currency: nil, end_at: nil, listing_id: nil, max_nights: nil, min_nights: nil, price_amount: nil, raw: nil, reservation_ids: nil, start_at: nil, status: nil, units_available: nil, unittype_id: nil)
           @currency = currency
           @end_at = end_at

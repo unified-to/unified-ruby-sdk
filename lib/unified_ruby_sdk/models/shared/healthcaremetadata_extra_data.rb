@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Additional data about the custom field
       class HealthcareMetadataExtraData
         extend T::Sig

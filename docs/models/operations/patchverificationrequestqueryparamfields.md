@@ -1,5 +1,13 @@
 # PatchVerificationRequestQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PatchVerificationRequestQueryParamFields::ID
+```
+
 
 ## Values
 

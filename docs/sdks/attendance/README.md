@@ -1,5 +1,4 @@
 # Attendance
-(*attendance*)
 
 ## Overview
 
@@ -18,17 +17,16 @@ Creates a HrisAttendance. Provide the unified HrisAttendance fields in the reque
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisAttendance" method="post" path="/hris/{connection_id}/attendance" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisAttendance" method="post" path="/hris/{connection_id}/attendance" example="hris_attendance" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.attendance.create_hris_attendance(hris_attendance: Models::Shared::HrisAttendance.new(
   address: Models::Shared::PropertyHrisAttendanceAddress.new(
     address1: '14108 Allie Flats',
@@ -36,34 +34,34 @@ res = s.attendance.create_hris_attendance(hris_attendance: Models::Shared::HrisA
     country_code: 'US',
     postal_code: '23844-2344',
     region: 'Tennessee',
-    region_code: 'CA',
+    region_code: 'CA'
   ),
-  approved_at: DateTime.iso8601('2021-09-19T23:40:10.184Z'),
+  approved_at: DateTime.iso8601('2021-09-20T00:34:51.890Z'),
   breaks: [
     Models::Shared::HrisAttendanceBreak.new(
       duration_minutes: 51.0,
-      end_at: DateTime.iso8601('2024-02-23T17:55:02.666Z'),
-      id: '94e3b11b-d9b9-4c44-94df-7c99a93251c8',
+      end_at: DateTime.iso8601('2024-02-24T14:57:18.590Z'),
+      id: '810db523-7861-4ec5-956f-9c325b072fb2',
       is_paid: false,
       name: 'Lunch',
-      start_at: DateTime.iso8601('2023-11-07T01:49:55.961Z'),
+      start_at: DateTime.iso8601('2023-11-07T20:24:12.806Z')
     ),
   ],
   created_at: DateTime.iso8601('2021-08-10T19:43:18.452Z'),
   currency: 'EUR',
   declared_tips_amount: 54.0,
   employee_user_id: '<id>',
-  end_at: DateTime.iso8601('2024-05-03T04:59:19.886Z'),
+  end_at: DateTime.iso8601('2024-05-04T03:36:11.261Z'),
   hourly_rate: 16.0,
   hours: 10.0,
-  id: 'f52932de-8df3-4f4d-9874-119a10f6317e',
+  id: '253b68da-00a2-465c-af94-1595b912e2db',
   job_name: 'Human Accountability Administrator',
   metadata: [],
   non_cash_tips_amount: 167.0,
-  start_at: DateTime.iso8601('2021-11-11T23:06:20.407Z'),
+  start_at: DateTime.iso8601('2021-11-12T01:13:10.646Z'),
   status: Models::Shared::HrisAttendanceStatus::OPEN,
   timezone: 'America/Atikokan',
-  updated_at: DateTime.iso8601('2022-01-21T12:02:22.765Z'),
+  updated_at: DateTime.iso8601('2022-01-21T15:45:16.502Z')
 ), connection_id: '<id>')
 
 unless res.hris_attendance.nil?
@@ -103,11 +101,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.attendance.get_hris_attendance(connection_id: '<id>', id: '<id>')
 
 unless res.hris_attendance.nil?
@@ -147,15 +144,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHrisAttendancesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHrisAttendancesRequest.new(
+  connection_id: '<id>'
+)
 res = s.attendance.list_hris_attendances(request: req)
 
 unless res.hris_attendances.nil?
@@ -186,16 +182,16 @@ Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendanc
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHrisAttendance" method="patch" path="/hris/{connection_id}/attendance/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHrisAttendance" method="patch" path="/hris/{connection_id}/attendance/{id}" example="hris_attendance" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchHrisAttendanceRequest.new(
   hris_attendance: Models::Shared::HrisAttendance.new(
@@ -205,39 +201,38 @@ req = Models::Operations::PatchHrisAttendanceRequest.new(
       country_code: 'US',
       postal_code: '23844-2344',
       region: 'Tennessee',
-      region_code: 'CA',
+      region_code: 'CA'
     ),
-    approved_at: DateTime.iso8601('2021-09-19T23:40:10.185Z'),
+    approved_at: DateTime.iso8601('2021-09-20T00:34:51.891Z'),
     breaks: [
       Models::Shared::HrisAttendanceBreak.new(
         duration_minutes: 51.0,
-        end_at: DateTime.iso8601('2024-02-23T17:55:02.677Z'),
-        id: 'd9d9b31b-832e-4396-8658-4a7b13442397',
+        end_at: DateTime.iso8601('2024-02-24T14:57:18.604Z'),
+        id: 'f02954ce-3a24-4ecd-a106-a9c0c15053c5',
         is_paid: false,
         name: 'Lunch',
-        start_at: DateTime.iso8601('2023-11-07T01:49:55.971Z'),
+        start_at: DateTime.iso8601('2023-11-07T20:24:12.818Z')
       ),
     ],
     created_at: DateTime.iso8601('2021-08-10T19:43:18.452Z'),
     currency: 'EUR',
     declared_tips_amount: 54.0,
     employee_user_id: '<id>',
-    end_at: DateTime.iso8601('2024-05-03T04:59:19.898Z'),
+    end_at: DateTime.iso8601('2024-05-04T03:36:11.276Z'),
     hourly_rate: 16.0,
     hours: 10.0,
-    id: '5fdfc3d8-3f2a-4e02-9b03-c01fd801cc16',
+    id: '6f446b63-cf01-407a-98e8-bc2f96ba006d',
     job_name: 'Human Accountability Administrator',
     metadata: [],
     non_cash_tips_amount: 167.0,
-    start_at: DateTime.iso8601('2021-11-11T23:06:20.408Z'),
+    start_at: DateTime.iso8601('2021-11-12T01:13:10.648Z'),
     status: Models::Shared::HrisAttendanceStatus::OPEN,
     timezone: 'America/Atikokan',
-    updated_at: DateTime.iso8601('2022-01-21T12:02:22.767Z'),
+    updated_at: DateTime.iso8601('2022-01-21T15:45:16.505Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.attendance.patch_hris_attendance(request: req)
 
 unless res.hris_attendance.nil?
@@ -274,11 +269,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.attendance.remove_hris_attendance(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -310,16 +304,16 @@ Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendanc
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHrisAttendance" method="put" path="/hris/{connection_id}/attendance/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHrisAttendance" method="put" path="/hris/{connection_id}/attendance/{id}" example="hris_attendance" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateHrisAttendanceRequest.new(
   hris_attendance: Models::Shared::HrisAttendance.new(
@@ -329,39 +323,38 @@ req = Models::Operations::UpdateHrisAttendanceRequest.new(
       country_code: 'US',
       postal_code: '23844-2344',
       region: 'Tennessee',
-      region_code: 'CA',
+      region_code: 'CA'
     ),
-    approved_at: DateTime.iso8601('2021-09-19T23:40:10.185Z'),
+    approved_at: DateTime.iso8601('2021-09-20T00:34:51.891Z'),
     breaks: [
       Models::Shared::HrisAttendanceBreak.new(
         duration_minutes: 51.0,
-        end_at: DateTime.iso8601('2024-02-23T17:55:02.677Z'),
-        id: 'd9d9b31b-832e-4396-8658-4a7b13442397',
+        end_at: DateTime.iso8601('2024-02-24T14:57:18.604Z'),
+        id: 'f02954ce-3a24-4ecd-a106-a9c0c15053c5',
         is_paid: false,
         name: 'Lunch',
-        start_at: DateTime.iso8601('2023-11-07T01:49:55.971Z'),
+        start_at: DateTime.iso8601('2023-11-07T20:24:12.818Z')
       ),
     ],
     created_at: DateTime.iso8601('2021-08-10T19:43:18.452Z'),
     currency: 'EUR',
     declared_tips_amount: 54.0,
     employee_user_id: '<id>',
-    end_at: DateTime.iso8601('2024-05-03T04:59:19.898Z'),
+    end_at: DateTime.iso8601('2024-05-04T03:36:11.276Z'),
     hourly_rate: 16.0,
     hours: 10.0,
-    id: '5fdfc3d8-3f2a-4e02-9b03-c01fd801cc16',
+    id: '6f446b63-cf01-407a-98e8-bc2f96ba006d',
     job_name: 'Human Accountability Administrator',
     metadata: [],
     non_cash_tips_amount: 167.0,
-    start_at: DateTime.iso8601('2021-11-11T23:06:20.408Z'),
+    start_at: DateTime.iso8601('2021-11-12T01:13:10.648Z'),
     status: Models::Shared::HrisAttendanceStatus::OPEN,
     timezone: 'America/Atikokan',
-    updated_at: DateTime.iso8601('2022-01-21T12:02:22.767Z'),
+    updated_at: DateTime.iso8601('2022-01-21T15:45:16.505Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.attendance.update_hris_attendance(request: req)
 
 unless res.hris_attendance.nil?

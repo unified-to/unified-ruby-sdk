@@ -1,5 +1,13 @@
 # PatchKmsSpaceQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PatchKmsSpaceQueryParamFields::ID
+```
+
 
 ## Values
 

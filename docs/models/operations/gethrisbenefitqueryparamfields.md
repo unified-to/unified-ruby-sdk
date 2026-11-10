@@ -1,5 +1,13 @@
 # GetHrisBenefitQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetHrisBenefitQueryParamFields::ID
+```
+
 
 ## Values
 

@@ -1,5 +1,4 @@
 # Listing
-(*listing*)
 
 ## Overview
 
@@ -18,17 +17,16 @@ Creates a PropertyListing. Provide the unified PropertyListing fields in the req
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createPropertyListing" method="post" path="/property/{connection_id}/listing" -->
+<!-- UsageSnippet language="ruby" operationID="createPropertyListing" method="post" path="/property/{connection_id}/listing" example="property_listing" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.listing.create_property_listing(property_listing: Models::Shared::PropertyListing.new(
   address: Models::Shared::PropertyPropertyListingAddress.new(
     address1: '9262 Bramley Close',
@@ -37,7 +35,7 @@ res = s.listing.create_property_listing(property_listing: Models::Shared::Proper
     country_code: 'US',
     postal_code: '53615-4664',
     region: 'Nebraska',
-    region_code: 'IL',
+    region_code: 'IL'
   ),
   amenities: [
     'Wifi',
@@ -50,7 +48,7 @@ res = s.listing.create_property_listing(property_listing: Models::Shared::Proper
   channels: [
     Models::Shared::PropertyChannel.new(
       name: 'Booking.com',
-      web_url: 'https://frightened-hyphenation.net/',
+      web_url: 'https://frightened-hyphenation.net/'
     ),
   ],
   check_in_end_time: '22:00',
@@ -61,13 +59,13 @@ res = s.listing.create_property_listing(property_listing: Models::Shared::Proper
   currency: 'USD',
   description: 'Cuius deputo cruentus demoror censura caveo sponte statim vespillo cursim. Arbitro barba summopere. Curto vulticulus comparo surgo vociferor carmen deputo defluo.',
   house_rules: 'No smoking. No parties or events.',
-  id: 'aeb00620-2b1c-47d4-934d-dae3ac44ca55',
+  id: '9b46438d-3417-4508-bb5a-fb6fed714108',
   image_urls: [
     'https://loremflickr.com/23/1328?lock=5798241296161663',
     'https://loremflickr.com/12/1312?lock=6354590363728966',
   ],
-  latitude: -5.4_327,
-  longitude: 98.9_045,
+  latitude: -5.4327,
+  longitude: 98.9045,
   max_nights: 15.0,
   max_occupancy: 5.0,
   metadata: [],
@@ -78,8 +76,8 @@ res = s.listing.create_property_listing(property_listing: Models::Shared::Proper
   start_price_amount: 470.0,
   timezone: 'America/Los_Angeles',
   type: Models::Shared::PropertyListingType::ROOM,
-  updated_at: DateTime.iso8601('2026-09-16T14:52:32.380Z'),
-  web_url: 'https://tight-pronoun.info/',
+  updated_at: DateTime.iso8601('2026-09-18T09:16:31.964Z'),
+  web_url: 'https://tight-pronoun.info/'
 ), connection_id: '<id>')
 
 unless res.property_listing.nil?
@@ -119,11 +117,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.listing.get_property_listing(connection_id: '<id>', id: '<id>')
 
 unless res.property_listing.nil?
@@ -163,15 +160,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListPropertyListingsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListPropertyListingsRequest.new(
+  connection_id: '<id>'
+)
 res = s.listing.list_property_listings(request: req)
 
 unless res.property_listings.nil?
@@ -202,16 +198,16 @@ Updates the PropertyListing identified by `id`. Provide the unified PropertyList
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchPropertyListing" method="patch" path="/property/{connection_id}/listing/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchPropertyListing" method="patch" path="/property/{connection_id}/listing/{id}" example="property_listing" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchPropertyListingRequest.new(
   property_listing: Models::Shared::PropertyListing.new(
@@ -222,7 +218,7 @@ req = Models::Operations::PatchPropertyListingRequest.new(
       country_code: 'US',
       postal_code: '53615-4664',
       region: 'Nebraska',
-      region_code: 'IL',
+      region_code: 'IL'
     ),
     amenities: [
       'Wifi',
@@ -235,7 +231,7 @@ req = Models::Operations::PatchPropertyListingRequest.new(
     channels: [
       Models::Shared::PropertyChannel.new(
         name: 'Booking.com',
-        web_url: 'https://frightened-hyphenation.net/',
+        web_url: 'https://frightened-hyphenation.net/'
       ),
     ],
     check_in_end_time: '22:00',
@@ -246,13 +242,13 @@ req = Models::Operations::PatchPropertyListingRequest.new(
     currency: 'USD',
     description: 'Cuius deputo cruentus demoror censura caveo sponte statim vespillo cursim. Arbitro barba summopere. Curto vulticulus comparo surgo vociferor carmen deputo defluo.',
     house_rules: 'No smoking. No parties or events.',
-    id: '25bdc734-2dfe-40fb-93e0-29f5174520e3',
+    id: '61286116-1455-4c8e-8d69-f9cb802e52bb',
     image_urls: [
       'https://loremflickr.com/23/1328?lock=5798241296161663',
       'https://loremflickr.com/12/1312?lock=6354590363728966',
     ],
-    latitude: -5.4_327,
-    longitude: 98.9_045,
+    latitude: -5.4327,
+    longitude: 98.9045,
     max_nights: 15.0,
     max_occupancy: 5.0,
     metadata: [],
@@ -263,13 +259,12 @@ req = Models::Operations::PatchPropertyListingRequest.new(
     start_price_amount: 470.0,
     timezone: 'America/Los_Angeles',
     type: Models::Shared::PropertyListingType::ROOM,
-    updated_at: DateTime.iso8601('2026-09-16T14:52:32.422Z'),
-    web_url: 'https://tight-pronoun.info/',
+    updated_at: DateTime.iso8601('2026-09-18T09:16:31.986Z'),
+    web_url: 'https://tight-pronoun.info/'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.listing.patch_property_listing(request: req)
 
 unless res.property_listing.nil?
@@ -306,11 +301,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.listing.remove_property_listing(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -342,16 +336,16 @@ Updates the PropertyListing identified by `id`. Provide the unified PropertyList
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updatePropertyListing" method="put" path="/property/{connection_id}/listing/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updatePropertyListing" method="put" path="/property/{connection_id}/listing/{id}" example="property_listing" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdatePropertyListingRequest.new(
   property_listing: Models::Shared::PropertyListing.new(
@@ -362,7 +356,7 @@ req = Models::Operations::UpdatePropertyListingRequest.new(
       country_code: 'US',
       postal_code: '53615-4664',
       region: 'Nebraska',
-      region_code: 'IL',
+      region_code: 'IL'
     ),
     amenities: [
       'Wifi',
@@ -375,7 +369,7 @@ req = Models::Operations::UpdatePropertyListingRequest.new(
     channels: [
       Models::Shared::PropertyChannel.new(
         name: 'Booking.com',
-        web_url: 'https://frightened-hyphenation.net/',
+        web_url: 'https://frightened-hyphenation.net/'
       ),
     ],
     check_in_end_time: '22:00',
@@ -386,13 +380,13 @@ req = Models::Operations::UpdatePropertyListingRequest.new(
     currency: 'USD',
     description: 'Cuius deputo cruentus demoror censura caveo sponte statim vespillo cursim. Arbitro barba summopere. Curto vulticulus comparo surgo vociferor carmen deputo defluo.',
     house_rules: 'No smoking. No parties or events.',
-    id: '25bdc734-2dfe-40fb-93e0-29f5174520e3',
+    id: '61286116-1455-4c8e-8d69-f9cb802e52bb',
     image_urls: [
       'https://loremflickr.com/23/1328?lock=5798241296161663',
       'https://loremflickr.com/12/1312?lock=6354590363728966',
     ],
-    latitude: -5.4_327,
-    longitude: 98.9_045,
+    latitude: -5.4327,
+    longitude: 98.9045,
     max_nights: 15.0,
     max_occupancy: 5.0,
     metadata: [],
@@ -403,13 +397,12 @@ req = Models::Operations::UpdatePropertyListingRequest.new(
     start_price_amount: 470.0,
     timezone: 'America/Los_Angeles',
     type: Models::Shared::PropertyListingType::ROOM,
-    updated_at: DateTime.iso8601('2026-09-16T14:52:32.422Z'),
-    web_url: 'https://tight-pronoun.info/',
+    updated_at: DateTime.iso8601('2026-09-18T09:16:31.986Z'),
+    web_url: 'https://tight-pronoun.info/'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.listing.update_property_listing(request: req)
 
 unless res.property_listing.nil?

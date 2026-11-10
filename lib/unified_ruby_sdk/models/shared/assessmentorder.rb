@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class AssessmentOrder
         extend T::Sig
@@ -24,7 +23,7 @@ module UnifiedRubySDK
         # ATS company ID (reference to AtsCompany)
         field :company_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_id') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # ATS employee ID
         field :employee_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employee_id') } }
 
@@ -46,7 +45,7 @@ module UnifiedRubySDK
 
         field :profile_first_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('profile_first_name') } }
 
-        field :profile_gender, Crystalline::Nilable.new(Models::Shared::ProfileGender), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('profile_gender'), 'decoder': Utils.enum_from_string(Models::Shared::ProfileGender, true) } }
+        field :profile_gender, Crystalline::Nilable.new(Models::Shared::ProfileGender), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('profile_gender'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::ProfileGender, true) } }
         # XXX.XXX.XXX.XXX
         field :profile_ip_address, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('profile_ip_address') } }
 
@@ -62,21 +61,21 @@ module UnifiedRubySDK
 
         field :profile_telephones, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('profile_telephones') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # ATS-specific reference ID
         field :reference, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reference') } }
         # Additional result attributes
         field :response_attributes, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AssessmentAttribute)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response_attributes') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :response_completed_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response_completed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :response_completed_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response_completed_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :response_details, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AssessmentResponseDetail)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response_details') } }
         # Report download URLs
         field :response_download_urls, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response_download_urls') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :response_expires_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response_expires_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :response_expires_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response_expires_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Datetime that assessment was issued (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :response_issued_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response_issued_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :response_issued_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response_issued_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Maximum possible score
         field :response_max_score, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response_max_score') } }
         # URL to redirect the user to complete assessment
@@ -86,19 +85,19 @@ module UnifiedRubySDK
 
         field :response_source, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response_source') } }
 
-        field :response_status, Crystalline::Nilable.new(Models::Shared::ResponseStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response_status'), 'decoder': Utils.enum_from_string(Models::Shared::ResponseStatus, true) } }
+        field :response_status, Crystalline::Nilable.new(Models::Shared::ResponseStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response_status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::ResponseStatus, true) } }
         # URL to view detailed results
         field :response_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response_url') } }
         # The current state of the assessment order
-        field :status, Crystalline::Nilable.new(Models::Shared::AssessmentOrderStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::AssessmentOrderStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::AssessmentOrderStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::AssessmentOrderStatus, true) } }
         # URL to redirect user to after assessment
         field :target_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('target_url') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Webhook ID that this order belongs to
         field :webhook_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('webhook_id') } }
 
-        sig { params(connection_id: ::String, workspace_id: ::String, application_id: T.nilable(::String), candidate_id: T.nilable(::String), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), employee_id: T.nilable(::String), id: T.nilable(::String), job_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AssessmentMetadata]), package_id: T.nilable(::String), parameters: T.nilable(T::Array[Models::Shared::AssessmentParameterInput]), profile_addresses: T.nilable(T::Array[Models::Shared::AssessmentAddress]), profile_date_of_birth: T.nilable(::String), profile_emails: T.nilable(T::Array[::String]), profile_first_name: T.nilable(::String), profile_gender: T.nilable(Models::Shared::ProfileGender), profile_ip_address: T.nilable(::String), profile_last_name: T.nilable(::String), profile_name: T.nilable(::String), profile_national_identifier: T.nilable(::String), profile_resume_url: T.nilable(::String), profile_social_media_urls: T.nilable(T::Array[::String]), profile_telephones: T.nilable(T::Array[::String]), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), response_attributes: T.nilable(T::Array[Models::Shared::AssessmentAttribute]), response_completed_at: T.nilable(::DateTime), response_details: T.nilable(T::Array[Models::Shared::AssessmentResponseDetail]), response_download_urls: T.nilable(T::Array[::String]), response_expires_at: T.nilable(::DateTime), response_issued_at: T.nilable(::DateTime), response_max_score: T.nilable(::Float), response_redirect_url: T.nilable(::String), response_score: T.nilable(::Float), response_source: T.nilable(::String), response_status: T.nilable(Models::Shared::ResponseStatus), response_url: T.nilable(::String), status: T.nilable(Models::Shared::AssessmentOrderStatus), target_url: T.nilable(::String), updated_at: T.nilable(::DateTime), webhook_id: T.nilable(::String)).void }
+        sig { params(connection_id: ::String, workspace_id: ::String, application_id: T.nilable(::String), candidate_id: T.nilable(::String), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), employee_id: T.nilable(::String), id: T.nilable(::String), job_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AssessmentMetadata]), package_id: T.nilable(::String), parameters: T.nilable(T::Array[Models::Shared::AssessmentParameterInput]), profile_addresses: T.nilable(T::Array[Models::Shared::AssessmentAddress]), profile_date_of_birth: T.nilable(::String), profile_emails: T.nilable(T::Array[::String]), profile_first_name: T.nilable(::String), profile_gender: T.nilable(Models::Shared::ProfileGender), profile_ip_address: T.nilable(::String), profile_last_name: T.nilable(::String), profile_name: T.nilable(::String), profile_national_identifier: T.nilable(::String), profile_resume_url: T.nilable(::String), profile_social_media_urls: T.nilable(T::Array[::String]), profile_telephones: T.nilable(T::Array[::String]), raw: T.nilable(T::Hash[::Symbol, ::Object]), reference: T.nilable(::String), response_attributes: T.nilable(T::Array[Models::Shared::AssessmentAttribute]), response_completed_at: T.nilable(::DateTime), response_details: T.nilable(T::Array[Models::Shared::AssessmentResponseDetail]), response_download_urls: T.nilable(T::Array[::String]), response_expires_at: T.nilable(::DateTime), response_issued_at: T.nilable(::DateTime), response_max_score: T.nilable(::Float), response_redirect_url: T.nilable(::String), response_score: T.nilable(::Float), response_source: T.nilable(::String), response_status: T.nilable(Models::Shared::ResponseStatus), response_url: T.nilable(::String), status: T.nilable(Models::Shared::AssessmentOrderStatus), target_url: T.nilable(::String), updated_at: T.nilable(::DateTime), webhook_id: T.nilable(::String)).void }
         def initialize(connection_id:, workspace_id:, application_id: nil, candidate_id: nil, company_id: nil, created_at: nil, employee_id: nil, id: nil, job_id: nil, metadata: nil, package_id: nil, parameters: nil, profile_addresses: nil, profile_date_of_birth: nil, profile_emails: nil, profile_first_name: nil, profile_gender: nil, profile_ip_address: nil, profile_last_name: nil, profile_name: nil, profile_national_identifier: nil, profile_resume_url: nil, profile_social_media_urls: nil, profile_telephones: nil, raw: nil, reference: nil, response_attributes: nil, response_completed_at: nil, response_details: nil, response_download_urls: nil, response_expires_at: nil, response_issued_at: nil, response_max_score: nil, response_redirect_url: nil, response_score: nil, response_source: nil, response_status: nil, response_url: nil, status: nil, target_url: nil, updated_at: nil, webhook_id: nil)
           @connection_id = connection_id
           @workspace_id = workspace_id

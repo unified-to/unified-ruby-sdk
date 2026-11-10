@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # AnalyticsReportMetricsDimension - new vs returning
-      class AnalyticsReportMetricsDimension < T::Enum
-
-
+      class AnalyticsReportMetricsDimension
+        include ::Crystalline::Enum
         enums do
           DATE = new('DATE')
           HOUR = new('HOUR')
@@ -34,6 +32,7 @@ module UnifiedRubySDK
           LANDING_PAGE = new('LANDING_PAGE')
           VIDEO = new('VIDEO')
         end
+        open!
       end
     end
   end

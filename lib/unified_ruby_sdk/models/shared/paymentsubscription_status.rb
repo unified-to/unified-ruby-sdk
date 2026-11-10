@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PaymentSubscriptionStatus < T::Enum
-
-
+      class PaymentSubscriptionStatus
+        include ::Crystalline::Enum
         enums do
           ACTIVE = new('ACTIVE')
           INACTIVE = new('INACTIVE')
           CANCELED = new('CANCELED')
           PAUSED = new('PAUSED')
         end
+        open!
       end
     end
   end

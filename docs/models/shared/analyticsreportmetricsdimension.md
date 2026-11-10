@@ -2,6 +2,17 @@
 
 new vs returning
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = AnalyticsReportMetricsDimension::DATE
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = AnalyticsReportMetricsDimension.deserialize("custom_value")
+```
+
 
 ## Values
 

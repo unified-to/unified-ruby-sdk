@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class AnalyticsSession
         extend T::Sig
@@ -22,13 +21,13 @@ module UnifiedRubySDK
 
         field :country, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('country') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :device, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('device') } }
 
         field :duration_seconds, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('duration_seconds') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Session attributes
         field :events_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('events_count') } }
         # Session attributes
@@ -52,17 +51,17 @@ module UnifiedRubySDK
         # points to AnalyticsProperty
         field :property_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('property_id') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # Acquisition
         field :source, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('source') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :visitor_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('visitor_id') } }
 
-        sig { params(browser: T.nilable(::String), campaign: T.nilable(::String), city: T.nilable(::String), country: T.nilable(::String), created_at: T.nilable(::DateTime), device: T.nilable(::String), duration_seconds: T.nilable(::Float), end_at: T.nilable(::DateTime), events_count: T.nilable(::Float), exit_page: T.nilable(::String), id: T.nilable(::String), is_bounce: T.nilable(T::Boolean), is_conversion: T.nilable(T::Boolean), landing_page: T.nilable(::String), medium: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AnalyticsMetadata]), os: T.nilable(::String), page_views: T.nilable(::Float), property_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), source: T.nilable(::String), start_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime), visitor_id: T.nilable(::String)).void }
+        sig { params(browser: T.nilable(::String), campaign: T.nilable(::String), city: T.nilable(::String), country: T.nilable(::String), created_at: T.nilable(::DateTime), device: T.nilable(::String), duration_seconds: T.nilable(::Float), end_at: T.nilable(::DateTime), events_count: T.nilable(::Float), exit_page: T.nilable(::String), id: T.nilable(::String), is_bounce: T.nilable(T::Boolean), is_conversion: T.nilable(T::Boolean), landing_page: T.nilable(::String), medium: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AnalyticsMetadata]), os: T.nilable(::String), page_views: T.nilable(::Float), property_id: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), source: T.nilable(::String), start_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime), visitor_id: T.nilable(::String)).void }
         def initialize(browser: nil, campaign: nil, city: nil, country: nil, created_at: nil, device: nil, duration_seconds: nil, end_at: nil, events_count: nil, exit_page: nil, id: nil, is_bounce: nil, is_conversion: nil, landing_page: nil, medium: nil, metadata: nil, os: nil, page_views: nil, property_id: nil, raw: nil, source: nil, start_at: nil, updated_at: nil, visitor_id: nil)
           @browser = browser
           @campaign = campaign

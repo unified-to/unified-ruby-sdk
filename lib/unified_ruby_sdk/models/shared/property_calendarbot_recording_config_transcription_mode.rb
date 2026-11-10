@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PropertyCalendarBotRecordingConfigTranscriptionMode < T::Enum
-
-
+      class PropertyCalendarBotRecordingConfigTranscriptionMode
+        include ::Crystalline::Enum
         enums do
           PRIORITIZE_ACCURACY = new('PRIORITIZE_ACCURACY')
           PRIORITIZE_LOW_LATENCY = new('PRIORITIZE_LOW_LATENCY')
         end
+        open!
       end
     end
   end

@@ -1,5 +1,13 @@
 # GetLegalPracticeareaQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetLegalPracticeareaQueryParamFields::ID
+```
+
 
 ## Values
 

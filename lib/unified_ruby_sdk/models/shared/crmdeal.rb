@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # A deal represents an opportunity with companies and/or contacts
       class CrmDeal
         extend T::Sig
@@ -16,15 +15,15 @@ module UnifiedRubySDK
         # The potential amount that deal could be worth
         field :amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('amount') } }
         # The date that this deal closed (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :closed_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('closed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :closed_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('closed_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # expected closing date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :closing_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('closing_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :closing_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('closing_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :company_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_ids') } }
 
         field :contact_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_ids') } }
         # The date that this deal object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # The currency for the deal amount (3 letter ISO code; eg. USD)
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
@@ -42,7 +41,7 @@ module UnifiedRubySDK
 
         field :probability, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('probability') } }
         # The raw data returned by the integration for this deal
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # The source for this deal
         field :source, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('source') } }
 
@@ -50,13 +49,13 @@ module UnifiedRubySDK
 
         field :tags, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tags') } }
         # The last date that this deal object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
         field :won_reason, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('won_reason') } }
 
-        sig { params(amount: T.nilable(::Float), closed_at: T.nilable(::DateTime), closing_at: T.nilable(::DateTime), company_ids: T.nilable(T::Array[::String]), contact_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), lost_reason: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::CrmMetadata]), name: T.nilable(::String), pipelines: T.nilable(T::Array[Models::Shared::CrmReference]), probability: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), source: T.nilable(::String), stages: T.nilable(T::Array[Models::Shared::CrmReference]), tags: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), won_reason: T.nilable(::String)).void }
+        sig { params(amount: T.nilable(::Float), closed_at: T.nilable(::DateTime), closing_at: T.nilable(::DateTime), company_ids: T.nilable(T::Array[::String]), contact_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), lost_reason: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::CrmMetadata]), name: T.nilable(::String), pipelines: T.nilable(T::Array[Models::Shared::CrmReference]), probability: T.nilable(::Float), raw: T.nilable(T::Hash[::Symbol, ::Object]), source: T.nilable(::String), stages: T.nilable(T::Array[Models::Shared::CrmReference]), tags: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), won_reason: T.nilable(::String)).void }
         def initialize(amount: nil, closed_at: nil, closing_at: nil, company_ids: nil, contact_ids: nil, created_at: nil, currency: nil, description: nil, id: nil, lost_reason: nil, metadata: nil, name: nil, pipelines: nil, probability: nil, raw: nil, source: nil, stages: nil, tags: nil, updated_at: nil, user_id: nil, won_reason: nil)
           @amount = amount
           @closed_at = closed_at

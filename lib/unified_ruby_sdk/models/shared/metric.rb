@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Metric - The metric being reported
-      class Metric < T::Enum
-
-
+      class Metric
+        include ::Crystalline::Enum
         enums do
           FOLLOWERS = new('FOLLOWERS')
           FOLLOWING = new('FOLLOWING')
@@ -28,6 +26,7 @@ module UnifiedRubySDK
           SAVES = new('SAVES')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

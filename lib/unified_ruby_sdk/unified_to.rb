@@ -18,28 +18,29 @@ module UnifiedRubySDK
 
     attr_accessor :accounting, :account, :agedpayable, :agedreceivable, :balancesheet, :bankfeedaccount, :bankfeedtransaction, :bill, :cashflow, :category, :contact, :creditmemo, :expense, :expensereport, :invoice, :journal, :order, :organization, :paymentterm, :profitloss, :project, :purchaseorder, :purchasereceipt, :quote, :salesorder, :salesreceipt, :taxrate, :transaction, :trialbalance, :vendorcredit, :ads, :ad, :asset, :campaign, :creative, :group, :insertionorder, :promoted, :report, :target, :analytics, :event, :property, :session, :visitor, :assessment, :package, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :calendar, :bot, :busy, :link, :location, :recording, :room, :webinar, :cdp, :activation, :destination, :profile, :segment, :source, :clubs, :member, :commerce, :availability, :collection, :inventory, :item, :itemvariant, :reservation, :return_, :review, :saleschannel, :table, :compute, :deployment, :domain, :envvar, :gputype, :instance, :key, :region, :service, :snapshot, :template, :usage, :volume, :crm, :deal, :lead, :pipeline, :taxonomy, :datastore, :database, :query, :record, :enrich, :person, :forms, :form, :submission, :genai, :agent, :embedding, :memory, :model, :prompt, :skill, :task, :healthcare, :allergy, :appointment, :careplan, :condition, :coverage, :encounter, :goal, :immunization, :medication, :observation, :patient, :practitioner, :procedure, :slot, :hris, :attendance, :bankaccount, :benefit, :deduction, :device, :earning, :employee, :paycode, :payroll, :payslip, :timeoff, :timeshift, :kms, :comment, :page, :space, :legal, :matter, :practicearea, :timeentry, :lms, :class_, :content, :course, :instructor, :student, :martech, :list, :messaging, :channel, :message, :metadata, :passthrough, :payment, :payout, :refund, :subscription, :performance, :cycle, :feedback, :plm, :bomline, :change, :part, :conversation, :guest, :listing, :unittype, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :shipping, :carrier, :label, :rate, :shipment, :tracking, :signing, :signatory, :social, :insight, :post, :storage, :file, :ticketing, :customer, :note, :ticket, :uc, :call, :fax, :scorecardtemplate, :unified, :apicall, :connection, :environment, :integration, :auth, :login, :saml, :issue, :notification, :secretsmanager, :webhook, :workspaceintegration, :verification, :request
 
+    # Instantiates the SDK, configuring it with the provided parameters.
+    #
+    # @param client [Faraday::Connection, nil] The faraday HTTP client to use for all operations
+    # @param retry_config [::UnifiedRubySDK::Utils::RetryConfig, nil] The retry configuration to use for all operations
+    # @param timeout_ms [Integer, nil] Request timeout in milliseconds for all operations
+    # @param security [Models::Shared::Security, nil] The security details required for authentication
+    # @param security_source [Proc{|| Models::Shared::Security, nil}] A function that returns security details required for authentication
+    # @param server_idx [Integer, nil] The index of the server to use for all operations
+    # @param server_url [String, nil] The server URL to use for all operations
+    # @param url_params [Hash{Symbol => String}, nil] Parameters to optionally template the server URL with
     sig do
       params(
         client: T.nilable(Faraday::Connection),
         retry_config: T.nilable(::UnifiedRubySDK::Utils::RetryConfig),
-        timeout_ms: T.nilable(Integer),
+        timeout_ms: T.nilable(::Integer),
         security: T.nilable(Models::Shared::Security),
         security_source: T.nilable(T.proc.returns(Models::Shared::Security)),
-        server_idx: T.nilable(Integer),
-        server_url: T.nilable(String),
-        url_params: T.nilable(T::Hash[Symbol, String])
+        server_idx: T.nilable(::Integer),
+        server_url: T.nilable(::String),
+        url_params: T.nilable(T::Hash[::Symbol, ::String])
       ).void
     end
     def initialize(client: nil, retry_config: nil, timeout_ms: nil, security: nil, security_source: nil, server_idx: nil, server_url: nil, url_params: nil)
-      ## Instantiates the SDK configuring it with the provided parameters.
-      # @param [T.nilable(Faraday::Connection)] client The faraday HTTP client to use for all operations
-      # @param [T.nilable(::UnifiedRubySDK::Utils::RetryConfig)] retry_config The retry configuration to use for all operations
-      # @param [T.nilable(Integer)] timeout_ms Request timeout in milliseconds for all operations
-      # @param [T.nilable(Models::Shared::Security)] security: The security details required for authentication
-      # @param [T.proc.returns(T.nilable(Models::Shared::Security))] security_source: A function that returns security details required for authentication
-      # @param [T.nilable(::Integer)] server_idx The index of the server to use for all operations
-      # @param [T.nilable(::String)] server_url The server URL to use for all operations
-      # @param [T.nilable(::Hash<::Symbol, ::String>)] url_params Parameters to optionally template the server URL with
 
       connection_options = {
         request: {
@@ -305,7 +306,7 @@ module UnifiedRubySDK
       @request = Request.new(@sdk_configuration)
     end
 
-    sig { params(base_url: String, url_variables: T.nilable(T::Hash[Symbol, T.any(String, T::Enum)])).returns(String) }
+    sig { params(base_url: ::String, url_variables: T.nilable(T::Hash[::Symbol, T.any(::String, T::Enum)])).returns(::String) }
     def get_url(base_url:, url_variables: nil)
       sd_base_url, sd_options = @sdk_configuration.get_server_details
 
@@ -319,5 +320,6 @@ module UnifiedRubySDK
 
       return Utils.template_url base_url, url_variables
     end
-  end
+
+end
 end

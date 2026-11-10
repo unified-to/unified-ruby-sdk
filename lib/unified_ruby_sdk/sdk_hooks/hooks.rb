@@ -5,7 +5,6 @@
 
 require_relative './types'
 
-
 module UnifiedRubySDK
   module SDKHooks
     class Hooks
@@ -78,7 +77,7 @@ module UnifiedRubySDK
 
       sig do
         params(
-          error: T.nilable(StandardError),
+          error: T.nilable(::StandardError),
           hook_ctx: AfterErrorHookContext,
           response: T.nilable(Faraday::Response)
         ).returns(T.nilable(Faraday::Response))

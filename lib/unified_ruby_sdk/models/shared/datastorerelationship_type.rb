@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class DatastoreRelationshipType < T::Enum
-
-
+      class DatastoreRelationshipType
+        include ::Crystalline::Enum
         enums do
           ONE = new('ONE')
           MANY = new('MANY')
         end
+        open!
       end
     end
   end

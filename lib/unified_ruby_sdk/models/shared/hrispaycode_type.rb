@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class HrisPaycodeType < T::Enum
-
-
+      class HrisPaycodeType
+        include ::Crystalline::Enum
         enums do
           EARNING = new('EARNING')
           DEDUCTION = new('DEDUCTION')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           CONTRIBUTION = new('CONTRIBUTION')
           REIMBURSEMENT = new('REIMBURSEMENT')
         end
+        open!
       end
     end
   end

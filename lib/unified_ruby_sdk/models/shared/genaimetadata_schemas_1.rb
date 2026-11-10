@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class GenaiMetadataSchemas1
         extend T::Sig

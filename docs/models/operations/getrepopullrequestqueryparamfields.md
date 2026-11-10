@@ -1,5 +1,13 @@
 # GetRepoPullrequestQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetRepoPullrequestQueryParamFields::ID
+```
+
 
 ## Values
 

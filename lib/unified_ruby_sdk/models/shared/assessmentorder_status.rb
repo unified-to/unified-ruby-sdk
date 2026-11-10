@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # AssessmentOrderStatus - The current state of the assessment order
-      class AssessmentOrderStatus < T::Enum
-
-
+      class AssessmentOrderStatus
+        include ::Crystalline::Enum
         enums do
           OPEN = new('OPEN')
           IN_PROGRESS = new('IN_PROGRESS')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           FAILED = new('FAILED')
           REJECTED = new('REJECTED')
         end
+        open!
       end
     end
   end

@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class ComputePrice
         extend T::Sig
@@ -16,11 +15,11 @@ module UnifiedRubySDK
         # Currency of price_amount (ISO 4217)
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
         # Pricing market
-        field :market, Crystalline::Nilable.new(Models::Shared::ComputePriceMarket), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('market'), 'decoder': Utils.enum_from_string(Models::Shared::ComputePriceMarket, true) } }
+        field :market, Crystalline::Nilable.new(Models::Shared::ComputePriceMarket), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('market'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::ComputePriceMarket, true) } }
         # List price
         field :price_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('price_amount') } }
         # Unit that price_amount is quoted in
-        field :price_unit, Crystalline::Nilable.new(Models::Shared::ComputePricePriceUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('price_unit'), 'decoder': Utils.enum_from_string(Models::Shared::ComputePricePriceUnit, true) } }
+        field :price_unit, Crystalline::Nilable.new(Models::Shared::ComputePricePriceUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('price_unit'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::ComputePricePriceUnit, true) } }
         # Region the price applies to, when it varies by region
         field :region_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('region_id') } }
 

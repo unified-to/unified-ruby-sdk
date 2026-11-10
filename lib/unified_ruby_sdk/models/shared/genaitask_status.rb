@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class GenaiTaskStatus < T::Enum
-
-
+      class GenaiTaskStatus
+        include ::Crystalline::Enum
         enums do
           PENDING = new('PENDING')
           RUNNING = new('RUNNING')
@@ -22,6 +20,7 @@ module UnifiedRubySDK
           EXPIRED = new('EXPIRED')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

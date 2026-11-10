@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class BudgetUnit < T::Enum
-
-
+      class BudgetUnit
+        include ::Crystalline::Enum
         enums do
           UNSPECIFIED = new('UNSPECIFIED')
           CURRENCY = new('CURRENCY')
           IMPRESSIONS = new('IMPRESSIONS')
         end
+        open!
       end
     end
   end

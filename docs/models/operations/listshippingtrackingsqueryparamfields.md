@@ -1,5 +1,13 @@
 # ListShippingTrackingsQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListShippingTrackingsQueryParamFields::ID
+```
+
 
 ## Values
 

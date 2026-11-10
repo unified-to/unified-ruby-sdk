@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Demographic targeting (Meta: age_min, age_max, genders)
       class PropertyAdsReportMetricsGroupTargetingDemographic
         extend T::Sig

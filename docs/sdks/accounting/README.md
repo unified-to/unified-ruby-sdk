@@ -1,5 +1,4 @@
 # Accounting
-(*accounting*)
 
 ## Overview
 
@@ -150,24 +149,23 @@ Creates a AccountingAccount. Provide the unified AccountingAccount fields in the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAccountingAccount" method="post" path="/accounting/{connection_id}/account" -->
+<!-- UsageSnippet language="ruby" operationID="createAccountingAccount" method="post" path="/accounting/{connection_id}/account" example="accounting_account" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.create_accounting_account(accounting_account: Models::Shared::AccountingAccount.new(
   balance: 12_092.0,
   created_at: DateTime.iso8601('2022-07-03T17:57:07.391Z'),
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: 'ba69ff06-e2d3-4db2-a8ef-d3df011019a6',
+  id: '8dc8d1d9-c2e2-4af4-b0fa-ba040c3fc18b',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -176,11 +174,11 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     Models::Shared::AccountingAccountTaxonomy.new(
       original_type: 'vilitas',
       type: Models::Shared::AccountingAccountTaxonomyType::SUBGROUP,
-      value: 'comedo',
+      value: 'comedo'
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-11T17:37:54.471Z'),
+  updated_at: DateTime.iso8601('2023-08-12T04:41:13.066Z')
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -214,17 +212,16 @@ Creates a AccountingBankfeedaccount. Provide the unified AccountingBankfeedaccou
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAccountingBankfeedaccount" method="post" path="/accounting/{connection_id}/bankfeedaccount" -->
+<!-- UsageSnippet language="ruby" operationID="createAccountingBankfeedaccount" method="post" path="/accounting/{connection_id}/bankfeedaccount" example="accounting_bankfeedaccount" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.create_accounting_bankfeedaccount(accounting_bankfeedaccount: Models::Shared::AccountingBankfeedaccount.new(
   account_number: '30369722',
   account_number_last4: '9722',
@@ -234,12 +231,12 @@ res = s.accounting.create_accounting_bankfeedaccount(accounting_bankfeedaccount:
   created_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
   currency: 'AUD',
   feed_start_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
-  id: 'ec34cb94-3283-4792-aab7-75462f2ef326',
+  id: 'd9357437-48c5-4193-a809-3d7ed20396f7',
   metadata: [],
   name: 'Corwin, Donnelly and Connelly Checking',
   routing_number: '694667752',
   status: Models::Shared::AccountingBankfeedaccountStatus::ACTIVE,
-  updated_at: DateTime.iso8601('2024-04-30T21:49:09.937Z'),
+  updated_at: DateTime.iso8601('2024-05-01T14:00:59.106Z')
 ), connection_id: '<id>')
 
 unless res.accounting_bankfeedaccount.nil?
@@ -273,17 +270,16 @@ Creates a AccountingBankfeedtransaction. Provide the unified AccountingBankfeedt
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAccountingBankfeedtransaction" method="post" path="/accounting/{connection_id}/bankfeedtransaction" -->
+<!-- UsageSnippet language="ruby" operationID="createAccountingBankfeedtransaction" method="post" path="/accounting/{connection_id}/bankfeedtransaction" example="accounting_bankfeedtransaction" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.create_accounting_bankfeedtransaction(accounting_bankfeedtransaction: Models::Shared::AccountingBankfeedtransaction.new(
   amount: 60_889.0,
   bank_category: 'Clothing',
@@ -291,15 +287,15 @@ res = s.accounting.create_accounting_bankfeedtransaction(accounting_bankfeedtran
   created_at: DateTime.iso8601('2022-03-24T23:41:08.374Z'),
   currency: 'CAD',
   description: 'Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781.',
-  id: '629c339a-be6b-476e-87a2-3dcea58e93c4',
+  id: 'd0196aff-0ec1-451d-939e-1704c1b6deef',
   is_pending: true,
   merchant_name: 'Buckridge - Feest',
   metadata: [],
-  posted_at: DateTime.iso8601('2025-04-27T12:50:03.823Z'),
+  posted_at: DateTime.iso8601('2025-04-28T17:54:05.876Z'),
   reference: '79574105',
-  transaction_at: DateTime.iso8601('2022-07-31T18:56:02.444Z'),
+  transaction_at: DateTime.iso8601('2022-07-31T22:14:54.747Z'),
   type: Models::Shared::AccountingBankfeedtransactionType::CREDIT,
-  updated_at: DateTime.iso8601('2022-05-25T18:25:08.006Z'),
+  updated_at: DateTime.iso8601('2022-05-25T20:00:31.396Z')
 ), connection_id: '<id>')
 
 unless res.accounting_bankfeedtransaction.nil?
@@ -333,30 +329,29 @@ Creates a AccountingBill. Provide the unified AccountingBill fields in the reque
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAccountingBill" method="post" path="/accounting/{connection_id}/bill" -->
+<!-- UsageSnippet language="ruby" operationID="createAccountingBill" method="post" path="/accounting/{connection_id}/bill" example="accounting_bill" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.create_accounting_bill(accounting_bill: Models::Shared::AccountingBill.new(
   attachments: [
     Models::Shared::AccountingAttachment.new(
       download_url: 'https://puny-foodstuffs.name',
-      id: 'bfdd51b3-c9ce-4241-bf4b-c6e57196b513',
+      id: '6635eb87-dae2-4556-80b6-1b9b7db629c7',
       mime_type: 'application/pdf',
-      name: 'BILL-2466.pdf',
+      name: 'BILL-2466.pdf'
     ),
     Models::Shared::AccountingAttachment.new(
       download_url: 'https://grimy-characterization.net',
-      id: '0d1a41c2-11dd-4720-a037-784e65cdf521',
+      id: 'efce91b9-f659-459f-aa41-48c577589a7e',
       mime_type: 'application/pdf',
-      name: 'BILL-2466-1.pdf',
+      name: 'BILL-2466-1.pdf'
     ),
   ],
   balance_amount: 0.0,
@@ -367,7 +362,7 @@ res = s.accounting.create_accounting_bill(accounting_bill: Models::Shared::Accou
   discount_amount: 0.0,
   due_at: DateTime.iso8601('2019-09-07T23:03:14.104Z'),
   extended_notes: [],
-  id: 'fbc74d54-6d81-4d7d-9dee-d910afbfe57c',
+  id: '0ee130f0-68e5-4804-954b-90f66dce6c38',
   lineitems: [],
   metadata: [],
   notes: 'Admiratio deporto tutamen cilicium infit amissio ante demulceo.',
@@ -383,8 +378,8 @@ res = s.accounting.create_accounting_bill(accounting_bill: Models::Shared::Accou
   tax_amount: 0.0,
   term: Models::Shared::Term::NET_90,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2020-06-03T08:19:06.128Z'),
-  url: 'https://cluttered-importance.org/bills/BILL-2466',
+  updated_at: DateTime.iso8601('2020-06-03T13:08:04.973Z'),
+  url: 'https://cluttered-importance.org/bills/BILL-2466'
 ), connection_id: '<id>')
 
 unless res.accounting_bill.nil?
@@ -418,25 +413,24 @@ Creates a AccountingCategory. Provide the unified AccountingCategory fields in t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAccountingCategory" method="post" path="/accounting/{connection_id}/category" -->
+<!-- UsageSnippet language="ruby" operationID="createAccountingCategory" method="post" path="/accounting/{connection_id}/category" example="accounting_category" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.create_accounting_category(accounting_category: Models::Shared::AccountingCategory.new(
   created_at: DateTime.iso8601('2023-05-30T12:29:04.257Z'),
   description: 'Textus ab thymum labore basium.',
-  id: 'fc02b935-c3fa-445c-be99-0cf29c0159ae',
+  id: '3a9edb6b-9c02-48b4-88c5-11ff43db8769',
   is_active: false,
   metadata: [],
   name: 'Beauty',
-  updated_at: DateTime.iso8601('2025-09-24T07:28:05.359Z'),
+  updated_at: DateTime.iso8601('2025-09-25T12:45:56.969Z')
 ), connection_id: '<id>')
 
 unless res.accounting_category.nil?
@@ -470,17 +464,16 @@ Creates a AccountingContact. Provide the unified AccountingContact fields in the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAccountingContact" method="post" path="/accounting/{connection_id}/contact" -->
+<!-- UsageSnippet language="ruby" operationID="createAccountingContact" method="post" path="/accounting/{connection_id}/contact" example="accounting_contact" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.create_accounting_contact(accounting_contact: Models::Shared::AccountingContact.new(
   associated_contacts: [],
   balance_amount: 55_574.0,
@@ -490,7 +483,7 @@ res = s.accounting.create_accounting_contact(accounting_contact: Models::Shared:
     country_code: 'US',
     postal_code: '50764-5226',
     region: 'Washington',
-    region_code: 'CA',
+    region_code: 'CA'
   ),
   company_name: 'Kertzmann Group',
   created_at: DateTime.iso8601('2021-08-15T14:56:50.258Z'),
@@ -498,15 +491,15 @@ res = s.accounting.create_accounting_contact(accounting_contact: Models::Shared:
   emails: [
     Models::Shared::AccountingEmail.new(
       email: 'delores.reynolds@kertzmanngroup.com',
-      type: Models::Shared::AccountingEmailType::WORK,
+      type: Models::Shared::AccountingEmailType::WORK
     ),
     Models::Shared::AccountingEmail.new(
       email: 'accounts@kertzmanngroup.com',
-      type: Models::Shared::AccountingEmailType::OTHER,
+      type: Models::Shared::AccountingEmailType::OTHER
     ),
   ],
   first_name: 'Delores',
-  id: '2f6d4731-f405-4c86-ba9b-c4f76a26f8d4',
+  id: 'dd7ccea0-cee7-4765-b5a9-024b9f806933',
   identification: '531850872',
   is_active: true,
   is_customer: true,
@@ -517,9 +510,9 @@ res = s.accounting.create_accounting_contact(accounting_contact: Models::Shared:
   payment_methods: [
     Models::Shared::AccountingContactPaymentMethod.new(
       default: true,
-      id: 'a340078d-74eb-4bdc-b818-cbbf66aba15f',
+      id: '06bfd16c-7f85-41bd-8a63-e0ec94a0c27c',
       name: 'Visa 7844',
-      type: Models::Shared::AccountingContactPaymentMethodType::CARD,
+      type: Models::Shared::AccountingContactPaymentMethodType::CARD
     ),
   ],
   portal_url: 'https://kertzmanngroup.com/billing',
@@ -529,18 +522,18 @@ res = s.accounting.create_accounting_contact(accounting_contact: Models::Shared:
     country_code: 'US',
     postal_code: '55878-6806',
     region: 'Florida',
-    region_code: 'OK',
+    region_code: 'OK'
   ),
   tax_exemption: Models::Shared::TaxExemption::FOREIGN,
   tax_number: '867556410',
   telephones: [
     Models::Shared::AccountingTelephone.new(
       telephone: '(432) 760-1716',
-      type: Models::Shared::AccountingTelephoneType::FAX,
+      type: Models::Shared::AccountingTelephoneType::FAX
     ),
   ],
-  updated_at: DateTime.iso8601('2023-12-28T11:14:49.650Z'),
-  website: 'https://kertzmanngroup.com',
+  updated_at: DateTime.iso8601('2023-12-29T06:55:30.745Z'),
+  website: 'https://kertzmanngroup.com'
 ), connection_id: '<id>')
 
 unless res.accounting_contact.nil?
@@ -574,17 +567,16 @@ Creates a AccountingCreditmemo. Provide the unified AccountingCreditmemo fields 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAccountingCreditmemo" method="post" path="/accounting/{connection_id}/creditmemo" -->
+<!-- UsageSnippet language="ruby" operationID="createAccountingCreditmemo" method="post" path="/accounting/{connection_id}/creditmemo" example="accounting_creditmemo" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.create_accounting_creditmemo(accounting_creditmemo: Models::Shared::AccountingCreditmemo.new(
   applications: [],
   attachments: [],
@@ -593,7 +585,7 @@ res = s.accounting.create_accounting_creditmemo(accounting_creditmemo: Models::S
   creditmemo_number: 'CM-99537',
   currency: 'AUD',
   discount_amount: 0.0,
-  id: '999bc00e-1df0-4491-8614-9b1155129c32',
+  id: '02a64db9-e2b6-4bb5-a41c-902cfce8f7ae',
   lineitems: [],
   metadata: [],
   notes: 'Hic vorax dedecor amo adfero torqueo quas victoria.',
@@ -602,7 +594,7 @@ res = s.accounting.create_accounting_creditmemo(accounting_creditmemo: Models::S
   status: Models::Shared::AccountingCreditmemoStatus::AUTHORIZED,
   tax_amount: 0.0,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2025-09-23T12:18:07.177Z'),
+  updated_at: DateTime.iso8601('2025-09-24T16:10:31.485Z')
 ), connection_id: '<id>')
 
 unless res.accounting_creditmemo.nil?
@@ -636,78 +628,77 @@ Creates a AccountingExpense. Provide the unified AccountingExpense fields in the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAccountingExpense" method="post" path="/accounting/{connection_id}/expense" -->
+<!-- UsageSnippet language="ruby" operationID="createAccountingExpense" method="post" path="/accounting/{connection_id}/expense" example="accounting_expense" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.create_accounting_expense(accounting_expense: Models::Shared::AccountingExpense.new(
   attachments: [
     Models::Shared::AccountingAttachment.new(
       download_url: 'https://rubbery-couch.biz/',
-      id: '24aaaf5d-d41a-4234-a31a-0caec588005d',
+      id: '71642e4c-397a-41c3-8140-a123701bdb40',
       mime_type: 'application/pdf',
-      name: 'receipt-9696.pdf',
+      name: 'receipt-9696.pdf'
     ),
     Models::Shared::AccountingAttachment.new(
       download_url: 'https://appropriate-smog.biz/',
-      id: '4e0927ce-069c-4f42-b04f-9baa37e8ed1a',
+      id: '96eeff88-e4c5-49ab-a118-ae8014cfb5d1',
       mime_type: 'application/pdf',
-      name: 'receipt-9696-1.pdf',
+      name: 'receipt-9696-1.pdf'
     ),
   ],
   category_ids: [],
   created_at: DateTime.iso8601('2020-06-11T03:39:37.305Z'),
   currency: 'GBP',
   external_number: 'EXP-38303',
-  id: 'c0bb1223-7e7f-4094-af52-09cfd7644068',
+  id: 'dc1b9bf0-7cf0-4a94-95ed-4b69821cd043',
   lineitems: [
     Models::Shared::AccountingLineitem.new(
-      id: '1aabf4b2-4bf1-48bc-b04c-0732b8a53090',
+      id: '64e40c1f-d9d8-43b0-83aa-0bc3f489dd05',
       item_name: 'Client dinner',
       tax_amount: 0.0,
       total_amount: 364.74,
       unit_amount: 364.74,
-      unit_quantity: 1.0,
+      unit_quantity: 1.0
     ),
     Models::Shared::AccountingLineitem.new(
-      id: '8420fffb-bc23-4f02-82f9-3882eb7396db',
+      id: '95e17f42-d872-437e-8811-589c3e918f71',
       item_name: 'Client dinner',
       tax_amount: 0.0,
       total_amount: 258.35,
       unit_amount: 258.35,
-      unit_quantity: 1.0,
+      unit_quantity: 1.0
     ),
     Models::Shared::AccountingLineitem.new(
-      id: '0f55239e-af47-46ef-8d70-4386306f37f3',
+      id: '8ba8a962-8d44-42d3-b03b-d346b131becf',
       item_name: 'Conference ticket',
       notes: 'Casus umquam conicio cinis demitto sint.',
       tax_amount: 0.0,
       total_amount: 28.14,
       unit_amount: 28.14,
-      unit_quantity: 1.0,
+      unit_quantity: 1.0
     ),
     Models::Shared::AccountingLineitem.new(
-      id: 'afff951c-8b6d-4ddf-b897-4c8adabc1007',
+      id: 'da88b8b4-84a8-48db-b5db-147fb876ecd2',
       item_name: 'Hotel',
       tax_amount: 0.0,
       total_amount: 157.04,
       unit_amount: 157.04,
-      unit_quantity: 1.0,
+      unit_quantity: 1.0
     ),
     Models::Shared::AccountingLineitem.new(
-      id: 'ca121c3b-4e12-4b02-96ff-41ad1dd9005f',
+      id: '85e3ab33-6fa8-49cf-9a10-d66079e700c6',
       item_name: 'Hotel',
       tax_amount: 0.0,
       total_amount: 164.02,
       unit_amount: 164.02,
-      unit_quantity: 1.0,
+      unit_quantity: 1.0
     ),
   ],
   metadata: [],
@@ -718,7 +709,7 @@ res = s.accounting.create_accounting_expense(accounting_expense: Models::Shared:
   tax_amount: 0.0,
   total_amount: 972.29,
   type: Models::Shared::AccountingExpenseType::COMPANY,
-  updated_at: DateTime.iso8601('2020-09-02T23:36:54.508Z'),
+  updated_at: DateTime.iso8601('2020-09-03T01:10:19.049Z')
 ), connection_id: '<id>')
 
 unless res.accounting_expense.nil?
@@ -752,70 +743,69 @@ Creates a AccountingExpensereport. Provide the unified AccountingExpensereport f
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAccountingExpensereport" method="post" path="/accounting/{connection_id}/expensereport" -->
+<!-- UsageSnippet language="ruby" operationID="createAccountingExpensereport" method="post" path="/accounting/{connection_id}/expensereport" example="accounting_expensereport" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.create_accounting_expensereport(accounting_expensereport: Models::Shared::AccountingExpensereport.new(
-  approved_at: DateTime.iso8601('2021-04-22T03:01:37.811Z'),
+  approved_at: DateTime.iso8601('2021-04-22T09:05:07.151Z'),
   attachments: [],
   category_ids: [],
   created_at: DateTime.iso8601('2020-05-29T02:04:59.078Z'),
   currency: 'GBP',
   external_number: 'ER-31240',
-  id: '9311e0c0-372c-4961-884f-5a9cfe7f2f3d',
+  id: 'cfd61362-f0e1-4eff-b17b-b1b3da0f274a',
   lineitems: [
     Models::Shared::AccountingLineitem.new(
-      id: '14143a67-be56-4946-9cc8-3b95057e2fb0',
+      id: '82ea9284-fc13-478d-b675-65f46e93ee9c',
       item_name: 'Conference ticket',
       tax_amount: 0.0,
       total_amount: 39.9,
       unit_amount: 39.9,
-      unit_quantity: 1.0,
+      unit_quantity: 1.0
     ),
     Models::Shared::AccountingLineitem.new(
-      id: 'e2e953f7-cc9a-4b00-9824-0be28e5643e8',
+      id: '30a1d0ca-b776-428a-8c50-ab054d4909cc',
       item_name: 'Flight',
       notes: 'Soluta omnis dolor.',
       tax_amount: 0.0,
       total_amount: 193.17,
       unit_amount: 193.17,
-      unit_quantity: 1.0,
+      unit_quantity: 1.0
     ),
     Models::Shared::AccountingLineitem.new(
-      id: '3683bed7-5cd8-4ce9-81dc-7b450b91ddf1',
+      id: 'a63c6c32-467c-4fd5-bd0e-3eca6246199c',
       item_name: 'Client dinner',
       notes: 'Altus caveo capio.',
       tax_amount: 0.0,
       total_amount: 230.12,
       unit_amount: 230.12,
-      unit_quantity: 1.0,
+      unit_quantity: 1.0
     ),
     Models::Shared::AccountingLineitem.new(
-      id: '04232437-e372-4807-a3e7-b1cfb4062db5',
+      id: '0fe836de-2242-445f-8df9-03764f5432b0',
       item_name: 'Flight',
       tax_amount: 0.0,
       total_amount: 445.27,
       unit_amount: 445.27,
-      unit_quantity: 1.0,
+      unit_quantity: 1.0
     ),
   ],
   metadata: [],
   name: 'Lolita Kunde - October expenses',
   posted_at: DateTime.iso8601('2020-05-29T02:04:59.078Z'),
   reimbursed_amount: 908.46,
-  reimbursed_at: DateTime.iso8601('2021-04-22T03:01:37.811Z'),
+  reimbursed_at: DateTime.iso8601('2021-04-22T09:05:07.151Z'),
   status: Models::Shared::AccountingExpensereportStatus::PAID,
   tax_amount: 0.0,
   total_amount: 908.46,
-  updated_at: DateTime.iso8601('2021-04-22T03:01:37.811Z'),
+  updated_at: DateTime.iso8601('2021-04-22T09:05:07.151Z')
 ), connection_id: '<id>')
 
 unless res.accounting_expensereport.nil?
@@ -849,30 +839,29 @@ Creates a AccountingInvoice. Provide the unified AccountingInvoice fields in the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAccountingInvoice" method="post" path="/accounting/{connection_id}/invoice" -->
+<!-- UsageSnippet language="ruby" operationID="createAccountingInvoice" method="post" path="/accounting/{connection_id}/invoice" example="accounting_invoice" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.create_accounting_invoice(accounting_invoice: Models::Shared::AccountingInvoice.new(
   attachments: [
     Models::Shared::AccountingAttachment.new(
       download_url: 'https://glossy-markup.net/',
-      id: '56bfc54b-5a36-469e-9723-478b2cd3fa88',
+      id: 'ee8efc1a-13f7-4b4b-af02-e5831955087b',
       mime_type: 'application/pdf',
-      name: 'INV-77705.pdf',
+      name: 'INV-77705.pdf'
     ),
     Models::Shared::AccountingAttachment.new(
       download_url: 'https://earnest-giggle.net',
-      id: 'd35ce8b1-5ecc-413a-85c0-06bd3520bde7',
+      id: 'a94ac16d-aa83-491d-9c99-b0ab0f70b9ac',
       mime_type: 'application/pdf',
-      name: 'INV-77705-1.pdf',
+      name: 'INV-77705-1.pdf'
     ),
   ],
   balance_amount: 0.0,
@@ -882,7 +871,7 @@ res = s.accounting.create_accounting_invoice(accounting_invoice: Models::Shared:
   discount_amount: 0.0,
   due_at: DateTime.iso8601('2022-12-07T14:17:29.587Z'),
   extended_notes: [],
-  id: '021b232e-b909-4aff-a4e0-40b266ece433',
+  id: '91f5ce54-c0d0-4b57-b168-ab28b794a54e',
   invoice_number: 'INV-77705',
   is_inclusive_of_tax: false,
   lineitems: [],
@@ -900,8 +889,8 @@ res = s.accounting.create_accounting_invoice(accounting_invoice: Models::Shared:
   term: Models::Shared::AccountingInvoiceTerm::NET_25,
   total_amount: 0.0,
   type: Models::Shared::AccountingInvoiceType::INVOICE,
-  updated_at: DateTime.iso8601('2026-05-10T04:10:31.659Z'),
-  url: 'https://gifted-yarmulke.info/invoices/INV-77705',
+  updated_at: DateTime.iso8601('2026-05-11T18:13:42.921Z'),
+  url: 'https://gifted-yarmulke.info/invoices/INV-77705'
 ), connection_id: '<id>')
 
 unless res.accounting_invoice.nil?
@@ -935,33 +924,32 @@ Creates a AccountingJournal. Provide the unified AccountingJournal fields in the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAccountingJournal" method="post" path="/accounting/{connection_id}/journal" -->
+<!-- UsageSnippet language="ruby" operationID="createAccountingJournal" method="post" path="/accounting/{connection_id}/journal" example="accounting_journal" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.create_accounting_journal(accounting_journal: Models::Shared::AccountingJournal.new(
   attachments: [],
   category_ids: [],
   created_at: DateTime.iso8601('2020-02-20T15:14:55.881Z'),
   currency: 'CAD',
   description: 'Cilicium minima calco constans adipisci.',
-  id: '80929ac2-afbd-4333-9748-cc2d03315e4b',
+  id: '753dd4e0-3d8d-482c-ac35-d3c003e2667e',
   is_inclusive_of_tax: true,
   lineitems: [],
   metadata: [],
-  posted_at: DateTime.iso8601('2023-11-17T00:32:19.384Z'),
+  posted_at: DateTime.iso8601('2023-11-18T00:44:33.123Z'),
   reference: 'JE-78884',
   source: 'crustulum',
   status: Models::Shared::AccountingJournalStatus::VOID,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2022-01-16T05:02:16.979Z'),
+  updated_at: DateTime.iso8601('2022-01-16T17:22:05.864Z')
 ), connection_id: '<id>')
 
 unless res.accounting_journal.nil?
@@ -997,17 +985,16 @@ Creates a AccountingOrder. Provide the unified AccountingOrder fields in the req
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAccountingOrder" method="post" path="/accounting/{connection_id}/order" -->
+<!-- UsageSnippet language="ruby" operationID="createAccountingOrder" method="post" path="/accounting/{connection_id}/order" example="accounting_order" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.create_accounting_order(accounting_order: Models::Shared::AccountingOrder.new(
   billing_address: Models::Shared::PropertyAccountingOrderBillingAddress.new(
     address1: '7654 Treutel Square',
@@ -1015,11 +1002,11 @@ res = s.accounting.create_accounting_order(accounting_order: Models::Shared::Acc
     country_code: 'US',
     postal_code: '42190-3694',
     region: 'Maine',
-    region_code: 'OR',
+    region_code: 'OR'
   ),
   created_at: DateTime.iso8601('2020-11-20T03:46:49.837Z'),
   currency: 'GBP',
-  id: 'f9911e72-ed47-4e77-9912-2c2308068cc6',
+  id: '47375fb2-e42c-457b-918e-b30dcdae1338',
   lineitems: [],
   metadata: [],
   posted_at: DateTime.iso8601('2020-11-20T03:46:49.837Z'),
@@ -1029,12 +1016,12 @@ res = s.accounting.create_accounting_order(accounting_order: Models::Shared::Acc
     country_code: 'US',
     postal_code: '56252',
     region: 'Alaska',
-    region_code: 'VT',
+    region_code: 'VT'
   ),
   status: Models::Shared::AccountingOrderStatus::AUTHORIZED,
   total_amount: 0.0,
   type: Models::Shared::AccountingOrderType::SALES,
-  updated_at: DateTime.iso8601('2022-02-12T05:16:56.093Z'),
+  updated_at: DateTime.iso8601('2022-02-12T14:14:29.380Z')
 ), connection_id: '<id>')
 
 unless res.accounting_order.nil?
@@ -1068,17 +1055,16 @@ Creates a AccountingPaymentterm. Provide the unified AccountingPaymentterm field
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAccountingPaymentterm" method="post" path="/accounting/{connection_id}/paymentterm" -->
+<!-- UsageSnippet language="ruby" operationID="createAccountingPaymentterm" method="post" path="/accounting/{connection_id}/paymentterm" example="accounting_paymentterm" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.create_accounting_paymentterm(accounting_paymentterm: Models::Shared::AccountingPaymentterm.new(
   category: Models::Shared::Category::STANDARD,
   created_at: DateTime.iso8601('2021-08-22T22:42:42.265Z'),
@@ -1089,12 +1075,12 @@ res = s.accounting.create_accounting_paymentterm(accounting_paymentterm: Models:
   discount_percent: 5.0,
   due_days: 57.0,
   due_next_month_days: 9.0,
-  id: 'c96e2531-f203-46f2-bb79-f813fa516cef',
+  id: '259adcec-5aed-42a4-846f-89791e25e80a',
   is_active: false,
   metadata: [],
   name: 'Net 30',
   type: Models::Shared::AccountingPaymenttermType::NET_15,
-  updated_at: DateTime.iso8601('2026-01-24T14:15:36.516Z'),
+  updated_at: DateTime.iso8601('2026-01-26T03:09:46.052Z')
 ), connection_id: '<id>')
 
 unless res.accounting_paymentterm.nil?
@@ -1134,12 +1120,11 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-res = s.accounting.create_accounting_project(accounting_project: Models::Shared::AccountingProject.new(), connection_id: '<id>')
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.accounting.create_accounting_project(accounting_project: Models::Shared::AccountingProject.new, connection_id: '<id>')
 
 unless res.accounting_project.nil?
   # handle response
@@ -1172,17 +1157,16 @@ Creates a AccountingPurchaseorder. Provide the unified AccountingPurchaseorder f
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAccountingPurchaseorder" method="post" path="/accounting/{connection_id}/purchaseorder" -->
+<!-- UsageSnippet language="ruby" operationID="createAccountingPurchaseorder" method="post" path="/accounting/{connection_id}/purchaseorder" example="accounting_purchaseorder" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.create_accounting_purchaseorder(accounting_purchaseorder: Models::Shared::AccountingPurchaseorder.new(
   attachments: [],
   billing_address: Models::Shared::PropertyAccountingPurchaseorderBillingAddress.new(
@@ -1192,12 +1176,12 @@ res = s.accounting.create_accounting_purchaseorder(accounting_purchaseorder: Mod
     country_code: 'US',
     postal_code: '30337',
     region: 'Nevada',
-    region_code: 'FL',
+    region_code: 'FL'
   ),
   category_ids: [],
   created_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
   currency: 'EUR',
-  id: '48bb344a-56b8-46ca-b993-c0acaceb0c02',
+  id: 'c09aefe6-e6ca-49d8-8b00-83307bd5c157',
   lineitems: [],
   metadata: [],
   posted_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
@@ -1207,11 +1191,11 @@ res = s.accounting.create_accounting_purchaseorder(accounting_purchaseorder: Mod
     country_code: 'US',
     postal_code: '92116-5474',
     region: 'Oregon',
-    region_code: 'WY',
+    region_code: 'WY'
   ),
   status: Models::Shared::AccountingPurchaseorderStatus::SUBMITTED,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2021-08-13T09:36:31.460Z'),
+  updated_at: DateTime.iso8601('2021-08-13T14:31:43.281Z')
 ), connection_id: '<id>')
 
 unless res.accounting_purchaseorder.nil?
@@ -1251,12 +1235,11 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-res = s.accounting.create_accounting_quote(accounting_quote: Models::Shared::AccountingQuote.new(), connection_id: '<id>')
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.accounting.create_accounting_quote(accounting_quote: Models::Shared::AccountingQuote.new, connection_id: '<id>')
 
 unless res.accounting_quote.nil?
   # handle response
@@ -1289,17 +1272,16 @@ Creates a AccountingSalesorder. Provide the unified AccountingSalesorder fields 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAccountingSalesorder" method="post" path="/accounting/{connection_id}/salesorder" -->
+<!-- UsageSnippet language="ruby" operationID="createAccountingSalesorder" method="post" path="/accounting/{connection_id}/salesorder" example="accounting_salesorder" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.create_accounting_salesorder(accounting_salesorder: Models::Shared::AccountingSalesorder.new(
   billing_address: Models::Shared::PropertyAccountingSalesorderBillingAddress.new(
     address1: '26530 Stroman Rest',
@@ -1308,16 +1290,16 @@ res = s.accounting.create_accounting_salesorder(accounting_salesorder: Models::S
     country_code: 'US',
     postal_code: '05015-8546',
     region: 'Louisiana',
-    region_code: 'MO',
+    region_code: 'MO'
   ),
   category_ids: [],
-  closed_at: DateTime.iso8601('2023-03-30T06:20:38.024Z'),
+  closed_at: DateTime.iso8601('2023-03-30T17:09:16.946Z'),
   created_at: DateTime.iso8601('2022-01-17T16:11:50.310Z'),
   currency: 'USD',
   discount_amount: 0.0,
   fees: [],
   fulfillment_type: Models::Shared::FulfillmentType::OTHER,
-  id: 'd7b75c3e-a1f3-4ad1-b68c-43f68b068942',
+  id: '478142cd-ac2d-4c2c-8eec-aeff71716a8f',
   lineitems: [],
   metadata: [],
   order_number: '832663',
@@ -1333,14 +1315,14 @@ res = s.accounting.create_accounting_salesorder(accounting_salesorder: Models::S
     country_code: 'US',
     postal_code: '07989-2148',
     region: 'Arkansas',
-    region_code: 'AK',
+    region_code: 'AK'
   ),
   status: Models::Shared::AccountingSalesorderStatus::PAID,
   subtotal_amount: 0.0,
   tax_amount: 0.0,
   tip_amount: 0.0,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2023-03-30T06:20:38.024Z'),
+  updated_at: DateTime.iso8601('2023-03-30T17:09:16.946Z')
 ), connection_id: '<id>')
 
 unless res.accounting_salesorder.nil?
@@ -1374,30 +1356,29 @@ Creates a AccountingTaxrate. Provide the unified AccountingTaxrate fields in the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAccountingTaxrate" method="post" path="/accounting/{connection_id}/taxrate" -->
+<!-- UsageSnippet language="ruby" operationID="createAccountingTaxrate" method="post" path="/accounting/{connection_id}/taxrate" example="accounting_taxrate" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.create_accounting_taxrate(accounting_taxrate: Models::Shared::AccountingTaxrate.new(
   components: [
     Models::Shared::AccountingTaxrateComponent.new(
       is_compound: false,
       name: 'Exempt',
-      rate: 0.0,
+      rate: 0.0
     ),
   ],
   country: 'US',
   created_at: DateTime.iso8601('2020-01-04T10:37:56.894Z'),
   description: 'Exempt (0%)',
   effective_rate: 0.0,
-  id: 'c8e9e0e1-f2b3-464d-a2fa-59fe21da9913',
+  id: 'fcc1a7f4-d6b0-4b51-ae7f-01d6f29d3773',
   is_active: false,
   is_compound: false,
   metadata: [],
@@ -1406,7 +1387,7 @@ res = s.accounting.create_accounting_taxrate(accounting_taxrate: Models::Shared:
   region: 'KS',
   total_rate: 0.0,
   type: Models::Shared::AccountingTaxrateType::SALES,
-  updated_at: DateTime.iso8601('2020-02-13T12:28:29.271Z'),
+  updated_at: DateTime.iso8601('2020-02-13T13:10:18.544Z')
 ), connection_id: '<id>')
 
 unless res.accounting_taxrate.nil?
@@ -1440,29 +1421,28 @@ Creates a AccountingTransaction. Provide the unified AccountingTransaction field
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAccountingTransaction" method="post" path="/accounting/{connection_id}/transaction" -->
+<!-- UsageSnippet language="ruby" operationID="createAccountingTransaction" method="post" path="/accounting/{connection_id}/transaction" example="accounting_transaction" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.create_accounting_transaction(accounting_transaction: Models::Shared::AccountingTransaction.new(
   created_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-  id: '931c4282-4c11-44ac-b4a7-78e5f84465bd',
+  id: '9fea1f93-a00b-4817-b347-dcdc03bfd69c',
   lineitems: [
     Models::Shared::AccountingTransactionLineItem.new(
       category_ids: [],
       description: 'The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability',
-      id: '2ad354c7-689e-43bd-9298-61aa40380df7',
+      id: 'b57ccd22-92cb-443c-84b4-44f915d9554d',
       name: 'Shirt',
       total_amount: 10_184.0,
       unit_amount: 536.0,
-      unit_quantity: 19.0,
+      unit_quantity: 19.0
     ),
   ],
   memo: 'deposit of ISK 792.81 at Fritsch - Dooley charged to account ending in 7879 using card ending in ****3230.',
@@ -1470,7 +1450,7 @@ res = s.accounting.create_accounting_transaction(accounting_transaction: Models:
   tax_amount: 0.0,
   total_amount: 10_184.0,
   transaction_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-  updated_at: DateTime.iso8601('2019-10-14T09:27:23.926Z'),
+  updated_at: DateTime.iso8601('2019-10-14T09:46:21.813Z')
 ), connection_id: '<id>')
 
 unless res.accounting_transaction.nil?
@@ -1504,30 +1484,29 @@ Creates a AccountingVendorcredit. Provide the unified AccountingVendorcredit fie
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAccountingVendorcredit" method="post" path="/accounting/{connection_id}/vendorcredit" -->
+<!-- UsageSnippet language="ruby" operationID="createAccountingVendorcredit" method="post" path="/accounting/{connection_id}/vendorcredit" example="accounting_vendorcredit" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.create_accounting_vendorcredit(accounting_vendorcredit: Models::Shared::AccountingVendorcredit.new(
   applications: [],
   balance_amount: 0.0,
   created_at: DateTime.iso8601('2023-04-15T21:14:08.197Z'),
   currency: 'USD',
-  id: '18567ff3-bc16-434d-b285-02c1418311d6',
+  id: 'b6fe493c-e683-4dd9-a497-084c51a61357',
   lineitems: [],
   metadata: [],
   notes: 'Volup conatus cruciamentum decor avaritia.',
   posted_at: DateTime.iso8601('2023-04-15T21:14:08.197Z'),
   status: Models::Shared::AccountingVendorcreditStatus::AUTHORIZED,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2023-10-05T14:09:24.094Z'),
+  updated_at: DateTime.iso8601('2023-10-05T19:55:13.978Z')
 ), connection_id: '<id>')
 
 unless res.accounting_vendorcredit.nil?
@@ -1567,11 +1546,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.get_accounting_account(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_account.nil?
@@ -1611,11 +1589,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.get_accounting_agedpayable(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_agedpayable.nil?
@@ -1655,11 +1632,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.get_accounting_agedreceivable(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_agedreceivable.nil?
@@ -1699,11 +1675,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.get_accounting_balancesheet(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_balancesheet.nil?
@@ -1743,11 +1718,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.get_accounting_bankfeedaccount(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_bankfeedaccount.nil?
@@ -1787,11 +1761,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.get_accounting_bankfeedtransaction(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_bankfeedtransaction.nil?
@@ -1831,11 +1804,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.get_accounting_bill(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_bill.nil?
@@ -1875,11 +1847,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.get_accounting_cashflow(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_cashflow.nil?
@@ -1919,11 +1890,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.get_accounting_category(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_category.nil?
@@ -1963,11 +1933,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.get_accounting_contact(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_contact.nil?
@@ -2007,11 +1976,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.get_accounting_creditmemo(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_creditmemo.nil?
@@ -2051,11 +2019,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.get_accounting_expense(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_expense.nil?
@@ -2095,11 +2062,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.get_accounting_expensereport(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_expensereport.nil?
@@ -2139,11 +2105,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.get_accounting_invoice(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_invoice.nil?
@@ -2183,11 +2148,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.get_accounting_journal(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_journal.nil?
@@ -2229,11 +2193,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.get_accounting_order(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_order.nil?
@@ -2273,11 +2236,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.get_accounting_organization(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_organization.nil?
@@ -2317,11 +2279,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.get_accounting_paymentterm(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_paymentterm.nil?
@@ -2361,11 +2322,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.get_accounting_profitloss(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_profitloss.nil?
@@ -2405,11 +2365,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.get_accounting_project(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_project.nil?
@@ -2449,11 +2408,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.get_accounting_purchaseorder(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_purchaseorder.nil?
@@ -2493,11 +2451,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.get_accounting_purchasereceipt(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_purchasereceipt.nil?
@@ -2537,11 +2494,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.get_accounting_quote(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_quote.nil?
@@ -2581,11 +2537,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.get_accounting_salesorder(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_salesorder.nil?
@@ -2625,11 +2580,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.get_accounting_salesreceipt(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_salesreceipt.nil?
@@ -2669,11 +2623,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.get_accounting_taxrate(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_taxrate.nil?
@@ -2713,11 +2666,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.get_accounting_transaction(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_transaction.nil?
@@ -2757,11 +2709,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.get_accounting_trialbalance(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_trialbalance.nil?
@@ -2801,11 +2752,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.get_accounting_vendorcredit(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_vendorcredit.nil?
@@ -2845,15 +2795,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingAccountsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingAccountsRequest.new(
+  connection_id: '<id>'
+)
 res = s.accounting.list_accounting_accounts(request: req)
 
 unless res.accounting_accounts.nil?
@@ -2890,15 +2839,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingAgedpayablesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingAgedpayablesRequest.new(
+  connection_id: '<id>'
+)
 res = s.accounting.list_accounting_agedpayables(request: req)
 
 unless res.accounting_agedpayables.nil?
@@ -2935,15 +2883,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingAgedreceivablesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingAgedreceivablesRequest.new(
+  connection_id: '<id>'
+)
 res = s.accounting.list_accounting_agedreceivables(request: req)
 
 unless res.accounting_agedreceivables.nil?
@@ -2980,15 +2927,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingBalancesheetsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingBalancesheetsRequest.new(
+  connection_id: '<id>'
+)
 res = s.accounting.list_accounting_balancesheets(request: req)
 
 unless res.accounting_balancesheets.nil?
@@ -3025,15 +2971,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingBankfeedaccountsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingBankfeedaccountsRequest.new(
+  connection_id: '<id>'
+)
 res = s.accounting.list_accounting_bankfeedaccounts(request: req)
 
 unless res.accounting_bankfeedaccounts.nil?
@@ -3070,15 +3015,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingBankfeedtransactionsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingBankfeedtransactionsRequest.new(
+  connection_id: '<id>'
+)
 res = s.accounting.list_accounting_bankfeedtransactions(request: req)
 
 unless res.accounting_bankfeedtransactions.nil?
@@ -3115,15 +3059,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingBillsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingBillsRequest.new(
+  connection_id: '<id>'
+)
 res = s.accounting.list_accounting_bills(request: req)
 
 unless res.accounting_bills.nil?
@@ -3160,15 +3103,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingCashflowsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingCashflowsRequest.new(
+  connection_id: '<id>'
+)
 res = s.accounting.list_accounting_cashflows(request: req)
 
 unless res.accounting_cashflows.nil?
@@ -3205,15 +3147,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingCategoriesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingCategoriesRequest.new(
+  connection_id: '<id>'
+)
 res = s.accounting.list_accounting_categories(request: req)
 
 unless res.accounting_categories.nil?
@@ -3250,15 +3191,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingContactsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingContactsRequest.new(
+  connection_id: '<id>'
+)
 res = s.accounting.list_accounting_contacts(request: req)
 
 unless res.accounting_contacts.nil?
@@ -3295,15 +3235,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingCreditmemoesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingCreditmemoesRequest.new(
+  connection_id: '<id>'
+)
 res = s.accounting.list_accounting_creditmemoes(request: req)
 
 unless res.accounting_creditmemoes.nil?
@@ -3340,15 +3279,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingExpensereportsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingExpensereportsRequest.new(
+  connection_id: '<id>'
+)
 res = s.accounting.list_accounting_expensereports(request: req)
 
 unless res.accounting_expensereports.nil?
@@ -3385,15 +3323,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingExpensesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingExpensesRequest.new(
+  connection_id: '<id>'
+)
 res = s.accounting.list_accounting_expenses(request: req)
 
 unless res.accounting_expenses.nil?
@@ -3430,15 +3367,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingInvoicesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingInvoicesRequest.new(
+  connection_id: '<id>'
+)
 res = s.accounting.list_accounting_invoices(request: req)
 
 unless res.accounting_invoices.nil?
@@ -3475,15 +3411,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingJournalsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingJournalsRequest.new(
+  connection_id: '<id>'
+)
 res = s.accounting.list_accounting_journals(request: req)
 
 unless res.accounting_journals.nil?
@@ -3522,15 +3457,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingOrdersRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingOrdersRequest.new(
+  connection_id: '<id>'
+)
 res = s.accounting.list_accounting_orders(request: req)
 
 unless res.accounting_orders.nil?
@@ -3567,15 +3501,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingOrganizationsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingOrganizationsRequest.new(
+  connection_id: '<id>'
+)
 res = s.accounting.list_accounting_organizations(request: req)
 
 unless res.accounting_organizations.nil?
@@ -3612,15 +3545,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingPaymenttermsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingPaymenttermsRequest.new(
+  connection_id: '<id>'
+)
 res = s.accounting.list_accounting_paymentterms(request: req)
 
 unless res.accounting_paymentterms.nil?
@@ -3657,15 +3589,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingProfitlossesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingProfitlossesRequest.new(
+  connection_id: '<id>'
+)
 res = s.accounting.list_accounting_profitlosses(request: req)
 
 unless res.accounting_profitlosses.nil?
@@ -3702,15 +3633,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingProjectsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingProjectsRequest.new(
+  connection_id: '<id>'
+)
 res = s.accounting.list_accounting_projects(request: req)
 
 unless res.accounting_projects.nil?
@@ -3747,15 +3677,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingPurchaseordersRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingPurchaseordersRequest.new(
+  connection_id: '<id>'
+)
 res = s.accounting.list_accounting_purchaseorders(request: req)
 
 unless res.accounting_purchaseorders.nil?
@@ -3792,15 +3721,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingPurchasereceiptsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingPurchasereceiptsRequest.new(
+  connection_id: '<id>'
+)
 res = s.accounting.list_accounting_purchasereceipts(request: req)
 
 unless res.accounting_purchasereceipts.nil?
@@ -3837,15 +3765,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingQuotesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingQuotesRequest.new(
+  connection_id: '<id>'
+)
 res = s.accounting.list_accounting_quotes(request: req)
 
 unless res.accounting_quotes.nil?
@@ -3882,15 +3809,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingSalesordersRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingSalesordersRequest.new(
+  connection_id: '<id>'
+)
 res = s.accounting.list_accounting_salesorders(request: req)
 
 unless res.accounting_salesorders.nil?
@@ -3927,15 +3853,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingSalesreceiptsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingSalesreceiptsRequest.new(
+  connection_id: '<id>'
+)
 res = s.accounting.list_accounting_salesreceipts(request: req)
 
 unless res.accounting_salesreceipts.nil?
@@ -3972,15 +3897,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingTaxratesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingTaxratesRequest.new(
+  connection_id: '<id>'
+)
 res = s.accounting.list_accounting_taxrates(request: req)
 
 unless res.accounting_taxrates.nil?
@@ -4017,15 +3941,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingTransactionsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingTransactionsRequest.new(
+  connection_id: '<id>'
+)
 res = s.accounting.list_accounting_transactions(request: req)
 
 unless res.accounting_transactions.nil?
@@ -4062,15 +3985,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingTrialbalancesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingTrialbalancesRequest.new(
+  connection_id: '<id>'
+)
 res = s.accounting.list_accounting_trialbalances(request: req)
 
 unless res.accounting_trialbalances.nil?
@@ -4107,15 +4029,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingVendorcreditsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingVendorcreditsRequest.new(
+  connection_id: '<id>'
+)
 res = s.accounting.list_accounting_vendorcredits(request: req)
 
 unless res.accounting_vendorcredits.nil?
@@ -4146,16 +4067,16 @@ Updates the AccountingAccount identified by `id`. Provide the unified Accounting
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAccountingAccount" method="patch" path="/accounting/{connection_id}/account/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAccountingAccount" method="patch" path="/accounting/{connection_id}/account/{id}" example="accounting_account" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAccountingAccountRequest.new(
   accounting_account: Models::Shared::AccountingAccount.new(
@@ -4164,7 +4085,7 @@ req = Models::Operations::PatchAccountingAccountRequest.new(
     currency: 'CAD',
     customer_defined_code: '6170',
     description: 'Voluptatibus valde spoliatio.',
-    id: '8f8b4e9e-6c5f-46d5-9498-4b6f7aa6d0dc',
+    id: '50c58147-19df-472d-aff5-1737e586d7d7',
     is_payable: false,
     metadata: [],
     name: 'Auto Loan Account',
@@ -4173,16 +4094,15 @@ req = Models::Operations::PatchAccountingAccountRequest.new(
       Models::Shared::AccountingAccountTaxonomy.new(
         original_type: 'vilitas',
         type: Models::Shared::AccountingAccountTaxonomyType::SUBGROUP,
-        value: 'comedo',
+        value: 'comedo'
       ),
     ],
     type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-    updated_at: DateTime.iso8601('2023-08-11T17:37:54.477Z'),
+    updated_at: DateTime.iso8601('2023-08-12T04:41:13.070Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.accounting.patch_accounting_account(request: req)
 
 unless res.accounting_account.nil?
@@ -4213,16 +4133,16 @@ Updates the AccountingBankfeedaccount identified by `id`. Provide the unified Ac
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAccountingBankfeedaccount" method="patch" path="/accounting/{connection_id}/bankfeedaccount/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAccountingBankfeedaccount" method="patch" path="/accounting/{connection_id}/bankfeedaccount/{id}" example="accounting_bankfeedaccount" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAccountingBankfeedaccountRequest.new(
   accounting_bankfeedaccount: Models::Shared::AccountingBankfeedaccount.new(
@@ -4234,17 +4154,16 @@ req = Models::Operations::PatchAccountingBankfeedaccountRequest.new(
     created_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
     currency: 'AUD',
     feed_start_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
-    id: 'c0462e67-6414-4edb-a3b5-605ecae69f7c',
+    id: '624b457e-6f4f-407c-bd55-341bdae35a44',
     metadata: [],
     name: 'Corwin, Donnelly and Connelly Checking',
     routing_number: '694667752',
     status: Models::Shared::AccountingBankfeedaccountStatus::ACTIVE,
-    updated_at: DateTime.iso8601('2024-04-30T21:49:09.944Z'),
+    updated_at: DateTime.iso8601('2024-05-01T14:00:59.111Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.accounting.patch_accounting_bankfeedaccount(request: req)
 
 unless res.accounting_bankfeedaccount.nil?
@@ -4275,16 +4194,16 @@ Updates the AccountingBankfeedtransaction identified by `id`. Provide the unifie
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAccountingBankfeedtransaction" method="patch" path="/accounting/{connection_id}/bankfeedtransaction/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAccountingBankfeedtransaction" method="patch" path="/accounting/{connection_id}/bankfeedtransaction/{id}" example="accounting_bankfeedtransaction" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAccountingBankfeedtransactionRequest.new(
   accounting_bankfeedtransaction: Models::Shared::AccountingBankfeedtransaction.new(
@@ -4294,20 +4213,19 @@ req = Models::Operations::PatchAccountingBankfeedtransactionRequest.new(
     created_at: DateTime.iso8601('2022-03-24T23:41:08.374Z'),
     currency: 'CAD',
     description: 'Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781.',
-    id: '065d2961-8412-4e65-acc5-a6b31599c03b',
+    id: '1b6bfbc7-19cc-43d7-a971-3248cd1822a3',
     is_pending: true,
     merchant_name: 'Buckridge - Feest',
     metadata: [],
-    posted_at: DateTime.iso8601('2025-04-27T12:50:03.838Z'),
+    posted_at: DateTime.iso8601('2025-04-28T17:54:05.887Z'),
     reference: '79574105',
-    transaction_at: DateTime.iso8601('2022-07-31T18:56:02.446Z'),
+    transaction_at: DateTime.iso8601('2022-07-31T22:14:54.748Z'),
     type: Models::Shared::AccountingBankfeedtransactionType::CREDIT,
-    updated_at: DateTime.iso8601('2022-05-25T18:25:08.006Z'),
+    updated_at: DateTime.iso8601('2022-05-25T20:00:31.397Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.accounting.patch_accounting_bankfeedtransaction(request: req)
 
 unless res.accounting_bankfeedtransaction.nil?
@@ -4338,31 +4256,31 @@ Updates the AccountingBill identified by `id`. Provide the unified AccountingBil
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAccountingBill" method="patch" path="/accounting/{connection_id}/bill/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAccountingBill" method="patch" path="/accounting/{connection_id}/bill/{id}" example="accounting_bill" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAccountingBillRequest.new(
   accounting_bill: Models::Shared::AccountingBill.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://puny-foodstuffs.name',
-        id: '38cc6dc9-e27b-4846-9889-74370d7de1e0',
+        id: '5615a620-e88f-41de-a848-0691e2e1ac1b',
         mime_type: 'application/pdf',
-        name: 'BILL-2466.pdf',
+        name: 'BILL-2466.pdf'
       ),
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://grimy-characterization.net',
-        id: '9fb72c27-d3d3-4191-8392-ce856bddca34',
+        id: '023015ec-dc5a-49ba-88ce-bb5baff02d20',
         mime_type: 'application/pdf',
-        name: 'BILL-2466-1.pdf',
+        name: 'BILL-2466-1.pdf'
       ),
     ],
     balance_amount: 0.0,
@@ -4373,7 +4291,7 @@ req = Models::Operations::PatchAccountingBillRequest.new(
     discount_amount: 0.0,
     due_at: DateTime.iso8601('2019-09-07T23:03:14.104Z'),
     extended_notes: [],
-    id: 'ef04ad0b-5a1e-4398-b904-26f588770ebd',
+    id: 'dbe2e922-603e-47e6-8079-0c173c333859',
     lineitems: [],
     metadata: [],
     notes: 'Admiratio deporto tutamen cilicium infit amissio ante demulceo.',
@@ -4389,13 +4307,12 @@ req = Models::Operations::PatchAccountingBillRequest.new(
     tax_amount: 0.0,
     term: Models::Shared::Term::NET_90,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2020-06-03T08:19:06.135Z'),
-    url: 'https://cluttered-importance.org/bills/BILL-2466',
+    updated_at: DateTime.iso8601('2020-06-03T13:08:04.978Z'),
+    url: 'https://cluttered-importance.org/bills/BILL-2466'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.accounting.patch_accounting_bill(request: req)
 
 unless res.accounting_bill.nil?
@@ -4426,31 +4343,30 @@ Updates the AccountingCategory identified by `id`. Provide the unified Accountin
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAccountingCategory" method="patch" path="/accounting/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAccountingCategory" method="patch" path="/accounting/{connection_id}/category/{id}" example="accounting_category" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAccountingCategoryRequest.new(
   accounting_category: Models::Shared::AccountingCategory.new(
     created_at: DateTime.iso8601('2023-05-30T12:29:04.257Z'),
     description: 'Textus ab thymum labore basium.',
-    id: 'f2cbdc9e-652b-456e-a71a-3835738a1ffb',
+    id: '5a3cbfa0-565a-4d3d-b155-9ea35d3eeca7',
     is_active: false,
     metadata: [],
     name: 'Beauty',
-    updated_at: DateTime.iso8601('2025-09-24T07:28:05.369Z'),
+    updated_at: DateTime.iso8601('2025-09-25T12:45:56.975Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.accounting.patch_accounting_category(request: req)
 
 unless res.accounting_category.nil?
@@ -4481,16 +4397,16 @@ Updates the AccountingContact identified by `id`. Provide the unified Accounting
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAccountingContact" method="patch" path="/accounting/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAccountingContact" method="patch" path="/accounting/{connection_id}/contact/{id}" example="accounting_contact" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAccountingContactRequest.new(
   accounting_contact: Models::Shared::AccountingContact.new(
@@ -4502,7 +4418,7 @@ req = Models::Operations::PatchAccountingContactRequest.new(
       country_code: 'US',
       postal_code: '50764-5226',
       region: 'Washington',
-      region_code: 'CA',
+      region_code: 'CA'
     ),
     company_name: 'Kertzmann Group',
     created_at: DateTime.iso8601('2021-08-15T14:56:50.258Z'),
@@ -4510,15 +4426,15 @@ req = Models::Operations::PatchAccountingContactRequest.new(
     emails: [
       Models::Shared::AccountingEmail.new(
         email: 'delores.reynolds@kertzmanngroup.com',
-        type: Models::Shared::AccountingEmailType::WORK,
+        type: Models::Shared::AccountingEmailType::WORK
       ),
       Models::Shared::AccountingEmail.new(
         email: 'accounts@kertzmanngroup.com',
-        type: Models::Shared::AccountingEmailType::OTHER,
+        type: Models::Shared::AccountingEmailType::OTHER
       ),
     ],
     first_name: 'Delores',
-    id: 'a08966fd-4ea7-48b7-ac2b-d5b6b595affb',
+    id: '90e1a5c0-fae8-424a-870e-e6b9fee9fe07',
     identification: '531850872',
     is_active: true,
     is_customer: true,
@@ -4529,9 +4445,9 @@ req = Models::Operations::PatchAccountingContactRequest.new(
     payment_methods: [
       Models::Shared::AccountingContactPaymentMethod.new(
         default: true,
-        id: 'b4dbd23d-74e2-4960-bea3-a87c7a9d7655',
+        id: 'f78084ea-d876-4f6d-a847-98f2b77a5bd5',
         name: 'Visa 7844',
-        type: Models::Shared::AccountingContactPaymentMethodType::CARD,
+        type: Models::Shared::AccountingContactPaymentMethodType::CARD
       ),
     ],
     portal_url: 'https://kertzmanngroup.com/billing',
@@ -4541,23 +4457,22 @@ req = Models::Operations::PatchAccountingContactRequest.new(
       country_code: 'US',
       postal_code: '55878-6806',
       region: 'Florida',
-      region_code: 'OK',
+      region_code: 'OK'
     ),
     tax_exemption: Models::Shared::TaxExemption::FOREIGN,
     tax_number: '867556410',
     telephones: [
       Models::Shared::AccountingTelephone.new(
         telephone: '(432) 760-1716',
-        type: Models::Shared::AccountingTelephoneType::FAX,
+        type: Models::Shared::AccountingTelephoneType::FAX
       ),
     ],
-    updated_at: DateTime.iso8601('2023-12-28T11:14:49.676Z'),
-    website: 'https://kertzmanngroup.com',
+    updated_at: DateTime.iso8601('2023-12-29T06:55:30.765Z'),
+    website: 'https://kertzmanngroup.com'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.accounting.patch_accounting_contact(request: req)
 
 unless res.accounting_contact.nil?
@@ -4588,16 +4503,16 @@ Updates the AccountingCreditmemo identified by `id`. Provide the unified Account
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAccountingCreditmemo" method="patch" path="/accounting/{connection_id}/creditmemo/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAccountingCreditmemo" method="patch" path="/accounting/{connection_id}/creditmemo/{id}" example="accounting_creditmemo" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAccountingCreditmemoRequest.new(
   accounting_creditmemo: Models::Shared::AccountingCreditmemo.new(
@@ -4608,7 +4523,7 @@ req = Models::Operations::PatchAccountingCreditmemoRequest.new(
     creditmemo_number: 'CM-99537',
     currency: 'AUD',
     discount_amount: 0.0,
-    id: '2cd62ef3-e7a7-4229-aba2-f41eec99af8b',
+    id: '700fcaa6-802d-4e9f-be0a-fdcc3a62bff7',
     lineitems: [],
     metadata: [],
     notes: 'Hic vorax dedecor amo adfero torqueo quas victoria.',
@@ -4617,12 +4532,11 @@ req = Models::Operations::PatchAccountingCreditmemoRequest.new(
     status: Models::Shared::AccountingCreditmemoStatus::AUTHORIZED,
     tax_amount: 0.0,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2025-09-23T12:18:07.213Z'),
+    updated_at: DateTime.iso8601('2025-09-24T16:10:31.512Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.accounting.patch_accounting_creditmemo(request: req)
 
 unless res.accounting_creditmemo.nil?
@@ -4653,79 +4567,79 @@ Updates the AccountingExpense identified by `id`. Provide the unified Accounting
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAccountingExpense" method="patch" path="/accounting/{connection_id}/expense/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAccountingExpense" method="patch" path="/accounting/{connection_id}/expense/{id}" example="accounting_expense" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAccountingExpenseRequest.new(
   accounting_expense: Models::Shared::AccountingExpense.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://rubbery-couch.biz/',
-        id: 'b9c8663d-05e2-41be-a192-10a279d1dbda',
+        id: 'a4fb3ed0-da8f-442d-b9be-ff936fcc22cf',
         mime_type: 'application/pdf',
-        name: 'receipt-9696.pdf',
+        name: 'receipt-9696.pdf'
       ),
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://appropriate-smog.biz/',
-        id: 'b27920a1-ad04-4594-9832-a04e9798b5da',
+        id: '18231331-b204-4bda-a39c-7afc49cbf746',
         mime_type: 'application/pdf',
-        name: 'receipt-9696-1.pdf',
+        name: 'receipt-9696-1.pdf'
       ),
     ],
     category_ids: [],
     created_at: DateTime.iso8601('2020-06-11T03:39:37.305Z'),
     currency: 'GBP',
     external_number: 'EXP-38303',
-    id: '788a524c-0813-4e69-92f1-648de1d467df',
+    id: '7ab61707-7735-4686-89a1-d8b01f503a45',
     lineitems: [
       Models::Shared::AccountingLineitem.new(
-        id: '5841c129-a7e7-40c9-9e69-f50d15c42f94',
+        id: '04bd6547-11a0-4c4b-9346-52474151f07d',
         item_name: 'Client dinner',
         tax_amount: 0.0,
         total_amount: 364.74,
         unit_amount: 364.74,
-        unit_quantity: 1.0,
+        unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'a83d9a46-764b-4cc7-a027-9ebdca665ff0',
+        id: 'db9a46c5-e768-4369-8d7f-2bd52c1e0cc2',
         item_name: 'Client dinner',
         tax_amount: 0.0,
         total_amount: 258.35,
         unit_amount: 258.35,
-        unit_quantity: 1.0,
+        unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '2844bb2d-a157-4690-87bf-7fa680b1d4ce',
+        id: '85fd6a1b-000f-49b0-a421-f37c3f639d90',
         item_name: 'Conference ticket',
         notes: 'Casus umquam conicio cinis demitto sint.',
         tax_amount: 0.0,
         total_amount: 28.14,
         unit_amount: 28.14,
-        unit_quantity: 1.0,
+        unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '8489bb33-bd3c-4851-a324-4bbc75792cd9',
+        id: '1a596dd5-ac6e-45ba-bece-a7557b8cf1e9',
         item_name: 'Hotel',
         tax_amount: 0.0,
         total_amount: 157.04,
         unit_amount: 157.04,
-        unit_quantity: 1.0,
+        unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'aad2b7b3-5741-4893-937e-81c4b8b3018f',
+        id: 'a4137734-28e4-46d8-91b0-81e3d61f35c0',
         item_name: 'Hotel',
         tax_amount: 0.0,
         total_amount: 164.02,
         unit_amount: 164.02,
-        unit_quantity: 1.0,
+        unit_quantity: 1.0
       ),
     ],
     metadata: [],
@@ -4736,12 +4650,11 @@ req = Models::Operations::PatchAccountingExpenseRequest.new(
     tax_amount: 0.0,
     total_amount: 972.29,
     type: Models::Shared::AccountingExpenseType::COMPANY,
-    updated_at: DateTime.iso8601('2020-09-02T23:36:54.510Z'),
+    updated_at: DateTime.iso8601('2020-09-03T01:10:19.050Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.accounting.patch_accounting_expense(request: req)
 
 unless res.accounting_expense.nil?
@@ -4772,76 +4685,75 @@ Updates the AccountingExpensereport identified by `id`. Provide the unified Acco
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAccountingExpensereport" method="patch" path="/accounting/{connection_id}/expensereport/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAccountingExpensereport" method="patch" path="/accounting/{connection_id}/expensereport/{id}" example="accounting_expensereport" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAccountingExpensereportRequest.new(
   accounting_expensereport: Models::Shared::AccountingExpensereport.new(
-    approved_at: DateTime.iso8601('2021-04-22T03:01:37.817Z'),
+    approved_at: DateTime.iso8601('2021-04-22T09:05:07.154Z'),
     attachments: [],
     category_ids: [],
     created_at: DateTime.iso8601('2020-05-29T02:04:59.078Z'),
     currency: 'GBP',
     external_number: 'ER-31240',
-    id: '4491a2d1-2783-4dec-ad85-ac34a0aeb7ac',
+    id: '59a78c88-e22d-4638-a86e-f6697c163253',
     lineitems: [
       Models::Shared::AccountingLineitem.new(
-        id: 'bd2904b1-8399-4241-94c8-c2fcda4c42cc',
+        id: 'c4452ae1-39b4-44da-b0fc-fd4c3c05fea9',
         item_name: 'Conference ticket',
         tax_amount: 0.0,
         total_amount: 39.9,
         unit_amount: 39.9,
-        unit_quantity: 1.0,
+        unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'e2b85617-481b-454b-9d2f-144750330415',
+        id: '7d7ccf34-1622-44c0-8d89-f5936310dbe2',
         item_name: 'Flight',
         notes: 'Soluta omnis dolor.',
         tax_amount: 0.0,
         total_amount: 193.17,
         unit_amount: 193.17,
-        unit_quantity: 1.0,
+        unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '493d4f5f-58f4-4ea3-8d04-2ab6a61b8e62',
+        id: 'd155fd3e-bf86-4a7e-abc2-d1cdcb215e52',
         item_name: 'Client dinner',
         notes: 'Altus caveo capio.',
         tax_amount: 0.0,
         total_amount: 230.12,
         unit_amount: 230.12,
-        unit_quantity: 1.0,
+        unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '81518967-8cef-441e-908b-622c40ff6cae',
+        id: '5ad9f4fb-9c1f-4074-a3ea-1ecd0ee03ad8',
         item_name: 'Flight',
         tax_amount: 0.0,
         total_amount: 445.27,
         unit_amount: 445.27,
-        unit_quantity: 1.0,
+        unit_quantity: 1.0
       ),
     ],
     metadata: [],
     name: 'Lolita Kunde - October expenses',
     posted_at: DateTime.iso8601('2020-05-29T02:04:59.078Z'),
     reimbursed_amount: 908.46,
-    reimbursed_at: DateTime.iso8601('2021-04-22T03:01:37.817Z'),
+    reimbursed_at: DateTime.iso8601('2021-04-22T09:05:07.154Z'),
     status: Models::Shared::AccountingExpensereportStatus::PAID,
     tax_amount: 0.0,
     total_amount: 908.46,
-    updated_at: DateTime.iso8601('2021-04-22T03:01:37.817Z'),
+    updated_at: DateTime.iso8601('2021-04-22T09:05:07.154Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.accounting.patch_accounting_expensereport(request: req)
 
 unless res.accounting_expensereport.nil?
@@ -4872,31 +4784,31 @@ Updates the AccountingInvoice identified by `id`. Provide the unified Accounting
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAccountingInvoice" method="patch" path="/accounting/{connection_id}/invoice/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAccountingInvoice" method="patch" path="/accounting/{connection_id}/invoice/{id}" example="accounting_invoice" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAccountingInvoiceRequest.new(
   accounting_invoice: Models::Shared::AccountingInvoice.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://glossy-markup.net/',
-        id: 'feec3a7d-914a-430a-add2-bcfae16fa2ba',
+        id: '0d533c97-b761-4b0c-9514-7167cc3aab80',
         mime_type: 'application/pdf',
-        name: 'INV-77705.pdf',
+        name: 'INV-77705.pdf'
       ),
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://earnest-giggle.net',
-        id: '4459d855-919d-4327-9d7b-5a9ddcad7ffc',
+        id: '8a67b10d-ad6b-43fb-86c3-98fb2356a2e4',
         mime_type: 'application/pdf',
-        name: 'INV-77705-1.pdf',
+        name: 'INV-77705-1.pdf'
       ),
     ],
     balance_amount: 0.0,
@@ -4906,7 +4818,7 @@ req = Models::Operations::PatchAccountingInvoiceRequest.new(
     discount_amount: 0.0,
     due_at: DateTime.iso8601('2022-12-07T14:17:29.587Z'),
     extended_notes: [],
-    id: '13558079-144b-42c1-a940-32b8f4e49a6a',
+    id: 'b7f99aa0-0744-4de2-9334-b54c5982a695',
     invoice_number: 'INV-77705',
     is_inclusive_of_tax: false,
     lineitems: [],
@@ -4924,13 +4836,12 @@ req = Models::Operations::PatchAccountingInvoiceRequest.new(
     term: Models::Shared::AccountingInvoiceTerm::NET_25,
     total_amount: 0.0,
     type: Models::Shared::AccountingInvoiceType::INVOICE,
-    updated_at: DateTime.iso8601('2026-05-10T04:10:31.716Z'),
-    url: 'https://gifted-yarmulke.info/invoices/INV-77705',
+    updated_at: DateTime.iso8601('2026-05-11T18:13:42.954Z'),
+    url: 'https://gifted-yarmulke.info/invoices/INV-77705'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.accounting.patch_accounting_invoice(request: req)
 
 unless res.accounting_invoice.nil?
@@ -4961,16 +4872,16 @@ Updates the AccountingJournal identified by `id`. Provide the unified Accounting
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAccountingJournal" method="patch" path="/accounting/{connection_id}/journal/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAccountingJournal" method="patch" path="/accounting/{connection_id}/journal/{id}" example="accounting_journal" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAccountingJournalRequest.new(
   accounting_journal: Models::Shared::AccountingJournal.new(
@@ -4979,21 +4890,20 @@ req = Models::Operations::PatchAccountingJournalRequest.new(
     created_at: DateTime.iso8601('2020-02-20T15:14:55.881Z'),
     currency: 'CAD',
     description: 'Cilicium minima calco constans adipisci.',
-    id: '93a59944-8bb0-42bf-ac7a-5facc9458549',
+    id: '500e693a-af0c-43f2-9871-a59605e86d28',
     is_inclusive_of_tax: true,
     lineitems: [],
     metadata: [],
-    posted_at: DateTime.iso8601('2023-11-17T00:32:19.404Z'),
+    posted_at: DateTime.iso8601('2023-11-18T00:44:33.137Z'),
     reference: 'JE-78884',
     source: 'crustulum',
     status: Models::Shared::AccountingJournalStatus::VOID,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2022-01-16T05:02:16.989Z'),
+    updated_at: DateTime.iso8601('2022-01-16T17:22:05.872Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.accounting.patch_accounting_journal(request: req)
 
 unless res.accounting_journal.nil?
@@ -5026,16 +4936,16 @@ Updates the AccountingOrder identified by `id`. Provide the unified AccountingOr
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAccountingOrder" method="patch" path="/accounting/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAccountingOrder" method="patch" path="/accounting/{connection_id}/order/{id}" example="accounting_order" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAccountingOrderRequest.new(
   accounting_order: Models::Shared::AccountingOrder.new(
@@ -5045,11 +4955,11 @@ req = Models::Operations::PatchAccountingOrderRequest.new(
       country_code: 'US',
       postal_code: '42190-3694',
       region: 'Maine',
-      region_code: 'OR',
+      region_code: 'OR'
     ),
     created_at: DateTime.iso8601('2020-11-20T03:46:49.837Z'),
     currency: 'GBP',
-    id: '37a938a6-8d43-44b0-88b2-9f31477cfa13',
+    id: '5ae9efed-96fc-42fb-88ec-26ab83ee4379',
     lineitems: [],
     metadata: [],
     posted_at: DateTime.iso8601('2020-11-20T03:46:49.837Z'),
@@ -5059,17 +4969,16 @@ req = Models::Operations::PatchAccountingOrderRequest.new(
       country_code: 'US',
       postal_code: '56252',
       region: 'Alaska',
-      region_code: 'VT',
+      region_code: 'VT'
     ),
     status: Models::Shared::AccountingOrderStatus::AUTHORIZED,
     total_amount: 0.0,
     type: Models::Shared::AccountingOrderType::SALES,
-    updated_at: DateTime.iso8601('2022-02-12T05:16:56.105Z'),
+    updated_at: DateTime.iso8601('2022-02-12T14:14:29.389Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.accounting.patch_accounting_order(request: req)
 
 unless res.accounting_order.nil?
@@ -5100,16 +5009,16 @@ Updates the AccountingPaymentterm identified by `id`. Provide the unified Accoun
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAccountingPaymentterm" method="patch" path="/accounting/{connection_id}/paymentterm/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAccountingPaymentterm" method="patch" path="/accounting/{connection_id}/paymentterm/{id}" example="accounting_paymentterm" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAccountingPaymenttermRequest.new(
   accounting_paymentterm: Models::Shared::AccountingPaymentterm.new(
@@ -5122,17 +5031,16 @@ req = Models::Operations::PatchAccountingPaymenttermRequest.new(
     discount_percent: 5.0,
     due_days: 57.0,
     due_next_month_days: 9.0,
-    id: '81a1de6a-65ab-4164-8e95-d996bd4c16bb',
+    id: '40aac803-306c-440e-ad6c-badc81f1ead5',
     is_active: false,
     metadata: [],
     name: 'Net 30',
     type: Models::Shared::AccountingPaymenttermType::NET_15,
-    updated_at: DateTime.iso8601('2026-01-24T14:15:36.535Z'),
+    updated_at: DateTime.iso8601('2026-01-26T03:09:46.064Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.accounting.patch_accounting_paymentterm(request: req)
 
 unless res.accounting_paymentterm.nil?
@@ -5169,17 +5077,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::PatchAccountingProjectRequest.new(
-  accounting_project: Models::Shared::AccountingProject.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::PatchAccountingProjectRequest.new(
+  accounting_project: Models::Shared::AccountingProject.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.accounting.patch_accounting_project(request: req)
 
 unless res.accounting_project.nil?
@@ -5210,16 +5117,16 @@ Updates the AccountingPurchaseorder identified by `id`. Provide the unified Acco
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAccountingPurchaseorder" method="patch" path="/accounting/{connection_id}/purchaseorder/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAccountingPurchaseorder" method="patch" path="/accounting/{connection_id}/purchaseorder/{id}" example="accounting_purchaseorder" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAccountingPurchaseorderRequest.new(
   accounting_purchaseorder: Models::Shared::AccountingPurchaseorder.new(
@@ -5231,12 +5138,12 @@ req = Models::Operations::PatchAccountingPurchaseorderRequest.new(
       country_code: 'US',
       postal_code: '30337',
       region: 'Nevada',
-      region_code: 'FL',
+      region_code: 'FL'
     ),
     category_ids: [],
     created_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
     currency: 'EUR',
-    id: 'dc153403-e41a-4b2c-9daf-9a9871d74361',
+    id: 'c8460e56-9e80-47af-8278-b9bfe8399815',
     lineitems: [],
     metadata: [],
     posted_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
@@ -5246,16 +5153,15 @@ req = Models::Operations::PatchAccountingPurchaseorderRequest.new(
       country_code: 'US',
       postal_code: '92116-5474',
       region: 'Oregon',
-      region_code: 'WY',
+      region_code: 'WY'
     ),
     status: Models::Shared::AccountingPurchaseorderStatus::SUBMITTED,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2021-08-13T09:36:31.467Z'),
+    updated_at: DateTime.iso8601('2021-08-13T14:31:43.286Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.accounting.patch_accounting_purchaseorder(request: req)
 
 unless res.accounting_purchaseorder.nil?
@@ -5292,17 +5198,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::PatchAccountingQuoteRequest.new(
-  accounting_quote: Models::Shared::AccountingQuote.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::PatchAccountingQuoteRequest.new(
+  accounting_quote: Models::Shared::AccountingQuote.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.accounting.patch_accounting_quote(request: req)
 
 unless res.accounting_quote.nil?
@@ -5333,16 +5238,16 @@ Updates the AccountingSalesorder identified by `id`. Provide the unified Account
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAccountingSalesorder" method="patch" path="/accounting/{connection_id}/salesorder/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAccountingSalesorder" method="patch" path="/accounting/{connection_id}/salesorder/{id}" example="accounting_salesorder" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAccountingSalesorderRequest.new(
   accounting_salesorder: Models::Shared::AccountingSalesorder.new(
@@ -5353,16 +5258,16 @@ req = Models::Operations::PatchAccountingSalesorderRequest.new(
       country_code: 'US',
       postal_code: '05015-8546',
       region: 'Louisiana',
-      region_code: 'MO',
+      region_code: 'MO'
     ),
     category_ids: [],
-    closed_at: DateTime.iso8601('2023-03-30T06:20:38.043Z'),
+    closed_at: DateTime.iso8601('2023-03-30T17:09:16.961Z'),
     created_at: DateTime.iso8601('2022-01-17T16:11:50.310Z'),
     currency: 'USD',
     discount_amount: 0.0,
     fees: [],
     fulfillment_type: Models::Shared::FulfillmentType::OTHER,
-    id: 'e2503a2f-250f-4f89-8f42-eefb27d66dda',
+    id: '6350a16d-e4ed-49a7-a0b4-3966a46ab5a1',
     lineitems: [],
     metadata: [],
     order_number: '832663',
@@ -5378,19 +5283,18 @@ req = Models::Operations::PatchAccountingSalesorderRequest.new(
       country_code: 'US',
       postal_code: '07989-2148',
       region: 'Arkansas',
-      region_code: 'AK',
+      region_code: 'AK'
     ),
     status: Models::Shared::AccountingSalesorderStatus::PAID,
     subtotal_amount: 0.0,
     tax_amount: 0.0,
     tip_amount: 0.0,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-03-30T06:20:38.043Z'),
+    updated_at: DateTime.iso8601('2023-03-30T17:09:16.961Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.accounting.patch_accounting_salesorder(request: req)
 
 unless res.accounting_salesorder.nil?
@@ -5421,16 +5325,16 @@ Updates the AccountingTaxrate identified by `id`. Provide the unified Accounting
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAccountingTaxrate" method="patch" path="/accounting/{connection_id}/taxrate/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAccountingTaxrate" method="patch" path="/accounting/{connection_id}/taxrate/{id}" example="accounting_taxrate" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAccountingTaxrateRequest.new(
   accounting_taxrate: Models::Shared::AccountingTaxrate.new(
@@ -5438,14 +5342,14 @@ req = Models::Operations::PatchAccountingTaxrateRequest.new(
       Models::Shared::AccountingTaxrateComponent.new(
         is_compound: false,
         name: 'Exempt',
-        rate: 0.0,
+        rate: 0.0
       ),
     ],
     country: 'US',
     created_at: DateTime.iso8601('2020-01-04T10:37:56.894Z'),
     description: 'Exempt (0%)',
     effective_rate: 0.0,
-    id: 'b95ebbce-1d33-45bc-88f6-9a69118e040d',
+    id: 'd038083c-7cad-4ede-bc18-09bd565d66b9',
     is_active: false,
     is_compound: false,
     metadata: [],
@@ -5454,12 +5358,11 @@ req = Models::Operations::PatchAccountingTaxrateRequest.new(
     region: 'KS',
     total_rate: 0.0,
     type: Models::Shared::AccountingTaxrateType::SALES,
-    updated_at: DateTime.iso8601('2020-02-13T12:28:29.271Z'),
+    updated_at: DateTime.iso8601('2020-02-13T13:10:18.544Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.accounting.patch_accounting_taxrate(request: req)
 
 unless res.accounting_taxrate.nil?
@@ -5490,30 +5393,30 @@ Updates the AccountingTransaction identified by `id`. Provide the unified Accoun
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAccountingTransaction" method="patch" path="/accounting/{connection_id}/transaction/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAccountingTransaction" method="patch" path="/accounting/{connection_id}/transaction/{id}" example="accounting_transaction" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAccountingTransactionRequest.new(
   accounting_transaction: Models::Shared::AccountingTransaction.new(
     created_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-    id: '8a49ca85-6ad6-4fd1-ba5d-5e1803188d9e',
+    id: '0bd6c7ee-4cb8-49a3-923c-204dd35e8857',
     lineitems: [
       Models::Shared::AccountingTransactionLineItem.new(
         category_ids: [],
         description: 'The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability',
-        id: 'a844abb5-995d-465a-97bd-ed3b6b6c3b9b',
+        id: 'bfdd8bbe-e56e-446c-bd58-43b664bfd8cc',
         name: 'Shirt',
         total_amount: 10_184.0,
         unit_amount: 536.0,
-        unit_quantity: 19.0,
+        unit_quantity: 19.0
       ),
     ],
     memo: 'deposit of ISK 792.81 at Fritsch - Dooley charged to account ending in 7879 using card ending in ****3230.',
@@ -5521,12 +5424,11 @@ req = Models::Operations::PatchAccountingTransactionRequest.new(
     tax_amount: 0.0,
     total_amount: 10_184.0,
     transaction_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-    updated_at: DateTime.iso8601('2019-10-14T09:27:23.927Z'),
+    updated_at: DateTime.iso8601('2019-10-14T09:46:21.813Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.accounting.patch_accounting_transaction(request: req)
 
 unless res.accounting_transaction.nil?
@@ -5557,16 +5459,16 @@ Updates the AccountingVendorcredit identified by `id`. Provide the unified Accou
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAccountingVendorcredit" method="patch" path="/accounting/{connection_id}/vendorcredit/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAccountingVendorcredit" method="patch" path="/accounting/{connection_id}/vendorcredit/{id}" example="accounting_vendorcredit" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAccountingVendorcreditRequest.new(
   accounting_vendorcredit: Models::Shared::AccountingVendorcredit.new(
@@ -5574,19 +5476,18 @@ req = Models::Operations::PatchAccountingVendorcreditRequest.new(
     balance_amount: 0.0,
     created_at: DateTime.iso8601('2023-04-15T21:14:08.197Z'),
     currency: 'USD',
-    id: 'cee28752-d0a2-47af-a7ce-7609eb6ba38c',
+    id: 'ad46d6f9-5baa-42e8-9947-62ec5b2e5d89',
     lineitems: [],
     metadata: [],
     notes: 'Volup conatus cruciamentum decor avaritia.',
     posted_at: DateTime.iso8601('2023-04-15T21:14:08.197Z'),
     status: Models::Shared::AccountingVendorcreditStatus::AUTHORIZED,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-10-05T14:09:24.100Z'),
+    updated_at: DateTime.iso8601('2023-10-05T19:55:13.983Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.accounting.patch_accounting_vendorcredit(request: req)
 
 unless res.accounting_vendorcredit.nil?
@@ -5623,11 +5524,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.remove_accounting_account(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -5665,11 +5565,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.remove_accounting_bankfeedaccount(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -5707,11 +5606,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.remove_accounting_bankfeedtransaction(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -5749,11 +5647,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.remove_accounting_bill(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -5791,11 +5688,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.remove_accounting_category(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -5833,11 +5729,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.remove_accounting_contact(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -5875,11 +5770,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.remove_accounting_creditmemo(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -5917,11 +5811,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.remove_accounting_expense(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -5959,11 +5852,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.remove_accounting_expensereport(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -6001,11 +5893,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.remove_accounting_invoice(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -6043,11 +5934,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.remove_accounting_journal(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -6087,11 +5977,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.remove_accounting_order(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -6129,11 +6018,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.remove_accounting_paymentterm(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -6171,11 +6059,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.remove_accounting_project(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -6213,11 +6100,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.remove_accounting_purchaseorder(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -6255,11 +6141,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.remove_accounting_quote(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -6297,11 +6182,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.remove_accounting_salesorder(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -6339,11 +6223,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.remove_accounting_taxrate(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -6381,11 +6264,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.remove_accounting_transaction(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -6423,11 +6305,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.accounting.remove_accounting_vendorcredit(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -6459,16 +6340,16 @@ Updates the AccountingAccount identified by `id`. Provide the unified Accounting
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAccountingAccount" method="put" path="/accounting/{connection_id}/account/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAccountingAccount" method="put" path="/accounting/{connection_id}/account/{id}" example="accounting_account" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAccountingAccountRequest.new(
   accounting_account: Models::Shared::AccountingAccount.new(
@@ -6477,7 +6358,7 @@ req = Models::Operations::UpdateAccountingAccountRequest.new(
     currency: 'CAD',
     customer_defined_code: '6170',
     description: 'Voluptatibus valde spoliatio.',
-    id: '8f8b4e9e-6c5f-46d5-9498-4b6f7aa6d0dc',
+    id: '50c58147-19df-472d-aff5-1737e586d7d7',
     is_payable: false,
     metadata: [],
     name: 'Auto Loan Account',
@@ -6486,16 +6367,15 @@ req = Models::Operations::UpdateAccountingAccountRequest.new(
       Models::Shared::AccountingAccountTaxonomy.new(
         original_type: 'vilitas',
         type: Models::Shared::AccountingAccountTaxonomyType::SUBGROUP,
-        value: 'comedo',
+        value: 'comedo'
       ),
     ],
     type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-    updated_at: DateTime.iso8601('2023-08-11T17:37:54.477Z'),
+    updated_at: DateTime.iso8601('2023-08-12T04:41:13.070Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.accounting.update_accounting_account(request: req)
 
 unless res.accounting_account.nil?
@@ -6526,16 +6406,16 @@ Updates the AccountingBankfeedaccount identified by `id`. Provide the unified Ac
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAccountingBankfeedaccount" method="put" path="/accounting/{connection_id}/bankfeedaccount/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAccountingBankfeedaccount" method="put" path="/accounting/{connection_id}/bankfeedaccount/{id}" example="accounting_bankfeedaccount" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAccountingBankfeedaccountRequest.new(
   accounting_bankfeedaccount: Models::Shared::AccountingBankfeedaccount.new(
@@ -6547,17 +6427,16 @@ req = Models::Operations::UpdateAccountingBankfeedaccountRequest.new(
     created_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
     currency: 'AUD',
     feed_start_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
-    id: 'c0462e67-6414-4edb-a3b5-605ecae69f7c',
+    id: '624b457e-6f4f-407c-bd55-341bdae35a44',
     metadata: [],
     name: 'Corwin, Donnelly and Connelly Checking',
     routing_number: '694667752',
     status: Models::Shared::AccountingBankfeedaccountStatus::ACTIVE,
-    updated_at: DateTime.iso8601('2024-04-30T21:49:09.944Z'),
+    updated_at: DateTime.iso8601('2024-05-01T14:00:59.111Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.accounting.update_accounting_bankfeedaccount(request: req)
 
 unless res.accounting_bankfeedaccount.nil?
@@ -6588,16 +6467,16 @@ Updates the AccountingBankfeedtransaction identified by `id`. Provide the unifie
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAccountingBankfeedtransaction" method="put" path="/accounting/{connection_id}/bankfeedtransaction/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAccountingBankfeedtransaction" method="put" path="/accounting/{connection_id}/bankfeedtransaction/{id}" example="accounting_bankfeedtransaction" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAccountingBankfeedtransactionRequest.new(
   accounting_bankfeedtransaction: Models::Shared::AccountingBankfeedtransaction.new(
@@ -6607,20 +6486,19 @@ req = Models::Operations::UpdateAccountingBankfeedtransactionRequest.new(
     created_at: DateTime.iso8601('2022-03-24T23:41:08.374Z'),
     currency: 'CAD',
     description: 'Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781.',
-    id: '065d2961-8412-4e65-acc5-a6b31599c03b',
+    id: '1b6bfbc7-19cc-43d7-a971-3248cd1822a3',
     is_pending: true,
     merchant_name: 'Buckridge - Feest',
     metadata: [],
-    posted_at: DateTime.iso8601('2025-04-27T12:50:03.838Z'),
+    posted_at: DateTime.iso8601('2025-04-28T17:54:05.887Z'),
     reference: '79574105',
-    transaction_at: DateTime.iso8601('2022-07-31T18:56:02.446Z'),
+    transaction_at: DateTime.iso8601('2022-07-31T22:14:54.748Z'),
     type: Models::Shared::AccountingBankfeedtransactionType::CREDIT,
-    updated_at: DateTime.iso8601('2022-05-25T18:25:08.006Z'),
+    updated_at: DateTime.iso8601('2022-05-25T20:00:31.397Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.accounting.update_accounting_bankfeedtransaction(request: req)
 
 unless res.accounting_bankfeedtransaction.nil?
@@ -6651,31 +6529,31 @@ Updates the AccountingBill identified by `id`. Provide the unified AccountingBil
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAccountingBill" method="put" path="/accounting/{connection_id}/bill/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAccountingBill" method="put" path="/accounting/{connection_id}/bill/{id}" example="accounting_bill" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAccountingBillRequest.new(
   accounting_bill: Models::Shared::AccountingBill.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://puny-foodstuffs.name',
-        id: '38cc6dc9-e27b-4846-9889-74370d7de1e0',
+        id: '5615a620-e88f-41de-a848-0691e2e1ac1b',
         mime_type: 'application/pdf',
-        name: 'BILL-2466.pdf',
+        name: 'BILL-2466.pdf'
       ),
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://grimy-characterization.net',
-        id: '9fb72c27-d3d3-4191-8392-ce856bddca34',
+        id: '023015ec-dc5a-49ba-88ce-bb5baff02d20',
         mime_type: 'application/pdf',
-        name: 'BILL-2466-1.pdf',
+        name: 'BILL-2466-1.pdf'
       ),
     ],
     balance_amount: 0.0,
@@ -6686,7 +6564,7 @@ req = Models::Operations::UpdateAccountingBillRequest.new(
     discount_amount: 0.0,
     due_at: DateTime.iso8601('2019-09-07T23:03:14.104Z'),
     extended_notes: [],
-    id: 'ef04ad0b-5a1e-4398-b904-26f588770ebd',
+    id: 'dbe2e922-603e-47e6-8079-0c173c333859',
     lineitems: [],
     metadata: [],
     notes: 'Admiratio deporto tutamen cilicium infit amissio ante demulceo.',
@@ -6702,13 +6580,12 @@ req = Models::Operations::UpdateAccountingBillRequest.new(
     tax_amount: 0.0,
     term: Models::Shared::Term::NET_90,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2020-06-03T08:19:06.135Z'),
-    url: 'https://cluttered-importance.org/bills/BILL-2466',
+    updated_at: DateTime.iso8601('2020-06-03T13:08:04.978Z'),
+    url: 'https://cluttered-importance.org/bills/BILL-2466'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.accounting.update_accounting_bill(request: req)
 
 unless res.accounting_bill.nil?
@@ -6739,31 +6616,30 @@ Updates the AccountingCategory identified by `id`. Provide the unified Accountin
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAccountingCategory" method="put" path="/accounting/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAccountingCategory" method="put" path="/accounting/{connection_id}/category/{id}" example="accounting_category" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAccountingCategoryRequest.new(
   accounting_category: Models::Shared::AccountingCategory.new(
     created_at: DateTime.iso8601('2023-05-30T12:29:04.257Z'),
     description: 'Textus ab thymum labore basium.',
-    id: 'f2cbdc9e-652b-456e-a71a-3835738a1ffb',
+    id: '5a3cbfa0-565a-4d3d-b155-9ea35d3eeca7',
     is_active: false,
     metadata: [],
     name: 'Beauty',
-    updated_at: DateTime.iso8601('2025-09-24T07:28:05.369Z'),
+    updated_at: DateTime.iso8601('2025-09-25T12:45:56.975Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.accounting.update_accounting_category(request: req)
 
 unless res.accounting_category.nil?
@@ -6794,16 +6670,16 @@ Updates the AccountingContact identified by `id`. Provide the unified Accounting
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAccountingContact" method="put" path="/accounting/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAccountingContact" method="put" path="/accounting/{connection_id}/contact/{id}" example="accounting_contact" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAccountingContactRequest.new(
   accounting_contact: Models::Shared::AccountingContact.new(
@@ -6815,7 +6691,7 @@ req = Models::Operations::UpdateAccountingContactRequest.new(
       country_code: 'US',
       postal_code: '50764-5226',
       region: 'Washington',
-      region_code: 'CA',
+      region_code: 'CA'
     ),
     company_name: 'Kertzmann Group',
     created_at: DateTime.iso8601('2021-08-15T14:56:50.258Z'),
@@ -6823,15 +6699,15 @@ req = Models::Operations::UpdateAccountingContactRequest.new(
     emails: [
       Models::Shared::AccountingEmail.new(
         email: 'delores.reynolds@kertzmanngroup.com',
-        type: Models::Shared::AccountingEmailType::WORK,
+        type: Models::Shared::AccountingEmailType::WORK
       ),
       Models::Shared::AccountingEmail.new(
         email: 'accounts@kertzmanngroup.com',
-        type: Models::Shared::AccountingEmailType::OTHER,
+        type: Models::Shared::AccountingEmailType::OTHER
       ),
     ],
     first_name: 'Delores',
-    id: 'a08966fd-4ea7-48b7-ac2b-d5b6b595affb',
+    id: '90e1a5c0-fae8-424a-870e-e6b9fee9fe07',
     identification: '531850872',
     is_active: true,
     is_customer: true,
@@ -6842,9 +6718,9 @@ req = Models::Operations::UpdateAccountingContactRequest.new(
     payment_methods: [
       Models::Shared::AccountingContactPaymentMethod.new(
         default: true,
-        id: 'b4dbd23d-74e2-4960-bea3-a87c7a9d7655',
+        id: 'f78084ea-d876-4f6d-a847-98f2b77a5bd5',
         name: 'Visa 7844',
-        type: Models::Shared::AccountingContactPaymentMethodType::CARD,
+        type: Models::Shared::AccountingContactPaymentMethodType::CARD
       ),
     ],
     portal_url: 'https://kertzmanngroup.com/billing',
@@ -6854,23 +6730,22 @@ req = Models::Operations::UpdateAccountingContactRequest.new(
       country_code: 'US',
       postal_code: '55878-6806',
       region: 'Florida',
-      region_code: 'OK',
+      region_code: 'OK'
     ),
     tax_exemption: Models::Shared::TaxExemption::FOREIGN,
     tax_number: '867556410',
     telephones: [
       Models::Shared::AccountingTelephone.new(
         telephone: '(432) 760-1716',
-        type: Models::Shared::AccountingTelephoneType::FAX,
+        type: Models::Shared::AccountingTelephoneType::FAX
       ),
     ],
-    updated_at: DateTime.iso8601('2023-12-28T11:14:49.676Z'),
-    website: 'https://kertzmanngroup.com',
+    updated_at: DateTime.iso8601('2023-12-29T06:55:30.765Z'),
+    website: 'https://kertzmanngroup.com'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.accounting.update_accounting_contact(request: req)
 
 unless res.accounting_contact.nil?
@@ -6901,16 +6776,16 @@ Updates the AccountingCreditmemo identified by `id`. Provide the unified Account
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAccountingCreditmemo" method="put" path="/accounting/{connection_id}/creditmemo/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAccountingCreditmemo" method="put" path="/accounting/{connection_id}/creditmemo/{id}" example="accounting_creditmemo" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAccountingCreditmemoRequest.new(
   accounting_creditmemo: Models::Shared::AccountingCreditmemo.new(
@@ -6921,7 +6796,7 @@ req = Models::Operations::UpdateAccountingCreditmemoRequest.new(
     creditmemo_number: 'CM-99537',
     currency: 'AUD',
     discount_amount: 0.0,
-    id: '2cd62ef3-e7a7-4229-aba2-f41eec99af8b',
+    id: '700fcaa6-802d-4e9f-be0a-fdcc3a62bff7',
     lineitems: [],
     metadata: [],
     notes: 'Hic vorax dedecor amo adfero torqueo quas victoria.',
@@ -6930,12 +6805,11 @@ req = Models::Operations::UpdateAccountingCreditmemoRequest.new(
     status: Models::Shared::AccountingCreditmemoStatus::AUTHORIZED,
     tax_amount: 0.0,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2025-09-23T12:18:07.213Z'),
+    updated_at: DateTime.iso8601('2025-09-24T16:10:31.512Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.accounting.update_accounting_creditmemo(request: req)
 
 unless res.accounting_creditmemo.nil?
@@ -6966,79 +6840,79 @@ Updates the AccountingExpense identified by `id`. Provide the unified Accounting
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAccountingExpense" method="put" path="/accounting/{connection_id}/expense/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAccountingExpense" method="put" path="/accounting/{connection_id}/expense/{id}" example="accounting_expense" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAccountingExpenseRequest.new(
   accounting_expense: Models::Shared::AccountingExpense.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://rubbery-couch.biz/',
-        id: 'b9c8663d-05e2-41be-a192-10a279d1dbda',
+        id: 'a4fb3ed0-da8f-442d-b9be-ff936fcc22cf',
         mime_type: 'application/pdf',
-        name: 'receipt-9696.pdf',
+        name: 'receipt-9696.pdf'
       ),
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://appropriate-smog.biz/',
-        id: 'b27920a1-ad04-4594-9832-a04e9798b5da',
+        id: '18231331-b204-4bda-a39c-7afc49cbf746',
         mime_type: 'application/pdf',
-        name: 'receipt-9696-1.pdf',
+        name: 'receipt-9696-1.pdf'
       ),
     ],
     category_ids: [],
     created_at: DateTime.iso8601('2020-06-11T03:39:37.305Z'),
     currency: 'GBP',
     external_number: 'EXP-38303',
-    id: '788a524c-0813-4e69-92f1-648de1d467df',
+    id: '7ab61707-7735-4686-89a1-d8b01f503a45',
     lineitems: [
       Models::Shared::AccountingLineitem.new(
-        id: '5841c129-a7e7-40c9-9e69-f50d15c42f94',
+        id: '04bd6547-11a0-4c4b-9346-52474151f07d',
         item_name: 'Client dinner',
         tax_amount: 0.0,
         total_amount: 364.74,
         unit_amount: 364.74,
-        unit_quantity: 1.0,
+        unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'a83d9a46-764b-4cc7-a027-9ebdca665ff0',
+        id: 'db9a46c5-e768-4369-8d7f-2bd52c1e0cc2',
         item_name: 'Client dinner',
         tax_amount: 0.0,
         total_amount: 258.35,
         unit_amount: 258.35,
-        unit_quantity: 1.0,
+        unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '2844bb2d-a157-4690-87bf-7fa680b1d4ce',
+        id: '85fd6a1b-000f-49b0-a421-f37c3f639d90',
         item_name: 'Conference ticket',
         notes: 'Casus umquam conicio cinis demitto sint.',
         tax_amount: 0.0,
         total_amount: 28.14,
         unit_amount: 28.14,
-        unit_quantity: 1.0,
+        unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '8489bb33-bd3c-4851-a324-4bbc75792cd9',
+        id: '1a596dd5-ac6e-45ba-bece-a7557b8cf1e9',
         item_name: 'Hotel',
         tax_amount: 0.0,
         total_amount: 157.04,
         unit_amount: 157.04,
-        unit_quantity: 1.0,
+        unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'aad2b7b3-5741-4893-937e-81c4b8b3018f',
+        id: 'a4137734-28e4-46d8-91b0-81e3d61f35c0',
         item_name: 'Hotel',
         tax_amount: 0.0,
         total_amount: 164.02,
         unit_amount: 164.02,
-        unit_quantity: 1.0,
+        unit_quantity: 1.0
       ),
     ],
     metadata: [],
@@ -7049,12 +6923,11 @@ req = Models::Operations::UpdateAccountingExpenseRequest.new(
     tax_amount: 0.0,
     total_amount: 972.29,
     type: Models::Shared::AccountingExpenseType::COMPANY,
-    updated_at: DateTime.iso8601('2020-09-02T23:36:54.510Z'),
+    updated_at: DateTime.iso8601('2020-09-03T01:10:19.050Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.accounting.update_accounting_expense(request: req)
 
 unless res.accounting_expense.nil?
@@ -7085,76 +6958,75 @@ Updates the AccountingExpensereport identified by `id`. Provide the unified Acco
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAccountingExpensereport" method="put" path="/accounting/{connection_id}/expensereport/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAccountingExpensereport" method="put" path="/accounting/{connection_id}/expensereport/{id}" example="accounting_expensereport" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAccountingExpensereportRequest.new(
   accounting_expensereport: Models::Shared::AccountingExpensereport.new(
-    approved_at: DateTime.iso8601('2021-04-22T03:01:37.817Z'),
+    approved_at: DateTime.iso8601('2021-04-22T09:05:07.154Z'),
     attachments: [],
     category_ids: [],
     created_at: DateTime.iso8601('2020-05-29T02:04:59.078Z'),
     currency: 'GBP',
     external_number: 'ER-31240',
-    id: '4491a2d1-2783-4dec-ad85-ac34a0aeb7ac',
+    id: '59a78c88-e22d-4638-a86e-f6697c163253',
     lineitems: [
       Models::Shared::AccountingLineitem.new(
-        id: 'bd2904b1-8399-4241-94c8-c2fcda4c42cc',
+        id: 'c4452ae1-39b4-44da-b0fc-fd4c3c05fea9',
         item_name: 'Conference ticket',
         tax_amount: 0.0,
         total_amount: 39.9,
         unit_amount: 39.9,
-        unit_quantity: 1.0,
+        unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'e2b85617-481b-454b-9d2f-144750330415',
+        id: '7d7ccf34-1622-44c0-8d89-f5936310dbe2',
         item_name: 'Flight',
         notes: 'Soluta omnis dolor.',
         tax_amount: 0.0,
         total_amount: 193.17,
         unit_amount: 193.17,
-        unit_quantity: 1.0,
+        unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '493d4f5f-58f4-4ea3-8d04-2ab6a61b8e62',
+        id: 'd155fd3e-bf86-4a7e-abc2-d1cdcb215e52',
         item_name: 'Client dinner',
         notes: 'Altus caveo capio.',
         tax_amount: 0.0,
         total_amount: 230.12,
         unit_amount: 230.12,
-        unit_quantity: 1.0,
+        unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '81518967-8cef-441e-908b-622c40ff6cae',
+        id: '5ad9f4fb-9c1f-4074-a3ea-1ecd0ee03ad8',
         item_name: 'Flight',
         tax_amount: 0.0,
         total_amount: 445.27,
         unit_amount: 445.27,
-        unit_quantity: 1.0,
+        unit_quantity: 1.0
       ),
     ],
     metadata: [],
     name: 'Lolita Kunde - October expenses',
     posted_at: DateTime.iso8601('2020-05-29T02:04:59.078Z'),
     reimbursed_amount: 908.46,
-    reimbursed_at: DateTime.iso8601('2021-04-22T03:01:37.817Z'),
+    reimbursed_at: DateTime.iso8601('2021-04-22T09:05:07.154Z'),
     status: Models::Shared::AccountingExpensereportStatus::PAID,
     tax_amount: 0.0,
     total_amount: 908.46,
-    updated_at: DateTime.iso8601('2021-04-22T03:01:37.817Z'),
+    updated_at: DateTime.iso8601('2021-04-22T09:05:07.154Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.accounting.update_accounting_expensereport(request: req)
 
 unless res.accounting_expensereport.nil?
@@ -7185,31 +7057,31 @@ Updates the AccountingInvoice identified by `id`. Provide the unified Accounting
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAccountingInvoice" method="put" path="/accounting/{connection_id}/invoice/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAccountingInvoice" method="put" path="/accounting/{connection_id}/invoice/{id}" example="accounting_invoice" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAccountingInvoiceRequest.new(
   accounting_invoice: Models::Shared::AccountingInvoice.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://glossy-markup.net/',
-        id: 'feec3a7d-914a-430a-add2-bcfae16fa2ba',
+        id: '0d533c97-b761-4b0c-9514-7167cc3aab80',
         mime_type: 'application/pdf',
-        name: 'INV-77705.pdf',
+        name: 'INV-77705.pdf'
       ),
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://earnest-giggle.net',
-        id: '4459d855-919d-4327-9d7b-5a9ddcad7ffc',
+        id: '8a67b10d-ad6b-43fb-86c3-98fb2356a2e4',
         mime_type: 'application/pdf',
-        name: 'INV-77705-1.pdf',
+        name: 'INV-77705-1.pdf'
       ),
     ],
     balance_amount: 0.0,
@@ -7219,7 +7091,7 @@ req = Models::Operations::UpdateAccountingInvoiceRequest.new(
     discount_amount: 0.0,
     due_at: DateTime.iso8601('2022-12-07T14:17:29.587Z'),
     extended_notes: [],
-    id: '13558079-144b-42c1-a940-32b8f4e49a6a',
+    id: 'b7f99aa0-0744-4de2-9334-b54c5982a695',
     invoice_number: 'INV-77705',
     is_inclusive_of_tax: false,
     lineitems: [],
@@ -7237,13 +7109,12 @@ req = Models::Operations::UpdateAccountingInvoiceRequest.new(
     term: Models::Shared::AccountingInvoiceTerm::NET_25,
     total_amount: 0.0,
     type: Models::Shared::AccountingInvoiceType::INVOICE,
-    updated_at: DateTime.iso8601('2026-05-10T04:10:31.716Z'),
-    url: 'https://gifted-yarmulke.info/invoices/INV-77705',
+    updated_at: DateTime.iso8601('2026-05-11T18:13:42.954Z'),
+    url: 'https://gifted-yarmulke.info/invoices/INV-77705'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.accounting.update_accounting_invoice(request: req)
 
 unless res.accounting_invoice.nil?
@@ -7274,16 +7145,16 @@ Updates the AccountingJournal identified by `id`. Provide the unified Accounting
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAccountingJournal" method="put" path="/accounting/{connection_id}/journal/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAccountingJournal" method="put" path="/accounting/{connection_id}/journal/{id}" example="accounting_journal" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAccountingJournalRequest.new(
   accounting_journal: Models::Shared::AccountingJournal.new(
@@ -7292,21 +7163,20 @@ req = Models::Operations::UpdateAccountingJournalRequest.new(
     created_at: DateTime.iso8601('2020-02-20T15:14:55.881Z'),
     currency: 'CAD',
     description: 'Cilicium minima calco constans adipisci.',
-    id: '93a59944-8bb0-42bf-ac7a-5facc9458549',
+    id: '500e693a-af0c-43f2-9871-a59605e86d28',
     is_inclusive_of_tax: true,
     lineitems: [],
     metadata: [],
-    posted_at: DateTime.iso8601('2023-11-17T00:32:19.404Z'),
+    posted_at: DateTime.iso8601('2023-11-18T00:44:33.137Z'),
     reference: 'JE-78884',
     source: 'crustulum',
     status: Models::Shared::AccountingJournalStatus::VOID,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2022-01-16T05:02:16.989Z'),
+    updated_at: DateTime.iso8601('2022-01-16T17:22:05.872Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.accounting.update_accounting_journal(request: req)
 
 unless res.accounting_journal.nil?
@@ -7339,16 +7209,16 @@ Updates the AccountingOrder identified by `id`. Provide the unified AccountingOr
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAccountingOrder" method="put" path="/accounting/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAccountingOrder" method="put" path="/accounting/{connection_id}/order/{id}" example="accounting_order" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAccountingOrderRequest.new(
   accounting_order: Models::Shared::AccountingOrder.new(
@@ -7358,11 +7228,11 @@ req = Models::Operations::UpdateAccountingOrderRequest.new(
       country_code: 'US',
       postal_code: '42190-3694',
       region: 'Maine',
-      region_code: 'OR',
+      region_code: 'OR'
     ),
     created_at: DateTime.iso8601('2020-11-20T03:46:49.837Z'),
     currency: 'GBP',
-    id: '37a938a6-8d43-44b0-88b2-9f31477cfa13',
+    id: '5ae9efed-96fc-42fb-88ec-26ab83ee4379',
     lineitems: [],
     metadata: [],
     posted_at: DateTime.iso8601('2020-11-20T03:46:49.837Z'),
@@ -7372,17 +7242,16 @@ req = Models::Operations::UpdateAccountingOrderRequest.new(
       country_code: 'US',
       postal_code: '56252',
       region: 'Alaska',
-      region_code: 'VT',
+      region_code: 'VT'
     ),
     status: Models::Shared::AccountingOrderStatus::AUTHORIZED,
     total_amount: 0.0,
     type: Models::Shared::AccountingOrderType::SALES,
-    updated_at: DateTime.iso8601('2022-02-12T05:16:56.105Z'),
+    updated_at: DateTime.iso8601('2022-02-12T14:14:29.389Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.accounting.update_accounting_order(request: req)
 
 unless res.accounting_order.nil?
@@ -7413,16 +7282,16 @@ Updates the AccountingPaymentterm identified by `id`. Provide the unified Accoun
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAccountingPaymentterm" method="put" path="/accounting/{connection_id}/paymentterm/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAccountingPaymentterm" method="put" path="/accounting/{connection_id}/paymentterm/{id}" example="accounting_paymentterm" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAccountingPaymenttermRequest.new(
   accounting_paymentterm: Models::Shared::AccountingPaymentterm.new(
@@ -7435,17 +7304,16 @@ req = Models::Operations::UpdateAccountingPaymenttermRequest.new(
     discount_percent: 5.0,
     due_days: 57.0,
     due_next_month_days: 9.0,
-    id: '81a1de6a-65ab-4164-8e95-d996bd4c16bb',
+    id: '40aac803-306c-440e-ad6c-badc81f1ead5',
     is_active: false,
     metadata: [],
     name: 'Net 30',
     type: Models::Shared::AccountingPaymenttermType::NET_15,
-    updated_at: DateTime.iso8601('2026-01-24T14:15:36.535Z'),
+    updated_at: DateTime.iso8601('2026-01-26T03:09:46.064Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.accounting.update_accounting_paymentterm(request: req)
 
 unless res.accounting_paymentterm.nil?
@@ -7482,17 +7350,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::UpdateAccountingProjectRequest.new(
-  accounting_project: Models::Shared::AccountingProject.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::UpdateAccountingProjectRequest.new(
+  accounting_project: Models::Shared::AccountingProject.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.accounting.update_accounting_project(request: req)
 
 unless res.accounting_project.nil?
@@ -7523,16 +7390,16 @@ Updates the AccountingPurchaseorder identified by `id`. Provide the unified Acco
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAccountingPurchaseorder" method="put" path="/accounting/{connection_id}/purchaseorder/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAccountingPurchaseorder" method="put" path="/accounting/{connection_id}/purchaseorder/{id}" example="accounting_purchaseorder" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAccountingPurchaseorderRequest.new(
   accounting_purchaseorder: Models::Shared::AccountingPurchaseorder.new(
@@ -7544,12 +7411,12 @@ req = Models::Operations::UpdateAccountingPurchaseorderRequest.new(
       country_code: 'US',
       postal_code: '30337',
       region: 'Nevada',
-      region_code: 'FL',
+      region_code: 'FL'
     ),
     category_ids: [],
     created_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
     currency: 'EUR',
-    id: 'dc153403-e41a-4b2c-9daf-9a9871d74361',
+    id: 'c8460e56-9e80-47af-8278-b9bfe8399815',
     lineitems: [],
     metadata: [],
     posted_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
@@ -7559,16 +7426,15 @@ req = Models::Operations::UpdateAccountingPurchaseorderRequest.new(
       country_code: 'US',
       postal_code: '92116-5474',
       region: 'Oregon',
-      region_code: 'WY',
+      region_code: 'WY'
     ),
     status: Models::Shared::AccountingPurchaseorderStatus::SUBMITTED,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2021-08-13T09:36:31.467Z'),
+    updated_at: DateTime.iso8601('2021-08-13T14:31:43.286Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.accounting.update_accounting_purchaseorder(request: req)
 
 unless res.accounting_purchaseorder.nil?
@@ -7605,17 +7471,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::UpdateAccountingQuoteRequest.new(
-  accounting_quote: Models::Shared::AccountingQuote.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::UpdateAccountingQuoteRequest.new(
+  accounting_quote: Models::Shared::AccountingQuote.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.accounting.update_accounting_quote(request: req)
 
 unless res.accounting_quote.nil?
@@ -7646,16 +7511,16 @@ Updates the AccountingSalesorder identified by `id`. Provide the unified Account
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAccountingSalesorder" method="put" path="/accounting/{connection_id}/salesorder/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAccountingSalesorder" method="put" path="/accounting/{connection_id}/salesorder/{id}" example="accounting_salesorder" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAccountingSalesorderRequest.new(
   accounting_salesorder: Models::Shared::AccountingSalesorder.new(
@@ -7666,16 +7531,16 @@ req = Models::Operations::UpdateAccountingSalesorderRequest.new(
       country_code: 'US',
       postal_code: '05015-8546',
       region: 'Louisiana',
-      region_code: 'MO',
+      region_code: 'MO'
     ),
     category_ids: [],
-    closed_at: DateTime.iso8601('2023-03-30T06:20:38.043Z'),
+    closed_at: DateTime.iso8601('2023-03-30T17:09:16.961Z'),
     created_at: DateTime.iso8601('2022-01-17T16:11:50.310Z'),
     currency: 'USD',
     discount_amount: 0.0,
     fees: [],
     fulfillment_type: Models::Shared::FulfillmentType::OTHER,
-    id: 'e2503a2f-250f-4f89-8f42-eefb27d66dda',
+    id: '6350a16d-e4ed-49a7-a0b4-3966a46ab5a1',
     lineitems: [],
     metadata: [],
     order_number: '832663',
@@ -7691,19 +7556,18 @@ req = Models::Operations::UpdateAccountingSalesorderRequest.new(
       country_code: 'US',
       postal_code: '07989-2148',
       region: 'Arkansas',
-      region_code: 'AK',
+      region_code: 'AK'
     ),
     status: Models::Shared::AccountingSalesorderStatus::PAID,
     subtotal_amount: 0.0,
     tax_amount: 0.0,
     tip_amount: 0.0,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-03-30T06:20:38.043Z'),
+    updated_at: DateTime.iso8601('2023-03-30T17:09:16.961Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.accounting.update_accounting_salesorder(request: req)
 
 unless res.accounting_salesorder.nil?
@@ -7734,16 +7598,16 @@ Updates the AccountingTaxrate identified by `id`. Provide the unified Accounting
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAccountingTaxrate" method="put" path="/accounting/{connection_id}/taxrate/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAccountingTaxrate" method="put" path="/accounting/{connection_id}/taxrate/{id}" example="accounting_taxrate" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAccountingTaxrateRequest.new(
   accounting_taxrate: Models::Shared::AccountingTaxrate.new(
@@ -7751,14 +7615,14 @@ req = Models::Operations::UpdateAccountingTaxrateRequest.new(
       Models::Shared::AccountingTaxrateComponent.new(
         is_compound: false,
         name: 'Exempt',
-        rate: 0.0,
+        rate: 0.0
       ),
     ],
     country: 'US',
     created_at: DateTime.iso8601('2020-01-04T10:37:56.894Z'),
     description: 'Exempt (0%)',
     effective_rate: 0.0,
-    id: 'b95ebbce-1d33-45bc-88f6-9a69118e040d',
+    id: 'd038083c-7cad-4ede-bc18-09bd565d66b9',
     is_active: false,
     is_compound: false,
     metadata: [],
@@ -7767,12 +7631,11 @@ req = Models::Operations::UpdateAccountingTaxrateRequest.new(
     region: 'KS',
     total_rate: 0.0,
     type: Models::Shared::AccountingTaxrateType::SALES,
-    updated_at: DateTime.iso8601('2020-02-13T12:28:29.271Z'),
+    updated_at: DateTime.iso8601('2020-02-13T13:10:18.544Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.accounting.update_accounting_taxrate(request: req)
 
 unless res.accounting_taxrate.nil?
@@ -7803,30 +7666,30 @@ Updates the AccountingTransaction identified by `id`. Provide the unified Accoun
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAccountingTransaction" method="put" path="/accounting/{connection_id}/transaction/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAccountingTransaction" method="put" path="/accounting/{connection_id}/transaction/{id}" example="accounting_transaction" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAccountingTransactionRequest.new(
   accounting_transaction: Models::Shared::AccountingTransaction.new(
     created_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-    id: '8a49ca85-6ad6-4fd1-ba5d-5e1803188d9e',
+    id: '0bd6c7ee-4cb8-49a3-923c-204dd35e8857',
     lineitems: [
       Models::Shared::AccountingTransactionLineItem.new(
         category_ids: [],
         description: 'The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability',
-        id: 'a844abb5-995d-465a-97bd-ed3b6b6c3b9b',
+        id: 'bfdd8bbe-e56e-446c-bd58-43b664bfd8cc',
         name: 'Shirt',
         total_amount: 10_184.0,
         unit_amount: 536.0,
-        unit_quantity: 19.0,
+        unit_quantity: 19.0
       ),
     ],
     memo: 'deposit of ISK 792.81 at Fritsch - Dooley charged to account ending in 7879 using card ending in ****3230.',
@@ -7834,12 +7697,11 @@ req = Models::Operations::UpdateAccountingTransactionRequest.new(
     tax_amount: 0.0,
     total_amount: 10_184.0,
     transaction_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-    updated_at: DateTime.iso8601('2019-10-14T09:27:23.927Z'),
+    updated_at: DateTime.iso8601('2019-10-14T09:46:21.813Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.accounting.update_accounting_transaction(request: req)
 
 unless res.accounting_transaction.nil?
@@ -7870,16 +7732,16 @@ Updates the AccountingVendorcredit identified by `id`. Provide the unified Accou
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAccountingVendorcredit" method="put" path="/accounting/{connection_id}/vendorcredit/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAccountingVendorcredit" method="put" path="/accounting/{connection_id}/vendorcredit/{id}" example="accounting_vendorcredit" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAccountingVendorcreditRequest.new(
   accounting_vendorcredit: Models::Shared::AccountingVendorcredit.new(
@@ -7887,19 +7749,18 @@ req = Models::Operations::UpdateAccountingVendorcreditRequest.new(
     balance_amount: 0.0,
     created_at: DateTime.iso8601('2023-04-15T21:14:08.197Z'),
     currency: 'USD',
-    id: 'cee28752-d0a2-47af-a7ce-7609eb6ba38c',
+    id: 'ad46d6f9-5baa-42e8-9947-62ec5b2e5d89',
     lineitems: [],
     metadata: [],
     notes: 'Volup conatus cruciamentum decor avaritia.',
     posted_at: DateTime.iso8601('2023-04-15T21:14:08.197Z'),
     status: Models::Shared::AccountingVendorcreditStatus::AUTHORIZED,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-10-05T14:09:24.100Z'),
+    updated_at: DateTime.iso8601('2023-10-05T19:55:13.983Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.accounting.update_accounting_vendorcredit(request: req)
 
 unless res.accounting_vendorcredit.nil?

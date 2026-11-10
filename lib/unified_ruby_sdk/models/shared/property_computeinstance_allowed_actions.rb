@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PropertyComputeInstanceAllowedActions < T::Enum
-
-
+      class PropertyComputeInstanceAllowedActions
+        include ::Crystalline::Enum
         enums do
           START = new('START')
           STOP = new('STOP')
@@ -20,6 +18,7 @@ module UnifiedRubySDK
           RESUME = new('RESUME')
           TERMINATE = new('TERMINATE')
         end
+        open!
       end
     end
   end

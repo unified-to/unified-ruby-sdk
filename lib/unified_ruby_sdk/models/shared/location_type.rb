@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class LocationType < T::Enum
-
-
+      class LocationType
+        include ::Crystalline::Enum
         enums do
           RESTAURANT = new('RESTAURANT')
           SALON = new('SALON')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           STORE = new('STORE')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

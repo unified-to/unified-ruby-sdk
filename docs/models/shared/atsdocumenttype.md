@@ -2,6 +2,17 @@
 
 The kind of document
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = AtsDocumentType::RESUME
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = AtsDocumentType.deserialize("custom_value")
+```
+
 
 ## Values
 

@@ -1,5 +1,4 @@
 # Channel
-(*channel*)
 
 ## Overview
 
@@ -18,29 +17,28 @@ Creates a MessagingChannel. Provide the unified MessagingChannel fields in the r
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createMessagingChannel" method="post" path="/messaging/{connection_id}/channel" -->
+<!-- UsageSnippet language="ruby" operationID="createMessagingChannel" method="post" path="/messaging/{connection_id}/channel" example="messaging_channel" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.channel.create_messaging_channel(messaging_channel: Models::Shared::MessagingChannel.new(
   created_at: DateTime.iso8601('2023-10-05T02:09:22.795Z'),
   description: 'Dolores tutis.',
   has_subchannels: true,
-  id: '86063a26-ee56-46bd-b884-7ae4096d7d5c',
+  id: '2f92bb94-944a-4783-9cb0-4754a92343d1',
   is_active: false,
   is_private: true,
   members: [],
   metadata: [],
   name: 'tego',
-  updated_at: DateTime.iso8601('2026-06-06T23:30:26.206Z'),
-  web_url: 'https://svelte-rule.name/',
+  updated_at: DateTime.iso8601('2026-06-08T13:02:10.428Z'),
+  web_url: 'https://svelte-rule.name/'
 ), connection_id: '<id>')
 
 unless res.messaging_channel.nil?
@@ -80,11 +78,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.channel.get_messaging_channel(connection_id: '<id>', id: '<id>')
 
 unless res.messaging_channel.nil?
@@ -124,15 +121,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListMessagingChannelsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListMessagingChannelsRequest.new(
+  connection_id: '<id>'
+)
 res = s.channel.list_messaging_channels(request: req)
 
 unless res.messaging_channels.nil?
@@ -163,35 +159,34 @@ Updates the MessagingChannel identified by `id`. Provide the unified MessagingCh
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchMessagingChannel" method="patch" path="/messaging/{connection_id}/channel/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchMessagingChannel" method="patch" path="/messaging/{connection_id}/channel/{id}" example="messaging_channel" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchMessagingChannelRequest.new(
   messaging_channel: Models::Shared::MessagingChannel.new(
     created_at: DateTime.iso8601('2023-10-05T02:09:22.795Z'),
     description: 'Dolores tutis.',
     has_subchannels: true,
-    id: 'a5100315-1190-41ce-bd69-247e6d91b3f0',
+    id: 'f8910484-d3e3-4be9-80f1-e7aca42b8c76',
     is_active: false,
     is_private: true,
     members: [],
     metadata: [],
     name: 'tego',
-    updated_at: DateTime.iso8601('2026-06-06T23:30:26.214Z'),
-    web_url: 'https://svelte-rule.name/',
+    updated_at: DateTime.iso8601('2026-06-08T13:02:10.443Z'),
+    web_url: 'https://svelte-rule.name/'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.channel.patch_messaging_channel(request: req)
 
 unless res.messaging_channel.nil?
@@ -228,11 +223,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.channel.remove_messaging_channel(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -264,35 +258,34 @@ Updates the MessagingChannel identified by `id`. Provide the unified MessagingCh
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateMessagingChannel" method="put" path="/messaging/{connection_id}/channel/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateMessagingChannel" method="put" path="/messaging/{connection_id}/channel/{id}" example="messaging_channel" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateMessagingChannelRequest.new(
   messaging_channel: Models::Shared::MessagingChannel.new(
     created_at: DateTime.iso8601('2023-10-05T02:09:22.795Z'),
     description: 'Dolores tutis.',
     has_subchannels: true,
-    id: 'a5100315-1190-41ce-bd69-247e6d91b3f0',
+    id: 'f8910484-d3e3-4be9-80f1-e7aca42b8c76',
     is_active: false,
     is_private: true,
     members: [],
     metadata: [],
     name: 'tego',
-    updated_at: DateTime.iso8601('2026-06-06T23:30:26.214Z'),
-    web_url: 'https://svelte-rule.name/',
+    updated_at: DateTime.iso8601('2026-06-08T13:02:10.443Z'),
+    web_url: 'https://svelte-rule.name/'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.channel.update_messaging_channel(request: req)
 
 unless res.messaging_channel.nil?

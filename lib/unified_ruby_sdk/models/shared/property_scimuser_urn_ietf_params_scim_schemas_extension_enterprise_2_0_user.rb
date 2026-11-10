@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # an organization.
       class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User
         extend T::Sig
@@ -16,7 +15,7 @@ module UnifiedRubySDK
 
         field :additional_managers, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ScimManager)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('additionalManagers') } }
         # 1985-07-20
-        field :birthday, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('birthday'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :birthday, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('birthday'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Identifies the name of a cost center.
         field :cost_center, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('costCenter') } }
         # User currency
@@ -28,9 +27,9 @@ module UnifiedRubySDK
 
         field :employee_number, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employeeNumber') } }
         # 2022-02-25
-        field :end_date, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('endDate'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :end_date, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('endDate'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        field :gender, Crystalline::Nilable.new(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gender'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender, true) } }
+        field :gender, Crystalline::Nilable.new(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gender'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender, true) } }
 
         field :level, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('level') } }
         # Berlin
@@ -40,7 +39,7 @@ module UnifiedRubySDK
         # Identifies the name of an organization.
         field :organization, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization') } }
         # 2011-03-25
-        field :start_date, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('startDate'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :start_date, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('startDate'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         sig { params(additional_managers: T.nilable(T::Array[Models::Shared::ScimManager]), birthday: T.nilable(::DateTime), cost_center: T.nilable(::String), currency: T.nilable(::String), department: T.nilable(::String), division: T.nilable(::String), employee_number: T.nilable(::String), end_date: T.nilable(::DateTime), gender: T.nilable(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender), level: T.nilable(::String), location: T.nilable(::String), manager: T.nilable(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager), organization: T.nilable(::String), start_date: T.nilable(::DateTime)).void }
         def initialize(additional_managers: nil, birthday: nil, cost_center: nil, currency: nil, department: nil, division: nil, employee_number: nil, end_date: nil, gender: nil, level: nil, location: nil, manager: nil, organization: nil, start_date: nil)

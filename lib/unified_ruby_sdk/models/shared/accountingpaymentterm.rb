@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class AccountingPaymentterm
         extend T::Sig
         include Crystalline::MetadataFields
 
         # STANDARD (days-based) or DATE_DRIVEN (month-based)
-        field :category, Crystalline::Nilable.new(Models::Shared::Category), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('category'), 'decoder': Utils.enum_from_string(Models::Shared::Category, true) } }
+        field :category, Crystalline::Nilable.new(Models::Shared::Category), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('category'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::Category, true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # (date-driven) day of month payment is due (1–31)
         field :day_of_month_due, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('day_of_month_due') } }
 
@@ -42,13 +41,13 @@ module UnifiedRubySDK
 
         field :organization_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization_id') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :type, Crystalline::Nilable.new(Models::Shared::AccountingPaymenttermType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AccountingPaymenttermType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::AccountingPaymenttermType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::AccountingPaymenttermType, true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(category: T.nilable(Models::Shared::Category), created_at: T.nilable(::DateTime), day_of_month_due: T.nilable(::Float), description: T.nilable(::String), discount_day_of_month: T.nilable(::Float), discount_days: T.nilable(::Float), discount_percent: T.nilable(::Float), due_days: T.nilable(::Float), due_next_month_days: T.nilable(::Float), id: T.nilable(::String), is_active: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), name: T.nilable(::String), organization_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), type: T.nilable(Models::Shared::AccountingPaymenttermType), updated_at: T.nilable(::DateTime)).void }
+        sig { params(category: T.nilable(Models::Shared::Category), created_at: T.nilable(::DateTime), day_of_month_due: T.nilable(::Float), description: T.nilable(::String), discount_day_of_month: T.nilable(::Float), discount_days: T.nilable(::Float), discount_percent: T.nilable(::Float), due_days: T.nilable(::Float), due_next_month_days: T.nilable(::Float), id: T.nilable(::String), is_active: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), name: T.nilable(::String), organization_id: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), type: T.nilable(Models::Shared::AccountingPaymenttermType), updated_at: T.nilable(::DateTime)).void }
         def initialize(category: nil, created_at: nil, day_of_month_due: nil, description: nil, discount_day_of_month: nil, discount_days: nil, discount_percent: nil, due_days: nil, due_next_month_days: nil, id: nil, is_active: nil, metadata: nil, name: nil, organization_id: nil, raw: nil, type: nil, updated_at: nil)
           @category = category
           @created_at = created_at

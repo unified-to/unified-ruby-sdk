@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PropertyConnectionCategories < T::Enum
-
-
+      class PropertyConnectionCategories
+        include ::Crystalline::Enum
         enums do
           PASSTHROUGH = new('passthrough')
           HRIS = new('hris')
@@ -54,6 +52,7 @@ module UnifiedRubySDK
           PROPERTY = new('property')
           PLM = new('plm')
         end
+        open!
       end
     end
   end

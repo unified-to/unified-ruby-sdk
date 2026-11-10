@@ -7,14 +7,13 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class PropertyCrmEventForm
         extend T::Sig
         include Crystalline::MetadataFields
 
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :archived_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('archived_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :archived_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('archived_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CrmEventFormField)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('fields') } }
 

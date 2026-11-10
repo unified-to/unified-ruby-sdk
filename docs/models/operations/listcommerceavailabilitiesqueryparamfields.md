@@ -1,5 +1,13 @@
 # ListCommerceAvailabilitiesQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListCommerceAvailabilitiesQueryParamFields::LOCATION_ID
+```
+
 
 ## Values
 

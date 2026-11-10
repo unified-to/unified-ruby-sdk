@@ -7,20 +7,19 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class AccountingExtendedNote
         extend T::Sig
         include Crystalline::MetadataFields
 
 
-        field :date, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('date'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :date, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('date'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :note, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('note') } }
 
         field :user, Crystalline::Nilable.new(Models::Shared::PropertyAccountingExtendedNoteUser), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user') } }
 
-        field :visibility, Crystalline::Nilable.new(Models::Shared::Visibility), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('visibility'), 'decoder': Utils.enum_from_string(Models::Shared::Visibility, true) } }
+        field :visibility, Crystalline::Nilable.new(Models::Shared::Visibility), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('visibility'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::Visibility, true) } }
 
         sig { params(date: T.nilable(::DateTime), note: T.nilable(::String), user: T.nilable(Models::Shared::PropertyAccountingExtendedNoteUser), visibility: T.nilable(Models::Shared::Visibility)).void }
         def initialize(date: nil, note: nil, user: nil, visibility: nil)

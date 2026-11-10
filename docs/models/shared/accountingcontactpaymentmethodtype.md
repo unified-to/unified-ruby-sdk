@@ -1,5 +1,16 @@
 # AccountingContactPaymentMethodType
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = AccountingContactPaymentMethodType::ACH
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = AccountingContactPaymentMethodType.deserialize("custom_value")
+```
+
 
 ## Values
 

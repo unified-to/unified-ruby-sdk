@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class ScimPhoneNumberType < T::Enum
-
-
+      class ScimPhoneNumberType
+        include ::Crystalline::Enum
         enums do
           WORK = new('work')
           HOME = new('home')
@@ -20,6 +18,7 @@ module UnifiedRubySDK
           FAX = new('fax')
           PAGER = new('pager')
         end
+        open!
       end
     end
   end

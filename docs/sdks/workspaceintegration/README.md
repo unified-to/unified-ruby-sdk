@@ -1,5 +1,4 @@
 # Workspaceintegration
-(*workspaceintegration*)
 
 ## Overview
 
@@ -24,16 +23,15 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Shared::WorkspaceIntegration.new(
   integration_type: '<value>',
-  is_active: true,
+  is_active: true
 )
-
 res = s.workspaceintegration.create_unified_workspaceintegration(request: req)
 
 unless res.workspace_integration.nil?
@@ -70,11 +68,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.workspaceintegration.get_unified_workspaceintegration(id: '<id>')
 
 unless res.workspace_integration.nil?
@@ -111,13 +108,12 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
-req = Models::Operations::ListUnifiedWorkspaceintegrationsRequest.new()
-
+req = Models::Operations::ListUnifiedWorkspaceintegrationsRequest.new
 res = s.workspaceintegration.list_unified_workspaceintegrations(request: req)
 
 unless res.workspace_integrations.nil?
@@ -154,12 +150,11 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-res = s.workspaceintegration.patch_unified_workspaceintegration(workspace_integration_patch: Models::Shared::WorkspaceIntegrationPatch.new(), id: '<id>')
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.workspaceintegration.patch_unified_workspaceintegration(workspace_integration_patch: Models::Shared::WorkspaceIntegrationPatch.new, id: '<id>')
 
 unless res.workspace_integration.nil?
   # handle response
@@ -196,11 +191,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.workspaceintegration.remove_unified_workspaceintegration(id: '<id>')
 
 if res.status_code == 200
@@ -237,14 +231,13 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.workspaceintegration.update_unified_workspaceintegration(workspace_integration: Models::Shared::WorkspaceIntegration.new(
   integration_type: '<value>',
-  is_active: false,
+  is_active: false
 ), id: '<id>')
 
 unless res.workspace_integration.nil?

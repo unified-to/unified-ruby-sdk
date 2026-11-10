@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # SocialMediaType - Type of media
-      class SocialMediaType < T::Enum
-
-
+      class SocialMediaType
+        include ::Crystalline::Enum
         enums do
           PHOTO = new('PHOTO')
           VIDEO = new('VIDEO')
           GIF = new('GIF')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

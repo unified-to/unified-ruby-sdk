@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class HrisBankaccountAccountType < T::Enum
-
-
+      class HrisBankaccountAccountType
+        include ::Crystalline::Enum
         enums do
           CHECKING = new('CHECKING')
           SAVINGS = new('SAVINGS')
         end
+        open!
       end
     end
   end

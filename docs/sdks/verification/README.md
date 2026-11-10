@@ -1,5 +1,4 @@
 # Verification
-(*verification*)
 
 ## Overview
 
@@ -20,20 +19,19 @@ Creates a VerificationRequest. Provide the unified VerificationRequest fields in
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createVerificationRequest" method="post" path="/verification/{connection_id}/request" -->
+<!-- UsageSnippet language="ruby" operationID="createVerificationRequest" method="post" path="/verification/{connection_id}/request" example="verification_request" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.verification.create_verification_request(verification_request: Models::Shared::VerificationRequest.new(
   created_at: DateTime.iso8601('2023-11-20T08:17:29.950Z'),
-  id: '9387e4ea-f105-42df-80da-27f410f30b1a',
+  id: '1e970da9-560c-4378-a818-60e3d97fd794',
   metadata: [],
   parameters: [],
   profile_addresses: [],
@@ -43,7 +41,7 @@ res = s.verification.create_verification_request(verification_request: Models::S
   response_download_urls: [],
   response_source: 'Implemented regional protocol',
   response_status: Models::Shared::VerificationRequestResponseStatus::PENDING,
-  updated_at: DateTime.iso8601('2023-12-27T22:50:01.354Z'),
+  updated_at: DateTime.iso8601('2023-12-28T00:20:29.598Z')
 ), connection_id: '<id>')
 
 unless res.verification_request.nil?
@@ -83,11 +81,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.verification.get_verification_package(connection_id: '<id>', id: '<id>')
 
 unless res.verification_package.nil?
@@ -127,11 +124,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.verification.get_verification_request(connection_id: '<id>', id: '<id>')
 
 unless res.verification_request.nil?
@@ -171,15 +167,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListVerificationPackagesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListVerificationPackagesRequest.new(
+  connection_id: '<id>'
+)
 res = s.verification.list_verification_packages(request: req)
 
 unless res.verification_packages.nil?
@@ -216,15 +211,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListVerificationRequestsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListVerificationRequestsRequest.new(
+  connection_id: '<id>'
+)
 res = s.verification.list_verification_requests(request: req)
 
 unless res.verification_requests.nil?
@@ -255,21 +249,21 @@ Updates the VerificationRequest identified by `id`. Provide the unified Verifica
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchVerificationRequest" method="patch" path="/verification/{connection_id}/request/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchVerificationRequest" method="patch" path="/verification/{connection_id}/request/{id}" example="verification_request" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchVerificationRequestRequest.new(
   verification_request: Models::Shared::VerificationRequest.new(
     created_at: DateTime.iso8601('2023-11-20T08:17:29.950Z'),
-    id: '000d0435-589d-4e99-81ab-46877235a8e3',
+    id: '3c044fad-e643-45b2-b0a4-93bbd0bb3c71',
     metadata: [],
     parameters: [],
     profile_addresses: [],
@@ -279,12 +273,11 @@ req = Models::Operations::PatchVerificationRequestRequest.new(
     response_download_urls: [],
     response_source: 'Implemented regional protocol',
     response_status: Models::Shared::VerificationRequestResponseStatus::PENDING,
-    updated_at: DateTime.iso8601('2023-12-27T22:50:01.355Z'),
+    updated_at: DateTime.iso8601('2023-12-28T00:20:29.598Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.verification.patch_verification_request(request: req)
 
 unless res.verification_request.nil?
@@ -321,11 +314,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.verification.remove_verification_request(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -357,21 +349,21 @@ Updates the VerificationRequest identified by `id`. Provide the unified Verifica
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateVerificationRequest" method="put" path="/verification/{connection_id}/request/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateVerificationRequest" method="put" path="/verification/{connection_id}/request/{id}" example="verification_request" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateVerificationRequestRequest.new(
   verification_request: Models::Shared::VerificationRequest.new(
     created_at: DateTime.iso8601('2023-11-20T08:17:29.950Z'),
-    id: '000d0435-589d-4e99-81ab-46877235a8e3',
+    id: '3c044fad-e643-45b2-b0a4-93bbd0bb3c71',
     metadata: [],
     parameters: [],
     profile_addresses: [],
@@ -381,12 +373,11 @@ req = Models::Operations::UpdateVerificationRequestRequest.new(
     response_download_urls: [],
     response_source: 'Implemented regional protocol',
     response_status: Models::Shared::VerificationRequestResponseStatus::PENDING,
-    updated_at: DateTime.iso8601('2023-12-27T22:50:01.355Z'),
+    updated_at: DateTime.iso8601('2023-12-28T00:20:29.598Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.verification.update_verification_request(request: req)
 
 unless res.verification_request.nil?

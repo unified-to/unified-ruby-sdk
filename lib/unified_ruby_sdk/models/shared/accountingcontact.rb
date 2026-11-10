@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class AccountingContact
         extend T::Sig
@@ -22,7 +21,7 @@ module UnifiedRubySDK
 
         field :company_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_name') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # The contact's email addresses
         field :emails, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingEmail)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
 
@@ -50,29 +49,29 @@ module UnifiedRubySDK
 
         field :payment_methods, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingContactPaymentMethod)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_methods') } }
 
-        field :payment_terms, Crystalline::Nilable.new(Models::Shared::AccountingContactPaymentTerms), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_terms'), 'decoder': Utils.enum_from_string(Models::Shared::AccountingContactPaymentTerms, true) } }
+        field :payment_terms, Crystalline::Nilable.new(Models::Shared::AccountingContactPaymentTerms), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_terms'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::AccountingContactPaymentTerms, true) } }
 
         field :paymentterm_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('paymentterm_id') } }
         # URL for the contact’s portal
         field :portal_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('portal_url') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :shipping_address, Crystalline::Nilable.new(Models::Shared::PropertyAccountingContactShippingAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('shipping_address') } }
 
-        field :tax_exemption, Crystalline::Nilable.new(Models::Shared::TaxExemption), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tax_exemption'), 'decoder': Utils.enum_from_string(Models::Shared::TaxExemption, true) } }
+        field :tax_exemption, Crystalline::Nilable.new(Models::Shared::TaxExemption), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tax_exemption'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::TaxExemption, true) } }
         # The ID/number of the customer's tax number.  This is also known as the ABN (Australia), GST Number (New Zealand), VAT Number (UK) or Tax ID Number (US and global).
         field :tax_number, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tax_number') } }
 
         field :telephones, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingTelephone)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephones') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :website, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('website') } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
-        sig { params(associated_contacts: T.nilable(T::Array[Models::Shared::AccountingAssociatedContact]), balance_amount: T.nilable(::Float), billing_address: T.nilable(Models::Shared::PropertyAccountingContactBillingAddress), company_name: T.nilable(::String), created_at: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::AccountingEmail]), first_name: T.nilable(::String), id: T.nilable(::String), identification: T.nilable(::String), is_active: T.nilable(T::Boolean), is_customer: T.nilable(T::Boolean), is_supplier: T.nilable(T::Boolean), last_name: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), name: T.nilable(::String), notes: T.nilable(::String), organization_id: T.nilable(::String), payment_methods: T.nilable(T::Array[Models::Shared::AccountingContactPaymentMethod]), payment_terms: T.nilable(Models::Shared::AccountingContactPaymentTerms), paymentterm_id: T.nilable(::String), portal_url: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), shipping_address: T.nilable(Models::Shared::PropertyAccountingContactShippingAddress), tax_exemption: T.nilable(Models::Shared::TaxExemption), tax_number: T.nilable(::String), telephones: T.nilable(T::Array[Models::Shared::AccountingTelephone]), updated_at: T.nilable(::DateTime), website: T.nilable(::String), currency: T.nilable(::String)).void }
+        sig { params(associated_contacts: T.nilable(T::Array[Models::Shared::AccountingAssociatedContact]), balance_amount: T.nilable(::Float), billing_address: T.nilable(Models::Shared::PropertyAccountingContactBillingAddress), company_name: T.nilable(::String), created_at: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::AccountingEmail]), first_name: T.nilable(::String), id: T.nilable(::String), identification: T.nilable(::String), is_active: T.nilable(T::Boolean), is_customer: T.nilable(T::Boolean), is_supplier: T.nilable(T::Boolean), last_name: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), name: T.nilable(::String), notes: T.nilable(::String), organization_id: T.nilable(::String), payment_methods: T.nilable(T::Array[Models::Shared::AccountingContactPaymentMethod]), payment_terms: T.nilable(Models::Shared::AccountingContactPaymentTerms), paymentterm_id: T.nilable(::String), portal_url: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), shipping_address: T.nilable(Models::Shared::PropertyAccountingContactShippingAddress), tax_exemption: T.nilable(Models::Shared::TaxExemption), tax_number: T.nilable(::String), telephones: T.nilable(T::Array[Models::Shared::AccountingTelephone]), updated_at: T.nilable(::DateTime), website: T.nilable(::String), currency: T.nilable(::String)).void }
         def initialize(associated_contacts: nil, balance_amount: nil, billing_address: nil, company_name: nil, created_at: nil, emails: nil, first_name: nil, id: nil, identification: nil, is_active: nil, is_customer: nil, is_supplier: nil, last_name: nil, metadata: nil, name: nil, notes: nil, organization_id: nil, payment_methods: nil, payment_terms: nil, paymentterm_id: nil, portal_url: nil, raw: nil, shipping_address: nil, tax_exemption: nil, tax_number: nil, telephones: nil, updated_at: nil, website: nil, currency: 'USD')
           @associated_contacts = associated_contacts
           @balance_amount = balance_amount

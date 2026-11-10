@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class LmsClass
         extend T::Sig
@@ -16,7 +15,7 @@ module UnifiedRubySDK
         # (reference to Course)
         field :course_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('course_id') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
@@ -32,13 +31,13 @@ module UnifiedRubySDK
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :students, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::LmsReference)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('students') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(course_id: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), instructors: T.nilable(T::Array[Models::Shared::LmsReference]), languages: T.nilable(T::Array[::String]), media: T.nilable(T::Array[Models::Shared::LmsMedia]), metadata: T.nilable(T::Array[Models::Shared::LmsMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), students: T.nilable(T::Array[Models::Shared::LmsReference]), updated_at: T.nilable(::DateTime)).void }
+        sig { params(course_id: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), instructors: T.nilable(T::Array[Models::Shared::LmsReference]), languages: T.nilable(T::Array[::String]), media: T.nilable(T::Array[Models::Shared::LmsMedia]), metadata: T.nilable(T::Array[Models::Shared::LmsMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), students: T.nilable(T::Array[Models::Shared::LmsReference]), updated_at: T.nilable(::DateTime)).void }
         def initialize(course_id: nil, created_at: nil, description: nil, id: nil, instructors: nil, languages: nil, media: nil, metadata: nil, name: nil, raw: nil, students: nil, updated_at: nil)
           @course_id = course_id
           @created_at = created_at

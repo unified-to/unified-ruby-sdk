@@ -1,5 +1,4 @@
 # Pullrequest
-(*pullrequest*)
 
 ## Overview
 
@@ -18,21 +17,20 @@ Creates a RepoPullrequest. Provide the unified RepoPullrequest fields in the req
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createRepoPullrequest" method="post" path="/repo/{connection_id}/pullrequest" -->
+<!-- UsageSnippet language="ruby" operationID="createRepoPullrequest" method="post" path="/repo/{connection_id}/pullrequest" example="repo_pullrequest" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.pullrequest.create_repo_pullrequest(repo_pullrequest: Models::Shared::RepoPullrequest.new(
-  closed_at: DateTime.iso8601('2025-05-12T21:55:45.144Z'),
+  closed_at: DateTime.iso8601('2025-05-13T23:52:01.241Z'),
   created_at: DateTime.iso8601('2023-02-27T09:37:13.663Z'),
-  id: '9b484684-194f-4556-90bc-ea53aefc37a6',
+  id: '474b2e65-2abf-46c5-a8d3-0e50d34bca0d',
   labels: [
     'creptio',
     'tutamen',
@@ -41,7 +39,7 @@ res = s.pullrequest.create_repo_pullrequest(repo_pullrequest: Models::Shared::Re
   notes: 'Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.',
   status: Models::Shared::RepoPullrequestStatus::APPROVED,
   title: 'reboot mobile application',
-  updated_at: DateTime.iso8601('2026-02-01T08:27:25.946Z'),
+  updated_at: DateTime.iso8601('2026-02-02T18:54:36.118Z')
 ), connection_id: '<id>')
 
 unless res.repo_pullrequest.nil?
@@ -81,11 +79,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.pullrequest.get_repo_pullrequest(connection_id: '<id>', id: '<id>')
 
 unless res.repo_pullrequest.nil?
@@ -125,15 +122,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListRepoPullrequestsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListRepoPullrequestsRequest.new(
+  connection_id: '<id>'
+)
 res = s.pullrequest.list_repo_pullrequests(request: req)
 
 unless res.repo_pullrequests.nil?
@@ -164,22 +160,22 @@ Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequ
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchRepoPullrequest" method="patch" path="/repo/{connection_id}/pullrequest/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchRepoPullrequest" method="patch" path="/repo/{connection_id}/pullrequest/{id}" example="repo_pullrequest" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchRepoPullrequestRequest.new(
   repo_pullrequest: Models::Shared::RepoPullrequest.new(
-    closed_at: DateTime.iso8601('2025-05-12T21:55:45.151Z'),
+    closed_at: DateTime.iso8601('2025-05-13T23:52:01.250Z'),
     created_at: DateTime.iso8601('2023-02-27T09:37:13.663Z'),
-    id: 'c8645a98-fff4-4129-a24a-f73bff35be50',
+    id: 'f00a2832-4f5a-4b11-8768-adc41159a61d',
     labels: [
       'creptio',
       'tutamen',
@@ -188,12 +184,11 @@ req = Models::Operations::PatchRepoPullrequestRequest.new(
     notes: 'Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.',
     status: Models::Shared::RepoPullrequestStatus::APPROVED,
     title: 'reboot mobile application',
-    updated_at: DateTime.iso8601('2026-02-01T08:27:25.956Z'),
+    updated_at: DateTime.iso8601('2026-02-02T18:54:36.129Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.pullrequest.patch_repo_pullrequest(request: req)
 
 unless res.repo_pullrequest.nil?
@@ -230,11 +225,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.pullrequest.remove_repo_pullrequest(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -266,22 +260,22 @@ Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequ
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateRepoPullrequest" method="put" path="/repo/{connection_id}/pullrequest/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateRepoPullrequest" method="put" path="/repo/{connection_id}/pullrequest/{id}" example="repo_pullrequest" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateRepoPullrequestRequest.new(
   repo_pullrequest: Models::Shared::RepoPullrequest.new(
-    closed_at: DateTime.iso8601('2025-05-12T21:55:45.151Z'),
+    closed_at: DateTime.iso8601('2025-05-13T23:52:01.250Z'),
     created_at: DateTime.iso8601('2023-02-27T09:37:13.663Z'),
-    id: 'c8645a98-fff4-4129-a24a-f73bff35be50',
+    id: 'f00a2832-4f5a-4b11-8768-adc41159a61d',
     labels: [
       'creptio',
       'tutamen',
@@ -290,12 +284,11 @@ req = Models::Operations::UpdateRepoPullrequestRequest.new(
     notes: 'Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.',
     status: Models::Shared::RepoPullrequestStatus::APPROVED,
     title: 'reboot mobile application',
-    updated_at: DateTime.iso8601('2026-02-01T08:27:25.956Z'),
+    updated_at: DateTime.iso8601('2026-02-02T18:54:36.129Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.pullrequest.update_repo_pullrequest(request: req)
 
 unless res.repo_pullrequest.nil?

@@ -7,14 +7,13 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class DatastoreTable
         extend T::Sig
         include Crystalline::MetadataFields
 
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # source Database ID
         field :database_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('database_id') } }
 
@@ -30,15 +29,15 @@ module UnifiedRubySDK
 
         field :parent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :relationships, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::DatastoreRelationship)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('relationships') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
-        sig { params(created_at: T.nilable(::DateTime), database_id: T.nilable(::String), description: T.nilable(::String), fields_: T.nilable(T::Array[Models::Shared::DatastoreField]), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::DatastoreMetadata]), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), relationships: T.nilable(T::Array[Models::Shared::DatastoreRelationship]), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
+        sig { params(created_at: T.nilable(::DateTime), database_id: T.nilable(::String), description: T.nilable(::String), fields_: T.nilable(T::Array[Models::Shared::DatastoreField]), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::DatastoreMetadata]), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), relationships: T.nilable(T::Array[Models::Shared::DatastoreRelationship]), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
         def initialize(created_at: nil, database_id: nil, description: nil, fields_: nil, id: nil, metadata: nil, name: nil, parent_id: nil, raw: nil, relationships: nil, updated_at: nil, web_url: nil)
           @created_at = created_at
           @database_id = database_id

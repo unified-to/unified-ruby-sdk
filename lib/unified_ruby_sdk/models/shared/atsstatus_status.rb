@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class AtsStatusStatus < T::Enum
-
-
+      class AtsStatusStatus
+        include ::Crystalline::Enum
         enums do
           NEW = new('NEW')
           REVIEWING = new('REVIEWING')
@@ -28,6 +26,7 @@ module UnifiedRubySDK
           DECLINED = new('DECLINED')
           WITHDRAWN = new('WITHDRAWN')
         end
+        open!
       end
     end
   end

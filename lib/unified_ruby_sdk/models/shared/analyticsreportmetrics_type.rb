@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # AnalyticsReportMetricsType - Traffic metrics
-      class AnalyticsReportMetricsType < T::Enum
-
-
+      class AnalyticsReportMetricsType
+        include ::Crystalline::Enum
         enums do
           USERS = new('USERS')
           NEW_USERS = new('NEW_USERS')
@@ -47,6 +45,7 @@ module UnifiedRubySDK
           SUBSCRIBERS_GAINED = new('SUBSCRIBERS_GAINED')
           SUBSCRIBERS_LOST = new('SUBSCRIBERS_LOST')
         end
+        open!
       end
     end
   end

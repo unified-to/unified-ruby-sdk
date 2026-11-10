@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # CdpSegmentType - The type of entity the segment targets (USERS, ACCOUNTS, LINKED)
-      class CdpSegmentType < T::Enum
-
-
+      class CdpSegmentType
+        include ::Crystalline::Enum
         enums do
           USERS = new('USERS')
           ACCOUNTS = new('ACCOUNTS')
           LINKED = new('LINKED')
         end
+        open!
       end
     end
   end

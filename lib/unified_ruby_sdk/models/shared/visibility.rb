@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class Visibility < T::Enum
-
-
+      class Visibility
+        include ::Crystalline::Enum
         enums do
           PUBLIC = new('PUBLIC')
           PRIVATE = new('PRIVATE')
         end
+        open!
       end
     end
   end

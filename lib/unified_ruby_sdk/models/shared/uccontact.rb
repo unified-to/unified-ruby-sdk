@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # A contact represents a person that optionally is associated with a call
       class UcContact
         extend T::Sig
@@ -16,7 +15,7 @@ module UnifiedRubySDK
         # The company/organization name  of the contact
         field :company, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company') } }
         # The date that this contact object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # An array of email addresses for this contact
         field :emails, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::UcEmail)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
 
@@ -30,15 +29,15 @@ module UnifiedRubySDK
         # The name of the contact
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # The raw data returned by the integration for this contact
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # An array of telephones for this contact
         field :telephones, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::UcTelephone)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephones') } }
         # The job title of the contact
         field :title, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
         # The last date that this contact object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(company: T.nilable(::String), created_at: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::UcEmail]), first_name: T.nilable(::String), id: T.nilable(::String), last_name: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::UcMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), telephones: T.nilable(T::Array[Models::Shared::UcTelephone]), title: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        sig { params(company: T.nilable(::String), created_at: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::UcEmail]), first_name: T.nilable(::String), id: T.nilable(::String), last_name: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::UcMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), telephones: T.nilable(T::Array[Models::Shared::UcTelephone]), title: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
         def initialize(company: nil, created_at: nil, emails: nil, first_name: nil, id: nil, last_name: nil, metadata: nil, name: nil, raw: nil, telephones: nil, title: nil, updated_at: nil)
           @company = company
           @created_at = created_at

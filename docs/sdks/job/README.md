@@ -1,5 +1,4 @@
 # Job
-(*job*)
 
 ## Overview
 
@@ -24,17 +23,16 @@ Creates a AtsJob. Provide the unified AtsJob fields in the request body; they ar
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAtsJob" method="post" path="/ats/{connection_id}/job" -->
+<!-- UsageSnippet language="ruby" operationID="createAtsJob" method="post" path="/ats/{connection_id}/job" example="ats_job" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.job.create_ats_job(ats_job: Models::Shared::AtsJob.new(
   addresses: [
     Models::Shared::AtsAddress.new(
@@ -43,7 +41,7 @@ res = s.job.create_ats_job(ats_job: Models::Shared::AtsJob.new(
       country_code: 'US',
       postal_code: '89776-0669',
       region: 'Mississippi',
-      region_code: 'FL',
+      region_code: 'FL'
     ),
   ],
   compensation: [
@@ -52,33 +50,33 @@ res = s.job.create_ats_job(ats_job: Models::Shared::AtsJob.new(
       frequency: Models::Shared::Frequency::DAY,
       max: 174_303.0,
       min: 174_042.0,
-      type: Models::Shared::AtsCompensationType::BONUS,
+      type: Models::Shared::AtsCompensationType::BONUS
     ),
     Models::Shared::AtsCompensation.new(
       currency: 'MZN',
       frequency: Models::Shared::Frequency::MONTH,
       max: 171_171.0,
       min: 151_975.0,
-      type: Models::Shared::AtsCompensationType::SALARY,
+      type: Models::Shared::AtsCompensationType::SALARY
     ),
   ],
   created_at: DateTime.iso8601('2023-06-16T12:51:44.518Z'),
   description: 'Global',
   employment_type: Models::Shared::EmploymentType::FREELANCE,
   hiring_managers: [],
-  id: 'd18e22a1-ff8d-4f9c-a991-1fa575ae33e7',
+  id: '01cdf777-0403-4f44-9712-c89df7780ef9',
   industry: 'Handcrafted Bamboo Soap',
   language_locale: 'en',
   metadata: [
     Models::Shared::AtsMetadata.new(
       extra_data: {
-        "display_name": 'Custom Property',
+        'display_name' => 'Custom Property',
       },
       format: Models::Shared::AtsMetadataFormat::TEXT,
-      id: '11188b48-3e7b-40c8-98c6-5b23567ab80c',
+      id: '1fa83b2d-bc33-42e6-92a8-26c8e271f91d',
       namespace: 'custom',
       slug: 'custom_property',
-      value: 'desolo',
+      value: 'desolo'
     ),
   ],
   minimum_degree: 'Bachelor',
@@ -88,8 +86,8 @@ res = s.job.create_ats_job(ats_job: Models::Shared::AtsJob.new(
   openings: [
     Models::Shared::AtsJobOpening.new(
       close_reason: 'Admoveo trado textilis.',
-      opened_at: DateTime.iso8601('2026-06-24T19:11:52.808Z'),
-      status: Models::Shared::AtsJobOpeningStatus::OPEN,
+      opened_at: DateTime.iso8601('2026-06-26T09:52:55.437Z'),
+      status: Models::Shared::AtsJobOpeningStatus::OPEN
     ),
   ],
   postings: [
@@ -100,16 +98,16 @@ res = s.job.create_ats_job(ats_job: Models::Shared::AtsJob.new(
         country_code: 'US',
         postal_code: '98754',
         region: 'Wisconsin',
-        region_code: 'CO',
+        region_code: 'CO'
       ),
-      created_at: DateTime.iso8601('2026-08-19T18:47:20.545Z'),
+      created_at: DateTime.iso8601('2026-08-21T11:26:03.383Z'),
       description: 'Beatus eum volutabrum balbus victus ipsa tubineus claustrum.',
-      id: 'de7ee025-64fe-4303-9e9f-660284f0b4f3',
+      id: '37145f1d-7a2c-43cf-bcd6-3d226904b2b4',
       is_active: false,
       location: '1725 Hessel Keys',
       name: 'International Identity Manager',
       posting_url: 'https://obedient-yak.com',
-      updated_at: DateTime.iso8601('2026-09-15T11:59:18.530Z'),
+      updated_at: DateTime.iso8601('2026-09-17T05:34:10.698Z')
     ),
   ],
   public_job_urls: [
@@ -119,7 +117,7 @@ res = s.job.create_ats_job(ats_job: Models::Shared::AtsJob.new(
   questions: [
     Models::Shared::AtsJobQuestion.new(
       description: 'Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.',
-      id: 'c8af20e4-4b35-4fad-9450-83776a2fc0d5',
+      id: 'd8febb09-542b-43b3-8a68-0d913efdc143',
       max_length: 117.0,
       min_length: 1.0,
       options: [
@@ -129,10 +127,10 @@ res = s.job.create_ats_job(ats_job: Models::Shared::AtsJob.new(
       prompt: 'Totam maxime tres tergiversatio.',
       question: 'Doloribus mollitia.',
       required: true,
-      type: Models::Shared::AtsJobQuestionType::TEXT,
+      type: Models::Shared::AtsJobQuestionType::TEXT
     ),
     Models::Shared::AtsJobQuestion.new(
-      id: '16d36235-b3d5-40d1-b2c1-05653ca52096',
+      id: '63d5dd0f-ebf4-4fdd-9d56-390fbfd987e5',
       max_length: 453.0,
       min_length: 1.0,
       options: [
@@ -141,11 +139,11 @@ res = s.job.create_ats_job(ats_job: Models::Shared::AtsJob.new(
       prompt: 'Veritatis sodalitas nemo natus attonbitus reprehenderit voro depono.',
       question: 'Nam.',
       required: false,
-      type: Models::Shared::AtsJobQuestionType::TEXT,
+      type: Models::Shared::AtsJobQuestionType::TEXT
     ),
     Models::Shared::AtsJobQuestion.new(
       description: 'Taceo rem compello spectaculum mollitia arcus compello.',
-      id: '3708c269-fc97-4e6d-8fe4-253f8c762a3f',
+      id: '64693ed0-a86a-441f-a6c6-2a73f7d0e4c5',
       max_length: 66.0,
       min_length: 1.0,
       options: [
@@ -154,7 +152,7 @@ res = s.job.create_ats_job(ats_job: Models::Shared::AtsJob.new(
       prompt: 'Tum tamisium autus.',
       question: 'Confero trepide.',
       required: false,
-      type: Models::Shared::AtsJobQuestionType::TEXT,
+      type: Models::Shared::AtsJobQuestionType::TEXT
     ),
   ],
   skills: [
@@ -163,7 +161,7 @@ res = s.job.create_ats_job(ats_job: Models::Shared::AtsJob.new(
   ],
   status: Models::Shared::AtsJobStatus::ARCHIVED,
   summary: 'Crepusculum adsuesco vere.',
-  updated_at: DateTime.iso8601('2026-03-14T18:01:21.485Z'),
+  updated_at: DateTime.iso8601('2026-03-16T05:07:54.357Z')
 ), connection_id: '<id>')
 
 unless res.ats_job.nil?
@@ -197,27 +195,26 @@ Creates a HrisJob. Provide the unified HrisJob fields in the request body; they 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisJob" method="post" path="/hris/{connection_id}/job" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisJob" method="post" path="/hris/{connection_id}/job" example="hris_job" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.job.create_hris_job(hris_job: Models::Shared::HrisJob.new(
   code: 'P-05547',
   created_at: DateTime.iso8601('2020-10-28T01:13:19.491Z'),
   description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
   employment_type: Models::Shared::HrisJobEmploymentType::FREELANCE,
-  id: '0b025992-2101-4916-bc04-ac1d2ec34221',
+  id: 'e7bd6425-affc-40f8-8738-55a3eec7c779',
   is_active: false,
   metadata: [],
   name: 'Internal Integration Specialist',
-  updated_at: DateTime.iso8601('2023-02-06T09:26:50.569Z'),
+  updated_at: DateTime.iso8601('2023-02-07T01:51:34.487Z')
 ), connection_id: '<id>')
 
 unless res.hris_job.nil?
@@ -257,11 +254,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.job.get_ats_job(connection_id: '<id>', id: '<id>')
 
 unless res.ats_job.nil?
@@ -301,11 +297,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.job.get_hris_job(connection_id: '<id>', id: '<id>')
 
 unless res.hris_job.nil?
@@ -345,15 +340,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAtsJobsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAtsJobsRequest.new(
+  connection_id: '<id>'
+)
 res = s.job.list_ats_jobs(request: req)
 
 unless res.ats_jobs.nil?
@@ -390,15 +384,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHrisJobsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHrisJobsRequest.new(
+  connection_id: '<id>'
+)
 res = s.job.list_hris_jobs(request: req)
 
 unless res.hris_jobs.nil?
@@ -429,16 +422,16 @@ Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to chan
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAtsJob" method="patch" path="/ats/{connection_id}/job/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAtsJob" method="patch" path="/ats/{connection_id}/job/{id}" example="ats_job" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAtsJobRequest.new(
   ats_job: Models::Shared::AtsJob.new(
@@ -449,7 +442,7 @@ req = Models::Operations::PatchAtsJobRequest.new(
         country_code: 'US',
         postal_code: '89776-0669',
         region: 'Mississippi',
-        region_code: 'FL',
+        region_code: 'FL'
       ),
     ],
     compensation: [
@@ -458,33 +451,33 @@ req = Models::Operations::PatchAtsJobRequest.new(
         frequency: Models::Shared::Frequency::DAY,
         max: 174_303.0,
         min: 174_042.0,
-        type: Models::Shared::AtsCompensationType::BONUS,
+        type: Models::Shared::AtsCompensationType::BONUS
       ),
       Models::Shared::AtsCompensation.new(
         currency: 'MZN',
         frequency: Models::Shared::Frequency::MONTH,
         max: 171_171.0,
         min: 151_975.0,
-        type: Models::Shared::AtsCompensationType::SALARY,
+        type: Models::Shared::AtsCompensationType::SALARY
       ),
     ],
     created_at: DateTime.iso8601('2023-06-16T12:51:44.518Z'),
     description: 'Global',
     employment_type: Models::Shared::EmploymentType::FREELANCE,
     hiring_managers: [],
-    id: 'e0c6c841-9965-4cc3-b68a-dedce51514f0',
+    id: 'b379d661-72e4-43c9-ba69-81b1544009be',
     industry: 'Handcrafted Bamboo Soap',
     language_locale: 'en',
     metadata: [
       Models::Shared::AtsMetadata.new(
         extra_data: {
-          "display_name": 'Custom Property',
+          'display_name' => 'Custom Property',
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: 'fa8ca8f8-83e3-4d2f-abf5-a7d4bf859594',
+        id: 'c0445a3d-baa8-47a2-8b7e-b43c054440dd',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'desolo',
+        value: 'desolo'
       ),
     ],
     minimum_degree: 'Bachelor',
@@ -494,8 +487,8 @@ req = Models::Operations::PatchAtsJobRequest.new(
     openings: [
       Models::Shared::AtsJobOpening.new(
         close_reason: 'Admoveo trado textilis.',
-        opened_at: DateTime.iso8601('2026-06-24T19:11:52.874Z'),
-        status: Models::Shared::AtsJobOpeningStatus::OPEN,
+        opened_at: DateTime.iso8601('2026-06-26T09:52:55.484Z'),
+        status: Models::Shared::AtsJobOpeningStatus::OPEN
       ),
     ],
     postings: [
@@ -506,16 +499,16 @@ req = Models::Operations::PatchAtsJobRequest.new(
           country_code: 'US',
           postal_code: '98754',
           region: 'Wisconsin',
-          region_code: 'CO',
+          region_code: 'CO'
         ),
-        created_at: DateTime.iso8601('2026-08-19T18:47:20.614Z'),
+        created_at: DateTime.iso8601('2026-08-21T11:26:03.432Z'),
         description: 'Beatus eum volutabrum balbus victus ipsa tubineus claustrum.',
-        id: 'e48352d1-2490-433f-a12b-9964e7e0efd7',
+        id: '82a90589-0cf9-4ea4-9bd8-f0fa428ff580',
         is_active: false,
         location: '1725 Hessel Keys',
         name: 'International Identity Manager',
         posting_url: 'https://obedient-yak.com',
-        updated_at: DateTime.iso8601('2026-09-15T11:59:18.600Z'),
+        updated_at: DateTime.iso8601('2026-09-17T05:34:10.747Z')
       ),
     ],
     public_job_urls: [
@@ -525,7 +518,7 @@ req = Models::Operations::PatchAtsJobRequest.new(
     questions: [
       Models::Shared::AtsJobQuestion.new(
         description: 'Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.',
-        id: 'b5783fe0-6aa0-4e6d-a221-001afa00ef4f',
+        id: '269ba6e5-c18f-4e1a-b683-6dac8bd57a0e',
         max_length: 117.0,
         min_length: 1.0,
         options: [
@@ -535,10 +528,10 @@ req = Models::Operations::PatchAtsJobRequest.new(
         prompt: 'Totam maxime tres tergiversatio.',
         question: 'Doloribus mollitia.',
         required: true,
-        type: Models::Shared::AtsJobQuestionType::TEXT,
+        type: Models::Shared::AtsJobQuestionType::TEXT
       ),
       Models::Shared::AtsJobQuestion.new(
-        id: '56460aac-52f7-4d9b-995c-5ed87f4e035d',
+        id: 'ce3dc60d-5199-4fe9-b21a-6124885d8b80',
         max_length: 453.0,
         min_length: 1.0,
         options: [
@@ -547,11 +540,11 @@ req = Models::Operations::PatchAtsJobRequest.new(
         prompt: 'Veritatis sodalitas nemo natus attonbitus reprehenderit voro depono.',
         question: 'Nam.',
         required: false,
-        type: Models::Shared::AtsJobQuestionType::TEXT,
+        type: Models::Shared::AtsJobQuestionType::TEXT
       ),
       Models::Shared::AtsJobQuestion.new(
         description: 'Taceo rem compello spectaculum mollitia arcus compello.',
-        id: '78367075-6be3-4256-be46-ac6a1cf254a8',
+        id: '1aaba1c1-fd26-4b0e-82cf-b304985e67ee',
         max_length: 66.0,
         min_length: 1.0,
         options: [
@@ -560,7 +553,7 @@ req = Models::Operations::PatchAtsJobRequest.new(
         prompt: 'Tum tamisium autus.',
         question: 'Confero trepide.',
         required: false,
-        type: Models::Shared::AtsJobQuestionType::TEXT,
+        type: Models::Shared::AtsJobQuestionType::TEXT
       ),
     ],
     skills: [
@@ -569,12 +562,11 @@ req = Models::Operations::PatchAtsJobRequest.new(
     ],
     status: Models::Shared::AtsJobStatus::ARCHIVED,
     summary: 'Crepusculum adsuesco vere.',
-    updated_at: DateTime.iso8601('2026-03-14T18:01:21.544Z'),
+    updated_at: DateTime.iso8601('2026-03-16T05:07:54.399Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.job.patch_ats_job(request: req)
 
 unless res.ats_job.nil?
@@ -605,16 +597,16 @@ Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to ch
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHrisJob" method="patch" path="/hris/{connection_id}/job/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHrisJob" method="patch" path="/hris/{connection_id}/job/{id}" example="hris_job" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchHrisJobRequest.new(
   hris_job: Models::Shared::HrisJob.new(
@@ -622,16 +614,15 @@ req = Models::Operations::PatchHrisJobRequest.new(
     created_at: DateTime.iso8601('2020-10-28T01:13:19.491Z'),
     description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
     employment_type: Models::Shared::HrisJobEmploymentType::FREELANCE,
-    id: 'b3733ce0-4541-4193-8f48-ddc4d6de547e',
+    id: 'b62cf2bf-9dbd-45d5-9a7f-57de2494c099',
     is_active: false,
     metadata: [],
     name: 'Internal Integration Specialist',
-    updated_at: DateTime.iso8601('2023-02-06T09:26:50.639Z'),
+    updated_at: DateTime.iso8601('2023-02-07T01:51:34.530Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.job.patch_hris_job(request: req)
 
 unless res.hris_job.nil?
@@ -668,11 +659,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.job.remove_ats_job(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -710,11 +700,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.job.remove_hris_job(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -746,16 +735,16 @@ Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to chan
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAtsJob" method="put" path="/ats/{connection_id}/job/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAtsJob" method="put" path="/ats/{connection_id}/job/{id}" example="ats_job" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAtsJobRequest.new(
   ats_job: Models::Shared::AtsJob.new(
@@ -766,7 +755,7 @@ req = Models::Operations::UpdateAtsJobRequest.new(
         country_code: 'US',
         postal_code: '89776-0669',
         region: 'Mississippi',
-        region_code: 'FL',
+        region_code: 'FL'
       ),
     ],
     compensation: [
@@ -775,33 +764,33 @@ req = Models::Operations::UpdateAtsJobRequest.new(
         frequency: Models::Shared::Frequency::DAY,
         max: 174_303.0,
         min: 174_042.0,
-        type: Models::Shared::AtsCompensationType::BONUS,
+        type: Models::Shared::AtsCompensationType::BONUS
       ),
       Models::Shared::AtsCompensation.new(
         currency: 'MZN',
         frequency: Models::Shared::Frequency::MONTH,
         max: 171_171.0,
         min: 151_975.0,
-        type: Models::Shared::AtsCompensationType::SALARY,
+        type: Models::Shared::AtsCompensationType::SALARY
       ),
     ],
     created_at: DateTime.iso8601('2023-06-16T12:51:44.518Z'),
     description: 'Global',
     employment_type: Models::Shared::EmploymentType::FREELANCE,
     hiring_managers: [],
-    id: 'e0c6c841-9965-4cc3-b68a-dedce51514f0',
+    id: 'b379d661-72e4-43c9-ba69-81b1544009be',
     industry: 'Handcrafted Bamboo Soap',
     language_locale: 'en',
     metadata: [
       Models::Shared::AtsMetadata.new(
         extra_data: {
-          "display_name": 'Custom Property',
+          'display_name' => 'Custom Property',
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: 'fa8ca8f8-83e3-4d2f-abf5-a7d4bf859594',
+        id: 'c0445a3d-baa8-47a2-8b7e-b43c054440dd',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'desolo',
+        value: 'desolo'
       ),
     ],
     minimum_degree: 'Bachelor',
@@ -811,8 +800,8 @@ req = Models::Operations::UpdateAtsJobRequest.new(
     openings: [
       Models::Shared::AtsJobOpening.new(
         close_reason: 'Admoveo trado textilis.',
-        opened_at: DateTime.iso8601('2026-06-24T19:11:52.874Z'),
-        status: Models::Shared::AtsJobOpeningStatus::OPEN,
+        opened_at: DateTime.iso8601('2026-06-26T09:52:55.484Z'),
+        status: Models::Shared::AtsJobOpeningStatus::OPEN
       ),
     ],
     postings: [
@@ -823,16 +812,16 @@ req = Models::Operations::UpdateAtsJobRequest.new(
           country_code: 'US',
           postal_code: '98754',
           region: 'Wisconsin',
-          region_code: 'CO',
+          region_code: 'CO'
         ),
-        created_at: DateTime.iso8601('2026-08-19T18:47:20.614Z'),
+        created_at: DateTime.iso8601('2026-08-21T11:26:03.432Z'),
         description: 'Beatus eum volutabrum balbus victus ipsa tubineus claustrum.',
-        id: 'e48352d1-2490-433f-a12b-9964e7e0efd7',
+        id: '82a90589-0cf9-4ea4-9bd8-f0fa428ff580',
         is_active: false,
         location: '1725 Hessel Keys',
         name: 'International Identity Manager',
         posting_url: 'https://obedient-yak.com',
-        updated_at: DateTime.iso8601('2026-09-15T11:59:18.600Z'),
+        updated_at: DateTime.iso8601('2026-09-17T05:34:10.747Z')
       ),
     ],
     public_job_urls: [
@@ -842,7 +831,7 @@ req = Models::Operations::UpdateAtsJobRequest.new(
     questions: [
       Models::Shared::AtsJobQuestion.new(
         description: 'Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.',
-        id: 'b5783fe0-6aa0-4e6d-a221-001afa00ef4f',
+        id: '269ba6e5-c18f-4e1a-b683-6dac8bd57a0e',
         max_length: 117.0,
         min_length: 1.0,
         options: [
@@ -852,10 +841,10 @@ req = Models::Operations::UpdateAtsJobRequest.new(
         prompt: 'Totam maxime tres tergiversatio.',
         question: 'Doloribus mollitia.',
         required: true,
-        type: Models::Shared::AtsJobQuestionType::TEXT,
+        type: Models::Shared::AtsJobQuestionType::TEXT
       ),
       Models::Shared::AtsJobQuestion.new(
-        id: '56460aac-52f7-4d9b-995c-5ed87f4e035d',
+        id: 'ce3dc60d-5199-4fe9-b21a-6124885d8b80',
         max_length: 453.0,
         min_length: 1.0,
         options: [
@@ -864,11 +853,11 @@ req = Models::Operations::UpdateAtsJobRequest.new(
         prompt: 'Veritatis sodalitas nemo natus attonbitus reprehenderit voro depono.',
         question: 'Nam.',
         required: false,
-        type: Models::Shared::AtsJobQuestionType::TEXT,
+        type: Models::Shared::AtsJobQuestionType::TEXT
       ),
       Models::Shared::AtsJobQuestion.new(
         description: 'Taceo rem compello spectaculum mollitia arcus compello.',
-        id: '78367075-6be3-4256-be46-ac6a1cf254a8',
+        id: '1aaba1c1-fd26-4b0e-82cf-b304985e67ee',
         max_length: 66.0,
         min_length: 1.0,
         options: [
@@ -877,7 +866,7 @@ req = Models::Operations::UpdateAtsJobRequest.new(
         prompt: 'Tum tamisium autus.',
         question: 'Confero trepide.',
         required: false,
-        type: Models::Shared::AtsJobQuestionType::TEXT,
+        type: Models::Shared::AtsJobQuestionType::TEXT
       ),
     ],
     skills: [
@@ -886,12 +875,11 @@ req = Models::Operations::UpdateAtsJobRequest.new(
     ],
     status: Models::Shared::AtsJobStatus::ARCHIVED,
     summary: 'Crepusculum adsuesco vere.',
-    updated_at: DateTime.iso8601('2026-03-14T18:01:21.544Z'),
+    updated_at: DateTime.iso8601('2026-03-16T05:07:54.399Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.job.update_ats_job(request: req)
 
 unless res.ats_job.nil?
@@ -922,16 +910,16 @@ Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to ch
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHrisJob" method="put" path="/hris/{connection_id}/job/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHrisJob" method="put" path="/hris/{connection_id}/job/{id}" example="hris_job" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateHrisJobRequest.new(
   hris_job: Models::Shared::HrisJob.new(
@@ -939,16 +927,15 @@ req = Models::Operations::UpdateHrisJobRequest.new(
     created_at: DateTime.iso8601('2020-10-28T01:13:19.491Z'),
     description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
     employment_type: Models::Shared::HrisJobEmploymentType::FREELANCE,
-    id: 'b3733ce0-4541-4193-8f48-ddc4d6de547e',
+    id: 'b62cf2bf-9dbd-45d5-9a7f-57de2494c099',
     is_active: false,
     metadata: [],
     name: 'Internal Integration Specialist',
-    updated_at: DateTime.iso8601('2023-02-06T09:26:50.639Z'),
+    updated_at: DateTime.iso8601('2023-02-07T01:51:34.530Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.job.update_hris_job(request: req)
 
 unless res.hris_job.nil?

@@ -1,5 +1,13 @@
 # ListPlmChangesQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListPlmChangesQueryParamFields::ID
+```
+
 
 ## Values
 

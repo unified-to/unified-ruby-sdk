@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # SenderType - whether the guest, host or system sent the message
-      class SenderType < T::Enum
-
-
+      class SenderType
+        include ::Crystalline::Enum
         enums do
           GUEST = new('GUEST')
           HOST = new('HOST')
           SYSTEM = new('SYSTEM')
         end
+        open!
       end
     end
   end

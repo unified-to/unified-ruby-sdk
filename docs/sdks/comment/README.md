@@ -1,26 +1,31 @@
 # Comment
-(*comment*)
 
 ## Overview
 
 ### Available Operations
 
 * [create_kms_comment](#create_kms_comment) - Create a comment
+* [create_social_comment](#create_social_comment) - Create a comment
 * [create_task_comment](#create_task_comment) - Create a comment
 * [create_uc_comment](#create_uc_comment) - Create a comment
 * [get_kms_comment](#get_kms_comment) - Retrieve a comment
+* [get_social_comment](#get_social_comment) - Retrieve a comment
 * [get_task_comment](#get_task_comment) - Retrieve a comment
 * [get_uc_comment](#get_uc_comment) - Retrieve a comment
 * [list_kms_comments](#list_kms_comments) - List all comments
+* [list_social_comments](#list_social_comments) - List all comments
 * [list_task_comments](#list_task_comments) - List all comments
 * [list_uc_comments](#list_uc_comments) - List all comments
 * [patch_kms_comment](#patch_kms_comment) - Update a comment
+* [patch_social_comment](#patch_social_comment) - Update a comment
 * [patch_task_comment](#patch_task_comment) - Update a comment
 * [patch_uc_comment](#patch_uc_comment) - Update a comment
 * [remove_kms_comment](#remove_kms_comment) - Remove a comment
+* [remove_social_comment](#remove_social_comment) - Remove a comment
 * [remove_task_comment](#remove_task_comment) - Remove a comment
 * [remove_uc_comment](#remove_uc_comment) - Remove a comment
 * [update_kms_comment](#update_kms_comment) - Update a comment
+* [update_social_comment](#update_social_comment) - Update a comment
 * [update_task_comment](#update_task_comment) - Update a comment
 * [update_uc_comment](#update_uc_comment) - Update a comment
 
@@ -30,25 +35,24 @@ Creates a KmsComment. Provide the unified KmsComment fields in the request body;
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createKmsComment" method="post" path="/kms/{connection_id}/comment" -->
+<!-- UsageSnippet language="ruby" operationID="createKmsComment" method="post" path="/kms/{connection_id}/comment" example="kms_comment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.comment.create_kms_comment(kms_comment: Models::Shared::KmsComment.new(
   content: 'Decimus tolero viriliter usque.',
   content_type: Models::Shared::ContentType::HTML,
   created_at: DateTime.iso8601('2022-08-26T14:40:49.732Z'),
-  id: 'df29b125-0fa5-43ad-acc1-aa2734d6e333',
+  id: 'f735f24d-4c20-4850-b0ac-df487c9f95a8',
   metadata: [],
   type: Models::Shared::KmsCommentType::PAGE,
-  updated_at: DateTime.iso8601('2023-12-02T00:09:52.267Z'),
+  updated_at: DateTime.iso8601('2023-12-02T13:15:42.753Z')
 ), connection_id: '<id>')
 
 unless res.kms_comment.nil?
@@ -76,30 +80,72 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## create_social_comment
+
+Creates a SocialComment. Provide the unified SocialComment fields in the request body; they are mapped to the provider's API. Returns the created SocialComment.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="createSocialComment" method="post" path="/social/{connection_id}/comment" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.comment.create_social_comment(social_comment: Models::Shared::SocialComment.new, connection_id: '<id>')
+
+unless res.social_comment.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `social_comment`                                                                                                                                 | [Models::Shared::SocialComment](../../models/shared/socialcomment.md)                                                                            | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateSocialCommentQueryParamFields](../../models/operations/createsocialcommentqueryparamfields.md)>              | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::CreateSocialCommentResponse)](../../models/operations/createsocialcommentresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## create_task_comment
 
 Creates a TaskComment. Provide the unified TaskComment fields in the request body; they are mapped to the provider's API. Returns the created TaskComment.
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createTaskComment" method="post" path="/task/{connection_id}/comment" -->
+<!-- UsageSnippet language="ruby" operationID="createTaskComment" method="post" path="/task/{connection_id}/comment" example="task_comment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.comment.create_task_comment(task_comment: Models::Shared::TaskComment.new(
   created_at: DateTime.iso8601('2019-10-12T20:33:37.879Z'),
   has_children: true,
-  id: '3736aafa-2d9b-4975-abca-6262ea6ba878',
+  id: '462ea52d-a7fe-4033-b97e-c59f324f04d2',
   metadata: [],
   text: 'Colo ulciscor sublime tabernus.',
-  updated_at: DateTime.iso8601('2021-10-08T16:17:15.400Z'),
+  updated_at: DateTime.iso8601('2021-10-09T04:31:10.756Z')
 ), connection_id: '<id>')
 
 unless res.task_comment.nil?
@@ -133,23 +179,22 @@ Creates a UcComment. Provide the unified UcComment fields in the request body; t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createUcComment" method="post" path="/uc/{connection_id}/comment" -->
+<!-- UsageSnippet language="ruby" operationID="createUcComment" method="post" path="/uc/{connection_id}/comment" example="uc_comment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.comment.create_uc_comment(uc_comment: Models::Shared::UcComment.new(
   content: 'Vociferor vitiosus.',
   created_at: '2023-04-02T23:42:31.571Z',
-  id: 'eb0f8d43-5568-4e4e-9f0a-dc9e12c44983',
+  id: '70cc2aeb-f6f8-44dc-8836-89dde411b3c6',
   metadata: [],
-  updated_at: '2024-02-14T08:30:08.971Z',
+  updated_at: '2024-02-14T18:59:25.913Z'
 ), connection_id: '<id>')
 
 unless res.uc_comment.nil?
@@ -189,11 +234,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.comment.get_kms_comment(connection_id: '<id>', id: '<id>')
 
 unless res.kms_comment.nil?
@@ -221,6 +265,49 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## get_social_comment
+
+Retrieves a single SocialComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getSocialComment" method="get" path="/social/{connection_id}/comment/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.comment.get_social_comment(connection_id: '<id>', id: '<id>')
+
+unless res.social_comment.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Comment                                                                                                                                |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetSocialCommentQueryParamFields](../../models/operations/getsocialcommentqueryparamfields.md)>                    | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetSocialCommentResponse)](../../models/operations/getsocialcommentresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## get_task_comment
 
 Retrieves a single TaskComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
@@ -233,11 +320,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.comment.get_task_comment(connection_id: '<id>', id: '<id>')
 
 unless res.task_comment.nil?
@@ -277,11 +363,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.comment.get_uc_comment(connection_id: '<id>', id: '<id>')
 
 unless res.uc_comment.nil?
@@ -321,15 +406,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListKmsCommentsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListKmsCommentsRequest.new(
+  connection_id: '<id>'
+)
 res = s.comment.list_kms_comments(request: req)
 
 unless res.kms_comments.nil?
@@ -354,6 +438,50 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## list_social_comments
+
+Returns a list of SocialComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listSocialComments" method="get" path="/social/{connection_id}/comment" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+
+req = Models::Operations::ListSocialCommentsRequest.new(
+  connection_id: '<id>'
+)
+res = s.comment.list_social_comments(request: req)
+
+unless res.social_comments.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `request`                                                                                             | [Models::Operations::ListSocialCommentsRequest](../../models/operations/listsocialcommentsrequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+
+### Response
+
+**[T.nilable(Models::Operations::ListSocialCommentsResponse)](../../models/operations/listsocialcommentsresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## list_task_comments
 
 Returns a list of TaskComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -366,15 +494,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListTaskCommentsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListTaskCommentsRequest.new(
+  connection_id: '<id>'
+)
 res = s.comment.list_task_comments(request: req)
 
 unless res.task_comments.nil?
@@ -411,15 +538,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListUcCommentsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListUcCommentsRequest.new(
+  connection_id: '<id>'
+)
 res = s.comment.list_uc_comments(request: req)
 
 unless res.uc_comments.nil?
@@ -450,31 +576,30 @@ Updates the KmsComment identified by `id`. Provide the unified KmsComment fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchKmsComment" method="patch" path="/kms/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchKmsComment" method="patch" path="/kms/{connection_id}/comment/{id}" example="kms_comment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchKmsCommentRequest.new(
   kms_comment: Models::Shared::KmsComment.new(
     content: 'Decimus tolero viriliter usque.',
     content_type: Models::Shared::ContentType::HTML,
     created_at: DateTime.iso8601('2022-08-26T14:40:49.732Z'),
-    id: '29411751-fb47-453d-8c5a-a221a1358ced',
+    id: 'c03d0b41-9425-4f98-8693-052f9722a879',
     metadata: [],
     type: Models::Shared::KmsCommentType::PAGE,
-    updated_at: DateTime.iso8601('2023-12-02T00:09:52.272Z'),
+    updated_at: DateTime.iso8601('2023-12-02T13:15:42.757Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.comment.patch_kms_comment(request: req)
 
 unless res.kms_comment.nil?
@@ -499,36 +624,81 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## patch_social_comment
+
+Updates the SocialComment identified by `id`. Provide the unified SocialComment fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="patchSocialComment" method="patch" path="/social/{connection_id}/comment/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+
+req = Models::Operations::PatchSocialCommentRequest.new(
+  social_comment: Models::Shared::SocialComment.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
+res = s.comment.patch_social_comment(request: req)
+
+unless res.social_comment.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `request`                                                                                             | [Models::Operations::PatchSocialCommentRequest](../../models/operations/patchsocialcommentrequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+
+### Response
+
+**[T.nilable(Models::Operations::PatchSocialCommentResponse)](../../models/operations/patchsocialcommentresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## patch_task_comment
 
 Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the request body.
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchTaskComment" method="patch" path="/task/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchTaskComment" method="patch" path="/task/{connection_id}/comment/{id}" example="task_comment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchTaskCommentRequest.new(
   task_comment: Models::Shared::TaskComment.new(
     created_at: DateTime.iso8601('2019-10-12T20:33:37.879Z'),
     has_children: true,
-    id: 'dd5eb970-6cf6-40bd-88f4-646220ce18d8',
+    id: 'c0053c2c-8e04-49f0-905f-858f4942546e',
     metadata: [],
     text: 'Colo ulciscor sublime tabernus.',
-    updated_at: DateTime.iso8601('2021-10-08T16:17:15.404Z'),
+    updated_at: DateTime.iso8601('2021-10-09T04:31:10.758Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.comment.patch_task_comment(request: req)
 
 unless res.task_comment.nil?
@@ -559,29 +729,28 @@ Updates the UcComment identified by `id`. Provide the unified UcComment fields t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchUcComment" method="patch" path="/uc/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchUcComment" method="patch" path="/uc/{connection_id}/comment/{id}" example="uc_comment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchUcCommentRequest.new(
   uc_comment: Models::Shared::UcComment.new(
     content: 'Vociferor vitiosus.',
     created_at: '2023-04-02T23:42:31.571Z',
-    id: 'a184254b-2cdd-4761-a294-700b542930b6',
+    id: '3e1dfe6c-cd4a-4d92-8821-5a00cb61ab51',
     metadata: [],
-    updated_at: '2024-02-14T08:30:08.973Z',
+    updated_at: '2024-02-14T18:59:25.915Z'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.comment.patch_uc_comment(request: req)
 
 unless res.uc_comment.nil?
@@ -618,11 +787,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.comment.remove_kms_comment(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -648,6 +816,47 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## remove_social_comment
+
+Deletes the SocialComment identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="removeSocialComment" method="delete" path="/social/{connection_id}/comment/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.comment.remove_social_comment(connection_id: '<id>', id: '<id>')
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Comment    |
+
+### Response
+
+**[T.nilable(Models::Operations::RemoveSocialCommentResponse)](../../models/operations/removesocialcommentresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## remove_task_comment
 
 Deletes the TaskComment identified by `id`.
@@ -660,11 +869,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.comment.remove_task_comment(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -702,11 +910,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.comment.remove_uc_comment(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -738,31 +945,30 @@ Updates the KmsComment identified by `id`. Provide the unified KmsComment fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateKmsComment" method="put" path="/kms/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateKmsComment" method="put" path="/kms/{connection_id}/comment/{id}" example="kms_comment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateKmsCommentRequest.new(
   kms_comment: Models::Shared::KmsComment.new(
     content: 'Decimus tolero viriliter usque.',
     content_type: Models::Shared::ContentType::HTML,
     created_at: DateTime.iso8601('2022-08-26T14:40:49.732Z'),
-    id: '29411751-fb47-453d-8c5a-a221a1358ced',
+    id: 'c03d0b41-9425-4f98-8693-052f9722a879',
     metadata: [],
     type: Models::Shared::KmsCommentType::PAGE,
-    updated_at: DateTime.iso8601('2023-12-02T00:09:52.272Z'),
+    updated_at: DateTime.iso8601('2023-12-02T13:15:42.757Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.comment.update_kms_comment(request: req)
 
 unless res.kms_comment.nil?
@@ -787,36 +993,81 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## update_social_comment
+
+Updates the SocialComment identified by `id`. Provide the unified SocialComment fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="updateSocialComment" method="put" path="/social/{connection_id}/comment/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+
+req = Models::Operations::UpdateSocialCommentRequest.new(
+  social_comment: Models::Shared::SocialComment.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
+res = s.comment.update_social_comment(request: req)
+
+unless res.social_comment.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                               | [Models::Operations::UpdateSocialCommentRequest](../../models/operations/updatesocialcommentrequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+
+### Response
+
+**[T.nilable(Models::Operations::UpdateSocialCommentResponse)](../../models/operations/updatesocialcommentresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## update_task_comment
 
 Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the request body.
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateTaskComment" method="put" path="/task/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateTaskComment" method="put" path="/task/{connection_id}/comment/{id}" example="task_comment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateTaskCommentRequest.new(
   task_comment: Models::Shared::TaskComment.new(
     created_at: DateTime.iso8601('2019-10-12T20:33:37.879Z'),
     has_children: true,
-    id: 'dd5eb970-6cf6-40bd-88f4-646220ce18d8',
+    id: 'c0053c2c-8e04-49f0-905f-858f4942546e',
     metadata: [],
     text: 'Colo ulciscor sublime tabernus.',
-    updated_at: DateTime.iso8601('2021-10-08T16:17:15.404Z'),
+    updated_at: DateTime.iso8601('2021-10-09T04:31:10.758Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.comment.update_task_comment(request: req)
 
 unless res.task_comment.nil?
@@ -847,29 +1098,28 @@ Updates the UcComment identified by `id`. Provide the unified UcComment fields t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateUcComment" method="put" path="/uc/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateUcComment" method="put" path="/uc/{connection_id}/comment/{id}" example="uc_comment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateUcCommentRequest.new(
   uc_comment: Models::Shared::UcComment.new(
     content: 'Vociferor vitiosus.',
     created_at: '2023-04-02T23:42:31.571Z',
-    id: 'a184254b-2cdd-4761-a294-700b542930b6',
+    id: '3e1dfe6c-cd4a-4d92-8821-5a00cb61ab51',
     metadata: [],
-    updated_at: '2024-02-14T08:30:08.973Z',
+    updated_at: '2024-02-14T18:59:25.915Z'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.comment.update_uc_comment(request: req)
 
 unless res.uc_comment.nil?

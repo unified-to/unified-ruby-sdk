@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class CoverageType < T::Enum
-
-
+      class CoverageType
+        include ::Crystalline::Enum
         enums do
           STANDARD = new('STANDARD')
           PREMIUM = new('PREMIUM')
           CUSTOM = new('CUSTOM')
         end
+        open!
       end
     end
   end

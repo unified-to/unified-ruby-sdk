@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PropertyWorkspaceIntegrationPatchPermissions < T::Enum
-
-
+      class PropertyWorkspaceIntegrationPatchPermissions
+        include ::Crystalline::Enum
         enums do
           ACCOUNTING_ACCOUNT_READ = new('accounting_account_read')
           ACCOUNTING_ACCOUNT_WRITE = new('accounting_account_write')
@@ -370,6 +368,8 @@ module UnifiedRubySDK
           SOCIAL_REVIEW_WRITE = new('social_review_write')
           SOCIAL_INSIGHT_READ = new('social_insight_read')
           SOCIAL_INSIGHT_WRITE = new('social_insight_write')
+          SOCIAL_COMMENT_READ = new('social_comment_read')
+          SOCIAL_COMMENT_WRITE = new('social_comment_write')
           LEGAL_MATTER_READ = new('legal_matter_read')
           LEGAL_MATTER_WRITE = new('legal_matter_write')
           LEGAL_PRACTICEAREA_READ = new('legal_practicearea_read')
@@ -458,6 +458,7 @@ module UnifiedRubySDK
           PLM_CATEGORY_READ = new('plm_category_read')
           PLM_CATEGORY_WRITE = new('plm_category_write')
         end
+        open!
       end
     end
   end

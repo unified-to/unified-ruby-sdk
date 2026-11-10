@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Environment - Target environment
-      class Environment < T::Enum
-
-
+      class Environment
+        include ::Crystalline::Enum
         enums do
           PRODUCTION = new('PRODUCTION')
           PREVIEW = new('PREVIEW')
           DEVELOPMENT = new('DEVELOPMENT')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

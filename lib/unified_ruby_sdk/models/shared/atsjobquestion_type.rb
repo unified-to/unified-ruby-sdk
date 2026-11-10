@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class AtsJobQuestionType < T::Enum
-
-
+      class AtsJobQuestionType
+        include ::Crystalline::Enum
         enums do
           TEXT = new('TEXT')
           NUMBER = new('NUMBER')
@@ -26,6 +24,7 @@ module UnifiedRubySDK
           CURRENCY = new('CURRENCY')
           URL = new('URL')
         end
+        open!
       end
     end
   end

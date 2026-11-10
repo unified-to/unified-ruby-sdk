@@ -1,5 +1,13 @@
 # GetAccountingBalancesheetQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetAccountingBalancesheetQueryParamFields::ID
+```
+
 
 ## Values
 

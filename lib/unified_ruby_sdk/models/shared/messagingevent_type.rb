@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class MessagingEventType < T::Enum
-
-
+      class MessagingEventType
+        include ::Crystalline::Enum
         enums do
           MESSAGE_RECEIVED = new('MESSAGE_RECEIVED')
           REACTION_ADDED = new('REACTION_ADDED')
@@ -27,6 +25,7 @@ module UnifiedRubySDK
           USER_DELETED = new('USER_DELETED')
           USER_UPDATED = new('USER_UPDATED')
         end
+        open!
       end
     end
   end

@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # HealthcareSlotStatus - Availability of the slot
-      class HealthcareSlotStatus < T::Enum
-
-
+      class HealthcareSlotStatus
+        include ::Crystalline::Enum
         enums do
           FREE = new('FREE')
           BUSY = new('BUSY')
@@ -20,6 +18,7 @@ module UnifiedRubySDK
           ENTERED_IN_ERROR = new('ENTERED_IN_ERROR')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

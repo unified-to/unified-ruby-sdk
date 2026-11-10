@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PropertyAdsReportMetricsInsertionorderBudgetUnit < T::Enum
-
-
+      class PropertyAdsReportMetricsInsertionorderBudgetUnit
+        include ::Crystalline::Enum
         enums do
           UNSPECIFIED = new('UNSPECIFIED')
           CURRENCY = new('CURRENCY')
           IMPRESSIONS = new('IMPRESSIONS')
         end
+        open!
       end
     end
   end

@@ -1,5 +1,4 @@
 # Messaging
-(*messaging*)
 
 ## Overview
 
@@ -26,29 +25,28 @@ Creates a MessagingChannel. Provide the unified MessagingChannel fields in the r
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createMessagingChannel" method="post" path="/messaging/{connection_id}/channel" -->
+<!-- UsageSnippet language="ruby" operationID="createMessagingChannel" method="post" path="/messaging/{connection_id}/channel" example="messaging_channel" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.messaging.create_messaging_channel(messaging_channel: Models::Shared::MessagingChannel.new(
   created_at: DateTime.iso8601('2023-10-05T02:09:22.795Z'),
   description: 'Dolores tutis.',
   has_subchannels: true,
-  id: '86063a26-ee56-46bd-b884-7ae4096d7d5c',
+  id: '2f92bb94-944a-4783-9cb0-4754a92343d1',
   is_active: false,
   is_private: true,
   members: [],
   metadata: [],
   name: 'tego',
-  updated_at: DateTime.iso8601('2026-06-06T23:30:26.206Z'),
-  web_url: 'https://svelte-rule.name/',
+  updated_at: DateTime.iso8601('2026-06-08T13:02:10.428Z'),
+  web_url: 'https://svelte-rule.name/'
 ), connection_id: '<id>')
 
 unless res.messaging_channel.nil?
@@ -82,39 +80,38 @@ Creates a MessagingMessage. Provide the unified MessagingMessage fields in the r
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createMessagingMessage" method="post" path="/messaging/{connection_id}/message" -->
+<!-- UsageSnippet language="ruby" operationID="createMessagingMessage" method="post" path="/messaging/{connection_id}/message" example="messaging_message" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.messaging.create_messaging_message(messaging_message: Models::Shared::MessagingMessage.new(
   attachments: [
     Models::Shared::MessagingAttachment.new(
-      content_identifier: 'e0d21a8d-a616-414e-9b56-8aa607e6cb0c',
+      content_identifier: '9f0ab14b-2a7e-4f44-a2a5-0d8fb237484c',
       content_type: 'coaegresco',
       download_url: 'https://rotating-advertisement.org',
       filename: 'super',
-      message_id: 'b7e597b1-1dbd-4277-8f5f-76f8fbb00677',
-      size: 327.0,
+      message_id: 'c2e600f8-72a0-4e92-acb8-7f8ad6987e2d',
+      size: 327.0
     ),
   ],
   buttons: [
     Models::Shared::MessagingButton.new(
-      id: 'e983aeeb-31c6-42a8-8a07-9f6c066c656c',
-      text: 'comparo',
+      id: 'e92552ff-af93-4865-96e0-03728e646ecf',
+      text: 'comparo'
     ),
   ],
   created_at: DateTime.iso8601('2021-11-26T09:26:33.973Z'),
   destination_members: [],
   has_children: true,
   hidden_members: [],
-  id: 'b7e597b1-1dbd-4277-8f5f-76f8fbb00677',
+  id: 'c2e600f8-72a0-4e92-acb8-7f8ad6987e2d',
   is_unread: false,
   mentioned_members: [],
   message: 'Sum utique aliquid.',
@@ -123,8 +120,8 @@ res = s.messaging.create_messaging_message(messaging_message: Models::Shared::Me
   metadata: [],
   reactions: [],
   subject: 'Cernuus optio cohaero summisse in.',
-  updated_at: DateTime.iso8601('2023-07-23T20:23:22.302Z'),
-  web_url: 'https://grumpy-kit.net',
+  updated_at: DateTime.iso8601('2023-07-24T10:55:28.099Z'),
+  web_url: 'https://grumpy-kit.net'
 ), connection_id: '<id>')
 
 unless res.messaging_message.nil?
@@ -164,11 +161,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.messaging.get_messaging_channel(connection_id: '<id>', id: '<id>')
 
 unless res.messaging_channel.nil?
@@ -208,11 +204,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.messaging.get_messaging_message(connection_id: '<id>', id: '<id>')
 
 unless res.messaging_message.nil?
@@ -252,15 +247,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListMessagingChannelsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListMessagingChannelsRequest.new(
+  connection_id: '<id>'
+)
 res = s.messaging.list_messaging_channels(request: req)
 
 unless res.messaging_channels.nil?
@@ -297,15 +291,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListMessagingMessagesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListMessagingMessagesRequest.new(
+  connection_id: '<id>'
+)
 res = s.messaging.list_messaging_messages(request: req)
 
 unless res.messaging_messages.nil?
@@ -336,35 +329,34 @@ Updates the MessagingChannel identified by `id`. Provide the unified MessagingCh
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchMessagingChannel" method="patch" path="/messaging/{connection_id}/channel/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchMessagingChannel" method="patch" path="/messaging/{connection_id}/channel/{id}" example="messaging_channel" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchMessagingChannelRequest.new(
   messaging_channel: Models::Shared::MessagingChannel.new(
     created_at: DateTime.iso8601('2023-10-05T02:09:22.795Z'),
     description: 'Dolores tutis.',
     has_subchannels: true,
-    id: 'a5100315-1190-41ce-bd69-247e6d91b3f0',
+    id: 'f8910484-d3e3-4be9-80f1-e7aca42b8c76',
     is_active: false,
     is_private: true,
     members: [],
     metadata: [],
     name: 'tego',
-    updated_at: DateTime.iso8601('2026-06-06T23:30:26.214Z'),
-    web_url: 'https://svelte-rule.name/',
+    updated_at: DateTime.iso8601('2026-06-08T13:02:10.443Z'),
+    web_url: 'https://svelte-rule.name/'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.messaging.patch_messaging_channel(request: req)
 
 unless res.messaging_channel.nil?
@@ -395,33 +387,32 @@ Updates the MessagingEvent identified by `id`. Provide the unified MessagingEven
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchMessagingEvent" method="patch" path="/messaging/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchMessagingEvent" method="patch" path="/messaging/{connection_id}/event/{id}" example="messaging_event" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchMessagingEventRequest.new(
   messaging_event: Models::Shared::MessagingEvent.new(
     channel: Models::Shared::PropertyMessagingEventChannel.new(
       id: '',
-      name: '',
+      name: ''
     ),
     created_at: DateTime.iso8601('2019-05-30T19:44:46.461Z'),
-    id: 'd62ceaf5-162d-445c-b1e6-90135721ad0b',
+    id: '6e911b7d-8432-4de0-9d0b-343890dd703f',
     is_replacing_original: false,
     metadata: [],
-    type: Models::Shared::MessagingEventType::BUTTON_CLICK,
+    type: Models::Shared::MessagingEventType::BUTTON_CLICK
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.messaging.patch_messaging_event(request: req)
 
 unless res.messaging_event.nil?
@@ -452,40 +443,40 @@ Updates the MessagingMessage identified by `id`. Provide the unified MessagingMe
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchMessagingMessage" method="patch" path="/messaging/{connection_id}/message/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchMessagingMessage" method="patch" path="/messaging/{connection_id}/message/{id}" example="messaging_message" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchMessagingMessageRequest.new(
   messaging_message: Models::Shared::MessagingMessage.new(
     attachments: [
       Models::Shared::MessagingAttachment.new(
-        content_identifier: '6759141e-ec0b-4aa4-80f7-60543f7b5c58',
+        content_identifier: '622d92eb-69bd-4497-9a6b-bb585db5d714',
         content_type: 'coaegresco',
         download_url: 'https://rotating-advertisement.org',
         filename: 'super',
-        message_id: 'f60a1572-2baf-4f05-9be7-942f850fddd3',
-        size: 327.0,
+        message_id: '7f6a213c-6cb0-4002-a729-3ce26b5d82a4',
+        size: 327.0
       ),
     ],
     buttons: [
       Models::Shared::MessagingButton.new(
-        id: 'e913b87c-78a7-4585-83e1-c49b9f41a8e4',
-        text: 'comparo',
+        id: 'd0b3315a-f1aa-4542-b17b-1eee71cd4dbf',
+        text: 'comparo'
       ),
     ],
     created_at: DateTime.iso8601('2021-11-26T09:26:33.973Z'),
     destination_members: [],
     has_children: true,
     hidden_members: [],
-    id: 'f60a1572-2baf-4f05-9be7-942f850fddd3',
+    id: '7f6a213c-6cb0-4002-a729-3ce26b5d82a4',
     is_unread: false,
     mentioned_members: [],
     message: 'Sum utique aliquid.',
@@ -494,13 +485,12 @@ req = Models::Operations::PatchMessagingMessageRequest.new(
     metadata: [],
     reactions: [],
     subject: 'Cernuus optio cohaero summisse in.',
-    updated_at: DateTime.iso8601('2023-07-23T20:23:22.311Z'),
-    web_url: 'https://grumpy-kit.net',
+    updated_at: DateTime.iso8601('2023-07-24T10:55:28.109Z'),
+    web_url: 'https://grumpy-kit.net'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.messaging.patch_messaging_message(request: req)
 
 unless res.messaging_message.nil?
@@ -537,11 +527,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.messaging.remove_messaging_channel(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -579,11 +568,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.messaging.remove_messaging_message(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -615,35 +603,34 @@ Updates the MessagingChannel identified by `id`. Provide the unified MessagingCh
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateMessagingChannel" method="put" path="/messaging/{connection_id}/channel/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateMessagingChannel" method="put" path="/messaging/{connection_id}/channel/{id}" example="messaging_channel" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateMessagingChannelRequest.new(
   messaging_channel: Models::Shared::MessagingChannel.new(
     created_at: DateTime.iso8601('2023-10-05T02:09:22.795Z'),
     description: 'Dolores tutis.',
     has_subchannels: true,
-    id: 'a5100315-1190-41ce-bd69-247e6d91b3f0',
+    id: 'f8910484-d3e3-4be9-80f1-e7aca42b8c76',
     is_active: false,
     is_private: true,
     members: [],
     metadata: [],
     name: 'tego',
-    updated_at: DateTime.iso8601('2026-06-06T23:30:26.214Z'),
-    web_url: 'https://svelte-rule.name/',
+    updated_at: DateTime.iso8601('2026-06-08T13:02:10.443Z'),
+    web_url: 'https://svelte-rule.name/'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.messaging.update_messaging_channel(request: req)
 
 unless res.messaging_channel.nil?
@@ -674,33 +661,32 @@ Updates the MessagingEvent identified by `id`. Provide the unified MessagingEven
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateMessagingEvent" method="put" path="/messaging/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateMessagingEvent" method="put" path="/messaging/{connection_id}/event/{id}" example="messaging_event" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateMessagingEventRequest.new(
   messaging_event: Models::Shared::MessagingEvent.new(
     channel: Models::Shared::PropertyMessagingEventChannel.new(
       id: '',
-      name: '',
+      name: ''
     ),
     created_at: DateTime.iso8601('2019-05-30T19:44:46.461Z'),
-    id: 'd62ceaf5-162d-445c-b1e6-90135721ad0b',
+    id: '6e911b7d-8432-4de0-9d0b-343890dd703f',
     is_replacing_original: false,
     metadata: [],
-    type: Models::Shared::MessagingEventType::BUTTON_CLICK,
+    type: Models::Shared::MessagingEventType::BUTTON_CLICK
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.messaging.update_messaging_event(request: req)
 
 unless res.messaging_event.nil?
@@ -731,40 +717,40 @@ Updates the MessagingMessage identified by `id`. Provide the unified MessagingMe
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateMessagingMessage" method="put" path="/messaging/{connection_id}/message/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateMessagingMessage" method="put" path="/messaging/{connection_id}/message/{id}" example="messaging_message" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateMessagingMessageRequest.new(
   messaging_message: Models::Shared::MessagingMessage.new(
     attachments: [
       Models::Shared::MessagingAttachment.new(
-        content_identifier: '6759141e-ec0b-4aa4-80f7-60543f7b5c58',
+        content_identifier: '622d92eb-69bd-4497-9a6b-bb585db5d714',
         content_type: 'coaegresco',
         download_url: 'https://rotating-advertisement.org',
         filename: 'super',
-        message_id: 'f60a1572-2baf-4f05-9be7-942f850fddd3',
-        size: 327.0,
+        message_id: '7f6a213c-6cb0-4002-a729-3ce26b5d82a4',
+        size: 327.0
       ),
     ],
     buttons: [
       Models::Shared::MessagingButton.new(
-        id: 'e913b87c-78a7-4585-83e1-c49b9f41a8e4',
-        text: 'comparo',
+        id: 'd0b3315a-f1aa-4542-b17b-1eee71cd4dbf',
+        text: 'comparo'
       ),
     ],
     created_at: DateTime.iso8601('2021-11-26T09:26:33.973Z'),
     destination_members: [],
     has_children: true,
     hidden_members: [],
-    id: 'f60a1572-2baf-4f05-9be7-942f850fddd3',
+    id: '7f6a213c-6cb0-4002-a729-3ce26b5d82a4',
     is_unread: false,
     mentioned_members: [],
     message: 'Sum utique aliquid.',
@@ -773,13 +759,12 @@ req = Models::Operations::UpdateMessagingMessageRequest.new(
     metadata: [],
     reactions: [],
     subject: 'Cernuus optio cohaero summisse in.',
-    updated_at: DateTime.iso8601('2023-07-23T20:23:22.311Z'),
-    web_url: 'https://grumpy-kit.net',
+    updated_at: DateTime.iso8601('2023-07-24T10:55:28.109Z'),
+    web_url: 'https://grumpy-kit.net'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.messaging.update_messaging_message(request: req)
 
 unless res.messaging_message.nil?

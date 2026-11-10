@@ -2,6 +2,17 @@
 
 Interpretation of the result (e.g. high, low)
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = Interpretation::NORMAL
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = Interpretation.deserialize("custom_value")
+```
+
 
 ## Values
 

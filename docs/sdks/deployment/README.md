@@ -1,5 +1,4 @@
 # Deployment
-(*deployment*)
 
 ## Overview
 
@@ -18,31 +17,30 @@ Creates a ComputeDeployment. Provide the unified ComputeDeployment fields in the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createComputeDeployment" method="post" path="/compute/{connection_id}/deployment" -->
+<!-- UsageSnippet language="ruby" operationID="createComputeDeployment" method="post" path="/compute/{connection_id}/deployment" example="compute_deployment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.deployment.create_compute_deployment(compute_deployment: Models::Shared::ComputeDeployment.new(
   branch: 'develop',
   commit_identifier: 'fadfe54eefd8fea670bea6d58b4b15d406c4b02b',
   commit_message: 'copy primary pixel',
   created_at: DateTime.iso8601('2022-06-07T03:52:04.613Z'),
   environment: Models::Shared::Environment::PREVIEW,
-  finished_at: DateTime.iso8601('2025-09-12T16:00:55.398Z'),
-  id: 'cff2f602-d532-4932-b403-143aee27fa9a',
+  finished_at: DateTime.iso8601('2025-09-14T00:08:17.109Z'),
+  id: 'ec7510b0-cad6-4182-9784-18745608d6b5',
   metadata: [],
-  started_at: DateTime.iso8601('2025-04-22T16:03:13.848Z'),
+  started_at: DateTime.iso8601('2025-04-23T20:19:40.096Z'),
   status: Models::Shared::ComputeDeploymentStatus::LIVE,
   trigger: Models::Shared::Trigger::API,
-  updated_at: DateTime.iso8601('2026-03-16T23:16:51.574Z'),
-  url: 'https://comfortable-petal.name',
+  updated_at: DateTime.iso8601('2026-03-18T12:23:27.716Z'),
+  url: 'https://comfortable-petal.name'
 ), connection_id: '<id>')
 
 unless res.compute_deployment.nil?
@@ -82,11 +80,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.deployment.get_compute_deployment(connection_id: '<id>', id: '<id>')
 
 unless res.compute_deployment.nil?
@@ -126,15 +123,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListComputeDeploymentsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListComputeDeploymentsRequest.new(
+  connection_id: '<id>'
+)
 res = s.deployment.list_compute_deployments(request: req)
 
 unless res.compute_deployments.nil?
@@ -165,16 +161,16 @@ Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDep
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchComputeDeployment" method="patch" path="/compute/{connection_id}/deployment/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchComputeDeployment" method="patch" path="/compute/{connection_id}/deployment/{id}" example="compute_deployment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchComputeDeploymentRequest.new(
   compute_deployment: Models::Shared::ComputeDeployment.new(
@@ -183,19 +179,18 @@ req = Models::Operations::PatchComputeDeploymentRequest.new(
     commit_message: 'copy primary pixel',
     created_at: DateTime.iso8601('2022-06-07T03:52:04.613Z'),
     environment: Models::Shared::Environment::PREVIEW,
-    finished_at: DateTime.iso8601('2025-09-12T16:00:55.413Z'),
-    id: '32a574b6-25dd-4c61-928b-2055b4c16357',
+    finished_at: DateTime.iso8601('2025-09-14T00:08:17.121Z'),
+    id: 'ca459785-5151-4654-80ca-3a7398959690',
     metadata: [],
-    started_at: DateTime.iso8601('2025-04-22T16:03:13.861Z'),
+    started_at: DateTime.iso8601('2025-04-23T20:19:40.107Z'),
     status: Models::Shared::ComputeDeploymentStatus::LIVE,
     trigger: Models::Shared::Trigger::API,
-    updated_at: DateTime.iso8601('2026-03-16T23:16:51.591Z'),
-    url: 'https://comfortable-petal.name',
+    updated_at: DateTime.iso8601('2026-03-18T12:23:27.731Z'),
+    url: 'https://comfortable-petal.name'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.deployment.patch_compute_deployment(request: req)
 
 unless res.compute_deployment.nil?
@@ -232,11 +227,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.deployment.remove_compute_deployment(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -268,16 +262,16 @@ Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDep
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateComputeDeployment" method="put" path="/compute/{connection_id}/deployment/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateComputeDeployment" method="put" path="/compute/{connection_id}/deployment/{id}" example="compute_deployment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateComputeDeploymentRequest.new(
   compute_deployment: Models::Shared::ComputeDeployment.new(
@@ -286,19 +280,18 @@ req = Models::Operations::UpdateComputeDeploymentRequest.new(
     commit_message: 'copy primary pixel',
     created_at: DateTime.iso8601('2022-06-07T03:52:04.613Z'),
     environment: Models::Shared::Environment::PREVIEW,
-    finished_at: DateTime.iso8601('2025-09-12T16:00:55.413Z'),
-    id: '32a574b6-25dd-4c61-928b-2055b4c16357',
+    finished_at: DateTime.iso8601('2025-09-14T00:08:17.121Z'),
+    id: 'ca459785-5151-4654-80ca-3a7398959690',
     metadata: [],
-    started_at: DateTime.iso8601('2025-04-22T16:03:13.861Z'),
+    started_at: DateTime.iso8601('2025-04-23T20:19:40.107Z'),
     status: Models::Shared::ComputeDeploymentStatus::LIVE,
     trigger: Models::Shared::Trigger::API,
-    updated_at: DateTime.iso8601('2026-03-16T23:16:51.591Z'),
-    url: 'https://comfortable-petal.name',
+    updated_at: DateTime.iso8601('2026-03-18T12:23:27.731Z'),
+    url: 'https://comfortable-petal.name'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.deployment.update_compute_deployment(request: req)
 
 unless res.compute_deployment.nil?

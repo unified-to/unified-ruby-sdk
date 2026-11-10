@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PlmChangeStatus < T::Enum
-
-
+      class PlmChangeStatus
+        include ::Crystalline::Enum
         enums do
           OPEN = new('OPEN')
           IN_REVIEW = new('IN_REVIEW')
@@ -20,6 +18,7 @@ module UnifiedRubySDK
           REJECTED = new('REJECTED')
           CANCELLED = new('CANCELLED')
         end
+        open!
       end
     end
   end

@@ -1,5 +1,4 @@
 # Metadata
-(*metadata*)
 
 ## Overview
 
@@ -18,21 +17,20 @@ Creates a MetadataMetadata. Provide the unified MetadataMetadata fields in the r
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createMetadataMetadata" method="post" path="/metadata/{connection_id}/metadata" -->
+<!-- UsageSnippet language="ruby" operationID="createMetadataMetadata" method="post" path="/metadata/{connection_id}/metadata" example="metadata_metadata" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.metadata.create_metadata_metadata(metadata_metadata: Models::Shared::MetadataMetadata.new(
   created_at: DateTime.iso8601('2021-03-25T03:02:17.656Z'),
   format: Models::Shared::MetadataMetadataFormat::PRICE,
-  id: '50cbbdc5-2979-46e4-b540-3d9f1e11707f',
+  id: '5fb951ed-bcfe-4ea3-98ea-b24661d16442',
   is_required: false,
   name: 'autem',
   object_type: 'compute_deployment',
@@ -42,7 +40,7 @@ res = s.metadata.create_metadata_metadata(metadata_metadata: Models::Shared::Met
   options: [],
   original_format: 'advoco',
   slug: 'arbustum',
-  updated_at: DateTime.iso8601('2025-04-04T13:49:28.348Z'),
+  updated_at: DateTime.iso8601('2025-04-05T20:57:59.568Z')
 ), connection_id: '<id>')
 
 unless res.metadata_metadata.nil?
@@ -82,11 +80,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.metadata.get_metadata_metadata(connection_id: '<id>', id: '<id>')
 
 unless res.metadata_metadata.nil?
@@ -126,15 +123,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListMetadataMetadatasRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListMetadataMetadatasRequest.new(
+  connection_id: '<id>'
+)
 res = s.metadata.list_metadata_metadatas(request: req)
 
 unless res.metadata_metadatas.nil?
@@ -165,22 +161,22 @@ Updates the MetadataMetadata identified by `id`. Provide the unified MetadataMet
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchMetadataMetadata" method="patch" path="/metadata/{connection_id}/metadata/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchMetadataMetadata" method="patch" path="/metadata/{connection_id}/metadata/{id}" example="metadata_metadata" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchMetadataMetadataRequest.new(
   metadata_metadata: Models::Shared::MetadataMetadata.new(
     created_at: DateTime.iso8601('2021-03-25T03:02:17.656Z'),
     format: Models::Shared::MetadataMetadataFormat::PRICE,
-    id: '18ea3942-9763-467c-867c-369d9c76cc82',
+    id: '5c8974a9-b7a2-4400-99a3-77b57893339a',
     is_required: false,
     name: 'autem',
     object_type: 'compute_deployment',
@@ -190,12 +186,11 @@ req = Models::Operations::PatchMetadataMetadataRequest.new(
     options: [],
     original_format: 'advoco',
     slug: 'arbustum',
-    updated_at: DateTime.iso8601('2025-04-04T13:49:28.353Z'),
+    updated_at: DateTime.iso8601('2025-04-05T20:57:59.577Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.metadata.patch_metadata_metadata(request: req)
 
 unless res.metadata_metadata.nil?
@@ -232,11 +227,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.metadata.remove_metadata_metadata(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -268,22 +262,22 @@ Updates the MetadataMetadata identified by `id`. Provide the unified MetadataMet
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateMetadataMetadata" method="put" path="/metadata/{connection_id}/metadata/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateMetadataMetadata" method="put" path="/metadata/{connection_id}/metadata/{id}" example="metadata_metadata" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateMetadataMetadataRequest.new(
   metadata_metadata: Models::Shared::MetadataMetadata.new(
     created_at: DateTime.iso8601('2021-03-25T03:02:17.656Z'),
     format: Models::Shared::MetadataMetadataFormat::PRICE,
-    id: '18ea3942-9763-467c-867c-369d9c76cc82',
+    id: '5c8974a9-b7a2-4400-99a3-77b57893339a',
     is_required: false,
     name: 'autem',
     object_type: 'compute_deployment',
@@ -293,12 +287,11 @@ req = Models::Operations::UpdateMetadataMetadataRequest.new(
     options: [],
     original_format: 'advoco',
     slug: 'arbustum',
-    updated_at: DateTime.iso8601('2025-04-04T13:49:28.353Z'),
+    updated_at: DateTime.iso8601('2025-04-05T20:57:59.577Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.metadata.update_metadata_metadata(request: req)
 
 unless res.metadata_metadata.nil?

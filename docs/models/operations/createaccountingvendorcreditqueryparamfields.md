@@ -1,5 +1,13 @@
 # CreateAccountingVendorcreditQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreateAccountingVendorcreditQueryParamFields::ID
+```
+
 
 ## Values
 

@@ -1,5 +1,4 @@
 # Envvar
-(*envvar*)
 
 ## Overview
 
@@ -18,27 +17,26 @@ Creates a ComputeEnvvar. Provide the unified ComputeEnvvar fields in the request
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createComputeEnvvar" method="post" path="/compute/{connection_id}/envvar" -->
+<!-- UsageSnippet language="ruby" operationID="createComputeEnvvar" method="post" path="/compute/{connection_id}/envvar" example="compute_envvar" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.envvar.create_compute_envvar(compute_envvar: Models::Shared::ComputeEnvvar.new(
   created_at: DateTime.iso8601('2021-08-16T07:52:27.306Z'),
   environments: [
     Models::Shared::PropertyComputeEnvvarEnvironments::PREVIEW,
   ],
-  id: 'dddcc309-eb19-42f4-9eb3-29461eee831d',
+  id: 'f2e9c685-da36-4edb-a953-ae5da34b7c8b',
   is_secret: true,
   metadata: [],
   name: 'AEGER_SUBSTANTIA',
-  updated_at: DateTime.iso8601('2025-07-17T20:06:57.685Z'),
+  updated_at: DateTime.iso8601('2025-07-19T04:41:57.085Z')
 ), connection_id: '<id>')
 
 unless res.compute_envvar.nil?
@@ -78,11 +76,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.envvar.get_compute_envvar(connection_id: '<id>', id: '<id>')
 
 unless res.compute_envvar.nil?
@@ -122,15 +119,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListComputeEnvvarsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListComputeEnvvarsRequest.new(
+  connection_id: '<id>'
+)
 res = s.envvar.list_compute_envvars(request: req)
 
 unless res.compute_envvars.nil?
@@ -161,16 +157,16 @@ Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchComputeEnvvar" method="patch" path="/compute/{connection_id}/envvar/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchComputeEnvvar" method="patch" path="/compute/{connection_id}/envvar/{id}" example="compute_envvar" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchComputeEnvvarRequest.new(
   compute_envvar: Models::Shared::ComputeEnvvar.new(
@@ -178,16 +174,15 @@ req = Models::Operations::PatchComputeEnvvarRequest.new(
     environments: [
       Models::Shared::PropertyComputeEnvvarEnvironments::PREVIEW,
     ],
-    id: 'd1ea2a28-1ca7-4383-846a-f73ae3db9451',
+    id: 'b24abafe-5bf0-4cde-92be-54fa90861dd0',
     is_secret: true,
     metadata: [],
     name: 'AEGER_SUBSTANTIA',
-    updated_at: DateTime.iso8601('2025-07-17T20:06:57.699Z'),
+    updated_at: DateTime.iso8601('2025-07-19T04:41:57.091Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.envvar.patch_compute_envvar(request: req)
 
 unless res.compute_envvar.nil?
@@ -224,11 +219,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.envvar.remove_compute_envvar(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -260,16 +254,16 @@ Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateComputeEnvvar" method="put" path="/compute/{connection_id}/envvar/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateComputeEnvvar" method="put" path="/compute/{connection_id}/envvar/{id}" example="compute_envvar" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateComputeEnvvarRequest.new(
   compute_envvar: Models::Shared::ComputeEnvvar.new(
@@ -277,16 +271,15 @@ req = Models::Operations::UpdateComputeEnvvarRequest.new(
     environments: [
       Models::Shared::PropertyComputeEnvvarEnvironments::PREVIEW,
     ],
-    id: 'd1ea2a28-1ca7-4383-846a-f73ae3db9451',
+    id: 'b24abafe-5bf0-4cde-92be-54fa90861dd0',
     is_secret: true,
     metadata: [],
     name: 'AEGER_SUBSTANTIA',
-    updated_at: DateTime.iso8601('2025-07-17T20:06:57.699Z'),
+    updated_at: DateTime.iso8601('2025-07-19T04:41:57.091Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.envvar.update_compute_envvar(request: req)
 
 unless res.compute_envvar.nil?

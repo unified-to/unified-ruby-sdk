@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class PlmMetadataSchemas1
         extend T::Sig

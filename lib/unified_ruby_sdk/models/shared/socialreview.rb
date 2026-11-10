@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class SocialReview
         extend T::Sig
@@ -22,7 +21,7 @@ module UnifiedRubySDK
         # The review text
         field :content, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content') } }
         # When the review was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Unique identifier for the review
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
@@ -32,17 +31,17 @@ module UnifiedRubySDK
         # Star rating, typically 1-5
         field :rating, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rating') } }
         # Raw data from integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # The business's reply to the review
         field :reply, Crystalline::Nilable.new(Models::Shared::PropertySocialReviewReply), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reply') } }
         # Optional review title/headline
         field :title, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
         # When the review was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Public permalink to the review
         field :url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
 
-        sig { params(author_avatar_url: T.nilable(::String), author_location: T.nilable(::String), author_name: T.nilable(::String), content: T.nilable(::String), created_at: T.nilable(::DateTime), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::SocialMetadata]), profile_id: T.nilable(::String), rating: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), reply: T.nilable(Models::Shared::PropertySocialReviewReply), title: T.nilable(::String), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
+        sig { params(author_avatar_url: T.nilable(::String), author_location: T.nilable(::String), author_name: T.nilable(::String), content: T.nilable(::String), created_at: T.nilable(::DateTime), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::SocialMetadata]), profile_id: T.nilable(::String), rating: T.nilable(::Float), raw: T.nilable(T::Hash[::Symbol, ::Object]), reply: T.nilable(Models::Shared::PropertySocialReviewReply), title: T.nilable(::String), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
         def initialize(author_avatar_url: nil, author_location: nil, author_name: nil, content: nil, created_at: nil, id: nil, metadata: nil, profile_id: nil, rating: nil, raw: nil, reply: nil, title: nil, updated_at: nil, url: nil)
           @author_avatar_url = author_avatar_url
           @author_location = author_location

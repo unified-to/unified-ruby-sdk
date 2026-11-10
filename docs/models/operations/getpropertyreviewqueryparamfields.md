@@ -1,5 +1,13 @@
 # GetPropertyReviewQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetPropertyReviewQueryParamFields::ID
+```
+
 
 ## Values
 

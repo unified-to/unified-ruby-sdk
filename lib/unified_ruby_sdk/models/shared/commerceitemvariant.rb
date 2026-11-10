@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class CommerceItemvariant
         extend T::Sig
         include Crystalline::MetadataFields
 
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :available_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('available_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :available_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('available_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
@@ -50,11 +49,11 @@ module UnifiedRubySDK
 
         field :public_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('public_name') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :requires_shipping, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('requires_shipping') } }
 
-        field :size_unit, Crystalline::Nilable.new(Models::Shared::SizeUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size_unit'), 'decoder': Utils.enum_from_string(Models::Shared::SizeUnit, true) } }
+        field :size_unit, Crystalline::Nilable.new(Models::Shared::SizeUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size_unit'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::SizeUnit, true) } }
         # barcode, UPC, isbn, etc
         field :sku, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sku') } }
 
@@ -62,15 +61,15 @@ module UnifiedRubySDK
 
         field :total_stock, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_stock') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :weight, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('weight') } }
 
-        field :weight_unit, Crystalline::Nilable.new(Models::Shared::CommerceItemvariantWeightUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('weight_unit'), 'decoder': Utils.enum_from_string(Models::Shared::CommerceItemvariantWeightUnit, true) } }
+        field :weight_unit, Crystalline::Nilable.new(Models::Shared::CommerceItemvariantWeightUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('weight_unit'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::CommerceItemvariantWeightUnit, true) } }
 
         field :width, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('width') } }
 
-        sig { params(available_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), description: T.nilable(::String), height: T.nilable(::Float), id: T.nilable(::String), inventory_id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_featured: T.nilable(T::Boolean), is_visible: T.nilable(T::Boolean), items: T.nilable(T::Array[Models::Shared::CommerceReference]), length: T.nilable(::Float), media: T.nilable(T::Array[Models::Shared::CommerceItemMedia]), metadata: T.nilable(T::Array[Models::Shared::CommerceMetadata]), name: T.nilable(::String), options: T.nilable(T::Array[Models::Shared::CommerceItemOption]), prices: T.nilable(T::Array[Models::Shared::CommerceItemPrice]), public_description: T.nilable(::String), public_name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), requires_shipping: T.nilable(T::Boolean), size_unit: T.nilable(Models::Shared::SizeUnit), sku: T.nilable(::String), tags: T.nilable(T::Array[::String]), total_stock: T.nilable(::Float), updated_at: T.nilable(::DateTime), weight: T.nilable(::Float), weight_unit: T.nilable(Models::Shared::CommerceItemvariantWeightUnit), width: T.nilable(::Float)).void }
+        sig { params(available_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), description: T.nilable(::String), height: T.nilable(::Float), id: T.nilable(::String), inventory_id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_featured: T.nilable(T::Boolean), is_visible: T.nilable(T::Boolean), items: T.nilable(T::Array[Models::Shared::CommerceReference]), length: T.nilable(::Float), media: T.nilable(T::Array[Models::Shared::CommerceItemMedia]), metadata: T.nilable(T::Array[Models::Shared::CommerceMetadata]), name: T.nilable(::String), options: T.nilable(T::Array[Models::Shared::CommerceItemOption]), prices: T.nilable(T::Array[Models::Shared::CommerceItemPrice]), public_description: T.nilable(::String), public_name: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), requires_shipping: T.nilable(T::Boolean), size_unit: T.nilable(Models::Shared::SizeUnit), sku: T.nilable(::String), tags: T.nilable(T::Array[::String]), total_stock: T.nilable(::Float), updated_at: T.nilable(::DateTime), weight: T.nilable(::Float), weight_unit: T.nilable(Models::Shared::CommerceItemvariantWeightUnit), width: T.nilable(::Float)).void }
         def initialize(available_at: nil, created_at: nil, description: nil, height: nil, id: nil, inventory_id: nil, is_active: nil, is_featured: nil, is_visible: nil, items: nil, length: nil, media: nil, metadata: nil, name: nil, options: nil, prices: nil, public_description: nil, public_name: nil, raw: nil, requires_shipping: nil, size_unit: nil, sku: nil, tags: nil, total_stock: nil, updated_at: nil, weight: nil, weight_unit: nil, width: nil)
           @available_at = available_at
           @created_at = created_at

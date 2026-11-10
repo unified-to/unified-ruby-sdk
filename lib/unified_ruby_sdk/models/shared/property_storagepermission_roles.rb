@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PropertyStoragePermissionRoles < T::Enum
-
-
+      class PropertyStoragePermissionRoles
+        include ::Crystalline::Enum
         enums do
           OWNER = new('OWNER')
           READ = new('READ')
           WRITE = new('WRITE')
         end
+        open!
       end
     end
   end

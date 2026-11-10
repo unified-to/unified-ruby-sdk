@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class CommerceItem
         extend T::Sig
@@ -18,7 +17,7 @@ module UnifiedRubySDK
         # points to Collection with id, name, and type fields
         field :collections, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CommerceReference)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('collections') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
         # minutes
@@ -52,7 +51,7 @@ module UnifiedRubySDK
 
         field :public_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('public_name') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :requires_shipping, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('requires_shipping') } }
 
@@ -66,15 +65,15 @@ module UnifiedRubySDK
         # product, service, digital-download, ...
         field :type, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :vendor_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('vendor_name') } }
 
         field :weight, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('weight') } }
 
-        field :weight_unit, Crystalline::Nilable.new(Models::Shared::WeightUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('weight_unit'), 'decoder': Utils.enum_from_string(Models::Shared::WeightUnit, true) } }
+        field :weight_unit, Crystalline::Nilable.new(Models::Shared::WeightUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('weight_unit'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::WeightUnit, true) } }
 
-        sig { params(account_id: T.nilable(::String), collections: T.nilable(T::Array[Models::Shared::CommerceReference]), created_at: T.nilable(::DateTime), description: T.nilable(::String), duration: T.nilable(::Float), global_code: T.nilable(::String), id: T.nilable(::String), inventory_id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_featured: T.nilable(T::Boolean), is_taxable: T.nilable(T::Boolean), is_visible: T.nilable(T::Boolean), location_id: T.nilable(::String), media: T.nilable(T::Array[Models::Shared::CommerceItemMedia]), metadata: T.nilable(T::Array[Models::Shared::CommerceMetadata]), name: T.nilable(::String), prices: T.nilable(T::Array[Models::Shared::CommerceItemPrice]), public_description: T.nilable(::String), public_name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), requires_shipping: T.nilable(T::Boolean), slug: T.nilable(::String), tags: T.nilable(T::Array[::String]), taxrate_id: T.nilable(::String), total_stock: T.nilable(::Float), type: T.nilable(::String), updated_at: T.nilable(::DateTime), vendor_name: T.nilable(::String), weight: T.nilable(::Float), weight_unit: T.nilable(Models::Shared::WeightUnit)).void }
+        sig { params(account_id: T.nilable(::String), collections: T.nilable(T::Array[Models::Shared::CommerceReference]), created_at: T.nilable(::DateTime), description: T.nilable(::String), duration: T.nilable(::Float), global_code: T.nilable(::String), id: T.nilable(::String), inventory_id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_featured: T.nilable(T::Boolean), is_taxable: T.nilable(T::Boolean), is_visible: T.nilable(T::Boolean), location_id: T.nilable(::String), media: T.nilable(T::Array[Models::Shared::CommerceItemMedia]), metadata: T.nilable(T::Array[Models::Shared::CommerceMetadata]), name: T.nilable(::String), prices: T.nilable(T::Array[Models::Shared::CommerceItemPrice]), public_description: T.nilable(::String), public_name: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), requires_shipping: T.nilable(T::Boolean), slug: T.nilable(::String), tags: T.nilable(T::Array[::String]), taxrate_id: T.nilable(::String), total_stock: T.nilable(::Float), type: T.nilable(::String), updated_at: T.nilable(::DateTime), vendor_name: T.nilable(::String), weight: T.nilable(::Float), weight_unit: T.nilable(Models::Shared::WeightUnit)).void }
         def initialize(account_id: nil, collections: nil, created_at: nil, description: nil, duration: nil, global_code: nil, id: nil, inventory_id: nil, is_active: nil, is_featured: nil, is_taxable: nil, is_visible: nil, location_id: nil, media: nil, metadata: nil, name: nil, prices: nil, public_description: nil, public_name: nil, raw: nil, requires_shipping: nil, slug: nil, tags: nil, taxrate_id: nil, total_stock: nil, type: nil, updated_at: nil, vendor_name: nil, weight: nil, weight_unit: nil)
           @account_id = account_id
           @collections = collections

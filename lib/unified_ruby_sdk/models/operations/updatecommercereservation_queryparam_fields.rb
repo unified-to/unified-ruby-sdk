@@ -7,11 +7,8 @@
 module UnifiedRubySDK
   module Models
     module Operations
-    
 
       class UpdateCommerceReservationQueryParamFields < T::Enum
-
-
         enums do
           ID = new('id')
           LOCATION_ID = new('location_id')

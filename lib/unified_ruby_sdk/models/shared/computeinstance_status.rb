@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # ComputeInstanceStatus - Normalized lifecycle status; set on update to start, stop, pause, resume, restart or terminate
-      class ComputeInstanceStatus < T::Enum
-
-
+      class ComputeInstanceStatus
+        include ::Crystalline::Enum
         enums do
           PROVISIONING = new('PROVISIONING')
           STARTING = new('STARTING')
@@ -28,6 +26,7 @@ module UnifiedRubySDK
           ERROR = new('ERROR')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

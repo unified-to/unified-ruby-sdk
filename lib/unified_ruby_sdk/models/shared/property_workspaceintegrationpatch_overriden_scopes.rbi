@@ -816,6 +816,10 @@ class UnifiedRubySDK::Models::Shared::PropertyWorkspaceIntegrationPatchOverriden
   def signing_template_read=(str_); end
   def signing_template_write(); end
   def signing_template_write=(str_); end
+  def social_comment_read(); end
+  def social_comment_read=(str_); end
+  def social_comment_write(); end
+  def social_comment_write=(str_); end
   def social_insight_read(); end
   def social_insight_read=(str_); end
   def social_insight_write(); end

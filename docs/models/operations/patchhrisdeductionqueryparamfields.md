@@ -1,5 +1,13 @@
 # PatchHrisDeductionQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PatchHrisDeductionQueryParamFields::ID
+```
+
 
 ## Values
 

@@ -1,5 +1,16 @@
 # PropertyAdsReportMetricsCreativeCreativeType
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PropertyAdsReportMetricsCreativeCreativeType::UNSPECIFIED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = PropertyAdsReportMetricsCreativeCreativeType.deserialize("custom_value")
+```
+
 
 ## Values
 

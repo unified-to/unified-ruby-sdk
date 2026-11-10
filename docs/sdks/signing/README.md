@@ -1,5 +1,4 @@
 # Signing
-(*signing*)
 
 ## Overview
 
@@ -26,27 +25,26 @@ Creates a SigningDocument. Provide the unified SigningDocument fields in the req
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createSigningDocument" method="post" path="/signing/{connection_id}/document" -->
+<!-- UsageSnippet language="ruby" operationID="createSigningDocument" method="post" path="/signing/{connection_id}/document" example="signing_document" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.signing.create_signing_document(signing_document: Models::Shared::SigningDocument.new(
   created_at: DateTime.iso8601('2021-05-02T09:35:23.679Z'),
   description: 'Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.',
   expires_at: DateTime.iso8601('2021-06-04T01:21:34.949Z'),
-  id: '8139f991-c0ed-4b24-a094-6dd8f403fa7c',
+  id: '1aa8dddd-c17c-4a48-9204-08601c4347fa',
   metadata: [],
   name: 'Denesik Group NDA',
-  sent_at: DateTime.iso8601('2022-07-03T12:42:46.557Z'),
+  sent_at: DateTime.iso8601('2022-07-03T21:55:27.647Z'),
   status: Models::Shared::SigningDocumentStatus::DRAFT,
-  updated_at: DateTime.iso8601('2025-09-18T00:17:58.073Z'),
+  updated_at: DateTime.iso8601('2025-09-19T10:47:47.177Z')
 ), connection_id: '<id>')
 
 unless res.signing_document.nil?
@@ -80,26 +78,25 @@ Creates a SigningSignatory. Provide the unified SigningSignatory fields in the r
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createSigningSignatory" method="post" path="/signing/{connection_id}/signatory" -->
+<!-- UsageSnippet language="ruby" operationID="createSigningSignatory" method="post" path="/signing/{connection_id}/signatory" example="signing_signatory" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.signing.create_signing_signatory(signing_signatory: Models::Shared::SigningSignatory.new(
   created_at: DateTime.iso8601('2022-04-16T19:25:01.966Z'),
   email: 'anais.lakin@icloud.com',
-  id: '90ae5e46-f2aa-4b95-ab71-7466cf4492a7',
+  id: '65c3cdb1-cf1c-40bb-a9a0-3ae256dc49b1',
   metadata: [],
   name: 'Anais Lakin',
   role: Models::Shared::SigningSignatoryRole::SIGNER,
   status: Models::Shared::SigningSignatoryStatus::ERROR,
-  updated_at: DateTime.iso8601('2024-05-26T14:51:18.529Z'),
+  updated_at: DateTime.iso8601('2024-05-27T10:57:43.895Z')
 ), connection_id: '<id>')
 
 unless res.signing_signatory.nil?
@@ -139,11 +136,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.signing.get_signing_document(connection_id: '<id>', id: '<id>')
 
 unless res.signing_document.nil?
@@ -183,11 +179,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.signing.get_signing_signatory(connection_id: '<id>', id: '<id>')
 
 unless res.signing_signatory.nil?
@@ -227,11 +222,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.signing.get_signing_template(connection_id: '<id>', id: '<id>')
 
 unless res.signing_template.nil?
@@ -271,15 +265,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListSigningDocumentsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListSigningDocumentsRequest.new(
+  connection_id: '<id>'
+)
 res = s.signing.list_signing_documents(request: req)
 
 unless res.signing_documents.nil?
@@ -316,15 +309,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListSigningSignatoriesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListSigningSignatoriesRequest.new(
+  connection_id: '<id>'
+)
 res = s.signing.list_signing_signatories(request: req)
 
 unless res.signing_signatories.nil?
@@ -361,15 +353,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListSigningTemplatesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListSigningTemplatesRequest.new(
+  connection_id: '<id>'
+)
 res = s.signing.list_signing_templates(request: req)
 
 unless res.signing_templates.nil?
@@ -400,33 +391,32 @@ Updates the SigningDocument identified by `id`. Provide the unified SigningDocum
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchSigningDocument" method="patch" path="/signing/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchSigningDocument" method="patch" path="/signing/{connection_id}/document/{id}" example="signing_document" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchSigningDocumentRequest.new(
   signing_document: Models::Shared::SigningDocument.new(
     created_at: DateTime.iso8601('2021-05-02T09:35:23.679Z'),
     description: 'Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.',
     expires_at: DateTime.iso8601('2021-06-04T01:21:34.949Z'),
-    id: '628b855a-b226-4914-8916-326a56986f97',
+    id: '5211d39e-dc1c-4eff-8dfb-5ee729739039',
     metadata: [],
     name: 'Denesik Group NDA',
-    sent_at: DateTime.iso8601('2022-07-03T12:42:46.559Z'),
+    sent_at: DateTime.iso8601('2022-07-03T21:55:27.649Z'),
     status: Models::Shared::SigningDocumentStatus::DRAFT,
-    updated_at: DateTime.iso8601('2025-09-18T00:17:58.081Z'),
+    updated_at: DateTime.iso8601('2025-09-19T10:47:47.186Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.signing.patch_signing_document(request: req)
 
 unless res.signing_document.nil?
@@ -457,32 +447,31 @@ Updates the SigningSignatory identified by `id`. Provide the unified SigningSign
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchSigningSignatory" method="patch" path="/signing/{connection_id}/signatory/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchSigningSignatory" method="patch" path="/signing/{connection_id}/signatory/{id}" example="signing_signatory" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchSigningSignatoryRequest.new(
   signing_signatory: Models::Shared::SigningSignatory.new(
     created_at: DateTime.iso8601('2022-04-16T19:25:01.966Z'),
     email: 'anais.lakin@icloud.com',
-    id: '03761671-111a-4310-a952-0c603e7be043',
+    id: 'f9907638-a18e-475d-8440-5187b8c76227',
     metadata: [],
     name: 'Anais Lakin',
     role: Models::Shared::SigningSignatoryRole::SIGNER,
     status: Models::Shared::SigningSignatoryStatus::ERROR,
-    updated_at: DateTime.iso8601('2024-05-26T14:51:18.533Z'),
+    updated_at: DateTime.iso8601('2024-05-27T10:57:43.900Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.signing.patch_signing_signatory(request: req)
 
 unless res.signing_signatory.nil?
@@ -519,11 +508,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.signing.remove_signing_document(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -561,11 +549,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.signing.remove_signing_signatory(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -597,33 +584,32 @@ Updates the SigningDocument identified by `id`. Provide the unified SigningDocum
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateSigningDocument" method="put" path="/signing/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateSigningDocument" method="put" path="/signing/{connection_id}/document/{id}" example="signing_document" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateSigningDocumentRequest.new(
   signing_document: Models::Shared::SigningDocument.new(
     created_at: DateTime.iso8601('2021-05-02T09:35:23.679Z'),
     description: 'Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.',
     expires_at: DateTime.iso8601('2021-06-04T01:21:34.949Z'),
-    id: '628b855a-b226-4914-8916-326a56986f97',
+    id: '5211d39e-dc1c-4eff-8dfb-5ee729739039',
     metadata: [],
     name: 'Denesik Group NDA',
-    sent_at: DateTime.iso8601('2022-07-03T12:42:46.559Z'),
+    sent_at: DateTime.iso8601('2022-07-03T21:55:27.649Z'),
     status: Models::Shared::SigningDocumentStatus::DRAFT,
-    updated_at: DateTime.iso8601('2025-09-18T00:17:58.081Z'),
+    updated_at: DateTime.iso8601('2025-09-19T10:47:47.186Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.signing.update_signing_document(request: req)
 
 unless res.signing_document.nil?
@@ -654,32 +640,31 @@ Updates the SigningSignatory identified by `id`. Provide the unified SigningSign
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateSigningSignatory" method="put" path="/signing/{connection_id}/signatory/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateSigningSignatory" method="put" path="/signing/{connection_id}/signatory/{id}" example="signing_signatory" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateSigningSignatoryRequest.new(
   signing_signatory: Models::Shared::SigningSignatory.new(
     created_at: DateTime.iso8601('2022-04-16T19:25:01.966Z'),
     email: 'anais.lakin@icloud.com',
-    id: '03761671-111a-4310-a952-0c603e7be043',
+    id: 'f9907638-a18e-475d-8440-5187b8c76227',
     metadata: [],
     name: 'Anais Lakin',
     role: Models::Shared::SigningSignatoryRole::SIGNER,
     status: Models::Shared::SigningSignatoryStatus::ERROR,
-    updated_at: DateTime.iso8601('2024-05-26T14:51:18.533Z'),
+    updated_at: DateTime.iso8601('2024-05-27T10:57:43.900Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.signing.update_signing_signatory(request: req)
 
 unless res.signing_signatory.nil?

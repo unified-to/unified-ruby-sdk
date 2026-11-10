@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class ScimGroupMember
         extend T::Sig
@@ -20,9 +19,9 @@ module UnifiedRubySDK
         # user name
         field :display, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('display') } }
         # ONLY USED ON UPDATES
-        field :operation, Crystalline::Nilable.new(Models::Shared::Operation), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('operation'), 'decoder': Utils.enum_from_string(Models::Shared::Operation, true) } }
+        field :operation, Crystalline::Nilable.new(Models::Shared::Operation), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('operation'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::Operation, true) } }
         # NOT STANDARD
-        field :type, Crystalline::Nilable.new(Models::Shared::ScimGroupMemberType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::ScimGroupMemberType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::ScimGroupMemberType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::ScimGroupMemberType, true) } }
 
         sig { params(value: ::String, dollar_ref: T.nilable(::String), display: T.nilable(::String), operation: T.nilable(Models::Shared::Operation), type: T.nilable(Models::Shared::ScimGroupMemberType)).void }
         def initialize(value:, dollar_ref: nil, display: nil, operation: nil, type: nil)

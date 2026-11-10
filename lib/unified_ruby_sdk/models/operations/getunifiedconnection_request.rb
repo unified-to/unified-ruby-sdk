@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Operations
-    
 
       class GetUnifiedConnectionRequest
         extend T::Sig
@@ -15,16 +14,20 @@ module UnifiedRubySDK
 
         # ID of the Connection
         field :id, ::String, { 'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': false } }
+        # Fields to return. Leave out auth to get connection metadata without credentials
+        field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(Models::Operations::GetUnifiedConnectionQueryParamFields)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
-        sig { params(id: ::String).void }
-        def initialize(id:)
+        sig { params(id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetUnifiedConnectionQueryParamFields])).void }
+        def initialize(id:, fields_: nil)
           @id = id
+          @fields_ = fields_
         end
 
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @id == other.id
+          return false unless @fields_ == other.fields_
           true
         end
       end

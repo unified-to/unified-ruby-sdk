@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # PlmDocumentStatus - Normalized lifecycle status of a part or document revision
-      class PlmDocumentStatus < T::Enum
-
-
+      class PlmDocumentStatus
+        include ::Crystalline::Enum
         enums do
           IN_WORK = new('IN_WORK')
           IN_REVIEW = new('IN_REVIEW')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           OBSOLETE = new('OBSOLETE')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

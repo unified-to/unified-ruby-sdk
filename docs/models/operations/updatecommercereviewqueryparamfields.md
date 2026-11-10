@@ -1,5 +1,13 @@
 # UpdateCommerceReviewQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = UpdateCommerceReviewQueryParamFields::ID
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # PatchPaymentLinkQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PatchPaymentLinkQueryParamFields::ID
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # GetMartechListQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetMartechListQueryParamFields::ID
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # GetRepoRepositoryQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetRepoRepositoryQueryParamFields::ID
+```
+
 
 ## Values
 

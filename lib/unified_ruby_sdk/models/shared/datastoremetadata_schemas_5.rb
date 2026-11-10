@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class DatastoreMetadataSchemas5
         extend T::Sig

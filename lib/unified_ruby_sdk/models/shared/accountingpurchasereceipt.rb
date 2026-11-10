@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class AccountingPurchasereceipt
         extend T::Sig
@@ -18,7 +17,7 @@ module UnifiedRubySDK
         # supplier (reference to AccountingContact)
         field :contact_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_id') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
@@ -32,21 +31,21 @@ module UnifiedRubySDK
 
         field :organization_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization_id') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :posted_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('posted_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :posted_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('posted_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # header when single-PO
         field :purchaseorder_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('purchaseorder_id') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :receipt_number, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('receipt_number') } }
 
-        field :status, Crystalline::Nilable.new(Models::Shared::AccountingPurchasereceiptStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::AccountingPurchasereceiptStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::AccountingPurchasereceiptStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::AccountingPurchasereceiptStatus, true) } }
 
         field :total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(attachments: T.nilable(T::Array[Models::Shared::AccountingAttachment]), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingPurchasereceiptLineitem]), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), notes: T.nilable(::String), organization_id: T.nilable(::String), posted_at: T.nilable(::DateTime), purchaseorder_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), receipt_number: T.nilable(::String), status: T.nilable(Models::Shared::AccountingPurchasereceiptStatus), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
+        sig { params(attachments: T.nilable(T::Array[Models::Shared::AccountingAttachment]), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingPurchasereceiptLineitem]), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), notes: T.nilable(::String), organization_id: T.nilable(::String), posted_at: T.nilable(::DateTime), purchaseorder_id: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), receipt_number: T.nilable(::String), status: T.nilable(Models::Shared::AccountingPurchasereceiptStatus), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
         def initialize(attachments: nil, contact_id: nil, created_at: nil, currency: nil, id: nil, lineitems: nil, metadata: nil, notes: nil, organization_id: nil, posted_at: nil, purchaseorder_id: nil, raw: nil, receipt_number: nil, status: nil, total_amount: nil, updated_at: nil)
           @attachments = attachments
           @contact_id = contact_id

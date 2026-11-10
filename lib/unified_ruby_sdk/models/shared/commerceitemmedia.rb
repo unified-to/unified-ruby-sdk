@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class CommerceItemMedia
         extend T::Sig
@@ -26,7 +25,7 @@ module UnifiedRubySDK
         # 1 is the first
         field :position, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('position') } }
 
-        field :type, Crystalline::Nilable.new(Models::Shared::CommerceItemMediaType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::CommerceItemMediaType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::CommerceItemMediaType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::CommerceItemMediaType, true) } }
 
         field :width, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('width') } }
 

@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class CommerceReviewStatus < T::Enum
-
-
+      class CommerceReviewStatus
+        include ::Crystalline::Enum
         enums do
           PENDING = new('PENDING')
           APPROVED = new('APPROVED')
           REJECTED = new('REJECTED')
           SPAM = new('SPAM')
         end
+        open!
       end
     end
   end

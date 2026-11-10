@@ -409,6 +409,8 @@
 | `signing_signatory_write`              | *T.nilable(::String)*                  | :heavy_minus_sign:                     | N/A                                    |
 | `signing_template_read`                | *T.nilable(::String)*                  | :heavy_minus_sign:                     | N/A                                    |
 | `signing_template_write`               | *T.nilable(::String)*                  | :heavy_minus_sign:                     | N/A                                    |
+| `social_comment_read`                  | *T.nilable(::String)*                  | :heavy_minus_sign:                     | N/A                                    |
+| `social_comment_write`                 | *T.nilable(::String)*                  | :heavy_minus_sign:                     | N/A                                    |
 | `social_insight_read`                  | *T.nilable(::String)*                  | :heavy_minus_sign:                     | N/A                                    |
 | `social_insight_write`                 | *T.nilable(::String)*                  | :heavy_minus_sign:                     | N/A                                    |
 | `social_post_read`                     | *T.nilable(::String)*                  | :heavy_minus_sign:                     | N/A                                    |

@@ -1,5 +1,13 @@
 # CreateTicketingCategoryQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreateTicketingCategoryQueryParamFields::ID
+```
+
 
 ## Values
 

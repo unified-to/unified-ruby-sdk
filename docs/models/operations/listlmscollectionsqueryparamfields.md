@@ -1,5 +1,13 @@
 # ListLmsCollectionsQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListLmsCollectionsQueryParamFields::ID
+```
+
 
 ## Values
 

@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class GenaiEmbedding
         extend T::Sig
@@ -20,7 +19,7 @@ module UnifiedRubySDK
         # JSON string based off of the format
         field :embeddings, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('embeddings') } }
 
-        field :enconding_format, Crystalline::Nilable.new(Models::Shared::EncondingFormat), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('enconding_format'), 'decoder': Utils.enum_from_string(Models::Shared::EncondingFormat, true) } }
+        field :enconding_format, Crystalline::Nilable.new(Models::Shared::EncondingFormat), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('enconding_format'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::EncondingFormat, true) } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
@@ -28,13 +27,13 @@ module UnifiedRubySDK
 
         field :model_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('model_id') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :tokens_used, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tokens_used') } }
         # 'SEARCH_DOC' | 'SEARCH_QUERY' | 'CLUSTERING' | 'CLASSIFICATION';
         field :type, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
 
-        sig { params(content: T.nilable(T::Array[Models::Shared::GenaiEmbeddingContent]), dimension: T.nilable(::Float), embeddings: T.nilable(::String), enconding_format: T.nilable(Models::Shared::EncondingFormat), id: T.nilable(::String), max_tokens: T.nilable(::Float), model_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), tokens_used: T.nilable(::Float), type: T.nilable(::String)).void }
+        sig { params(content: T.nilable(T::Array[Models::Shared::GenaiEmbeddingContent]), dimension: T.nilable(::Float), embeddings: T.nilable(::String), enconding_format: T.nilable(Models::Shared::EncondingFormat), id: T.nilable(::String), max_tokens: T.nilable(::Float), model_id: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), tokens_used: T.nilable(::Float), type: T.nilable(::String)).void }
         def initialize(content: nil, dimension: nil, embeddings: nil, enconding_format: nil, id: nil, max_tokens: nil, model_id: nil, raw: nil, tokens_used: nil, type: nil)
           @content = content
           @dimension = dimension

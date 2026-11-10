@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class CrmEventFormField
         extend T::Sig
@@ -20,7 +19,7 @@ module UnifiedRubySDK
 
         field :required, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('required') } }
 
-        field :type, Crystalline::Nilable.new(Models::Shared::CrmEventFormFieldType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::CrmEventFormFieldType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::CrmEventFormFieldType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::CrmEventFormFieldType, true) } }
 
         sig { params(name: T.nilable(::String), options: T.nilable(T::Array[Models::Shared::CrmEventFormOption]), required: T.nilable(T::Boolean), type: T.nilable(Models::Shared::CrmEventFormFieldType)).void }
         def initialize(name: nil, options: nil, required: nil, type: nil)

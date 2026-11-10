@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class HrisTimeoffStatus < T::Enum
-
-
+      class HrisTimeoffStatus
+        include ::Crystalline::Enum
         enums do
           APPROVED = new('APPROVED')
           PENDING = new('PENDING')
           DENIED = new('DENIED')
           CANCELLED = new('CANCELLED')
         end
+        open!
       end
     end
   end

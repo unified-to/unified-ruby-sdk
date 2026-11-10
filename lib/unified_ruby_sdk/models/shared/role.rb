@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class Role < T::Enum
-
-
+      class Role
+        include ::Crystalline::Enum
         enums do
           SYSTEM = new('SYSTEM')
           USER = new('USER')
           ASSISTANT = new('ASSISTANT')
         end
+        open!
       end
     end
   end

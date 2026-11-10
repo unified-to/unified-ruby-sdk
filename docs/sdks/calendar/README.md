@@ -1,5 +1,4 @@
 # Calendar
-(*calendar*)
 
 ## Overview
 
@@ -55,12 +54,11 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-res = s.calendar.create_calendar_bot(calendar_bot: Models::Shared::CalendarBot.new(), connection_id: '<id>')
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.calendar.create_calendar_bot(calendar_bot: Models::Shared::CalendarBot.new, connection_id: '<id>')
 
 unless res.calendar_bot.nil?
   # handle response
@@ -93,26 +91,25 @@ Creates a CalendarCalendar. Provide the unified CalendarCalendar fields in the r
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCalendarCalendar" method="post" path="/calendar/{connection_id}/calendar" -->
+<!-- UsageSnippet language="ruby" operationID="createCalendarCalendar" method="post" path="/calendar/{connection_id}/calendar" example="calendar_calendar" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.calendar.create_calendar_calendar(calendar_calendar: Models::Shared::CalendarCalendar.new(
   created_at: DateTime.iso8601('2020-01-09T23:11:34.147Z'),
   description: 'Acer supra vallum suasoria thesaurus.',
-  id: '7cf85273-f811-48da-8a4a-0b2b1aba8912',
+  id: '8aedc444-827c-476b-8e27-0d10da3ef204',
   is_primary: false,
   metadata: [],
   name: 'Interviews',
   timezone: 'Asia/Kolkata',
-  updated_at: DateTime.iso8601('2023-04-06T03:34:15.717Z'),
+  updated_at: DateTime.iso8601('2023-04-07T00:10:37.653Z')
 ), connection_id: '<id>')
 
 unless res.calendar_calendar.nil?
@@ -146,24 +143,23 @@ Creates a CalendarEvent. Provide the unified CalendarEvent fields in the request
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCalendarEvent" method="post" path="/calendar/{connection_id}/event" -->
+<!-- UsageSnippet language="ruby" operationID="createCalendarEvent" method="post" path="/calendar/{connection_id}/event" example="calendar_event" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.calendar.create_calendar_event(calendar_event: Models::Shared::CalendarEvent.new(
   attachments: [],
   conference: [],
   created_at: '2019-08-04T14:33:51.814Z',
-  end_at: '2020-05-26T09:52:12.726Z',
+  end_at: '2020-05-26T14:43:06.646Z',
   has_conference: false,
-  id: '0fb5347f-22ff-4007-a87b-a6fea489996e',
+  id: '08ac3382-f75a-496b-9f4b-36fb2a0c3d63',
   is_all_day: false,
   is_free: false,
   is_private: false,
@@ -173,15 +169,15 @@ res = s.calendar.create_calendar_event(calendar_event: Models::Shared::CalendarE
   recurrence: [
     Models::Shared::CalendarEventRecurrence.new(
       count: 4.0,
-      end_at: DateTime.iso8601('2025-04-08T12:12:13.689Z'),
+      end_at: DateTime.iso8601('2025-04-09T22:11:44.126Z'),
       excluded_dates: [
-        '2024-02-14T15:16:19.844Z',
+        '2024-02-15T18:23:54.756Z',
       ],
       frequency: Models::Shared::CalendarEventRecurrenceFrequency::YEARLY,
       included_dates: [
-        '2023-07-17T09:29:43.808Z',
-        '2025-02-07T07:50:50.083Z',
-        '2024-04-14T06:27:00.158Z',
+        '2023-07-18T09:08:35.471Z',
+        '2025-02-08T16:51:09.513Z',
+        '2024-04-15T10:33:13.677Z',
       ],
       interval: 7.0,
       on_days: [
@@ -515,15 +511,15 @@ res = s.calendar.create_calendar_event(calendar_event: Models::Shared::CalendarE
         -254.0,
       ],
       timezone: 'Asia/Ho_Chi_Minh',
-      week_start: Models::Shared::WeekStart::TU,
+      week_start: Models::Shared::WeekStart::TU
     ),
   ],
-  start_at: '2020-05-26T00:34:35.853Z',
+  start_at: '2020-05-26T05:25:06.925Z',
   status: Models::Shared::CalendarEventStatus::CONFIRMED,
   subject: 'Sunt spargo tepidus bestia vigor credo coadunatio appello.',
   timezone: 'Asia/Bangkok',
-  updated_at: '2020-07-02T14:38:30.336Z',
-  web_url: 'https://another-pinstripe.com',
+  updated_at: '2020-07-02T20:05:59.171Z',
+  web_url: 'https://another-pinstripe.com'
 ), connection_id: '<id>')
 
 unless res.calendar_event.nil?
@@ -557,29 +553,28 @@ Creates a CalendarLink. Provide the unified CalendarLink fields in the request b
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCalendarLink" method="post" path="/calendar/{connection_id}/link" -->
+<!-- UsageSnippet language="ruby" operationID="createCalendarLink" method="post" path="/calendar/{connection_id}/link" example="calendar_link" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.calendar.create_calendar_link(calendar_link: Models::Shared::CalendarLink.new(
   created_at: '2023-03-07T13:34:11.959Z',
   description: 'Vitium clibanus laboriosam uxor denuncio.',
   duration: 74.0,
-  id: 'e79669ec-364f-4bf0-a5ca-ef9f9dc837f9',
+  id: '799ecddd-05a6-4bc8-8ec8-c176ef2a98e5',
   is_active: true,
   metadata: [],
   name: 'Sopor sopor ancilla animus anser dignissimos vito confero utilis.',
   price_amount: 44.0,
   price_currency: 'USD',
-  updated_at: '2024-03-20T21:55:46.575Z',
-  url: 'https://annual-apricot.info/',
+  updated_at: '2024-03-21T10:13:08.729Z',
+  url: 'https://annual-apricot.info/'
 ), connection_id: '<id>')
 
 unless res.calendar_link.nil?
@@ -613,24 +608,23 @@ Creates a CalendarWebinar. Provide the unified CalendarWebinar fields in the req
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCalendarWebinar" method="post" path="/calendar/{connection_id}/webinar" -->
+<!-- UsageSnippet language="ruby" operationID="createCalendarWebinar" method="post" path="/calendar/{connection_id}/webinar" example="calendar_webinar" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.calendar.create_calendar_webinar(calendar_webinar: Models::Shared::CalendarWebinar.new(
   conference: [],
   created_at: DateTime.iso8601('2022-07-06T11:45:14.631Z'),
-  end_at: DateTime.iso8601('2025-11-12T09:32:13.184Z'),
+  end_at: DateTime.iso8601('2025-11-13T19:06:52.280Z'),
   has_polls: false,
   has_recording: false,
-  id: 'e6336abe-1075-4cb6-9511-1d3b086cce33',
+  id: '6aae66a3-98f7-4194-89b5-1d332e9429a5',
   is_auto_approve: false,
   is_enabled: true,
   is_webcast: false,
@@ -640,13 +634,13 @@ res = s.calendar.create_calendar_webinar(calendar_webinar: Models::Shared::Calen
   recurrence: [
     Models::Shared::CalendarEventRecurrence.new(
       count: 10.0,
-      end_at: DateTime.iso8601('2023-09-05T17:21:17.045Z'),
+      end_at: DateTime.iso8601('2023-09-06T05:02:19.567Z'),
       excluded_dates: [
-        '2025-02-24T13:47:07.326Z',
+        '2025-02-25T16:12:47.300Z',
       ],
       frequency: Models::Shared::CalendarEventRecurrenceFrequency::MONTHLY,
       included_dates: [
-        '2024-05-06T07:22:11.012Z',
+        '2024-05-07T01:43:51.435Z',
       ],
       interval: 8.0,
       on_days: [
@@ -1033,20 +1027,20 @@ res = s.calendar.create_calendar_webinar(calendar_webinar: Models::Shared::Calen
         86.0,
       ],
       timezone: 'Africa/Abidjan',
-      week_start: Models::Shared::WeekStart::MO,
+      week_start: Models::Shared::WeekStart::MO
     ),
     Models::Shared::CalendarEventRecurrence.new(
       count: 3.0,
-      end_at: DateTime.iso8601('2022-10-01T17:18:27.486Z'),
+      end_at: DateTime.iso8601('2022-10-01T19:41:55.852Z'),
       excluded_dates: [
-        '2024-09-11T07:29:17.811Z',
-        '2024-08-26T13:59:55.708Z',
+        '2024-09-12T05:21:30.307Z',
+        '2024-08-27T11:26:16.026Z',
       ],
       frequency: Models::Shared::CalendarEventRecurrenceFrequency::DAILY,
       included_dates: [
-        '2024-04-01T18:51:33.643Z',
-        '2026-01-29T00:10:16.415Z',
-        '2023-08-19T03:52:11.218Z',
+        '2024-04-02T12:16:27.361Z',
+        '2026-01-30T11:52:34.373Z',
+        '2023-08-19T15:04:20.660Z',
       ],
       interval: 1.0,
       on_days: [
@@ -1186,20 +1180,20 @@ res = s.calendar.create_calendar_webinar(calendar_webinar: Models::Shared::Calen
         -295.0,
       ],
       timezone: 'Asia/Choibalsan',
-      week_start: Models::Shared::WeekStart::TU,
+      week_start: Models::Shared::WeekStart::TU
     ),
     Models::Shared::CalendarEventRecurrence.new(
       count: 8.0,
-      end_at: DateTime.iso8601('2026-08-13T11:48:12.804Z'),
+      end_at: DateTime.iso8601('2026-08-15T04:53:40.706Z'),
       excluded_dates: [
-        '2023-06-22T19:30:03.021Z',
-        '2023-06-11T17:09:05.264Z',
+        '2023-06-23T05:07:53.049Z',
+        '2023-06-12T02:28:40.104Z',
       ],
       frequency: Models::Shared::CalendarEventRecurrenceFrequency::WEEKLY,
       included_dates: [
-        '2024-04-09T22:04:11.325Z',
-        '2023-08-25T00:59:14.847Z',
-        '2024-10-06T19:36:12.352Z',
+        '2024-04-10T15:42:27.718Z',
+        '2023-08-25T12:21:04.542Z',
+        '2024-10-07T18:10:21.769Z',
       ],
       interval: 8.0,
       on_days: [
@@ -1346,18 +1340,18 @@ res = s.calendar.create_calendar_webinar(calendar_webinar: Models::Shared::Calen
         161.0,
       ],
       timezone: 'Asia/Krasnoyarsk',
-      week_start: Models::Shared::WeekStart::WE,
+      week_start: Models::Shared::WeekStart::WE
     ),
   ],
   registrant_password: 'W7J6DhkM',
   require_address: false,
   require_job_title: false,
-  start_at: DateTime.iso8601('2025-05-13T01:16:32.271Z'),
+  start_at: DateTime.iso8601('2025-05-14T05:49:38.179Z'),
   status: Models::Shared::CalendarWebinarStatus::TENTATIVE,
   subject: 'Harum culpa decipio ex cubo ancilla cresco.',
   timezone: 'Europe/Kaliningrad',
-  updated_at: DateTime.iso8601('2026-10-19T06:16:12.696Z'),
-  web_url: 'https://quiet-permafrost.name',
+  updated_at: DateTime.iso8601('2026-10-21T01:11:29.691Z'),
+  web_url: 'https://quiet-permafrost.name'
 ), connection_id: '<id>')
 
 unless res.calendar_webinar.nil?
@@ -1397,11 +1391,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.calendar.get_calendar_bot(connection_id: '<id>', id: '<id>')
 
 unless res.calendar_bot.nil?
@@ -1441,11 +1434,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.calendar.get_calendar_calendar(connection_id: '<id>', id: '<id>')
 
 unless res.calendar_calendar.nil?
@@ -1485,11 +1477,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.calendar.get_calendar_event(connection_id: '<id>', id: '<id>')
 
 unless res.calendar_event.nil?
@@ -1529,11 +1520,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.calendar.get_calendar_link(connection_id: '<id>', id: '<id>')
 
 unless res.calendar_link.nil?
@@ -1573,11 +1563,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.calendar.get_calendar_location(connection_id: '<id>', id: '<id>')
 
 unless res.calendar_location.nil?
@@ -1617,11 +1606,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.calendar.get_calendar_recording(connection_id: '<id>', id: '<id>')
 
 unless res.calendar_recording.nil?
@@ -1661,11 +1649,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.calendar.get_calendar_room(connection_id: '<id>', id: '<id>')
 
 unless res.calendar_room.nil?
@@ -1705,11 +1692,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.calendar.get_calendar_webinar(connection_id: '<id>', id: '<id>')
 
 unless res.calendar_webinar.nil?
@@ -1749,15 +1735,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCalendarBotsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCalendarBotsRequest.new(
+  connection_id: '<id>'
+)
 res = s.calendar.list_calendar_bots(request: req)
 
 unless res.calendar_bots.nil?
@@ -1794,15 +1779,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCalendarBusiesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCalendarBusiesRequest.new(
+  connection_id: '<id>'
+)
 res = s.calendar.list_calendar_busies(request: req)
 
 unless res.calendar_busies.nil?
@@ -1839,15 +1823,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCalendarCalendarsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCalendarCalendarsRequest.new(
+  connection_id: '<id>'
+)
 res = s.calendar.list_calendar_calendars(request: req)
 
 unless res.calendar_calendars.nil?
@@ -1884,15 +1867,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCalendarEventsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCalendarEventsRequest.new(
+  connection_id: '<id>'
+)
 res = s.calendar.list_calendar_events(request: req)
 
 unless res.calendar_events.nil?
@@ -1929,15 +1911,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCalendarLinksRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCalendarLinksRequest.new(
+  connection_id: '<id>'
+)
 res = s.calendar.list_calendar_links(request: req)
 
 unless res.calendar_links.nil?
@@ -1974,15 +1955,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCalendarLocationsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCalendarLocationsRequest.new(
+  connection_id: '<id>'
+)
 res = s.calendar.list_calendar_locations(request: req)
 
 unless res.calendar_locations.nil?
@@ -2019,15 +1999,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCalendarRecordingsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCalendarRecordingsRequest.new(
+  connection_id: '<id>'
+)
 res = s.calendar.list_calendar_recordings(request: req)
 
 unless res.calendar_recordings.nil?
@@ -2064,15 +2043,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCalendarRoomsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCalendarRoomsRequest.new(
+  connection_id: '<id>'
+)
 res = s.calendar.list_calendar_rooms(request: req)
 
 unless res.calendar_rooms.nil?
@@ -2109,15 +2087,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCalendarWebinarsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCalendarWebinarsRequest.new(
+  connection_id: '<id>'
+)
 res = s.calendar.list_calendar_webinars(request: req)
 
 unless res.calendar_webinars.nil?
@@ -2154,17 +2131,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::PatchCalendarBotRequest.new(
-  calendar_bot: Models::Shared::CalendarBot.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::PatchCalendarBotRequest.new(
+  calendar_bot: Models::Shared::CalendarBot.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.calendar.patch_calendar_bot(request: req)
 
 unless res.calendar_bot.nil?
@@ -2195,32 +2171,31 @@ Updates the CalendarCalendar identified by `id`. Provide the unified CalendarCal
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCalendarCalendar" method="patch" path="/calendar/{connection_id}/calendar/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCalendarCalendar" method="patch" path="/calendar/{connection_id}/calendar/{id}" example="calendar_calendar" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchCalendarCalendarRequest.new(
   calendar_calendar: Models::Shared::CalendarCalendar.new(
     created_at: DateTime.iso8601('2020-01-09T23:11:34.147Z'),
     description: 'Acer supra vallum suasoria thesaurus.',
-    id: '03b6c780-6210-4714-a94f-191706b9f1cb',
+    id: '535d1d8f-d55b-4b62-a4c1-f5c23243b3b4',
     is_primary: false,
     metadata: [],
     name: 'Interviews',
     timezone: 'Asia/Kolkata',
-    updated_at: DateTime.iso8601('2023-04-06T03:34:15.724Z'),
+    updated_at: DateTime.iso8601('2023-04-07T00:10:37.657Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.calendar.patch_calendar_calendar(request: req)
 
 unless res.calendar_calendar.nil?
@@ -2251,25 +2226,25 @@ Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCalendarEvent" method="patch" path="/calendar/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCalendarEvent" method="patch" path="/calendar/{connection_id}/event/{id}" example="calendar_event" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchCalendarEventRequest.new(
   calendar_event: Models::Shared::CalendarEvent.new(
     attachments: [],
     conference: [],
     created_at: '2019-08-04T14:33:51.814Z',
-    end_at: '2020-05-26T09:52:12.733Z',
+    end_at: '2020-05-26T14:43:06.651Z',
     has_conference: false,
-    id: '65ef7ff6-5f52-47b1-99cc-97d043792d85',
+    id: '836f42f0-8ea2-4555-b8d2-971aeddf3da2',
     is_all_day: false,
     is_free: false,
     is_private: false,
@@ -2279,15 +2254,15 @@ req = Models::Operations::PatchCalendarEventRequest.new(
     recurrence: [
       Models::Shared::CalendarEventRecurrence.new(
         count: 4.0,
-        end_at: DateTime.iso8601('2025-04-08T12:12:13.734Z'),
+        end_at: DateTime.iso8601('2025-04-09T22:11:44.159Z'),
         excluded_dates: [
-          '2024-02-14T15:16:19.881Z',
+          '2024-02-15T18:23:54.783Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::YEARLY,
         included_dates: [
-          '2023-07-17T09:29:43.840Z',
-          '2025-02-07T07:50:50.128Z',
-          '2024-04-14T06:27:00.196Z',
+          '2023-07-18T09:08:35.495Z',
+          '2025-02-08T16:51:09.546Z',
+          '2024-04-15T10:33:13.705Z',
         ],
         interval: 7.0,
         on_days: [
@@ -2621,20 +2596,19 @@ req = Models::Operations::PatchCalendarEventRequest.new(
           -254.0,
         ],
         timezone: 'Asia/Ho_Chi_Minh',
-        week_start: Models::Shared::WeekStart::TU,
+        week_start: Models::Shared::WeekStart::TU
       ),
     ],
-    start_at: '2020-05-26T00:34:35.860Z',
+    start_at: '2020-05-26T05:25:06.930Z',
     status: Models::Shared::CalendarEventStatus::CONFIRMED,
     subject: 'Sunt spargo tepidus bestia vigor credo coadunatio appello.',
     timezone: 'Asia/Bangkok',
-    updated_at: '2020-07-02T14:38:30.344Z',
-    web_url: 'https://another-pinstripe.com',
+    updated_at: '2020-07-02T20:05:59.176Z',
+    web_url: 'https://another-pinstripe.com'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.calendar.patch_calendar_event(request: req)
 
 unless res.calendar_event.nil?
@@ -2665,35 +2639,34 @@ Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCalendarLink" method="patch" path="/calendar/{connection_id}/link/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCalendarLink" method="patch" path="/calendar/{connection_id}/link/{id}" example="calendar_link" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchCalendarLinkRequest.new(
   calendar_link: Models::Shared::CalendarLink.new(
     created_at: '2023-03-07T13:34:11.959Z',
     description: 'Vitium clibanus laboriosam uxor denuncio.',
     duration: 74.0,
-    id: 'eab9d10d-56d9-45a1-981c-794e053c8a4a',
+    id: '2ed2732b-674b-422f-8404-269f1a6cc6ad',
     is_active: true,
     metadata: [],
     name: 'Sopor sopor ancilla animus anser dignissimos vito confero utilis.',
     price_amount: 44.0,
     price_currency: 'USD',
-    updated_at: '2024-03-20T21:55:46.579Z',
-    url: 'https://annual-apricot.info/',
+    updated_at: '2024-03-21T10:13:08.732Z',
+    url: 'https://annual-apricot.info/'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.calendar.patch_calendar_link(request: req)
 
 unless res.calendar_link.nil?
@@ -2724,25 +2697,25 @@ Updates the CalendarWebinar identified by `id`. Provide the unified CalendarWebi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCalendarWebinar" method="patch" path="/calendar/{connection_id}/webinar/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCalendarWebinar" method="patch" path="/calendar/{connection_id}/webinar/{id}" example="calendar_webinar" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchCalendarWebinarRequest.new(
   calendar_webinar: Models::Shared::CalendarWebinar.new(
     conference: [],
     created_at: DateTime.iso8601('2022-07-06T11:45:14.631Z'),
-    end_at: DateTime.iso8601('2025-11-12T09:32:13.228Z'),
+    end_at: DateTime.iso8601('2025-11-13T19:06:52.318Z'),
     has_polls: false,
     has_recording: false,
-    id: '249e65e1-f0e4-490b-b34b-66ab399bff9d',
+    id: '8638cf1d-bcab-41dc-8601-30c390550d24',
     is_auto_approve: false,
     is_enabled: true,
     is_webcast: false,
@@ -2752,13 +2725,13 @@ req = Models::Operations::PatchCalendarWebinarRequest.new(
     recurrence: [
       Models::Shared::CalendarEventRecurrence.new(
         count: 10.0,
-        end_at: DateTime.iso8601('2023-09-05T17:21:17.060Z'),
+        end_at: DateTime.iso8601('2023-09-06T05:02:19.580Z'),
         excluded_dates: [
-          '2025-02-24T13:47:07.360Z',
+          '2025-02-25T16:12:47.330Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::MONTHLY,
         included_dates: [
-          '2024-05-06T07:22:11.036Z',
+          '2024-05-07T01:43:51.456Z',
         ],
         interval: 8.0,
         on_days: [
@@ -3145,20 +3118,20 @@ req = Models::Operations::PatchCalendarWebinarRequest.new(
           86.0,
         ],
         timezone: 'Africa/Abidjan',
-        week_start: Models::Shared::WeekStart::MO,
+        week_start: Models::Shared::WeekStart::MO
       ),
       Models::Shared::CalendarEventRecurrence.new(
         count: 3.0,
-        end_at: DateTime.iso8601('2022-10-01T17:18:27.489Z'),
+        end_at: DateTime.iso8601('2022-10-01T19:41:55.854Z'),
         excluded_dates: [
-          '2024-09-11T07:29:17.840Z',
-          '2024-08-26T13:59:55.736Z',
+          '2024-09-12T05:21:30.331Z',
+          '2024-08-27T11:26:16.049Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::DAILY,
         included_dates: [
-          '2024-04-01T18:51:33.666Z',
-          '2026-01-29T00:10:16.462Z',
-          '2023-08-19T03:52:11.233Z',
+          '2024-04-02T12:16:27.380Z',
+          '2026-01-30T11:52:34.413Z',
+          '2023-08-19T15:04:20.672Z',
         ],
         interval: 1.0,
         on_days: [
@@ -3298,20 +3271,20 @@ req = Models::Operations::PatchCalendarWebinarRequest.new(
           -295.0,
         ],
         timezone: 'Asia/Choibalsan',
-        week_start: Models::Shared::WeekStart::TU,
+        week_start: Models::Shared::WeekStart::TU
       ),
       Models::Shared::CalendarEventRecurrence.new(
         count: 8.0,
-        end_at: DateTime.iso8601('2026-08-13T11:48:12.858Z'),
+        end_at: DateTime.iso8601('2026-08-15T04:53:40.752Z'),
         excluded_dates: [
-          '2023-06-22T19:30:03.034Z',
-          '2023-06-11T17:09:05.277Z',
+          '2023-06-23T05:07:53.059Z',
+          '2023-06-12T02:28:40.115Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::WEEKLY,
         included_dates: [
-          '2024-04-09T22:04:11.348Z',
-          '2023-08-25T00:59:14.862Z',
-          '2024-10-06T19:36:12.382Z',
+          '2024-04-10T15:42:27.737Z',
+          '2023-08-25T12:21:04.555Z',
+          '2024-10-07T18:10:21.795Z',
         ],
         interval: 8.0,
         on_days: [
@@ -3458,23 +3431,22 @@ req = Models::Operations::PatchCalendarWebinarRequest.new(
           161.0,
         ],
         timezone: 'Asia/Krasnoyarsk',
-        week_start: Models::Shared::WeekStart::WE,
+        week_start: Models::Shared::WeekStart::WE
       ),
     ],
     registrant_password: 'W7J6DhkM',
     require_address: false,
     require_job_title: false,
-    start_at: DateTime.iso8601('2025-05-13T01:16:32.309Z'),
+    start_at: DateTime.iso8601('2025-05-14T05:49:38.211Z'),
     status: Models::Shared::CalendarWebinarStatus::TENTATIVE,
     subject: 'Harum culpa decipio ex cubo ancilla cresco.',
     timezone: 'Europe/Kaliningrad',
-    updated_at: DateTime.iso8601('2026-10-19T06:16:12.753Z'),
-    web_url: 'https://quiet-permafrost.name',
+    updated_at: DateTime.iso8601('2026-10-21T01:11:29.740Z'),
+    web_url: 'https://quiet-permafrost.name'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.calendar.patch_calendar_webinar(request: req)
 
 unless res.calendar_webinar.nil?
@@ -3511,11 +3483,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.calendar.remove_calendar_bot(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -3553,11 +3524,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.calendar.remove_calendar_calendar(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -3595,11 +3565,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.calendar.remove_calendar_event(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -3637,11 +3606,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.calendar.remove_calendar_link(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -3679,11 +3647,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.calendar.remove_calendar_webinar(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -3721,17 +3688,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::UpdateCalendarBotRequest.new(
-  calendar_bot: Models::Shared::CalendarBot.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::UpdateCalendarBotRequest.new(
+  calendar_bot: Models::Shared::CalendarBot.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.calendar.update_calendar_bot(request: req)
 
 unless res.calendar_bot.nil?
@@ -3762,32 +3728,31 @@ Updates the CalendarCalendar identified by `id`. Provide the unified CalendarCal
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCalendarCalendar" method="put" path="/calendar/{connection_id}/calendar/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCalendarCalendar" method="put" path="/calendar/{connection_id}/calendar/{id}" example="calendar_calendar" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateCalendarCalendarRequest.new(
   calendar_calendar: Models::Shared::CalendarCalendar.new(
     created_at: DateTime.iso8601('2020-01-09T23:11:34.147Z'),
     description: 'Acer supra vallum suasoria thesaurus.',
-    id: '03b6c780-6210-4714-a94f-191706b9f1cb',
+    id: '535d1d8f-d55b-4b62-a4c1-f5c23243b3b4',
     is_primary: false,
     metadata: [],
     name: 'Interviews',
     timezone: 'Asia/Kolkata',
-    updated_at: DateTime.iso8601('2023-04-06T03:34:15.724Z'),
+    updated_at: DateTime.iso8601('2023-04-07T00:10:37.657Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.calendar.update_calendar_calendar(request: req)
 
 unless res.calendar_calendar.nil?
@@ -3818,25 +3783,25 @@ Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCalendarEvent" method="put" path="/calendar/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCalendarEvent" method="put" path="/calendar/{connection_id}/event/{id}" example="calendar_event" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateCalendarEventRequest.new(
   calendar_event: Models::Shared::CalendarEvent.new(
     attachments: [],
     conference: [],
     created_at: '2019-08-04T14:33:51.814Z',
-    end_at: '2020-05-26T09:52:12.733Z',
+    end_at: '2020-05-26T14:43:06.651Z',
     has_conference: false,
-    id: '65ef7ff6-5f52-47b1-99cc-97d043792d85',
+    id: '836f42f0-8ea2-4555-b8d2-971aeddf3da2',
     is_all_day: false,
     is_free: false,
     is_private: false,
@@ -3846,15 +3811,15 @@ req = Models::Operations::UpdateCalendarEventRequest.new(
     recurrence: [
       Models::Shared::CalendarEventRecurrence.new(
         count: 4.0,
-        end_at: DateTime.iso8601('2025-04-08T12:12:13.734Z'),
+        end_at: DateTime.iso8601('2025-04-09T22:11:44.159Z'),
         excluded_dates: [
-          '2024-02-14T15:16:19.881Z',
+          '2024-02-15T18:23:54.783Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::YEARLY,
         included_dates: [
-          '2023-07-17T09:29:43.840Z',
-          '2025-02-07T07:50:50.128Z',
-          '2024-04-14T06:27:00.196Z',
+          '2023-07-18T09:08:35.495Z',
+          '2025-02-08T16:51:09.546Z',
+          '2024-04-15T10:33:13.705Z',
         ],
         interval: 7.0,
         on_days: [
@@ -4188,20 +4153,19 @@ req = Models::Operations::UpdateCalendarEventRequest.new(
           -254.0,
         ],
         timezone: 'Asia/Ho_Chi_Minh',
-        week_start: Models::Shared::WeekStart::TU,
+        week_start: Models::Shared::WeekStart::TU
       ),
     ],
-    start_at: '2020-05-26T00:34:35.860Z',
+    start_at: '2020-05-26T05:25:06.930Z',
     status: Models::Shared::CalendarEventStatus::CONFIRMED,
     subject: 'Sunt spargo tepidus bestia vigor credo coadunatio appello.',
     timezone: 'Asia/Bangkok',
-    updated_at: '2020-07-02T14:38:30.344Z',
-    web_url: 'https://another-pinstripe.com',
+    updated_at: '2020-07-02T20:05:59.176Z',
+    web_url: 'https://another-pinstripe.com'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.calendar.update_calendar_event(request: req)
 
 unless res.calendar_event.nil?
@@ -4232,35 +4196,34 @@ Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCalendarLink" method="put" path="/calendar/{connection_id}/link/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCalendarLink" method="put" path="/calendar/{connection_id}/link/{id}" example="calendar_link" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateCalendarLinkRequest.new(
   calendar_link: Models::Shared::CalendarLink.new(
     created_at: '2023-03-07T13:34:11.959Z',
     description: 'Vitium clibanus laboriosam uxor denuncio.',
     duration: 74.0,
-    id: 'eab9d10d-56d9-45a1-981c-794e053c8a4a',
+    id: '2ed2732b-674b-422f-8404-269f1a6cc6ad',
     is_active: true,
     metadata: [],
     name: 'Sopor sopor ancilla animus anser dignissimos vito confero utilis.',
     price_amount: 44.0,
     price_currency: 'USD',
-    updated_at: '2024-03-20T21:55:46.579Z',
-    url: 'https://annual-apricot.info/',
+    updated_at: '2024-03-21T10:13:08.732Z',
+    url: 'https://annual-apricot.info/'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.calendar.update_calendar_link(request: req)
 
 unless res.calendar_link.nil?
@@ -4291,25 +4254,25 @@ Updates the CalendarWebinar identified by `id`. Provide the unified CalendarWebi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCalendarWebinar" method="put" path="/calendar/{connection_id}/webinar/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCalendarWebinar" method="put" path="/calendar/{connection_id}/webinar/{id}" example="calendar_webinar" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateCalendarWebinarRequest.new(
   calendar_webinar: Models::Shared::CalendarWebinar.new(
     conference: [],
     created_at: DateTime.iso8601('2022-07-06T11:45:14.631Z'),
-    end_at: DateTime.iso8601('2025-11-12T09:32:13.228Z'),
+    end_at: DateTime.iso8601('2025-11-13T19:06:52.318Z'),
     has_polls: false,
     has_recording: false,
-    id: '249e65e1-f0e4-490b-b34b-66ab399bff9d',
+    id: '8638cf1d-bcab-41dc-8601-30c390550d24',
     is_auto_approve: false,
     is_enabled: true,
     is_webcast: false,
@@ -4319,13 +4282,13 @@ req = Models::Operations::UpdateCalendarWebinarRequest.new(
     recurrence: [
       Models::Shared::CalendarEventRecurrence.new(
         count: 10.0,
-        end_at: DateTime.iso8601('2023-09-05T17:21:17.060Z'),
+        end_at: DateTime.iso8601('2023-09-06T05:02:19.580Z'),
         excluded_dates: [
-          '2025-02-24T13:47:07.360Z',
+          '2025-02-25T16:12:47.330Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::MONTHLY,
         included_dates: [
-          '2024-05-06T07:22:11.036Z',
+          '2024-05-07T01:43:51.456Z',
         ],
         interval: 8.0,
         on_days: [
@@ -4712,20 +4675,20 @@ req = Models::Operations::UpdateCalendarWebinarRequest.new(
           86.0,
         ],
         timezone: 'Africa/Abidjan',
-        week_start: Models::Shared::WeekStart::MO,
+        week_start: Models::Shared::WeekStart::MO
       ),
       Models::Shared::CalendarEventRecurrence.new(
         count: 3.0,
-        end_at: DateTime.iso8601('2022-10-01T17:18:27.489Z'),
+        end_at: DateTime.iso8601('2022-10-01T19:41:55.854Z'),
         excluded_dates: [
-          '2024-09-11T07:29:17.840Z',
-          '2024-08-26T13:59:55.736Z',
+          '2024-09-12T05:21:30.331Z',
+          '2024-08-27T11:26:16.049Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::DAILY,
         included_dates: [
-          '2024-04-01T18:51:33.666Z',
-          '2026-01-29T00:10:16.462Z',
-          '2023-08-19T03:52:11.233Z',
+          '2024-04-02T12:16:27.380Z',
+          '2026-01-30T11:52:34.413Z',
+          '2023-08-19T15:04:20.672Z',
         ],
         interval: 1.0,
         on_days: [
@@ -4865,20 +4828,20 @@ req = Models::Operations::UpdateCalendarWebinarRequest.new(
           -295.0,
         ],
         timezone: 'Asia/Choibalsan',
-        week_start: Models::Shared::WeekStart::TU,
+        week_start: Models::Shared::WeekStart::TU
       ),
       Models::Shared::CalendarEventRecurrence.new(
         count: 8.0,
-        end_at: DateTime.iso8601('2026-08-13T11:48:12.858Z'),
+        end_at: DateTime.iso8601('2026-08-15T04:53:40.752Z'),
         excluded_dates: [
-          '2023-06-22T19:30:03.034Z',
-          '2023-06-11T17:09:05.277Z',
+          '2023-06-23T05:07:53.059Z',
+          '2023-06-12T02:28:40.115Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::WEEKLY,
         included_dates: [
-          '2024-04-09T22:04:11.348Z',
-          '2023-08-25T00:59:14.862Z',
-          '2024-10-06T19:36:12.382Z',
+          '2024-04-10T15:42:27.737Z',
+          '2023-08-25T12:21:04.555Z',
+          '2024-10-07T18:10:21.795Z',
         ],
         interval: 8.0,
         on_days: [
@@ -5025,23 +4988,22 @@ req = Models::Operations::UpdateCalendarWebinarRequest.new(
           161.0,
         ],
         timezone: 'Asia/Krasnoyarsk',
-        week_start: Models::Shared::WeekStart::WE,
+        week_start: Models::Shared::WeekStart::WE
       ),
     ],
     registrant_password: 'W7J6DhkM',
     require_address: false,
     require_job_title: false,
-    start_at: DateTime.iso8601('2025-05-13T01:16:32.309Z'),
+    start_at: DateTime.iso8601('2025-05-14T05:49:38.211Z'),
     status: Models::Shared::CalendarWebinarStatus::TENTATIVE,
     subject: 'Harum culpa decipio ex cubo ancilla cresco.',
     timezone: 'Europe/Kaliningrad',
-    updated_at: DateTime.iso8601('2026-10-19T06:16:12.753Z'),
-    web_url: 'https://quiet-permafrost.name',
+    updated_at: DateTime.iso8601('2026-10-21T01:11:29.740Z'),
+    web_url: 'https://quiet-permafrost.name'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.calendar.update_calendar_webinar(request: req)
 
 unless res.calendar_webinar.nil?

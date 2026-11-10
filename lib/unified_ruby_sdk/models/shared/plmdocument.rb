@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # One revision of an engineering document
       class PlmDocument
         extend T::Sig
@@ -16,7 +15,7 @@ module UnifiedRubySDK
         # The PlmCategory the document is filed under (reference to AccountingCategory)
         field :category_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('category_id') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
         # Attachment IDs retrievable from StorageFile
@@ -38,21 +37,21 @@ module UnifiedRubySDK
         # Related PlmPart IDs
         field :part_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('part_ids') } }
         # Raw data from integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :revision, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('revision') } }
         # Normalized lifecycle status of a part or document revision
-        field :status, Crystalline::Nilable.new(Models::Shared::PlmDocumentStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::PlmDocumentStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::PlmDocumentStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PlmDocumentStatus, true) } }
         # Normalized document type
-        field :type, Crystalline::Nilable.new(Models::Shared::PlmDocumentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::PlmDocumentType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::PlmDocumentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PlmDocumentType, true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
         # (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(category_id: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), file_ids: T.nilable(T::Array[::String]), id: T.nilable(::String), lifecycle_state: T.nilable(::String), master_identifier: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::PlmMetadata]), name: T.nilable(::String), number: T.nilable(::String), original_type: T.nilable(::String), part_ids: T.nilable(T::Array[::String]), raw: T.nilable(T::Hash[Symbol, ::Object]), revision: T.nilable(::String), status: T.nilable(Models::Shared::PlmDocumentStatus), type: T.nilable(Models::Shared::PlmDocumentType), updated_at: T.nilable(::DateTime), url: T.nilable(::String), user_id: T.nilable(::String)).void }
+        sig { params(category_id: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), file_ids: T.nilable(T::Array[::String]), id: T.nilable(::String), lifecycle_state: T.nilable(::String), master_identifier: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::PlmMetadata]), name: T.nilable(::String), number: T.nilable(::String), original_type: T.nilable(::String), part_ids: T.nilable(T::Array[::String]), raw: T.nilable(T::Hash[::Symbol, ::Object]), revision: T.nilable(::String), status: T.nilable(Models::Shared::PlmDocumentStatus), type: T.nilable(Models::Shared::PlmDocumentType), updated_at: T.nilable(::DateTime), url: T.nilable(::String), user_id: T.nilable(::String)).void }
         def initialize(category_id: nil, created_at: nil, description: nil, file_ids: nil, id: nil, lifecycle_state: nil, master_identifier: nil, metadata: nil, name: nil, number: nil, original_type: nil, part_ids: nil, raw: nil, revision: nil, status: nil, type: nil, updated_at: nil, url: nil, user_id: nil)
           @category_id = category_id
           @created_at = created_at

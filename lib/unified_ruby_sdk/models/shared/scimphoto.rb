@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class ScimPhoto
         extend T::Sig
@@ -18,7 +17,7 @@ module UnifiedRubySDK
 
         field :primary, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('primary') } }
 
-        field :type, Crystalline::Nilable.new(Models::Shared::ScimPhotoType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::ScimPhotoType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::ScimPhotoType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::ScimPhotoType, true) } }
         # URL
         field :value, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
 

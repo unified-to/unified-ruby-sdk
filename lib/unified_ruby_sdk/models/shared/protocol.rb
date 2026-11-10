@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Protocol - The protocol served on this port
-      class Protocol < T::Enum
-
-
+      class Protocol
+        include ::Crystalline::Enum
         enums do
           HTTP = new('HTTP')
           HTTPS = new('HTTPS')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           UDP = new('UDP')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

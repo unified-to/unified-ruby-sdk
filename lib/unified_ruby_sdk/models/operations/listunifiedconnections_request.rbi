@@ -14,6 +14,8 @@ class UnifiedRubySDK::Models::Operations::ListUnifiedConnectionsRequest
   def env=(str_); end
   def external_xref(); end
   def external_xref=(str_); end
+  def fields_(); end
+  def fields_=(str_); end
   def limit(); end
   def limit=(str_); end
   def offset(); end

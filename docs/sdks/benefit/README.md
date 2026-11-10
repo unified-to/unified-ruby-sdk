@@ -1,5 +1,4 @@
 # Benefit
-(*benefit*)
 
 ## Overview
 
@@ -18,17 +17,16 @@ Creates a HrisBenefit. Provide the unified HrisBenefit fields in the request bod
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisBenefit" method="post" path="/hris/{connection_id}/benefit" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisBenefit" method="post" path="/hris/{connection_id}/benefit" example="hris_benefit" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.benefit.create_hris_benefit(hris_benefit: Models::Shared::HrisBenefit.new(
   coverage_level: Models::Shared::CoverageLevel::EMPLOYEE_SPOUSE,
   created_at: DateTime.iso8601('2020-06-11T01:24:05.654Z'),
@@ -38,13 +36,13 @@ res = s.benefit.create_hris_benefit(hris_benefit: Models::Shared::HrisBenefit.ne
   employer_contribution_max_amount: 179_093.0,
   employer_contribution_type: Models::Shared::EmployerContributionType::PERCENTAGE,
   frequency: Models::Shared::HrisBenefitFrequency::MONTH,
-  id: 'b771226b-0997-4e75-ac64-e4b1f603dc2c',
+  id: '71e6626a-1423-4107-8aa6-c9e8c05e69bd',
   is_active: false,
   metadata: [],
   name: 'Frozen Wooden Ball',
   tax: Models::Shared::Tax::PRE_TAX,
   type: Models::Shared::HrisBenefitType::OTHER,
-  updated_at: DateTime.iso8601('2023-03-29T03:13:27.939Z'),
+  updated_at: DateTime.iso8601('2023-03-29T22:11:09.304Z')
 ), connection_id: '<id>')
 
 unless res.hris_benefit.nil?
@@ -84,11 +82,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.benefit.get_hris_benefit(connection_id: '<id>', id: '<id>')
 
 unless res.hris_benefit.nil?
@@ -128,15 +125,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHrisBenefitsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHrisBenefitsRequest.new(
+  connection_id: '<id>'
+)
 res = s.benefit.list_hris_benefits(request: req)
 
 unless res.hris_benefits.nil?
@@ -167,16 +163,16 @@ Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHrisBenefit" method="patch" path="/hris/{connection_id}/benefit/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHrisBenefit" method="patch" path="/hris/{connection_id}/benefit/{id}" example="hris_benefit" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchHrisBenefitRequest.new(
   hris_benefit: Models::Shared::HrisBenefit.new(
@@ -188,18 +184,17 @@ req = Models::Operations::PatchHrisBenefitRequest.new(
     employer_contribution_max_amount: 179_093.0,
     employer_contribution_type: Models::Shared::EmployerContributionType::PERCENTAGE,
     frequency: Models::Shared::HrisBenefitFrequency::MONTH,
-    id: '2cabd030-33b6-467c-a591-792b9f726b2f',
+    id: '6c24baf9-c3de-410b-91fc-fb1b6532ecf6',
     is_active: false,
     metadata: [],
     name: 'Frozen Wooden Ball',
     tax: Models::Shared::Tax::PRE_TAX,
     type: Models::Shared::HrisBenefitType::OTHER,
-    updated_at: DateTime.iso8601('2023-03-29T03:13:27.950Z'),
+    updated_at: DateTime.iso8601('2023-03-29T22:11:09.312Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.benefit.patch_hris_benefit(request: req)
 
 unless res.hris_benefit.nil?
@@ -236,11 +231,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.benefit.remove_hris_benefit(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -272,16 +266,16 @@ Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHrisBenefit" method="put" path="/hris/{connection_id}/benefit/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHrisBenefit" method="put" path="/hris/{connection_id}/benefit/{id}" example="hris_benefit" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateHrisBenefitRequest.new(
   hris_benefit: Models::Shared::HrisBenefit.new(
@@ -293,18 +287,17 @@ req = Models::Operations::UpdateHrisBenefitRequest.new(
     employer_contribution_max_amount: 179_093.0,
     employer_contribution_type: Models::Shared::EmployerContributionType::PERCENTAGE,
     frequency: Models::Shared::HrisBenefitFrequency::MONTH,
-    id: '2cabd030-33b6-467c-a591-792b9f726b2f',
+    id: '6c24baf9-c3de-410b-91fc-fb1b6532ecf6',
     is_active: false,
     metadata: [],
     name: 'Frozen Wooden Ball',
     tax: Models::Shared::Tax::PRE_TAX,
     type: Models::Shared::HrisBenefitType::OTHER,
-    updated_at: DateTime.iso8601('2023-03-29T03:13:27.950Z'),
+    updated_at: DateTime.iso8601('2023-03-29T22:11:09.312Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.benefit.update_hris_benefit(request: req)
 
 unless res.hris_benefit.nil?

@@ -1,5 +1,13 @@
 # ListHrisAttendancesQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListHrisAttendancesQueryParamFields::ID
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # UpdateAccountingQuoteQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = UpdateAccountingQuoteQueryParamFields::ID
+```
+
 
 ## Values
 

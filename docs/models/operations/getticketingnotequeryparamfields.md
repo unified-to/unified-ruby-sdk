@@ -1,5 +1,13 @@
 # GetTicketingNoteQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetTicketingNoteQueryParamFields::ID
+```
+
 
 ## Values
 

@@ -1,5 +1,16 @@
 # SecretsManagerType
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = SecretsManagerType::AWS
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = SecretsManagerType.deserialize("custom_value")
+```
+
 
 ## Values
 

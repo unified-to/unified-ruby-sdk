@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # ShippingPackageWeightUnit - Unit for weight (g, kg, oz, lb)
-      class ShippingPackageWeightUnit < T::Enum
-
-
+      class ShippingPackageWeightUnit
+        include ::Crystalline::Enum
         enums do
           G = new('g')
           KG = new('kg')
           OZ = new('oz')
           LB = new('lb')
         end
+        open!
       end
     end
   end

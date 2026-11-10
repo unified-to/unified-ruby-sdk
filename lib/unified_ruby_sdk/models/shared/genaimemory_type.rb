@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # GenaiMemoryType - FOLDER for a memory store or a sub-folder in one, MEMORY for a memory.
-      class GenaiMemoryType < T::Enum
-
-
+      class GenaiMemoryType
+        include ::Crystalline::Enum
         enums do
           FOLDER = new('FOLDER')
           MEMORY = new('MEMORY')
         end
+        open!
       end
     end
   end

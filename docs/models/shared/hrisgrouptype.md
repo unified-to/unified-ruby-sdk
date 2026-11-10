@@ -1,5 +1,16 @@
 # HrisGroupType
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = HrisGroupType::TEAM
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = HrisGroupType.deserialize("custom_value")
+```
+
 
 ## Values
 

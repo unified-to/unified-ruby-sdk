@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # SocialPostType - The kind of post
-      class SocialPostType < T::Enum
-
-
+      class SocialPostType
+        include ::Crystalline::Enum
         enums do
           POST = new('POST')
           REPLY = new('REPLY')
@@ -23,6 +21,7 @@ module UnifiedRubySDK
           STORY = new('STORY')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

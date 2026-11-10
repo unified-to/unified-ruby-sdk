@@ -1,5 +1,4 @@
 # Earning
-(*earning*)
 
 ## Overview
 
@@ -18,28 +17,27 @@ Creates a HrisEarning. Provide the unified HrisEarning fields in the request bod
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisEarning" method="post" path="/hris/{connection_id}/earning" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisEarning" method="post" path="/hris/{connection_id}/earning" example="hris_earning" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.earning.create_hris_earning(hris_earning: Models::Shared::HrisEarning.new(
   amount: 4026.0,
   created_at: DateTime.iso8601('2019-01-26T12:44:52.326Z'),
   currency: 'USD',
   frequency: Models::Shared::HrisEarningFrequency::SEMIMONTHLY,
-  id: '51d0f788-ab0d-49ff-8787-e47570060568',
+  id: 'f4aaad89-c95c-4d58-abdb-71ddbd2131b2',
   metadata: [],
   notes: 'Deporto truculenter vinum beatae.',
-  start_at: DateTime.iso8601('2022-08-03T01:52:30.746Z'),
+  start_at: DateTime.iso8601('2022-08-03T21:31:19.213Z'),
   status: Models::Shared::HrisEarningStatus::ENDED,
-  updated_at: DateTime.iso8601('2020-02-11T09:38:44.148Z'),
+  updated_at: DateTime.iso8601('2020-02-11T15:28:15.279Z')
 ), connection_id: '<id>')
 
 unless res.hris_earning.nil?
@@ -79,11 +77,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.earning.get_hris_earning(connection_id: '<id>', id: '<id>')
 
 unless res.hris_earning.nil?
@@ -123,15 +120,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHrisEarningsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHrisEarningsRequest.new(
+  connection_id: '<id>'
+)
 res = s.earning.list_hris_earnings(request: req)
 
 unless res.hris_earnings.nil?
@@ -162,16 +158,16 @@ Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHrisEarning" method="patch" path="/hris/{connection_id}/earning/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHrisEarning" method="patch" path="/hris/{connection_id}/earning/{id}" example="hris_earning" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchHrisEarningRequest.new(
   hris_earning: Models::Shared::HrisEarning.new(
@@ -179,17 +175,16 @@ req = Models::Operations::PatchHrisEarningRequest.new(
     created_at: DateTime.iso8601('2019-01-26T12:44:52.326Z'),
     currency: 'USD',
     frequency: Models::Shared::HrisEarningFrequency::SEMIMONTHLY,
-    id: '596bdcc6-8b46-489c-98f0-1ffcf83f809a',
+    id: '9e442f35-8be4-46b1-bb6e-e2f39b813fd7',
     metadata: [],
     notes: 'Deporto truculenter vinum beatae.',
-    start_at: DateTime.iso8601('2022-08-03T01:52:30.756Z'),
+    start_at: DateTime.iso8601('2022-08-03T21:31:19.220Z'),
     status: Models::Shared::HrisEarningStatus::ENDED,
-    updated_at: DateTime.iso8601('2020-02-11T09:38:44.150Z'),
+    updated_at: DateTime.iso8601('2020-02-11T15:28:15.281Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.earning.patch_hris_earning(request: req)
 
 unless res.hris_earning.nil?
@@ -226,11 +221,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.earning.remove_hris_earning(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -262,16 +256,16 @@ Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHrisEarning" method="put" path="/hris/{connection_id}/earning/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHrisEarning" method="put" path="/hris/{connection_id}/earning/{id}" example="hris_earning" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateHrisEarningRequest.new(
   hris_earning: Models::Shared::HrisEarning.new(
@@ -279,17 +273,16 @@ req = Models::Operations::UpdateHrisEarningRequest.new(
     created_at: DateTime.iso8601('2019-01-26T12:44:52.326Z'),
     currency: 'USD',
     frequency: Models::Shared::HrisEarningFrequency::SEMIMONTHLY,
-    id: '596bdcc6-8b46-489c-98f0-1ffcf83f809a',
+    id: '9e442f35-8be4-46b1-bb6e-e2f39b813fd7',
     metadata: [],
     notes: 'Deporto truculenter vinum beatae.',
-    start_at: DateTime.iso8601('2022-08-03T01:52:30.756Z'),
+    start_at: DateTime.iso8601('2022-08-03T21:31:19.220Z'),
     status: Models::Shared::HrisEarningStatus::ENDED,
-    updated_at: DateTime.iso8601('2020-02-11T09:38:44.150Z'),
+    updated_at: DateTime.iso8601('2020-02-11T15:28:15.281Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.earning.update_hris_earning(request: req)
 
 unless res.hris_earning.nil?

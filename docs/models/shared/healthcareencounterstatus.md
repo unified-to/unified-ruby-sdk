@@ -2,6 +2,17 @@
 
 Status of the encounter
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = HealthcareEncounterStatus::PLANNED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = HealthcareEncounterStatus.deserialize("custom_value")
+```
+
 
 ## Values
 

@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class SortOrder < T::Enum
-
-
+      class SortOrder
+        include ::Crystalline::Enum
         enums do
           ASC = new('asc')
           DESC = new('desc')
         end
+        open!
       end
     end
   end

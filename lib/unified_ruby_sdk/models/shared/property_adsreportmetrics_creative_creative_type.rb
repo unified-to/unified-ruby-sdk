@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PropertyAdsReportMetricsCreativeCreativeType < T::Enum
-
-
+      class PropertyAdsReportMetricsCreativeCreativeType
+        include ::Crystalline::Enum
         enums do
           UNSPECIFIED = new('UNSPECIFIED')
           STANDARD = new('STANDARD')
@@ -25,6 +23,7 @@ module UnifiedRubySDK
           DOCUMENT = new('DOCUMENT')
           SHARE = new('SHARE')
         end
+        open!
       end
     end
   end

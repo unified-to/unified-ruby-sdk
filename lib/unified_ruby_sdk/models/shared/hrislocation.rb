@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class HrisLocation
         extend T::Sig
@@ -18,7 +17,7 @@ module UnifiedRubySDK
         # (reference to HrisCompany)
         field :company_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_id') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
@@ -40,15 +39,15 @@ module UnifiedRubySDK
 
         field :parent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :telephones, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HrisTelephone)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephones') } }
 
         field :timezone, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('timezone') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(address: T.nilable(Models::Shared::PropertyHrisLocationAddress), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), external_identifier: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_hq: T.nilable(T::Boolean), language_locale: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), telephones: T.nilable(T::Array[Models::Shared::HrisTelephone]), timezone: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        sig { params(address: T.nilable(Models::Shared::PropertyHrisLocationAddress), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), external_identifier: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_hq: T.nilable(T::Boolean), language_locale: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), telephones: T.nilable(T::Array[Models::Shared::HrisTelephone]), timezone: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
         def initialize(address: nil, company_id: nil, created_at: nil, currency: nil, description: nil, external_identifier: nil, id: nil, is_active: nil, is_hq: nil, language_locale: nil, metadata: nil, name: nil, parent_id: nil, raw: nil, telephones: nil, timezone: nil, updated_at: nil)
           @address = address
           @company_id = company_id

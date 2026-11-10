@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # HealthcareObservationComponentInterpretation - Interpretation of the component value
-      class HealthcareObservationComponentInterpretation < T::Enum
-
-
+      class HealthcareObservationComponentInterpretation
+        include ::Crystalline::Enum
         enums do
           NORMAL = new('NORMAL')
           ABNORMAL = new('ABNORMAL')
@@ -21,6 +19,7 @@ module UnifiedRubySDK
           CRITICAL_HIGH = new('CRITICAL_HIGH')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # ClubsMemberMembershipStatus - The member's membership status
-      class ClubsMemberMembershipStatus < T::Enum
-
-
+      class ClubsMemberMembershipStatus
+        include ::Crystalline::Enum
         enums do
           MEMBER = new('MEMBER')
           PENDING = new('PENDING')
           NONE = new('NONE')
         end
+        open!
       end
     end
   end

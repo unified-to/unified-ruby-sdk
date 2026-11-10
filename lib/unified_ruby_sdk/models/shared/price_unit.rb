@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # PriceUnit - Unit that price_amount is quoted in
-      class PriceUnit < T::Enum
-
-
+      class PriceUnit
+        include ::Crystalline::Enum
         enums do
           PER_GPU_HOUR = new('PER_GPU_HOUR')
           PER_INSTANCE_HOUR = new('PER_INSTANCE_HOUR')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

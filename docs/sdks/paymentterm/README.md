@@ -1,5 +1,4 @@
 # Paymentterm
-(*paymentterm*)
 
 ## Overview
 
@@ -18,17 +17,16 @@ Creates a AccountingPaymentterm. Provide the unified AccountingPaymentterm field
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAccountingPaymentterm" method="post" path="/accounting/{connection_id}/paymentterm" -->
+<!-- UsageSnippet language="ruby" operationID="createAccountingPaymentterm" method="post" path="/accounting/{connection_id}/paymentterm" example="accounting_paymentterm" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.paymentterm.create_accounting_paymentterm(accounting_paymentterm: Models::Shared::AccountingPaymentterm.new(
   category: Models::Shared::Category::STANDARD,
   created_at: DateTime.iso8601('2021-08-22T22:42:42.265Z'),
@@ -39,12 +37,12 @@ res = s.paymentterm.create_accounting_paymentterm(accounting_paymentterm: Models
   discount_percent: 5.0,
   due_days: 57.0,
   due_next_month_days: 9.0,
-  id: 'c96e2531-f203-46f2-bb79-f813fa516cef',
+  id: '259adcec-5aed-42a4-846f-89791e25e80a',
   is_active: false,
   metadata: [],
   name: 'Net 30',
   type: Models::Shared::AccountingPaymenttermType::NET_15,
-  updated_at: DateTime.iso8601('2026-01-24T14:15:36.516Z'),
+  updated_at: DateTime.iso8601('2026-01-26T03:09:46.052Z')
 ), connection_id: '<id>')
 
 unless res.accounting_paymentterm.nil?
@@ -84,11 +82,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.paymentterm.get_accounting_paymentterm(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_paymentterm.nil?
@@ -128,15 +125,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingPaymenttermsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingPaymenttermsRequest.new(
+  connection_id: '<id>'
+)
 res = s.paymentterm.list_accounting_paymentterms(request: req)
 
 unless res.accounting_paymentterms.nil?
@@ -167,16 +163,16 @@ Updates the AccountingPaymentterm identified by `id`. Provide the unified Accoun
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAccountingPaymentterm" method="patch" path="/accounting/{connection_id}/paymentterm/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAccountingPaymentterm" method="patch" path="/accounting/{connection_id}/paymentterm/{id}" example="accounting_paymentterm" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAccountingPaymenttermRequest.new(
   accounting_paymentterm: Models::Shared::AccountingPaymentterm.new(
@@ -189,17 +185,16 @@ req = Models::Operations::PatchAccountingPaymenttermRequest.new(
     discount_percent: 5.0,
     due_days: 57.0,
     due_next_month_days: 9.0,
-    id: '81a1de6a-65ab-4164-8e95-d996bd4c16bb',
+    id: '40aac803-306c-440e-ad6c-badc81f1ead5',
     is_active: false,
     metadata: [],
     name: 'Net 30',
     type: Models::Shared::AccountingPaymenttermType::NET_15,
-    updated_at: DateTime.iso8601('2026-01-24T14:15:36.535Z'),
+    updated_at: DateTime.iso8601('2026-01-26T03:09:46.064Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.paymentterm.patch_accounting_paymentterm(request: req)
 
 unless res.accounting_paymentterm.nil?
@@ -236,11 +231,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.paymentterm.remove_accounting_paymentterm(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -272,16 +266,16 @@ Updates the AccountingPaymentterm identified by `id`. Provide the unified Accoun
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAccountingPaymentterm" method="put" path="/accounting/{connection_id}/paymentterm/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAccountingPaymentterm" method="put" path="/accounting/{connection_id}/paymentterm/{id}" example="accounting_paymentterm" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAccountingPaymenttermRequest.new(
   accounting_paymentterm: Models::Shared::AccountingPaymentterm.new(
@@ -294,17 +288,16 @@ req = Models::Operations::UpdateAccountingPaymenttermRequest.new(
     discount_percent: 5.0,
     due_days: 57.0,
     due_next_month_days: 9.0,
-    id: '81a1de6a-65ab-4164-8e95-d996bd4c16bb',
+    id: '40aac803-306c-440e-ad6c-badc81f1ead5',
     is_active: false,
     metadata: [],
     name: 'Net 30',
     type: Models::Shared::AccountingPaymenttermType::NET_15,
-    updated_at: DateTime.iso8601('2026-01-24T14:15:36.535Z'),
+    updated_at: DateTime.iso8601('2026-01-26T03:09:46.064Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.paymentterm.update_accounting_paymentterm(request: req)
 
 unless res.accounting_paymentterm.nil?

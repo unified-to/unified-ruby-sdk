@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # ReturnType - Type of return
-      class ReturnType < T::Enum
-
-
+      class ReturnType
+        include ::Crystalline::Enum
         enums do
           CUSTOMER = new('CUSTOMER')
           VENDOR = new('VENDOR')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           DEFECTIVE = new('DEFECTIVE')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

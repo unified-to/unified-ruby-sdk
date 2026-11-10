@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # A person object from an enrichment integration
       class EnrichPerson
         extend T::Sig
@@ -24,7 +23,7 @@ module UnifiedRubySDK
         # The company's domain
         field :company_domain, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_domain') } }
         # The date that this person object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # An array of email addresses for this person
         field :emails, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::EnrichEmail)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
         # The Facebook URL of the person
@@ -32,7 +31,7 @@ module UnifiedRubySDK
 
         field :first_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('first_name') } }
         # The gender of the person
-        field :gender, Crystalline::Nilable.new(Models::Shared::EnrichPersonGender), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gender'), 'decoder': Utils.enum_from_string(Models::Shared::EnrichPersonGender, true) } }
+        field :gender, Crystalline::Nilable.new(Models::Shared::EnrichPersonGender), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gender'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::EnrichPersonGender, true) } }
         # The GitHub URL of the person
         field :github_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('github_url') } }
         # The GitHub username of the person
@@ -48,7 +47,7 @@ module UnifiedRubySDK
         # The name of the person
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # The raw data returned by the integration for this person
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # An array of telephones for this person
         field :telephones, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::EnrichTelephone)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephones') } }
         # The timezone code of the person
@@ -60,13 +59,13 @@ module UnifiedRubySDK
         # The twitter URL of the person
         field :twitter_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('twitter_url') } }
         # The last date that this person object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # The timezone's hourly offset from UTC of the person
         field :utc_offset, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('utc_offset') } }
 
         field :work_histories, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::EnrichPersonWorkHistory)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('work_histories') } }
 
-        sig { params(address: T.nilable(Models::Shared::PropertyEnrichPersonAddress), bio: T.nilable(::String), birthdate: T.nilable(::String), company: T.nilable(::String), company_domain: T.nilable(::String), created_at: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::EnrichEmail]), facebook_url: T.nilable(::String), first_name: T.nilable(::String), gender: T.nilable(Models::Shared::EnrichPersonGender), github_url: T.nilable(::String), github_username: T.nilable(::String), id: T.nilable(::String), image_url: T.nilable(::String), last_name: T.nilable(::String), linkedin_url: T.nilable(::String), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), telephones: T.nilable(T::Array[Models::Shared::EnrichTelephone]), timezone: T.nilable(::String), title: T.nilable(::String), twitter_handle: T.nilable(::String), twitter_url: T.nilable(::String), updated_at: T.nilable(::DateTime), utc_offset: T.nilable(::Float), work_histories: T.nilable(T::Array[Models::Shared::EnrichPersonWorkHistory])).void }
+        sig { params(address: T.nilable(Models::Shared::PropertyEnrichPersonAddress), bio: T.nilable(::String), birthdate: T.nilable(::String), company: T.nilable(::String), company_domain: T.nilable(::String), created_at: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::EnrichEmail]), facebook_url: T.nilable(::String), first_name: T.nilable(::String), gender: T.nilable(Models::Shared::EnrichPersonGender), github_url: T.nilable(::String), github_username: T.nilable(::String), id: T.nilable(::String), image_url: T.nilable(::String), last_name: T.nilable(::String), linkedin_url: T.nilable(::String), name: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), telephones: T.nilable(T::Array[Models::Shared::EnrichTelephone]), timezone: T.nilable(::String), title: T.nilable(::String), twitter_handle: T.nilable(::String), twitter_url: T.nilable(::String), updated_at: T.nilable(::DateTime), utc_offset: T.nilable(::Float), work_histories: T.nilable(T::Array[Models::Shared::EnrichPersonWorkHistory])).void }
         def initialize(address: nil, bio: nil, birthdate: nil, company: nil, company_domain: nil, created_at: nil, emails: nil, facebook_url: nil, first_name: nil, gender: nil, github_url: nil, github_username: nil, id: nil, image_url: nil, last_name: nil, linkedin_url: nil, name: nil, raw: nil, telephones: nil, timezone: nil, title: nil, twitter_handle: nil, twitter_url: nil, updated_at: nil, utc_offset: nil, work_histories: nil)
           @address = address
           @bio = bio

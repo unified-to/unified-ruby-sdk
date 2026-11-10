@@ -1,5 +1,4 @@
 # Lms
-(*lms*)
 
 ## Overview
 
@@ -54,28 +53,27 @@ Creates a LmsActivity. Provide the unified LmsActivity fields in the request bod
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createLmsActivity" method="post" path="/lms/{connection_id}/activity" -->
+<!-- UsageSnippet language="ruby" operationID="createLmsActivity" method="post" path="/lms/{connection_id}/activity" example="lms_activity" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.lms.create_lms_activity(lms_activity: Models::Shared::LmsActivity.new(
   assigned_grade: 'summopere',
-  completed_at: DateTime.iso8601('2023-12-15T21:36:35.983Z'),
+  completed_at: DateTime.iso8601('2023-12-16T20:17:42.675Z'),
   created_at: DateTime.iso8601('2020-10-17T01:25:21.745Z'),
   duration_minutes: 55.0,
-  id: 'f3e24672-9714-4557-a828-f80629b5b131',
+  id: 'f710c8ed-802a-4f72-a624-c02d66f95037',
   is_completed: true,
   metadata: [],
   progress_percentage: 100.0,
-  started_at: DateTime.iso8601('2021-04-26T19:54:10.195Z'),
-  updated_at: DateTime.iso8601('2022-02-04T01:33:16.813Z'),
+  started_at: DateTime.iso8601('2021-04-26T23:40:11.560Z'),
+  updated_at: DateTime.iso8601('2022-02-04T10:53:07.691Z')
 ), connection_id: '<id>')
 
 unless res.lms_activity.nil?
@@ -109,21 +107,20 @@ Creates a LmsClass. Provide the unified LmsClass fields in the request body; the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createLmsClass" method="post" path="/lms/{connection_id}/class" -->
+<!-- UsageSnippet language="ruby" operationID="createLmsClass" method="post" path="/lms/{connection_id}/class" example="lms_class" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.lms.create_lms_class(lms_class: Models::Shared::LmsClass.new(
   created_at: DateTime.iso8601('2020-02-20T14:48:51.845Z'),
   description: 'Anser sperno decerno.',
-  id: '1b308408-e40d-4d9a-9915-16e203e8ecf3',
+  id: 'd0315316-c9af-40c6-959f-4ef69035c329',
   instructors: [],
   languages: [
     'in',
@@ -139,13 +136,13 @@ res = s.lms.create_lms_class(lms_class: Models::Shared::LmsClass.new(
       name: 'illo',
       thumbnail_url: 'https://loremflickr.com/199/1934?lock=4323325966476891',
       type: Models::Shared::LmsMediaType::VIDEO,
-      url: 'https://loremflickr.com/487/921?lock=5127962071241632',
+      url: 'https://loremflickr.com/487/921?lock=5127962071241632'
     ),
   ],
   metadata: [],
   name: 'virtus',
   students: [],
-  updated_at: DateTime.iso8601('2025-08-19T10:37:32.484Z'),
+  updated_at: DateTime.iso8601('2025-08-20T22:11:58.227Z')
 ), connection_id: '<id>')
 
 unless res.lms_class.nil?
@@ -179,21 +176,20 @@ Creates a LmsCollection. Provide the unified LmsCollection fields in the request
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createLmsCollection" method="post" path="/lms/{connection_id}/collection" -->
+<!-- UsageSnippet language="ruby" operationID="createLmsCollection" method="post" path="/lms/{connection_id}/collection" example="lms_collection" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.lms.create_lms_collection(lms_collection: Models::Shared::LmsCollection.new(
   created_at: DateTime.iso8601('2019-08-19T14:40:29.227Z'),
   description: 'Ab.',
-  id: 'b4d5fc6a-e3bc-4e8a-992d-04042d5371b9',
+  id: '6c899787-3eb3-49c9-a4c6-d579adb41474',
   is_active: true,
   media: [
     Models::Shared::LmsMedia.new(
@@ -205,12 +201,12 @@ res = s.lms.create_lms_collection(lms_collection: Models::Shared::LmsCollection.
       name: 'thymum',
       thumbnail_url: 'https://picsum.photos/seed/15O5EfV/2982/752',
       type: Models::Shared::LmsMediaType::HEADSHOT,
-      url: 'https://loremflickr.com/2679/70?lock=6078357625960554',
+      url: 'https://loremflickr.com/2679/70?lock=6078357625960554'
     ),
   ],
   metadata: [],
   name: 'ara',
-  updated_at: DateTime.iso8601('2026-08-17T16:49:10.997Z'),
+  updated_at: DateTime.iso8601('2026-08-19T10:56:10.763Z')
 ), connection_id: '<id>')
 
 unless res.lms_collection.nil?
@@ -244,17 +240,16 @@ Creates a LmsContent. Provide the unified LmsContent fields in the request body;
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createLmsContent" method="post" path="/lms/{connection_id}/content" -->
+<!-- UsageSnippet language="ruby" operationID="createLmsContent" method="post" path="/lms/{connection_id}/content" example="lms_content" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.lms.create_lms_content(lms_content: Models::Shared::LmsContent.new(
   categories: [
     'territo',
@@ -263,7 +258,7 @@ res = s.lms.create_lms_content(lms_content: Models::Shared::LmsContent.new(
   description: 'Usque laboriosam ventosus adflicto.',
   difficulty: 'Beginner',
   duration_minutes: 19.0,
-  id: '09fb970f-d2bf-4fe1-a165-4ea158e55169',
+  id: 'dc60108d-7159-4a6a-a210-c4030552402a',
   instructors: [],
   is_active: true,
   languages: [
@@ -274,12 +269,12 @@ res = s.lms.create_lms_content(lms_content: Models::Shared::LmsContent.new(
     Models::Shared::LmsContentLocalization.new(
       description: 'Acervus.',
       language: 'es',
-      name: 'talis',
+      name: 'talis'
     ),
     Models::Shared::LmsContentLocalization.new(
       description: 'Ratione.',
       language: 'es',
-      name: 'sint',
+      name: 'sint'
     ),
   ],
   media: [
@@ -293,7 +288,7 @@ res = s.lms.create_lms_content(lms_content: Models::Shared::LmsContent.new(
       name: 'subiungo',
       thumbnail_url: 'https://loremflickr.com/2056/3712?lock=5644845642923518',
       type: Models::Shared::LmsMediaType::OTHER,
-      url: 'https://loremflickr.com/2593/1553?lock=8591263400111785',
+      url: 'https://loremflickr.com/2593/1553?lock=8591263400111785'
     ),
     Models::Shared::LmsMedia.new(
       content: 'Terminatio acidus tripudio teres. Compono demum aut aestivus ambitus pecus tergum verumtamen vestrum. Absque adversus desino aut tabernus tollo vigor. Cur agnitio totidem consuasor bene doloribus. Vetus abundans curriculum curatio usitas.',
@@ -305,7 +300,7 @@ res = s.lms.create_lms_content(lms_content: Models::Shared::LmsContent.new(
       name: 'beneficium',
       thumbnail_url: 'https://picsum.photos/seed/pNFr1/2597/885',
       type: Models::Shared::LmsMediaType::WEB,
-      url: 'https://loremflickr.com/3597/239?lock=7142808124990633',
+      url: 'https://loremflickr.com/3597/239?lock=7142808124990633'
     ),
     Models::Shared::LmsMedia.new(
       content: 'Coepi demo adversus capillus aro unus templum. Aspicio alius vehemens terminatio varietas vomica. Apud thorax defero decet impedit verbera pauci laboriosam molestiae urbanus. Aveho vergo crux certus nulla caute sophismata. Caute voluptatibus patrocinor demo verumtamen adeo canis sapiente depraedor verus.',
@@ -317,13 +312,13 @@ res = s.lms.create_lms_content(lms_content: Models::Shared::LmsContent.new(
       name: 'qui',
       thumbnail_url: 'https://loremflickr.com/1375/3377?lock=6601832177607674',
       type: Models::Shared::LmsMediaType::IMAGE,
-      url: 'https://loremflickr.com/3927/2086?lock=5199784913821481',
+      url: 'https://loremflickr.com/3927/2086?lock=5199784913821481'
     ),
   ],
   metadata: [],
   name: 'ut',
   provider_name: 'Bins LLC',
-  published_at: DateTime.iso8601('2022-09-09T04:04:13.321Z'),
+  published_at: DateTime.iso8601('2022-09-09T17:35:10.641Z'),
   short_description: 'Caritas.',
   skills: [
     'trucido',
@@ -332,13 +327,13 @@ res = s.lms.create_lms_content(lms_content: Models::Shared::LmsContent.new(
   subjects: [
     Models::Shared::LmsSubject.new(
       name: 'tibi',
-      rank: 1.0,
+      rank: 1.0
     ),
   ],
   tags: [
     'dens',
   ],
-  updated_at: DateTime.iso8601('2022-10-10T08:47:12.770Z'),
+  updated_at: DateTime.iso8601('2022-10-10T22:55:02.083Z')
 ), connection_id: '<id>')
 
 unless res.lms_content.nil?
@@ -372,17 +367,16 @@ Creates a LmsCourse. Provide the unified LmsCourse fields in the request body; t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createLmsCourse" method="post" path="/lms/{connection_id}/course" -->
+<!-- UsageSnippet language="ruby" operationID="createLmsCourse" method="post" path="/lms/{connection_id}/course" example="lms_course" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.lms.create_lms_course(lms_course: Models::Shared::LmsCourse.new(
   categories: [
     'tergiversatio',
@@ -392,7 +386,7 @@ res = s.lms.create_lms_course(lms_course: Models::Shared::LmsCourse.new(
   currency: 'FJD',
   description: 'Vinco alias aut capitulus.',
   duration_minutes: 148.0,
-  id: '179355ef-4f7b-495b-85f0-12037e0a60e1',
+  id: '83a41ae3-6d46-4c1b-8b72-996548a40693',
   instructors: [],
   is_active: true,
   is_private: false,
@@ -412,21 +406,21 @@ res = s.lms.create_lms_course(lms_course: Models::Shared::LmsCourse.new(
       name: 'tandem',
       thumbnail_url: 'https://picsum.photos/seed/syTatRhK03/928/273',
       type: Models::Shared::LmsMediaType::OTHER,
-      url: 'https://picsum.photos/seed/fQAbsk/2472/1671',
+      url: 'https://picsum.photos/seed/fQAbsk/2472/1671'
     ),
   ],
   metadata: [],
   name: 'comptus',
   price_amount: 84.0,
   provider_name: 'Homenick - Wunsch',
-  published_at: DateTime.iso8601('2022-11-06T03:33:52.120Z'),
+  published_at: DateTime.iso8601('2022-11-06T04:27:31.475Z'),
   skills: [
     'adiuvo',
     'tam',
   ],
   students: [],
   time_estimate_minutes: 100.0,
-  updated_at: DateTime.iso8601('2023-02-11T09:23:35.509Z'),
+  updated_at: DateTime.iso8601('2023-02-11T13:07:01.412Z')
 ), connection_id: '<id>')
 
 unless res.lms_course.nil?
@@ -460,24 +454,23 @@ Creates a LmsInstructor. Provide the unified LmsInstructor fields in the request
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createLmsInstructor" method="post" path="/lms/{connection_id}/instructor" -->
+<!-- UsageSnippet language="ruby" operationID="createLmsInstructor" method="post" path="/lms/{connection_id}/instructor" example="lms_instructor" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.lms.create_lms_instructor(lms_instructor: Models::Shared::LmsInstructor.new(
   created_at: DateTime.iso8601('2021-10-12T16:38:54.979Z'),
   emails: [
-    Models::Shared::LmsEmail.new(),
+    Models::Shared::LmsEmail.new,
   ],
   first_name: 'Deangelo',
-  id: 'f26d9915-e0f7-407a-a37b-89a8d3a577dd',
+  id: 'f94337f3-d5d6-4abf-bc5e-8327de724ff4',
   image_url: 'https://avatars.githubusercontent.com/u/95131132',
   last_name: 'Ritchie',
   metadata: [],
@@ -485,15 +478,15 @@ res = s.lms.create_lms_instructor(lms_instructor: Models::Shared::LmsInstructor.
   telephones: [
     Models::Shared::LmsTelephone.new(
       telephone: '(605) 752-8163',
-      type: Models::Shared::LmsTelephoneType::WORK,
+      type: Models::Shared::LmsTelephoneType::WORK
     ),
     Models::Shared::LmsTelephone.new(
       telephone: '(430) 415-2451',
-      type: Models::Shared::LmsTelephoneType::HOME,
+      type: Models::Shared::LmsTelephoneType::HOME
     ),
   ],
   title: 'Regional Security Agent',
-  updated_at: DateTime.iso8601('2025-08-07T17:40:50.661Z'),
+  updated_at: DateTime.iso8601('2025-08-09T02:25:00.638Z')
 ), connection_id: '<id>')
 
 unless res.lms_instructor.nil?
@@ -527,17 +520,16 @@ Creates a LmsStudent. Provide the unified LmsStudent fields in the request body;
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createLmsStudent" method="post" path="/lms/{connection_id}/student" -->
+<!-- UsageSnippet language="ruby" operationID="createLmsStudent" method="post" path="/lms/{connection_id}/student" example="lms_student" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.lms.create_lms_student(lms_student: Models::Shared::LmsStudent.new(
   address: Models::Shared::PropertyLmsStudentAddress.new(
     address1: '15033 Corwin Circles',
@@ -545,14 +537,14 @@ res = s.lms.create_lms_student(lms_student: Models::Shared::LmsStudent.new(
     country_code: 'US',
     postal_code: '73966',
     region: 'New Jersey',
-    region_code: 'TX',
+    region_code: 'TX'
   ),
   created_at: DateTime.iso8601('2020-03-23T06:59:29.777Z'),
   emails: [
-    Models::Shared::LmsEmail.new(),
+    Models::Shared::LmsEmail.new,
   ],
   first_name: 'Marcella',
-  id: '6a309a91-d51e-4c94-b54d-30a133199f69',
+  id: 'd68468f9-2106-42c1-9d0a-ece50daa1017',
   image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg',
   last_name: 'Murazik',
   metadata: [],
@@ -560,18 +552,18 @@ res = s.lms.create_lms_student(lms_student: Models::Shared::LmsStudent.new(
   telephones: [
     Models::Shared::LmsTelephone.new(
       telephone: '(899) 827-6400',
-      type: Models::Shared::LmsTelephoneType::WORK,
+      type: Models::Shared::LmsTelephoneType::WORK
     ),
     Models::Shared::LmsTelephone.new(
       telephone: '(487) 213-8236',
-      type: Models::Shared::LmsTelephoneType::FAX,
+      type: Models::Shared::LmsTelephoneType::FAX
     ),
     Models::Shared::LmsTelephone.new(
       telephone: '(980) 775-2940',
-      type: Models::Shared::LmsTelephoneType::FAX,
+      type: Models::Shared::LmsTelephoneType::FAX
     ),
   ],
-  updated_at: DateTime.iso8601('2022-07-07T12:57:26.444Z'),
+  updated_at: DateTime.iso8601('2022-07-08T03:58:29.695Z')
 ), connection_id: '<id>')
 
 unless res.lms_student.nil?
@@ -611,11 +603,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.lms.get_lms_activity(connection_id: '<id>', id: '<id>')
 
 unless res.lms_activity.nil?
@@ -655,11 +646,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.lms.get_lms_class(connection_id: '<id>', id: '<id>')
 
 unless res.lms_class.nil?
@@ -699,11 +689,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.lms.get_lms_collection(connection_id: '<id>', id: '<id>')
 
 unless res.lms_collection.nil?
@@ -743,11 +732,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.lms.get_lms_content(connection_id: '<id>', id: '<id>')
 
 unless res.lms_content.nil?
@@ -787,11 +775,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.lms.get_lms_course(connection_id: '<id>', id: '<id>')
 
 unless res.lms_course.nil?
@@ -831,11 +818,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.lms.get_lms_instructor(connection_id: '<id>', id: '<id>')
 
 unless res.lms_instructor.nil?
@@ -875,11 +861,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.lms.get_lms_student(connection_id: '<id>', id: '<id>')
 
 unless res.lms_student.nil?
@@ -919,15 +904,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListLmsActivitiesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListLmsActivitiesRequest.new(
+  connection_id: '<id>'
+)
 res = s.lms.list_lms_activities(request: req)
 
 unless res.lms_activities.nil?
@@ -964,15 +948,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListLmsClassesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListLmsClassesRequest.new(
+  connection_id: '<id>'
+)
 res = s.lms.list_lms_classes(request: req)
 
 unless res.lms_classes.nil?
@@ -1009,15 +992,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListLmsCollectionsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListLmsCollectionsRequest.new(
+  connection_id: '<id>'
+)
 res = s.lms.list_lms_collections(request: req)
 
 unless res.lms_collections.nil?
@@ -1054,15 +1036,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListLmsContentsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListLmsContentsRequest.new(
+  connection_id: '<id>'
+)
 res = s.lms.list_lms_contents(request: req)
 
 unless res.lms_contents.nil?
@@ -1099,15 +1080,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListLmsCoursesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListLmsCoursesRequest.new(
+  connection_id: '<id>'
+)
 res = s.lms.list_lms_courses(request: req)
 
 unless res.lms_courses.nil?
@@ -1144,15 +1124,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListLmsInstructorsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListLmsInstructorsRequest.new(
+  connection_id: '<id>'
+)
 res = s.lms.list_lms_instructors(request: req)
 
 unless res.lms_instructors.nil?
@@ -1189,15 +1168,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListLmsStudentsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListLmsStudentsRequest.new(
+  connection_id: '<id>'
+)
 res = s.lms.list_lms_students(request: req)
 
 unless res.lms_students.nil?
@@ -1228,34 +1206,33 @@ Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchLmsActivity" method="patch" path="/lms/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchLmsActivity" method="patch" path="/lms/{connection_id}/activity/{id}" example="lms_activity" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchLmsActivityRequest.new(
   lms_activity: Models::Shared::LmsActivity.new(
     assigned_grade: 'summopere',
-    completed_at: DateTime.iso8601('2023-12-15T21:36:35.990Z'),
+    completed_at: DateTime.iso8601('2023-12-16T20:17:42.684Z'),
     created_at: DateTime.iso8601('2020-10-17T01:25:21.745Z'),
     duration_minutes: 55.0,
-    id: '0752b646-57e4-408a-9459-bf77894a0631',
+    id: '8dd9fe7a-4545-4ebf-a45d-a252f3a8297e',
     is_completed: true,
     metadata: [],
     progress_percentage: 100.0,
-    started_at: DateTime.iso8601('2021-04-26T19:54:10.196Z'),
-    updated_at: DateTime.iso8601('2022-02-04T01:33:16.816Z'),
+    started_at: DateTime.iso8601('2021-04-26T23:40:11.561Z'),
+    updated_at: DateTime.iso8601('2022-02-04T10:53:07.694Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.lms.patch_lms_activity(request: req)
 
 unless res.lms_activity.nil?
@@ -1286,22 +1263,22 @@ Updates the LmsClass identified by `id`. Provide the unified LmsClass fields to 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchLmsClass" method="patch" path="/lms/{connection_id}/class/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchLmsClass" method="patch" path="/lms/{connection_id}/class/{id}" example="lms_class" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchLmsClassRequest.new(
   lms_class: Models::Shared::LmsClass.new(
     created_at: DateTime.iso8601('2020-02-20T14:48:51.845Z'),
     description: 'Anser sperno decerno.',
-    id: '8fc14122-7053-44a9-b738-dd639dffa2a6',
+    id: 'b71886bc-cd0a-4bff-9eef-aff5695082e5',
     instructors: [],
     languages: [
       'in',
@@ -1317,18 +1294,17 @@ req = Models::Operations::PatchLmsClassRequest.new(
         name: 'illo',
         thumbnail_url: 'https://loremflickr.com/199/1934?lock=4323325966476891',
         type: Models::Shared::LmsMediaType::VIDEO,
-        url: 'https://loremflickr.com/487/921?lock=5127962071241632',
+        url: 'https://loremflickr.com/487/921?lock=5127962071241632'
       ),
     ],
     metadata: [],
     name: 'virtus',
     students: [],
-    updated_at: DateTime.iso8601('2025-08-19T10:37:32.503Z'),
+    updated_at: DateTime.iso8601('2025-08-20T22:11:58.242Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.lms.patch_lms_class(request: req)
 
 unless res.lms_class.nil?
@@ -1359,22 +1335,22 @@ Updates the LmsCollection identified by `id`. Provide the unified LmsCollection 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchLmsCollection" method="patch" path="/lms/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchLmsCollection" method="patch" path="/lms/{connection_id}/collection/{id}" example="lms_collection" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchLmsCollectionRequest.new(
   lms_collection: Models::Shared::LmsCollection.new(
     created_at: DateTime.iso8601('2019-08-19T14:40:29.227Z'),
     description: 'Ab.',
-    id: '92aecda0-dae7-46d8-aa70-7e21095d79fa',
+    id: '4c93acfb-d55c-4acd-a093-a174523907b6',
     is_active: true,
     media: [
       Models::Shared::LmsMedia.new(
@@ -1386,17 +1362,16 @@ req = Models::Operations::PatchLmsCollectionRequest.new(
         name: 'thymum',
         thumbnail_url: 'https://picsum.photos/seed/15O5EfV/2982/752',
         type: Models::Shared::LmsMediaType::HEADSHOT,
-        url: 'https://loremflickr.com/2679/70?lock=6078357625960554',
+        url: 'https://loremflickr.com/2679/70?lock=6078357625960554'
       ),
     ],
     metadata: [],
     name: 'ara',
-    updated_at: DateTime.iso8601('2026-08-17T16:49:11.018Z'),
+    updated_at: DateTime.iso8601('2026-08-19T10:56:10.779Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.lms.patch_lms_collection(request: req)
 
 unless res.lms_collection.nil?
@@ -1427,16 +1402,16 @@ Updates the LmsContent identified by `id`. Provide the unified LmsContent fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchLmsContent" method="patch" path="/lms/{connection_id}/content/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchLmsContent" method="patch" path="/lms/{connection_id}/content/{id}" example="lms_content" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchLmsContentRequest.new(
   lms_content: Models::Shared::LmsContent.new(
@@ -1447,7 +1422,7 @@ req = Models::Operations::PatchLmsContentRequest.new(
     description: 'Usque laboriosam ventosus adflicto.',
     difficulty: 'Beginner',
     duration_minutes: 19.0,
-    id: 'a3902cfd-3226-41f6-95ba-5044271175aa',
+    id: 'add634e4-fc0d-40c3-9909-ee98da89067d',
     instructors: [],
     is_active: true,
     languages: [
@@ -1458,12 +1433,12 @@ req = Models::Operations::PatchLmsContentRequest.new(
       Models::Shared::LmsContentLocalization.new(
         description: 'Acervus.',
         language: 'es',
-        name: 'talis',
+        name: 'talis'
       ),
       Models::Shared::LmsContentLocalization.new(
         description: 'Ratione.',
         language: 'es',
-        name: 'sint',
+        name: 'sint'
       ),
     ],
     media: [
@@ -1477,7 +1452,7 @@ req = Models::Operations::PatchLmsContentRequest.new(
         name: 'subiungo',
         thumbnail_url: 'https://loremflickr.com/2056/3712?lock=5644845642923518',
         type: Models::Shared::LmsMediaType::OTHER,
-        url: 'https://loremflickr.com/2593/1553?lock=8591263400111785',
+        url: 'https://loremflickr.com/2593/1553?lock=8591263400111785'
       ),
       Models::Shared::LmsMedia.new(
         content: 'Terminatio acidus tripudio teres. Compono demum aut aestivus ambitus pecus tergum verumtamen vestrum. Absque adversus desino aut tabernus tollo vigor. Cur agnitio totidem consuasor bene doloribus. Vetus abundans curriculum curatio usitas.',
@@ -1489,7 +1464,7 @@ req = Models::Operations::PatchLmsContentRequest.new(
         name: 'beneficium',
         thumbnail_url: 'https://picsum.photos/seed/pNFr1/2597/885',
         type: Models::Shared::LmsMediaType::WEB,
-        url: 'https://loremflickr.com/3597/239?lock=7142808124990633',
+        url: 'https://loremflickr.com/3597/239?lock=7142808124990633'
       ),
       Models::Shared::LmsMedia.new(
         content: 'Coepi demo adversus capillus aro unus templum. Aspicio alius vehemens terminatio varietas vomica. Apud thorax defero decet impedit verbera pauci laboriosam molestiae urbanus. Aveho vergo crux certus nulla caute sophismata. Caute voluptatibus patrocinor demo verumtamen adeo canis sapiente depraedor verus.',
@@ -1501,13 +1476,13 @@ req = Models::Operations::PatchLmsContentRequest.new(
         name: 'qui',
         thumbnail_url: 'https://loremflickr.com/1375/3377?lock=6601832177607674',
         type: Models::Shared::LmsMediaType::IMAGE,
-        url: 'https://loremflickr.com/3927/2086?lock=5199784913821481',
+        url: 'https://loremflickr.com/3927/2086?lock=5199784913821481'
       ),
     ],
     metadata: [],
     name: 'ut',
     provider_name: 'Bins LLC',
-    published_at: DateTime.iso8601('2022-09-09T04:04:13.332Z'),
+    published_at: DateTime.iso8601('2022-09-09T17:35:10.650Z'),
     short_description: 'Caritas.',
     skills: [
       'trucido',
@@ -1516,18 +1491,17 @@ req = Models::Operations::PatchLmsContentRequest.new(
     subjects: [
       Models::Shared::LmsSubject.new(
         name: 'tibi',
-        rank: 1.0,
+        rank: 1.0
       ),
     ],
     tags: [
       'dens',
     ],
-    updated_at: DateTime.iso8601('2022-10-10T08:47:12.782Z'),
+    updated_at: DateTime.iso8601('2022-10-10T22:55:02.093Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.lms.patch_lms_content(request: req)
 
 unless res.lms_content.nil?
@@ -1558,16 +1532,16 @@ Updates the LmsCourse identified by `id`. Provide the unified LmsCourse fields t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchLmsCourse" method="patch" path="/lms/{connection_id}/course/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchLmsCourse" method="patch" path="/lms/{connection_id}/course/{id}" example="lms_course" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchLmsCourseRequest.new(
   lms_course: Models::Shared::LmsCourse.new(
@@ -1579,7 +1553,7 @@ req = Models::Operations::PatchLmsCourseRequest.new(
     currency: 'FJD',
     description: 'Vinco alias aut capitulus.',
     duration_minutes: 148.0,
-    id: 'bce173ff-747a-46a0-b92c-467aed2659c4',
+    id: '93c293ee-2f3c-41c8-bb89-0c505a104a7f',
     instructors: [],
     is_active: true,
     is_private: false,
@@ -1599,26 +1573,25 @@ req = Models::Operations::PatchLmsCourseRequest.new(
         name: 'tandem',
         thumbnail_url: 'https://picsum.photos/seed/syTatRhK03/928/273',
         type: Models::Shared::LmsMediaType::OTHER,
-        url: 'https://picsum.photos/seed/fQAbsk/2472/1671',
+        url: 'https://picsum.photos/seed/fQAbsk/2472/1671'
       ),
     ],
     metadata: [],
     name: 'comptus',
     price_amount: 84.0,
     provider_name: 'Homenick - Wunsch',
-    published_at: DateTime.iso8601('2022-11-06T03:33:52.121Z'),
+    published_at: DateTime.iso8601('2022-11-06T04:27:31.476Z'),
     skills: [
       'adiuvo',
       'tam',
     ],
     students: [],
     time_estimate_minutes: 100.0,
-    updated_at: DateTime.iso8601('2023-02-11T09:23:35.512Z'),
+    updated_at: DateTime.iso8601('2023-02-11T13:07:01.414Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.lms.patch_lms_course(request: req)
 
 unless res.lms_course.nil?
@@ -1649,25 +1622,25 @@ Updates the LmsInstructor identified by `id`. Provide the unified LmsInstructor 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchLmsInstructor" method="patch" path="/lms/{connection_id}/instructor/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchLmsInstructor" method="patch" path="/lms/{connection_id}/instructor/{id}" example="lms_instructor" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchLmsInstructorRequest.new(
   lms_instructor: Models::Shared::LmsInstructor.new(
     created_at: DateTime.iso8601('2021-10-12T16:38:54.979Z'),
     emails: [
-      Models::Shared::LmsEmail.new(),
+      Models::Shared::LmsEmail.new,
     ],
     first_name: 'Deangelo',
-    id: '4030ccba-36ca-4dac-9500-04b3e11f39ca',
+    id: '0c4dcc90-c19d-4d4f-ba89-a9abf98acc77',
     image_url: 'https://avatars.githubusercontent.com/u/95131132',
     last_name: 'Ritchie',
     metadata: [],
@@ -1675,20 +1648,19 @@ req = Models::Operations::PatchLmsInstructorRequest.new(
     telephones: [
       Models::Shared::LmsTelephone.new(
         telephone: '(605) 752-8163',
-        type: Models::Shared::LmsTelephoneType::WORK,
+        type: Models::Shared::LmsTelephoneType::WORK
       ),
       Models::Shared::LmsTelephone.new(
         telephone: '(430) 415-2451',
-        type: Models::Shared::LmsTelephoneType::HOME,
+        type: Models::Shared::LmsTelephoneType::HOME
       ),
     ],
     title: 'Regional Security Agent',
-    updated_at: DateTime.iso8601('2025-08-07T17:40:50.675Z'),
+    updated_at: DateTime.iso8601('2025-08-09T02:25:00.648Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.lms.patch_lms_instructor(request: req)
 
 unless res.lms_instructor.nil?
@@ -1719,16 +1691,16 @@ Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchLmsStudent" method="patch" path="/lms/{connection_id}/student/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchLmsStudent" method="patch" path="/lms/{connection_id}/student/{id}" example="lms_student" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchLmsStudentRequest.new(
   lms_student: Models::Shared::LmsStudent.new(
@@ -1738,14 +1710,14 @@ req = Models::Operations::PatchLmsStudentRequest.new(
       country_code: 'US',
       postal_code: '73966',
       region: 'New Jersey',
-      region_code: 'TX',
+      region_code: 'TX'
     ),
     created_at: DateTime.iso8601('2020-03-23T06:59:29.777Z'),
     emails: [
-      Models::Shared::LmsEmail.new(),
+      Models::Shared::LmsEmail.new,
     ],
     first_name: 'Marcella',
-    id: 'c4e91b7f-edf4-4038-9910-498e79005617',
+    id: 'aff01c72-6cb6-4747-8aac-624e3f6f06bc',
     image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg',
     last_name: 'Murazik',
     metadata: [],
@@ -1753,23 +1725,22 @@ req = Models::Operations::PatchLmsStudentRequest.new(
     telephones: [
       Models::Shared::LmsTelephone.new(
         telephone: '(899) 827-6400',
-        type: Models::Shared::LmsTelephoneType::WORK,
+        type: Models::Shared::LmsTelephoneType::WORK
       ),
       Models::Shared::LmsTelephone.new(
         telephone: '(487) 213-8236',
-        type: Models::Shared::LmsTelephoneType::FAX,
+        type: Models::Shared::LmsTelephoneType::FAX
       ),
       Models::Shared::LmsTelephone.new(
         telephone: '(980) 775-2940',
-        type: Models::Shared::LmsTelephoneType::FAX,
+        type: Models::Shared::LmsTelephoneType::FAX
       ),
     ],
-    updated_at: DateTime.iso8601('2022-07-07T12:57:26.453Z'),
+    updated_at: DateTime.iso8601('2022-07-08T03:58:29.703Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.lms.patch_lms_student(request: req)
 
 unless res.lms_student.nil?
@@ -1806,11 +1777,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.lms.remove_lms_activity(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1848,11 +1818,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.lms.remove_lms_class(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1890,11 +1859,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.lms.remove_lms_collection(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1932,11 +1900,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.lms.remove_lms_content(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1974,11 +1941,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.lms.remove_lms_course(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -2016,11 +1982,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.lms.remove_lms_instructor(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -2058,11 +2023,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.lms.remove_lms_student(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -2094,34 +2058,33 @@ Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateLmsActivity" method="put" path="/lms/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateLmsActivity" method="put" path="/lms/{connection_id}/activity/{id}" example="lms_activity" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateLmsActivityRequest.new(
   lms_activity: Models::Shared::LmsActivity.new(
     assigned_grade: 'summopere',
-    completed_at: DateTime.iso8601('2023-12-15T21:36:35.990Z'),
+    completed_at: DateTime.iso8601('2023-12-16T20:17:42.684Z'),
     created_at: DateTime.iso8601('2020-10-17T01:25:21.745Z'),
     duration_minutes: 55.0,
-    id: '0752b646-57e4-408a-9459-bf77894a0631',
+    id: '8dd9fe7a-4545-4ebf-a45d-a252f3a8297e',
     is_completed: true,
     metadata: [],
     progress_percentage: 100.0,
-    started_at: DateTime.iso8601('2021-04-26T19:54:10.196Z'),
-    updated_at: DateTime.iso8601('2022-02-04T01:33:16.816Z'),
+    started_at: DateTime.iso8601('2021-04-26T23:40:11.561Z'),
+    updated_at: DateTime.iso8601('2022-02-04T10:53:07.694Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.lms.update_lms_activity(request: req)
 
 unless res.lms_activity.nil?
@@ -2152,22 +2115,22 @@ Updates the LmsClass identified by `id`. Provide the unified LmsClass fields to 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateLmsClass" method="put" path="/lms/{connection_id}/class/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateLmsClass" method="put" path="/lms/{connection_id}/class/{id}" example="lms_class" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateLmsClassRequest.new(
   lms_class: Models::Shared::LmsClass.new(
     created_at: DateTime.iso8601('2020-02-20T14:48:51.845Z'),
     description: 'Anser sperno decerno.',
-    id: '8fc14122-7053-44a9-b738-dd639dffa2a6',
+    id: 'b71886bc-cd0a-4bff-9eef-aff5695082e5',
     instructors: [],
     languages: [
       'in',
@@ -2183,18 +2146,17 @@ req = Models::Operations::UpdateLmsClassRequest.new(
         name: 'illo',
         thumbnail_url: 'https://loremflickr.com/199/1934?lock=4323325966476891',
         type: Models::Shared::LmsMediaType::VIDEO,
-        url: 'https://loremflickr.com/487/921?lock=5127962071241632',
+        url: 'https://loremflickr.com/487/921?lock=5127962071241632'
       ),
     ],
     metadata: [],
     name: 'virtus',
     students: [],
-    updated_at: DateTime.iso8601('2025-08-19T10:37:32.503Z'),
+    updated_at: DateTime.iso8601('2025-08-20T22:11:58.242Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.lms.update_lms_class(request: req)
 
 unless res.lms_class.nil?
@@ -2225,22 +2187,22 @@ Updates the LmsCollection identified by `id`. Provide the unified LmsCollection 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateLmsCollection" method="put" path="/lms/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateLmsCollection" method="put" path="/lms/{connection_id}/collection/{id}" example="lms_collection" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateLmsCollectionRequest.new(
   lms_collection: Models::Shared::LmsCollection.new(
     created_at: DateTime.iso8601('2019-08-19T14:40:29.227Z'),
     description: 'Ab.',
-    id: '92aecda0-dae7-46d8-aa70-7e21095d79fa',
+    id: '4c93acfb-d55c-4acd-a093-a174523907b6',
     is_active: true,
     media: [
       Models::Shared::LmsMedia.new(
@@ -2252,17 +2214,16 @@ req = Models::Operations::UpdateLmsCollectionRequest.new(
         name: 'thymum',
         thumbnail_url: 'https://picsum.photos/seed/15O5EfV/2982/752',
         type: Models::Shared::LmsMediaType::HEADSHOT,
-        url: 'https://loremflickr.com/2679/70?lock=6078357625960554',
+        url: 'https://loremflickr.com/2679/70?lock=6078357625960554'
       ),
     ],
     metadata: [],
     name: 'ara',
-    updated_at: DateTime.iso8601('2026-08-17T16:49:11.018Z'),
+    updated_at: DateTime.iso8601('2026-08-19T10:56:10.779Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.lms.update_lms_collection(request: req)
 
 unless res.lms_collection.nil?
@@ -2293,16 +2254,16 @@ Updates the LmsContent identified by `id`. Provide the unified LmsContent fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateLmsContent" method="put" path="/lms/{connection_id}/content/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateLmsContent" method="put" path="/lms/{connection_id}/content/{id}" example="lms_content" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateLmsContentRequest.new(
   lms_content: Models::Shared::LmsContent.new(
@@ -2313,7 +2274,7 @@ req = Models::Operations::UpdateLmsContentRequest.new(
     description: 'Usque laboriosam ventosus adflicto.',
     difficulty: 'Beginner',
     duration_minutes: 19.0,
-    id: 'a3902cfd-3226-41f6-95ba-5044271175aa',
+    id: 'add634e4-fc0d-40c3-9909-ee98da89067d',
     instructors: [],
     is_active: true,
     languages: [
@@ -2324,12 +2285,12 @@ req = Models::Operations::UpdateLmsContentRequest.new(
       Models::Shared::LmsContentLocalization.new(
         description: 'Acervus.',
         language: 'es',
-        name: 'talis',
+        name: 'talis'
       ),
       Models::Shared::LmsContentLocalization.new(
         description: 'Ratione.',
         language: 'es',
-        name: 'sint',
+        name: 'sint'
       ),
     ],
     media: [
@@ -2343,7 +2304,7 @@ req = Models::Operations::UpdateLmsContentRequest.new(
         name: 'subiungo',
         thumbnail_url: 'https://loremflickr.com/2056/3712?lock=5644845642923518',
         type: Models::Shared::LmsMediaType::OTHER,
-        url: 'https://loremflickr.com/2593/1553?lock=8591263400111785',
+        url: 'https://loremflickr.com/2593/1553?lock=8591263400111785'
       ),
       Models::Shared::LmsMedia.new(
         content: 'Terminatio acidus tripudio teres. Compono demum aut aestivus ambitus pecus tergum verumtamen vestrum. Absque adversus desino aut tabernus tollo vigor. Cur agnitio totidem consuasor bene doloribus. Vetus abundans curriculum curatio usitas.',
@@ -2355,7 +2316,7 @@ req = Models::Operations::UpdateLmsContentRequest.new(
         name: 'beneficium',
         thumbnail_url: 'https://picsum.photos/seed/pNFr1/2597/885',
         type: Models::Shared::LmsMediaType::WEB,
-        url: 'https://loremflickr.com/3597/239?lock=7142808124990633',
+        url: 'https://loremflickr.com/3597/239?lock=7142808124990633'
       ),
       Models::Shared::LmsMedia.new(
         content: 'Coepi demo adversus capillus aro unus templum. Aspicio alius vehemens terminatio varietas vomica. Apud thorax defero decet impedit verbera pauci laboriosam molestiae urbanus. Aveho vergo crux certus nulla caute sophismata. Caute voluptatibus patrocinor demo verumtamen adeo canis sapiente depraedor verus.',
@@ -2367,13 +2328,13 @@ req = Models::Operations::UpdateLmsContentRequest.new(
         name: 'qui',
         thumbnail_url: 'https://loremflickr.com/1375/3377?lock=6601832177607674',
         type: Models::Shared::LmsMediaType::IMAGE,
-        url: 'https://loremflickr.com/3927/2086?lock=5199784913821481',
+        url: 'https://loremflickr.com/3927/2086?lock=5199784913821481'
       ),
     ],
     metadata: [],
     name: 'ut',
     provider_name: 'Bins LLC',
-    published_at: DateTime.iso8601('2022-09-09T04:04:13.332Z'),
+    published_at: DateTime.iso8601('2022-09-09T17:35:10.650Z'),
     short_description: 'Caritas.',
     skills: [
       'trucido',
@@ -2382,18 +2343,17 @@ req = Models::Operations::UpdateLmsContentRequest.new(
     subjects: [
       Models::Shared::LmsSubject.new(
         name: 'tibi',
-        rank: 1.0,
+        rank: 1.0
       ),
     ],
     tags: [
       'dens',
     ],
-    updated_at: DateTime.iso8601('2022-10-10T08:47:12.782Z'),
+    updated_at: DateTime.iso8601('2022-10-10T22:55:02.093Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.lms.update_lms_content(request: req)
 
 unless res.lms_content.nil?
@@ -2424,16 +2384,16 @@ Updates the LmsCourse identified by `id`. Provide the unified LmsCourse fields t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateLmsCourse" method="put" path="/lms/{connection_id}/course/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateLmsCourse" method="put" path="/lms/{connection_id}/course/{id}" example="lms_course" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateLmsCourseRequest.new(
   lms_course: Models::Shared::LmsCourse.new(
@@ -2445,7 +2405,7 @@ req = Models::Operations::UpdateLmsCourseRequest.new(
     currency: 'FJD',
     description: 'Vinco alias aut capitulus.',
     duration_minutes: 148.0,
-    id: 'bce173ff-747a-46a0-b92c-467aed2659c4',
+    id: '93c293ee-2f3c-41c8-bb89-0c505a104a7f',
     instructors: [],
     is_active: true,
     is_private: false,
@@ -2465,26 +2425,25 @@ req = Models::Operations::UpdateLmsCourseRequest.new(
         name: 'tandem',
         thumbnail_url: 'https://picsum.photos/seed/syTatRhK03/928/273',
         type: Models::Shared::LmsMediaType::OTHER,
-        url: 'https://picsum.photos/seed/fQAbsk/2472/1671',
+        url: 'https://picsum.photos/seed/fQAbsk/2472/1671'
       ),
     ],
     metadata: [],
     name: 'comptus',
     price_amount: 84.0,
     provider_name: 'Homenick - Wunsch',
-    published_at: DateTime.iso8601('2022-11-06T03:33:52.121Z'),
+    published_at: DateTime.iso8601('2022-11-06T04:27:31.476Z'),
     skills: [
       'adiuvo',
       'tam',
     ],
     students: [],
     time_estimate_minutes: 100.0,
-    updated_at: DateTime.iso8601('2023-02-11T09:23:35.512Z'),
+    updated_at: DateTime.iso8601('2023-02-11T13:07:01.414Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.lms.update_lms_course(request: req)
 
 unless res.lms_course.nil?
@@ -2515,25 +2474,25 @@ Updates the LmsInstructor identified by `id`. Provide the unified LmsInstructor 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateLmsInstructor" method="put" path="/lms/{connection_id}/instructor/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateLmsInstructor" method="put" path="/lms/{connection_id}/instructor/{id}" example="lms_instructor" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateLmsInstructorRequest.new(
   lms_instructor: Models::Shared::LmsInstructor.new(
     created_at: DateTime.iso8601('2021-10-12T16:38:54.979Z'),
     emails: [
-      Models::Shared::LmsEmail.new(),
+      Models::Shared::LmsEmail.new,
     ],
     first_name: 'Deangelo',
-    id: '4030ccba-36ca-4dac-9500-04b3e11f39ca',
+    id: '0c4dcc90-c19d-4d4f-ba89-a9abf98acc77',
     image_url: 'https://avatars.githubusercontent.com/u/95131132',
     last_name: 'Ritchie',
     metadata: [],
@@ -2541,20 +2500,19 @@ req = Models::Operations::UpdateLmsInstructorRequest.new(
     telephones: [
       Models::Shared::LmsTelephone.new(
         telephone: '(605) 752-8163',
-        type: Models::Shared::LmsTelephoneType::WORK,
+        type: Models::Shared::LmsTelephoneType::WORK
       ),
       Models::Shared::LmsTelephone.new(
         telephone: '(430) 415-2451',
-        type: Models::Shared::LmsTelephoneType::HOME,
+        type: Models::Shared::LmsTelephoneType::HOME
       ),
     ],
     title: 'Regional Security Agent',
-    updated_at: DateTime.iso8601('2025-08-07T17:40:50.675Z'),
+    updated_at: DateTime.iso8601('2025-08-09T02:25:00.648Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.lms.update_lms_instructor(request: req)
 
 unless res.lms_instructor.nil?
@@ -2585,16 +2543,16 @@ Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateLmsStudent" method="put" path="/lms/{connection_id}/student/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateLmsStudent" method="put" path="/lms/{connection_id}/student/{id}" example="lms_student" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateLmsStudentRequest.new(
   lms_student: Models::Shared::LmsStudent.new(
@@ -2604,14 +2562,14 @@ req = Models::Operations::UpdateLmsStudentRequest.new(
       country_code: 'US',
       postal_code: '73966',
       region: 'New Jersey',
-      region_code: 'TX',
+      region_code: 'TX'
     ),
     created_at: DateTime.iso8601('2020-03-23T06:59:29.777Z'),
     emails: [
-      Models::Shared::LmsEmail.new(),
+      Models::Shared::LmsEmail.new,
     ],
     first_name: 'Marcella',
-    id: 'c4e91b7f-edf4-4038-9910-498e79005617',
+    id: 'aff01c72-6cb6-4747-8aac-624e3f6f06bc',
     image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg',
     last_name: 'Murazik',
     metadata: [],
@@ -2619,23 +2577,22 @@ req = Models::Operations::UpdateLmsStudentRequest.new(
     telephones: [
       Models::Shared::LmsTelephone.new(
         telephone: '(899) 827-6400',
-        type: Models::Shared::LmsTelephoneType::WORK,
+        type: Models::Shared::LmsTelephoneType::WORK
       ),
       Models::Shared::LmsTelephone.new(
         telephone: '(487) 213-8236',
-        type: Models::Shared::LmsTelephoneType::FAX,
+        type: Models::Shared::LmsTelephoneType::FAX
       ),
       Models::Shared::LmsTelephone.new(
         telephone: '(980) 775-2940',
-        type: Models::Shared::LmsTelephoneType::FAX,
+        type: Models::Shared::LmsTelephoneType::FAX
       ),
     ],
-    updated_at: DateTime.iso8601('2022-07-07T12:57:26.453Z'),
+    updated_at: DateTime.iso8601('2022-07-08T03:58:29.703Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.lms.update_lms_student(request: req)
 
 unless res.lms_student.nil?

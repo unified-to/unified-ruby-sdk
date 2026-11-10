@@ -7,11 +7,8 @@
 module UnifiedRubySDK
   module Models
     module Operations
-    
 
       class CreateCalendarCalendarQueryParamFields < T::Enum
-
-
         enums do
           ID = new('id')
           CREATED_AT = new('created_at')

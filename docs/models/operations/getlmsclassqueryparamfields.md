@@ -1,5 +1,13 @@
 # GetLmsClassQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetLmsClassQueryParamFields::ID
+```
+
 
 ## Values
 

@@ -7,14 +7,13 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class StorageFile
         extend T::Sig
         include Crystalline::MetadataFields
 
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # base64 encoded file contents used to create/update only
         field :data, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('data') } }
 
@@ -36,7 +35,7 @@ module UnifiedRubySDK
 
         field :permissions, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::StoragePermission)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('permissions') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # The records the file is attached to (e.g. an invoice or a candidate), each by its id and type
         field :references, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::StorageReference)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('references') } }
 
@@ -44,9 +43,9 @@ module UnifiedRubySDK
         # labels
         field :tags, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tags') } }
         # Whether this is a file or a folder
-        field :type, Crystalline::Nilable.new(Models::Shared::StorageFileType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::StorageFileType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::StorageFileType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::StorageFileType, true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
@@ -54,7 +53,7 @@ module UnifiedRubySDK
 
         field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
-        sig { params(created_at: T.nilable(::DateTime), data: T.nilable(::String), description: T.nilable(::String), download_url: T.nilable(::String), hash: T.nilable(::String), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::StorageMetadata]), mime_type: T.nilable(::String), name: T.nilable(::String), parent_id: T.nilable(::String), permissions: T.nilable(T::Array[Models::Shared::StoragePermission]), raw: T.nilable(T::Hash[Symbol, ::Object]), references: T.nilable(T::Array[Models::Shared::StorageReference]), size: T.nilable(::Float), tags: T.nilable(T::Array[::String]), type: T.nilable(Models::Shared::StorageFileType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), version: T.nilable(::String), web_url: T.nilable(::String)).void }
+        sig { params(created_at: T.nilable(::DateTime), data: T.nilable(::String), description: T.nilable(::String), download_url: T.nilable(::String), hash: T.nilable(::String), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::StorageMetadata]), mime_type: T.nilable(::String), name: T.nilable(::String), parent_id: T.nilable(::String), permissions: T.nilable(T::Array[Models::Shared::StoragePermission]), raw: T.nilable(T::Hash[::Symbol, ::Object]), references: T.nilable(T::Array[Models::Shared::StorageReference]), size: T.nilable(::Float), tags: T.nilable(T::Array[::String]), type: T.nilable(Models::Shared::StorageFileType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), version: T.nilable(::String), web_url: T.nilable(::String)).void }
         def initialize(created_at: nil, data: nil, description: nil, download_url: nil, hash: nil, id: nil, metadata: nil, mime_type: nil, name: nil, parent_id: nil, permissions: nil, raw: nil, references: nil, size: nil, tags: nil, type: nil, updated_at: nil, user_id: nil, version: nil, web_url: nil)
           @created_at = created_at
           @data = data

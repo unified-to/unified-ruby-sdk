@@ -1,5 +1,4 @@
 # Scim
-(*scim*)
 
 ## Overview
 
@@ -30,13 +29,12 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.scim.create_scim_groups(scim_group: Models::Shared::ScimGroup.new(
-  display_name: 'Nina.Tremblay',
+  display_name: 'Nina.Tremblay'
 ), connection_id: '<id>')
 
 unless res.scim_group.nil?
@@ -74,16 +72,15 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::CreateScimUsersRequest.new(
-  scim_user: Models::Shared::ScimUser.new(),
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::CreateScimUsersRequest.new(
+  scim_user: Models::Shared::ScimUser.new,
+  connection_id: '<id>'
+)
 res = s.scim.create_scim_users(request: req)
 
 unless res.scim_user.nil?
@@ -120,11 +117,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.scim.get_scim_groups(connection_id: '<id>', id: '<id>')
 
 unless res.scim_group.nil?
@@ -162,11 +158,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.scim.get_scim_users(connection_id: '<id>', id: '<id>')
 
 unless res.scim_user.nil?
@@ -204,15 +199,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListScimGroupsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListScimGroupsRequest.new(
+  connection_id: '<id>'
+)
 res = s.scim.list_scim_groups(request: req)
 
 unless res.scim_groups.nil?
@@ -249,15 +243,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListScimUsersRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListScimUsersRequest.new(
+  connection_id: '<id>'
+)
 res = s.scim.list_scim_users(request: req)
 
 unless res.scim_users.nil?
@@ -294,13 +287,12 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.scim.patch_scim_groups(scim_group: Models::Shared::ScimGroup.new(
-  display_name: 'Newell.Hoeger',
+  display_name: 'Newell.Hoeger'
 ), connection_id: '<id>', id: '<id>')
 
 unless res.scim_group.nil?
@@ -339,12 +331,11 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-res = s.scim.patch_scim_users(scim_user: Models::Shared::ScimUser.new(), connection_id: '<id>', id: '<id>')
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.scim.patch_scim_users(scim_user: Models::Shared::ScimUser.new, connection_id: '<id>', id: '<id>')
 
 unless res.scim_user.nil?
   # handle response
@@ -382,11 +373,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.scim.remove_scim_groups(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -424,11 +414,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.scim.remove_scim_users(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -466,13 +455,12 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.scim.update_scim_groups(scim_group: Models::Shared::ScimGroup.new(
-  display_name: 'Reynold90',
+  display_name: 'Reynold90'
 ), connection_id: '<id>', id: '<id>')
 
 unless res.scim_group.nil?
@@ -511,12 +499,11 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-res = s.scim.update_scim_users(scim_user: Models::Shared::ScimUser.new(), connection_id: '<id>', id: '<id>')
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.scim.update_scim_users(scim_user: Models::Shared::ScimUser.new, connection_id: '<id>', id: '<id>')
 
 unless res.scim_user.nil?
   # handle response

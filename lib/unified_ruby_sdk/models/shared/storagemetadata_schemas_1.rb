@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class StorageMetadataSchemas1
         extend T::Sig

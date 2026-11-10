@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Engagement metrics for the post
       class PropertySocialPostMetrics
         extend T::Sig

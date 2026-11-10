@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Normal range for the result
       class PropertyHealthcareObservationReferenceRange
         extend T::Sig

@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # ObjectType - The type of object this credit was applied to
-      class ObjectType < T::Enum
-
-
+      class ObjectType
+        include ::Crystalline::Enum
         enums do
           INVOICE = new('INVOICE')
           BILL = new('BILL')
         end
+        open!
       end
     end
   end

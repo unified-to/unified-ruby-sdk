@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # SplitType - how net pay is split into this account when an employee has several accounts
-      class SplitType < T::Enum
-
-
+      class SplitType
+        include ::Crystalline::Enum
         enums do
           PERCENTAGE = new('PERCENTAGE')
           FIXED = new('FIXED')
           REMAINDER = new('REMAINDER')
         end
+        open!
       end
     end
   end

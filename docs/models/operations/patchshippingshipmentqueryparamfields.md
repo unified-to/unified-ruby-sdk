@@ -1,5 +1,13 @@
 # PatchShippingShipmentQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PatchShippingShipmentQueryParamFields::ID
+```
+
 
 ## Values
 

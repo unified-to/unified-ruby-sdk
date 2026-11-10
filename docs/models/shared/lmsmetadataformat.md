@@ -1,5 +1,16 @@
 # LmsMetadataFormat
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = LmsMetadataFormat::TEXT
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = LmsMetadataFormat.deserialize("custom_value")
+```
+
 
 ## Values
 

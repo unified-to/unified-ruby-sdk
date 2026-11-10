@@ -1,5 +1,13 @@
 # ListMartechCampaignsQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListMartechCampaignsQueryParamFields::ID
+```
+
 
 ## Values
 

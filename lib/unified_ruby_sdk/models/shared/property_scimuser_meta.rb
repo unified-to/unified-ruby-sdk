@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class PropertyScimUserMeta
         extend T::Sig
@@ -20,7 +19,7 @@ module UnifiedRubySDK
 
         field :location, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location') } }
 
-        field :resource_type, Crystalline::Nilable.new(Models::Shared::PropertyScimUserMetaResourceType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('resourceType'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyScimUserMetaResourceType, true) } }
+        field :resource_type, Crystalline::Nilable.new(Models::Shared::PropertyScimUserMetaResourceType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('resourceType'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PropertyScimUserMetaResourceType, true) } }
 
         field :version, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('version') } }
 

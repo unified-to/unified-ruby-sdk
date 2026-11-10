@@ -1,5 +1,4 @@
 # Ad
-(*ad*)
 
 ## Overview
 
@@ -18,17 +17,16 @@ Creates a AdsAd. Provide the unified AdsAd fields in the request body; they are 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAdsAd" method="post" path="/ads/{connection_id}/ad" -->
+<!-- UsageSnippet language="ruby" operationID="createAdsAd" method="post" path="/ads/{connection_id}/ad" example="ads_ad" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ad.create_ads_ad(ads_ad: Models::Shared::AdsAd.new(
   ad_copy: 'Ascisco tolero caute sapiente. Valens unde comedo cursus crinis nobis thema. Cohaero nisi ullam tum unde ultio vilicus auditor capio.',
   ad_type: Models::Shared::AdType::SOCIAL,
@@ -37,11 +35,11 @@ res = s.ad.create_ads_ad(ads_ad: Models::Shared::AdsAd.new(
   creative_asset_url: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
   description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
   final_url: 'https://improbable-sanity.com',
-  id: '3e6f3a63-50a2-44fc-9260-2391bef1fd3d',
+  id: '8a04ab3f-e3ef-438c-a2cf-24bc06a97053',
   metadata: [],
   name: 'Hermiston Group',
   status: Models::Shared::AdsAdStatus::ARCHIVED,
-  updated_at: DateTime.iso8601('2024-06-26T07:40:56.258Z'),
+  updated_at: DateTime.iso8601('2024-06-27T01:25:05.664Z')
 ), connection_id: '<id>')
 
 unless res.ads_ad.nil?
@@ -81,11 +79,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ad.get_ads_ad(connection_id: '<id>', id: '<id>')
 
 unless res.ads_ad.nil?
@@ -125,15 +122,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAdsAdsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAdsAdsRequest.new(
+  connection_id: '<id>'
+)
 res = s.ad.list_ads_ads(request: req)
 
 unless res.ads_ads.nil?
@@ -164,16 +160,16 @@ Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAdsAd" method="patch" path="/ads/{connection_id}/ad/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAdsAd" method="patch" path="/ads/{connection_id}/ad/{id}" example="ads_ad" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAdsAdRequest.new(
   ads_ad: Models::Shared::AdsAd.new(
@@ -184,16 +180,15 @@ req = Models::Operations::PatchAdsAdRequest.new(
     creative_asset_url: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
     description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
     final_url: 'https://improbable-sanity.com',
-    id: 'ee36bda5-87ee-4a52-bcf0-ec7968b10f6e',
+    id: '27f55f71-c947-4b3a-8208-b42015d0e6d9',
     metadata: [],
     name: 'Hermiston Group',
     status: Models::Shared::AdsAdStatus::ARCHIVED,
-    updated_at: DateTime.iso8601('2024-06-26T07:40:56.280Z'),
+    updated_at: DateTime.iso8601('2024-06-27T01:25:05.672Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.ad.patch_ads_ad(request: req)
 
 unless res.ads_ad.nil?
@@ -230,11 +225,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ad.remove_ads_ad(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -266,16 +260,16 @@ Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAdsAd" method="put" path="/ads/{connection_id}/ad/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAdsAd" method="put" path="/ads/{connection_id}/ad/{id}" example="ads_ad" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAdsAdRequest.new(
   ads_ad: Models::Shared::AdsAd.new(
@@ -286,16 +280,15 @@ req = Models::Operations::UpdateAdsAdRequest.new(
     creative_asset_url: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
     description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
     final_url: 'https://improbable-sanity.com',
-    id: 'ee36bda5-87ee-4a52-bcf0-ec7968b10f6e',
+    id: '27f55f71-c947-4b3a-8208-b42015d0e6d9',
     metadata: [],
     name: 'Hermiston Group',
     status: Models::Shared::AdsAdStatus::ARCHIVED,
-    updated_at: DateTime.iso8601('2024-06-26T07:40:56.280Z'),
+    updated_at: DateTime.iso8601('2024-06-27T01:25:05.672Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.ad.update_ads_ad(request: req)
 
 unless res.ads_ad.nil?

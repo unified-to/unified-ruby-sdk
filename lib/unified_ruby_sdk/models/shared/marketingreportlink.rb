@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class MarketingReportLink
         extend T::Sig
@@ -16,7 +15,7 @@ module UnifiedRubySDK
         # Percentage of total clicks
         field :click_percentage, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('click_percentage') } }
         # Last click timestamp (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :last_click_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('last_click_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :last_click_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('last_click_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Total clicks on this link
         field :total_clicks, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_clicks') } }
         # Percentage of unique clicks

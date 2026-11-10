@@ -1,5 +1,16 @@
 # TicketingTicketStatus
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = TicketingTicketStatus::ACTIVE
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = TicketingTicketStatus.deserialize("custom_value")
+```
+
 
 ## Values
 

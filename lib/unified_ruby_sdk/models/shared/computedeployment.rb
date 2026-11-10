@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class ComputeDeployment
         extend T::Sig
@@ -20,13 +19,13 @@ module UnifiedRubySDK
         # Source commit message
         field :commit_message, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('commit_message') } }
         # When the deployment was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Target environment
-        field :environment, Crystalline::Nilable.new(Models::Shared::Environment), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('environment'), 'decoder': Utils.enum_from_string(Models::Shared::Environment, true) } }
+        field :environment, Crystalline::Nilable.new(Models::Shared::Environment), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('environment'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::Environment, true) } }
         # Failure description
         field :error, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('error') } }
         # When the deployment finished (live, failed or canceled) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :finished_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('finished_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :finished_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('finished_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Unique identifier for the deployment
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # Container image deployed, for image-based services
@@ -34,21 +33,21 @@ module UnifiedRubySDK
         # Vendor labels, tags and metadata
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ComputeMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # Raw data from integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # The service this deployment belongs to
         field :service_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('service_id') } }
         # When the build started (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :started_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('started_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :started_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('started_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Normalized deployment status; set to CANCELED on update to cancel
-        field :status, Crystalline::Nilable.new(Models::Shared::ComputeDeploymentStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::ComputeDeploymentStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::ComputeDeploymentStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::ComputeDeploymentStatus, true) } }
         # What started the deployment
-        field :trigger, Crystalline::Nilable.new(Models::Shared::Trigger), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('trigger'), 'decoder': Utils.enum_from_string(Models::Shared::Trigger, true) } }
+        field :trigger, Crystalline::Nilable.new(Models::Shared::Trigger), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('trigger'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::Trigger, true) } }
         # When the deployment was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # URL where this deployment is served
         field :url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
 
-        sig { params(branch: T.nilable(::String), commit_identifier: T.nilable(::String), commit_message: T.nilable(::String), created_at: T.nilable(::DateTime), environment: T.nilable(Models::Shared::Environment), error: T.nilable(::String), finished_at: T.nilable(::DateTime), id: T.nilable(::String), image: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::ComputeMetadata]), raw: T.nilable(T::Hash[Symbol, ::Object]), service_id: T.nilable(::String), started_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::ComputeDeploymentStatus), trigger: T.nilable(Models::Shared::Trigger), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
+        sig { params(branch: T.nilable(::String), commit_identifier: T.nilable(::String), commit_message: T.nilable(::String), created_at: T.nilable(::DateTime), environment: T.nilable(Models::Shared::Environment), error: T.nilable(::String), finished_at: T.nilable(::DateTime), id: T.nilable(::String), image: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::ComputeMetadata]), raw: T.nilable(T::Hash[::Symbol, ::Object]), service_id: T.nilable(::String), started_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::ComputeDeploymentStatus), trigger: T.nilable(Models::Shared::Trigger), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
         def initialize(branch: nil, commit_identifier: nil, commit_message: nil, created_at: nil, environment: nil, error: nil, finished_at: nil, id: nil, image: nil, metadata: nil, raw: nil, service_id: nil, started_at: nil, status: nil, trigger: nil, updated_at: nil, url: nil)
           @branch = branch
           @commit_identifier = commit_identifier

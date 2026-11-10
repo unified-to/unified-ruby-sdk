@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class SocialMedia
         extend T::Sig
@@ -24,7 +23,7 @@ module UnifiedRubySDK
         # Ordering of the media within the post; 1 is the first
         field :position, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('position') } }
         # Type of media
-        field :type, Crystalline::Nilable.new(Models::Shared::SocialMediaType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::SocialMediaType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::SocialMediaType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::SocialMediaType, true) } }
         # Media width in pixels
         field :width, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('width') } }
 

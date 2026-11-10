@@ -1,5 +1,4 @@
 # Expensereport
-(*expensereport*)
 
 ## Overview
 
@@ -18,70 +17,69 @@ Creates a AccountingExpensereport. Provide the unified AccountingExpensereport f
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAccountingExpensereport" method="post" path="/accounting/{connection_id}/expensereport" -->
+<!-- UsageSnippet language="ruby" operationID="createAccountingExpensereport" method="post" path="/accounting/{connection_id}/expensereport" example="accounting_expensereport" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.expensereport.create_accounting_expensereport(accounting_expensereport: Models::Shared::AccountingExpensereport.new(
-  approved_at: DateTime.iso8601('2021-04-22T03:01:37.811Z'),
+  approved_at: DateTime.iso8601('2021-04-22T09:05:07.151Z'),
   attachments: [],
   category_ids: [],
   created_at: DateTime.iso8601('2020-05-29T02:04:59.078Z'),
   currency: 'GBP',
   external_number: 'ER-31240',
-  id: '9311e0c0-372c-4961-884f-5a9cfe7f2f3d',
+  id: 'cfd61362-f0e1-4eff-b17b-b1b3da0f274a',
   lineitems: [
     Models::Shared::AccountingLineitem.new(
-      id: '14143a67-be56-4946-9cc8-3b95057e2fb0',
+      id: '82ea9284-fc13-478d-b675-65f46e93ee9c',
       item_name: 'Conference ticket',
       tax_amount: 0.0,
       total_amount: 39.9,
       unit_amount: 39.9,
-      unit_quantity: 1.0,
+      unit_quantity: 1.0
     ),
     Models::Shared::AccountingLineitem.new(
-      id: 'e2e953f7-cc9a-4b00-9824-0be28e5643e8',
+      id: '30a1d0ca-b776-428a-8c50-ab054d4909cc',
       item_name: 'Flight',
       notes: 'Soluta omnis dolor.',
       tax_amount: 0.0,
       total_amount: 193.17,
       unit_amount: 193.17,
-      unit_quantity: 1.0,
+      unit_quantity: 1.0
     ),
     Models::Shared::AccountingLineitem.new(
-      id: '3683bed7-5cd8-4ce9-81dc-7b450b91ddf1',
+      id: 'a63c6c32-467c-4fd5-bd0e-3eca6246199c',
       item_name: 'Client dinner',
       notes: 'Altus caveo capio.',
       tax_amount: 0.0,
       total_amount: 230.12,
       unit_amount: 230.12,
-      unit_quantity: 1.0,
+      unit_quantity: 1.0
     ),
     Models::Shared::AccountingLineitem.new(
-      id: '04232437-e372-4807-a3e7-b1cfb4062db5',
+      id: '0fe836de-2242-445f-8df9-03764f5432b0',
       item_name: 'Flight',
       tax_amount: 0.0,
       total_amount: 445.27,
       unit_amount: 445.27,
-      unit_quantity: 1.0,
+      unit_quantity: 1.0
     ),
   ],
   metadata: [],
   name: 'Lolita Kunde - October expenses',
   posted_at: DateTime.iso8601('2020-05-29T02:04:59.078Z'),
   reimbursed_amount: 908.46,
-  reimbursed_at: DateTime.iso8601('2021-04-22T03:01:37.811Z'),
+  reimbursed_at: DateTime.iso8601('2021-04-22T09:05:07.151Z'),
   status: Models::Shared::AccountingExpensereportStatus::PAID,
   tax_amount: 0.0,
   total_amount: 908.46,
-  updated_at: DateTime.iso8601('2021-04-22T03:01:37.811Z'),
+  updated_at: DateTime.iso8601('2021-04-22T09:05:07.151Z')
 ), connection_id: '<id>')
 
 unless res.accounting_expensereport.nil?
@@ -121,11 +119,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.expensereport.get_accounting_expensereport(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_expensereport.nil?
@@ -165,15 +162,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingExpensereportsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingExpensereportsRequest.new(
+  connection_id: '<id>'
+)
 res = s.expensereport.list_accounting_expensereports(request: req)
 
 unless res.accounting_expensereports.nil?
@@ -204,76 +200,75 @@ Updates the AccountingExpensereport identified by `id`. Provide the unified Acco
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAccountingExpensereport" method="patch" path="/accounting/{connection_id}/expensereport/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAccountingExpensereport" method="patch" path="/accounting/{connection_id}/expensereport/{id}" example="accounting_expensereport" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAccountingExpensereportRequest.new(
   accounting_expensereport: Models::Shared::AccountingExpensereport.new(
-    approved_at: DateTime.iso8601('2021-04-22T03:01:37.817Z'),
+    approved_at: DateTime.iso8601('2021-04-22T09:05:07.154Z'),
     attachments: [],
     category_ids: [],
     created_at: DateTime.iso8601('2020-05-29T02:04:59.078Z'),
     currency: 'GBP',
     external_number: 'ER-31240',
-    id: '4491a2d1-2783-4dec-ad85-ac34a0aeb7ac',
+    id: '59a78c88-e22d-4638-a86e-f6697c163253',
     lineitems: [
       Models::Shared::AccountingLineitem.new(
-        id: 'bd2904b1-8399-4241-94c8-c2fcda4c42cc',
+        id: 'c4452ae1-39b4-44da-b0fc-fd4c3c05fea9',
         item_name: 'Conference ticket',
         tax_amount: 0.0,
         total_amount: 39.9,
         unit_amount: 39.9,
-        unit_quantity: 1.0,
+        unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'e2b85617-481b-454b-9d2f-144750330415',
+        id: '7d7ccf34-1622-44c0-8d89-f5936310dbe2',
         item_name: 'Flight',
         notes: 'Soluta omnis dolor.',
         tax_amount: 0.0,
         total_amount: 193.17,
         unit_amount: 193.17,
-        unit_quantity: 1.0,
+        unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '493d4f5f-58f4-4ea3-8d04-2ab6a61b8e62',
+        id: 'd155fd3e-bf86-4a7e-abc2-d1cdcb215e52',
         item_name: 'Client dinner',
         notes: 'Altus caveo capio.',
         tax_amount: 0.0,
         total_amount: 230.12,
         unit_amount: 230.12,
-        unit_quantity: 1.0,
+        unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '81518967-8cef-441e-908b-622c40ff6cae',
+        id: '5ad9f4fb-9c1f-4074-a3ea-1ecd0ee03ad8',
         item_name: 'Flight',
         tax_amount: 0.0,
         total_amount: 445.27,
         unit_amount: 445.27,
-        unit_quantity: 1.0,
+        unit_quantity: 1.0
       ),
     ],
     metadata: [],
     name: 'Lolita Kunde - October expenses',
     posted_at: DateTime.iso8601('2020-05-29T02:04:59.078Z'),
     reimbursed_amount: 908.46,
-    reimbursed_at: DateTime.iso8601('2021-04-22T03:01:37.817Z'),
+    reimbursed_at: DateTime.iso8601('2021-04-22T09:05:07.154Z'),
     status: Models::Shared::AccountingExpensereportStatus::PAID,
     tax_amount: 0.0,
     total_amount: 908.46,
-    updated_at: DateTime.iso8601('2021-04-22T03:01:37.817Z'),
+    updated_at: DateTime.iso8601('2021-04-22T09:05:07.154Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.expensereport.patch_accounting_expensereport(request: req)
 
 unless res.accounting_expensereport.nil?
@@ -310,11 +305,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.expensereport.remove_accounting_expensereport(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -346,76 +340,75 @@ Updates the AccountingExpensereport identified by `id`. Provide the unified Acco
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAccountingExpensereport" method="put" path="/accounting/{connection_id}/expensereport/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAccountingExpensereport" method="put" path="/accounting/{connection_id}/expensereport/{id}" example="accounting_expensereport" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAccountingExpensereportRequest.new(
   accounting_expensereport: Models::Shared::AccountingExpensereport.new(
-    approved_at: DateTime.iso8601('2021-04-22T03:01:37.817Z'),
+    approved_at: DateTime.iso8601('2021-04-22T09:05:07.154Z'),
     attachments: [],
     category_ids: [],
     created_at: DateTime.iso8601('2020-05-29T02:04:59.078Z'),
     currency: 'GBP',
     external_number: 'ER-31240',
-    id: '4491a2d1-2783-4dec-ad85-ac34a0aeb7ac',
+    id: '59a78c88-e22d-4638-a86e-f6697c163253',
     lineitems: [
       Models::Shared::AccountingLineitem.new(
-        id: 'bd2904b1-8399-4241-94c8-c2fcda4c42cc',
+        id: 'c4452ae1-39b4-44da-b0fc-fd4c3c05fea9',
         item_name: 'Conference ticket',
         tax_amount: 0.0,
         total_amount: 39.9,
         unit_amount: 39.9,
-        unit_quantity: 1.0,
+        unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'e2b85617-481b-454b-9d2f-144750330415',
+        id: '7d7ccf34-1622-44c0-8d89-f5936310dbe2',
         item_name: 'Flight',
         notes: 'Soluta omnis dolor.',
         tax_amount: 0.0,
         total_amount: 193.17,
         unit_amount: 193.17,
-        unit_quantity: 1.0,
+        unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '493d4f5f-58f4-4ea3-8d04-2ab6a61b8e62',
+        id: 'd155fd3e-bf86-4a7e-abc2-d1cdcb215e52',
         item_name: 'Client dinner',
         notes: 'Altus caveo capio.',
         tax_amount: 0.0,
         total_amount: 230.12,
         unit_amount: 230.12,
-        unit_quantity: 1.0,
+        unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '81518967-8cef-441e-908b-622c40ff6cae',
+        id: '5ad9f4fb-9c1f-4074-a3ea-1ecd0ee03ad8',
         item_name: 'Flight',
         tax_amount: 0.0,
         total_amount: 445.27,
         unit_amount: 445.27,
-        unit_quantity: 1.0,
+        unit_quantity: 1.0
       ),
     ],
     metadata: [],
     name: 'Lolita Kunde - October expenses',
     posted_at: DateTime.iso8601('2020-05-29T02:04:59.078Z'),
     reimbursed_amount: 908.46,
-    reimbursed_at: DateTime.iso8601('2021-04-22T03:01:37.817Z'),
+    reimbursed_at: DateTime.iso8601('2021-04-22T09:05:07.154Z'),
     status: Models::Shared::AccountingExpensereportStatus::PAID,
     tax_amount: 0.0,
     total_amount: 908.46,
-    updated_at: DateTime.iso8601('2021-04-22T03:01:37.817Z'),
+    updated_at: DateTime.iso8601('2021-04-22T09:05:07.154Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.expensereport.update_accounting_expensereport(request: req)
 
 unless res.accounting_expensereport.nil?

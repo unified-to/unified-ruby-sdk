@@ -2,6 +2,17 @@
 
 Current status of the shipment
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ShippingTrackingStatus::PENDING
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = ShippingTrackingStatus.deserialize("custom_value")
+```
+
 
 ## Values
 

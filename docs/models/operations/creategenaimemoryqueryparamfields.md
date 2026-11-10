@@ -1,5 +1,13 @@
 # CreateGenaiMemoryQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreateGenaiMemoryQueryParamFields::ID
+```
+
 
 ## Values
 

@@ -1,5 +1,4 @@
 # Item
-(*item*)
 
 ## Overview
 
@@ -18,24 +17,23 @@ Creates a CommerceItem. Provide the unified CommerceItem fields in the request b
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCommerceItem" method="post" path="/commerce/{connection_id}/item" -->
+<!-- UsageSnippet language="ruby" operationID="createCommerceItem" method="post" path="/commerce/{connection_id}/item" example="commerce_item" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.item.create_commerce_item(commerce_item: Models::Shared::CommerceItem.new(
   collections: [],
   created_at: DateTime.iso8601('2019-06-21T20:16:18.628Z'),
   description: 'Decretum vulnero ustulo abeo.',
   duration: 104.0,
   global_code: '978-0-85270-680-0',
-  id: 'ff71edc6-fcdd-42eb-8fe0-172185eaebf3',
+  id: '99a37033-365d-44bb-b65d-be793ad2d8aa',
   is_active: false,
   is_featured: false,
   is_taxable: true,
@@ -44,53 +42,53 @@ res = s.item.create_commerce_item(commerce_item: Models::Shared::CommerceItem.ne
     Models::Shared::CommerceItemMedia.new(
       alt: 'Caterva eveniet acies candidus.',
       height: 876.0,
-      id: 'c9731fd7-3041-44ef-b45b-09067fccfbc3',
+      id: '62078841-3e5d-43b4-a463-989be6ea8410',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: '69a9924b-89c2-4499-8508-edc7a7c80290',
+          id: 'e3df7f15-8712-4823-938d-bc49d8ad9b70',
           slug: 'doloremque',
-          value: 'allatus',
+          value: 'allatus'
         ),
       ],
       position: 21.0,
       type: Models::Shared::CommerceItemMediaType::VIDEO,
       url: 'https://picsum.photos/seed/v73y0uzyK/3001/972',
-      width: 67.0,
+      width: 67.0
     ),
     Models::Shared::CommerceItemMedia.new(
       alt: 'Comedo.',
       height: 651.0,
-      id: 'f22ae6fa-12e6-42e7-b349-e7251e79f944',
+      id: 'bfa00e5f-b536-421e-9b40-19aab8086857',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: '067df80d-0293-4203-9d1c-09659b32b3e7',
+          id: 'cbdb7e2f-56c6-473b-b3d0-62c5a7392dcd',
           slug: 'bis',
-          value: 'somniculosus',
+          value: 'somniculosus'
         ),
       ],
       position: 51.0,
       type: Models::Shared::CommerceItemMediaType::IMAGE,
       url: 'https://picsum.photos/seed/Ao4iatfO/771/3906',
-      width: 3.0,
+      width: 3.0
     ),
   ],
   metadata: [
     Models::Shared::CommerceMetadata.new(
       extra_data: {
-        "display_name": 'Custom Property',
+        'display_name' => 'Custom Property',
       },
       format: Models::Shared::CommerceMetadataFormat::TEXT,
-      id: '4cfe34a5-560a-4fda-9e96-3825a77f6eb5',
+      id: '4e2c78b0-9187-4eed-981f-33489823b218',
       namespace: 'custom',
       slug: 'custom_property',
-      value: 'abstergo',
+      value: 'abstergo'
     ),
   ],
   name: 'Handcrafted Rubber Tuna',
   prices: [
     Models::Shared::CommerceItemPrice.new(
       currency: 'USD',
-      price: 78.11,
+      price: 78.11
     ),
   ],
   public_description: 'Custodia ventus solio compono.',
@@ -103,10 +101,10 @@ res = s.item.create_commerce_item(commerce_item: Models::Shared::CommerceItem.ne
   ],
   total_stock: 682.0,
   type: 'SERVICE',
-  updated_at: DateTime.iso8601('2022-04-26T19:54:22.051Z'),
+  updated_at: DateTime.iso8601('2022-04-27T12:40:30.757Z'),
   vendor_name: 'Mayer - Flatley',
   weight: 37.0,
-  weight_unit: Models::Shared::WeightUnit::OZ,
+  weight_unit: Models::Shared::WeightUnit::OZ
 ), connection_id: '<id>')
 
 unless res.commerce_item.nil?
@@ -146,11 +144,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.item.get_commerce_item(connection_id: '<id>', id: '<id>')
 
 unless res.commerce_item.nil?
@@ -190,15 +187,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCommerceItemsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCommerceItemsRequest.new(
+  connection_id: '<id>'
+)
 res = s.item.list_commerce_items(request: req)
 
 unless res.commerce_items.nil?
@@ -229,16 +225,16 @@ Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCommerceItem" method="patch" path="/commerce/{connection_id}/item/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCommerceItem" method="patch" path="/commerce/{connection_id}/item/{id}" example="commerce_item" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchCommerceItemRequest.new(
   commerce_item: Models::Shared::CommerceItem.new(
@@ -247,7 +243,7 @@ req = Models::Operations::PatchCommerceItemRequest.new(
     description: 'Decretum vulnero ustulo abeo.',
     duration: 104.0,
     global_code: '978-0-85270-680-0',
-    id: 'b06dc403-3e33-46a5-8287-f717c5d13495',
+    id: 'c332d566-de63-4eb1-ad4a-f743f5d7481a',
     is_active: false,
     is_featured: false,
     is_taxable: true,
@@ -256,53 +252,53 @@ req = Models::Operations::PatchCommerceItemRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Caterva eveniet acies candidus.',
         height: 876.0,
-        id: 'c8c211d2-ac3c-4847-9e71-e03a39c64ede',
+        id: 'b412f9db-e685-4b32-b1e0-d99f58b4de2a',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'bb18f563-ec0f-466d-bb7d-8b70ba3d7e29',
+            id: '8b2499cc-07ee-462e-80c7-a6d174dcfdb4',
             slug: 'doloremque',
-            value: 'allatus',
+            value: 'allatus'
           ),
         ],
         position: 21.0,
         type: Models::Shared::CommerceItemMediaType::VIDEO,
         url: 'https://picsum.photos/seed/v73y0uzyK/3001/972',
-        width: 67.0,
+        width: 67.0
       ),
       Models::Shared::CommerceItemMedia.new(
         alt: 'Comedo.',
         height: 651.0,
-        id: '91b09d5c-f47a-4850-9544-eb74cd1da76b',
+        id: 'cb503d00-431a-4ed7-be84-b17f3b658fb2',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '070fb40c-dff7-4279-aa0f-56c476bed4ef',
+            id: 'b4dfbc34-4173-4431-987e-3d64337f4e9c',
             slug: 'bis',
-            value: 'somniculosus',
+            value: 'somniculosus'
           ),
         ],
         position: 51.0,
         type: Models::Shared::CommerceItemMediaType::IMAGE,
         url: 'https://picsum.photos/seed/Ao4iatfO/771/3906',
-        width: 3.0,
+        width: 3.0
       ),
     ],
     metadata: [
       Models::Shared::CommerceMetadata.new(
         extra_data: {
-          "display_name": 'Custom Property',
+          'display_name' => 'Custom Property',
         },
         format: Models::Shared::CommerceMetadataFormat::TEXT,
-        id: '223c89d3-8106-4395-93e4-d917319e353b',
+        id: '7813bf39-28d8-4bd9-b361-5fef8ce434e9',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'abstergo',
+        value: 'abstergo'
       ),
     ],
     name: 'Handcrafted Rubber Tuna',
     prices: [
       Models::Shared::CommerceItemPrice.new(
         currency: 'USD',
-        price: 78.11,
+        price: 78.11
       ),
     ],
     public_description: 'Custodia ventus solio compono.',
@@ -315,15 +311,14 @@ req = Models::Operations::PatchCommerceItemRequest.new(
     ],
     total_stock: 682.0,
     type: 'SERVICE',
-    updated_at: DateTime.iso8601('2022-04-26T19:54:22.067Z'),
+    updated_at: DateTime.iso8601('2022-04-27T12:40:30.770Z'),
     vendor_name: 'Mayer - Flatley',
     weight: 37.0,
-    weight_unit: Models::Shared::WeightUnit::OZ,
+    weight_unit: Models::Shared::WeightUnit::OZ
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.item.patch_commerce_item(request: req)
 
 unless res.commerce_item.nil?
@@ -360,11 +355,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.item.remove_commerce_item(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -396,16 +390,16 @@ Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCommerceItem" method="put" path="/commerce/{connection_id}/item/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCommerceItem" method="put" path="/commerce/{connection_id}/item/{id}" example="commerce_item" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateCommerceItemRequest.new(
   commerce_item: Models::Shared::CommerceItem.new(
@@ -414,7 +408,7 @@ req = Models::Operations::UpdateCommerceItemRequest.new(
     description: 'Decretum vulnero ustulo abeo.',
     duration: 104.0,
     global_code: '978-0-85270-680-0',
-    id: 'b06dc403-3e33-46a5-8287-f717c5d13495',
+    id: 'c332d566-de63-4eb1-ad4a-f743f5d7481a',
     is_active: false,
     is_featured: false,
     is_taxable: true,
@@ -423,53 +417,53 @@ req = Models::Operations::UpdateCommerceItemRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Caterva eveniet acies candidus.',
         height: 876.0,
-        id: 'c8c211d2-ac3c-4847-9e71-e03a39c64ede',
+        id: 'b412f9db-e685-4b32-b1e0-d99f58b4de2a',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'bb18f563-ec0f-466d-bb7d-8b70ba3d7e29',
+            id: '8b2499cc-07ee-462e-80c7-a6d174dcfdb4',
             slug: 'doloremque',
-            value: 'allatus',
+            value: 'allatus'
           ),
         ],
         position: 21.0,
         type: Models::Shared::CommerceItemMediaType::VIDEO,
         url: 'https://picsum.photos/seed/v73y0uzyK/3001/972',
-        width: 67.0,
+        width: 67.0
       ),
       Models::Shared::CommerceItemMedia.new(
         alt: 'Comedo.',
         height: 651.0,
-        id: '91b09d5c-f47a-4850-9544-eb74cd1da76b',
+        id: 'cb503d00-431a-4ed7-be84-b17f3b658fb2',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '070fb40c-dff7-4279-aa0f-56c476bed4ef',
+            id: 'b4dfbc34-4173-4431-987e-3d64337f4e9c',
             slug: 'bis',
-            value: 'somniculosus',
+            value: 'somniculosus'
           ),
         ],
         position: 51.0,
         type: Models::Shared::CommerceItemMediaType::IMAGE,
         url: 'https://picsum.photos/seed/Ao4iatfO/771/3906',
-        width: 3.0,
+        width: 3.0
       ),
     ],
     metadata: [
       Models::Shared::CommerceMetadata.new(
         extra_data: {
-          "display_name": 'Custom Property',
+          'display_name' => 'Custom Property',
         },
         format: Models::Shared::CommerceMetadataFormat::TEXT,
-        id: '223c89d3-8106-4395-93e4-d917319e353b',
+        id: '7813bf39-28d8-4bd9-b361-5fef8ce434e9',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'abstergo',
+        value: 'abstergo'
       ),
     ],
     name: 'Handcrafted Rubber Tuna',
     prices: [
       Models::Shared::CommerceItemPrice.new(
         currency: 'USD',
-        price: 78.11,
+        price: 78.11
       ),
     ],
     public_description: 'Custodia ventus solio compono.',
@@ -482,15 +476,14 @@ req = Models::Operations::UpdateCommerceItemRequest.new(
     ],
     total_stock: 682.0,
     type: 'SERVICE',
-    updated_at: DateTime.iso8601('2022-04-26T19:54:22.067Z'),
+    updated_at: DateTime.iso8601('2022-04-27T12:40:30.770Z'),
     vendor_name: 'Mayer - Flatley',
     weight: 37.0,
-    weight_unit: Models::Shared::WeightUnit::OZ,
+    weight_unit: Models::Shared::WeightUnit::OZ
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.item.update_commerce_item(request: req)
 
 unless res.commerce_item.nil?

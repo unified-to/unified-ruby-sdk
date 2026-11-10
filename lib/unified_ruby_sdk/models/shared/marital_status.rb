@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # MaritalStatus - Marital status of the patient
-      class MaritalStatus < T::Enum
-
-
+      class MaritalStatus
+        include ::Crystalline::Enum
         enums do
           MARRIED = new('MARRIED')
           SINGLE = new('SINGLE')
@@ -23,6 +21,7 @@ module UnifiedRubySDK
           UNKNOWN = new('UNKNOWN')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

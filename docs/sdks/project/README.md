@@ -1,5 +1,4 @@
 # Project
-(*project*)
 
 ## Overview
 
@@ -30,12 +29,11 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-res = s.project.create_accounting_project(accounting_project: Models::Shared::AccountingProject.new(), connection_id: '<id>')
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.project.create_accounting_project(accounting_project: Models::Shared::AccountingProject.new, connection_id: '<id>')
 
 unless res.accounting_project.nil?
   # handle response
@@ -68,47 +66,46 @@ Creates a TaskProject. Provide the unified TaskProject fields in the request bod
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createTaskProject" method="post" path="/task/{connection_id}/project" -->
+<!-- UsageSnippet language="ruby" operationID="createTaskProject" method="post" path="/task/{connection_id}/project" example="task_project" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.project.create_task_project(task_project: Models::Shared::TaskProject.new(
   created_at: DateTime.iso8601('2023-06-23T16:39:40.446Z'),
   description: 'Valetudo aggredior accommodo curiositas vox.',
   has_children: false,
   has_tasks: false,
-  id: 'f1195fc2-641a-436c-8833-c9f317281d08',
+  id: 'c4074abe-3363-42d7-b9ea-ffaac0a8006e',
   metadata: [
     Models::Shared::TaskMetadata.new(
       extra_data: {
 
       },
       format: Models::Shared::TaskMetadataFormat::TEXT,
-      id: '156babff-008b-4004-aa3b-e87e265bde0d',
+      id: '60209634-5a9e-49d2-a672-7b6df66f1eed',
       namespace: 'custom',
       slug: 'decens',
-      value: 'uterque',
+      value: 'uterque'
     ),
     Models::Shared::TaskMetadata.new(
       extra_data: {
 
       },
       format: Models::Shared::TaskMetadataFormat::TEXT,
-      id: '6825e874-26d4-4d9e-9e51-b6b933f7bcfb',
+      id: '0434740a-4a20-4f55-8a96-3ff5cbbc431b',
       namespace: 'custom',
       slug: 'benevolentia',
-      value: 'pariatur',
+      value: 'pariatur'
     ),
   ],
   name: 'Garden',
-  updated_at: DateTime.iso8601('2023-10-13T07:45:43.016Z'),
+  updated_at: DateTime.iso8601('2023-10-13T11:41:42.476Z')
 ), connection_id: '<id>')
 
 unless res.task_project.nil?
@@ -148,11 +145,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.project.get_accounting_project(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_project.nil?
@@ -192,11 +188,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.project.get_task_project(connection_id: '<id>', id: '<id>')
 
 unless res.task_project.nil?
@@ -236,15 +231,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingProjectsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingProjectsRequest.new(
+  connection_id: '<id>'
+)
 res = s.project.list_accounting_projects(request: req)
 
 unless res.accounting_projects.nil?
@@ -281,15 +275,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListTaskProjectsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListTaskProjectsRequest.new(
+  connection_id: '<id>'
+)
 res = s.project.list_task_projects(request: req)
 
 unless res.task_projects.nil?
@@ -326,17 +319,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::PatchAccountingProjectRequest.new(
-  accounting_project: Models::Shared::AccountingProject.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::PatchAccountingProjectRequest.new(
+  accounting_project: Models::Shared::AccountingProject.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.project.patch_accounting_project(request: req)
 
 unless res.accounting_project.nil?
@@ -367,16 +359,16 @@ Updates the TaskProject identified by `id`. Provide the unified TaskProject fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchTaskProject" method="patch" path="/task/{connection_id}/project/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchTaskProject" method="patch" path="/task/{connection_id}/project/{id}" example="task_project" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchTaskProjectRequest.new(
   task_project: Models::Shared::TaskProject.new(
@@ -384,36 +376,35 @@ req = Models::Operations::PatchTaskProjectRequest.new(
     description: 'Valetudo aggredior accommodo curiositas vox.',
     has_children: false,
     has_tasks: false,
-    id: '714f75d7-da0c-4bc0-bfe0-69e23d151eab',
+    id: '4d3deaa2-8801-4c98-ba89-ca45a8adbc65',
     metadata: [
       Models::Shared::TaskMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: 'eded9270-940a-46bc-829b-de5b705c04ae',
+        id: 'b066ebdd-a56a-4c0d-9584-873a3887c411',
         namespace: 'custom',
         slug: 'decens',
-        value: 'uterque',
+        value: 'uterque'
       ),
       Models::Shared::TaskMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: '16ec6e99-9971-4daa-973d-f8f756f899ad',
+        id: 'a7e6b7b7-ed8b-444d-80f6-ade32d6a9bc4',
         namespace: 'custom',
         slug: 'benevolentia',
-        value: 'pariatur',
+        value: 'pariatur'
       ),
     ],
     name: 'Garden',
-    updated_at: DateTime.iso8601('2023-10-13T07:45:43.017Z'),
+    updated_at: DateTime.iso8601('2023-10-13T11:41:42.477Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.project.patch_task_project(request: req)
 
 unless res.task_project.nil?
@@ -450,11 +441,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.project.remove_accounting_project(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -492,11 +482,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.project.remove_task_project(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -534,17 +523,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::UpdateAccountingProjectRequest.new(
-  accounting_project: Models::Shared::AccountingProject.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::UpdateAccountingProjectRequest.new(
+  accounting_project: Models::Shared::AccountingProject.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.project.update_accounting_project(request: req)
 
 unless res.accounting_project.nil?
@@ -575,16 +563,16 @@ Updates the TaskProject identified by `id`. Provide the unified TaskProject fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateTaskProject" method="put" path="/task/{connection_id}/project/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateTaskProject" method="put" path="/task/{connection_id}/project/{id}" example="task_project" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateTaskProjectRequest.new(
   task_project: Models::Shared::TaskProject.new(
@@ -592,36 +580,35 @@ req = Models::Operations::UpdateTaskProjectRequest.new(
     description: 'Valetudo aggredior accommodo curiositas vox.',
     has_children: false,
     has_tasks: false,
-    id: '714f75d7-da0c-4bc0-bfe0-69e23d151eab',
+    id: '4d3deaa2-8801-4c98-ba89-ca45a8adbc65',
     metadata: [
       Models::Shared::TaskMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: 'eded9270-940a-46bc-829b-de5b705c04ae',
+        id: 'b066ebdd-a56a-4c0d-9584-873a3887c411',
         namespace: 'custom',
         slug: 'decens',
-        value: 'uterque',
+        value: 'uterque'
       ),
       Models::Shared::TaskMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: '16ec6e99-9971-4daa-973d-f8f756f899ad',
+        id: 'a7e6b7b7-ed8b-444d-80f6-ade32d6a9bc4',
         namespace: 'custom',
         slug: 'benevolentia',
-        value: 'pariatur',
+        value: 'pariatur'
       ),
     ],
     name: 'Garden',
-    updated_at: DateTime.iso8601('2023-10-13T07:45:43.017Z'),
+    updated_at: DateTime.iso8601('2023-10-13T11:41:42.477Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.project.update_task_project(request: req)
 
 unless res.task_project.nil?

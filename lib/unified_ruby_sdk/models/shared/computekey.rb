@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class ComputeKey
         extend T::Sig
         include Crystalline::MetadataFields
 
         # When the key was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # When the key expires (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :expires_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expires_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :expires_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expires_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # SSH key fingerprint
         field :fingerprint, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('fingerprint') } }
         # Unique identifier for the key
@@ -32,19 +31,19 @@ module UnifiedRubySDK
         # SSH public key
         field :public_key, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('public_key') } }
         # Raw data from integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # Container registry URL (REGISTRY keys)
         field :registry_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('registry_url') } }
         # Registry password or secret value (write-only; never returned)
         field :secret, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('secret') } }
         # The kind of credential
-        field :type, Crystalline::Nilable.new(Models::Shared::ComputeKeyType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::ComputeKeyType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::ComputeKeyType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::ComputeKeyType, true) } }
         # When the key was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Registry or SSH username
         field :username, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('username') } }
 
-        sig { params(created_at: T.nilable(::DateTime), expires_at: T.nilable(::DateTime), fingerprint: T.nilable(::String), id: T.nilable(::String), instance_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::ComputeMetadata]), name: T.nilable(::String), private_key: T.nilable(::String), public_key: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), registry_url: T.nilable(::String), secret: T.nilable(::String), type: T.nilable(Models::Shared::ComputeKeyType), updated_at: T.nilable(::DateTime), username: T.nilable(::String)).void }
+        sig { params(created_at: T.nilable(::DateTime), expires_at: T.nilable(::DateTime), fingerprint: T.nilable(::String), id: T.nilable(::String), instance_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::ComputeMetadata]), name: T.nilable(::String), private_key: T.nilable(::String), public_key: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), registry_url: T.nilable(::String), secret: T.nilable(::String), type: T.nilable(Models::Shared::ComputeKeyType), updated_at: T.nilable(::DateTime), username: T.nilable(::String)).void }
         def initialize(created_at: nil, expires_at: nil, fingerprint: nil, id: nil, instance_id: nil, metadata: nil, name: nil, private_key: nil, public_key: nil, raw: nil, registry_url: nil, secret: nil, type: nil, updated_at: nil, username: nil)
           @created_at = created_at
           @expires_at = expires_at

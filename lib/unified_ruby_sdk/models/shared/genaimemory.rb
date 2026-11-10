@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class GenaiMemory
         extend T::Sig
@@ -16,7 +15,7 @@ module UnifiedRubySDK
         # The memory text. MEMORY nodes only.
         field :content, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # The memory store's description. Store-level folders only.
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
@@ -28,15 +27,15 @@ module UnifiedRubySDK
         # id of the parent genai_memory folder. Empty on root-level nodes.
         field :parent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # FOLDER for a memory store or a sub-folder in one, MEMORY for a memory.
-        field :type, Crystalline::Nilable.new(Models::Shared::GenaiMemoryType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::GenaiMemoryType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::GenaiMemoryType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::GenaiMemoryType, true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # The customer's own identifier for the end user that the memory belongs to.
         field :user_identifier, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_identifier') } }
 
-        sig { params(content: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::GenaiMetadata]), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), type: T.nilable(Models::Shared::GenaiMemoryType), updated_at: T.nilable(::DateTime), user_identifier: T.nilable(::String)).void }
+        sig { params(content: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::GenaiMetadata]), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), type: T.nilable(Models::Shared::GenaiMemoryType), updated_at: T.nilable(::DateTime), user_identifier: T.nilable(::String)).void }
         def initialize(content: nil, created_at: nil, description: nil, id: nil, metadata: nil, name: nil, parent_id: nil, raw: nil, type: nil, updated_at: nil, user_identifier: nil)
           @content = content
           @created_at = created_at

@@ -1,5 +1,4 @@
 # Customer
-(*customer*)
 
 ## Overview
 
@@ -18,26 +17,25 @@ Creates a TicketingCustomer. Provide the unified TicketingCustomer fields in the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createTicketingCustomer" method="post" path="/ticketing/{connection_id}/customer" -->
+<!-- UsageSnippet language="ruby" operationID="createTicketingCustomer" method="post" path="/ticketing/{connection_id}/customer" example="ticketing_customer" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.customer.create_ticketing_customer(ticketing_customer: Models::Shared::TicketingCustomer.new(
   created_at: DateTime.iso8601('2021-03-15T12:33:14.875Z'),
   emails: [
     Models::Shared::TicketingEmail.new(
       email: 'christian.windler@gmail.com',
-      type: Models::Shared::TicketingEmailType::HOME,
+      type: Models::Shared::TicketingEmailType::HOME
     ),
   ],
-  id: 'e7d16619-7530-4943-95c4-2f9c9e0a3bd1',
+  id: 'b74a97bc-2080-4f1e-b7de-1b0e15853ffa',
   metadata: [],
   name: 'Christian Windler',
   tags: [
@@ -47,18 +45,18 @@ res = s.customer.create_ticketing_customer(ticketing_customer: Models::Shared::T
   telephones: [
     Models::Shared::TicketingTelephone.new(
       telephone: '(299) 843-2042',
-      type: Models::Shared::TicketingTelephoneType::OTHER,
+      type: Models::Shared::TicketingTelephoneType::OTHER
     ),
     Models::Shared::TicketingTelephone.new(
       telephone: '(248) 482-6083',
-      type: Models::Shared::TicketingTelephoneType::MOBILE,
+      type: Models::Shared::TicketingTelephoneType::MOBILE
     ),
     Models::Shared::TicketingTelephone.new(
       telephone: '(743) 328-3214',
-      type: Models::Shared::TicketingTelephoneType::MOBILE,
+      type: Models::Shared::TicketingTelephoneType::MOBILE
     ),
   ],
-  updated_at: DateTime.iso8601('2026-06-21T19:05:55.247Z'),
+  updated_at: DateTime.iso8601('2026-06-23T11:38:07.569Z')
 ), connection_id: '<id>')
 
 unless res.ticketing_customer.nil?
@@ -98,11 +96,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.customer.get_ticketing_customer(connection_id: '<id>', id: '<id>')
 
 unless res.ticketing_customer.nil?
@@ -142,15 +139,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListTicketingCustomersRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListTicketingCustomersRequest.new(
+  connection_id: '<id>'
+)
 res = s.customer.list_ticketing_customers(request: req)
 
 unless res.ticketing_customers.nil?
@@ -181,16 +177,16 @@ Updates the TicketingCustomer identified by `id`. Provide the unified TicketingC
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchTicketingCustomer" method="patch" path="/ticketing/{connection_id}/customer/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchTicketingCustomer" method="patch" path="/ticketing/{connection_id}/customer/{id}" example="ticketing_customer" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchTicketingCustomerRequest.new(
   ticketing_customer: Models::Shared::TicketingCustomer.new(
@@ -198,10 +194,10 @@ req = Models::Operations::PatchTicketingCustomerRequest.new(
     emails: [
       Models::Shared::TicketingEmail.new(
         email: 'christian.windler@gmail.com',
-        type: Models::Shared::TicketingEmailType::HOME,
+        type: Models::Shared::TicketingEmailType::HOME
       ),
     ],
-    id: 'c9deea0e-93ce-4ce1-bc71-37eecbb01f49',
+    id: '418eb9cf-1ac1-4cf3-b008-d0b45178038f',
     metadata: [],
     name: 'Christian Windler',
     tags: [
@@ -211,23 +207,22 @@ req = Models::Operations::PatchTicketingCustomerRequest.new(
     telephones: [
       Models::Shared::TicketingTelephone.new(
         telephone: '(299) 843-2042',
-        type: Models::Shared::TicketingTelephoneType::OTHER,
+        type: Models::Shared::TicketingTelephoneType::OTHER
       ),
       Models::Shared::TicketingTelephone.new(
         telephone: '(248) 482-6083',
-        type: Models::Shared::TicketingTelephoneType::MOBILE,
+        type: Models::Shared::TicketingTelephoneType::MOBILE
       ),
       Models::Shared::TicketingTelephone.new(
         telephone: '(743) 328-3214',
-        type: Models::Shared::TicketingTelephoneType::MOBILE,
+        type: Models::Shared::TicketingTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2026-06-21T19:05:55.267Z'),
+    updated_at: DateTime.iso8601('2026-06-23T11:38:07.582Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.customer.patch_ticketing_customer(request: req)
 
 unless res.ticketing_customer.nil?
@@ -264,11 +259,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.customer.remove_ticketing_customer(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -300,16 +294,16 @@ Updates the TicketingCustomer identified by `id`. Provide the unified TicketingC
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateTicketingCustomer" method="put" path="/ticketing/{connection_id}/customer/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateTicketingCustomer" method="put" path="/ticketing/{connection_id}/customer/{id}" example="ticketing_customer" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateTicketingCustomerRequest.new(
   ticketing_customer: Models::Shared::TicketingCustomer.new(
@@ -317,10 +311,10 @@ req = Models::Operations::UpdateTicketingCustomerRequest.new(
     emails: [
       Models::Shared::TicketingEmail.new(
         email: 'christian.windler@gmail.com',
-        type: Models::Shared::TicketingEmailType::HOME,
+        type: Models::Shared::TicketingEmailType::HOME
       ),
     ],
-    id: 'c9deea0e-93ce-4ce1-bc71-37eecbb01f49',
+    id: '418eb9cf-1ac1-4cf3-b008-d0b45178038f',
     metadata: [],
     name: 'Christian Windler',
     tags: [
@@ -330,23 +324,22 @@ req = Models::Operations::UpdateTicketingCustomerRequest.new(
     telephones: [
       Models::Shared::TicketingTelephone.new(
         telephone: '(299) 843-2042',
-        type: Models::Shared::TicketingTelephoneType::OTHER,
+        type: Models::Shared::TicketingTelephoneType::OTHER
       ),
       Models::Shared::TicketingTelephone.new(
         telephone: '(248) 482-6083',
-        type: Models::Shared::TicketingTelephoneType::MOBILE,
+        type: Models::Shared::TicketingTelephoneType::MOBILE
       ),
       Models::Shared::TicketingTelephone.new(
         telephone: '(743) 328-3214',
-        type: Models::Shared::TicketingTelephoneType::MOBILE,
+        type: Models::Shared::TicketingTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2026-06-21T19:05:55.267Z'),
+    updated_at: DateTime.iso8601('2026-06-23T11:38:07.582Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.customer.update_ticketing_customer(request: req)
 
 unless res.ticketing_customer.nil?

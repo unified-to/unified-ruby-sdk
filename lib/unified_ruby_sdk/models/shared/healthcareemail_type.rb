@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # HealthcareEmailType - The kind of email address (work, home or other)
-      class HealthcareEmailType < T::Enum
-
-
+      class HealthcareEmailType
+        include ::Crystalline::Enum
         enums do
           WORK = new('WORK')
           HOME = new('HOME')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

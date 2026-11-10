@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # A connection represents a specific authentication of an integration.
       class Connection
         extend T::Sig
@@ -22,7 +21,7 @@ module UnifiedRubySDK
         # An authentication object that represents a specific authorized user's connection to an integration.
         field :auth, Crystalline::Nilable.new(Models::Shared::PropertyConnectionAuth), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('auth') } }
         # The date that this integration object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # customer's user ID
         field :external_xref, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('external_xref') } }
         # Unique identifier for this integration object
@@ -32,9 +31,9 @@ module UnifiedRubySDK
         # Whether this integration has exceed the monthly limit of the plan
         field :is_paused, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_paused') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :last_healthy_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('last_healthy_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :last_healthy_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('last_healthy_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :last_unhealthy_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('last_unhealthy_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :last_unhealthy_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('last_unhealthy_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # The HTTP status code that caused the last unhealthy status
         field :last_unhealthy_code, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('last_unhealthy_code') } }
         # the ID of the SecretsManager object
@@ -42,7 +41,7 @@ module UnifiedRubySDK
         # the key/path/name of the secret within the vault
         field :secretsmanager_key, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('secretsmanager_key') } }
         # The last date that this integration object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # (reference to KmsSpace)
         field :workspace_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('workspace_id') } }
 

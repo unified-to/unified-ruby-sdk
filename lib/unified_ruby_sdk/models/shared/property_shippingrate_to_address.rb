@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Destination address
       class PropertyShippingRateToAddress
         extend T::Sig

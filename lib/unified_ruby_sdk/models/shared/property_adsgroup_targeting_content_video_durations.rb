@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PropertyAdsGroupTargetingContentVideoDurations < T::Enum
-
-
+      class PropertyAdsGroupTargetingContentVideoDurations
+        include ::Crystalline::Enum
         enums do
           SHORT = new('SHORT')
           MEDIUM = new('MEDIUM')
           LONG = new('LONG')
         end
+        open!
       end
     end
   end

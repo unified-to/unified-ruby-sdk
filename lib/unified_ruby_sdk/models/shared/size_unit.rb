@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class SizeUnit < T::Enum
-
-
+      class SizeUnit
+        include ::Crystalline::Enum
         enums do
           CM = new('cm')
           INCH = new('inch')
         end
+        open!
       end
     end
   end

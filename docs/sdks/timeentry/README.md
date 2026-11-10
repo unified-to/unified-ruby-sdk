@@ -1,5 +1,4 @@
 # Timeentry
-(*timeentry*)
 
 ## Overview
 
@@ -18,30 +17,29 @@ Creates a LegalTimeentry. Provide the unified LegalTimeentry fields in the reque
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createLegalTimeentry" method="post" path="/legal/{connection_id}/timeentry" -->
+<!-- UsageSnippet language="ruby" operationID="createLegalTimeentry" method="post" path="/legal/{connection_id}/timeentry" example="legal_timeentry" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.timeentry.create_legal_timeentry(legal_timeentry: Models::Shared::LegalTimeentry.new(
   billable_minutes: 390.0,
   created_at: DateTime.iso8601('2022-05-06T03:26:03.756Z'),
   currency: 'ZAR',
   description: 'Ea derideo adulatio torrens.',
-  id: '96c9c243-3f89-40d6-9561-13ac4d32ee60',
+  id: '2863a02a-88a8-42a3-8ef6-80f5057091d7',
   is_billable: true,
   metadata: [],
   minutes: 390.0,
   rate_amount: 637.0,
-  total_amount: 4_140.5,
-  updated_at: DateTime.iso8601('2022-06-30T17:12:26.307Z'),
-  worked_at: DateTime.iso8601('2022-05-06T03:26:03.756Z'),
+  total_amount: 4140.5,
+  updated_at: DateTime.iso8601('2022-06-30T18:40:26.373Z'),
+  worked_at: DateTime.iso8601('2022-05-06T03:26:03.756Z')
 ), connection_id: '<id>')
 
 unless res.legal_timeentry.nil?
@@ -81,11 +79,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.timeentry.get_legal_timeentry(connection_id: '<id>', id: '<id>')
 
 unless res.legal_timeentry.nil?
@@ -125,15 +122,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListLegalTimeentriesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListLegalTimeentriesRequest.new(
+  connection_id: '<id>'
+)
 res = s.timeentry.list_legal_timeentries(request: req)
 
 unless res.legal_timeentries.nil?
@@ -164,16 +160,16 @@ Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentr
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchLegalTimeentry" method="patch" path="/legal/{connection_id}/timeentry/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchLegalTimeentry" method="patch" path="/legal/{connection_id}/timeentry/{id}" example="legal_timeentry" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchLegalTimeentryRequest.new(
   legal_timeentry: Models::Shared::LegalTimeentry.new(
@@ -181,19 +177,18 @@ req = Models::Operations::PatchLegalTimeentryRequest.new(
     created_at: DateTime.iso8601('2022-05-06T03:26:03.756Z'),
     currency: 'ZAR',
     description: 'Ea derideo adulatio torrens.',
-    id: '5fe4dda9-eba7-4b02-8f77-20c89ba5f74f',
+    id: '95fd6f1b-4826-4539-8033-c74b9fe30b8f',
     is_billable: true,
     metadata: [],
     minutes: 390.0,
     rate_amount: 637.0,
-    total_amount: 4_140.5,
-    updated_at: DateTime.iso8601('2022-06-30T17:12:26.307Z'),
-    worked_at: DateTime.iso8601('2022-05-06T03:26:03.756Z'),
+    total_amount: 4140.5,
+    updated_at: DateTime.iso8601('2022-06-30T18:40:26.374Z'),
+    worked_at: DateTime.iso8601('2022-05-06T03:26:03.756Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.timeentry.patch_legal_timeentry(request: req)
 
 unless res.legal_timeentry.nil?
@@ -230,11 +225,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.timeentry.remove_legal_timeentry(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -266,16 +260,16 @@ Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentr
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateLegalTimeentry" method="put" path="/legal/{connection_id}/timeentry/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateLegalTimeentry" method="put" path="/legal/{connection_id}/timeentry/{id}" example="legal_timeentry" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateLegalTimeentryRequest.new(
   legal_timeentry: Models::Shared::LegalTimeentry.new(
@@ -283,19 +277,18 @@ req = Models::Operations::UpdateLegalTimeentryRequest.new(
     created_at: DateTime.iso8601('2022-05-06T03:26:03.756Z'),
     currency: 'ZAR',
     description: 'Ea derideo adulatio torrens.',
-    id: '5fe4dda9-eba7-4b02-8f77-20c89ba5f74f',
+    id: '95fd6f1b-4826-4539-8033-c74b9fe30b8f',
     is_billable: true,
     metadata: [],
     minutes: 390.0,
     rate_amount: 637.0,
-    total_amount: 4_140.5,
-    updated_at: DateTime.iso8601('2022-06-30T17:12:26.307Z'),
-    worked_at: DateTime.iso8601('2022-05-06T03:26:03.756Z'),
+    total_amount: 4140.5,
+    updated_at: DateTime.iso8601('2022-06-30T18:40:26.374Z'),
+    worked_at: DateTime.iso8601('2022-05-06T03:26:03.756Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.timeentry.update_legal_timeentry(request: req)
 
 unless res.legal_timeentry.nil?

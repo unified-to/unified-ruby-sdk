@@ -1,5 +1,4 @@
 # Patient
-(*patient*)
 
 ## Overview
 
@@ -17,26 +16,25 @@ Creates a HealthcarePatient. Provide the unified HealthcarePatient fields in the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHealthcarePatient" method="post" path="/healthcare/{connection_id}/patient" -->
+<!-- UsageSnippet language="ruby" operationID="createHealthcarePatient" method="post" path="/healthcare/{connection_id}/patient" example="healthcare_patient" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.patient.create_healthcare_patient(healthcare_patient: Models::Shared::HealthcarePatient.new(
   address: Models::Shared::PropertyHealthcarePatientAddress.new(
     address1: '162 Kirlin Mall',
     city: 'Dickinsonborough',
     country: 'US',
     postal_code: '54031',
-    region: 'Nebraska',
+    region: 'Nebraska'
   ),
-  birthdate: '2025-03-03',
+  birthdate: '2025-03-04',
   contacts: [
     Models::Shared::HealthcarePatientContact.new(
       emails: [],
@@ -45,25 +43,25 @@ res = s.patient.create_healthcare_patient(healthcare_patient: Models::Shared::He
       telephones: [
         Models::Shared::HealthcareTelephone.new(
           telephone: '(695) 328-7029 x4412',
-          type: Models::Shared::HealthcareTelephoneType::MOBILE,
+          type: Models::Shared::HealthcareTelephoneType::MOBILE
         ),
-      ],
+      ]
     ),
   ],
   created_at: DateTime.iso8601('2021-06-05T21:08:04.917Z'),
   emails: [
     Models::Shared::HealthcareEmail.new(
       email: 'alejandrin.parker@icloud.com',
-      type: Models::Shared::HealthcareEmailType::HOME,
+      type: Models::Shared::HealthcareEmailType::HOME
     ),
   ],
   first_name: 'Alejandrin',
   gender: Models::Shared::HealthcarePatientGender::FEMALE,
-  id: '8bb77c72-a877-4330-bf28-b6d3d8e94106',
+  id: '37911bb2-eb24-489a-8b73-6cc6c4977591',
   identifiers: [
     Models::Shared::HealthcareIdentifier.new(
       type: Models::Shared::HealthcareIdentifierType::MRN,
-      value: '57992636',
+      value: '57992636'
     ),
   ],
   is_active: true,
@@ -76,10 +74,10 @@ res = s.patient.create_healthcare_patient(healthcare_patient: Models::Shared::He
   telephones: [
     Models::Shared::HealthcareTelephone.new(
       telephone: '1-219-555-9023 x08295',
-      type: Models::Shared::HealthcareTelephoneType::MOBILE,
+      type: Models::Shared::HealthcareTelephoneType::MOBILE
     ),
   ],
-  updated_at: DateTime.iso8601('2026-07-10T16:31:51.696Z'),
+  updated_at: DateTime.iso8601('2026-07-12T09:21:32.009Z')
 ), connection_id: '<id>')
 
 unless res.healthcare_patient.nil?
@@ -119,11 +117,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.patient.get_healthcare_patient(connection_id: '<id>', id: '<id>')
 
 unless res.healthcare_patient.nil?
@@ -163,15 +160,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHealthcarePatientsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHealthcarePatientsRequest.new(
+  connection_id: '<id>'
+)
 res = s.patient.list_healthcare_patients(request: req)
 
 unless res.healthcare_patients.nil?
@@ -202,16 +198,16 @@ Updates the HealthcarePatient identified by `id`. Provide the unified Healthcare
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHealthcarePatient" method="patch" path="/healthcare/{connection_id}/patient/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHealthcarePatient" method="patch" path="/healthcare/{connection_id}/patient/{id}" example="healthcare_patient" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchHealthcarePatientRequest.new(
   healthcare_patient: Models::Shared::HealthcarePatient.new(
@@ -220,9 +216,9 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
       city: 'Dickinsonborough',
       country: 'US',
       postal_code: '54031',
-      region: 'Nebraska',
+      region: 'Nebraska'
     ),
-    birthdate: '2025-03-03',
+    birthdate: '2025-03-04',
     contacts: [
       Models::Shared::HealthcarePatientContact.new(
         emails: [],
@@ -231,25 +227,25 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
         telephones: [
           Models::Shared::HealthcareTelephone.new(
             telephone: '(695) 328-7029 x4412',
-            type: Models::Shared::HealthcareTelephoneType::MOBILE,
+            type: Models::Shared::HealthcareTelephoneType::MOBILE
           ),
-        ],
+        ]
       ),
     ],
     created_at: DateTime.iso8601('2021-06-05T21:08:04.917Z'),
     emails: [
       Models::Shared::HealthcareEmail.new(
         email: 'alejandrin.parker@icloud.com',
-        type: Models::Shared::HealthcareEmailType::HOME,
+        type: Models::Shared::HealthcareEmailType::HOME
       ),
     ],
     first_name: 'Alejandrin',
     gender: Models::Shared::HealthcarePatientGender::FEMALE,
-    id: 'cc298c1b-97d3-4b69-91bb-b6f225331d4a',
+    id: '4c9b61f3-cc6e-465e-83c2-2cd643275791',
     identifiers: [
       Models::Shared::HealthcareIdentifier.new(
         type: Models::Shared::HealthcareIdentifierType::MRN,
-        value: '57992636',
+        value: '57992636'
       ),
     ],
     is_active: true,
@@ -262,15 +258,14 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
     telephones: [
       Models::Shared::HealthcareTelephone.new(
         telephone: '1-219-555-9023 x08295',
-        type: Models::Shared::HealthcareTelephoneType::MOBILE,
+        type: Models::Shared::HealthcareTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2026-07-10T16:31:51.754Z'),
+    updated_at: DateTime.iso8601('2026-07-12T09:21:32.033Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.patient.patch_healthcare_patient(request: req)
 
 unless res.healthcare_patient.nil?
@@ -301,16 +296,16 @@ Updates the HealthcarePatient identified by `id`. Provide the unified Healthcare
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHealthcarePatient" method="put" path="/healthcare/{connection_id}/patient/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHealthcarePatient" method="put" path="/healthcare/{connection_id}/patient/{id}" example="healthcare_patient" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateHealthcarePatientRequest.new(
   healthcare_patient: Models::Shared::HealthcarePatient.new(
@@ -319,9 +314,9 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
       city: 'Dickinsonborough',
       country: 'US',
       postal_code: '54031',
-      region: 'Nebraska',
+      region: 'Nebraska'
     ),
-    birthdate: '2025-03-03',
+    birthdate: '2025-03-04',
     contacts: [
       Models::Shared::HealthcarePatientContact.new(
         emails: [],
@@ -330,25 +325,25 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
         telephones: [
           Models::Shared::HealthcareTelephone.new(
             telephone: '(695) 328-7029 x4412',
-            type: Models::Shared::HealthcareTelephoneType::MOBILE,
+            type: Models::Shared::HealthcareTelephoneType::MOBILE
           ),
-        ],
+        ]
       ),
     ],
     created_at: DateTime.iso8601('2021-06-05T21:08:04.917Z'),
     emails: [
       Models::Shared::HealthcareEmail.new(
         email: 'alejandrin.parker@icloud.com',
-        type: Models::Shared::HealthcareEmailType::HOME,
+        type: Models::Shared::HealthcareEmailType::HOME
       ),
     ],
     first_name: 'Alejandrin',
     gender: Models::Shared::HealthcarePatientGender::FEMALE,
-    id: 'cc298c1b-97d3-4b69-91bb-b6f225331d4a',
+    id: '4c9b61f3-cc6e-465e-83c2-2cd643275791',
     identifiers: [
       Models::Shared::HealthcareIdentifier.new(
         type: Models::Shared::HealthcareIdentifierType::MRN,
-        value: '57992636',
+        value: '57992636'
       ),
     ],
     is_active: true,
@@ -361,15 +356,14 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
     telephones: [
       Models::Shared::HealthcareTelephone.new(
         telephone: '1-219-555-9023 x08295',
-        type: Models::Shared::HealthcareTelephoneType::MOBILE,
+        type: Models::Shared::HealthcareTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2026-07-10T16:31:51.754Z'),
+    updated_at: DateTime.iso8601('2026-07-12T09:21:32.033Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.patient.update_healthcare_patient(request: req)
 
 unless res.healthcare_patient.nil?

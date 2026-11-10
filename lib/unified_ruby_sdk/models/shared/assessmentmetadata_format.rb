@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # AssessmentMetadataFormat - The data type of the custom field, which determines how `value` is formatted.
-      class AssessmentMetadataFormat < T::Enum
-
-
+      class AssessmentMetadataFormat
+        include ::Crystalline::Enum
         enums do
           TEXT = new('TEXT')
           NUMBER = new('NUMBER')
@@ -27,6 +25,7 @@ module UnifiedRubySDK
           CURRENCY = new('CURRENCY')
           URL = new('URL')
         end
+        open!
       end
     end
   end

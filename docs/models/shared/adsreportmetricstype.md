@@ -1,5 +1,16 @@
 # AdsReportMetricsType
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = AdsReportMetricsType::CLICKS
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = AdsReportMetricsType.deserialize("custom_value")
+```
+
 
 ## Values
 

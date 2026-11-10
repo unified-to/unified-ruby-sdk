@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class ComputeService
         extend T::Sig
@@ -18,7 +17,7 @@ module UnifiedRubySDK
         # Build command
         field :build_command, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('build_command') } }
         # When the service was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Environment variables (write-only values) set when creating the service
         field :env, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ComputeEnv)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('env') } }
         # The plan or instance type the service runs on
@@ -40,7 +39,7 @@ module UnifiedRubySDK
         # Vendor project, team or environment that groups the service (reference to TaskProject)
         field :project_identifier, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('project_identifier') } }
         # Raw data from integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # The region the service runs in
         field :region_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('region_id') } }
         # Source repository URL
@@ -52,15 +51,15 @@ module UnifiedRubySDK
         # Start command
         field :start_command, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_command') } }
         # Normalized status; set to SUSPENDED or LIVE on update to suspend or resume
-        field :status, Crystalline::Nilable.new(Models::Shared::ComputeServiceStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::ComputeServiceStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::ComputeServiceStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::ComputeServiceStatus, true) } }
         # The kind of service
-        field :type, Crystalline::Nilable.new(Models::Shared::ComputeServiceType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::ComputeServiceType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::ComputeServiceType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::ComputeServiceType, true) } }
         # When the service was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Public URL of the service
         field :url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
 
-        sig { params(branch: T.nilable(::String), build_command: T.nilable(::String), created_at: T.nilable(::DateTime), env: T.nilable(T::Array[Models::Shared::ComputeEnv]), gputype_id: T.nilable(::String), id: T.nilable(::String), image: T.nilable(::String), instance_count: T.nilable(::Float), max_instance_count: T.nilable(::Float), metadata: T.nilable(T::Array[Models::Shared::ComputeMetadata]), min_instance_count: T.nilable(::Float), name: T.nilable(::String), project_identifier: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), region_id: T.nilable(::String), repo_url: T.nilable(::String), runtime: T.nilable(::String), sku: T.nilable(::String), start_command: T.nilable(::String), status: T.nilable(Models::Shared::ComputeServiceStatus), type: T.nilable(Models::Shared::ComputeServiceType), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
+        sig { params(branch: T.nilable(::String), build_command: T.nilable(::String), created_at: T.nilable(::DateTime), env: T.nilable(T::Array[Models::Shared::ComputeEnv]), gputype_id: T.nilable(::String), id: T.nilable(::String), image: T.nilable(::String), instance_count: T.nilable(::Float), max_instance_count: T.nilable(::Float), metadata: T.nilable(T::Array[Models::Shared::ComputeMetadata]), min_instance_count: T.nilable(::Float), name: T.nilable(::String), project_identifier: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), region_id: T.nilable(::String), repo_url: T.nilable(::String), runtime: T.nilable(::String), sku: T.nilable(::String), start_command: T.nilable(::String), status: T.nilable(Models::Shared::ComputeServiceStatus), type: T.nilable(Models::Shared::ComputeServiceType), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
         def initialize(branch: nil, build_command: nil, created_at: nil, env: nil, gputype_id: nil, id: nil, image: nil, instance_count: nil, max_instance_count: nil, metadata: nil, min_instance_count: nil, name: nil, project_identifier: nil, raw: nil, region_id: nil, repo_url: nil, runtime: nil, sku: nil, start_command: nil, status: nil, type: nil, updated_at: nil, url: nil)
           @branch = branch
           @build_command = build_command

@@ -7,14 +7,13 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class CrmTaxonomyType < T::Enum
-
-
+      class CrmTaxonomyType
+        include ::Crystalline::Enum
         enums do
           INDUSTRY = new('INDUSTRY')
         end
+        open!
       end
     end
   end

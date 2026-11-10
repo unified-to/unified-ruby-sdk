@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # PropertyHrisPayslipDeductionCoverageLevel - Level selected by employee (e.g. "FAMILY", "EMPLOYEE_ONLY", or other)
-      class PropertyHrisPayslipDeductionCoverageLevel < T::Enum
-
-
+      class PropertyHrisPayslipDeductionCoverageLevel
+        include ::Crystalline::Enum
         enums do
           EMPLOYEE_ONLY = new('EMPLOYEE_ONLY')
           EMPLOYEE_SPOUSE = new('EMPLOYEE_SPOUSE')
@@ -21,6 +19,7 @@ module UnifiedRubySDK
           FAMILY = new('FAMILY')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

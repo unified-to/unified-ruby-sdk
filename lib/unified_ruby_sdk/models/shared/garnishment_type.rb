@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # GarnishmentType - set when this deduction is a court-ordered garnishment
-      class GarnishmentType < T::Enum
-
-
+      class GarnishmentType
+        include ::Crystalline::Enum
         enums do
           CHILD_SUPPORT = new('CHILD_SUPPORT')
           TAX_LEVY = new('TAX_LEVY')
@@ -20,6 +18,7 @@ module UnifiedRubySDK
           BANKRUPTCY = new('BANKRUPTCY')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

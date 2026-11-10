@@ -2,6 +2,17 @@
 
 Status of the document
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = HealthcareDocumentStatus::CURRENT
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = HealthcareDocumentStatus.deserialize("custom_value")
+```
+
 
 ## Values
 

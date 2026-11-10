@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class CdpDestination
         extend T::Sig
         include Crystalline::MetadataFields
 
         # The date that this destination object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # DESTINATION, or BIDIRECTIONAL for import+export connectors
-        field :direction, Crystalline::Nilable.new(Models::Shared::Direction), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('direction'), 'decoder': Utils.enum_from_string(Models::Shared::Direction, true) } }
+        field :direction, Crystalline::Nilable.new(Models::Shared::Direction), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('direction'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::Direction, true) } }
         # Unique identifier for this destination object
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # Whether the destination is active/enabled
@@ -26,15 +25,15 @@ module UnifiedRubySDK
         # The name of the outbound activation destination
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # The raw data returned by the integration for this destination
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # A stable handle/key for the destination
         field :slug, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('slug') } }
         # The connector/destination type (eg. the provider's connector slug or plugin id)
         field :type, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
         # The last date that this destination object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(created_at: T.nilable(::DateTime), direction: T.nilable(Models::Shared::Direction), id: T.nilable(::String), is_enabled: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::CdpMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), slug: T.nilable(::String), type: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        sig { params(created_at: T.nilable(::DateTime), direction: T.nilable(Models::Shared::Direction), id: T.nilable(::String), is_enabled: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::CdpMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), slug: T.nilable(::String), type: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
         def initialize(created_at: nil, direction: nil, id: nil, is_enabled: nil, metadata: nil, name: nil, raw: nil, slug: nil, type: nil, updated_at: nil)
           @created_at = created_at
           @direction = direction

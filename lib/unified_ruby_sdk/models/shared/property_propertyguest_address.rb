@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # postal address of the guest
       class PropertyPropertyGuestAddress
         extend T::Sig

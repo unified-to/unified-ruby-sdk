@@ -1,5 +1,13 @@
 # UpdateTaskCommentQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = UpdateTaskCommentQueryParamFields::ID
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # CreatePropertyQuoteQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreatePropertyQuoteQueryParamFields::ID
+```
+
 
 ## Values
 

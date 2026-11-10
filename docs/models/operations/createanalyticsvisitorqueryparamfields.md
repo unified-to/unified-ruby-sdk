@@ -1,5 +1,13 @@
 # CreateAnalyticsVisitorQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreateAnalyticsVisitorQueryParamFields::ID
+```
+
 
 ## Values
 

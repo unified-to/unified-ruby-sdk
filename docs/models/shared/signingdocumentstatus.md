@@ -2,6 +2,17 @@
 
 Current status of the signing document
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = SigningDocumentStatus::DRAFT
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = SigningDocumentStatus.deserialize("custom_value")
+```
+
 
 ## Values
 

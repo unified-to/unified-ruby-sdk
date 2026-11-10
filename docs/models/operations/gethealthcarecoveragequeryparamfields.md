@@ -1,5 +1,13 @@
 # GetHealthcareCoverageQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetHealthcareCoverageQueryParamFields::ID
+```
+
 
 ## Values
 

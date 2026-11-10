@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class ComputeTemplate
         extend T::Sig
@@ -18,7 +17,7 @@ module UnifiedRubySDK
         # Default number of vCPUs
         field :cpu_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cpu_count') } }
         # When the template was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Default disk in MiB
         field :disk_mb, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('disk_mb') } }
         # Dockerfile used to build the template
@@ -28,7 +27,7 @@ module UnifiedRubySDK
         # Default number of GPUs
         field :gpu_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gpu_count') } }
         # Default GPU model
-        field :gpu_model, Crystalline::Nilable.new(Models::Shared::ComputeTemplateGpuModel), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gpu_model'), 'decoder': Utils.enum_from_string(Models::Shared::ComputeTemplateGpuModel, true) } }
+        field :gpu_model, Crystalline::Nilable.new(Models::Shared::ComputeTemplateGpuModel), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gpu_model'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::ComputeTemplateGpuModel, true) } }
         # Unique identifier for the template
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # Container or OS image
@@ -36,7 +35,7 @@ module UnifiedRubySDK
         # Whether the template is publicly shared
         field :is_public, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_public') } }
         # When an instance was last started from this template (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :last_used_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('last_used_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :last_used_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('last_used_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Default memory in MiB
         field :memory_mb, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('memory_mb') } }
         # Vendor labels, tags and metadata
@@ -46,15 +45,15 @@ module UnifiedRubySDK
         # Ports exposed by instances from this template
         field :ports, Crystalline::Nilable.new(Crystalline::Array.new(::Float)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ports') } }
         # Raw data from integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # Command run when an instance starts
         field :start_command, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_command') } }
         # Normalized build status
-        field :status, Crystalline::Nilable.new(Models::Shared::ComputeTemplateStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::ComputeTemplateStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::ComputeTemplateStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::ComputeTemplateStatus, true) } }
         # When the template was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(aliases: T.nilable(T::Array[::String]), cpu_count: T.nilable(::Float), created_at: T.nilable(::DateTime), disk_mb: T.nilable(::Float), dockerfile: T.nilable(::String), env: T.nilable(T::Array[Models::Shared::ComputeEnv]), gpu_count: T.nilable(::Float), gpu_model: T.nilable(Models::Shared::ComputeTemplateGpuModel), id: T.nilable(::String), image: T.nilable(::String), is_public: T.nilable(T::Boolean), last_used_at: T.nilable(::DateTime), memory_mb: T.nilable(::Float), metadata: T.nilable(T::Array[Models::Shared::ComputeMetadata]), name: T.nilable(::String), ports: T.nilable(T::Array[::Float]), raw: T.nilable(T::Hash[Symbol, ::Object]), start_command: T.nilable(::String), status: T.nilable(Models::Shared::ComputeTemplateStatus), updated_at: T.nilable(::DateTime)).void }
+        sig { params(aliases: T.nilable(T::Array[::String]), cpu_count: T.nilable(::Float), created_at: T.nilable(::DateTime), disk_mb: T.nilable(::Float), dockerfile: T.nilable(::String), env: T.nilable(T::Array[Models::Shared::ComputeEnv]), gpu_count: T.nilable(::Float), gpu_model: T.nilable(Models::Shared::ComputeTemplateGpuModel), id: T.nilable(::String), image: T.nilable(::String), is_public: T.nilable(T::Boolean), last_used_at: T.nilable(::DateTime), memory_mb: T.nilable(::Float), metadata: T.nilable(T::Array[Models::Shared::ComputeMetadata]), name: T.nilable(::String), ports: T.nilable(T::Array[::Float]), raw: T.nilable(T::Hash[::Symbol, ::Object]), start_command: T.nilable(::String), status: T.nilable(Models::Shared::ComputeTemplateStatus), updated_at: T.nilable(::DateTime)).void }
         def initialize(aliases: nil, cpu_count: nil, created_at: nil, disk_mb: nil, dockerfile: nil, env: nil, gpu_count: nil, gpu_model: nil, id: nil, image: nil, is_public: nil, last_used_at: nil, memory_mb: nil, metadata: nil, name: nil, ports: nil, raw: nil, start_command: nil, status: nil, updated_at: nil)
           @aliases = aliases
           @cpu_count = cpu_count

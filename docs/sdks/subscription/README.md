@@ -1,5 +1,4 @@
 # Subscription
-(*subscription*)
 
 ## Overview
 
@@ -18,17 +17,16 @@ Creates a PaymentSubscription. Provide the unified PaymentSubscription fields in
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createPaymentSubscription" method="post" path="/payment/{connection_id}/subscription" -->
+<!-- UsageSnippet language="ruby" operationID="createPaymentSubscription" method="post" path="/payment/{connection_id}/subscription" example="payment_subscription" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.subscription.create_payment_subscription(payment_subscription: Models::Shared::PaymentSubscription.new(
   created_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
   currency: 'USD',
@@ -36,7 +34,7 @@ res = s.subscription.create_payment_subscription(payment_subscription: Models::S
   current_period_start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
   day_of_month: 8.0,
   description: 'Innovative Mouse featuring important technology and Bamboo construction',
-  id: 'ee74ac00-4667-4919-942f-e006c3a21228',
+  id: '08f4adca-c960-407e-b79e-c545ea9c6a07',
   interval: 1.0,
   interval_unit: Models::Shared::IntervalUnit::YEAR,
   lineitems: [],
@@ -45,7 +43,7 @@ res = s.subscription.create_payment_subscription(payment_subscription: Models::S
   start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
   status: Models::Shared::PaymentSubscriptionStatus::ACTIVE,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2023-10-06T18:47:43.089Z'),
+  updated_at: DateTime.iso8601('2023-10-06T23:56:08.307Z')
 ), connection_id: '<id>')
 
 unless res.payment_subscription.nil?
@@ -85,11 +83,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.subscription.get_payment_subscription(connection_id: '<id>', id: '<id>')
 
 unless res.payment_subscription.nil?
@@ -129,15 +126,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListPaymentSubscriptionsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListPaymentSubscriptionsRequest.new(
+  connection_id: '<id>'
+)
 res = s.subscription.list_payment_subscriptions(request: req)
 
 unless res.payment_subscriptions.nil?
@@ -168,16 +164,16 @@ Updates the PaymentSubscription identified by `id`. Provide the unified PaymentS
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchPaymentSubscription" method="patch" path="/payment/{connection_id}/subscription/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchPaymentSubscription" method="patch" path="/payment/{connection_id}/subscription/{id}" example="payment_subscription" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchPaymentSubscriptionRequest.new(
   payment_subscription: Models::Shared::PaymentSubscription.new(
@@ -187,7 +183,7 @@ req = Models::Operations::PatchPaymentSubscriptionRequest.new(
     current_period_start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     day_of_month: 8.0,
     description: 'Innovative Mouse featuring important technology and Bamboo construction',
-    id: '98858235-bf3e-4d14-b138-41b505d8107d',
+    id: 'bd2b5548-a343-4150-80fa-95ab43904dd3',
     interval: 1.0,
     interval_unit: Models::Shared::IntervalUnit::YEAR,
     lineitems: [],
@@ -196,12 +192,11 @@ req = Models::Operations::PatchPaymentSubscriptionRequest.new(
     start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     status: Models::Shared::PaymentSubscriptionStatus::ACTIVE,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-10-06T18:47:43.093Z'),
+    updated_at: DateTime.iso8601('2023-10-06T23:56:08.309Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.subscription.patch_payment_subscription(request: req)
 
 unless res.payment_subscription.nil?
@@ -238,11 +233,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.subscription.remove_payment_subscription(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -274,16 +268,16 @@ Updates the PaymentSubscription identified by `id`. Provide the unified PaymentS
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updatePaymentSubscription" method="put" path="/payment/{connection_id}/subscription/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updatePaymentSubscription" method="put" path="/payment/{connection_id}/subscription/{id}" example="payment_subscription" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdatePaymentSubscriptionRequest.new(
   payment_subscription: Models::Shared::PaymentSubscription.new(
@@ -293,7 +287,7 @@ req = Models::Operations::UpdatePaymentSubscriptionRequest.new(
     current_period_start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     day_of_month: 8.0,
     description: 'Innovative Mouse featuring important technology and Bamboo construction',
-    id: '98858235-bf3e-4d14-b138-41b505d8107d',
+    id: 'bd2b5548-a343-4150-80fa-95ab43904dd3',
     interval: 1.0,
     interval_unit: Models::Shared::IntervalUnit::YEAR,
     lineitems: [],
@@ -302,12 +296,11 @@ req = Models::Operations::UpdatePaymentSubscriptionRequest.new(
     start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     status: Models::Shared::PaymentSubscriptionStatus::ACTIVE,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-10-06T18:47:43.093Z'),
+    updated_at: DateTime.iso8601('2023-10-06T23:56:08.309Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.subscription.update_payment_subscription(request: req)
 
 unless res.payment_subscription.nil?

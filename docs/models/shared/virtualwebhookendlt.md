@@ -1,5 +1,16 @@
 # VirtualWebhookEndLt
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = VirtualWebhookEndLt::SUPPORTED_REQUIRED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = VirtualWebhookEndLt.deserialize("custom_value")
+```
+
 
 ## Values
 

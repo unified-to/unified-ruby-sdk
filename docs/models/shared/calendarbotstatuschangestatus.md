@@ -1,5 +1,16 @@
 # CalendarBotStatusChangeStatus
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CalendarBotStatusChangeStatus::READY
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = CalendarBotStatusChangeStatus.deserialize("custom_value")
+```
+
 
 ## Values
 

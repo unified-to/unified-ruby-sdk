@@ -1,5 +1,13 @@
 # ListPlmDocumentsQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListPlmDocumentsQueryParamFields::ID
+```
+
 
 ## Values
 

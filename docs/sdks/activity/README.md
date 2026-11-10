@@ -1,5 +1,4 @@
 # Activity
-(*activity*)
 
 ## Overview
 
@@ -26,21 +25,20 @@ Creates a AtsActivity. Provide the unified AtsActivity fields in the request bod
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAtsActivity" method="post" path="/ats/{connection_id}/activity" -->
+<!-- UsageSnippet language="ruby" operationID="createAtsActivity" method="post" path="/ats/{connection_id}/activity" example="ats_activity" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.activity.create_ats_activity(ats_activity: Models::Shared::AtsActivity.new(
   created_at: DateTime.iso8601('2022-08-07T03:16:43.865Z'),
   description: 'Sapiente.',
-  id: 'c0c24e8f-72f7-4118-994a-5979f6b18d3a',
+  id: '25d3ffbd-8140-4418-9869-3e3589be6815',
   is_private: false,
   metadata: [
     Models::Shared::AtsMetadata.new(
@@ -48,16 +46,16 @@ res = s.activity.create_ats_activity(ats_activity: Models::Shared::AtsActivity.n
 
       },
       format: Models::Shared::AtsMetadataFormat::TEXT,
-      id: 'b9308041-c076-45b8-a1b3-ba6d88fa60e4',
+      id: '6063a209-f53e-461a-925a-3b54e1f18ef5',
       namespace: 'activity',
       slug: 'cimentarius',
-      value: 'Reprehenderit verto.',
+      value: 'Reprehenderit verto.'
     ),
   ],
   sub_type: 'TASK',
   title: 'Venio blandior aureus.',
   type: Models::Shared::AtsActivityType::TASK,
-  updated_at: DateTime.iso8601('2026-04-20T19:27:41.530Z'),
+  updated_at: DateTime.iso8601('2026-04-22T09:17:47.551Z')
 ), connection_id: '<id>')
 
 unless res.ats_activity.nil?
@@ -91,28 +89,27 @@ Creates a LmsActivity. Provide the unified LmsActivity fields in the request bod
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createLmsActivity" method="post" path="/lms/{connection_id}/activity" -->
+<!-- UsageSnippet language="ruby" operationID="createLmsActivity" method="post" path="/lms/{connection_id}/activity" example="lms_activity" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.activity.create_lms_activity(lms_activity: Models::Shared::LmsActivity.new(
   assigned_grade: 'summopere',
-  completed_at: DateTime.iso8601('2023-12-15T21:36:35.983Z'),
+  completed_at: DateTime.iso8601('2023-12-16T20:17:42.675Z'),
   created_at: DateTime.iso8601('2020-10-17T01:25:21.745Z'),
   duration_minutes: 55.0,
-  id: 'f3e24672-9714-4557-a828-f80629b5b131',
+  id: 'f710c8ed-802a-4f72-a624-c02d66f95037',
   is_completed: true,
   metadata: [],
   progress_percentage: 100.0,
-  started_at: DateTime.iso8601('2021-04-26T19:54:10.195Z'),
-  updated_at: DateTime.iso8601('2022-02-04T01:33:16.813Z'),
+  started_at: DateTime.iso8601('2021-04-26T23:40:11.560Z'),
+  updated_at: DateTime.iso8601('2022-02-04T10:53:07.691Z')
 ), connection_id: '<id>')
 
 unless res.lms_activity.nil?
@@ -152,11 +149,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.activity.get_ats_activity(connection_id: '<id>', id: '<id>')
 
 unless res.ats_activity.nil?
@@ -196,11 +192,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.activity.get_clubs_activity(connection_id: '<id>', id: '<id>')
 
 unless res.clubs_activity.nil?
@@ -240,11 +235,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.activity.get_lms_activity(connection_id: '<id>', id: '<id>')
 
 unless res.lms_activity.nil?
@@ -284,15 +278,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAtsActivitiesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAtsActivitiesRequest.new(
+  connection_id: '<id>'
+)
 res = s.activity.list_ats_activities(request: req)
 
 unless res.ats_activities.nil?
@@ -329,15 +322,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListClubsActivitiesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListClubsActivitiesRequest.new(
+  connection_id: '<id>'
+)
 res = s.activity.list_clubs_activities(request: req)
 
 unless res.clubs_activities.nil?
@@ -374,15 +366,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListLmsActivitiesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListLmsActivitiesRequest.new(
+  connection_id: '<id>'
+)
 res = s.activity.list_lms_activities(request: req)
 
 unless res.lms_activities.nil?
@@ -413,22 +404,22 @@ Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAtsActivity" method="patch" path="/ats/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAtsActivity" method="patch" path="/ats/{connection_id}/activity/{id}" example="ats_activity" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAtsActivityRequest.new(
   ats_activity: Models::Shared::AtsActivity.new(
     created_at: DateTime.iso8601('2022-08-07T03:16:43.865Z'),
     description: 'Sapiente.',
-    id: '5dd49ad4-0f71-47b3-9b00-2f1bc65c61a7',
+    id: '21ddcf60-b42f-4d98-ac8a-14c444562969',
     is_private: false,
     metadata: [
       Models::Shared::AtsMetadata.new(
@@ -436,21 +427,20 @@ req = Models::Operations::PatchAtsActivityRequest.new(
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '1cc40937-5e0f-47f2-8eff-5d3c7abec405',
+        id: 'd1ac8e69-aaed-4f27-bb5b-c4768373867b',
         namespace: 'activity',
         slug: 'cimentarius',
-        value: 'Reprehenderit verto.',
+        value: 'Reprehenderit verto.'
       ),
     ],
     sub_type: 'TASK',
     title: 'Venio blandior aureus.',
     type: Models::Shared::AtsActivityType::TASK,
-    updated_at: DateTime.iso8601('2026-04-20T19:27:41.556Z'),
+    updated_at: DateTime.iso8601('2026-04-22T09:17:47.571Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.activity.patch_ats_activity(request: req)
 
 unless res.ats_activity.nil?
@@ -481,34 +471,33 @@ Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchLmsActivity" method="patch" path="/lms/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchLmsActivity" method="patch" path="/lms/{connection_id}/activity/{id}" example="lms_activity" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchLmsActivityRequest.new(
   lms_activity: Models::Shared::LmsActivity.new(
     assigned_grade: 'summopere',
-    completed_at: DateTime.iso8601('2023-12-15T21:36:35.990Z'),
+    completed_at: DateTime.iso8601('2023-12-16T20:17:42.684Z'),
     created_at: DateTime.iso8601('2020-10-17T01:25:21.745Z'),
     duration_minutes: 55.0,
-    id: '0752b646-57e4-408a-9459-bf77894a0631',
+    id: '8dd9fe7a-4545-4ebf-a45d-a252f3a8297e',
     is_completed: true,
     metadata: [],
     progress_percentage: 100.0,
-    started_at: DateTime.iso8601('2021-04-26T19:54:10.196Z'),
-    updated_at: DateTime.iso8601('2022-02-04T01:33:16.816Z'),
+    started_at: DateTime.iso8601('2021-04-26T23:40:11.561Z'),
+    updated_at: DateTime.iso8601('2022-02-04T10:53:07.694Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.activity.patch_lms_activity(request: req)
 
 unless res.lms_activity.nil?
@@ -545,11 +534,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.activity.remove_ats_activity(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -587,11 +575,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.activity.remove_lms_activity(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -623,22 +610,22 @@ Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAtsActivity" method="put" path="/ats/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAtsActivity" method="put" path="/ats/{connection_id}/activity/{id}" example="ats_activity" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAtsActivityRequest.new(
   ats_activity: Models::Shared::AtsActivity.new(
     created_at: DateTime.iso8601('2022-08-07T03:16:43.865Z'),
     description: 'Sapiente.',
-    id: '5dd49ad4-0f71-47b3-9b00-2f1bc65c61a7',
+    id: '21ddcf60-b42f-4d98-ac8a-14c444562969',
     is_private: false,
     metadata: [
       Models::Shared::AtsMetadata.new(
@@ -646,21 +633,20 @@ req = Models::Operations::UpdateAtsActivityRequest.new(
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '1cc40937-5e0f-47f2-8eff-5d3c7abec405',
+        id: 'd1ac8e69-aaed-4f27-bb5b-c4768373867b',
         namespace: 'activity',
         slug: 'cimentarius',
-        value: 'Reprehenderit verto.',
+        value: 'Reprehenderit verto.'
       ),
     ],
     sub_type: 'TASK',
     title: 'Venio blandior aureus.',
     type: Models::Shared::AtsActivityType::TASK,
-    updated_at: DateTime.iso8601('2026-04-20T19:27:41.556Z'),
+    updated_at: DateTime.iso8601('2026-04-22T09:17:47.571Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.activity.update_ats_activity(request: req)
 
 unless res.ats_activity.nil?
@@ -691,34 +677,33 @@ Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateLmsActivity" method="put" path="/lms/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateLmsActivity" method="put" path="/lms/{connection_id}/activity/{id}" example="lms_activity" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateLmsActivityRequest.new(
   lms_activity: Models::Shared::LmsActivity.new(
     assigned_grade: 'summopere',
-    completed_at: DateTime.iso8601('2023-12-15T21:36:35.990Z'),
+    completed_at: DateTime.iso8601('2023-12-16T20:17:42.684Z'),
     created_at: DateTime.iso8601('2020-10-17T01:25:21.745Z'),
     duration_minutes: 55.0,
-    id: '0752b646-57e4-408a-9459-bf77894a0631',
+    id: '8dd9fe7a-4545-4ebf-a45d-a252f3a8297e',
     is_completed: true,
     metadata: [],
     progress_percentage: 100.0,
-    started_at: DateTime.iso8601('2021-04-26T19:54:10.196Z'),
-    updated_at: DateTime.iso8601('2022-02-04T01:33:16.816Z'),
+    started_at: DateTime.iso8601('2021-04-26T23:40:11.561Z'),
+    updated_at: DateTime.iso8601('2022-02-04T10:53:07.694Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.activity.update_lms_activity(request: req)
 
 unless res.lms_activity.nil?

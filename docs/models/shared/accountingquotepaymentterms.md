@@ -2,6 +2,17 @@
 
 unified payment terms enum, as on accounting_invoice / accounting_bill
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = AccountingQuotePaymentTerms::ON_RECEIPT
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = AccountingQuotePaymentTerms.deserialize("custom_value")
+```
+
 
 ## Values
 

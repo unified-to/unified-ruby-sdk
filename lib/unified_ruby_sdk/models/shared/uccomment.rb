@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class UcComment
         extend T::Sig
@@ -24,13 +23,13 @@ module UnifiedRubySDK
 
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::UcMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at') } }
         # reference to HrisEmployee (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(call_id: T.nilable(::String), content: T.nilable(::String), created_at: T.nilable(::String), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::UcMetadata]), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::String), user_id: T.nilable(::String)).void }
+        sig { params(call_id: T.nilable(::String), content: T.nilable(::String), created_at: T.nilable(::String), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::UcMetadata]), raw: T.nilable(T::Hash[::Symbol, ::Object]), updated_at: T.nilable(::String), user_id: T.nilable(::String)).void }
         def initialize(call_id: nil, content: nil, created_at: nil, id: nil, metadata: nil, raw: nil, updated_at: nil, user_id: nil)
           @call_id = call_id
           @content = content

@@ -1,5 +1,16 @@
 # VirtualWebhookUpdatedGte
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = VirtualWebhookUpdatedGte::SUPPORTED_REQUIRED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = VirtualWebhookUpdatedGte.deserialize("custom_value")
+```
+
 
 ## Values
 

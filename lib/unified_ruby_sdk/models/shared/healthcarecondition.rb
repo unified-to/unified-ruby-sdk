@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class HealthcareCondition
         extend T::Sig
@@ -16,7 +15,7 @@ module UnifiedRubySDK
         # Codings for the condition (e.g. ICD-10, SNOMED CT)
         field :codes, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HealthcareCode)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('codes') } }
         # When the condition record was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # The encounter in which the condition was recorded
         field :encounter_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('encounter_id') } }
         # Unique identifier for the condition
@@ -28,25 +27,25 @@ module UnifiedRubySDK
         # Free-text notes about the condition
         field :notes, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
         # When the condition began (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :onset_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('onset_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :onset_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('onset_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # The patient who has the condition
         field :patient_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('patient_id') } }
         # The practitioner who recorded or asserted the condition
         field :practitioner_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('practitioner_id') } }
         # Raw data from integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # When the condition was recorded (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :recorded_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('recorded_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :recorded_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('recorded_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # When the condition resolved (abatement) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :resolved_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('resolved_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :resolved_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('resolved_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Clinical status of the condition
-        field :status, Crystalline::Nilable.new(Models::Shared::HealthcareConditionStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::HealthcareConditionStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::HealthcareConditionStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::HealthcareConditionStatus, true) } }
         # Category of the condition
-        field :type, Crystalline::Nilable.new(Models::Shared::HealthcareConditionType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::HealthcareConditionType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::HealthcareConditionType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::HealthcareConditionType, true) } }
         # When the condition record was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(codes: T.nilable(T::Array[Models::Shared::HealthcareCode]), created_at: T.nilable(::DateTime), encounter_id: T.nilable(::String), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HealthcareMetadata]), name: T.nilable(::String), notes: T.nilable(::String), onset_at: T.nilable(::DateTime), patient_id: T.nilable(::String), practitioner_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), recorded_at: T.nilable(::DateTime), resolved_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::HealthcareConditionStatus), type: T.nilable(Models::Shared::HealthcareConditionType), updated_at: T.nilable(::DateTime)).void }
+        sig { params(codes: T.nilable(T::Array[Models::Shared::HealthcareCode]), created_at: T.nilable(::DateTime), encounter_id: T.nilable(::String), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HealthcareMetadata]), name: T.nilable(::String), notes: T.nilable(::String), onset_at: T.nilable(::DateTime), patient_id: T.nilable(::String), practitioner_id: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), recorded_at: T.nilable(::DateTime), resolved_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::HealthcareConditionStatus), type: T.nilable(Models::Shared::HealthcareConditionType), updated_at: T.nilable(::DateTime)).void }
         def initialize(codes: nil, created_at: nil, encounter_id: nil, id: nil, metadata: nil, name: nil, notes: nil, onset_at: nil, patient_id: nil, practitioner_id: nil, raw: nil, recorded_at: nil, resolved_at: nil, status: nil, type: nil, updated_at: nil)
           @codes = codes
           @created_at = created_at

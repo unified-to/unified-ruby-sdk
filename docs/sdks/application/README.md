@@ -1,5 +1,4 @@
 # Application
-(*application*)
 
 ## Overview
 
@@ -18,44 +17,43 @@ Creates a AtsApplication. Provide the unified AtsApplication fields in the reque
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAtsApplication" method="post" path="/ats/{connection_id}/application" -->
+<!-- UsageSnippet language="ruby" operationID="createAtsApplication" method="post" path="/ats/{connection_id}/application" example="ats_application" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.application.create_ats_application(ats_application: Models::Shared::AtsApplication.new(
   answers: [],
-  applied_at: DateTime.iso8601('2025-10-12T02:38:14.150Z'),
+  applied_at: DateTime.iso8601('2025-10-13T06:51:13.161Z'),
   created_at: DateTime.iso8601('2023-10-17T07:19:48.787Z'),
-  hired_at: DateTime.iso8601('2026-05-28T23:46:32.962Z'),
-  id: '4f1727e9-e5cf-4c59-95e8-64c4b53e8e1b',
+  hired_at: DateTime.iso8601('2026-05-30T12:53:24.681Z'),
+  id: '1465bd58-0346-4e89-9524-bfb3bb8301dd',
   metadata: [
     Models::Shared::AtsMetadata.new(
       extra_data: {
 
       },
       format: Models::Shared::AtsMetadataFormat::TEXT,
-      id: '7996752f-395c-452e-b0d2-0e8a806039d2',
+      id: '76a20603-9164-49d0-a1ae-7071891934bd',
       namespace: 'application',
       slug: 'stella',
-      value: 'Caput.',
+      value: 'Caput.'
     ),
   ],
   offers: [],
   original_status: 'vomica',
   original_substatus: 'allatus',
-  rejected_at: DateTime.iso8601('2026-10-30T09:20:20.718Z'),
+  rejected_at: DateTime.iso8601('2026-11-01T04:27:21.072Z'),
   rejected_reason: 'Cometes amplitudo videlicet talio.',
   source: 'credo',
   status: Models::Shared::AtsApplicationStatus::REVIEWING,
   summary: 'Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.',
-  updated_at: DateTime.iso8601('2026-11-06T08:24:55.669Z'),
+  updated_at: DateTime.iso8601('2026-11-08T03:48:10.313Z')
 ), connection_id: '<id>')
 
 unless res.ats_application.nil?
@@ -95,11 +93,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.application.get_ats_application(connection_id: '<id>', id: '<id>')
 
 unless res.ats_application.nil?
@@ -139,15 +136,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAtsApplicationsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAtsApplicationsRequest.new(
+  connection_id: '<id>'
+)
 res = s.application.list_ats_applications(request: req)
 
 unless res.ats_applications.nil?
@@ -178,50 +174,49 @@ Updates the AtsApplication identified by `id`. Provide the unified AtsApplicatio
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAtsApplication" method="patch" path="/ats/{connection_id}/application/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAtsApplication" method="patch" path="/ats/{connection_id}/application/{id}" example="ats_application" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAtsApplicationRequest.new(
   ats_application: Models::Shared::AtsApplication.new(
     answers: [],
-    applied_at: DateTime.iso8601('2025-10-12T02:38:14.169Z'),
+    applied_at: DateTime.iso8601('2025-10-13T06:51:13.172Z'),
     created_at: DateTime.iso8601('2023-10-17T07:19:48.787Z'),
-    hired_at: DateTime.iso8601('2026-05-28T23:46:32.987Z'),
-    id: '8ae1dea2-5a5f-47e3-9e4e-ece500524f25',
+    hired_at: DateTime.iso8601('2026-05-30T12:53:24.696Z'),
+    id: '42b2a5d5-cfdc-4c78-af0f-4e8baf6659db',
     metadata: [
       Models::Shared::AtsMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '4945b45a-0d1b-45e6-8fce-1e819704b63f',
+        id: 'a2ef5923-ae5e-4cc5-bc15-381a30148323',
         namespace: 'application',
         slug: 'stella',
-        value: 'Caput.',
+        value: 'Caput.'
       ),
     ],
     offers: [],
     original_status: 'vomica',
     original_substatus: 'allatus',
-    rejected_at: DateTime.iso8601('2026-10-30T09:20:20.747Z'),
+    rejected_at: DateTime.iso8601('2026-11-01T04:27:21.089Z'),
     rejected_reason: 'Cometes amplitudo videlicet talio.',
     source: 'credo',
     status: Models::Shared::AtsApplicationStatus::REVIEWING,
     summary: 'Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.',
-    updated_at: DateTime.iso8601('2026-11-06T08:24:55.698Z'),
+    updated_at: DateTime.iso8601('2026-11-08T03:48:10.330Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.application.patch_ats_application(request: req)
 
 unless res.ats_application.nil?
@@ -258,11 +253,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.application.remove_ats_application(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -294,50 +288,49 @@ Updates the AtsApplication identified by `id`. Provide the unified AtsApplicatio
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAtsApplication" method="put" path="/ats/{connection_id}/application/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAtsApplication" method="put" path="/ats/{connection_id}/application/{id}" example="ats_application" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAtsApplicationRequest.new(
   ats_application: Models::Shared::AtsApplication.new(
     answers: [],
-    applied_at: DateTime.iso8601('2025-10-12T02:38:14.169Z'),
+    applied_at: DateTime.iso8601('2025-10-13T06:51:13.172Z'),
     created_at: DateTime.iso8601('2023-10-17T07:19:48.787Z'),
-    hired_at: DateTime.iso8601('2026-05-28T23:46:32.987Z'),
-    id: '8ae1dea2-5a5f-47e3-9e4e-ece500524f25',
+    hired_at: DateTime.iso8601('2026-05-30T12:53:24.696Z'),
+    id: '42b2a5d5-cfdc-4c78-af0f-4e8baf6659db',
     metadata: [
       Models::Shared::AtsMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '4945b45a-0d1b-45e6-8fce-1e819704b63f',
+        id: 'a2ef5923-ae5e-4cc5-bc15-381a30148323',
         namespace: 'application',
         slug: 'stella',
-        value: 'Caput.',
+        value: 'Caput.'
       ),
     ],
     offers: [],
     original_status: 'vomica',
     original_substatus: 'allatus',
-    rejected_at: DateTime.iso8601('2026-10-30T09:20:20.747Z'),
+    rejected_at: DateTime.iso8601('2026-11-01T04:27:21.089Z'),
     rejected_reason: 'Cometes amplitudo videlicet talio.',
     source: 'credo',
     status: Models::Shared::AtsApplicationStatus::REVIEWING,
     summary: 'Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.',
-    updated_at: DateTime.iso8601('2026-11-06T08:24:55.698Z'),
+    updated_at: DateTime.iso8601('2026-11-08T03:48:10.330Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.application.update_ats_application(request: req)
 
 unless res.ats_application.nil?

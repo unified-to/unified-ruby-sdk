@@ -1,5 +1,16 @@
 # AccountingProjectStatus
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = AccountingProjectStatus::NOT_STARTED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = AccountingProjectStatus.deserialize("custom_value")
+```
+
 
 ## Values
 

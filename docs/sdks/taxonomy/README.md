@@ -1,5 +1,4 @@
 # Taxonomy
-(*taxonomy*)
 
 ## Overview
 
@@ -16,17 +15,16 @@ Creates a HrisTaxonomy. Provide the unified HrisTaxonomy fields in the request b
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisTaxonomy" method="post" path="/hris/{connection_id}/taxonomy" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisTaxonomy" method="post" path="/hris/{connection_id}/taxonomy" example="hris_taxonomy" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.taxonomy.create_hris_taxonomy(hris_taxonomy: Models::Shared::HrisTaxonomy.new(
   alternative_names: [
     'Facilitator',
@@ -35,14 +33,14 @@ res = s.taxonomy.create_hris_taxonomy(hris_taxonomy: Models::Shared::HrisTaxonom
   created_at: DateTime.iso8601('2022-06-23T02:10:00.789Z'),
   description: 'Uterque vespillo adnuo ea commodo turbo suscipio condico.',
   domain: 'Health',
-  id: '0b020e4d-4ad6-4822-ace0-c9a7f3f1aab0',
+  id: '2d76a6ab-4d5d-4fbf-8c92-80c1951759c4',
   is_active: false,
   metadata: [],
   name: 'International Functionality Architect',
   subcategory: 'Marble',
   type: Models::Shared::HrisTaxonomyType::KNOWLEDGE,
-  updated_at: DateTime.iso8601('2023-06-02T09:34:51.847Z'),
-  url: 'https://fixed-membership.biz/',
+  updated_at: DateTime.iso8601('2023-06-02T18:56:25.366Z'),
+  url: 'https://fixed-membership.biz/'
 ), connection_id: '<id>')
 
 unless res.hris_taxonomy.nil?
@@ -82,11 +80,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.taxonomy.get_hris_taxonomy(connection_id: '<id>', id: '<id>')
 
 unless res.hris_taxonomy.nil?
@@ -126,15 +123,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCrmTaxonomiesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCrmTaxonomiesRequest.new(
+  connection_id: '<id>'
+)
 res = s.taxonomy.list_crm_taxonomies(request: req)
 
 unless res.crm_taxonomies.nil?
@@ -171,15 +167,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHrisTaxonomiesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHrisTaxonomiesRequest.new(
+  connection_id: '<id>'
+)
 res = s.taxonomy.list_hris_taxonomies(request: req)
 
 unless res.hris_taxonomies.nil?

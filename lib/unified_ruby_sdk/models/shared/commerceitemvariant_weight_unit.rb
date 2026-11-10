@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class CommerceItemvariantWeightUnit < T::Enum
-
-
+      class CommerceItemvariantWeightUnit
+        include ::Crystalline::Enum
         enums do
           G = new('g')
           KG = new('kg')
           OZ = new('oz')
           LB = new('lb')
         end
+        open!
       end
     end
   end

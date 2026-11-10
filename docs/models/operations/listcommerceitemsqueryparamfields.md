@@ -1,5 +1,13 @@
 # ListCommerceItemsQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListCommerceItemsQueryParamFields::ID
+```
+
 
 ## Values
 

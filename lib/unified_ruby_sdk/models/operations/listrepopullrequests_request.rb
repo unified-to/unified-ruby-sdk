@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Operations
-    
 
       class ListRepoPullrequestsRequest
         extend T::Sig

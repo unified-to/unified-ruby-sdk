@@ -1,5 +1,16 @@
 # ListSource
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListSource::SUPPORTED_REQUIRED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = ListSource.deserialize("custom_value")
+```
+
 
 ## Values
 

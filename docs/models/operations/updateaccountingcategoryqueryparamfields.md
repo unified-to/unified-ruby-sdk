@@ -1,5 +1,13 @@
 # UpdateAccountingCategoryQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = UpdateAccountingCategoryQueryParamFields::ID
+```
+
 
 ## Values
 

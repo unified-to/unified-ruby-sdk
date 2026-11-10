@@ -7,11 +7,8 @@
 module UnifiedRubySDK
   module Models
     module Operations
-    
 
       class ListAccountingBillsQueryParamFields < T::Enum
-
-
         enums do
           ID = new('id')
           BILL_NUMBER = new('bill_number')

@@ -1,5 +1,4 @@
 # Bill
-(*bill*)
 
 ## Overview
 
@@ -18,30 +17,29 @@ Creates a AccountingBill. Provide the unified AccountingBill fields in the reque
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAccountingBill" method="post" path="/accounting/{connection_id}/bill" -->
+<!-- UsageSnippet language="ruby" operationID="createAccountingBill" method="post" path="/accounting/{connection_id}/bill" example="accounting_bill" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.bill.create_accounting_bill(accounting_bill: Models::Shared::AccountingBill.new(
   attachments: [
     Models::Shared::AccountingAttachment.new(
       download_url: 'https://puny-foodstuffs.name',
-      id: 'bfdd51b3-c9ce-4241-bf4b-c6e57196b513',
+      id: '6635eb87-dae2-4556-80b6-1b9b7db629c7',
       mime_type: 'application/pdf',
-      name: 'BILL-2466.pdf',
+      name: 'BILL-2466.pdf'
     ),
     Models::Shared::AccountingAttachment.new(
       download_url: 'https://grimy-characterization.net',
-      id: '0d1a41c2-11dd-4720-a037-784e65cdf521',
+      id: 'efce91b9-f659-459f-aa41-48c577589a7e',
       mime_type: 'application/pdf',
-      name: 'BILL-2466-1.pdf',
+      name: 'BILL-2466-1.pdf'
     ),
   ],
   balance_amount: 0.0,
@@ -52,7 +50,7 @@ res = s.bill.create_accounting_bill(accounting_bill: Models::Shared::AccountingB
   discount_amount: 0.0,
   due_at: DateTime.iso8601('2019-09-07T23:03:14.104Z'),
   extended_notes: [],
-  id: 'fbc74d54-6d81-4d7d-9dee-d910afbfe57c',
+  id: '0ee130f0-68e5-4804-954b-90f66dce6c38',
   lineitems: [],
   metadata: [],
   notes: 'Admiratio deporto tutamen cilicium infit amissio ante demulceo.',
@@ -68,8 +66,8 @@ res = s.bill.create_accounting_bill(accounting_bill: Models::Shared::AccountingB
   tax_amount: 0.0,
   term: Models::Shared::Term::NET_90,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2020-06-03T08:19:06.128Z'),
-  url: 'https://cluttered-importance.org/bills/BILL-2466',
+  updated_at: DateTime.iso8601('2020-06-03T13:08:04.973Z'),
+  url: 'https://cluttered-importance.org/bills/BILL-2466'
 ), connection_id: '<id>')
 
 unless res.accounting_bill.nil?
@@ -109,11 +107,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.bill.get_accounting_bill(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_bill.nil?
@@ -153,15 +150,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingBillsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingBillsRequest.new(
+  connection_id: '<id>'
+)
 res = s.bill.list_accounting_bills(request: req)
 
 unless res.accounting_bills.nil?
@@ -192,31 +188,31 @@ Updates the AccountingBill identified by `id`. Provide the unified AccountingBil
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAccountingBill" method="patch" path="/accounting/{connection_id}/bill/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAccountingBill" method="patch" path="/accounting/{connection_id}/bill/{id}" example="accounting_bill" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAccountingBillRequest.new(
   accounting_bill: Models::Shared::AccountingBill.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://puny-foodstuffs.name',
-        id: '38cc6dc9-e27b-4846-9889-74370d7de1e0',
+        id: '5615a620-e88f-41de-a848-0691e2e1ac1b',
         mime_type: 'application/pdf',
-        name: 'BILL-2466.pdf',
+        name: 'BILL-2466.pdf'
       ),
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://grimy-characterization.net',
-        id: '9fb72c27-d3d3-4191-8392-ce856bddca34',
+        id: '023015ec-dc5a-49ba-88ce-bb5baff02d20',
         mime_type: 'application/pdf',
-        name: 'BILL-2466-1.pdf',
+        name: 'BILL-2466-1.pdf'
       ),
     ],
     balance_amount: 0.0,
@@ -227,7 +223,7 @@ req = Models::Operations::PatchAccountingBillRequest.new(
     discount_amount: 0.0,
     due_at: DateTime.iso8601('2019-09-07T23:03:14.104Z'),
     extended_notes: [],
-    id: 'ef04ad0b-5a1e-4398-b904-26f588770ebd',
+    id: 'dbe2e922-603e-47e6-8079-0c173c333859',
     lineitems: [],
     metadata: [],
     notes: 'Admiratio deporto tutamen cilicium infit amissio ante demulceo.',
@@ -243,13 +239,12 @@ req = Models::Operations::PatchAccountingBillRequest.new(
     tax_amount: 0.0,
     term: Models::Shared::Term::NET_90,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2020-06-03T08:19:06.135Z'),
-    url: 'https://cluttered-importance.org/bills/BILL-2466',
+    updated_at: DateTime.iso8601('2020-06-03T13:08:04.978Z'),
+    url: 'https://cluttered-importance.org/bills/BILL-2466'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.bill.patch_accounting_bill(request: req)
 
 unless res.accounting_bill.nil?
@@ -286,11 +281,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.bill.remove_accounting_bill(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -322,31 +316,31 @@ Updates the AccountingBill identified by `id`. Provide the unified AccountingBil
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAccountingBill" method="put" path="/accounting/{connection_id}/bill/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAccountingBill" method="put" path="/accounting/{connection_id}/bill/{id}" example="accounting_bill" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAccountingBillRequest.new(
   accounting_bill: Models::Shared::AccountingBill.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://puny-foodstuffs.name',
-        id: '38cc6dc9-e27b-4846-9889-74370d7de1e0',
+        id: '5615a620-e88f-41de-a848-0691e2e1ac1b',
         mime_type: 'application/pdf',
-        name: 'BILL-2466.pdf',
+        name: 'BILL-2466.pdf'
       ),
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://grimy-characterization.net',
-        id: '9fb72c27-d3d3-4191-8392-ce856bddca34',
+        id: '023015ec-dc5a-49ba-88ce-bb5baff02d20',
         mime_type: 'application/pdf',
-        name: 'BILL-2466-1.pdf',
+        name: 'BILL-2466-1.pdf'
       ),
     ],
     balance_amount: 0.0,
@@ -357,7 +351,7 @@ req = Models::Operations::UpdateAccountingBillRequest.new(
     discount_amount: 0.0,
     due_at: DateTime.iso8601('2019-09-07T23:03:14.104Z'),
     extended_notes: [],
-    id: 'ef04ad0b-5a1e-4398-b904-26f588770ebd',
+    id: 'dbe2e922-603e-47e6-8079-0c173c333859',
     lineitems: [],
     metadata: [],
     notes: 'Admiratio deporto tutamen cilicium infit amissio ante demulceo.',
@@ -373,13 +367,12 @@ req = Models::Operations::UpdateAccountingBillRequest.new(
     tax_amount: 0.0,
     term: Models::Shared::Term::NET_90,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2020-06-03T08:19:06.135Z'),
-    url: 'https://cluttered-importance.org/bills/BILL-2466',
+    updated_at: DateTime.iso8601('2020-06-03T13:08:04.978Z'),
+    url: 'https://cluttered-importance.org/bills/BILL-2466'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.bill.update_accounting_bill(request: req)
 
 unless res.accounting_bill.nil?

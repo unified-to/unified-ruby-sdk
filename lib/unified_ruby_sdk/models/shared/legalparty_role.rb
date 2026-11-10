@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # LegalPartyRole - the party role on the matter
-      class LegalPartyRole < T::Enum
-
-
+      class LegalPartyRole
+        include ::Crystalline::Enum
         enums do
           CLIENT = new('CLIENT')
           OPPOSING_PARTY = new('OPPOSING_PARTY')
@@ -23,6 +21,7 @@ module UnifiedRubySDK
           REFERRER = new('REFERRER')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end
