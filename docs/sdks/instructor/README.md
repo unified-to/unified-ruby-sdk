@@ -33,7 +33,7 @@ res = s.instructor.create_lms_instructor(lms_instructor: Models::Shared::LmsInst
     Models::Shared::LmsEmail.new,
   ],
   first_name: 'Deangelo',
-  id: 'f94337f3-d5d6-4abf-bc5e-8327de724ff4',
+  id: '8e815f9b-ef14-43e0-9019-6bfc8bbfdcab',
   image_url: 'https://avatars.githubusercontent.com/u/95131132',
   last_name: 'Ritchie',
   metadata: [],
@@ -49,7 +49,7 @@ res = s.instructor.create_lms_instructor(lms_instructor: Models::Shared::LmsInst
     ),
   ],
   title: 'Regional Security Agent',
-  updated_at: DateTime.iso8601('2025-08-09T02:25:00.638Z')
+  updated_at: DateTime.iso8601('2025-08-09T03:57:33.455Z')
 ), connection_id: '<id>')
 
 unless res.lms_instructor.nil?
@@ -188,7 +188,7 @@ req = Models::Operations::PatchLmsInstructorRequest.new(
       Models::Shared::LmsEmail.new,
     ],
     first_name: 'Deangelo',
-    id: '0c4dcc90-c19d-4d4f-ba89-a9abf98acc77',
+    id: 'e0534422-7127-4e75-a4b8-952873487c08',
     image_url: 'https://avatars.githubusercontent.com/u/95131132',
     last_name: 'Ritchie',
     metadata: [],
@@ -204,7 +204,7 @@ req = Models::Operations::PatchLmsInstructorRequest.new(
       ),
     ],
     title: 'Regional Security Agent',
-    updated_at: DateTime.iso8601('2025-08-09T02:25:00.648Z')
+    updated_at: DateTime.iso8601('2025-08-09T03:57:33.463Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -298,7 +298,7 @@ req = Models::Operations::UpdateLmsInstructorRequest.new(
       Models::Shared::LmsEmail.new,
     ],
     first_name: 'Deangelo',
-    id: '0c4dcc90-c19d-4d4f-ba89-a9abf98acc77',
+    id: 'e0534422-7127-4e75-a4b8-952873487c08',
     image_url: 'https://avatars.githubusercontent.com/u/95131132',
     last_name: 'Ritchie',
     metadata: [],
@@ -314,7 +314,7 @@ req = Models::Operations::UpdateLmsInstructorRequest.new(
       ),
     ],
     title: 'Regional Security Agent',
-    updated_at: DateTime.iso8601('2025-08-09T02:25:00.648Z')
+    updated_at: DateTime.iso8601('2025-08-09T03:57:33.463Z')
   ),
   connection_id: '<id>',
   id: '<id>'

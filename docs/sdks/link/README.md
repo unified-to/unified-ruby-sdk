@@ -37,13 +37,13 @@ res = s.link.create_calendar_link(calendar_link: Models::Shared::CalendarLink.ne
   created_at: '2023-03-07T13:34:11.959Z',
   description: 'Vitium clibanus laboriosam uxor denuncio.',
   duration: 74.0,
-  id: '799ecddd-05a6-4bc8-8ec8-c176ef2a98e5',
+  id: '885e46c8-826e-4fc1-b829-a3516ef4e094',
   is_active: true,
   metadata: [],
   name: 'Sopor sopor ancilla animus anser dignissimos vito confero utilis.',
   price_amount: 44.0,
   price_currency: 'USD',
-  updated_at: '2024-03-21T10:13:08.729Z',
+  updated_at: '2024-03-21T10:47:53.392Z',
   url: 'https://annual-apricot.info/'
 ), connection_id: '<id>')
 
@@ -93,13 +93,13 @@ res = s.link.create_payment_link(payment_link: Models::Shared::PaymentLink.new(
   created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
   currency: 'CAD',
   description: 'Savor the tender essence in our Ball, designed for dim culinary adventures',
-  id: 'abeddf22-4460-4498-b1f6-cf335a4012b0',
+  id: 'c4421f38-b060-420f-baf8-18889119003c',
   is_active: true,
   is_chargeable_now: true,
   lineitems: [
     Models::Shared::PaymentLineitem.new(
       created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-      id: '47c4976b-149c-4025-8e40-c787b9b7c179',
+      id: 'c85b1fbd-d704-430f-b7d6-98c366248904',
       item_description: 'Discover the worst new Computer with an exciting mix of Steel ingredients',
       item_name: 'Soft Marble Cheese',
       tax_amount: 0.0,
@@ -111,7 +111,7 @@ res = s.link.create_payment_link(payment_link: Models::Shared::PaymentLink.new(
     Models::Shared::PaymentLineitem.new(
       created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
       discount_amount: 424.32,
-      id: 'b73de4f9-2dff-4527-81ff-5ae72b7997a6',
+      id: 'ced75e5b-bccb-4606-9669-deab6c8320dc',
       item_description: 'Innovative Shoes featuring utilized technology and Cotton construction',
       item_name: 'Sleek Aluminum Shoes',
       notes: 'Cervus decretum viridis doloremque.',
@@ -123,7 +123,7 @@ res = s.link.create_payment_link(payment_link: Models::Shared::PaymentLink.new(
     ),
     Models::Shared::PaymentLineitem.new(
       created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-      id: '2939ad7a-cf43-49c5-a940-e24cc38941d5',
+      id: '0f4c8165-af3d-4307-92ba-0c0482214b49',
       item_description: 'Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance',
       item_name: 'Elegant Concrete Gloves',
       notes: 'Desipio usque vacuus currus cetera testimonium.',
@@ -136,8 +136,8 @@ res = s.link.create_payment_link(payment_link: Models::Shared::PaymentLink.new(
   ],
   metadata: [],
   success_url: 'https://tinted-jet.info',
-  updated_at: DateTime.iso8601('2024-04-18T16:30:46.548Z'),
-  url: 'https://pay.example.com/abeddf22-4460-4498-b1f6-cf335a4012b0'
+  updated_at: DateTime.iso8601('2024-04-18T17:02:01.610Z'),
+  url: 'https://pay.example.com/c4421f38-b060-420f-baf8-18889119003c'
 ), connection_id: '<id>')
 
 unless res.payment_link.nil?
@@ -361,13 +361,13 @@ req = Models::Operations::PatchCalendarLinkRequest.new(
     created_at: '2023-03-07T13:34:11.959Z',
     description: 'Vitium clibanus laboriosam uxor denuncio.',
     duration: 74.0,
-    id: '2ed2732b-674b-422f-8404-269f1a6cc6ad',
+    id: '41acd4b8-cb2b-4016-b5a6-acc1773d2dd7',
     is_active: true,
     metadata: [],
     name: 'Sopor sopor ancilla animus anser dignissimos vito confero utilis.',
     price_amount: 44.0,
     price_currency: 'USD',
-    updated_at: '2024-03-21T10:13:08.732Z',
+    updated_at: '2024-03-21T10:47:53.394Z',
     url: 'https://annual-apricot.info/'
   ),
   connection_id: '<id>',
@@ -420,13 +420,13 @@ req = Models::Operations::PatchPaymentLinkRequest.new(
     created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
     currency: 'CAD',
     description: 'Savor the tender essence in our Ball, designed for dim culinary adventures',
-    id: '0b779f7a-52ed-4184-b7ef-2e3799f1689b',
+    id: '27271bbc-828a-4ed4-88f8-ce3533ce4e4a',
     is_active: true,
     is_chargeable_now: true,
     lineitems: [
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-        id: 'a9663abc-5af5-4a4a-a97a-f67aa4bce987',
+        id: '3ad5fe1c-a5e9-4e6c-bed3-40cf8f23b1cc',
         item_description: 'Discover the worst new Computer with an exciting mix of Steel ingredients',
         item_name: 'Soft Marble Cheese',
         tax_amount: 0.0,
@@ -438,7 +438,7 @@ req = Models::Operations::PatchPaymentLinkRequest.new(
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
         discount_amount: 424.32,
-        id: '2799b592-914b-4ac6-8898-77686d539d7e',
+        id: '9ad8afa1-9524-418d-ab84-18b5beba63b6',
         item_description: 'Innovative Shoes featuring utilized technology and Cotton construction',
         item_name: 'Sleek Aluminum Shoes',
         notes: 'Cervus decretum viridis doloremque.',
@@ -450,7 +450,7 @@ req = Models::Operations::PatchPaymentLinkRequest.new(
       ),
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-        id: '75bba503-2eab-4e63-97b9-09efe286b86c',
+        id: '64f763ef-999f-4f35-a0f2-844223cb3043',
         item_description: 'Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance',
         item_name: 'Elegant Concrete Gloves',
         notes: 'Desipio usque vacuus currus cetera testimonium.',
@@ -463,8 +463,8 @@ req = Models::Operations::PatchPaymentLinkRequest.new(
     ],
     metadata: [],
     success_url: 'https://tinted-jet.info',
-    updated_at: DateTime.iso8601('2024-04-18T16:30:46.554Z'),
-    url: 'https://pay.example.com/0b779f7a-52ed-4184-b7ef-2e3799f1689b'
+    updated_at: DateTime.iso8601('2024-04-18T17:02:01.616Z'),
+    url: 'https://pay.example.com/27271bbc-828a-4ed4-88f8-ce3533ce4e4a'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -597,13 +597,13 @@ req = Models::Operations::UpdateCalendarLinkRequest.new(
     created_at: '2023-03-07T13:34:11.959Z',
     description: 'Vitium clibanus laboriosam uxor denuncio.',
     duration: 74.0,
-    id: '2ed2732b-674b-422f-8404-269f1a6cc6ad',
+    id: '41acd4b8-cb2b-4016-b5a6-acc1773d2dd7',
     is_active: true,
     metadata: [],
     name: 'Sopor sopor ancilla animus anser dignissimos vito confero utilis.',
     price_amount: 44.0,
     price_currency: 'USD',
-    updated_at: '2024-03-21T10:13:08.732Z',
+    updated_at: '2024-03-21T10:47:53.394Z',
     url: 'https://annual-apricot.info/'
   ),
   connection_id: '<id>',
@@ -656,13 +656,13 @@ req = Models::Operations::UpdatePaymentLinkRequest.new(
     created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
     currency: 'CAD',
     description: 'Savor the tender essence in our Ball, designed for dim culinary adventures',
-    id: '0b779f7a-52ed-4184-b7ef-2e3799f1689b',
+    id: '27271bbc-828a-4ed4-88f8-ce3533ce4e4a',
     is_active: true,
     is_chargeable_now: true,
     lineitems: [
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-        id: 'a9663abc-5af5-4a4a-a97a-f67aa4bce987',
+        id: '3ad5fe1c-a5e9-4e6c-bed3-40cf8f23b1cc',
         item_description: 'Discover the worst new Computer with an exciting mix of Steel ingredients',
         item_name: 'Soft Marble Cheese',
         tax_amount: 0.0,
@@ -674,7 +674,7 @@ req = Models::Operations::UpdatePaymentLinkRequest.new(
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
         discount_amount: 424.32,
-        id: '2799b592-914b-4ac6-8898-77686d539d7e',
+        id: '9ad8afa1-9524-418d-ab84-18b5beba63b6',
         item_description: 'Innovative Shoes featuring utilized technology and Cotton construction',
         item_name: 'Sleek Aluminum Shoes',
         notes: 'Cervus decretum viridis doloremque.',
@@ -686,7 +686,7 @@ req = Models::Operations::UpdatePaymentLinkRequest.new(
       ),
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-        id: '75bba503-2eab-4e63-97b9-09efe286b86c',
+        id: '64f763ef-999f-4f35-a0f2-844223cb3043',
         item_description: 'Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance',
         item_name: 'Elegant Concrete Gloves',
         notes: 'Desipio usque vacuus currus cetera testimonium.',
@@ -699,8 +699,8 @@ req = Models::Operations::UpdatePaymentLinkRequest.new(
     ],
     metadata: [],
     success_url: 'https://tinted-jet.info',
-    updated_at: DateTime.iso8601('2024-04-18T16:30:46.554Z'),
-    url: 'https://pay.example.com/0b779f7a-52ed-4184-b7ef-2e3799f1689b'
+    updated_at: DateTime.iso8601('2024-04-18T17:02:01.616Z'),
+    url: 'https://pay.example.com/27271bbc-828a-4ed4-88f8-ce3533ce4e4a'
   ),
   connection_id: '<id>',
   id: '<id>'

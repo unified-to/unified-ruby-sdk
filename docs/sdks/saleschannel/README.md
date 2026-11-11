@@ -31,11 +31,11 @@ res = s.saleschannel.create_commerce_saleschannel(commerce_saleschannel: Models:
   collections: [],
   created_at: DateTime.iso8601('2021-12-12T06:19:55.421Z'),
   description: 'Utroque denuncio solutio.',
-  id: '9df0d3de-a540-42f2-b168-4ac0f2699106',
+  id: '0f94e016-f61b-4a93-8160-82b8274e72f7',
   is_active: false,
   metadata: [],
   slug: 'amiculum-congregatio-suspendo',
-  updated_at: DateTime.iso8601('2025-02-10T09:55:14.716Z')
+  updated_at: DateTime.iso8601('2025-02-10T11:14:27.617Z')
 ), connection_id: '<id>')
 
 unless res.commerce_saleschannel.nil?
@@ -172,11 +172,11 @@ req = Models::Operations::PatchCommerceSaleschannelRequest.new(
     collections: [],
     created_at: DateTime.iso8601('2021-12-12T06:19:55.421Z'),
     description: 'Utroque denuncio solutio.',
-    id: '1defce6c-dd74-4625-b2d6-63ee3e86044a',
+    id: '988d1582-bed8-4ab4-a519-9e3e707cde4d',
     is_active: false,
     metadata: [],
     slug: 'amiculum-congregatio-suspendo',
-    updated_at: DateTime.iso8601('2025-02-10T09:55:14.724Z')
+    updated_at: DateTime.iso8601('2025-02-10T11:14:27.621Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -268,11 +268,11 @@ req = Models::Operations::UpdateCommerceSaleschannelRequest.new(
     collections: [],
     created_at: DateTime.iso8601('2021-12-12T06:19:55.421Z'),
     description: 'Utroque denuncio solutio.',
-    id: '1defce6c-dd74-4625-b2d6-63ee3e86044a',
+    id: '988d1582-bed8-4ab4-a519-9e3e707cde4d',
     is_active: false,
     metadata: [],
     slug: 'amiculum-congregatio-suspendo',
-    updated_at: DateTime.iso8601('2025-02-10T09:55:14.724Z')
+    updated_at: DateTime.iso8601('2025-02-10T11:14:27.621Z')
   ),
   connection_id: '<id>',
   id: '<id>'

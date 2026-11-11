@@ -30,11 +30,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.repository.create_repo_repository(repo_repository: Models::Shared::RepoRepository.new(
   created_at: DateTime.iso8601('2023-06-12T09:42:00.080Z'),
   description: 'Sed somnus crastinus armarium.',
-  id: '86d0b3d1-276f-431b-9f41-ea45b52e53e8',
+  id: '71f1c48c-c032-48d4-a919-613b7cba898a',
   is_private: false,
   metadata: [],
   name: 'bah-bogus',
-  updated_at: DateTime.iso8601('2024-03-05T13:05:02.617Z'),
+  updated_at: DateTime.iso8601('2024-03-05T13:31:22.416Z'),
   web_url: 'https://neat-birdbath.org'
 ), connection_id: '<id>')
 
@@ -171,11 +171,11 @@ req = Models::Operations::PatchRepoRepositoryRequest.new(
   repo_repository: Models::Shared::RepoRepository.new(
     created_at: DateTime.iso8601('2023-06-12T09:42:00.080Z'),
     description: 'Sed somnus crastinus armarium.',
-    id: 'e94f25a0-08d8-4d68-96ac-243e461af12a',
+    id: '8fd7d2be-7a5f-485e-ac34-89af4f2a1e7e',
     is_private: false,
     metadata: [],
     name: 'bah-bogus',
-    updated_at: DateTime.iso8601('2024-03-05T13:05:02.620Z'),
+    updated_at: DateTime.iso8601('2024-03-05T13:31:22.418Z'),
     web_url: 'https://neat-birdbath.org'
   ),
   connection_id: '<id>',
@@ -267,11 +267,11 @@ req = Models::Operations::UpdateRepoRepositoryRequest.new(
   repo_repository: Models::Shared::RepoRepository.new(
     created_at: DateTime.iso8601('2023-06-12T09:42:00.080Z'),
     description: 'Sed somnus crastinus armarium.',
-    id: 'e94f25a0-08d8-4d68-96ac-243e461af12a',
+    id: '8fd7d2be-7a5f-485e-ac34-89af4f2a1e7e',
     is_private: false,
     metadata: [],
     name: 'bah-bogus',
-    updated_at: DateTime.iso8601('2024-03-05T13:05:02.620Z'),
+    updated_at: DateTime.iso8601('2024-03-05T13:31:22.418Z'),
     web_url: 'https://neat-birdbath.org'
   ),
   connection_id: '<id>',

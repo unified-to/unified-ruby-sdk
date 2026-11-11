@@ -30,14 +30,14 @@ res = s.fax.create_uc_fax(uc_fax: Models::Shared::UcFax.new(
   created_at: DateTime.iso8601('2022-10-25T13:37:51.431Z'),
   currency: 'USD',
   from_telephone: '+13605107540',
-  id: 'cb1e945c-c8bb-47d1-a0c2-2ad4de4ffa3b',
+  id: '76f21c41-36b7-43d2-a3a8-075199824341',
   media_url: 'https://doting-jump.biz',
   metadata: [],
   pages: 20.0,
   status: Models::Shared::UcFaxStatus::DELIVERED,
   to_telephone: '+19083998866',
   type: Models::Shared::UcFaxType::INBOUND,
-  updated_at: DateTime.iso8601('2023-04-16T05:26:34.441Z')
+  updated_at: DateTime.iso8601('2023-04-16T05:40:56.677Z')
 ), connection_id: '<id>')
 
 unless res.uc_fax.nil?

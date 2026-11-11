@@ -79,7 +79,7 @@ res = s.quote.create_property_quote(property_quote: Models::Shared::PropertyQuot
   deposit_amount: 594.54,
   end_at: DateTime.iso8601('2026-11-25'),
   guests: 2.0,
-  id: 'eebe7e43-8ba9-4939-b1c6-de3dcc1bb0e3',
+  id: '7c3a6faf-70f3-4bf7-ab15-e5cee0687e83',
   line_items: [
     Models::Shared::PropertyLineitem.new(
       amount: 1665.0,

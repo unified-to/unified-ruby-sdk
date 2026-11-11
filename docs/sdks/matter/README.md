@@ -35,11 +35,11 @@ res = s.matter.create_legal_matter(legal_matter: Models::Shared::LegalMatter.new
   created_at: DateTime.iso8601('2023-05-28T04:10:42.375Z'),
   currency: 'BOB',
   description: 'Speciosus cresco aut cotidie temeritas arma.',
-  id: '5bb74761-d2c0-4bf8-866c-5b01a6ee8f59',
+  id: '22bab30f-bd26-4298-86a0-ece9a62fd5c5',
   metadata: [],
   name: 'Walter v. Franecki - Spinka',
   number: '2023-3062',
-  opened_at: DateTime.iso8601('2023-07-05T21:38:11.995Z'),
+  opened_at: DateTime.iso8601('2023-07-05T21:41:58.250Z'),
   parties: [
     Models::Shared::LegalParty.new(
       description: 'Urban Walter',
@@ -48,8 +48,8 @@ res = s.matter.create_legal_matter(legal_matter: Models::Shared::LegalMatter.new
   ],
   stage: 'currus',
   status: Models::Shared::LegalMatterStatus::OPEN,
-  statute_of_limitations_at: DateTime.iso8601('2027-07-19T16:49:40.400Z'),
-  updated_at: DateTime.iso8601('2023-07-18T06:18:21.591Z')
+  statute_of_limitations_at: DateTime.iso8601('2027-07-19T18:52:36.969Z'),
+  updated_at: DateTime.iso8601('2023-07-18T06:23:20.063Z')
 ), connection_id: '<id>')
 
 unless res.legal_matter.nil?
@@ -190,11 +190,11 @@ req = Models::Operations::PatchLegalMatterRequest.new(
     created_at: DateTime.iso8601('2023-05-28T04:10:42.375Z'),
     currency: 'BOB',
     description: 'Speciosus cresco aut cotidie temeritas arma.',
-    id: 'f129b05d-040f-4d63-a1de-2f0988deab44',
+    id: '0d13f4a2-7de3-4148-adba-6c5bb2acf6c3',
     metadata: [],
     name: 'Walter v. Franecki - Spinka',
     number: '2023-3062',
-    opened_at: DateTime.iso8601('2023-07-05T21:38:11.996Z'),
+    opened_at: DateTime.iso8601('2023-07-05T21:41:58.250Z'),
     parties: [
       Models::Shared::LegalParty.new(
         description: 'Urban Walter',
@@ -203,8 +203,8 @@ req = Models::Operations::PatchLegalMatterRequest.new(
     ],
     stage: 'currus',
     status: Models::Shared::LegalMatterStatus::OPEN,
-    statute_of_limitations_at: DateTime.iso8601('2027-07-19T16:49:40.416Z'),
-    updated_at: DateTime.iso8601('2023-07-18T06:18:21.592Z')
+    statute_of_limitations_at: DateTime.iso8601('2027-07-19T18:52:36.992Z'),
+    updated_at: DateTime.iso8601('2023-07-18T06:23:20.063Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -300,11 +300,11 @@ req = Models::Operations::UpdateLegalMatterRequest.new(
     created_at: DateTime.iso8601('2023-05-28T04:10:42.375Z'),
     currency: 'BOB',
     description: 'Speciosus cresco aut cotidie temeritas arma.',
-    id: 'f129b05d-040f-4d63-a1de-2f0988deab44',
+    id: '0d13f4a2-7de3-4148-adba-6c5bb2acf6c3',
     metadata: [],
     name: 'Walter v. Franecki - Spinka',
     number: '2023-3062',
-    opened_at: DateTime.iso8601('2023-07-05T21:38:11.996Z'),
+    opened_at: DateTime.iso8601('2023-07-05T21:41:58.250Z'),
     parties: [
       Models::Shared::LegalParty.new(
         description: 'Urban Walter',
@@ -313,8 +313,8 @@ req = Models::Operations::UpdateLegalMatterRequest.new(
     ],
     stage: 'currus',
     status: Models::Shared::LegalMatterStatus::OPEN,
-    statute_of_limitations_at: DateTime.iso8601('2027-07-19T16:49:40.416Z'),
-    updated_at: DateTime.iso8601('2023-07-18T06:18:21.592Z')
+    statute_of_limitations_at: DateTime.iso8601('2027-07-19T18:52:36.992Z'),
+    updated_at: DateTime.iso8601('2023-07-18T06:23:20.063Z')
   ),
   connection_id: '<id>',
   id: '<id>'
