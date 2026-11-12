@@ -36,7 +36,7 @@ res = s.course.create_lms_course(lms_course: Models::Shared::LmsCourse.new(
   currency: 'FJD',
   description: 'Vinco alias aut capitulus.',
   duration_minutes: 148.0,
-  id: '4a60dc62-86e8-46a8-908b-0bd396728688',
+  id: 'b85a0389-f35f-4aaa-b3cc-ad32f334ecc8',
   instructors: [],
   is_active: true,
   is_private: false,
@@ -63,14 +63,14 @@ res = s.course.create_lms_course(lms_course: Models::Shared::LmsCourse.new(
   name: 'comptus',
   price_amount: 84.0,
   provider_name: 'Homenick - Wunsch',
-  published_at: DateTime.iso8601('2022-11-06T04:30:03.165Z'),
+  published_at: DateTime.iso8601('2022-11-06T04:58:02.393Z'),
   skills: [
     'adiuvo',
     'tam',
   ],
   students: [],
   time_estimate_minutes: 100.0,
-  updated_at: DateTime.iso8601('2023-02-11T13:17:33.072Z')
+  updated_at: DateTime.iso8601('2023-02-11T15:14:05.642Z')
 ), connection_id: '<id>')
 
 unless res.lms_course.nil?
@@ -212,7 +212,7 @@ req = Models::Operations::PatchLmsCourseRequest.new(
     currency: 'FJD',
     description: 'Vinco alias aut capitulus.',
     duration_minutes: 148.0,
-    id: 'e68da0b0-f96e-4dae-bed2-f3aef12b5f74',
+    id: '7ae1d48d-f53f-4ced-b3e1-621e604cd1d7',
     instructors: [],
     is_active: true,
     is_private: false,
@@ -239,14 +239,14 @@ req = Models::Operations::PatchLmsCourseRequest.new(
     name: 'comptus',
     price_amount: 84.0,
     provider_name: 'Homenick - Wunsch',
-    published_at: DateTime.iso8601('2022-11-06T04:30:03.165Z'),
+    published_at: DateTime.iso8601('2022-11-06T04:58:02.394Z'),
     skills: [
       'adiuvo',
       'tam',
     ],
     students: [],
     time_estimate_minutes: 100.0,
-    updated_at: DateTime.iso8601('2023-02-11T13:17:33.073Z')
+    updated_at: DateTime.iso8601('2023-02-11T15:14:05.645Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -343,7 +343,7 @@ req = Models::Operations::UpdateLmsCourseRequest.new(
     currency: 'FJD',
     description: 'Vinco alias aut capitulus.',
     duration_minutes: 148.0,
-    id: 'e68da0b0-f96e-4dae-bed2-f3aef12b5f74',
+    id: '7ae1d48d-f53f-4ced-b3e1-621e604cd1d7',
     instructors: [],
     is_active: true,
     is_private: false,
@@ -370,14 +370,14 @@ req = Models::Operations::UpdateLmsCourseRequest.new(
     name: 'comptus',
     price_amount: 84.0,
     provider_name: 'Homenick - Wunsch',
-    published_at: DateTime.iso8601('2022-11-06T04:30:03.165Z'),
+    published_at: DateTime.iso8601('2022-11-06T04:58:02.394Z'),
     skills: [
       'adiuvo',
       'tam',
     ],
     students: [],
     time_estimate_minutes: 100.0,
-    updated_at: DateTime.iso8601('2023-02-11T13:17:33.073Z')
+    updated_at: DateTime.iso8601('2023-02-11T15:14:05.645Z')
   ),
   connection_id: '<id>',
   id: '<id>'

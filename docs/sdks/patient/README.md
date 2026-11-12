@@ -57,7 +57,7 @@ res = s.patient.create_healthcare_patient(healthcare_patient: Models::Shared::He
   ],
   first_name: 'Alejandrin',
   gender: Models::Shared::HealthcarePatientGender::FEMALE,
-  id: '04448e5b-1172-4a04-baa1-7d1a59e8ae6a',
+  id: '21af28d9-5b34-487b-b9ed-c2e31b27f4d8',
   identifiers: [
     Models::Shared::HealthcareIdentifier.new(
       type: Models::Shared::HealthcareIdentifierType::MRN,
@@ -77,7 +77,7 @@ res = s.patient.create_healthcare_patient(healthcare_patient: Models::Shared::He
       type: Models::Shared::HealthcareTelephoneType::MOBILE
     ),
   ],
-  updated_at: DateTime.iso8601('2026-07-12T11:16:57.185Z')
+  updated_at: DateTime.iso8601('2026-07-13T08:34:43.585Z')
 ), connection_id: '<id>')
 
 unless res.healthcare_patient.nil?
@@ -241,7 +241,7 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
     ],
     first_name: 'Alejandrin',
     gender: Models::Shared::HealthcarePatientGender::FEMALE,
-    id: '8901e8c2-0f56-4cf5-8c58-ed6ae11f8baa',
+    id: 'ca6129f7-e00a-4db3-a66d-aafe80e8552f',
     identifiers: [
       Models::Shared::HealthcareIdentifier.new(
         type: Models::Shared::HealthcareIdentifierType::MRN,
@@ -261,7 +261,7 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
         type: Models::Shared::HealthcareTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2026-07-12T11:16:57.223Z')
+    updated_at: DateTime.iso8601('2026-07-13T08:34:43.610Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -339,7 +339,7 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
     ],
     first_name: 'Alejandrin',
     gender: Models::Shared::HealthcarePatientGender::FEMALE,
-    id: '8901e8c2-0f56-4cf5-8c58-ed6ae11f8baa',
+    id: 'ca6129f7-e00a-4db3-a66d-aafe80e8552f',
     identifiers: [
       Models::Shared::HealthcareIdentifier.new(
         type: Models::Shared::HealthcareIdentifierType::MRN,
@@ -359,7 +359,7 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
         type: Models::Shared::HealthcareTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2026-07-12T11:16:57.223Z')
+    updated_at: DateTime.iso8601('2026-07-13T08:34:43.610Z')
   ),
   connection_id: '<id>',
   id: '<id>'

@@ -14,7 +14,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: '6d9af243-4600-4098-b3f6-e162d0ff4e90',
+  id: '1f4377a2-3b89-4c76-8873-85a683ec0017',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -27,7 +27,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-12T05:12:28.391Z')
+  updated_at: DateTime.iso8601('2023-08-12T10:58:27.188Z')
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?

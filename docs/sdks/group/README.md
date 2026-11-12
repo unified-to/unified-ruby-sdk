@@ -48,15 +48,15 @@ res = s.group.create_ads_group(ads_group: Models::Shared::AdsGroup.new(
   created_at: DateTime.iso8601('2019-08-29T17:59:41.045Z'),
   currency: 'USD',
   effective_status: Models::Shared::AdsGroupEffectiveStatus::PAUSED,
-  end_at: DateTime.iso8601('2026-07-15T00:35:02.828Z'),
-  id: 'b619d9f7-2c41-4f0d-b2c1-3afdfd72a787',
+  end_at: DateTime.iso8601('2026-07-15T22:14:35.567Z'),
+  id: '6fa45386-6e54-47ac-9687-a4faa8f7c560',
   language_locale: 'fr-FR',
   metadata: [],
   name: 'Stark - Baumbach',
-  start_at: DateTime.iso8601('2026-01-27T21:45:21.114Z'),
+  start_at: DateTime.iso8601('2026-01-28T17:57:53.950Z'),
   status: Models::Shared::AdsGroupStatus::PROCESSING,
   targeting: Models::Shared::PropertyAdsGroupTargeting.new,
-  updated_at: DateTime.iso8601('2022-01-20T15:06:32.684Z')
+  updated_at: DateTime.iso8601('2022-01-20T22:39:16.886Z')
 ), connection_id: '<id>')
 
 unless res.ads_group.nil?
@@ -103,12 +103,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.group.create_hris_group(hris_group: Models::Shared::HrisGroup.new(
   created_at: DateTime.iso8601('2023-11-01T13:13:40.714Z'),
   description: 'Absorbeo casso.',
-  id: 'c022e822-8499-4521-bb51-f2e761047151',
+  id: '615e1c05-31cf-4a93-b590-295216e1f419',
   is_active: false,
   metadata: [],
   name: 'Games',
   type: Models::Shared::HrisGroupType::BRANCH,
-  updated_at: DateTime.iso8601('2026-06-08T22:48:57.027Z')
+  updated_at: DateTime.iso8601('2026-06-09T18:19:13.060Z')
 ), connection_id: '<id>')
 
 unless res.hris_group.nil?
@@ -550,15 +550,15 @@ req = Models::Operations::PatchAdsGroupRequest.new(
     created_at: DateTime.iso8601('2019-08-29T17:59:41.045Z'),
     currency: 'USD',
     effective_status: Models::Shared::AdsGroupEffectiveStatus::PAUSED,
-    end_at: DateTime.iso8601('2026-07-15T00:35:02.930Z'),
-    id: '21e37493-fa1c-44cf-a1cb-8eed51b0ab60',
+    end_at: DateTime.iso8601('2026-07-15T22:14:35.677Z'),
+    id: 'ccd589e9-a6fe-4dbb-99e7-a1f5ab55b06e',
     language_locale: 'fr-FR',
     metadata: [],
     name: 'Stark - Baumbach',
-    start_at: DateTime.iso8601('2026-01-27T21:45:21.210Z'),
+    start_at: DateTime.iso8601('2026-01-28T17:57:54.053Z'),
     status: Models::Shared::AdsGroupStatus::PROCESSING,
     targeting: Models::Shared::PropertyAdsGroupTargeting.new,
-    updated_at: DateTime.iso8601('2022-01-20T15:06:32.719Z')
+    updated_at: DateTime.iso8601('2022-01-20T22:39:16.924Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -608,12 +608,12 @@ req = Models::Operations::PatchHrisGroupRequest.new(
   hris_group: Models::Shared::HrisGroup.new(
     created_at: DateTime.iso8601('2023-11-01T13:13:40.714Z'),
     description: 'Absorbeo casso.',
-    id: '680b3303-3249-42d7-8709-d9b6fb03fd74',
+    id: '6393a1f3-2bc5-4813-b61b-87d0a0269eda',
     is_active: false,
     metadata: [],
     name: 'Games',
     type: Models::Shared::HrisGroupType::BRANCH,
-    updated_at: DateTime.iso8601('2026-06-08T22:48:57.040Z')
+    updated_at: DateTime.iso8601('2026-06-09T18:19:13.068Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -834,15 +834,15 @@ req = Models::Operations::UpdateAdsGroupRequest.new(
     created_at: DateTime.iso8601('2019-08-29T17:59:41.045Z'),
     currency: 'USD',
     effective_status: Models::Shared::AdsGroupEffectiveStatus::PAUSED,
-    end_at: DateTime.iso8601('2026-07-15T00:35:02.930Z'),
-    id: '21e37493-fa1c-44cf-a1cb-8eed51b0ab60',
+    end_at: DateTime.iso8601('2026-07-15T22:14:35.677Z'),
+    id: 'ccd589e9-a6fe-4dbb-99e7-a1f5ab55b06e',
     language_locale: 'fr-FR',
     metadata: [],
     name: 'Stark - Baumbach',
-    start_at: DateTime.iso8601('2026-01-27T21:45:21.210Z'),
+    start_at: DateTime.iso8601('2026-01-28T17:57:54.053Z'),
     status: Models::Shared::AdsGroupStatus::PROCESSING,
     targeting: Models::Shared::PropertyAdsGroupTargeting.new,
-    updated_at: DateTime.iso8601('2022-01-20T15:06:32.719Z')
+    updated_at: DateTime.iso8601('2022-01-20T22:39:16.924Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -892,12 +892,12 @@ req = Models::Operations::UpdateHrisGroupRequest.new(
   hris_group: Models::Shared::HrisGroup.new(
     created_at: DateTime.iso8601('2023-11-01T13:13:40.714Z'),
     description: 'Absorbeo casso.',
-    id: '680b3303-3249-42d7-8709-d9b6fb03fd74',
+    id: '6393a1f3-2bc5-4813-b61b-87d0a0269eda',
     is_active: false,
     metadata: [],
     name: 'Games',
     type: Models::Shared::HrisGroupType::BRANCH,
-    updated_at: DateTime.iso8601('2026-06-08T22:48:57.040Z')
+    updated_at: DateTime.iso8601('2026-06-09T18:19:13.068Z')
   ),
   connection_id: '<id>',
   id: '<id>'

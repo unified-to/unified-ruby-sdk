@@ -30,13 +30,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.database.create_datastore_database(datastore_database: Models::Shared::DatastoreDatabase.new(
   created_at: DateTime.iso8601('2019-03-05T14:31:00.223Z'),
   description: 'Substantia tantillus coniuratio repellat coerceo amet vito vorago.',
-  id: 'd345d940-4de9-4164-8d0a-5fa4fc79ecf6',
+  id: '62b17c8b-8125-40a5-9c59-673217add12d',
   is_active: true,
   metadata: [],
   name: 'Rau - O\'Reilly',
   password: 'iYLhYwOHm0NLDvI',
   region: 'France',
-  updated_at: DateTime.iso8601('2023-07-12T15:57:50.151Z'),
+  updated_at: DateTime.iso8601('2023-07-13T04:48:44.899Z'),
   web_url: 'https://optimal-signature.name'
 ), connection_id: '<id>')
 
@@ -173,13 +173,13 @@ req = Models::Operations::PatchDatastoreDatabaseRequest.new(
   datastore_database: Models::Shared::DatastoreDatabase.new(
     created_at: DateTime.iso8601('2019-03-05T14:31:00.223Z'),
     description: 'Substantia tantillus coniuratio repellat coerceo amet vito vorago.',
-    id: 'b1a62815-2c72-4b38-b551-d150a6f670bf',
+    id: '3acb057d-7a1d-497b-b88b-126482574fb2',
     is_active: true,
     metadata: [],
     name: 'Rau - O\'Reilly',
     password: 'iYLhYwOHm0NLDvI',
     region: 'France',
-    updated_at: DateTime.iso8601('2023-07-12T15:57:50.155Z'),
+    updated_at: DateTime.iso8601('2023-07-13T04:48:44.913Z'),
     web_url: 'https://optimal-signature.name'
   ),
   connection_id: '<id>',
@@ -271,13 +271,13 @@ req = Models::Operations::UpdateDatastoreDatabaseRequest.new(
   datastore_database: Models::Shared::DatastoreDatabase.new(
     created_at: DateTime.iso8601('2019-03-05T14:31:00.223Z'),
     description: 'Substantia tantillus coniuratio repellat coerceo amet vito vorago.',
-    id: 'b1a62815-2c72-4b38-b551-d150a6f670bf',
+    id: '3acb057d-7a1d-497b-b88b-126482574fb2',
     is_active: true,
     metadata: [],
     name: 'Rau - O\'Reilly',
     password: 'iYLhYwOHm0NLDvI',
     region: 'France',
-    updated_at: DateTime.iso8601('2023-07-12T15:57:50.155Z'),
+    updated_at: DateTime.iso8601('2023-07-13T04:48:44.913Z'),
     web_url: 'https://optimal-signature.name'
   ),
   connection_id: '<id>',

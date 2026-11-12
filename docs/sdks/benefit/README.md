@@ -36,13 +36,13 @@ res = s.benefit.create_hris_benefit(hris_benefit: Models::Shared::HrisBenefit.ne
   employer_contribution_max_amount: 179_093.0,
   employer_contribution_type: Models::Shared::EmployerContributionType::PERCENTAGE,
   frequency: Models::Shared::HrisBenefitFrequency::MONTH,
-  id: '47683f85-7b89-49db-bdae-32c6892d9e33',
+  id: '55b5742f-cae9-453f-a174-a5e952d41320',
   is_active: false,
   metadata: [],
   name: 'Frozen Wooden Ball',
   tax: Models::Shared::Tax::PRE_TAX,
   type: Models::Shared::HrisBenefitType::OTHER,
-  updated_at: DateTime.iso8601('2023-03-29T23:04:45.822Z')
+  updated_at: DateTime.iso8601('2023-03-30T08:58:10.646Z')
 ), connection_id: '<id>')
 
 unless res.hris_benefit.nil?
@@ -184,13 +184,13 @@ req = Models::Operations::PatchHrisBenefitRequest.new(
     employer_contribution_max_amount: 179_093.0,
     employer_contribution_type: Models::Shared::EmployerContributionType::PERCENTAGE,
     frequency: Models::Shared::HrisBenefitFrequency::MONTH,
-    id: '508c4cc3-1bef-4aae-93e9-4b7234df3e9d',
+    id: '571263ec-72a2-4c62-9186-741d63463230',
     is_active: false,
     metadata: [],
     name: 'Frozen Wooden Ball',
     tax: Models::Shared::Tax::PRE_TAX,
     type: Models::Shared::HrisBenefitType::OTHER,
-    updated_at: DateTime.iso8601('2023-03-29T23:04:45.833Z')
+    updated_at: DateTime.iso8601('2023-03-30T08:58:10.654Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -287,13 +287,13 @@ req = Models::Operations::UpdateHrisBenefitRequest.new(
     employer_contribution_max_amount: 179_093.0,
     employer_contribution_type: Models::Shared::EmployerContributionType::PERCENTAGE,
     frequency: Models::Shared::HrisBenefitFrequency::MONTH,
-    id: '508c4cc3-1bef-4aae-93e9-4b7234df3e9d',
+    id: '571263ec-72a2-4c62-9186-741d63463230',
     is_active: false,
     metadata: [],
     name: 'Frozen Wooden Ball',
     tax: Models::Shared::Tax::PRE_TAX,
     type: Models::Shared::HrisBenefitType::OTHER,
-    updated_at: DateTime.iso8601('2023-03-29T23:04:45.833Z')
+    updated_at: DateTime.iso8601('2023-03-30T08:58:10.654Z')
   ),
   connection_id: '<id>',
   id: '<id>'

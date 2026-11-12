@@ -123,32 +123,32 @@ res = s.hris.create_hris_attendance(hris_attendance: Models::Shared::HrisAttenda
     region: 'Tennessee',
     region_code: 'CA'
   ),
-  approved_at: DateTime.iso8601('2021-09-20T00:37:26.526Z'),
+  approved_at: DateTime.iso8601('2021-09-20T01:05:58.249Z'),
   breaks: [
     Models::Shared::HrisAttendanceBreak.new(
       duration_minutes: 51.0,
-      end_at: DateTime.iso8601('2024-02-24T15:56:47.308Z'),
-      id: 'e13ce547-7d3d-4c1c-b4cd-bbba5d350a1f',
+      end_at: DateTime.iso8601('2024-02-25T02:55:10.831Z'),
+      id: '03cf090a-562d-40bd-89bc-8cd87e329952',
       is_paid: false,
       name: 'Lunch',
-      start_at: DateTime.iso8601('2023-11-07T21:16:43.137Z')
+      start_at: DateTime.iso8601('2023-11-08T06:57:55.371Z')
     ),
   ],
   created_at: DateTime.iso8601('2021-08-10T19:43:18.452Z'),
   currency: 'EUR',
   declared_tips_amount: 54.0,
   employee_user_id: '<id>',
-  end_at: DateTime.iso8601('2024-05-04T04:40:07.410Z'),
+  end_at: DateTime.iso8601('2024-05-04T16:27:51.223Z'),
   hourly_rate: 16.0,
   hours: 10.0,
-  id: '23d98d42-c780-4b59-b3f2-180bf3a677fd',
+  id: '0791839b-b2fc-4419-a5d9-da0e13c76caf',
   job_name: 'Human Accountability Administrator',
   metadata: [],
   non_cash_tips_amount: 167.0,
-  start_at: DateTime.iso8601('2021-11-12T01:19:09.245Z'),
+  start_at: DateTime.iso8601('2021-11-12T02:25:18.712Z'),
   status: Models::Shared::HrisAttendanceStatus::OPEN,
   timezone: 'America/Atikokan',
-  updated_at: DateTime.iso8601('2022-01-21T15:55:46.680Z')
+  updated_at: DateTime.iso8601('2022-01-21T17:52:02.363Z')
 ), connection_id: '<id>')
 
 unless res.hris_attendance.nil?
@@ -200,7 +200,7 @@ res = s.hris.create_hris_bankaccount(hris_bankaccount: Models::Shared::HrisBanka
   country_code: 'US',
   created_at: DateTime.iso8601('2019-11-16T16:43:45.976Z'),
   currency: 'USD',
-  id: '6e2eee3d-cf28-4faf-bafb-7fe05b7cc5c4',
+  id: '97ac47c7-8450-40d9-833e-7de52288be58',
   is_primary: true,
   metadata: [],
   name: 'Granville Schumm - Checking',
@@ -208,7 +208,7 @@ res = s.hris.create_hris_bankaccount(hris_bankaccount: Models::Shared::HrisBanka
   routing_number: '448650724',
   split_amount: 98.0,
   split_type: Models::Shared::SplitType::PERCENTAGE,
-  updated_at: DateTime.iso8601('2025-07-18T05:30:45.295Z')
+  updated_at: DateTime.iso8601('2025-07-18T23:55:22.518Z')
 ), connection_id: '<id>')
 
 unless res.hris_bankaccount.nil?
@@ -261,13 +261,13 @@ res = s.hris.create_hris_benefit(hris_benefit: Models::Shared::HrisBenefit.new(
   employer_contribution_max_amount: 179_093.0,
   employer_contribution_type: Models::Shared::EmployerContributionType::PERCENTAGE,
   frequency: Models::Shared::HrisBenefitFrequency::MONTH,
-  id: '47683f85-7b89-49db-bdae-32c6892d9e33',
+  id: '55b5742f-cae9-453f-a174-a5e952d41320',
   is_active: false,
   metadata: [],
   name: 'Frozen Wooden Ball',
   tax: Models::Shared::Tax::PRE_TAX,
   type: Models::Shared::HrisBenefitType::OTHER,
-  updated_at: DateTime.iso8601('2023-03-29T23:04:45.822Z')
+  updated_at: DateTime.iso8601('2023-03-30T08:58:10.646Z')
 ), connection_id: '<id>')
 
 unless res.hris_benefit.nil?
@@ -321,11 +321,11 @@ res = s.hris.create_hris_company(hris_company: Models::Shared::HrisCompany.new(
     region_code: 'MO'
   ),
   created_at: DateTime.iso8601('2021-05-02T22:27:38.970Z'),
-  id: 'af920d57-8971-404e-be16-6a504c970fb4',
+  id: '0e7ab25b-9fca-4061-a7d3-d4847206d0cd',
   legal_name: 'Gottlieb Group LLC',
   metadata: [],
   name: 'Gottlieb Group',
-  updated_at: DateTime.iso8601('2026-10-29T10:58:01.656Z')
+  updated_at: DateTime.iso8601('2026-10-30T09:30:41.518Z')
 ), connection_id: '<id>')
 
 unless res.hris_company.nil?
@@ -377,14 +377,14 @@ res = s.hris.create_hris_deduction(hris_deduction: Models::Shared::HrisDeduction
   employer_type: Models::Shared::EmployerType::PERCENTAGE,
   frequency: Models::Shared::HrisDeductionFrequency::ONE_TIME,
   garnishment_type: Models::Shared::GarnishmentType::CHILD_SUPPORT,
-  id: '4cf5ac47-d708-42eb-a2f3-1ad59a10d03f',
+  id: 'c76297af-25ba-40b5-a19a-99f473f87fe4',
   is_active: true,
   max_amount: 21_794.0,
   metadata: [],
   notes: 'Carmen desidero.',
-  start_at: DateTime.iso8601('2025-03-31T05:37:53.862Z'),
+  start_at: DateTime.iso8601('2025-03-31T22:54:08.168Z'),
   type: Models::Shared::HrisDeductionType::FIXED,
-  updated_at: DateTime.iso8601('2024-04-04T03:37:47.113Z')
+  updated_at: DateTime.iso8601('2024-04-04T17:35:07.240Z')
 ), connection_id: '<id>')
 
 unless res.hris_deduction.nil?
@@ -437,7 +437,7 @@ res = s.hris.create_hris_device(hris_device: Models::Shared::HrisDevice.new(
   has_hd_encrypted: true,
   has_password_manager: true,
   has_screenlock: false,
-  id: '048b8d99-830d-4f0c-b2ec-698b46b171ba',
+  id: 'a1f53f01-4292-44b9-b051-c0fdd9b8d231',
   is_missing: false,
   manufacturer: 'Hackett Inc',
   metadata: [],
@@ -445,7 +445,7 @@ res = s.hris.create_hris_device(hris_device: Models::Shared::HrisDevice.new(
   name: 'august-laptop',
   os: 'transmitter',
   os_version: '8.4.8',
-  updated_at: DateTime.iso8601('2023-06-19T21:01:32.904Z'),
+  updated_at: DateTime.iso8601('2023-06-20T09:34:53.212Z'),
   version: '4.15.7'
 ), connection_id: '<id>')
 
@@ -494,10 +494,10 @@ res = s.hris.create_hris_document(hris_document: Models::Shared::HrisDocument.ne
   created_at: DateTime.iso8601('2022-10-27T11:47:26.086Z'),
   document_url: 'https://sore-decision.biz/',
   filename: 'ridge_forager.xsl',
-  id: 'f481dc87-07f0-4041-8d07-cad4d395f89b',
+  id: 'c6f5594f-d1b0-47fc-8a00-11bd99abb5ce',
   metadata: [],
   type: Models::Shared::HrisDocumentType::POLICY,
-  updated_at: DateTime.iso8601('2025-10-27T02:38:30.457Z')
+  updated_at: DateTime.iso8601('2025-10-27T19:29:12.773Z')
 ), connection_id: '<id>')
 
 unless res.hris_document.nil?
@@ -546,12 +546,12 @@ res = s.hris.create_hris_earning(hris_earning: Models::Shared::HrisEarning.new(
   created_at: DateTime.iso8601('2019-01-26T12:44:52.326Z'),
   currency: 'USD',
   frequency: Models::Shared::HrisEarningFrequency::SEMIMONTHLY,
-  id: '102cf5cb-4c6a-40db-b13f-387d86ce77f9',
+  id: '0b156863-3ccf-4be8-8fe1-c7a9bc810db2',
   metadata: [],
   notes: 'Deporto truculenter vinum beatae.',
-  start_at: DateTime.iso8601('2022-08-03T22:26:51.981Z'),
+  start_at: DateTime.iso8601('2022-08-04T08:41:43.628Z'),
   status: Models::Shared::HrisEarningStatus::ENDED,
-  updated_at: DateTime.iso8601('2020-02-11T15:44:43.452Z')
+  updated_at: DateTime.iso8601('2020-02-11T18:47:01.898Z')
 ), connection_id: '<id>')
 
 unless res.hris_earning.nil?
@@ -632,7 +632,7 @@ res = s.hris.create_hris_employee(hris_employee: Models::Shared::HrisEmployee.ne
   gender: Models::Shared::HrisEmployeeGender::MALE,
   has_mfa: true,
   hired_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
-  id: '68cad26f-d082-4cb3-88ec-2fc8edc03eff',
+  id: 'f7fd4726-4126-4196-bdda-8d957315fbac',
   image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg',
   language_locale: 'in',
   last_name: 'Prohaska',
@@ -644,7 +644,7 @@ res = s.hris.create_hris_employee(hris_employee: Models::Shared::HrisEmployee.ne
         'display_name' => 'Custom Property',
       },
       format: Models::Shared::HrisMetadataFormat::TEXT,
-      id: 'a3349abb-ed1d-49ea-a03e-5c864fff79b8',
+      id: '1a2f81dc-a3f4-4610-967a-6cde8b4e1d03',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'tutis'
@@ -692,7 +692,7 @@ res = s.hris.create_hris_employee(hris_employee: Models::Shared::HrisEmployee.ne
   timeoff_days_used: 9.0,
   timezone: 'Europe/Ljubljana',
   title: 'District Branding Specialist',
-  updated_at: DateTime.iso8601('2020-07-21T15:33:28.142Z')
+  updated_at: DateTime.iso8601('2020-07-21T18:14:28.464Z')
 ), connection_id: '<id>')
 
 unless res.hris_employee.nil?
@@ -739,12 +739,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.hris.create_hris_group(hris_group: Models::Shared::HrisGroup.new(
   created_at: DateTime.iso8601('2023-11-01T13:13:40.714Z'),
   description: 'Absorbeo casso.',
-  id: 'c022e822-8499-4521-bb51-f2e761047151',
+  id: '615e1c05-31cf-4a93-b590-295216e1f419',
   is_active: false,
   metadata: [],
   name: 'Games',
   type: Models::Shared::HrisGroupType::BRANCH,
-  updated_at: DateTime.iso8601('2026-06-08T22:48:57.027Z')
+  updated_at: DateTime.iso8601('2026-06-09T18:19:13.060Z')
 ), connection_id: '<id>')
 
 unless res.hris_group.nil?
@@ -793,11 +793,11 @@ res = s.hris.create_hris_job(hris_job: Models::Shared::HrisJob.new(
   created_at: DateTime.iso8601('2020-10-28T01:13:19.491Z'),
   description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
   employment_type: Models::Shared::HrisJobEmploymentType::FREELANCE,
-  id: '20b891b1-eab3-4597-ba14-9eebf2c6fd41',
+  id: '43a2531b-a9cd-476d-a1c8-45b79edeae84',
   is_active: false,
   metadata: [],
   name: 'Internal Integration Specialist',
-  updated_at: DateTime.iso8601('2023-02-07T02:37:58.522Z')
+  updated_at: DateTime.iso8601('2023-02-07T11:11:36.382Z')
 ), connection_id: '<id>')
 
 unless res.hris_job.nil?
@@ -854,7 +854,7 @@ res = s.hris.create_hris_location(hris_location: Models::Shared::HrisLocation.ne
   created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
   currency: 'MNT',
   description: 'Commemoro acervus.',
-  id: '1706bbc5-9ee6-4d5e-bbae-d29a0454bb12',
+  id: 'f90da1cc-646f-457d-b272-50f74fa985cb',
   is_active: false,
   is_hq: true,
   language_locale: 'it',
@@ -875,7 +875,7 @@ res = s.hris.create_hris_location(hris_location: Models::Shared::HrisLocation.ne
     ),
   ],
   timezone: 'Asia/Jerusalem',
-  updated_at: DateTime.iso8601('2023-06-28T18:00:21.316Z')
+  updated_at: DateTime.iso8601('2023-06-29T02:18:19.051Z')
 ), connection_id: '<id>')
 
 unless res.hris_location.nil?
@@ -927,13 +927,13 @@ res = s.hris.create_hris_taxonomy(hris_taxonomy: Models::Shared::HrisTaxonomy.ne
   created_at: DateTime.iso8601('2022-06-23T02:10:00.789Z'),
   description: 'Uterque vespillo adnuo ea commodo turbo suscipio condico.',
   domain: 'Health',
-  id: 'c7bff07e-c915-4bea-bf95-22047a26a14a',
+  id: '1395bddb-6049-4570-9db7-f6909803266f',
   is_active: false,
   metadata: [],
   name: 'International Functionality Architect',
   subcategory: 'Marble',
   type: Models::Shared::HrisTaxonomyType::KNOWLEDGE,
-  updated_at: DateTime.iso8601('2023-06-02T19:22:53.022Z'),
+  updated_at: DateTime.iso8601('2023-06-03T00:15:47.422Z'),
   url: 'https://fixed-membership.biz/'
 ), connection_id: '<id>')
 
@@ -979,7 +979,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
   )
 )
 res = s.hris.create_hris_timeoff(hris_timeoff: Models::Shared::HrisTimeoff.new(
-  approved_at: DateTime.iso8601('2022-02-24T23:12:34.229Z'),
+  approved_at: DateTime.iso8601('2022-02-25T00:55:50.537Z'),
   attachments: [
     Models::Shared::HrisAttachment.new(
       content_type: 'application/pdf',
@@ -993,16 +993,16 @@ res = s.hris.create_hris_timeoff(hris_timeoff: Models::Shared::HrisTimeoff.new(
   created_at: DateTime.iso8601('2021-10-06T18:00:20.615Z'),
   duration: 4.0,
   duration_type: Models::Shared::DurationType::DAY,
-  end_at: DateTime.iso8601('2025-01-11T02:42:35.111Z'),
-  id: 'd68599de-6107-4bdc-b4c5-c9e847c13da3',
+  end_at: DateTime.iso8601('2025-01-11T17:14:33.569Z'),
+  id: 'ac8ff24b-56a1-488f-874e-1f446eb7d407',
   is_paid: true,
   metadata: [],
   original_type: 'acerbitas ut',
   reason: 'verto',
-  start_at: DateTime.iso8601('2023-09-12T17:42:25.781Z'),
+  start_at: DateTime.iso8601('2023-09-13T02:18:43.085Z'),
   status: Models::Shared::HrisTimeoffStatus::DENIED,
   type: Models::Shared::HrisTimeoffType::IN_LIEU,
-  updated_at: DateTime.iso8601('2022-07-15T23:46:44.084Z'),
+  updated_at: DateTime.iso8601('2022-07-16T03:13:08.227Z'),
   user_id: '<id>'
 ), connection_id: '<id>')
 
@@ -1048,7 +1048,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
   )
 )
 res = s.hris.create_hris_timeshift(hris_timeshift: Models::Shared::HrisTimeshift.new(
-  approved_at: DateTime.iso8601('2022-07-26T18:57:43.408Z'),
+  approved_at: DateTime.iso8601('2022-07-27T04:25:02.482Z'),
   compensation: [
     Models::Shared::HrisCompensation.new(
       amount: 76_761.0,
@@ -1060,13 +1060,13 @@ res = s.hris.create_hris_timeshift(hris_timeshift: Models::Shared::HrisTimeshift
   ],
   created_at: DateTime.iso8601('2019-07-01T23:53:15.738Z'),
   employee_user_id: '<id>',
-  end_at: DateTime.iso8601('2026-10-17T18:37:23.862Z'),
+  end_at: DateTime.iso8601('2026-10-18T17:06:14.529Z'),
   hours: 6.0,
-  id: 'a0a1f785-0aeb-416c-8fe0-5be1217bdc00',
+  id: '904e401a-88a4-429b-ba2b-04a1f38c4352',
   is_approved: false,
   metadata: [],
-  start_at: DateTime.iso8601('2023-07-24T13:18:08.698Z'),
-  updated_at: DateTime.iso8601('2021-07-07T15:19:17.386Z')
+  start_at: DateTime.iso8601('2023-07-25T01:49:05.095Z'),
+  updated_at: DateTime.iso8601('2021-07-07T21:32:09.590Z')
 ), connection_id: '<id>')
 
 unless res.hris_timeshift.nil?
@@ -2687,32 +2687,32 @@ req = Models::Operations::PatchHrisAttendanceRequest.new(
       region: 'Tennessee',
       region_code: 'CA'
     ),
-    approved_at: DateTime.iso8601('2021-09-20T00:37:26.526Z'),
+    approved_at: DateTime.iso8601('2021-09-20T01:05:58.250Z'),
     breaks: [
       Models::Shared::HrisAttendanceBreak.new(
         duration_minutes: 51.0,
-        end_at: DateTime.iso8601('2024-02-24T15:56:47.319Z'),
-        id: '5d8be6d5-24cb-499b-b4de-0e3c8a683ef0',
+        end_at: DateTime.iso8601('2024-02-25T02:55:10.846Z'),
+        id: '88108861-b33c-4f80-9c08-0c05650e000e',
         is_paid: false,
         name: 'Lunch',
-        start_at: DateTime.iso8601('2023-11-07T21:16:43.146Z')
+        start_at: DateTime.iso8601('2023-11-08T06:57:55.384Z')
       ),
     ],
     created_at: DateTime.iso8601('2021-08-10T19:43:18.452Z'),
     currency: 'EUR',
     declared_tips_amount: 54.0,
     employee_user_id: '<id>',
-    end_at: DateTime.iso8601('2024-05-04T04:40:07.421Z'),
+    end_at: DateTime.iso8601('2024-05-04T16:27:51.239Z'),
     hourly_rate: 16.0,
     hours: 10.0,
-    id: '82c7fa96-01ae-4b78-a96a-ed7de970256f',
+    id: '562a2ae2-7a28-41f3-90d7-f0dc90a7adba',
     job_name: 'Human Accountability Administrator',
     metadata: [],
     non_cash_tips_amount: 167.0,
-    start_at: DateTime.iso8601('2021-11-12T01:19:09.246Z'),
+    start_at: DateTime.iso8601('2021-11-12T02:25:18.713Z'),
     status: Models::Shared::HrisAttendanceStatus::OPEN,
     timezone: 'America/Atikokan',
-    updated_at: DateTime.iso8601('2022-01-21T15:55:46.682Z')
+    updated_at: DateTime.iso8601('2022-01-21T17:52:02.365Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2767,7 +2767,7 @@ req = Models::Operations::PatchHrisBankaccountRequest.new(
     country_code: 'US',
     created_at: DateTime.iso8601('2019-11-16T16:43:45.976Z'),
     currency: 'USD',
-    id: '17201b65-fd00-459d-a92a-cb399f4aec66',
+    id: 'baae8db1-d07e-44a7-9e97-5d53c4c86e30',
     is_primary: true,
     metadata: [],
     name: 'Granville Schumm - Checking',
@@ -2775,7 +2775,7 @@ req = Models::Operations::PatchHrisBankaccountRequest.new(
     routing_number: '448650724',
     split_amount: 98.0,
     split_type: Models::Shared::SplitType::PERCENTAGE,
-    updated_at: DateTime.iso8601('2025-07-18T05:30:45.304Z')
+    updated_at: DateTime.iso8601('2025-07-18T23:55:22.534Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2831,13 +2831,13 @@ req = Models::Operations::PatchHrisBenefitRequest.new(
     employer_contribution_max_amount: 179_093.0,
     employer_contribution_type: Models::Shared::EmployerContributionType::PERCENTAGE,
     frequency: Models::Shared::HrisBenefitFrequency::MONTH,
-    id: '508c4cc3-1bef-4aae-93e9-4b7234df3e9d',
+    id: '571263ec-72a2-4c62-9186-741d63463230',
     is_active: false,
     metadata: [],
     name: 'Frozen Wooden Ball',
     tax: Models::Shared::Tax::PRE_TAX,
     type: Models::Shared::HrisBenefitType::OTHER,
-    updated_at: DateTime.iso8601('2023-03-29T23:04:45.833Z')
+    updated_at: DateTime.iso8601('2023-03-30T08:58:10.654Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2894,11 +2894,11 @@ req = Models::Operations::PatchHrisCompanyRequest.new(
       region_code: 'MO'
     ),
     created_at: DateTime.iso8601('2021-05-02T22:27:38.970Z'),
-    id: 'd56d2185-5bc5-464b-972b-51dc35b47d7b',
+    id: '478f4371-b0f3-4372-909b-be9fb51074e8',
     legal_name: 'Gottlieb Group LLC',
     metadata: [],
     name: 'Gottlieb Group',
-    updated_at: DateTime.iso8601('2026-10-29T10:58:01.670Z')
+    updated_at: DateTime.iso8601('2026-10-30T09:30:41.535Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2953,14 +2953,14 @@ req = Models::Operations::PatchHrisDeductionRequest.new(
     employer_type: Models::Shared::EmployerType::PERCENTAGE,
     frequency: Models::Shared::HrisDeductionFrequency::ONE_TIME,
     garnishment_type: Models::Shared::GarnishmentType::CHILD_SUPPORT,
-    id: 'c95b23d5-881b-4a21-8ee1-c2106f6359b9',
+    id: '991cbf60-7a19-4e98-8236-8fa767ac685a',
     is_active: true,
     max_amount: 21_794.0,
     metadata: [],
     notes: 'Carmen desidero.',
-    start_at: DateTime.iso8601('2025-03-31T05:37:53.869Z'),
+    start_at: DateTime.iso8601('2025-03-31T22:54:08.185Z'),
     type: Models::Shared::HrisDeductionType::FIXED,
-    updated_at: DateTime.iso8601('2024-04-04T03:37:47.119Z')
+    updated_at: DateTime.iso8601('2024-04-04T17:35:07.253Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -3016,7 +3016,7 @@ req = Models::Operations::PatchHrisDeviceRequest.new(
     has_hd_encrypted: true,
     has_password_manager: true,
     has_screenlock: false,
-    id: '588dd5e9-471b-4a20-b11f-1fbb489ba94a',
+    id: 'f9acdcf1-4e6b-4a25-b792-740c241e7ed9',
     is_missing: false,
     manufacturer: 'Hackett Inc',
     metadata: [],
@@ -3024,7 +3024,7 @@ req = Models::Operations::PatchHrisDeviceRequest.new(
     name: 'august-laptop',
     os: 'transmitter',
     os_version: '8.4.8',
-    updated_at: DateTime.iso8601('2023-06-19T21:01:32.912Z'),
+    updated_at: DateTime.iso8601('2023-06-20T09:34:53.223Z'),
     version: '4.15.7'
   ),
   connection_id: '<id>',
@@ -3076,10 +3076,10 @@ req = Models::Operations::PatchHrisDocumentRequest.new(
     created_at: DateTime.iso8601('2022-10-27T11:47:26.086Z'),
     document_url: 'https://sore-decision.biz/',
     filename: 'ridge_forager.xsl',
-    id: '2484c1e6-8fee-4a89-bf9a-b4bd591999eb',
+    id: 'e0beb89c-13f3-4cf4-afb3-54cd7871b195',
     metadata: [],
     type: Models::Shared::HrisDocumentType::POLICY,
-    updated_at: DateTime.iso8601('2025-10-27T02:38:30.464Z')
+    updated_at: DateTime.iso8601('2025-10-27T19:29:12.785Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -3131,12 +3131,12 @@ req = Models::Operations::PatchHrisEarningRequest.new(
     created_at: DateTime.iso8601('2019-01-26T12:44:52.326Z'),
     currency: 'USD',
     frequency: Models::Shared::HrisEarningFrequency::SEMIMONTHLY,
-    id: '956ec036-b988-48c4-8670-18b7a1341935',
+    id: 'ba4b7eb8-6dd1-4e43-bdf8-0035f6c9a100',
     metadata: [],
     notes: 'Deporto truculenter vinum beatae.',
-    start_at: DateTime.iso8601('2022-08-03T22:26:51.986Z'),
+    start_at: DateTime.iso8601('2022-08-04T08:41:43.635Z'),
     status: Models::Shared::HrisEarningStatus::ENDED,
-    updated_at: DateTime.iso8601('2020-02-11T15:44:43.453Z')
+    updated_at: DateTime.iso8601('2020-02-11T18:47:01.900Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -3220,7 +3220,7 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
     gender: Models::Shared::HrisEmployeeGender::MALE,
     has_mfa: true,
     hired_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
-    id: '9cf74ccf-2e3a-4288-8223-f8d911af9aaa',
+    id: 'e53de1df-ece6-4273-9c81-ed79e0feaa86',
     image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg',
     language_locale: 'in',
     last_name: 'Prohaska',
@@ -3232,7 +3232,7 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::HrisMetadataFormat::TEXT,
-        id: '28602b30-3ad4-4a96-9ba5-4de2cd779106',
+        id: '42e59b0e-f521-4fd6-a23a-21308bec4a11',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'tutis'
@@ -3280,7 +3280,7 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
     timeoff_days_used: 9.0,
     timezone: 'Europe/Ljubljana',
     title: 'District Branding Specialist',
-    updated_at: DateTime.iso8601('2020-07-21T15:33:28.153Z')
+    updated_at: DateTime.iso8601('2020-07-21T18:14:28.475Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -3330,12 +3330,12 @@ req = Models::Operations::PatchHrisGroupRequest.new(
   hris_group: Models::Shared::HrisGroup.new(
     created_at: DateTime.iso8601('2023-11-01T13:13:40.714Z'),
     description: 'Absorbeo casso.',
-    id: '680b3303-3249-42d7-8709-d9b6fb03fd74',
+    id: '6393a1f3-2bc5-4813-b61b-87d0a0269eda',
     is_active: false,
     metadata: [],
     name: 'Games',
     type: Models::Shared::HrisGroupType::BRANCH,
-    updated_at: DateTime.iso8601('2026-06-08T22:48:57.040Z')
+    updated_at: DateTime.iso8601('2026-06-09T18:19:13.068Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -3387,11 +3387,11 @@ req = Models::Operations::PatchHrisJobRequest.new(
     created_at: DateTime.iso8601('2020-10-28T01:13:19.491Z'),
     description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
     employment_type: Models::Shared::HrisJobEmploymentType::FREELANCE,
-    id: 'dfff4fc9-23ac-4dc8-a34d-268ccd0edcb4',
+    id: '06c1a60d-509b-4f33-90c6-11f920cfbe18',
     is_active: false,
     metadata: [],
     name: 'Internal Integration Specialist',
-    updated_at: DateTime.iso8601('2023-02-07T02:37:58.571Z')
+    updated_at: DateTime.iso8601('2023-02-07T11:11:36.437Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -3451,7 +3451,7 @@ req = Models::Operations::PatchHrisLocationRequest.new(
     created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
     currency: 'MNT',
     description: 'Commemoro acervus.',
-    id: '4aba105e-b3eb-43c4-9754-752a73e0d968',
+    id: 'c5133967-42bb-43c2-8ff5-b03acb966160',
     is_active: false,
     is_hq: true,
     language_locale: 'it',
@@ -3472,7 +3472,7 @@ req = Models::Operations::PatchHrisLocationRequest.new(
       ),
     ],
     timezone: 'Asia/Jerusalem',
-    updated_at: DateTime.iso8601('2023-06-28T18:00:21.323Z')
+    updated_at: DateTime.iso8601('2023-06-29T02:18:19.061Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -3520,7 +3520,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchHrisTimeoffRequest.new(
   hris_timeoff: Models::Shared::HrisTimeoff.new(
-    approved_at: DateTime.iso8601('2022-02-24T23:12:34.232Z'),
+    approved_at: DateTime.iso8601('2022-02-25T00:55:50.539Z'),
     attachments: [
       Models::Shared::HrisAttachment.new(
         content_type: 'application/pdf',
@@ -3534,16 +3534,16 @@ req = Models::Operations::PatchHrisTimeoffRequest.new(
     created_at: DateTime.iso8601('2021-10-06T18:00:20.615Z'),
     duration: 4.0,
     duration_type: Models::Shared::DurationType::DAY,
-    end_at: DateTime.iso8601('2025-01-11T02:42:35.136Z'),
-    id: 'b41fbc55-41e0-45ce-8ef2-7bf5599f6732',
+    end_at: DateTime.iso8601('2025-01-11T17:14:33.582Z'),
+    id: 'c9b39fde-5691-492f-8294-db60c6f5ed47',
     is_paid: true,
     metadata: [],
     original_type: 'acerbitas ut',
     reason: 'verto',
-    start_at: DateTime.iso8601('2023-09-12T17:42:25.796Z'),
+    start_at: DateTime.iso8601('2023-09-13T02:18:43.093Z'),
     status: Models::Shared::HrisTimeoffStatus::DENIED,
     type: Models::Shared::HrisTimeoffType::IN_LIEU,
-    updated_at: DateTime.iso8601('2022-07-15T23:46:44.090Z'),
+    updated_at: DateTime.iso8601('2022-07-16T03:13:08.231Z'),
     user_id: '<id>'
   ),
   connection_id: '<id>',
@@ -3592,7 +3592,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchHrisTimeshiftRequest.new(
   hris_timeshift: Models::Shared::HrisTimeshift.new(
-    approved_at: DateTime.iso8601('2022-07-26T18:57:43.414Z'),
+    approved_at: DateTime.iso8601('2022-07-27T04:25:02.490Z'),
     compensation: [
       Models::Shared::HrisCompensation.new(
         amount: 76_761.0,
@@ -3604,13 +3604,13 @@ req = Models::Operations::PatchHrisTimeshiftRequest.new(
     ],
     created_at: DateTime.iso8601('2019-07-01T23:53:15.738Z'),
     employee_user_id: '<id>',
-    end_at: DateTime.iso8601('2026-10-17T18:37:23.878Z'),
+    end_at: DateTime.iso8601('2026-10-18T17:06:14.548Z'),
     hours: 6.0,
-    id: 'e3bf5b23-d8c4-42d8-85a9-8fa364361746',
+    id: 'a464567b-1a85-49db-9efd-1a20ebc41e80',
     is_approved: false,
     metadata: [],
-    start_at: DateTime.iso8601('2023-07-24T13:18:08.706Z'),
-    updated_at: DateTime.iso8601('2021-07-07T15:19:17.391Z')
+    start_at: DateTime.iso8601('2023-07-25T01:49:05.105Z'),
+    updated_at: DateTime.iso8601('2021-07-07T21:32:09.595Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -4240,32 +4240,32 @@ req = Models::Operations::UpdateHrisAttendanceRequest.new(
       region: 'Tennessee',
       region_code: 'CA'
     ),
-    approved_at: DateTime.iso8601('2021-09-20T00:37:26.526Z'),
+    approved_at: DateTime.iso8601('2021-09-20T01:05:58.250Z'),
     breaks: [
       Models::Shared::HrisAttendanceBreak.new(
         duration_minutes: 51.0,
-        end_at: DateTime.iso8601('2024-02-24T15:56:47.319Z'),
-        id: '5d8be6d5-24cb-499b-b4de-0e3c8a683ef0',
+        end_at: DateTime.iso8601('2024-02-25T02:55:10.846Z'),
+        id: '88108861-b33c-4f80-9c08-0c05650e000e',
         is_paid: false,
         name: 'Lunch',
-        start_at: DateTime.iso8601('2023-11-07T21:16:43.146Z')
+        start_at: DateTime.iso8601('2023-11-08T06:57:55.384Z')
       ),
     ],
     created_at: DateTime.iso8601('2021-08-10T19:43:18.452Z'),
     currency: 'EUR',
     declared_tips_amount: 54.0,
     employee_user_id: '<id>',
-    end_at: DateTime.iso8601('2024-05-04T04:40:07.421Z'),
+    end_at: DateTime.iso8601('2024-05-04T16:27:51.239Z'),
     hourly_rate: 16.0,
     hours: 10.0,
-    id: '82c7fa96-01ae-4b78-a96a-ed7de970256f',
+    id: '562a2ae2-7a28-41f3-90d7-f0dc90a7adba',
     job_name: 'Human Accountability Administrator',
     metadata: [],
     non_cash_tips_amount: 167.0,
-    start_at: DateTime.iso8601('2021-11-12T01:19:09.246Z'),
+    start_at: DateTime.iso8601('2021-11-12T02:25:18.713Z'),
     status: Models::Shared::HrisAttendanceStatus::OPEN,
     timezone: 'America/Atikokan',
-    updated_at: DateTime.iso8601('2022-01-21T15:55:46.682Z')
+    updated_at: DateTime.iso8601('2022-01-21T17:52:02.365Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -4320,7 +4320,7 @@ req = Models::Operations::UpdateHrisBankaccountRequest.new(
     country_code: 'US',
     created_at: DateTime.iso8601('2019-11-16T16:43:45.976Z'),
     currency: 'USD',
-    id: '17201b65-fd00-459d-a92a-cb399f4aec66',
+    id: 'baae8db1-d07e-44a7-9e97-5d53c4c86e30',
     is_primary: true,
     metadata: [],
     name: 'Granville Schumm - Checking',
@@ -4328,7 +4328,7 @@ req = Models::Operations::UpdateHrisBankaccountRequest.new(
     routing_number: '448650724',
     split_amount: 98.0,
     split_type: Models::Shared::SplitType::PERCENTAGE,
-    updated_at: DateTime.iso8601('2025-07-18T05:30:45.304Z')
+    updated_at: DateTime.iso8601('2025-07-18T23:55:22.534Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -4384,13 +4384,13 @@ req = Models::Operations::UpdateHrisBenefitRequest.new(
     employer_contribution_max_amount: 179_093.0,
     employer_contribution_type: Models::Shared::EmployerContributionType::PERCENTAGE,
     frequency: Models::Shared::HrisBenefitFrequency::MONTH,
-    id: '508c4cc3-1bef-4aae-93e9-4b7234df3e9d',
+    id: '571263ec-72a2-4c62-9186-741d63463230',
     is_active: false,
     metadata: [],
     name: 'Frozen Wooden Ball',
     tax: Models::Shared::Tax::PRE_TAX,
     type: Models::Shared::HrisBenefitType::OTHER,
-    updated_at: DateTime.iso8601('2023-03-29T23:04:45.833Z')
+    updated_at: DateTime.iso8601('2023-03-30T08:58:10.654Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -4447,11 +4447,11 @@ req = Models::Operations::UpdateHrisCompanyRequest.new(
       region_code: 'MO'
     ),
     created_at: DateTime.iso8601('2021-05-02T22:27:38.970Z'),
-    id: 'd56d2185-5bc5-464b-972b-51dc35b47d7b',
+    id: '478f4371-b0f3-4372-909b-be9fb51074e8',
     legal_name: 'Gottlieb Group LLC',
     metadata: [],
     name: 'Gottlieb Group',
-    updated_at: DateTime.iso8601('2026-10-29T10:58:01.670Z')
+    updated_at: DateTime.iso8601('2026-10-30T09:30:41.535Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -4506,14 +4506,14 @@ req = Models::Operations::UpdateHrisDeductionRequest.new(
     employer_type: Models::Shared::EmployerType::PERCENTAGE,
     frequency: Models::Shared::HrisDeductionFrequency::ONE_TIME,
     garnishment_type: Models::Shared::GarnishmentType::CHILD_SUPPORT,
-    id: 'c95b23d5-881b-4a21-8ee1-c2106f6359b9',
+    id: '991cbf60-7a19-4e98-8236-8fa767ac685a',
     is_active: true,
     max_amount: 21_794.0,
     metadata: [],
     notes: 'Carmen desidero.',
-    start_at: DateTime.iso8601('2025-03-31T05:37:53.869Z'),
+    start_at: DateTime.iso8601('2025-03-31T22:54:08.185Z'),
     type: Models::Shared::HrisDeductionType::FIXED,
-    updated_at: DateTime.iso8601('2024-04-04T03:37:47.119Z')
+    updated_at: DateTime.iso8601('2024-04-04T17:35:07.253Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -4569,7 +4569,7 @@ req = Models::Operations::UpdateHrisDeviceRequest.new(
     has_hd_encrypted: true,
     has_password_manager: true,
     has_screenlock: false,
-    id: '588dd5e9-471b-4a20-b11f-1fbb489ba94a',
+    id: 'f9acdcf1-4e6b-4a25-b792-740c241e7ed9',
     is_missing: false,
     manufacturer: 'Hackett Inc',
     metadata: [],
@@ -4577,7 +4577,7 @@ req = Models::Operations::UpdateHrisDeviceRequest.new(
     name: 'august-laptop',
     os: 'transmitter',
     os_version: '8.4.8',
-    updated_at: DateTime.iso8601('2023-06-19T21:01:32.912Z'),
+    updated_at: DateTime.iso8601('2023-06-20T09:34:53.223Z'),
     version: '4.15.7'
   ),
   connection_id: '<id>',
@@ -4629,10 +4629,10 @@ req = Models::Operations::UpdateHrisDocumentRequest.new(
     created_at: DateTime.iso8601('2022-10-27T11:47:26.086Z'),
     document_url: 'https://sore-decision.biz/',
     filename: 'ridge_forager.xsl',
-    id: '2484c1e6-8fee-4a89-bf9a-b4bd591999eb',
+    id: 'e0beb89c-13f3-4cf4-afb3-54cd7871b195',
     metadata: [],
     type: Models::Shared::HrisDocumentType::POLICY,
-    updated_at: DateTime.iso8601('2025-10-27T02:38:30.464Z')
+    updated_at: DateTime.iso8601('2025-10-27T19:29:12.785Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -4684,12 +4684,12 @@ req = Models::Operations::UpdateHrisEarningRequest.new(
     created_at: DateTime.iso8601('2019-01-26T12:44:52.326Z'),
     currency: 'USD',
     frequency: Models::Shared::HrisEarningFrequency::SEMIMONTHLY,
-    id: '956ec036-b988-48c4-8670-18b7a1341935',
+    id: 'ba4b7eb8-6dd1-4e43-bdf8-0035f6c9a100',
     metadata: [],
     notes: 'Deporto truculenter vinum beatae.',
-    start_at: DateTime.iso8601('2022-08-03T22:26:51.986Z'),
+    start_at: DateTime.iso8601('2022-08-04T08:41:43.635Z'),
     status: Models::Shared::HrisEarningStatus::ENDED,
-    updated_at: DateTime.iso8601('2020-02-11T15:44:43.453Z')
+    updated_at: DateTime.iso8601('2020-02-11T18:47:01.900Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -4773,7 +4773,7 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
     gender: Models::Shared::HrisEmployeeGender::MALE,
     has_mfa: true,
     hired_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
-    id: '9cf74ccf-2e3a-4288-8223-f8d911af9aaa',
+    id: 'e53de1df-ece6-4273-9c81-ed79e0feaa86',
     image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg',
     language_locale: 'in',
     last_name: 'Prohaska',
@@ -4785,7 +4785,7 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::HrisMetadataFormat::TEXT,
-        id: '28602b30-3ad4-4a96-9ba5-4de2cd779106',
+        id: '42e59b0e-f521-4fd6-a23a-21308bec4a11',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'tutis'
@@ -4833,7 +4833,7 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
     timeoff_days_used: 9.0,
     timezone: 'Europe/Ljubljana',
     title: 'District Branding Specialist',
-    updated_at: DateTime.iso8601('2020-07-21T15:33:28.153Z')
+    updated_at: DateTime.iso8601('2020-07-21T18:14:28.475Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -4883,12 +4883,12 @@ req = Models::Operations::UpdateHrisGroupRequest.new(
   hris_group: Models::Shared::HrisGroup.new(
     created_at: DateTime.iso8601('2023-11-01T13:13:40.714Z'),
     description: 'Absorbeo casso.',
-    id: '680b3303-3249-42d7-8709-d9b6fb03fd74',
+    id: '6393a1f3-2bc5-4813-b61b-87d0a0269eda',
     is_active: false,
     metadata: [],
     name: 'Games',
     type: Models::Shared::HrisGroupType::BRANCH,
-    updated_at: DateTime.iso8601('2026-06-08T22:48:57.040Z')
+    updated_at: DateTime.iso8601('2026-06-09T18:19:13.068Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -4940,11 +4940,11 @@ req = Models::Operations::UpdateHrisJobRequest.new(
     created_at: DateTime.iso8601('2020-10-28T01:13:19.491Z'),
     description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
     employment_type: Models::Shared::HrisJobEmploymentType::FREELANCE,
-    id: 'dfff4fc9-23ac-4dc8-a34d-268ccd0edcb4',
+    id: '06c1a60d-509b-4f33-90c6-11f920cfbe18',
     is_active: false,
     metadata: [],
     name: 'Internal Integration Specialist',
-    updated_at: DateTime.iso8601('2023-02-07T02:37:58.571Z')
+    updated_at: DateTime.iso8601('2023-02-07T11:11:36.437Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -5004,7 +5004,7 @@ req = Models::Operations::UpdateHrisLocationRequest.new(
     created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
     currency: 'MNT',
     description: 'Commemoro acervus.',
-    id: '4aba105e-b3eb-43c4-9754-752a73e0d968',
+    id: 'c5133967-42bb-43c2-8ff5-b03acb966160',
     is_active: false,
     is_hq: true,
     language_locale: 'it',
@@ -5025,7 +5025,7 @@ req = Models::Operations::UpdateHrisLocationRequest.new(
       ),
     ],
     timezone: 'Asia/Jerusalem',
-    updated_at: DateTime.iso8601('2023-06-28T18:00:21.323Z')
+    updated_at: DateTime.iso8601('2023-06-29T02:18:19.061Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -5073,7 +5073,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateHrisTimeoffRequest.new(
   hris_timeoff: Models::Shared::HrisTimeoff.new(
-    approved_at: DateTime.iso8601('2022-02-24T23:12:34.232Z'),
+    approved_at: DateTime.iso8601('2022-02-25T00:55:50.539Z'),
     attachments: [
       Models::Shared::HrisAttachment.new(
         content_type: 'application/pdf',
@@ -5087,16 +5087,16 @@ req = Models::Operations::UpdateHrisTimeoffRequest.new(
     created_at: DateTime.iso8601('2021-10-06T18:00:20.615Z'),
     duration: 4.0,
     duration_type: Models::Shared::DurationType::DAY,
-    end_at: DateTime.iso8601('2025-01-11T02:42:35.136Z'),
-    id: 'b41fbc55-41e0-45ce-8ef2-7bf5599f6732',
+    end_at: DateTime.iso8601('2025-01-11T17:14:33.582Z'),
+    id: 'c9b39fde-5691-492f-8294-db60c6f5ed47',
     is_paid: true,
     metadata: [],
     original_type: 'acerbitas ut',
     reason: 'verto',
-    start_at: DateTime.iso8601('2023-09-12T17:42:25.796Z'),
+    start_at: DateTime.iso8601('2023-09-13T02:18:43.093Z'),
     status: Models::Shared::HrisTimeoffStatus::DENIED,
     type: Models::Shared::HrisTimeoffType::IN_LIEU,
-    updated_at: DateTime.iso8601('2022-07-15T23:46:44.090Z'),
+    updated_at: DateTime.iso8601('2022-07-16T03:13:08.231Z'),
     user_id: '<id>'
   ),
   connection_id: '<id>',
@@ -5145,7 +5145,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateHrisTimeshiftRequest.new(
   hris_timeshift: Models::Shared::HrisTimeshift.new(
-    approved_at: DateTime.iso8601('2022-07-26T18:57:43.414Z'),
+    approved_at: DateTime.iso8601('2022-07-27T04:25:02.490Z'),
     compensation: [
       Models::Shared::HrisCompensation.new(
         amount: 76_761.0,
@@ -5157,13 +5157,13 @@ req = Models::Operations::UpdateHrisTimeshiftRequest.new(
     ],
     created_at: DateTime.iso8601('2019-07-01T23:53:15.738Z'),
     employee_user_id: '<id>',
-    end_at: DateTime.iso8601('2026-10-17T18:37:23.878Z'),
+    end_at: DateTime.iso8601('2026-10-18T17:06:14.548Z'),
     hours: 6.0,
-    id: 'e3bf5b23-d8c4-42d8-85a9-8fa364361746',
+    id: 'a464567b-1a85-49db-9efd-1a20ebc41e80',
     is_approved: false,
     metadata: [],
-    start_at: DateTime.iso8601('2023-07-24T13:18:08.706Z'),
-    updated_at: DateTime.iso8601('2021-07-07T15:19:17.391Z')
+    start_at: DateTime.iso8601('2023-07-25T01:49:05.105Z'),
+    updated_at: DateTime.iso8601('2021-07-07T21:32:09.595Z')
   ),
   connection_id: '<id>',
   id: '<id>'

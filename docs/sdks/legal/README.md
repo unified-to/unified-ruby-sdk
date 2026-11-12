@@ -50,7 +50,7 @@ res = s.legal.create_legal_expense(legal_expense: Models::Shared::LegalExpense.n
   created_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
   currency: 'MVR',
   description: 'Temporibus agnitio sui.',
-  id: 'c4887d48-7e34-4de7-812d-a68d7ea428ff',
+  id: '92b4236b-fc3a-4763-8314-6c1b7a4101ca',
   incurred_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
   is_billed: false,
   metadata: [],
@@ -58,7 +58,7 @@ res = s.legal.create_legal_expense(legal_expense: Models::Shared::LegalExpense.n
   quantity: 3.0,
   total_amount: 300.0,
   type: Models::Shared::LegalExpenseType::OTHER,
-  updated_at: DateTime.iso8601('2024-04-11T21:23:28.459Z')
+  updated_at: DateTime.iso8601('2024-04-12T10:19:30.471Z')
 ), connection_id: '<id>')
 
 unless res.legal_expense.nil?
@@ -110,11 +110,11 @@ res = s.legal.create_legal_matter(legal_matter: Models::Shared::LegalMatter.new(
   created_at: DateTime.iso8601('2023-05-28T04:10:42.375Z'),
   currency: 'BOB',
   description: 'Speciosus cresco aut cotidie temeritas arma.',
-  id: '22bab30f-bd26-4298-86a0-ece9a62fd5c5',
+  id: 'fa03fb91-d6e6-47fb-bc6f-75838d35ed53',
   metadata: [],
   name: 'Walter v. Franecki - Spinka',
   number: '2023-3062',
-  opened_at: DateTime.iso8601('2023-07-05T21:41:58.250Z'),
+  opened_at: DateTime.iso8601('2023-07-05T22:23:43.054Z'),
   parties: [
     Models::Shared::LegalParty.new(
       description: 'Urban Walter',
@@ -123,8 +123,8 @@ res = s.legal.create_legal_matter(legal_matter: Models::Shared::LegalMatter.new(
   ],
   stage: 'currus',
   status: Models::Shared::LegalMatterStatus::OPEN,
-  statute_of_limitations_at: DateTime.iso8601('2027-07-19T18:52:36.969Z'),
-  updated_at: DateTime.iso8601('2023-07-18T06:23:20.063Z')
+  statute_of_limitations_at: DateTime.iso8601('2027-07-20T17:33:41.070Z'),
+  updated_at: DateTime.iso8601('2023-07-18T07:18:24.364Z')
 ), connection_id: '<id>')
 
 unless res.legal_matter.nil?
@@ -171,11 +171,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.legal.create_legal_practicearea(legal_practicearea: Models::Shared::LegalPracticearea.new(
   code: 'QCA',
   created_at: DateTime.iso8601('2023-01-28T21:00:26.264Z'),
-  id: '7ca37eb8-156d-4f3f-a8ea-e29e1e205cb5',
+  id: 'b7f40da9-8540-4a04-8fa8-b07d17889aef',
   metadata: [],
   name: 'witty Law',
   type: Models::Shared::LegalPracticeareaType::EDUCATION,
-  updated_at: DateTime.iso8601('2025-09-11T04:17:10.868Z')
+  updated_at: DateTime.iso8601('2025-09-11T19:58:59.449Z')
 ), connection_id: '<id>')
 
 unless res.legal_practicearea.nil?
@@ -224,13 +224,13 @@ res = s.legal.create_legal_timeentry(legal_timeentry: Models::Shared::LegalTimee
   created_at: DateTime.iso8601('2022-05-06T03:26:03.756Z'),
   currency: 'ZAR',
   description: 'Ea derideo adulatio torrens.',
-  id: 'eddb6297-818f-44f6-b96c-2b08ecef53ee',
+  id: '22a43639-6b40-45ea-a0da-9f34a76c3c06',
   is_billable: true,
   metadata: [],
   minutes: 390.0,
   rate_amount: 637.0,
   total_amount: 4140.5,
-  updated_at: DateTime.iso8601('2022-06-30T18:44:35.149Z'),
+  updated_at: DateTime.iso8601('2022-06-30T19:30:29.280Z'),
   worked_at: DateTime.iso8601('2022-05-06T03:26:03.756Z')
 ), connection_id: '<id>')
 
@@ -630,7 +630,7 @@ req = Models::Operations::PatchLegalExpenseRequest.new(
     created_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
     currency: 'MVR',
     description: 'Temporibus agnitio sui.',
-    id: '0ac8efd9-f855-4911-a28b-59dbd1979416',
+    id: 'e5589ec1-49b4-4b43-9a8a-71e6fbb52ea6',
     incurred_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
     is_billed: false,
     metadata: [],
@@ -638,7 +638,7 @@ req = Models::Operations::PatchLegalExpenseRequest.new(
     quantity: 3.0,
     total_amount: 300.0,
     type: Models::Shared::LegalExpenseType::OTHER,
-    updated_at: DateTime.iso8601('2024-04-11T21:23:28.465Z')
+    updated_at: DateTime.iso8601('2024-04-12T10:19:30.479Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -693,11 +693,11 @@ req = Models::Operations::PatchLegalMatterRequest.new(
     created_at: DateTime.iso8601('2023-05-28T04:10:42.375Z'),
     currency: 'BOB',
     description: 'Speciosus cresco aut cotidie temeritas arma.',
-    id: '0d13f4a2-7de3-4148-adba-6c5bb2acf6c3',
+    id: '1d35972c-5fd3-4c30-adfe-d419c52e61a6',
     metadata: [],
     name: 'Walter v. Franecki - Spinka',
     number: '2023-3062',
-    opened_at: DateTime.iso8601('2023-07-05T21:41:58.250Z'),
+    opened_at: DateTime.iso8601('2023-07-05T22:23:43.054Z'),
     parties: [
       Models::Shared::LegalParty.new(
         description: 'Urban Walter',
@@ -706,8 +706,8 @@ req = Models::Operations::PatchLegalMatterRequest.new(
     ],
     stage: 'currus',
     status: Models::Shared::LegalMatterStatus::OPEN,
-    statute_of_limitations_at: DateTime.iso8601('2027-07-19T18:52:36.992Z'),
-    updated_at: DateTime.iso8601('2023-07-18T06:23:20.063Z')
+    statute_of_limitations_at: DateTime.iso8601('2027-07-20T17:33:41.089Z'),
+    updated_at: DateTime.iso8601('2023-07-18T07:18:24.364Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -757,11 +757,11 @@ req = Models::Operations::PatchLegalPracticeareaRequest.new(
   legal_practicearea: Models::Shared::LegalPracticearea.new(
     code: 'QCA',
     created_at: DateTime.iso8601('2023-01-28T21:00:26.264Z'),
-    id: 'ab357c21-8e0d-4990-8068-b266579864a3',
+    id: '62338c64-4402-4847-a2f9-55810264ca08',
     metadata: [],
     name: 'witty Law',
     type: Models::Shared::LegalPracticeareaType::EDUCATION,
-    updated_at: DateTime.iso8601('2025-09-11T04:17:10.878Z')
+    updated_at: DateTime.iso8601('2025-09-11T19:58:59.459Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -813,13 +813,13 @@ req = Models::Operations::PatchLegalTimeentryRequest.new(
     created_at: DateTime.iso8601('2022-05-06T03:26:03.756Z'),
     currency: 'ZAR',
     description: 'Ea derideo adulatio torrens.',
-    id: '1ef0f5d5-0fe2-4f5b-af5b-5ff3af2aced4',
+    id: '79b8e4ee-0b72-4c22-a73e-70af6db7b3de',
     is_billable: true,
     metadata: [],
     minutes: 390.0,
     rate_amount: 637.0,
     total_amount: 4140.5,
-    updated_at: DateTime.iso8601('2022-06-30T18:44:35.150Z'),
+    updated_at: DateTime.iso8601('2022-06-30T19:30:29.280Z'),
     worked_at: DateTime.iso8601('2022-05-06T03:26:03.756Z')
   ),
   connection_id: '<id>',
@@ -1036,7 +1036,7 @@ req = Models::Operations::UpdateLegalExpenseRequest.new(
     created_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
     currency: 'MVR',
     description: 'Temporibus agnitio sui.',
-    id: '0ac8efd9-f855-4911-a28b-59dbd1979416',
+    id: 'e5589ec1-49b4-4b43-9a8a-71e6fbb52ea6',
     incurred_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
     is_billed: false,
     metadata: [],
@@ -1044,7 +1044,7 @@ req = Models::Operations::UpdateLegalExpenseRequest.new(
     quantity: 3.0,
     total_amount: 300.0,
     type: Models::Shared::LegalExpenseType::OTHER,
-    updated_at: DateTime.iso8601('2024-04-11T21:23:28.465Z')
+    updated_at: DateTime.iso8601('2024-04-12T10:19:30.479Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1099,11 +1099,11 @@ req = Models::Operations::UpdateLegalMatterRequest.new(
     created_at: DateTime.iso8601('2023-05-28T04:10:42.375Z'),
     currency: 'BOB',
     description: 'Speciosus cresco aut cotidie temeritas arma.',
-    id: '0d13f4a2-7de3-4148-adba-6c5bb2acf6c3',
+    id: '1d35972c-5fd3-4c30-adfe-d419c52e61a6',
     metadata: [],
     name: 'Walter v. Franecki - Spinka',
     number: '2023-3062',
-    opened_at: DateTime.iso8601('2023-07-05T21:41:58.250Z'),
+    opened_at: DateTime.iso8601('2023-07-05T22:23:43.054Z'),
     parties: [
       Models::Shared::LegalParty.new(
         description: 'Urban Walter',
@@ -1112,8 +1112,8 @@ req = Models::Operations::UpdateLegalMatterRequest.new(
     ],
     stage: 'currus',
     status: Models::Shared::LegalMatterStatus::OPEN,
-    statute_of_limitations_at: DateTime.iso8601('2027-07-19T18:52:36.992Z'),
-    updated_at: DateTime.iso8601('2023-07-18T06:23:20.063Z')
+    statute_of_limitations_at: DateTime.iso8601('2027-07-20T17:33:41.089Z'),
+    updated_at: DateTime.iso8601('2023-07-18T07:18:24.364Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1163,11 +1163,11 @@ req = Models::Operations::UpdateLegalPracticeareaRequest.new(
   legal_practicearea: Models::Shared::LegalPracticearea.new(
     code: 'QCA',
     created_at: DateTime.iso8601('2023-01-28T21:00:26.264Z'),
-    id: 'ab357c21-8e0d-4990-8068-b266579864a3',
+    id: '62338c64-4402-4847-a2f9-55810264ca08',
     metadata: [],
     name: 'witty Law',
     type: Models::Shared::LegalPracticeareaType::EDUCATION,
-    updated_at: DateTime.iso8601('2025-09-11T04:17:10.878Z')
+    updated_at: DateTime.iso8601('2025-09-11T19:58:59.459Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1219,13 +1219,13 @@ req = Models::Operations::UpdateLegalTimeentryRequest.new(
     created_at: DateTime.iso8601('2022-05-06T03:26:03.756Z'),
     currency: 'ZAR',
     description: 'Ea derideo adulatio torrens.',
-    id: '1ef0f5d5-0fe2-4f5b-af5b-5ff3af2aced4',
+    id: '79b8e4ee-0b72-4c22-a73e-70af6db7b3de',
     is_billable: true,
     metadata: [],
     minutes: 390.0,
     rate_amount: 637.0,
     total_amount: 4140.5,
-    updated_at: DateTime.iso8601('2022-06-30T18:44:35.150Z'),
+    updated_at: DateTime.iso8601('2022-06-30T19:30:29.280Z'),
     worked_at: DateTime.iso8601('2022-05-06T03:26:03.756Z')
   ),
   connection_id: '<id>',

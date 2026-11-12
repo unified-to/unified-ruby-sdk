@@ -30,13 +30,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.interview.create_ats_interview(ats_interview: Models::Shared::AtsInterview.new(
   created_at: DateTime.iso8601('2021-11-28T03:14:47.774Z'),
   end_at: DateTime.iso8601('2021-12-08T06:33:19.583Z'),
-  id: '4f2e18b5-157a-4f1d-b25a-272a392d33ea',
+  id: '71494ecc-5566-4923-8e0a-e764ef180754',
   location: '26596 Halle Trafficway',
   meeting_url: 'https://immaculate-foodstuffs.biz',
   metadata: [],
   start_at: DateTime.iso8601('2021-12-08T06:03:19.583Z'),
   status: Models::Shared::AtsInterviewStatus::SCHEDULED,
-  updated_at: DateTime.iso8601('2023-10-01T11:07:48.427Z')
+  updated_at: DateTime.iso8601('2023-10-01T19:33:43.207Z')
 ), connection_id: '<id>')
 
 unless res.ats_interview.nil?
@@ -172,13 +172,13 @@ req = Models::Operations::PatchAtsInterviewRequest.new(
   ats_interview: Models::Shared::AtsInterview.new(
     created_at: DateTime.iso8601('2021-11-28T03:14:47.774Z'),
     end_at: DateTime.iso8601('2021-12-08T06:33:19.583Z'),
-    id: '7a819923-0144-4849-ba96-c8001efd09f4',
+    id: '62598486-4241-421f-99c8-9ca0ea50c7d7',
     location: '26596 Halle Trafficway',
     meeting_url: 'https://immaculate-foodstuffs.biz',
     metadata: [],
     start_at: DateTime.iso8601('2021-12-08T06:03:19.583Z'),
     status: Models::Shared::AtsInterviewStatus::SCHEDULED,
-    updated_at: DateTime.iso8601('2023-10-01T11:07:48.430Z')
+    updated_at: DateTime.iso8601('2023-10-01T19:33:43.213Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -269,13 +269,13 @@ req = Models::Operations::UpdateAtsInterviewRequest.new(
   ats_interview: Models::Shared::AtsInterview.new(
     created_at: DateTime.iso8601('2021-11-28T03:14:47.774Z'),
     end_at: DateTime.iso8601('2021-12-08T06:33:19.583Z'),
-    id: '7a819923-0144-4849-ba96-c8001efd09f4',
+    id: '62598486-4241-421f-99c8-9ca0ea50c7d7',
     location: '26596 Halle Trafficway',
     meeting_url: 'https://immaculate-foodstuffs.biz',
     metadata: [],
     start_at: DateTime.iso8601('2021-12-08T06:03:19.583Z'),
     status: Models::Shared::AtsInterviewStatus::SCHEDULED,
-    updated_at: DateTime.iso8601('2023-10-01T11:07:48.430Z')
+    updated_at: DateTime.iso8601('2023-10-01T19:33:43.213Z')
   ),
   connection_id: '<id>',
   id: '<id>'

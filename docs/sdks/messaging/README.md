@@ -39,13 +39,13 @@ res = s.messaging.create_messaging_channel(messaging_channel: Models::Shared::Me
   created_at: DateTime.iso8601('2023-10-05T02:09:22.795Z'),
   description: 'Dolores tutis.',
   has_subchannels: true,
-  id: '9c0a38e1-4f39-460d-b60b-a299df6ee6ad',
+  id: '44862a22-a964-4270-b312-134b0546c2bc',
   is_active: false,
   is_private: true,
   members: [],
   metadata: [],
   name: 'tego',
-  updated_at: DateTime.iso8601('2026-06-08T14:48:16.367Z'),
+  updated_at: DateTime.iso8601('2026-06-09T10:22:45.924Z'),
   web_url: 'https://svelte-rule.name/'
 ), connection_id: '<id>')
 
@@ -93,17 +93,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.messaging.create_messaging_message(messaging_message: Models::Shared::MessagingMessage.new(
   attachments: [
     Models::Shared::MessagingAttachment.new(
-      content_identifier: 'e3ab89f9-e40c-4344-bc1f-af2357b5a5bd',
+      content_identifier: '87ba0d64-7a53-43da-9e37-96e57085721a',
       content_type: 'coaegresco',
       download_url: 'https://rotating-advertisement.org',
       filename: 'super',
-      message_id: '0d4b3add-f198-4ec4-88ca-4baab3d53423',
+      message_id: 'a09322fe-bf17-4f97-9705-94dd4aa7b074',
       size: 327.0
     ),
   ],
   buttons: [
     Models::Shared::MessagingButton.new(
-      id: 'a9e5fbc5-8a38-4978-ab73-0a00cc6c0414',
+      id: '6712922f-467c-4751-8b3d-2257e15e47cb',
       text: 'comparo'
     ),
   ],
@@ -111,7 +111,7 @@ res = s.messaging.create_messaging_message(messaging_message: Models::Shared::Me
   destination_members: [],
   has_children: true,
   hidden_members: [],
-  id: '0d4b3add-f198-4ec4-88ca-4baab3d53423',
+  id: 'a09322fe-bf17-4f97-9705-94dd4aa7b074',
   is_unread: false,
   mentioned_members: [],
   message: 'Sum utique aliquid.',
@@ -120,7 +120,7 @@ res = s.messaging.create_messaging_message(messaging_message: Models::Shared::Me
   metadata: [],
   reactions: [],
   subject: 'Cernuus optio cohaero summisse in.',
-  updated_at: DateTime.iso8601('2023-07-24T11:36:33.622Z'),
+  updated_at: DateTime.iso8601('2023-07-24T19:11:26.442Z'),
   web_url: 'https://grumpy-kit.net'
 ), connection_id: '<id>')
 
@@ -345,13 +345,13 @@ req = Models::Operations::PatchMessagingChannelRequest.new(
     created_at: DateTime.iso8601('2023-10-05T02:09:22.795Z'),
     description: 'Dolores tutis.',
     has_subchannels: true,
-    id: 'f9222df1-bec8-4ce0-86df-8a7dc0a1b4de',
+    id: 'aa0f9960-544d-478b-8cd7-9836695ba408',
     is_active: false,
     is_private: true,
     members: [],
     metadata: [],
     name: 'tego',
-    updated_at: DateTime.iso8601('2026-06-08T14:48:16.377Z'),
+    updated_at: DateTime.iso8601('2026-06-09T10:22:45.933Z'),
     web_url: 'https://svelte-rule.name/'
   ),
   connection_id: '<id>',
@@ -405,7 +405,7 @@ req = Models::Operations::PatchMessagingEventRequest.new(
       name: ''
     ),
     created_at: DateTime.iso8601('2019-05-30T19:44:46.461Z'),
-    id: 'f57bba7c-1f1e-4ab6-869c-fa194dc0c18f',
+    id: 'f1865cf7-db49-49a6-9640-9ed763302cfe',
     is_replacing_original: false,
     metadata: [],
     type: Models::Shared::MessagingEventType::BUTTON_CLICK
@@ -458,17 +458,17 @@ req = Models::Operations::PatchMessagingMessageRequest.new(
   messaging_message: Models::Shared::MessagingMessage.new(
     attachments: [
       Models::Shared::MessagingAttachment.new(
-        content_identifier: '8a286ccc-13b3-4a05-af4d-458ed75efd47',
+        content_identifier: '831e3f30-3574-4f2c-a82a-81b0022d1aac',
         content_type: 'coaegresco',
         download_url: 'https://rotating-advertisement.org',
         filename: 'super',
-        message_id: '0af3bcd1-b48a-4d58-96c3-4fb25c4d3968',
+        message_id: '64115e82-a978-43c0-9eb4-b10f5767ee6d',
         size: 327.0
       ),
     ],
     buttons: [
       Models::Shared::MessagingButton.new(
-        id: 'b075c0fc-8888-46d8-8ac5-7290459a7ea6',
+        id: '96bbcfa4-88df-4438-89f2-1f6aefb5dacb',
         text: 'comparo'
       ),
     ],
@@ -476,7 +476,7 @@ req = Models::Operations::PatchMessagingMessageRequest.new(
     destination_members: [],
     has_children: true,
     hidden_members: [],
-    id: '0af3bcd1-b48a-4d58-96c3-4fb25c4d3968',
+    id: '64115e82-a978-43c0-9eb4-b10f5767ee6d',
     is_unread: false,
     mentioned_members: [],
     message: 'Sum utique aliquid.',
@@ -485,7 +485,7 @@ req = Models::Operations::PatchMessagingMessageRequest.new(
     metadata: [],
     reactions: [],
     subject: 'Cernuus optio cohaero summisse in.',
-    updated_at: DateTime.iso8601('2023-07-24T11:36:33.632Z'),
+    updated_at: DateTime.iso8601('2023-07-24T19:11:26.452Z'),
     web_url: 'https://grumpy-kit.net'
   ),
   connection_id: '<id>',
@@ -619,13 +619,13 @@ req = Models::Operations::UpdateMessagingChannelRequest.new(
     created_at: DateTime.iso8601('2023-10-05T02:09:22.795Z'),
     description: 'Dolores tutis.',
     has_subchannels: true,
-    id: 'f9222df1-bec8-4ce0-86df-8a7dc0a1b4de',
+    id: 'aa0f9960-544d-478b-8cd7-9836695ba408',
     is_active: false,
     is_private: true,
     members: [],
     metadata: [],
     name: 'tego',
-    updated_at: DateTime.iso8601('2026-06-08T14:48:16.377Z'),
+    updated_at: DateTime.iso8601('2026-06-09T10:22:45.933Z'),
     web_url: 'https://svelte-rule.name/'
   ),
   connection_id: '<id>',
@@ -679,7 +679,7 @@ req = Models::Operations::UpdateMessagingEventRequest.new(
       name: ''
     ),
     created_at: DateTime.iso8601('2019-05-30T19:44:46.461Z'),
-    id: 'f57bba7c-1f1e-4ab6-869c-fa194dc0c18f',
+    id: 'f1865cf7-db49-49a6-9640-9ed763302cfe',
     is_replacing_original: false,
     metadata: [],
     type: Models::Shared::MessagingEventType::BUTTON_CLICK
@@ -732,17 +732,17 @@ req = Models::Operations::UpdateMessagingMessageRequest.new(
   messaging_message: Models::Shared::MessagingMessage.new(
     attachments: [
       Models::Shared::MessagingAttachment.new(
-        content_identifier: '8a286ccc-13b3-4a05-af4d-458ed75efd47',
+        content_identifier: '831e3f30-3574-4f2c-a82a-81b0022d1aac',
         content_type: 'coaegresco',
         download_url: 'https://rotating-advertisement.org',
         filename: 'super',
-        message_id: '0af3bcd1-b48a-4d58-96c3-4fb25c4d3968',
+        message_id: '64115e82-a978-43c0-9eb4-b10f5767ee6d',
         size: 327.0
       ),
     ],
     buttons: [
       Models::Shared::MessagingButton.new(
-        id: 'b075c0fc-8888-46d8-8ac5-7290459a7ea6',
+        id: '96bbcfa4-88df-4438-89f2-1f6aefb5dacb',
         text: 'comparo'
       ),
     ],
@@ -750,7 +750,7 @@ req = Models::Operations::UpdateMessagingMessageRequest.new(
     destination_members: [],
     has_children: true,
     hidden_members: [],
-    id: '0af3bcd1-b48a-4d58-96c3-4fb25c4d3968',
+    id: '64115e82-a978-43c0-9eb4-b10f5767ee6d',
     is_unread: false,
     mentioned_members: [],
     message: 'Sum utique aliquid.',
@@ -759,7 +759,7 @@ req = Models::Operations::UpdateMessagingMessageRequest.new(
     metadata: [],
     reactions: [],
     subject: 'Cernuus optio cohaero summisse in.',
-    updated_at: DateTime.iso8601('2023-07-24T11:36:33.632Z'),
+    updated_at: DateTime.iso8601('2023-07-24T19:11:26.452Z'),
     web_url: 'https://grumpy-kit.net'
   ),
   connection_id: '<id>',

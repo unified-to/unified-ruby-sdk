@@ -49,13 +49,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.event.create_analytics_event(analytics_event: Models::Shared::AnalyticsEvent.new(
   created_at: DateTime.iso8601('2023-06-21T03:13:22.954Z'),
   event_type: Models::Shared::EventType::SCREEN_VIEW,
-  id: 'c6f02a78-92fa-4d38-8914-b2195b846558',
+  id: '9f6440f1-7c4f-48b1-bd02-6a8ceee4cb2c',
   metadata: {
     'key' => Models::Shared::PropertyAnalyticsEventMetadata.new,
   },
   name: 'page_view',
   page_url: 'https://golden-carboxyl.biz',
-  updated_at: DateTime.iso8601('2023-09-26T07:44:38.589Z')
+  updated_at: DateTime.iso8601('2023-09-26T09:31:25.657Z')
 ), connection_id: '<id>')
 
 unless res.analytics_event.nil?
@@ -103,9 +103,9 @@ res = s.event.create_calendar_event(calendar_event: Models::Shared::CalendarEven
   attachments: [],
   conference: [],
   created_at: '2019-08-04T14:33:51.814Z',
-  end_at: '2020-05-26T14:56:49.068Z',
+  end_at: '2020-05-26T17:28:33.025Z',
   has_conference: false,
-  id: '0eff2a17-2bc4-4658-91a9-7918a0561c53',
+  id: 'c06ab3cc-a9a8-4c65-b948-1f67685a7a28',
   is_all_day: false,
   is_free: false,
   is_private: false,
@@ -115,15 +115,15 @@ res = s.event.create_calendar_event(calendar_event: Models::Shared::CalendarEven
   recurrence: [
     Models::Shared::CalendarEventRecurrence.new(
       count: 4.0,
-      end_at: DateTime.iso8601('2025-04-09T23:47:50.173Z'),
+      end_at: DateTime.iso8601('2025-04-10T17:31:38.535Z'),
       excluded_dates: [
-        '2024-02-15T19:40:36.217Z',
+        '2024-02-16T09:49:32.973Z',
       ],
       frequency: Models::Shared::CalendarEventRecurrenceFrequency::YEARLY,
       included_dates: [
-        '2023-07-18T10:15:26.842Z',
-        '2025-02-08T18:24:28.238Z',
-        '2024-04-15T11:52:40.933Z',
+        '2023-07-18T22:35:31.477Z',
+        '2025-02-09T11:37:24.396Z',
+        '2024-04-16T02:32:12.993Z',
       ],
       interval: 7.0,
       on_days: [
@@ -460,11 +460,11 @@ res = s.event.create_calendar_event(calendar_event: Models::Shared::CalendarEven
       week_start: Models::Shared::WeekStart::TU
     ),
   ],
-  start_at: '2020-05-26T05:38:48.270Z',
+  start_at: '2020-05-26T08:10:20.309Z',
   status: Models::Shared::CalendarEventStatus::CONFIRMED,
   subject: 'Sunt spargo tepidus bestia vigor credo coadunatio appello.',
   timezone: 'Asia/Bangkok',
-  updated_at: '2020-07-02T20:21:25.016Z',
+  updated_at: '2020-07-02T23:12:13.839Z',
   web_url: 'https://another-pinstripe.com'
 ), connection_id: '<id>')
 
@@ -556,13 +556,13 @@ res = s.event.create_crm_event(crm_event: Models::Shared::CrmEvent.new(
   call: Models::Shared::PropertyCrmEventCall.new(
     description: 'Arbitro aptus.',
     duration: 64.0,
-    start_at: DateTime.iso8601('2024-12-25T17:43:39.224Z')
+    start_at: DateTime.iso8601('2024-12-26T09:41:08.018Z')
   ),
   created_at: DateTime.iso8601('2020-07-14T04:53:23.784Z'),
-  id: '49a50f12-bb48-490b-bae6-eb1627336fbc',
+  id: '79320643-5900-42cf-b3e6-15187d74097b',
   metadata: [],
   type: Models::Shared::CrmEventType::CALL,
-  updated_at: DateTime.iso8601('2026-11-01T08:32:05.801Z')
+  updated_at: DateTime.iso8601('2026-11-02T07:07:31.893Z')
 ), connection_id: '<id>')
 
 unless res.crm_event.nil?
@@ -1047,9 +1047,9 @@ req = Models::Operations::PatchCalendarEventRequest.new(
     attachments: [],
     conference: [],
     created_at: '2019-08-04T14:33:51.814Z',
-    end_at: '2020-05-26T14:56:49.071Z',
+    end_at: '2020-05-26T17:28:33.030Z',
     has_conference: false,
-    id: '46a46d5e-0a1d-42ef-9f31-be47660b463d',
+    id: '0a514256-0865-4434-bf90-3ee57436bd62',
     is_all_day: false,
     is_free: false,
     is_private: false,
@@ -1059,15 +1059,15 @@ req = Models::Operations::PatchCalendarEventRequest.new(
     recurrence: [
       Models::Shared::CalendarEventRecurrence.new(
         count: 4.0,
-        end_at: DateTime.iso8601('2025-04-09T23:47:50.194Z'),
+        end_at: DateTime.iso8601('2025-04-10T17:31:38.569Z'),
         excluded_dates: [
-          '2024-02-15T19:40:36.234Z',
+          '2024-02-16T09:49:33.000Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::YEARLY,
         included_dates: [
-          '2023-07-18T10:15:26.857Z',
-          '2025-02-08T18:24:28.259Z',
-          '2024-04-15T11:52:40.951Z',
+          '2023-07-18T22:35:31.501Z',
+          '2025-02-09T11:37:24.430Z',
+          '2024-04-16T02:32:13.021Z',
         ],
         interval: 7.0,
         on_days: [
@@ -1404,11 +1404,11 @@ req = Models::Operations::PatchCalendarEventRequest.new(
         week_start: Models::Shared::WeekStart::TU
       ),
     ],
-    start_at: '2020-05-26T05:38:48.273Z',
+    start_at: '2020-05-26T08:10:20.314Z',
     status: Models::Shared::CalendarEventStatus::CONFIRMED,
     subject: 'Sunt spargo tepidus bestia vigor credo coadunatio appello.',
     timezone: 'Asia/Bangkok',
-    updated_at: '2020-07-02T20:21:25.020Z',
+    updated_at: '2020-07-02T23:12:13.844Z',
     web_url: 'https://another-pinstripe.com'
   ),
   connection_id: '<id>',
@@ -1506,13 +1506,13 @@ req = Models::Operations::PatchCrmEventRequest.new(
     call: Models::Shared::PropertyCrmEventCall.new(
       description: 'Arbitro aptus.',
       duration: 64.0,
-      start_at: DateTime.iso8601('2024-12-25T17:43:39.254Z')
+      start_at: DateTime.iso8601('2024-12-26T09:41:08.040Z')
     ),
     created_at: DateTime.iso8601('2020-07-14T04:53:23.784Z'),
-    id: 'd0baa2b8-a488-4d4a-bc53-72e30b0de5f8',
+    id: 'ebeab8b7-f841-4232-86e3-2b6c1d01d5c1',
     metadata: [],
     type: Models::Shared::CrmEventType::CALL,
-    updated_at: DateTime.iso8601('2026-11-01T08:32:05.843Z')
+    updated_at: DateTime.iso8601('2026-11-02T07:07:31.924Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1565,7 +1565,7 @@ req = Models::Operations::PatchMessagingEventRequest.new(
       name: ''
     ),
     created_at: DateTime.iso8601('2019-05-30T19:44:46.461Z'),
-    id: 'f57bba7c-1f1e-4ab6-869c-fa194dc0c18f',
+    id: 'f1865cf7-db49-49a6-9640-9ed763302cfe',
     is_replacing_original: false,
     metadata: [],
     type: Models::Shared::MessagingEventType::BUTTON_CLICK
@@ -1742,9 +1742,9 @@ req = Models::Operations::UpdateCalendarEventRequest.new(
     attachments: [],
     conference: [],
     created_at: '2019-08-04T14:33:51.814Z',
-    end_at: '2020-05-26T14:56:49.071Z',
+    end_at: '2020-05-26T17:28:33.030Z',
     has_conference: false,
-    id: '46a46d5e-0a1d-42ef-9f31-be47660b463d',
+    id: '0a514256-0865-4434-bf90-3ee57436bd62',
     is_all_day: false,
     is_free: false,
     is_private: false,
@@ -1754,15 +1754,15 @@ req = Models::Operations::UpdateCalendarEventRequest.new(
     recurrence: [
       Models::Shared::CalendarEventRecurrence.new(
         count: 4.0,
-        end_at: DateTime.iso8601('2025-04-09T23:47:50.194Z'),
+        end_at: DateTime.iso8601('2025-04-10T17:31:38.569Z'),
         excluded_dates: [
-          '2024-02-15T19:40:36.234Z',
+          '2024-02-16T09:49:33.000Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::YEARLY,
         included_dates: [
-          '2023-07-18T10:15:26.857Z',
-          '2025-02-08T18:24:28.259Z',
-          '2024-04-15T11:52:40.951Z',
+          '2023-07-18T22:35:31.501Z',
+          '2025-02-09T11:37:24.430Z',
+          '2024-04-16T02:32:13.021Z',
         ],
         interval: 7.0,
         on_days: [
@@ -2099,11 +2099,11 @@ req = Models::Operations::UpdateCalendarEventRequest.new(
         week_start: Models::Shared::WeekStart::TU
       ),
     ],
-    start_at: '2020-05-26T05:38:48.273Z',
+    start_at: '2020-05-26T08:10:20.314Z',
     status: Models::Shared::CalendarEventStatus::CONFIRMED,
     subject: 'Sunt spargo tepidus bestia vigor credo coadunatio appello.',
     timezone: 'Asia/Bangkok',
-    updated_at: '2020-07-02T20:21:25.020Z',
+    updated_at: '2020-07-02T23:12:13.844Z',
     web_url: 'https://another-pinstripe.com'
   ),
   connection_id: '<id>',
@@ -2201,13 +2201,13 @@ req = Models::Operations::UpdateCrmEventRequest.new(
     call: Models::Shared::PropertyCrmEventCall.new(
       description: 'Arbitro aptus.',
       duration: 64.0,
-      start_at: DateTime.iso8601('2024-12-25T17:43:39.254Z')
+      start_at: DateTime.iso8601('2024-12-26T09:41:08.040Z')
     ),
     created_at: DateTime.iso8601('2020-07-14T04:53:23.784Z'),
-    id: 'd0baa2b8-a488-4d4a-bc53-72e30b0de5f8',
+    id: 'ebeab8b7-f841-4232-86e3-2b6c1d01d5c1',
     metadata: [],
     type: Models::Shared::CrmEventType::CALL,
-    updated_at: DateTime.iso8601('2026-11-01T08:32:05.843Z')
+    updated_at: DateTime.iso8601('2026-11-02T07:07:31.924Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2260,7 +2260,7 @@ req = Models::Operations::UpdateMessagingEventRequest.new(
       name: ''
     ),
     created_at: DateTime.iso8601('2019-05-30T19:44:46.461Z'),
-    id: 'f57bba7c-1f1e-4ab6-869c-fa194dc0c18f',
+    id: 'f1865cf7-db49-49a6-9640-9ed763302cfe',
     is_replacing_original: false,
     metadata: [],
     type: Models::Shared::MessagingEventType::BUTTON_CLICK

@@ -29,7 +29,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.shipment.create_shipping_shipment(shipping_shipment: Models::Shared::ShippingShipment.new(
   created_at: DateTime.iso8601('2022-09-12T03:11:28.960Z'),
-  id: 'ac89b8ef-9d1c-4b1e-bf25-fc5da564c40d',
+  id: 'ff2b824d-bf4d-4dbd-8ca4-b88d423f1735',
   is_return: false,
   lineitems: [],
   metadata: [],
@@ -39,7 +39,7 @@ res = s.shipment.create_shipping_shipment(shipping_shipment: Models::Shared::Shi
   service_code: 'OVERNIGHT',
   shipped_at: DateTime.iso8601('2022-09-12T07:26:48.479Z'),
   status: Models::Shared::ShippingShipmentStatus::DELIVERED,
-  updated_at: DateTime.iso8601('2022-11-16T04:13:45.411Z')
+  updated_at: DateTime.iso8601('2022-11-16T05:11:58.199Z')
 ), connection_id: '<id>')
 
 unless res.shipping_shipment.nil?
@@ -174,7 +174,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchShippingShipmentRequest.new(
   shipping_shipment: Models::Shared::ShippingShipment.new(
     created_at: DateTime.iso8601('2022-09-12T03:11:28.960Z'),
-    id: '80d4c82d-3479-496a-b2db-1dcd1fd57fdb',
+    id: '2b3ce956-dd7c-44a7-ab38-5bca200db97d',
     is_return: false,
     lineitems: [],
     metadata: [],
@@ -184,7 +184,7 @@ req = Models::Operations::PatchShippingShipmentRequest.new(
     service_code: 'OVERNIGHT',
     shipped_at: DateTime.iso8601('2022-09-12T07:26:48.479Z'),
     status: Models::Shared::ShippingShipmentStatus::DELIVERED,
-    updated_at: DateTime.iso8601('2022-11-16T04:13:45.413Z')
+    updated_at: DateTime.iso8601('2022-11-16T05:11:58.203Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -274,7 +274,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateShippingShipmentRequest.new(
   shipping_shipment: Models::Shared::ShippingShipment.new(
     created_at: DateTime.iso8601('2022-09-12T03:11:28.960Z'),
-    id: '80d4c82d-3479-496a-b2db-1dcd1fd57fdb',
+    id: '2b3ce956-dd7c-44a7-ab38-5bca200db97d',
     is_return: false,
     lineitems: [],
     metadata: [],
@@ -284,7 +284,7 @@ req = Models::Operations::UpdateShippingShipmentRequest.new(
     service_code: 'OVERNIGHT',
     shipped_at: DateTime.iso8601('2022-09-12T07:26:48.479Z'),
     status: Models::Shared::ShippingShipmentStatus::DELIVERED,
-    updated_at: DateTime.iso8601('2022-11-16T04:13:45.413Z')
+    updated_at: DateTime.iso8601('2022-11-16T05:11:58.203Z')
   ),
   connection_id: '<id>',
   id: '<id>'

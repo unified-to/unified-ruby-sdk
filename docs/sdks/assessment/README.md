@@ -34,7 +34,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.assessment.create_assessment_order(assessment_order: Models::Shared::AssessmentOrder.new(
   connection_id: '<id>',
   created_at: DateTime.iso8601('2021-09-18T10:33:57.803Z'),
-  id: 'fd92cb17-39e7-4d8c-af98-334629356523',
+  id: '270cb239-8904-4660-9759-74a202f39085',
   metadata: [],
   parameters: [],
   profile_addresses: [],
@@ -61,7 +61,7 @@ res = s.assessment.create_assessment_order(assessment_order: Models::Shared::Ass
   response_url: 'https://rowdy-fisherman.biz/',
   status: Models::Shared::AssessmentOrderStatus::REJECTED,
   target_url: 'https://cautious-turret.info',
-  updated_at: DateTime.iso8601('2023-01-31T10:02:13.253Z'),
+  updated_at: DateTime.iso8601('2023-01-31T16:04:17.573Z'),
   workspace_id: '<id>'
 ), connection_id: '<id>')
 
@@ -114,7 +114,7 @@ res = s.assessment.create_assessment_package(assessment_package: Models::Shared:
   description: 'Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.',
   has_redirect_url: true,
   has_target_url: false,
-  id: '3121211e-2e82-4913-adf3-37d9ec2aa0ef',
+  id: '5550363a-998b-46e4-a59e-f566261519a8',
   info_url: 'https://ugly-instance.biz/',
   integration_types: [
     'viridis',
@@ -129,7 +129,7 @@ res = s.assessment.create_assessment_package(assessment_package: Models::Shared:
     'clamo',
   ],
   type: Models::Shared::AssessmentPackageType::VIDEO_INTERVIEW,
-  updated_at: DateTime.iso8601('2023-09-29T22:01:46.285Z')
+  updated_at: DateTime.iso8601('2023-09-30T02:56:54.679Z')
 ), connection_id: '<id>')
 
 unless res.assessment_package.nil?
@@ -302,7 +302,7 @@ req = Models::Operations::PatchAssessmentOrderRequest.new(
   assessment_order: Models::Shared::AssessmentOrder.new(
     connection_id: '<id>',
     created_at: DateTime.iso8601('2021-09-18T10:33:57.803Z'),
-    id: '101867f6-6286-444b-ae0d-b5a928d70426',
+    id: '8b559c8a-c1e4-435d-aae8-f348a36d4ff3',
     metadata: [],
     parameters: [],
     profile_addresses: [],
@@ -329,7 +329,7 @@ req = Models::Operations::PatchAssessmentOrderRequest.new(
     response_url: 'https://rowdy-fisherman.biz/',
     status: Models::Shared::AssessmentOrderStatus::REJECTED,
     target_url: 'https://cautious-turret.info',
-    updated_at: DateTime.iso8601('2023-01-31T10:02:13.267Z'),
+    updated_at: DateTime.iso8601('2023-01-31T16:04:17.583Z'),
     workspace_id: '<id>'
   ),
   connection_id: '<id>',
@@ -383,7 +383,7 @@ res = s.assessment.patch_assessment_package(assessment_package: Models::Shared::
   description: 'Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.',
   has_redirect_url: true,
   has_target_url: false,
-  id: '96092559-e0c5-400f-9a22-50716b8c2ad2',
+  id: 'bc61e3ec-1cbe-4074-8d71-32e497c96237',
   info_url: 'https://ugly-instance.biz/',
   integration_types: [
     'viridis',
@@ -398,7 +398,7 @@ res = s.assessment.patch_assessment_package(assessment_package: Models::Shared::
     'clamo',
   ],
   type: Models::Shared::AssessmentPackageType::VIDEO_INTERVIEW,
-  updated_at: DateTime.iso8601('2023-09-29T22:01:46.289Z')
+  updated_at: DateTime.iso8601('2023-09-30T02:56:54.684Z')
 ), connection_id: '<id>', id: '<id>')
 
 unless res.assessment_package.nil?
@@ -487,7 +487,7 @@ req = Models::Operations::UpdateAssessmentOrderRequest.new(
   assessment_order: Models::Shared::AssessmentOrder.new(
     connection_id: '<id>',
     created_at: DateTime.iso8601('2021-09-18T10:33:57.803Z'),
-    id: '101867f6-6286-444b-ae0d-b5a928d70426',
+    id: '8b559c8a-c1e4-435d-aae8-f348a36d4ff3',
     metadata: [],
     parameters: [],
     profile_addresses: [],
@@ -514,7 +514,7 @@ req = Models::Operations::UpdateAssessmentOrderRequest.new(
     response_url: 'https://rowdy-fisherman.biz/',
     status: Models::Shared::AssessmentOrderStatus::REJECTED,
     target_url: 'https://cautious-turret.info',
-    updated_at: DateTime.iso8601('2023-01-31T10:02:13.267Z'),
+    updated_at: DateTime.iso8601('2023-01-31T16:04:17.583Z'),
     workspace_id: '<id>'
   ),
   connection_id: '<id>',
@@ -568,7 +568,7 @@ res = s.assessment.update_assessment_package(assessment_package: Models::Shared:
   description: 'Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.',
   has_redirect_url: true,
   has_target_url: false,
-  id: '96092559-e0c5-400f-9a22-50716b8c2ad2',
+  id: 'bc61e3ec-1cbe-4074-8d71-32e497c96237',
   info_url: 'https://ugly-instance.biz/',
   integration_types: [
     'viridis',
@@ -583,7 +583,7 @@ res = s.assessment.update_assessment_package(assessment_package: Models::Shared:
     'clamo',
   ],
   type: Models::Shared::AssessmentPackageType::VIDEO_INTERVIEW,
-  updated_at: DateTime.iso8601('2023-09-29T22:01:46.289Z')
+  updated_at: DateTime.iso8601('2023-09-30T02:56:54.684Z')
 ), connection_id: '<id>', id: '<id>')
 
 unless res.assessment_package.nil?

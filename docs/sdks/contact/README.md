@@ -64,7 +64,7 @@ res = s.contact.create_accounting_contact(accounting_contact: Models::Shared::Ac
     ),
   ],
   first_name: 'Delores',
-  id: '0ade68cc-376f-4573-bfbb-a247af569cf0',
+  id: '2a1b6f87-8cb1-4ffa-a2f3-412c7a86febb',
   identification: '531850872',
   is_active: true,
   is_customer: true,
@@ -75,7 +75,7 @@ res = s.contact.create_accounting_contact(accounting_contact: Models::Shared::Ac
   payment_methods: [
     Models::Shared::AccountingContactPaymentMethod.new(
       default: true,
-      id: 'a53b2bd1-1f6e-4a4f-ab47-a77d60b3c415',
+      id: '3b0934df-0257-4f87-bdbf-2579a5a37b21',
       name: 'Visa 7844',
       type: Models::Shared::AccountingContactPaymentMethodType::CARD
     ),
@@ -97,7 +97,7 @@ res = s.contact.create_accounting_contact(accounting_contact: Models::Shared::Ac
       type: Models::Shared::AccountingTelephoneType::FAX
     ),
   ],
-  updated_at: DateTime.iso8601('2023-12-29T07:51:08.810Z'),
+  updated_at: DateTime.iso8601('2023-12-29T18:06:59.271Z'),
   website: 'https://kertzmanngroup.com'
 ), connection_id: '<id>')
 
@@ -161,7 +161,7 @@ res = s.contact.create_crm_contact(crm_contact: Models::Shared::CrmContact.new(
     ),
   ],
   first_name: 'Mohammad',
-  id: '12615bf9-0504-4444-ab2e-c116f169b455',
+  id: 'c3823446-f558-44ac-8796-54b93cc45da5',
   image_url: 'https://avatars.githubusercontent.com/u/26803724',
   last_name: 'Bartell',
   link_urls: [
@@ -173,7 +173,7 @@ res = s.contact.create_crm_contact(crm_contact: Models::Shared::CrmContact.new(
         'display_name' => 'Custom Property',
       },
       format: Models::Shared::CrmMetadataFormat::TEXT,
-      id: 'e1685c03-1d46-4df8-923c-555140c8ec76',
+      id: '7aeb43bc-56cc-46ac-acae-24465f824599',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'antiquus'
@@ -191,7 +191,7 @@ res = s.contact.create_crm_contact(crm_contact: Models::Shared::CrmContact.new(
     ),
   ],
   title: 'National Tactics Analyst',
-  updated_at: DateTime.iso8601('2021-02-24T17:42:23.461Z')
+  updated_at: DateTime.iso8601('2021-02-24T18:16:34.099Z')
 ), connection_id: '<id>')
 
 unless res.crm_contact.nil?
@@ -245,7 +245,7 @@ res = s.contact.create_uc_contact(uc_contact: Models::Shared::UcContact.new(
     ),
   ],
   first_name: 'Luther',
-  id: 'a0d400d2-bc9a-496b-9d49-b7c8c8898648',
+  id: 'd28299d9-b613-4659-b381-24dc0ccb9f9b',
   last_name: 'Rogahn',
   metadata: [],
   name: 'Luther Rogahn',
@@ -264,7 +264,7 @@ res = s.contact.create_uc_contact(uc_contact: Models::Shared::UcContact.new(
     ),
   ],
   title: 'Chief Optimization Executive',
-  updated_at: DateTime.iso8601('2023-12-20T16:38:47.902Z')
+  updated_at: DateTime.iso8601('2023-12-21T06:00:35.324Z')
 ), connection_id: '<id>')
 
 unless res.uc_contact.nil?
@@ -596,7 +596,7 @@ req = Models::Operations::PatchAccountingContactRequest.new(
       ),
     ],
     first_name: 'Delores',
-    id: '5b73a6d5-5549-470f-9e08-b49d11dd98f1',
+    id: '6a01f5eb-1ae6-4207-8375-59689ccbe8ff',
     identification: '531850872',
     is_active: true,
     is_customer: true,
@@ -607,7 +607,7 @@ req = Models::Operations::PatchAccountingContactRequest.new(
     payment_methods: [
       Models::Shared::AccountingContactPaymentMethod.new(
         default: true,
-        id: 'be1932b9-4760-4eea-a2bf-af5d7b7a5a8e',
+        id: 'a372981d-3409-495a-a503-8bcddf8bb620',
         name: 'Visa 7844',
         type: Models::Shared::AccountingContactPaymentMethodType::CARD
       ),
@@ -629,7 +629,7 @@ req = Models::Operations::PatchAccountingContactRequest.new(
         type: Models::Shared::AccountingTelephoneType::FAX
       ),
     ],
-    updated_at: DateTime.iso8601('2023-12-29T07:51:08.833Z'),
+    updated_at: DateTime.iso8601('2023-12-29T18:06:59.294Z'),
     website: 'https://kertzmanngroup.com'
   ),
   connection_id: '<id>',
@@ -696,7 +696,7 @@ req = Models::Operations::PatchCrmContactRequest.new(
       ),
     ],
     first_name: 'Mohammad',
-    id: 'af181158-f1c4-4509-82c8-7ca70194998a',
+    id: '4b9d9c70-312f-4f43-ab62-ce2741d7e5d3',
     image_url: 'https://avatars.githubusercontent.com/u/26803724',
     last_name: 'Bartell',
     link_urls: [
@@ -708,7 +708,7 @@ req = Models::Operations::PatchCrmContactRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '66b2dfe2-dd5d-47ce-9de6-6e7274fc3ea8',
+        id: '043dea8a-40e5-40ba-9356-7132b1912da1',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'antiquus'
@@ -726,7 +726,7 @@ req = Models::Operations::PatchCrmContactRequest.new(
       ),
     ],
     title: 'National Tactics Analyst',
-    updated_at: DateTime.iso8601('2021-02-24T17:42:23.462Z')
+    updated_at: DateTime.iso8601('2021-02-24T18:16:34.100Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -783,7 +783,7 @@ req = Models::Operations::PatchUcContactRequest.new(
       ),
     ],
     first_name: 'Luther',
-    id: 'c0f1c62d-1e87-4dad-a1e7-e420c4d8b8f5',
+    id: '30054db4-e774-4851-b3ae-bf416486e606',
     last_name: 'Rogahn',
     metadata: [],
     name: 'Luther Rogahn',
@@ -802,7 +802,7 @@ req = Models::Operations::PatchUcContactRequest.new(
       ),
     ],
     title: 'Chief Optimization Executive',
-    updated_at: DateTime.iso8601('2023-12-20T16:38:47.911Z')
+    updated_at: DateTime.iso8601('2023-12-21T06:00:35.334Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -997,7 +997,7 @@ req = Models::Operations::UpdateAccountingContactRequest.new(
       ),
     ],
     first_name: 'Delores',
-    id: '5b73a6d5-5549-470f-9e08-b49d11dd98f1',
+    id: '6a01f5eb-1ae6-4207-8375-59689ccbe8ff',
     identification: '531850872',
     is_active: true,
     is_customer: true,
@@ -1008,7 +1008,7 @@ req = Models::Operations::UpdateAccountingContactRequest.new(
     payment_methods: [
       Models::Shared::AccountingContactPaymentMethod.new(
         default: true,
-        id: 'be1932b9-4760-4eea-a2bf-af5d7b7a5a8e',
+        id: 'a372981d-3409-495a-a503-8bcddf8bb620',
         name: 'Visa 7844',
         type: Models::Shared::AccountingContactPaymentMethodType::CARD
       ),
@@ -1030,7 +1030,7 @@ req = Models::Operations::UpdateAccountingContactRequest.new(
         type: Models::Shared::AccountingTelephoneType::FAX
       ),
     ],
-    updated_at: DateTime.iso8601('2023-12-29T07:51:08.833Z'),
+    updated_at: DateTime.iso8601('2023-12-29T18:06:59.294Z'),
     website: 'https://kertzmanngroup.com'
   ),
   connection_id: '<id>',
@@ -1097,7 +1097,7 @@ req = Models::Operations::UpdateCrmContactRequest.new(
       ),
     ],
     first_name: 'Mohammad',
-    id: 'af181158-f1c4-4509-82c8-7ca70194998a',
+    id: '4b9d9c70-312f-4f43-ab62-ce2741d7e5d3',
     image_url: 'https://avatars.githubusercontent.com/u/26803724',
     last_name: 'Bartell',
     link_urls: [
@@ -1109,7 +1109,7 @@ req = Models::Operations::UpdateCrmContactRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '66b2dfe2-dd5d-47ce-9de6-6e7274fc3ea8',
+        id: '043dea8a-40e5-40ba-9356-7132b1912da1',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'antiquus'
@@ -1127,7 +1127,7 @@ req = Models::Operations::UpdateCrmContactRequest.new(
       ),
     ],
     title: 'National Tactics Analyst',
-    updated_at: DateTime.iso8601('2021-02-24T17:42:23.462Z')
+    updated_at: DateTime.iso8601('2021-02-24T18:16:34.100Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1184,7 +1184,7 @@ req = Models::Operations::UpdateUcContactRequest.new(
       ),
     ],
     first_name: 'Luther',
-    id: 'c0f1c62d-1e87-4dad-a1e7-e420c4d8b8f5',
+    id: '30054db4-e774-4851-b3ae-bf416486e606',
     last_name: 'Rogahn',
     metadata: [],
     name: 'Luther Rogahn',
@@ -1203,7 +1203,7 @@ req = Models::Operations::UpdateUcContactRequest.new(
       ),
     ],
     title: 'Chief Optimization Executive',
-    updated_at: DateTime.iso8601('2023-12-20T16:38:47.911Z')
+    updated_at: DateTime.iso8601('2023-12-21T06:00:35.334Z')
   ),
   connection_id: '<id>',
   id: '<id>'

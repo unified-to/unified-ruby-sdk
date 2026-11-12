@@ -41,7 +41,7 @@ res = s.purchaseorder.create_accounting_purchaseorder(accounting_purchaseorder: 
   category_ids: [],
   created_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
   currency: 'EUR',
-  id: '947fc6bc-98c7-4d19-a041-3c49f63b2df6',
+  id: '48d71c59-62ce-4560-abd3-97478876a7ed',
   lineitems: [],
   metadata: [],
   posted_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
@@ -55,7 +55,7 @@ res = s.purchaseorder.create_accounting_purchaseorder(accounting_purchaseorder: 
   ),
   status: Models::Shared::AccountingPurchaseorderStatus::SUBMITTED,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2021-08-13T14:45:37.875Z')
+  updated_at: DateTime.iso8601('2021-08-13T17:19:36.309Z')
 ), connection_id: '<id>')
 
 unless res.accounting_purchaseorder.nil?
@@ -202,7 +202,7 @@ req = Models::Operations::PatchAccountingPurchaseorderRequest.new(
     category_ids: [],
     created_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
     currency: 'EUR',
-    id: '65dfa0c5-f77a-44be-83ce-b122d8cd3327',
+    id: 'c30287cc-59b3-4d88-8c95-51350a7f3050',
     lineitems: [],
     metadata: [],
     posted_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
@@ -216,7 +216,7 @@ req = Models::Operations::PatchAccountingPurchaseorderRequest.new(
     ),
     status: Models::Shared::AccountingPurchaseorderStatus::SUBMITTED,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2021-08-13T14:45:37.880Z')
+    updated_at: DateTime.iso8601('2021-08-13T17:19:36.312Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -318,7 +318,7 @@ req = Models::Operations::UpdateAccountingPurchaseorderRequest.new(
     category_ids: [],
     created_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
     currency: 'EUR',
-    id: '65dfa0c5-f77a-44be-83ce-b122d8cd3327',
+    id: 'c30287cc-59b3-4d88-8c95-51350a7f3050',
     lineitems: [],
     metadata: [],
     posted_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
@@ -332,7 +332,7 @@ req = Models::Operations::UpdateAccountingPurchaseorderRequest.new(
     ),
     status: Models::Shared::AccountingPurchaseorderStatus::SUBMITTED,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2021-08-13T14:45:37.880Z')
+    updated_at: DateTime.iso8601('2021-08-13T17:19:36.312Z')
   ),
   connection_id: '<id>',
   id: '<id>'

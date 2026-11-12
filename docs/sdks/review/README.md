@@ -46,7 +46,7 @@ res = s.review.create_commerce_review(commerce_review: Models::Shared::CommerceR
   content: 'Taedium thymum adipiscor amicitia cui.',
   created_at: DateTime.iso8601('2019-12-12T18:10:22.988Z'),
   helpful_votes: 66.0,
-  id: 'e1f7981b-e1a7-4063-960c-5a172c6cbba2',
+  id: 'ad72b1cd-5033-41e3-9802-2a93159da893',
   is_featured: false,
   is_public: true,
   is_verified: false,
@@ -54,10 +54,10 @@ res = s.review.create_commerce_review(commerce_review: Models::Shared::CommerceR
     Models::Shared::CommerceItemMedia.new(
       alt: 'Desipio carpo sol laudantium colo.',
       height: 749.0,
-      id: '27b5f496-39d7-4480-9ce5-ff6c1baada76',
+      id: '67e3d913-f450-4081-92c9-4c892c69ead7',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: '5c9cabc4-c5b9-4b2c-a96a-c2ea81ee1fb7',
+          id: 'a0707645-6303-4cb1-b84b-2df7ef718c54',
           slug: 'textor',
           value: 'quos'
         ),
@@ -70,10 +70,10 @@ res = s.review.create_commerce_review(commerce_review: Models::Shared::CommerceR
     Models::Shared::CommerceItemMedia.new(
       alt: 'Adopto teneo numquam.',
       height: 957.0,
-      id: '265a97e4-f22d-4893-b4ff-c9eb71762420',
+      id: 'dcbe6f74-dd0f-407e-b773-00ac38691447',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: '2efe8328-9e89-489d-843f-90fe10834451',
+          id: 'f8c19264-cba4-42ac-84b6-eaa9d705fb33',
           slug: 'bos',
           value: 'casso'
         ),
@@ -89,7 +89,7 @@ res = s.review.create_commerce_review(commerce_review: Models::Shared::CommerceR
   status: Models::Shared::CommerceReviewStatus::APPROVED,
   title: 'Coepi adamo amicitia auxilium toties.',
   unhelpful_votes: 88.0,
-  updated_at: DateTime.iso8601('2025-09-07T17:07:11.957Z'),
+  updated_at: DateTime.iso8601('2025-09-08T11:56:55.388Z'),
   url: 'https://diligent-bandwidth.biz',
   verified_purchase: true
 ), connection_id: '<id>')
@@ -494,7 +494,7 @@ req = Models::Operations::PatchCommerceReviewRequest.new(
     content: 'Taedium thymum adipiscor amicitia cui.',
     created_at: DateTime.iso8601('2019-12-12T18:10:22.988Z'),
     helpful_votes: 66.0,
-    id: '8ebb5424-13bc-4e47-8418-7770e67efbb2',
+    id: '43273b40-b588-4291-843a-321895b8cdad',
     is_featured: false,
     is_public: true,
     is_verified: false,
@@ -502,10 +502,10 @@ req = Models::Operations::PatchCommerceReviewRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Desipio carpo sol laudantium colo.',
         height: 749.0,
-        id: '19175c61-b359-41bc-b52c-adab81144f6a',
+        id: 'f17f9b35-04ab-48b6-80a5-9c7b0b9f30a5',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '48160437-3aaa-4509-99a3-cb395b7e39cf',
+            id: '411f5275-3f41-4676-8e1a-8bfa2e64b4f4',
             slug: 'textor',
             value: 'quos'
           ),
@@ -518,10 +518,10 @@ req = Models::Operations::PatchCommerceReviewRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Adopto teneo numquam.',
         height: 957.0,
-        id: '7d08f0f0-97b0-4ea7-8c16-3158bcd3d4bb',
+        id: '1b3d5fed-33fa-46f8-b2e8-d33e43a80ff5',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'ccfb7844-9d37-427c-b417-092e5bc26351',
+            id: '0a75f4e6-3c6a-46db-9517-78a5d07e63f9',
             slug: 'bos',
             value: 'casso'
           ),
@@ -537,7 +537,7 @@ req = Models::Operations::PatchCommerceReviewRequest.new(
     status: Models::Shared::CommerceReviewStatus::APPROVED,
     title: 'Coepi adamo amicitia auxilium toties.',
     unhelpful_votes: 88.0,
-    updated_at: DateTime.iso8601('2025-09-07T17:07:11.975Z'),
+    updated_at: DateTime.iso8601('2025-09-08T11:56:55.410Z'),
     url: 'https://diligent-bandwidth.biz',
     verified_purchase: true
   ),
@@ -619,13 +619,13 @@ req = Models::Operations::PatchPropertyReviewRequest.new(
     ],
     content: 'Delectus conscendo communis custodia statim. Tutis adsuesco attonbitus comitatus auditor ea tergo nostrum deleo. Comprehendo tertius summopere vaco apparatus incidunt tabula pauci confido colo.',
     created_at: DateTime.iso8601('2022-10-17T11:17:07.682Z'),
-    id: '8e64287f-6ade-43f3-a652-ed380ed2889c',
+    id: 'c5c52eaa-9021-46fb-8810-0b563c04292f',
     is_public: true,
     metadata: [],
     private_feedback: 'Tripudio neque communis.',
     rating: 3.0,
     source: 'Airbnb',
-    updated_at: DateTime.iso8601('2026-02-28T05:34:33.266Z')
+    updated_at: DateTime.iso8601('2026-03-01T00:21:22.034Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -768,7 +768,7 @@ req = Models::Operations::UpdateCommerceReviewRequest.new(
     content: 'Taedium thymum adipiscor amicitia cui.',
     created_at: DateTime.iso8601('2019-12-12T18:10:22.988Z'),
     helpful_votes: 66.0,
-    id: '8ebb5424-13bc-4e47-8418-7770e67efbb2',
+    id: '43273b40-b588-4291-843a-321895b8cdad',
     is_featured: false,
     is_public: true,
     is_verified: false,
@@ -776,10 +776,10 @@ req = Models::Operations::UpdateCommerceReviewRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Desipio carpo sol laudantium colo.',
         height: 749.0,
-        id: '19175c61-b359-41bc-b52c-adab81144f6a',
+        id: 'f17f9b35-04ab-48b6-80a5-9c7b0b9f30a5',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '48160437-3aaa-4509-99a3-cb395b7e39cf',
+            id: '411f5275-3f41-4676-8e1a-8bfa2e64b4f4',
             slug: 'textor',
             value: 'quos'
           ),
@@ -792,10 +792,10 @@ req = Models::Operations::UpdateCommerceReviewRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Adopto teneo numquam.',
         height: 957.0,
-        id: '7d08f0f0-97b0-4ea7-8c16-3158bcd3d4bb',
+        id: '1b3d5fed-33fa-46f8-b2e8-d33e43a80ff5',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'ccfb7844-9d37-427c-b417-092e5bc26351',
+            id: '0a75f4e6-3c6a-46db-9517-78a5d07e63f9',
             slug: 'bos',
             value: 'casso'
           ),
@@ -811,7 +811,7 @@ req = Models::Operations::UpdateCommerceReviewRequest.new(
     status: Models::Shared::CommerceReviewStatus::APPROVED,
     title: 'Coepi adamo amicitia auxilium toties.',
     unhelpful_votes: 88.0,
-    updated_at: DateTime.iso8601('2025-09-07T17:07:11.975Z'),
+    updated_at: DateTime.iso8601('2025-09-08T11:56:55.410Z'),
     url: 'https://diligent-bandwidth.biz',
     verified_purchase: true
   ),
@@ -893,13 +893,13 @@ req = Models::Operations::UpdatePropertyReviewRequest.new(
     ],
     content: 'Delectus conscendo communis custodia statim. Tutis adsuesco attonbitus comitatus auditor ea tergo nostrum deleo. Comprehendo tertius summopere vaco apparatus incidunt tabula pauci confido colo.',
     created_at: DateTime.iso8601('2022-10-17T11:17:07.682Z'),
-    id: '8e64287f-6ade-43f3-a652-ed380ed2889c',
+    id: 'c5c52eaa-9021-46fb-8810-0b563c04292f',
     is_public: true,
     metadata: [],
     private_feedback: 'Tripudio neque communis.',
     rating: 3.0,
     source: 'Airbnb',
-    updated_at: DateTime.iso8601('2026-02-28T05:34:33.266Z')
+    updated_at: DateTime.iso8601('2026-03-01T00:21:22.034Z')
   ),
   connection_id: '<id>',
   id: '<id>'
