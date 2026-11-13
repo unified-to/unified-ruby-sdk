@@ -46,7 +46,7 @@ res = s.instance.create_compute_instance(compute_instance: Models::Shared::Compu
   ],
   gpu_count: 0.0,
   has_internet_access: true,
-  id: '82295d98-a98e-45b7-be87-81df68c019c9',
+  id: '8b8144ba-d7c4-45e2-af4e-2b4604f472b7',
   image: 'ubuntu:24.04',
   market: Models::Shared::Market::SPOT,
   memory_mb: 2048.0,
@@ -61,11 +61,11 @@ res = s.instance.create_compute_instance(compute_instance: Models::Shared::Compu
     port: 22.0,
     username: 'root'
   ),
-  started_at: DateTime.iso8601('2025-04-06T06:48:20.378Z'),
+  started_at: DateTime.iso8601('2025-04-06T23:49:03.204Z'),
   status: Models::Shared::ComputeInstanceStatus::ERROR,
   status_reason: 'Sponte quasi adversus alioqui reiciendis arca carmen canis.',
   type: Models::Shared::ComputeInstanceType::BAREMETAL,
-  updated_at: DateTime.iso8601('2025-06-30T18:18:16.831Z')
+  updated_at: DateTime.iso8601('2025-07-01T12:54:41.740Z')
 ), connection_id: '<id>')
 
 unless res.compute_instance.nil?
@@ -217,7 +217,7 @@ req = Models::Operations::PatchComputeInstanceRequest.new(
     ],
     gpu_count: 0.0,
     has_internet_access: true,
-    id: '3556717f-2c36-4697-87b1-1d097631df3b',
+    id: '34b7a7a0-beca-4425-af0e-0fd47f46296e',
     image: 'ubuntu:24.04',
     market: Models::Shared::Market::SPOT,
     memory_mb: 2048.0,
@@ -232,11 +232,11 @@ req = Models::Operations::PatchComputeInstanceRequest.new(
       port: 22.0,
       username: 'root'
     ),
-    started_at: DateTime.iso8601('2025-04-06T06:48:20.405Z'),
+    started_at: DateTime.iso8601('2025-04-06T23:49:03.217Z'),
     status: Models::Shared::ComputeInstanceStatus::ERROR,
     status_reason: 'Sponte quasi adversus alioqui reiciendis arca carmen canis.',
     type: Models::Shared::ComputeInstanceType::BAREMETAL,
-    updated_at: DateTime.iso8601('2025-06-30T18:18:16.860Z')
+    updated_at: DateTime.iso8601('2025-07-01T12:54:41.754Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -343,7 +343,7 @@ req = Models::Operations::UpdateComputeInstanceRequest.new(
     ],
     gpu_count: 0.0,
     has_internet_access: true,
-    id: '3556717f-2c36-4697-87b1-1d097631df3b',
+    id: '34b7a7a0-beca-4425-af0e-0fd47f46296e',
     image: 'ubuntu:24.04',
     market: Models::Shared::Market::SPOT,
     memory_mb: 2048.0,
@@ -358,11 +358,11 @@ req = Models::Operations::UpdateComputeInstanceRequest.new(
       port: 22.0,
       username: 'root'
     ),
-    started_at: DateTime.iso8601('2025-04-06T06:48:20.405Z'),
+    started_at: DateTime.iso8601('2025-04-06T23:49:03.217Z'),
     status: Models::Shared::ComputeInstanceStatus::ERROR,
     status_reason: 'Sponte quasi adversus alioqui reiciendis arca carmen canis.',
     type: Models::Shared::ComputeInstanceType::BAREMETAL,
-    updated_at: DateTime.iso8601('2025-06-30T18:18:16.860Z')
+    updated_at: DateTime.iso8601('2025-07-01T12:54:41.754Z')
   ),
   connection_id: '<id>',
   id: '<id>'

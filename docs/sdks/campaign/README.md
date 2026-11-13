@@ -40,18 +40,18 @@ res = s.campaign.create_ads_campaign(ads_campaign: Models::Shared::AdsCampaign.n
   created_at: DateTime.iso8601('2022-05-21T08:51:41.868Z'),
   currency: 'USD',
   effective_status: Models::Shared::EffectiveStatus::NOT_ELIGIBLE,
-  end_at: DateTime.iso8601('2025-06-15T23:06:35.106Z'),
-  id: 'ec95464d-02f5-4307-9f8f-58f958685c91',
+  end_at: DateTime.iso8601('2025-06-16T18:15:25.146Z'),
+  id: 'acb45693-8550-4dc2-96c9-c5641e8f4ef4',
   labels: [
     'comedo',
   ],
   metadata: [],
   name: 'Emard Inc',
-  start_at: DateTime.iso8601('2022-07-22T06:41:18.778Z'),
+  start_at: DateTime.iso8601('2022-07-22T07:44:43.562Z'),
   status: Models::Shared::AdsCampaignStatus::PROCESSING_FAILED,
   targeting: Models::Shared::PropertyAdsCampaignTargeting.new,
   total_spend_amount: 2349.8_642_875_347_286,
-  updated_at: DateTime.iso8601('2026-01-19T11:28:22.767Z')
+  updated_at: DateTime.iso8601('2026-01-20T10:20:00.686Z')
 ), connection_id: '<id>')
 
 unless res.ads_campaign.nil?
@@ -99,7 +99,7 @@ res = s.campaign.create_martech_campaign(marketing_campaign: Models::Shared::Mar
   created_at: DateTime.iso8601('2019-05-19T11:18:15.589Z'),
   from_email: 'graham.mertz@gmail.com',
   from_name: 'Graham Mertz',
-  id: 'f448e30b-12ac-4931-9d04-c0a0c92ea5f9',
+  id: 'b21fb718-ad2d-49f0-9415-3a9d80915869',
   metadata: [],
   name: 'Consequatur atqui sustineo.',
   preview_text: 'Auctus votum ver umbra corroboro turpis spoliatio tamen strues auxilium benigne tempus error eaque suasoria.',
@@ -108,7 +108,7 @@ res = s.campaign.create_martech_campaign(marketing_campaign: Models::Shared::Mar
   status: Models::Shared::MarketingCampaignStatus::SCHEDULED,
   subject_line: 'Trepide utpote conculco tibi solio supplanto peior tibi.',
   type: 'absplit',
-  updated_at: DateTime.iso8601('2022-07-01T05:17:38.404Z')
+  updated_at: DateTime.iso8601('2022-07-01T16:55:32.851Z')
 ), connection_id: '<id>')
 
 unless res.marketing_campaign.nil?
@@ -335,18 +335,18 @@ req = Models::Operations::PatchAdsCampaignRequest.new(
     created_at: DateTime.iso8601('2022-05-21T08:51:41.868Z'),
     currency: 'USD',
     effective_status: Models::Shared::EffectiveStatus::NOT_ELIGIBLE,
-    end_at: DateTime.iso8601('2025-06-15T23:06:35.201Z'),
-    id: 'aa86d2cc-33bd-4534-92da-577450514bbb',
+    end_at: DateTime.iso8601('2025-06-16T18:15:25.213Z'),
+    id: 'dbc5dfa3-192a-4a0d-b38a-a4f1399bf015',
     labels: [
       'comedo',
     ],
     metadata: [],
     name: 'Emard Inc',
-    start_at: DateTime.iso8601('2022-07-22T06:41:18.783Z'),
+    start_at: DateTime.iso8601('2022-07-22T07:44:43.565Z'),
     status: Models::Shared::AdsCampaignStatus::PROCESSING_FAILED,
     targeting: Models::Shared::PropertyAdsCampaignTargeting.new,
     total_spend_amount: 2349.8_642_875_347_286,
-    updated_at: DateTime.iso8601('2026-01-19T11:28:22.881Z')
+    updated_at: DateTime.iso8601('2026-01-20T10:20:00.765Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -397,7 +397,7 @@ req = Models::Operations::PatchMartechCampaignRequest.new(
     created_at: DateTime.iso8601('2019-05-19T11:18:15.589Z'),
     from_email: 'graham.mertz@gmail.com',
     from_name: 'Graham Mertz',
-    id: 'eef47a5a-3f5f-4d40-b111-04011c5cde05',
+    id: '5f2e62d4-13ba-4b17-9654-655933d9c83a',
     metadata: [],
     name: 'Consequatur atqui sustineo.',
     preview_text: 'Auctus votum ver umbra corroboro turpis spoliatio tamen strues auxilium benigne tempus error eaque suasoria.',
@@ -406,7 +406,7 @@ req = Models::Operations::PatchMartechCampaignRequest.new(
     status: Models::Shared::MarketingCampaignStatus::SCHEDULED,
     subject_line: 'Trepide utpote conculco tibi solio supplanto peior tibi.',
     type: 'absplit',
-    updated_at: DateTime.iso8601('2022-07-01T05:17:38.410Z')
+    updated_at: DateTime.iso8601('2022-07-01T16:55:32.854Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -542,18 +542,18 @@ req = Models::Operations::UpdateAdsCampaignRequest.new(
     created_at: DateTime.iso8601('2022-05-21T08:51:41.868Z'),
     currency: 'USD',
     effective_status: Models::Shared::EffectiveStatus::NOT_ELIGIBLE,
-    end_at: DateTime.iso8601('2025-06-15T23:06:35.201Z'),
-    id: 'aa86d2cc-33bd-4534-92da-577450514bbb',
+    end_at: DateTime.iso8601('2025-06-16T18:15:25.213Z'),
+    id: 'dbc5dfa3-192a-4a0d-b38a-a4f1399bf015',
     labels: [
       'comedo',
     ],
     metadata: [],
     name: 'Emard Inc',
-    start_at: DateTime.iso8601('2022-07-22T06:41:18.783Z'),
+    start_at: DateTime.iso8601('2022-07-22T07:44:43.565Z'),
     status: Models::Shared::AdsCampaignStatus::PROCESSING_FAILED,
     targeting: Models::Shared::PropertyAdsCampaignTargeting.new,
     total_spend_amount: 2349.8_642_875_347_286,
-    updated_at: DateTime.iso8601('2026-01-19T11:28:22.881Z')
+    updated_at: DateTime.iso8601('2026-01-20T10:20:00.765Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -604,7 +604,7 @@ req = Models::Operations::UpdateMartechCampaignRequest.new(
     created_at: DateTime.iso8601('2019-05-19T11:18:15.589Z'),
     from_email: 'graham.mertz@gmail.com',
     from_name: 'Graham Mertz',
-    id: 'eef47a5a-3f5f-4d40-b111-04011c5cde05',
+    id: '5f2e62d4-13ba-4b17-9654-655933d9c83a',
     metadata: [],
     name: 'Consequatur atqui sustineo.',
     preview_text: 'Auctus votum ver umbra corroboro turpis spoliatio tamen strues auxilium benigne tempus error eaque suasoria.',
@@ -613,7 +613,7 @@ req = Models::Operations::UpdateMartechCampaignRequest.new(
     status: Models::Shared::MarketingCampaignStatus::SCHEDULED,
     subject_line: 'Trepide utpote conculco tibi solio supplanto peior tibi.',
     type: 'absplit',
-    updated_at: DateTime.iso8601('2022-07-01T05:17:38.410Z')
+    updated_at: DateTime.iso8601('2022-07-01T16:55:32.854Z')
   ),
   connection_id: '<id>',
   id: '<id>'

@@ -43,6 +43,11 @@ module UnifiedRubySDK
           CREATIVE_SELECTION = new('creative_selection')
           METADATA = new('metadata')
           RAW = new('raw')
+          DELIVERY_TYPE = new('delivery_type')
+          PRIORITY = new('priority')
+          COST_TYPE = new('cost_type')
+          DELIVERY_GOAL = new('delivery_goal')
+          CREATIVE_SIZES = new('creative_sizes')
         end
       end
     end

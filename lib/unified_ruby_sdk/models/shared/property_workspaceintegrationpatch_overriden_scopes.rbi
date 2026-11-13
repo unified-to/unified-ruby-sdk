@@ -142,6 +142,8 @@ class UnifiedRubySDK::Models::Shared::PropertyWorkspaceIntegrationPatchOverriden
   def ads_insertionorder_read=(str_); end
   def ads_insertionorder_write(); end
   def ads_insertionorder_write=(str_); end
+  def ads_inventory_read(); end
+  def ads_inventory_read=(str_); end
   def ads_organization_read(); end
   def ads_organization_read=(str_); end
   def ads_organization_write(); end

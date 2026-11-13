@@ -26,14 +26,22 @@ class UnifiedRubySDK::Models::Shared::PropertyAdsReportMetricsGroup
   def budget_unit=(str_); end
   def campaign_id(); end
   def campaign_id=(str_); end
+  def cost_type(); end
+  def cost_type=(str_); end
   def created_at(); end
   def created_at=(str_); end
   def creative_ids(); end
   def creative_ids=(str_); end
   def creative_selection(); end
   def creative_selection=(str_); end
+  def creative_sizes(); end
+  def creative_sizes=(str_); end
   def currency(); end
   def currency=(str_); end
+  def delivery_goal(); end
+  def delivery_goal=(str_); end
+  def delivery_type(); end
+  def delivery_type=(str_); end
   def effective_status(); end
   def effective_status=(str_); end
   def end_at(); end
@@ -60,6 +68,8 @@ class UnifiedRubySDK::Models::Shared::PropertyAdsReportMetricsGroup
   def pacing=(str_); end
   def parent_id(); end
   def parent_id=(str_); end
+  def priority(); end
+  def priority=(str_); end
   def promoted(); end
   def promoted=(str_); end
   def raw(); end

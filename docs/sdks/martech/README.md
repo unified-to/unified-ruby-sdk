@@ -44,7 +44,7 @@ res = s.martech.create_martech_campaign(marketing_campaign: Models::Shared::Mark
   created_at: DateTime.iso8601('2019-05-19T11:18:15.589Z'),
   from_email: 'graham.mertz@gmail.com',
   from_name: 'Graham Mertz',
-  id: 'f448e30b-12ac-4931-9d04-c0a0c92ea5f9',
+  id: 'b21fb718-ad2d-49f0-9415-3a9d80915869',
   metadata: [],
   name: 'Consequatur atqui sustineo.',
   preview_text: 'Auctus votum ver umbra corroboro turpis spoliatio tamen strues auxilium benigne tempus error eaque suasoria.',
@@ -53,7 +53,7 @@ res = s.martech.create_martech_campaign(marketing_campaign: Models::Shared::Mark
   status: Models::Shared::MarketingCampaignStatus::SCHEDULED,
   subject_line: 'Trepide utpote conculco tibi solio supplanto peior tibi.',
   type: 'absplit',
-  updated_at: DateTime.iso8601('2022-07-01T05:17:38.404Z')
+  updated_at: DateTime.iso8601('2022-07-01T16:55:32.851Z')
 ), connection_id: '<id>')
 
 unless res.marketing_campaign.nil?
@@ -108,7 +108,7 @@ res = s.martech.create_martech_list(marketing_list: Models::Shared::MarketingLis
   ),
   created_at: DateTime.iso8601('2019-09-18T02:01:36.950Z'),
   description: 'Vilis.',
-  id: 'aa499fd8-d062-418e-a025-b19a372847f6',
+  id: '93176165-ad34-4f97-8dbe-3ca62ce650af',
   is_active: true,
   language: 'ru',
   metadata: [],
@@ -118,7 +118,7 @@ res = s.martech.create_martech_list(marketing_list: Models::Shared::MarketingLis
   sender_name: 'Blake Kuhn',
   sender_phone: '359.305.7962 x28115',
   subject: 'Theca caecus copia crebro valeo ulciscor.',
-  updated_at: DateTime.iso8601('2022-09-22T15:06:04.258Z')
+  updated_at: DateTime.iso8601('2022-09-23T02:51:58.261Z')
 ), connection_id: '<id>')
 
 unless res.marketing_list.nil?
@@ -172,7 +172,7 @@ res = s.martech.create_martech_member(marketing_member: Models::Shared::Marketin
     ),
   ],
   first_name: 'Jude',
-  id: 'e52ef743-5834-41a8-b155-6ce840a0984a',
+  id: 'd99a4698-4916-46b0-be09-42db1779da81',
   last_name: 'Leffler',
   metadata: [],
   name: 'Jude Leffler',
@@ -181,7 +181,7 @@ res = s.martech.create_martech_member(marketing_member: Models::Shared::Marketin
     'adnuo',
     'verumtamen',
   ],
-  updated_at: DateTime.iso8601('2025-07-24T11:04:43.823Z')
+  updated_at: DateTime.iso8601('2025-07-25T07:03:25.021Z')
 ), connection_id: '<id>')
 
 unless res.marketing_member.nil?
@@ -536,7 +536,7 @@ req = Models::Operations::PatchMartechCampaignRequest.new(
     created_at: DateTime.iso8601('2019-05-19T11:18:15.589Z'),
     from_email: 'graham.mertz@gmail.com',
     from_name: 'Graham Mertz',
-    id: 'eef47a5a-3f5f-4d40-b111-04011c5cde05',
+    id: '5f2e62d4-13ba-4b17-9654-655933d9c83a',
     metadata: [],
     name: 'Consequatur atqui sustineo.',
     preview_text: 'Auctus votum ver umbra corroboro turpis spoliatio tamen strues auxilium benigne tempus error eaque suasoria.',
@@ -545,7 +545,7 @@ req = Models::Operations::PatchMartechCampaignRequest.new(
     status: Models::Shared::MarketingCampaignStatus::SCHEDULED,
     subject_line: 'Trepide utpote conculco tibi solio supplanto peior tibi.',
     type: 'absplit',
-    updated_at: DateTime.iso8601('2022-07-01T05:17:38.410Z')
+    updated_at: DateTime.iso8601('2022-07-01T16:55:32.854Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -603,7 +603,7 @@ req = Models::Operations::PatchMartechListRequest.new(
     ),
     created_at: DateTime.iso8601('2019-09-18T02:01:36.950Z'),
     description: 'Vilis.',
-    id: '12e354a6-04ca-4ac9-bd02-60829aeb69b8',
+    id: '9606591f-ddb9-4efc-a225-618cab7a8e07',
     is_active: true,
     language: 'ru',
     metadata: [],
@@ -613,7 +613,7 @@ req = Models::Operations::PatchMartechListRequest.new(
     sender_name: 'Blake Kuhn',
     sender_phone: '359.305.7962 x28115',
     subject: 'Theca caecus copia crebro valeo ulciscor.',
-    updated_at: DateTime.iso8601('2022-09-22T15:06:04.267Z')
+    updated_at: DateTime.iso8601('2022-09-23T02:51:58.267Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -670,7 +670,7 @@ req = Models::Operations::PatchMartechMemberRequest.new(
       ),
     ],
     first_name: 'Jude',
-    id: '3f499d9a-3e5d-4ded-9acc-4b90196ca3b6',
+    id: '840f25c6-63c3-4759-8295-a3814fd6b025',
     last_name: 'Leffler',
     metadata: [],
     name: 'Jude Leffler',
@@ -679,7 +679,7 @@ req = Models::Operations::PatchMartechMemberRequest.new(
       'adnuo',
       'verumtamen',
     ],
-    updated_at: DateTime.iso8601('2025-07-24T11:04:43.830Z')
+    updated_at: DateTime.iso8601('2025-07-25T07:03:25.027Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -853,7 +853,7 @@ req = Models::Operations::UpdateMartechCampaignRequest.new(
     created_at: DateTime.iso8601('2019-05-19T11:18:15.589Z'),
     from_email: 'graham.mertz@gmail.com',
     from_name: 'Graham Mertz',
-    id: 'eef47a5a-3f5f-4d40-b111-04011c5cde05',
+    id: '5f2e62d4-13ba-4b17-9654-655933d9c83a',
     metadata: [],
     name: 'Consequatur atqui sustineo.',
     preview_text: 'Auctus votum ver umbra corroboro turpis spoliatio tamen strues auxilium benigne tempus error eaque suasoria.',
@@ -862,7 +862,7 @@ req = Models::Operations::UpdateMartechCampaignRequest.new(
     status: Models::Shared::MarketingCampaignStatus::SCHEDULED,
     subject_line: 'Trepide utpote conculco tibi solio supplanto peior tibi.',
     type: 'absplit',
-    updated_at: DateTime.iso8601('2022-07-01T05:17:38.410Z')
+    updated_at: DateTime.iso8601('2022-07-01T16:55:32.854Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -920,7 +920,7 @@ req = Models::Operations::UpdateMartechListRequest.new(
     ),
     created_at: DateTime.iso8601('2019-09-18T02:01:36.950Z'),
     description: 'Vilis.',
-    id: '12e354a6-04ca-4ac9-bd02-60829aeb69b8',
+    id: '9606591f-ddb9-4efc-a225-618cab7a8e07',
     is_active: true,
     language: 'ru',
     metadata: [],
@@ -930,7 +930,7 @@ req = Models::Operations::UpdateMartechListRequest.new(
     sender_name: 'Blake Kuhn',
     sender_phone: '359.305.7962 x28115',
     subject: 'Theca caecus copia crebro valeo ulciscor.',
-    updated_at: DateTime.iso8601('2022-09-22T15:06:04.267Z')
+    updated_at: DateTime.iso8601('2022-09-23T02:51:58.267Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -987,7 +987,7 @@ req = Models::Operations::UpdateMartechMemberRequest.new(
       ),
     ],
     first_name: 'Jude',
-    id: '3f499d9a-3e5d-4ded-9acc-4b90196ca3b6',
+    id: '840f25c6-63c3-4759-8295-a3814fd6b025',
     last_name: 'Leffler',
     metadata: [],
     name: 'Jude Leffler',
@@ -996,7 +996,7 @@ req = Models::Operations::UpdateMartechMemberRequest.new(
       'adnuo',
       'verumtamen',
     ],
-    updated_at: DateTime.iso8601('2025-07-24T11:04:43.830Z')
+    updated_at: DateTime.iso8601('2025-07-25T07:03:25.027Z')
   ),
   connection_id: '<id>',
   id: '<id>'

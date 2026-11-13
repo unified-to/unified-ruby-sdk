@@ -55,7 +55,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: '1f4377a2-3b89-4c76-8873-85a683ec0017',
+  id: '5b0bd2f5-4169-4370-bb77-f117196d38ce',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -68,7 +68,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-12T10:58:27.188Z')
+  updated_at: DateTime.iso8601('2023-08-12T18:04:17.224Z')
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -105,7 +105,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: '1f4377a2-3b89-4c76-8873-85a683ec0017',
+  id: '5b0bd2f5-4169-4370-bb77-f117196d38ce',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -118,7 +118,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-12T10:58:27.188Z')
+  updated_at: DateTime.iso8601('2023-08-12T18:04:17.224Z')
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -334,6 +334,7 @@ end
 * [get_ads_creative](docs/sdks/ads/README.md#get_ads_creative) - Retrieve a creative
 * [get_ads_group](docs/sdks/ads/README.md#get_ads_group) - Retrieve a group
 * [get_ads_insertionorder](docs/sdks/ads/README.md#get_ads_insertionorder) - Retrieve an insertionorder
+* [get_ads_inventory](docs/sdks/ads/README.md#get_ads_inventory) - Retrieve an inventory
 * [get_ads_organization](docs/sdks/ads/README.md#get_ads_organization) - Retrieve an organization
 * [get_ads_promoted](docs/sdks/ads/README.md#get_ads_promoted) - Retrieve a promoted
 * [get_ads_target](docs/sdks/ads/README.md#get_ads_target) - Retrieve a target
@@ -343,6 +344,7 @@ end
 * [list_ads_creatives](docs/sdks/ads/README.md#list_ads_creatives) - List all creatives
 * [list_ads_groups](docs/sdks/ads/README.md#list_ads_groups) - List all groups
 * [list_ads_insertionorders](docs/sdks/ads/README.md#list_ads_insertionorders) - List all insertionorders
+* [list_ads_inventories](docs/sdks/ads/README.md#list_ads_inventories) - List all inventories
 * [list_ads_organizations](docs/sdks/ads/README.md#list_ads_organizations) - List all organizations
 * [list_ads_promoteds](docs/sdks/ads/README.md#list_ads_promoteds) - List all promoteds
 * [list_ads_reports](docs/sdks/ads/README.md#list_ads_reports) - List all reports
@@ -1655,7 +1657,9 @@ end
 ### [Inventory](docs/sdks/inventory/README.md)
 
 * [create_commerce_inventory](docs/sdks/inventory/README.md#create_commerce_inventory) - Create an inventory
+* [get_ads_inventory](docs/sdks/inventory/README.md#get_ads_inventory) - Retrieve an inventory
 * [get_commerce_inventory](docs/sdks/inventory/README.md#get_commerce_inventory) - Retrieve an inventory
+* [list_ads_inventories](docs/sdks/inventory/README.md#list_ads_inventories) - List all inventories
 * [list_commerce_inventories](docs/sdks/inventory/README.md#list_commerce_inventories) - List all inventories
 * [patch_commerce_inventory](docs/sdks/inventory/README.md#patch_commerce_inventory) - Update an inventory
 * [remove_commerce_inventory](docs/sdks/inventory/README.md#remove_commerce_inventory) - Remove an inventory
@@ -3075,7 +3079,7 @@ begin
       currency: 'CAD',
       customer_defined_code: '6170',
       description: 'Voluptatibus valde spoliatio.',
-      id: '1f4377a2-3b89-4c76-8873-85a683ec0017',
+      id: '5b0bd2f5-4169-4370-bb77-f117196d38ce',
       is_payable: false,
       metadata: [],
       name: 'Auto Loan Account',
@@ -3088,7 +3092,7 @@ begin
         ),
       ],
       type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-      updated_at: DateTime.iso8601('2023-08-12T10:58:27.188Z')
+      updated_at: DateTime.iso8601('2023-08-12T18:04:17.224Z')
     ), connection_id: '<id>')
 
     unless res.accounting_account.nil?
@@ -3133,7 +3137,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: '1f4377a2-3b89-4c76-8873-85a683ec0017',
+  id: '5b0bd2f5-4169-4370-bb77-f117196d38ce',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -3146,7 +3150,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-12T10:58:27.188Z')
+  updated_at: DateTime.iso8601('2023-08-12T18:04:17.224Z')
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -3174,7 +3178,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: '1f4377a2-3b89-4c76-8873-85a683ec0017',
+  id: '5b0bd2f5-4169-4370-bb77-f117196d38ce',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -3187,7 +3191,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-12T10:58:27.188Z')
+  updated_at: DateTime.iso8601('2023-08-12T18:04:17.224Z')
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?

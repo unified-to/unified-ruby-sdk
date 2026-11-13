@@ -5,7 +5,9 @@
 ### Available Operations
 
 * [create_commerce_inventory](#create_commerce_inventory) - Create an inventory
+* [get_ads_inventory](#get_ads_inventory) - Retrieve an inventory
 * [get_commerce_inventory](#get_commerce_inventory) - Retrieve an inventory
+* [list_ads_inventories](#list_ads_inventories) - List all inventories
 * [list_commerce_inventories](#list_commerce_inventories) - List all inventories
 * [patch_commerce_inventory](#patch_commerce_inventory) - Update an inventory
 * [remove_commerce_inventory](#remove_commerce_inventory) - Remove an inventory
@@ -29,9 +31,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.inventory.create_commerce_inventory(commerce_inventory: Models::Shared::CommerceInventory.new(
   available: 337.0,
-  id: 'b7844abf-32ec-4d35-8b0b-81e875520add',
+  id: 'c67c5ba9-08c5-4bcd-845b-3de9ef12352c',
   metadata: [],
-  updated_at: DateTime.iso8601('2025-12-08T00:18:29.370Z')
+  updated_at: DateTime.iso8601('2025-12-08T22:48:15.141Z')
 ), connection_id: '<id>')
 
 unless res.commerce_inventory.nil?
@@ -52,6 +54,49 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::CreateCommerceInventoryResponse)](../../models/operations/createcommerceinventoryresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## get_ads_inventory
+
+Retrieves a single AdsInventory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getAdsInventory" method="get" path="/ads/{connection_id}/inventory/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.inventory.get_ads_inventory(connection_id: '<id>', id: '<id>')
+
+unless res.ads_inventory.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Inventory                                                                                                                              |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetAdsInventoryQueryParamFields](../../models/operations/getadsinventoryqueryparamfields.md)>                      | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetAdsInventoryResponse)](../../models/operations/getadsinventoryresponse.md)**
 
 ### Errors
 
@@ -95,6 +140,50 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::GetCommerceInventoryResponse)](../../models/operations/getcommerceinventoryresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## list_ads_inventories
+
+Returns a list of AdsInventories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listAdsInventories" method="get" path="/ads/{connection_id}/inventory" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+
+req = Models::Operations::ListAdsInventoriesRequest.new(
+  connection_id: '<id>'
+)
+res = s.inventory.list_ads_inventories(request: req)
+
+unless res.ads_inventories.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `request`                                                                                             | [Models::Operations::ListAdsInventoriesRequest](../../models/operations/listadsinventoriesrequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+
+### Response
+
+**[T.nilable(Models::Operations::ListAdsInventoriesResponse)](../../models/operations/listadsinventoriesresponse.md)**
 
 ### Errors
 
@@ -166,9 +255,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchCommerceInventoryRequest.new(
   commerce_inventory: Models::Shared::CommerceInventory.new(
     available: 337.0,
-    id: '45f35338-968e-4b78-a60e-0baeae6dcaf9',
+    id: '4eab3e62-996a-4e99-8da3-32f983051fc0',
     metadata: [],
-    updated_at: DateTime.iso8601('2025-12-08T00:18:29.376Z')
+    updated_at: DateTime.iso8601('2025-12-08T22:48:15.150Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -258,9 +347,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateCommerceInventoryRequest.new(
   commerce_inventory: Models::Shared::CommerceInventory.new(
     available: 337.0,
-    id: '45f35338-968e-4b78-a60e-0baeae6dcaf9',
+    id: '4eab3e62-996a-4e99-8da3-32f983051fc0',
     metadata: [],
-    updated_at: DateTime.iso8601('2025-12-08T00:18:29.376Z')
+    updated_at: DateTime.iso8601('2025-12-08T22:48:15.150Z')
   ),
   connection_id: '<id>',
   id: '<id>'

@@ -24,6 +24,11 @@ module UnifiedRubySDK
           CARRIER = new('CARRIER')
           DEVICE_MODEL = new('DEVICE_MODEL')
           OS_VERSION = new('OS_VERSION')
+          CUSTOM_KEY = new('CUSTOM_KEY')
+          CUSTOM_VALUE = new('CUSTOM_VALUE')
+          BROWSER = new('BROWSER')
+          OPERATING_SYSTEM = new('OPERATING_SYSTEM')
+          DEVICE_CATEGORY = new('DEVICE_CATEGORY')
         end
         open!
       end

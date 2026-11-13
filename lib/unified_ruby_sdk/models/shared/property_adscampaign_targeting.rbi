@@ -14,12 +14,16 @@ class UnifiedRubySDK::Models::Shared::PropertyAdsCampaignTargeting
   def brand_safety=(str_); end
   def content(); end
   def content=(str_); end
+  def custom(); end
+  def custom=(str_); end
   def demographic(); end
   def demographic=(str_); end
   def device(); end
   def device=(str_); end
   def geographic(); end
   def geographic=(str_); end
+  def inventory(); end
+  def inventory=(str_); end
   def language(); end
   def language=(str_); end
   def optimization(); end

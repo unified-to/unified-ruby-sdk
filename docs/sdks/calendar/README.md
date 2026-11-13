@@ -104,12 +104,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.calendar.create_calendar_calendar(calendar_calendar: Models::Shared::CalendarCalendar.new(
   created_at: DateTime.iso8601('2020-01-09T23:11:34.147Z'),
   description: 'Acer supra vallum suasoria thesaurus.',
-  id: '70428ddf-6eb7-40eb-b52e-ea25611a8352',
+  id: 'ca014f04-55bb-43c0-b176-50131f07dcf2',
   is_primary: false,
   metadata: [],
   name: 'Interviews',
   timezone: 'Asia/Kolkata',
-  updated_at: DateTime.iso8601('2023-04-07T11:53:46.336Z')
+  updated_at: DateTime.iso8601('2023-04-08T01:07:30.167Z')
 ), connection_id: '<id>')
 
 unless res.calendar_calendar.nil?
@@ -157,9 +157,9 @@ res = s.calendar.create_calendar_event(calendar_event: Models::Shared::CalendarE
   attachments: [],
   conference: [],
   created_at: '2019-08-04T14:33:51.814Z',
-  end_at: '2020-05-26T17:28:33.025Z',
+  end_at: '2020-05-26T20:35:18.213Z',
   has_conference: false,
-  id: 'c06ab3cc-a9a8-4c65-b948-1f67685a7a28',
+  id: 'f1de6860-5c76-4a70-b263-a169af7b134f',
   is_all_day: false,
   is_free: false,
   is_private: false,
@@ -169,15 +169,15 @@ res = s.calendar.create_calendar_event(calendar_event: Models::Shared::CalendarE
   recurrence: [
     Models::Shared::CalendarEventRecurrence.new(
       count: 4.0,
-      end_at: DateTime.iso8601('2025-04-10T17:31:38.535Z'),
+      end_at: DateTime.iso8601('2025-04-11T15:20:58.749Z'),
       excluded_dates: [
-        '2024-02-16T09:49:32.973Z',
+        '2024-02-17T03:14:26.144Z',
       ],
       frequency: Models::Shared::CalendarEventRecurrenceFrequency::YEARLY,
       included_dates: [
-        '2023-07-18T22:35:31.477Z',
-        '2025-02-09T11:37:24.396Z',
-        '2024-04-16T02:32:12.993Z',
+        '2023-07-19T13:46:24.887Z',
+        '2025-02-10T08:48:44.911Z',
+        '2024-04-16T20:34:45.063Z',
       ],
       interval: 7.0,
       on_days: [
@@ -514,11 +514,11 @@ res = s.calendar.create_calendar_event(calendar_event: Models::Shared::CalendarE
       week_start: Models::Shared::WeekStart::TU
     ),
   ],
-  start_at: '2020-05-26T08:10:20.309Z',
+  start_at: '2020-05-26T11:16:50.829Z',
   status: Models::Shared::CalendarEventStatus::CONFIRMED,
   subject: 'Sunt spargo tepidus bestia vigor credo coadunatio appello.',
   timezone: 'Asia/Bangkok',
-  updated_at: '2020-07-02T23:12:13.839Z',
+  updated_at: '2020-07-03T02:42:28.133Z',
   web_url: 'https://another-pinstripe.com'
 ), connection_id: '<id>')
 
@@ -567,13 +567,13 @@ res = s.calendar.create_calendar_link(calendar_link: Models::Shared::CalendarLin
   created_at: '2023-03-07T13:34:11.959Z',
   description: 'Vitium clibanus laboriosam uxor denuncio.',
   duration: 74.0,
-  id: 'b97857bd-fc4a-41fa-994c-6171bf2549b7',
+  id: '46afa4e9-4343-4c18-bbf4-10aaf691c5df',
   is_active: true,
   metadata: [],
   name: 'Sopor sopor ancilla animus anser dignissimos vito confero utilis.',
   price_amount: 44.0,
   price_currency: 'USD',
-  updated_at: '2024-03-21T17:12:30.091Z',
+  updated_at: '2024-03-22T01:05:52.970Z',
   url: 'https://annual-apricot.info/'
 ), connection_id: '<id>')
 
@@ -621,10 +621,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.calendar.create_calendar_webinar(calendar_webinar: Models::Shared::CalendarWebinar.new(
   conference: [],
   created_at: DateTime.iso8601('2022-07-06T11:45:14.631Z'),
-  end_at: DateTime.iso8601('2025-11-14T14:12:38.560Z'),
+  end_at: DateTime.iso8601('2025-11-15T11:46:01.360Z'),
   has_polls: false,
   has_recording: false,
-  id: '0a6f7207-acbf-4837-9b01-a8f209206ee9',
+  id: '59619494-0590-4e60-8c2d-8766e85c5adb',
   is_auto_approve: false,
   is_enabled: true,
   is_webcast: false,
@@ -634,13 +634,13 @@ res = s.calendar.create_calendar_webinar(calendar_webinar: Models::Shared::Calen
   recurrence: [
     Models::Shared::CalendarEventRecurrence.new(
       count: 10.0,
-      end_at: DateTime.iso8601('2023-09-06T11:41:01.336Z'),
+      end_at: DateTime.iso8601('2023-09-06T19:11:04.926Z'),
       excluded_dates: [
-        '2025-02-26T07:14:35.243Z',
+        '2025-02-27T00:12:33.865Z',
       ],
       frequency: Models::Shared::CalendarEventRecurrenceFrequency::MONTHLY,
       included_dates: [
-        '2024-05-07T12:10:24.024Z',
+        '2024-05-07T23:57:39.633Z',
       ],
       interval: 8.0,
       on_days: [
@@ -1031,16 +1031,16 @@ res = s.calendar.create_calendar_webinar(calendar_webinar: Models::Shared::Calen
     ),
     Models::Shared::CalendarEventRecurrence.new(
       count: 3.0,
-      end_at: DateTime.iso8601('2022-10-01T21:03:31.596Z'),
+      end_at: DateTime.iso8601('2022-10-01T22:35:38.054Z'),
       excluded_dates: [
-        '2024-09-12T17:47:47.000Z',
-        '2024-08-27T23:37:49.965Z',
+        '2024-09-13T07:50:12.233Z',
+        '2024-08-28T13:23:38.721Z',
       ],
       frequency: Models::Shared::CalendarEventRecurrenceFrequency::DAILY,
       included_dates: [
-        '2024-04-02T22:10:42.490Z',
-        '2026-01-31T08:10:56.395Z',
-        '2023-08-19T21:26:36.793Z',
+        '2024-04-03T09:21:31.039Z',
+        '2026-02-01T07:06:16.086Z',
+        '2023-08-20T04:38:07.767Z',
       ],
       interval: 1.0,
       on_days: [
@@ -1184,16 +1184,16 @@ res = s.calendar.create_calendar_webinar(calendar_webinar: Models::Shared::Calen
     ),
     Models::Shared::CalendarEventRecurrence.new(
       count: 8.0,
-      end_at: DateTime.iso8601('2026-08-16T04:15:50.165Z'),
+      end_at: DateTime.iso8601('2026-08-17T06:38:37.946Z'),
       excluded_dates: [
-        '2023-06-23T10:36:30.563Z',
-        '2023-06-12T07:46:54.765Z',
+        '2023-06-23T16:47:28.268Z',
+        '2023-06-12T13:46:09.374Z',
       ],
       frequency: Models::Shared::CalendarEventRecurrenceFrequency::WEEKLY,
       included_dates: [
-        '2024-04-11T01:44:19.344Z',
-        '2023-08-25T18:48:50.677Z',
-        '2024-10-08T07:00:29.884Z',
+        '2024-04-11T13:03:43.199Z',
+        '2023-08-26T02:06:34.167Z',
+        '2024-10-08T21:29:50.949Z',
       ],
       interval: 8.0,
       on_days: [
@@ -1346,11 +1346,11 @@ res = s.calendar.create_calendar_webinar(calendar_webinar: Models::Shared::Calen
   registrant_password: 'W7J6DhkM',
   require_address: false,
   require_job_title: false,
-  start_at: DateTime.iso8601('2025-05-14T22:03:54.513Z'),
+  start_at: DateTime.iso8601('2025-05-15T16:23:41.723Z'),
   status: Models::Shared::CalendarWebinarStatus::TENTATIVE,
   subject: 'Harum culpa decipio ex cubo ancilla cresco.',
   timezone: 'Europe/Kaliningrad',
-  updated_at: DateTime.iso8601('2026-10-22T01:36:06.495Z'),
+  updated_at: DateTime.iso8601('2026-10-23T05:09:24.387Z'),
   web_url: 'https://quiet-permafrost.name'
 ), connection_id: '<id>')
 
@@ -2186,12 +2186,12 @@ req = Models::Operations::PatchCalendarCalendarRequest.new(
   calendar_calendar: Models::Shared::CalendarCalendar.new(
     created_at: DateTime.iso8601('2020-01-09T23:11:34.147Z'),
     description: 'Acer supra vallum suasoria thesaurus.',
-    id: '69f28665-137b-48bf-96de-a16a1b1672e4',
+    id: '62f752c4-5e59-433b-9fa6-13ad79dc558e',
     is_primary: false,
     metadata: [],
     name: 'Interviews',
     timezone: 'Asia/Kolkata',
-    updated_at: DateTime.iso8601('2023-04-07T11:53:46.342Z')
+    updated_at: DateTime.iso8601('2023-04-08T01:07:30.170Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2242,9 +2242,9 @@ req = Models::Operations::PatchCalendarEventRequest.new(
     attachments: [],
     conference: [],
     created_at: '2019-08-04T14:33:51.814Z',
-    end_at: '2020-05-26T17:28:33.030Z',
+    end_at: '2020-05-26T20:35:18.218Z',
     has_conference: false,
-    id: '0a514256-0865-4434-bf90-3ee57436bd62',
+    id: 'd5b31193-4522-4807-b5f5-c304bd0f02c7',
     is_all_day: false,
     is_free: false,
     is_private: false,
@@ -2254,15 +2254,15 @@ req = Models::Operations::PatchCalendarEventRequest.new(
     recurrence: [
       Models::Shared::CalendarEventRecurrence.new(
         count: 4.0,
-        end_at: DateTime.iso8601('2025-04-10T17:31:38.569Z'),
+        end_at: DateTime.iso8601('2025-04-11T15:20:58.789Z'),
         excluded_dates: [
-          '2024-02-16T09:49:33.000Z',
+          '2024-02-17T03:14:26.176Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::YEARLY,
         included_dates: [
-          '2023-07-18T22:35:31.501Z',
-          '2025-02-09T11:37:24.430Z',
-          '2024-04-16T02:32:13.021Z',
+          '2023-07-19T13:46:24.915Z',
+          '2025-02-10T08:48:44.949Z',
+          '2024-04-16T20:34:45.096Z',
         ],
         interval: 7.0,
         on_days: [
@@ -2599,11 +2599,11 @@ req = Models::Operations::PatchCalendarEventRequest.new(
         week_start: Models::Shared::WeekStart::TU
       ),
     ],
-    start_at: '2020-05-26T08:10:20.314Z',
+    start_at: '2020-05-26T11:16:50.834Z',
     status: Models::Shared::CalendarEventStatus::CONFIRMED,
     subject: 'Sunt spargo tepidus bestia vigor credo coadunatio appello.',
     timezone: 'Asia/Bangkok',
-    updated_at: '2020-07-02T23:12:13.844Z',
+    updated_at: '2020-07-03T02:42:28.139Z',
     web_url: 'https://another-pinstripe.com'
   ),
   connection_id: '<id>',
@@ -2655,13 +2655,13 @@ req = Models::Operations::PatchCalendarLinkRequest.new(
     created_at: '2023-03-07T13:34:11.959Z',
     description: 'Vitium clibanus laboriosam uxor denuncio.',
     duration: 74.0,
-    id: '3e916a56-6454-4aa7-b2c1-56d0abc3007b',
+    id: 'fa54ff55-49ca-41f5-a85e-08ae06b04ae4',
     is_active: true,
     metadata: [],
     name: 'Sopor sopor ancilla animus anser dignissimos vito confero utilis.',
     price_amount: 44.0,
     price_currency: 'USD',
-    updated_at: '2024-03-21T17:12:30.095Z',
+    updated_at: '2024-03-22T01:05:52.973Z',
     url: 'https://annual-apricot.info/'
   ),
   connection_id: '<id>',
@@ -2712,10 +2712,10 @@ req = Models::Operations::PatchCalendarWebinarRequest.new(
   calendar_webinar: Models::Shared::CalendarWebinar.new(
     conference: [],
     created_at: DateTime.iso8601('2022-07-06T11:45:14.631Z'),
-    end_at: DateTime.iso8601('2025-11-14T14:12:38.599Z'),
+    end_at: DateTime.iso8601('2025-11-15T11:46:01.387Z'),
     has_polls: false,
     has_recording: false,
-    id: 'b934f019-d3dc-4025-887f-fd067cd4a14c',
+    id: '5f0a7188-50e2-47c4-8a6f-252dead964ba',
     is_auto_approve: false,
     is_enabled: true,
     is_webcast: false,
@@ -2725,13 +2725,13 @@ req = Models::Operations::PatchCalendarWebinarRequest.new(
     recurrence: [
       Models::Shared::CalendarEventRecurrence.new(
         count: 10.0,
-        end_at: DateTime.iso8601('2023-09-06T11:41:01.350Z'),
+        end_at: DateTime.iso8601('2023-09-06T19:11:04.935Z'),
         excluded_dates: [
-          '2025-02-26T07:14:35.275Z',
+          '2025-02-27T00:12:33.885Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::MONTHLY,
         included_dates: [
-          '2024-05-07T12:10:24.046Z',
+          '2024-05-07T23:57:39.647Z',
         ],
         interval: 8.0,
         on_days: [
@@ -3122,16 +3122,16 @@ req = Models::Operations::PatchCalendarWebinarRequest.new(
       ),
       Models::Shared::CalendarEventRecurrence.new(
         count: 3.0,
-        end_at: DateTime.iso8601('2022-10-01T21:03:31.599Z'),
+        end_at: DateTime.iso8601('2022-10-01T22:35:38.056Z'),
         excluded_dates: [
-          '2024-09-12T17:47:47.025Z',
-          '2024-08-27T23:37:49.990Z',
+          '2024-09-13T07:50:12.250Z',
+          '2024-08-28T13:23:38.737Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::DAILY,
         included_dates: [
-          '2024-04-02T22:10:42.511Z',
-          '2026-01-31T08:10:56.438Z',
-          '2023-08-19T21:26:36.806Z',
+          '2024-04-03T09:21:31.052Z',
+          '2026-02-01T07:06:16.113Z',
+          '2023-08-20T04:38:07.776Z',
         ],
         interval: 1.0,
         on_days: [
@@ -3275,16 +3275,16 @@ req = Models::Operations::PatchCalendarWebinarRequest.new(
       ),
       Models::Shared::CalendarEventRecurrence.new(
         count: 8.0,
-        end_at: DateTime.iso8601('2026-08-16T04:15:50.213Z'),
+        end_at: DateTime.iso8601('2026-08-17T06:38:37.977Z'),
         excluded_dates: [
-          '2023-06-23T10:36:30.575Z',
-          '2023-06-12T07:46:54.776Z',
+          '2023-06-23T16:47:28.275Z',
+          '2023-06-12T13:46:09.381Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::WEEKLY,
         included_dates: [
-          '2024-04-11T01:44:19.365Z',
-          '2023-08-25T18:48:50.691Z',
-          '2024-10-08T07:00:29.911Z',
+          '2024-04-11T13:03:43.213Z',
+          '2023-08-26T02:06:34.176Z',
+          '2024-10-08T21:29:50.966Z',
         ],
         interval: 8.0,
         on_days: [
@@ -3437,11 +3437,11 @@ req = Models::Operations::PatchCalendarWebinarRequest.new(
     registrant_password: 'W7J6DhkM',
     require_address: false,
     require_job_title: false,
-    start_at: DateTime.iso8601('2025-05-14T22:03:54.546Z'),
+    start_at: DateTime.iso8601('2025-05-15T16:23:41.746Z'),
     status: Models::Shared::CalendarWebinarStatus::TENTATIVE,
     subject: 'Harum culpa decipio ex cubo ancilla cresco.',
     timezone: 'Europe/Kaliningrad',
-    updated_at: DateTime.iso8601('2026-10-22T01:36:06.545Z'),
+    updated_at: DateTime.iso8601('2026-10-23T05:09:24.420Z'),
     web_url: 'https://quiet-permafrost.name'
   ),
   connection_id: '<id>',
@@ -3743,12 +3743,12 @@ req = Models::Operations::UpdateCalendarCalendarRequest.new(
   calendar_calendar: Models::Shared::CalendarCalendar.new(
     created_at: DateTime.iso8601('2020-01-09T23:11:34.147Z'),
     description: 'Acer supra vallum suasoria thesaurus.',
-    id: '69f28665-137b-48bf-96de-a16a1b1672e4',
+    id: '62f752c4-5e59-433b-9fa6-13ad79dc558e',
     is_primary: false,
     metadata: [],
     name: 'Interviews',
     timezone: 'Asia/Kolkata',
-    updated_at: DateTime.iso8601('2023-04-07T11:53:46.342Z')
+    updated_at: DateTime.iso8601('2023-04-08T01:07:30.170Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -3799,9 +3799,9 @@ req = Models::Operations::UpdateCalendarEventRequest.new(
     attachments: [],
     conference: [],
     created_at: '2019-08-04T14:33:51.814Z',
-    end_at: '2020-05-26T17:28:33.030Z',
+    end_at: '2020-05-26T20:35:18.218Z',
     has_conference: false,
-    id: '0a514256-0865-4434-bf90-3ee57436bd62',
+    id: 'd5b31193-4522-4807-b5f5-c304bd0f02c7',
     is_all_day: false,
     is_free: false,
     is_private: false,
@@ -3811,15 +3811,15 @@ req = Models::Operations::UpdateCalendarEventRequest.new(
     recurrence: [
       Models::Shared::CalendarEventRecurrence.new(
         count: 4.0,
-        end_at: DateTime.iso8601('2025-04-10T17:31:38.569Z'),
+        end_at: DateTime.iso8601('2025-04-11T15:20:58.789Z'),
         excluded_dates: [
-          '2024-02-16T09:49:33.000Z',
+          '2024-02-17T03:14:26.176Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::YEARLY,
         included_dates: [
-          '2023-07-18T22:35:31.501Z',
-          '2025-02-09T11:37:24.430Z',
-          '2024-04-16T02:32:13.021Z',
+          '2023-07-19T13:46:24.915Z',
+          '2025-02-10T08:48:44.949Z',
+          '2024-04-16T20:34:45.096Z',
         ],
         interval: 7.0,
         on_days: [
@@ -4156,11 +4156,11 @@ req = Models::Operations::UpdateCalendarEventRequest.new(
         week_start: Models::Shared::WeekStart::TU
       ),
     ],
-    start_at: '2020-05-26T08:10:20.314Z',
+    start_at: '2020-05-26T11:16:50.834Z',
     status: Models::Shared::CalendarEventStatus::CONFIRMED,
     subject: 'Sunt spargo tepidus bestia vigor credo coadunatio appello.',
     timezone: 'Asia/Bangkok',
-    updated_at: '2020-07-02T23:12:13.844Z',
+    updated_at: '2020-07-03T02:42:28.139Z',
     web_url: 'https://another-pinstripe.com'
   ),
   connection_id: '<id>',
@@ -4212,13 +4212,13 @@ req = Models::Operations::UpdateCalendarLinkRequest.new(
     created_at: '2023-03-07T13:34:11.959Z',
     description: 'Vitium clibanus laboriosam uxor denuncio.',
     duration: 74.0,
-    id: '3e916a56-6454-4aa7-b2c1-56d0abc3007b',
+    id: 'fa54ff55-49ca-41f5-a85e-08ae06b04ae4',
     is_active: true,
     metadata: [],
     name: 'Sopor sopor ancilla animus anser dignissimos vito confero utilis.',
     price_amount: 44.0,
     price_currency: 'USD',
-    updated_at: '2024-03-21T17:12:30.095Z',
+    updated_at: '2024-03-22T01:05:52.973Z',
     url: 'https://annual-apricot.info/'
   ),
   connection_id: '<id>',
@@ -4269,10 +4269,10 @@ req = Models::Operations::UpdateCalendarWebinarRequest.new(
   calendar_webinar: Models::Shared::CalendarWebinar.new(
     conference: [],
     created_at: DateTime.iso8601('2022-07-06T11:45:14.631Z'),
-    end_at: DateTime.iso8601('2025-11-14T14:12:38.599Z'),
+    end_at: DateTime.iso8601('2025-11-15T11:46:01.387Z'),
     has_polls: false,
     has_recording: false,
-    id: 'b934f019-d3dc-4025-887f-fd067cd4a14c',
+    id: '5f0a7188-50e2-47c4-8a6f-252dead964ba',
     is_auto_approve: false,
     is_enabled: true,
     is_webcast: false,
@@ -4282,13 +4282,13 @@ req = Models::Operations::UpdateCalendarWebinarRequest.new(
     recurrence: [
       Models::Shared::CalendarEventRecurrence.new(
         count: 10.0,
-        end_at: DateTime.iso8601('2023-09-06T11:41:01.350Z'),
+        end_at: DateTime.iso8601('2023-09-06T19:11:04.935Z'),
         excluded_dates: [
-          '2025-02-26T07:14:35.275Z',
+          '2025-02-27T00:12:33.885Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::MONTHLY,
         included_dates: [
-          '2024-05-07T12:10:24.046Z',
+          '2024-05-07T23:57:39.647Z',
         ],
         interval: 8.0,
         on_days: [
@@ -4679,16 +4679,16 @@ req = Models::Operations::UpdateCalendarWebinarRequest.new(
       ),
       Models::Shared::CalendarEventRecurrence.new(
         count: 3.0,
-        end_at: DateTime.iso8601('2022-10-01T21:03:31.599Z'),
+        end_at: DateTime.iso8601('2022-10-01T22:35:38.056Z'),
         excluded_dates: [
-          '2024-09-12T17:47:47.025Z',
-          '2024-08-27T23:37:49.990Z',
+          '2024-09-13T07:50:12.250Z',
+          '2024-08-28T13:23:38.737Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::DAILY,
         included_dates: [
-          '2024-04-02T22:10:42.511Z',
-          '2026-01-31T08:10:56.438Z',
-          '2023-08-19T21:26:36.806Z',
+          '2024-04-03T09:21:31.052Z',
+          '2026-02-01T07:06:16.113Z',
+          '2023-08-20T04:38:07.776Z',
         ],
         interval: 1.0,
         on_days: [
@@ -4832,16 +4832,16 @@ req = Models::Operations::UpdateCalendarWebinarRequest.new(
       ),
       Models::Shared::CalendarEventRecurrence.new(
         count: 8.0,
-        end_at: DateTime.iso8601('2026-08-16T04:15:50.213Z'),
+        end_at: DateTime.iso8601('2026-08-17T06:38:37.977Z'),
         excluded_dates: [
-          '2023-06-23T10:36:30.575Z',
-          '2023-06-12T07:46:54.776Z',
+          '2023-06-23T16:47:28.275Z',
+          '2023-06-12T13:46:09.381Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::WEEKLY,
         included_dates: [
-          '2024-04-11T01:44:19.365Z',
-          '2023-08-25T18:48:50.691Z',
-          '2024-10-08T07:00:29.911Z',
+          '2024-04-11T13:03:43.213Z',
+          '2023-08-26T02:06:34.176Z',
+          '2024-10-08T21:29:50.966Z',
         ],
         interval: 8.0,
         on_days: [
@@ -4994,11 +4994,11 @@ req = Models::Operations::UpdateCalendarWebinarRequest.new(
     registrant_password: 'W7J6DhkM',
     require_address: false,
     require_job_title: false,
-    start_at: DateTime.iso8601('2025-05-14T22:03:54.546Z'),
+    start_at: DateTime.iso8601('2025-05-15T16:23:41.746Z'),
     status: Models::Shared::CalendarWebinarStatus::TENTATIVE,
     subject: 'Harum culpa decipio ex cubo ancilla cresco.',
     timezone: 'Europe/Kaliningrad',
-    updated_at: DateTime.iso8601('2026-10-22T01:36:06.545Z'),
+    updated_at: DateTime.iso8601('2026-10-23T05:09:24.420Z'),
     web_url: 'https://quiet-permafrost.name'
   ),
   connection_id: '<id>',

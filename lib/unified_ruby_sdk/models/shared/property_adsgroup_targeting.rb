@@ -18,12 +18,16 @@ module UnifiedRubySDK
         field :brand_safety, Crystalline::Nilable.new(Models::Shared::PropertyAdsGroupTargetingBrandSafety), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('brand_safety') } }
 
         field :content, Crystalline::Nilable.new(Models::Shared::PropertyAdsGroupTargetingContent), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content') } }
+        # Key-value targeting; clauses are ANDed
+        field :custom, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CustomTargeting)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('custom') } }
         # Demographic targeting (Meta: age_min, age_max, genders)
         field :demographic, Crystalline::Nilable.new(Models::Shared::PropertyAdsGroupTargetingDemographic), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('demographic') } }
 
         field :device, Crystalline::Nilable.new(Models::Shared::PropertyAdsGroupTargetingDevice), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('device') } }
 
         field :geographic, Crystalline::Nilable.new(Models::Shared::PropertyAdsGroupTargetingGeographic), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('geographic') } }
+        # Publisher inventory (ad units, placements) to include / exclude
+        field :inventory, Crystalline::Nilable.new(Models::Shared::PropertyAdsGroupTargetingInventory), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('inventory') } }
 
         field :language, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::TargetRef)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('language') } }
         # Optimization (Meta: targeting_automation; Google: observation vs targeting mode)
@@ -33,14 +37,16 @@ module UnifiedRubySDK
 
         field :schedule, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AdSchedule)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('schedule') } }
 
-        sig { params(audience: T.nilable(Models::Shared::PropertyAdsGroupTargetingAudience), brand_safety: T.nilable(Models::Shared::PropertyAdsGroupTargetingBrandSafety), content: T.nilable(Models::Shared::PropertyAdsGroupTargetingContent), demographic: T.nilable(Models::Shared::PropertyAdsGroupTargetingDemographic), device: T.nilable(Models::Shared::PropertyAdsGroupTargetingDevice), geographic: T.nilable(Models::Shared::PropertyAdsGroupTargetingGeographic), language: T.nilable(T::Array[Models::Shared::TargetRef]), optimization: T.nilable(Models::Shared::PropertyAdsGroupTargetingOptimization), placement: T.nilable(Models::Shared::PropertyAdsGroupTargetingPlacement), schedule: T.nilable(T::Array[Models::Shared::AdSchedule])).void }
-        def initialize(audience: nil, brand_safety: nil, content: nil, demographic: nil, device: nil, geographic: nil, language: nil, optimization: nil, placement: nil, schedule: nil)
+        sig { params(audience: T.nilable(Models::Shared::PropertyAdsGroupTargetingAudience), brand_safety: T.nilable(Models::Shared::PropertyAdsGroupTargetingBrandSafety), content: T.nilable(Models::Shared::PropertyAdsGroupTargetingContent), custom: T.nilable(T::Array[Models::Shared::CustomTargeting]), demographic: T.nilable(Models::Shared::PropertyAdsGroupTargetingDemographic), device: T.nilable(Models::Shared::PropertyAdsGroupTargetingDevice), geographic: T.nilable(Models::Shared::PropertyAdsGroupTargetingGeographic), inventory: T.nilable(Models::Shared::PropertyAdsGroupTargetingInventory), language: T.nilable(T::Array[Models::Shared::TargetRef]), optimization: T.nilable(Models::Shared::PropertyAdsGroupTargetingOptimization), placement: T.nilable(Models::Shared::PropertyAdsGroupTargetingPlacement), schedule: T.nilable(T::Array[Models::Shared::AdSchedule])).void }
+        def initialize(audience: nil, brand_safety: nil, content: nil, custom: nil, demographic: nil, device: nil, geographic: nil, inventory: nil, language: nil, optimization: nil, placement: nil, schedule: nil)
           @audience = audience
           @brand_safety = brand_safety
           @content = content
+          @custom = custom
           @demographic = demographic
           @device = device
           @geographic = geographic
+          @inventory = inventory
           @language = language
           @optimization = optimization
           @placement = placement
@@ -53,9 +59,11 @@ module UnifiedRubySDK
           return false unless @audience == other.audience
           return false unless @brand_safety == other.brand_safety
           return false unless @content == other.content
+          return false unless @custom == other.custom
           return false unless @demographic == other.demographic
           return false unless @device == other.device
           return false unless @geographic == other.geographic
+          return false unless @inventory == other.inventory
           return false unless @language == other.language
           return false unless @optimization == other.optimization
           return false unless @placement == other.placement

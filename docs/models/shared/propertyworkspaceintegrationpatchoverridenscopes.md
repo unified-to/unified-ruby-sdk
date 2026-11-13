@@ -72,6 +72,7 @@
 | `ads_group_write`                      | *T.nilable(::String)*                  | :heavy_minus_sign:                     | N/A                                    |
 | `ads_insertionorder_read`              | *T.nilable(::String)*                  | :heavy_minus_sign:                     | N/A                                    |
 | `ads_insertionorder_write`             | *T.nilable(::String)*                  | :heavy_minus_sign:                     | N/A                                    |
+| `ads_inventory_read`                   | *T.nilable(::String)*                  | :heavy_minus_sign:                     | N/A                                    |
 | `ads_organization_read`                | *T.nilable(::String)*                  | :heavy_minus_sign:                     | N/A                                    |
 | `ads_organization_write`               | *T.nilable(::String)*                  | :heavy_minus_sign:                     | N/A                                    |
 | `ads_promoted_read`                    | *T.nilable(::String)*                  | :heavy_minus_sign:                     | N/A                                    |

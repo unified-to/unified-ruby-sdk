@@ -13,6 +13,8 @@ module UnifiedRubySDK
         enums do
           OPTIMIZED = new('OPTIMIZED')
           ROUND_ROBIN = new('ROUND_ROBIN')
+          WEIGHTED = new('WEIGHTED')
+          SEQUENTIAL = new('SEQUENTIAL')
         end
         open!
       end

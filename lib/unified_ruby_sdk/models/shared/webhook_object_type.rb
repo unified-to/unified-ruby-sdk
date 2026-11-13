@@ -166,6 +166,7 @@ module UnifiedRubySDK
           ADS_INSERTIONORDER = new('ads_insertionorder')
           ADS_TARGET = new('ads_target')
           ADS_PROMOTED = new('ads_promoted')
+          ADS_INVENTORY = new('ads_inventory')
           ANALYTICS_PROPERTY = new('analytics_property')
           ANALYTICS_EVENT = new('analytics_event')
           ANALYTICS_SESSION = new('analytics_session')

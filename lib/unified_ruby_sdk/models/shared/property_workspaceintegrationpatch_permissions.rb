@@ -297,6 +297,7 @@ module UnifiedRubySDK
           ADS_INSERTIONORDER_WRITE = new('ads_insertionorder_write')
           ADS_TARGET_READ = new('ads_target_read')
           ADS_PROMOTED_READ = new('ads_promoted_read')
+          ADS_INVENTORY_READ = new('ads_inventory_read')
           ANALYTICS_PROPERTY_READ = new('analytics_property_read')
           ANALYTICS_PROPERTY_WRITE = new('analytics_property_write')
           ANALYTICS_EVENT_READ = new('analytics_event_read')

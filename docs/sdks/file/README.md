@@ -32,7 +32,7 @@ res = s.file.create_storage_file(storage_file: Models::Shared::StorageFile.new(
   description: 'Deprimo crastinus cupiditate debilito cimentarius virgo acidus.',
   download_url: 'https://clueless-laughter.biz',
   hash: 'd9d88dda7bc0acaa8472fdef2307f94a1fc355ce',
-  id: 'ffbf6e96-f805-491f-8bcc-481398b39037',
+  id: '0ca72720-d521-427e-b06c-9faf08393d59',
   metadata: [],
   mime_type: 'application/pdf',
   name: 'softly.pdf',
@@ -41,7 +41,7 @@ res = s.file.create_storage_file(storage_file: Models::Shared::StorageFile.new(
     'suasoria',
   ],
   type: Models::Shared::StorageFileType::FOLDER,
-  updated_at: DateTime.iso8601('2023-02-11T12:41:14.891Z'),
+  updated_at: DateTime.iso8601('2023-02-11T20:20:16.391Z'),
   version: '1',
   web_url: 'https://faraway-inspection.org'
 ), connection_id: '<id>')
@@ -181,7 +181,7 @@ req = Models::Operations::PatchStorageFileRequest.new(
     description: 'Deprimo crastinus cupiditate debilito cimentarius virgo acidus.',
     download_url: 'https://clueless-laughter.biz',
     hash: 'd9d88dda7bc0acaa8472fdef2307f94a1fc355ce',
-    id: 'a913d5bd-434a-4ee0-9feb-3aa7e2f74e2b',
+    id: '02eb0035-8783-4bc5-8670-07b569370676',
     metadata: [],
     mime_type: 'application/pdf',
     name: 'softly.pdf',
@@ -190,7 +190,7 @@ req = Models::Operations::PatchStorageFileRequest.new(
       'suasoria',
     ],
     type: Models::Shared::StorageFileType::FOLDER,
-    updated_at: DateTime.iso8601('2023-02-11T12:41:14.894Z'),
+    updated_at: DateTime.iso8601('2023-02-11T20:20:16.400Z'),
     version: '1',
     web_url: 'https://faraway-inspection.org'
   ),
@@ -285,7 +285,7 @@ req = Models::Operations::UpdateStorageFileRequest.new(
     description: 'Deprimo crastinus cupiditate debilito cimentarius virgo acidus.',
     download_url: 'https://clueless-laughter.biz',
     hash: 'd9d88dda7bc0acaa8472fdef2307f94a1fc355ce',
-    id: 'a913d5bd-434a-4ee0-9feb-3aa7e2f74e2b',
+    id: '02eb0035-8783-4bc5-8670-07b569370676',
     metadata: [],
     mime_type: 'application/pdf',
     name: 'softly.pdf',
@@ -294,7 +294,7 @@ req = Models::Operations::UpdateStorageFileRequest.new(
       'suasoria',
     ],
     type: Models::Shared::StorageFileType::FOLDER,
-    updated_at: DateTime.iso8601('2023-02-11T12:41:14.894Z'),
+    updated_at: DateTime.iso8601('2023-02-11T20:20:16.400Z'),
     version: '1',
     web_url: 'https://faraway-inspection.org'
   ),

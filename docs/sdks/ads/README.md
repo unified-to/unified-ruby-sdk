@@ -17,6 +17,7 @@
 * [get_ads_creative](#get_ads_creative) - Retrieve a creative
 * [get_ads_group](#get_ads_group) - Retrieve a group
 * [get_ads_insertionorder](#get_ads_insertionorder) - Retrieve an insertionorder
+* [get_ads_inventory](#get_ads_inventory) - Retrieve an inventory
 * [get_ads_organization](#get_ads_organization) - Retrieve an organization
 * [get_ads_promoted](#get_ads_promoted) - Retrieve a promoted
 * [get_ads_target](#get_ads_target) - Retrieve a target
@@ -26,6 +27,7 @@
 * [list_ads_creatives](#list_ads_creatives) - List all creatives
 * [list_ads_groups](#list_ads_groups) - List all groups
 * [list_ads_insertionorders](#list_ads_insertionorders) - List all insertionorders
+* [list_ads_inventories](#list_ads_inventories) - List all inventories
 * [list_ads_organizations](#list_ads_organizations) - List all organizations
 * [list_ads_promoteds](#list_ads_promoteds) - List all promoteds
 * [list_ads_reports](#list_ads_reports) - List all reports
@@ -73,11 +75,11 @@ res = s.ads.create_ads_ad(ads_ad: Models::Shared::AdsAd.new(
   creative_asset_url: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
   description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
   final_url: 'https://improbable-sanity.com',
-  id: '6dd6c7e3-2e43-48d4-80dc-161838e833df',
+  id: '8f01e83f-273f-462c-9419-b46fcd8f3c68',
   metadata: [],
   name: 'Hermiston Group',
   status: Models::Shared::AdsAdStatus::ARCHIVED,
-  updated_at: DateTime.iso8601('2024-06-27T11:30:18.143Z')
+  updated_at: DateTime.iso8601('2024-06-27T22:53:28.614Z')
 ), connection_id: '<id>')
 
 unless res.ads_ad.nil?
@@ -124,12 +126,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.ads.create_ads_asset(ads_asset: Models::Shared::AdsAsset.new(
   created_at: DateTime.iso8601('2020-03-27T20:14:38.603Z'),
   height: 400.0,
-  id: 'a06d48b5-ec1a-461a-bfdf-d1679fae0a6e',
+  id: 'bb7bfdc4-df0f-49a8-b977-9514ff7507df',
   metadata: [],
   mime_type: 'IMAGE_PNG',
   name: 'Lockman - DuBuque',
   type: Models::Shared::AdsAssetType::IMAGE,
-  updated_at: DateTime.iso8601('2022-03-31T19:41:16.830Z'),
+  updated_at: DateTime.iso8601('2022-04-01T04:09:21.579Z'),
   url: 'https://informal-perfection.com/',
   width: 600.0
 ), connection_id: '<id>')
@@ -182,18 +184,18 @@ res = s.ads.create_ads_campaign(ads_campaign: Models::Shared::AdsCampaign.new(
   created_at: DateTime.iso8601('2022-05-21T08:51:41.868Z'),
   currency: 'USD',
   effective_status: Models::Shared::EffectiveStatus::NOT_ELIGIBLE,
-  end_at: DateTime.iso8601('2025-06-15T23:06:35.106Z'),
-  id: 'ec95464d-02f5-4307-9f8f-58f958685c91',
+  end_at: DateTime.iso8601('2025-06-16T18:15:25.146Z'),
+  id: 'acb45693-8550-4dc2-96c9-c5641e8f4ef4',
   labels: [
     'comedo',
   ],
   metadata: [],
   name: 'Emard Inc',
-  start_at: DateTime.iso8601('2022-07-22T06:41:18.778Z'),
+  start_at: DateTime.iso8601('2022-07-22T07:44:43.562Z'),
   status: Models::Shared::AdsCampaignStatus::PROCESSING_FAILED,
   targeting: Models::Shared::PropertyAdsCampaignTargeting.new,
   total_spend_amount: 2349.8_642_875_347_286,
-  updated_at: DateTime.iso8601('2026-01-19T11:28:22.767Z')
+  updated_at: DateTime.iso8601('2026-01-20T10:20:00.686Z')
 ), connection_id: '<id>')
 
 unless res.ads_campaign.nil?
@@ -239,7 +241,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.ads.create_ads_creative(ads_creative: Models::Shared::AdsCreative.new(
   created_at: DateTime.iso8601('2020-02-17T11:24:51.093Z'),
-  id: '1123ec7a-d5a8-4984-b229-18329b6041b1',
+  id: '36c4fb03-3d42-43e4-b5d6-731dc1495dbe',
   labels: [
     'coma',
     'accedo',
@@ -248,7 +250,7 @@ res = s.ads.create_ads_creative(ads_creative: Models::Shared::AdsCreative.new(
   metadata: [],
   name: 'Brekke, Bradtke and Robel',
   status: Models::Shared::AdsCreativeStatus::PAUSED,
-  updated_at: DateTime.iso8601('2021-07-02T05:03:14.456Z')
+  updated_at: DateTime.iso8601('2021-07-02T10:44:18.909Z')
 ), connection_id: '<id>')
 
 unless res.ads_creative.nil?
@@ -299,15 +301,15 @@ res = s.ads.create_ads_group(ads_group: Models::Shared::AdsGroup.new(
   created_at: DateTime.iso8601('2019-08-29T17:59:41.045Z'),
   currency: 'USD',
   effective_status: Models::Shared::AdsGroupEffectiveStatus::PAUSED,
-  end_at: DateTime.iso8601('2026-07-15T22:14:35.567Z'),
-  id: '6fa45386-6e54-47ac-9687-a4faa8f7c560',
+  end_at: DateTime.iso8601('2026-07-17T00:54:04.254Z'),
+  id: '2ef74a27-35a4-43df-aaed-d46fcbb76c0c',
   language_locale: 'fr-FR',
   metadata: [],
   name: 'Stark - Baumbach',
-  start_at: DateTime.iso8601('2026-01-28T17:57:53.950Z'),
+  start_at: DateTime.iso8601('2026-01-29T18:50:17.992Z'),
   status: Models::Shared::AdsGroupStatus::PROCESSING,
   targeting: Models::Shared::PropertyAdsGroupTargeting.new,
-  updated_at: DateTime.iso8601('2022-01-20T22:39:16.886Z')
+  updated_at: DateTime.iso8601('2022-01-21T07:56:30.531Z')
 ), connection_id: '<id>')
 
 unless res.ads_group.nil?
@@ -353,11 +355,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.ads.create_ads_insertionorder(ads_insertionorder: Models::Shared::AdsInsertionorder.new(
   created_at: DateTime.iso8601('2021-04-10T06:57:36.611Z'),
-  id: 'fdd99c3c-333f-4266-9597-e91491cb6128',
+  id: '32888e44-bb3a-425c-a56d-154fd39dd3e6',
   metadata: [],
   name: 'Kunde, Smith and Reinger',
   status: Models::Shared::AdsInsertionorderStatus::UNSPECIFIED,
-  updated_at: DateTime.iso8601('2021-04-29T00:36:12.903Z')
+  updated_at: DateTime.iso8601('2021-04-29T00:51:35.288Z')
 ), connection_id: '<id>')
 
 unless res.ads_insertionorder.nil?
@@ -405,13 +407,13 @@ res = s.ads.create_ads_organization(ads_organization: Models::Shared::AdsOrganiz
   account_number: 'LQUJx8zQBW',
   created_at: DateTime.iso8601('2020-07-23T21:47:11.440Z'),
   currency: 'USD',
-  id: 'ef64a1a6-7aec-4146-85c3-99b95522267d',
+  id: '400c7522-a224-45c0-89e1-003b801cddc2',
   managers: [],
   metadata: [],
   name: 'Ankunding Inc',
   status: Models::Shared::AdsOrganizationStatus::PROCESSING,
   timezone: 'Europe/Chisinau',
-  updated_at: DateTime.iso8601('2026-04-18T00:05:50.649Z')
+  updated_at: DateTime.iso8601('2026-04-19T01:29:47.147Z')
 ), connection_id: '<id>')
 
 unless res.ads_organization.nil?
@@ -690,6 +692,49 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::GetAdsInsertionorderResponse)](../../models/operations/getadsinsertionorderresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## get_ads_inventory
+
+Retrieves a single AdsInventory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getAdsInventory" method="get" path="/ads/{connection_id}/inventory/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.ads.get_ads_inventory(connection_id: '<id>', id: '<id>')
+
+unless res.ads_inventory.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Inventory                                                                                                                              |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetAdsInventoryQueryParamFields](../../models/operations/getadsinventoryqueryparamfields.md)>                      | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetAdsInventoryResponse)](../../models/operations/getadsinventoryresponse.md)**
 
 ### Errors
 
@@ -1090,6 +1135,50 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## list_ads_inventories
+
+Returns a list of AdsInventories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listAdsInventories" method="get" path="/ads/{connection_id}/inventory" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+
+req = Models::Operations::ListAdsInventoriesRequest.new(
+  connection_id: '<id>'
+)
+res = s.ads.list_ads_inventories(request: req)
+
+unless res.ads_inventories.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `request`                                                                                             | [Models::Operations::ListAdsInventoriesRequest](../../models/operations/listadsinventoriesrequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+
+### Response
+
+**[T.nilable(Models::Operations::ListAdsInventoriesResponse)](../../models/operations/listadsinventoriesresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## list_ads_organizations
 
 Returns a list of AdsOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -1292,11 +1381,11 @@ req = Models::Operations::PatchAdsAdRequest.new(
     creative_asset_url: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
     description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
     final_url: 'https://improbable-sanity.com',
-    id: '32cb222f-bc02-44b0-9396-8c9193a7b458',
+    id: '23cd6787-6c72-487d-8e81-08caeffac4c9',
     metadata: [],
     name: 'Hermiston Group',
     status: Models::Shared::AdsAdStatus::ARCHIVED,
-    updated_at: DateTime.iso8601('2024-06-27T11:30:18.155Z')
+    updated_at: DateTime.iso8601('2024-06-27T22:53:28.623Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1350,18 +1439,18 @@ req = Models::Operations::PatchAdsCampaignRequest.new(
     created_at: DateTime.iso8601('2022-05-21T08:51:41.868Z'),
     currency: 'USD',
     effective_status: Models::Shared::EffectiveStatus::NOT_ELIGIBLE,
-    end_at: DateTime.iso8601('2025-06-15T23:06:35.201Z'),
-    id: 'aa86d2cc-33bd-4534-92da-577450514bbb',
+    end_at: DateTime.iso8601('2025-06-16T18:15:25.213Z'),
+    id: 'dbc5dfa3-192a-4a0d-b38a-a4f1399bf015',
     labels: [
       'comedo',
     ],
     metadata: [],
     name: 'Emard Inc',
-    start_at: DateTime.iso8601('2022-07-22T06:41:18.783Z'),
+    start_at: DateTime.iso8601('2022-07-22T07:44:43.565Z'),
     status: Models::Shared::AdsCampaignStatus::PROCESSING_FAILED,
     targeting: Models::Shared::PropertyAdsCampaignTargeting.new,
     total_spend_amount: 2349.8_642_875_347_286,
-    updated_at: DateTime.iso8601('2026-01-19T11:28:22.881Z')
+    updated_at: DateTime.iso8601('2026-01-20T10:20:00.765Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1410,7 +1499,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAdsCreativeRequest.new(
   ads_creative: Models::Shared::AdsCreative.new(
     created_at: DateTime.iso8601('2020-02-17T11:24:51.093Z'),
-    id: 'ddbb87b8-4cb9-47bb-a607-9f0a53e5ffc6',
+    id: 'c3691aaf-dbba-4e25-acc6-51397ee26c22',
     labels: [
       'coma',
       'accedo',
@@ -1419,7 +1508,7 @@ req = Models::Operations::PatchAdsCreativeRequest.new(
     metadata: [],
     name: 'Brekke, Bradtke and Robel',
     status: Models::Shared::AdsCreativeStatus::PAUSED,
-    updated_at: DateTime.iso8601('2021-07-02T05:03:14.463Z')
+    updated_at: DateTime.iso8601('2021-07-02T10:44:18.914Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1473,15 +1562,15 @@ req = Models::Operations::PatchAdsGroupRequest.new(
     created_at: DateTime.iso8601('2019-08-29T17:59:41.045Z'),
     currency: 'USD',
     effective_status: Models::Shared::AdsGroupEffectiveStatus::PAUSED,
-    end_at: DateTime.iso8601('2026-07-15T22:14:35.677Z'),
-    id: 'ccd589e9-a6fe-4dbb-99e7-a1f5ab55b06e',
+    end_at: DateTime.iso8601('2026-07-17T00:54:04.346Z'),
+    id: 'efa59fab-fdc1-417c-97c6-721485b0f4f8',
     language_locale: 'fr-FR',
     metadata: [],
     name: 'Stark - Baumbach',
-    start_at: DateTime.iso8601('2026-01-28T17:57:54.053Z'),
+    start_at: DateTime.iso8601('2026-01-29T18:50:18.078Z'),
     status: Models::Shared::AdsGroupStatus::PROCESSING,
     targeting: Models::Shared::PropertyAdsGroupTargeting.new,
-    updated_at: DateTime.iso8601('2022-01-20T22:39:16.924Z')
+    updated_at: DateTime.iso8601('2022-01-21T07:56:30.563Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1530,11 +1619,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAdsInsertionorderRequest.new(
   ads_insertionorder: Models::Shared::AdsInsertionorder.new(
     created_at: DateTime.iso8601('2021-04-10T06:57:36.611Z'),
-    id: '70548489-f590-4496-84c2-131ccb2d9c4a',
+    id: '65d517a7-a6cf-45d1-8a68-c2352ec3bff4',
     metadata: [],
     name: 'Kunde, Smith and Reinger',
     status: Models::Shared::AdsInsertionorderStatus::UNSPECIFIED,
-    updated_at: DateTime.iso8601('2021-04-29T00:36:12.904Z')
+    updated_at: DateTime.iso8601('2021-04-29T00:51:35.289Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1585,13 +1674,13 @@ req = Models::Operations::PatchAdsOrganizationRequest.new(
     account_number: 'LQUJx8zQBW',
     created_at: DateTime.iso8601('2020-07-23T21:47:11.440Z'),
     currency: 'USD',
-    id: '19c93a87-2f77-456b-9069-7df759a9d2b2',
+    id: 'ccea0c13-dae7-4eee-879b-e493dedcb4f8',
     managers: [],
     metadata: [],
     name: 'Ankunding Inc',
     status: Models::Shared::AdsOrganizationStatus::PROCESSING,
     timezone: 'Europe/Chisinau',
-    updated_at: DateTime.iso8601('2026-04-18T00:05:50.663Z')
+    updated_at: DateTime.iso8601('2026-04-19T01:29:47.157Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1892,11 +1981,11 @@ req = Models::Operations::UpdateAdsAdRequest.new(
     creative_asset_url: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
     description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
     final_url: 'https://improbable-sanity.com',
-    id: '32cb222f-bc02-44b0-9396-8c9193a7b458',
+    id: '23cd6787-6c72-487d-8e81-08caeffac4c9',
     metadata: [],
     name: 'Hermiston Group',
     status: Models::Shared::AdsAdStatus::ARCHIVED,
-    updated_at: DateTime.iso8601('2024-06-27T11:30:18.155Z')
+    updated_at: DateTime.iso8601('2024-06-27T22:53:28.623Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1950,18 +2039,18 @@ req = Models::Operations::UpdateAdsCampaignRequest.new(
     created_at: DateTime.iso8601('2022-05-21T08:51:41.868Z'),
     currency: 'USD',
     effective_status: Models::Shared::EffectiveStatus::NOT_ELIGIBLE,
-    end_at: DateTime.iso8601('2025-06-15T23:06:35.201Z'),
-    id: 'aa86d2cc-33bd-4534-92da-577450514bbb',
+    end_at: DateTime.iso8601('2025-06-16T18:15:25.213Z'),
+    id: 'dbc5dfa3-192a-4a0d-b38a-a4f1399bf015',
     labels: [
       'comedo',
     ],
     metadata: [],
     name: 'Emard Inc',
-    start_at: DateTime.iso8601('2022-07-22T06:41:18.783Z'),
+    start_at: DateTime.iso8601('2022-07-22T07:44:43.565Z'),
     status: Models::Shared::AdsCampaignStatus::PROCESSING_FAILED,
     targeting: Models::Shared::PropertyAdsCampaignTargeting.new,
     total_spend_amount: 2349.8_642_875_347_286,
-    updated_at: DateTime.iso8601('2026-01-19T11:28:22.881Z')
+    updated_at: DateTime.iso8601('2026-01-20T10:20:00.765Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2010,7 +2099,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAdsCreativeRequest.new(
   ads_creative: Models::Shared::AdsCreative.new(
     created_at: DateTime.iso8601('2020-02-17T11:24:51.093Z'),
-    id: 'ddbb87b8-4cb9-47bb-a607-9f0a53e5ffc6',
+    id: 'c3691aaf-dbba-4e25-acc6-51397ee26c22',
     labels: [
       'coma',
       'accedo',
@@ -2019,7 +2108,7 @@ req = Models::Operations::UpdateAdsCreativeRequest.new(
     metadata: [],
     name: 'Brekke, Bradtke and Robel',
     status: Models::Shared::AdsCreativeStatus::PAUSED,
-    updated_at: DateTime.iso8601('2021-07-02T05:03:14.463Z')
+    updated_at: DateTime.iso8601('2021-07-02T10:44:18.914Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2073,15 +2162,15 @@ req = Models::Operations::UpdateAdsGroupRequest.new(
     created_at: DateTime.iso8601('2019-08-29T17:59:41.045Z'),
     currency: 'USD',
     effective_status: Models::Shared::AdsGroupEffectiveStatus::PAUSED,
-    end_at: DateTime.iso8601('2026-07-15T22:14:35.677Z'),
-    id: 'ccd589e9-a6fe-4dbb-99e7-a1f5ab55b06e',
+    end_at: DateTime.iso8601('2026-07-17T00:54:04.346Z'),
+    id: 'efa59fab-fdc1-417c-97c6-721485b0f4f8',
     language_locale: 'fr-FR',
     metadata: [],
     name: 'Stark - Baumbach',
-    start_at: DateTime.iso8601('2026-01-28T17:57:54.053Z'),
+    start_at: DateTime.iso8601('2026-01-29T18:50:18.078Z'),
     status: Models::Shared::AdsGroupStatus::PROCESSING,
     targeting: Models::Shared::PropertyAdsGroupTargeting.new,
-    updated_at: DateTime.iso8601('2022-01-20T22:39:16.924Z')
+    updated_at: DateTime.iso8601('2022-01-21T07:56:30.563Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2130,11 +2219,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAdsInsertionorderRequest.new(
   ads_insertionorder: Models::Shared::AdsInsertionorder.new(
     created_at: DateTime.iso8601('2021-04-10T06:57:36.611Z'),
-    id: '70548489-f590-4496-84c2-131ccb2d9c4a',
+    id: '65d517a7-a6cf-45d1-8a68-c2352ec3bff4',
     metadata: [],
     name: 'Kunde, Smith and Reinger',
     status: Models::Shared::AdsInsertionorderStatus::UNSPECIFIED,
-    updated_at: DateTime.iso8601('2021-04-29T00:36:12.904Z')
+    updated_at: DateTime.iso8601('2021-04-29T00:51:35.289Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2185,13 +2274,13 @@ req = Models::Operations::UpdateAdsOrganizationRequest.new(
     account_number: 'LQUJx8zQBW',
     created_at: DateTime.iso8601('2020-07-23T21:47:11.440Z'),
     currency: 'USD',
-    id: '19c93a87-2f77-456b-9069-7df759a9d2b2',
+    id: 'ccea0c13-dae7-4eee-879b-e493dedcb4f8',
     managers: [],
     metadata: [],
     name: 'Ankunding Inc',
     status: Models::Shared::AdsOrganizationStatus::PROCESSING,
     timezone: 'Europe/Chisinau',
-    updated_at: DateTime.iso8601('2026-04-18T00:05:50.663Z')
+    updated_at: DateTime.iso8601('2026-04-19T01:29:47.157Z')
   ),
   connection_id: '<id>',
   id: '<id>'

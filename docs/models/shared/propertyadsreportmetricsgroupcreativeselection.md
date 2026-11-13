@@ -20,3 +20,5 @@ custom = PropertyAdsReportMetricsGroupCreativeSelection.deserialize("custom_valu
 | ------------- | ------------- |
 | `OPTIMIZED`   | OPTIMIZED     |
 | `ROUND_ROBIN` | ROUND_ROBIN   |
+| `WEIGHTED`    | WEIGHTED      |
+| `SEQUENTIAL`  | SEQUENTIAL    |

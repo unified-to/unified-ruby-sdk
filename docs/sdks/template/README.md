@@ -36,10 +36,10 @@ res = s.template.create_compute_template(compute_template: Models::Shared::Compu
   dockerfile: "FROM ubuntu:24.04\nRUN apt-get update",
   gpu_count: 2.0,
   gpu_model: Models::Shared::ComputeTemplateGpuModel::NVIDIA_GH200,
-  id: '529b500b-0421-4efd-9869-1d87a85bac90',
+  id: '9116d744-f7c2-43ea-9cb2-c29c1c63c00f',
   image: 'perfumed-molasses/cohibeo:5.2',
   is_public: false,
-  last_used_at: DateTime.iso8601('2026-04-11T05:56:14.649Z'),
+  last_used_at: DateTime.iso8601('2026-04-12T05:26:38.853Z'),
   memory_mb: 8192.0,
   metadata: [],
   name: 'multi-byte-card',
@@ -47,7 +47,7 @@ res = s.template.create_compute_template(compute_template: Models::Shared::Compu
     8080.0,
   ],
   status: Models::Shared::ComputeTemplateStatus::OTHER,
-  updated_at: DateTime.iso8601('2025-02-24T13:31:05.836Z')
+  updated_at: DateTime.iso8601('2025-02-25T04:34:46.970Z')
 ), connection_id: '<id>')
 
 unless res.compute_template.nil?
@@ -274,10 +274,10 @@ req = Models::Operations::PatchComputeTemplateRequest.new(
     dockerfile: "FROM ubuntu:24.04\nRUN apt-get update",
     gpu_count: 2.0,
     gpu_model: Models::Shared::ComputeTemplateGpuModel::NVIDIA_GH200,
-    id: '2a7c0bf7-8e57-479f-a9f8-98c3e1c33efb',
+    id: '549d1233-4a81-49a4-8ebd-b4ecb1f15c4b',
     image: 'perfumed-molasses/cohibeo:5.2',
     is_public: false,
-    last_used_at: DateTime.iso8601('2026-04-11T05:56:14.666Z'),
+    last_used_at: DateTime.iso8601('2026-04-12T05:26:38.864Z'),
     memory_mb: 8192.0,
     metadata: [],
     name: 'multi-byte-card',
@@ -285,7 +285,7 @@ req = Models::Operations::PatchComputeTemplateRequest.new(
       8080.0,
     ],
     status: Models::Shared::ComputeTemplateStatus::OTHER,
-    updated_at: DateTime.iso8601('2025-02-24T13:31:05.846Z')
+    updated_at: DateTime.iso8601('2025-02-25T04:34:46.977Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -380,10 +380,10 @@ req = Models::Operations::UpdateComputeTemplateRequest.new(
     dockerfile: "FROM ubuntu:24.04\nRUN apt-get update",
     gpu_count: 2.0,
     gpu_model: Models::Shared::ComputeTemplateGpuModel::NVIDIA_GH200,
-    id: '2a7c0bf7-8e57-479f-a9f8-98c3e1c33efb',
+    id: '549d1233-4a81-49a4-8ebd-b4ecb1f15c4b',
     image: 'perfumed-molasses/cohibeo:5.2',
     is_public: false,
-    last_used_at: DateTime.iso8601('2026-04-11T05:56:14.666Z'),
+    last_used_at: DateTime.iso8601('2026-04-12T05:26:38.864Z'),
     memory_mb: 8192.0,
     metadata: [],
     name: 'multi-byte-card',
@@ -391,7 +391,7 @@ req = Models::Operations::UpdateComputeTemplateRequest.new(
       8080.0,
     ],
     status: Models::Shared::ComputeTemplateStatus::OTHER,
-    updated_at: DateTime.iso8601('2025-02-24T13:31:05.846Z')
+    updated_at: DateTime.iso8601('2025-02-25T04:34:46.977Z')
   ),
   connection_id: '<id>',
   id: '<id>'
