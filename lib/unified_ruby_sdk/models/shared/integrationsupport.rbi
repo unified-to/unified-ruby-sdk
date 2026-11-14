@@ -104,6 +104,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_invoice_id=(str_); end
   def list_io_id(); end
   def list_io_id=(str_); end
+  def list_issue_id(); end
+  def list_issue_id=(str_); end
   def list_item_id(); end
   def list_item_id=(str_); end
   def list_item_variant_id(); end
@@ -368,6 +370,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def virtual_webhook_invoice_id=(str_); end
   def virtual_webhook_io_id(); end
   def virtual_webhook_io_id=(str_); end
+  def virtual_webhook_issue_id(); end
+  def virtual_webhook_issue_id=(str_); end
   def virtual_webhook_item_id(); end
   def virtual_webhook_item_id=(str_); end
   def virtual_webhook_item_variant_id(); end

@@ -26,6 +26,8 @@ class UnifiedRubySDK::Models::Shared::AdsGroup
   def budget_unit=(str_); end
   def campaign_id(); end
   def campaign_id=(str_); end
+  def conversion_tracking(); end
+  def conversion_tracking=(str_); end
   def cost_type(); end
   def cost_type=(str_); end
   def created_at(); end

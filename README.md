@@ -55,7 +55,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: '5b0bd2f5-4169-4370-bb77-f117196d38ce',
+  id: 'a714e827-c923-44ea-bee0-aca36cdd262e',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -68,7 +68,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-12T18:04:17.224Z')
+  updated_at: DateTime.iso8601('2023-08-13T00:11:49.220Z')
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -105,7 +105,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: '5b0bd2f5-4169-4370-bb77-f117196d38ce',
+  id: 'a714e827-c923-44ea-bee0-aca36cdd262e',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -118,7 +118,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-12T18:04:17.224Z')
+  updated_at: DateTime.iso8601('2023-08-13T00:11:49.220Z')
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -283,6 +283,14 @@ end
 * [update_accounting_taxrate](docs/sdks/accounting/README.md#update_accounting_taxrate) - Update a taxrate
 * [update_accounting_transaction](docs/sdks/accounting/README.md#update_accounting_transaction) - Update a transaction
 * [update_accounting_vendorcredit](docs/sdks/accounting/README.md#update_accounting_vendorcredit) - Update a vendorcredit
+
+### [Action](docs/sdks/action/README.md)
+
+* [create_qms_action](docs/sdks/action/README.md#create_qms_action) - Create an action
+* [get_qms_action](docs/sdks/action/README.md#get_qms_action) - Retrieve an action
+* [list_qms_actions](docs/sdks/action/README.md#list_qms_actions) - List all actions
+* [patch_qms_action](docs/sdks/action/README.md#patch_qms_action) - Update an action
+* [update_qms_action](docs/sdks/action/README.md#update_qms_action) - Update an action
 
 ### [Activation](docs/sdks/activation/README.md)
 
@@ -521,6 +529,14 @@ end
 * [patch_hris_attendance](docs/sdks/attendance/README.md#patch_hris_attendance) - Update an attendance
 * [remove_hris_attendance](docs/sdks/attendance/README.md#remove_hris_attendance) - Remove an attendance
 * [update_hris_attendance](docs/sdks/attendance/README.md#update_hris_attendance) - Update an attendance
+
+### [Audit](docs/sdks/audit/README.md)
+
+* [create_qms_audit](docs/sdks/audit/README.md#create_qms_audit) - Create an audit
+* [get_qms_audit](docs/sdks/audit/README.md#get_qms_audit) - Retrieve an audit
+* [list_qms_audits](docs/sdks/audit/README.md#list_qms_audits) - List all audits
+* [patch_qms_audit](docs/sdks/audit/README.md#patch_qms_audit) - Update an audit
+* [update_qms_audit](docs/sdks/audit/README.md#update_qms_audit) - Update an audit
 
 ### [Auth](docs/sdks/auth/README.md)
 
@@ -1621,6 +1637,14 @@ end
 * [get_social_insight](docs/sdks/insight/README.md#get_social_insight) - Retrieve an insight
 * [list_social_insights](docs/sdks/insight/README.md#list_social_insights) - List all insights
 
+### [Inspection](docs/sdks/inspection/README.md)
+
+* [create_qms_inspection](docs/sdks/inspection/README.md#create_qms_inspection) - Create an inspection
+* [get_qms_inspection](docs/sdks/inspection/README.md#get_qms_inspection) - Retrieve an inspection
+* [list_qms_inspections](docs/sdks/inspection/README.md#list_qms_inspections) - List all inspections
+* [patch_qms_inspection](docs/sdks/inspection/README.md#patch_qms_inspection) - Update an inspection
+* [update_qms_inspection](docs/sdks/inspection/README.md#update_qms_inspection) - Update an inspection
+
 ### [Instance](docs/sdks/instance/README.md)
 
 * [create_compute_instance](docs/sdks/instance/README.md#create_compute_instance) - Create an instance
@@ -1676,8 +1700,13 @@ end
 
 ### [Issue](docs/sdks/issue/README.md)
 
+* [create_qms_issue](docs/sdks/issue/README.md#create_qms_issue) - Create an issue
+* [get_qms_issue](docs/sdks/issue/README.md#get_qms_issue) - Retrieve an issue
 * [get_unified_issue](docs/sdks/issue/README.md#get_unified_issue) - Retrieve support issue
+* [list_qms_issues](docs/sdks/issue/README.md#list_qms_issues) - List all issues
 * [list_unified_issues](docs/sdks/issue/README.md#list_unified_issues) - List support issues
+* [patch_qms_issue](docs/sdks/issue/README.md#patch_qms_issue) - Update an issue
+* [update_qms_issue](docs/sdks/issue/README.md#update_qms_issue) - Update an issue
 
 ### [Item](docs/sdks/item/README.md)
 
@@ -2332,6 +2361,29 @@ end
 
 * [get_accounting_purchasereceipt](docs/sdks/purchasereceipt/README.md#get_accounting_purchasereceipt) - Retrieve a purchasereceipt
 * [list_accounting_purchasereceipts](docs/sdks/purchasereceipt/README.md#list_accounting_purchasereceipts) - List all purchasereceipts
+
+### [Qms](docs/sdks/qms/README.md)
+
+* [create_qms_action](docs/sdks/qms/README.md#create_qms_action) - Create an action
+* [create_qms_audit](docs/sdks/qms/README.md#create_qms_audit) - Create an audit
+* [create_qms_inspection](docs/sdks/qms/README.md#create_qms_inspection) - Create an inspection
+* [create_qms_issue](docs/sdks/qms/README.md#create_qms_issue) - Create an issue
+* [get_qms_action](docs/sdks/qms/README.md#get_qms_action) - Retrieve an action
+* [get_qms_audit](docs/sdks/qms/README.md#get_qms_audit) - Retrieve an audit
+* [get_qms_inspection](docs/sdks/qms/README.md#get_qms_inspection) - Retrieve an inspection
+* [get_qms_issue](docs/sdks/qms/README.md#get_qms_issue) - Retrieve an issue
+* [list_qms_actions](docs/sdks/qms/README.md#list_qms_actions) - List all actions
+* [list_qms_audits](docs/sdks/qms/README.md#list_qms_audits) - List all audits
+* [list_qms_inspections](docs/sdks/qms/README.md#list_qms_inspections) - List all inspections
+* [list_qms_issues](docs/sdks/qms/README.md#list_qms_issues) - List all issues
+* [patch_qms_action](docs/sdks/qms/README.md#patch_qms_action) - Update an action
+* [patch_qms_audit](docs/sdks/qms/README.md#patch_qms_audit) - Update an audit
+* [patch_qms_inspection](docs/sdks/qms/README.md#patch_qms_inspection) - Update an inspection
+* [patch_qms_issue](docs/sdks/qms/README.md#patch_qms_issue) - Update an issue
+* [update_qms_action](docs/sdks/qms/README.md#update_qms_action) - Update an action
+* [update_qms_audit](docs/sdks/qms/README.md#update_qms_audit) - Update an audit
+* [update_qms_inspection](docs/sdks/qms/README.md#update_qms_inspection) - Update an inspection
+* [update_qms_issue](docs/sdks/qms/README.md#update_qms_issue) - Update an issue
 
 ### [Query](docs/sdks/query/README.md)
 
@@ -3079,7 +3131,7 @@ begin
       currency: 'CAD',
       customer_defined_code: '6170',
       description: 'Voluptatibus valde spoliatio.',
-      id: '5b0bd2f5-4169-4370-bb77-f117196d38ce',
+      id: 'a714e827-c923-44ea-bee0-aca36cdd262e',
       is_payable: false,
       metadata: [],
       name: 'Auto Loan Account',
@@ -3092,7 +3144,7 @@ begin
         ),
       ],
       type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-      updated_at: DateTime.iso8601('2023-08-12T18:04:17.224Z')
+      updated_at: DateTime.iso8601('2023-08-13T00:11:49.220Z')
     ), connection_id: '<id>')
 
     unless res.accounting_account.nil?
@@ -3137,7 +3189,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: '5b0bd2f5-4169-4370-bb77-f117196d38ce',
+  id: 'a714e827-c923-44ea-bee0-aca36cdd262e',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -3150,7 +3202,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-12T18:04:17.224Z')
+  updated_at: DateTime.iso8601('2023-08-13T00:11:49.220Z')
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -3178,7 +3230,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: '5b0bd2f5-4169-4370-bb77-f117196d38ce',
+  id: 'a714e827-c923-44ea-bee0-aca36cdd262e',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -3191,7 +3243,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-12T18:04:17.224Z')
+  updated_at: DateTime.iso8601('2023-08-13T00:11:49.220Z')
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?

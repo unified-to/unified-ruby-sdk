@@ -35,7 +35,7 @@ res = s.customer.create_ticketing_customer(ticketing_customer: Models::Shared::T
       type: Models::Shared::TicketingEmailType::HOME
     ),
   ],
-  id: 'f1eb9d86-ad30-4815-b6cf-150440a6d288',
+  id: '88ba6423-b53c-4387-9711-6d89bae565fe',
   metadata: [],
   name: 'Christian Windler',
   tags: [
@@ -56,7 +56,7 @@ res = s.customer.create_ticketing_customer(ticketing_customer: Models::Shared::T
       type: Models::Shared::TicketingTelephoneType::MOBILE
     ),
   ],
-  updated_at: DateTime.iso8601('2026-06-25T12:42:47.428Z')
+  updated_at: DateTime.iso8601('2026-06-26T11:10:26.249Z')
 ), connection_id: '<id>')
 
 unless res.ticketing_customer.nil?
@@ -197,7 +197,7 @@ req = Models::Operations::PatchTicketingCustomerRequest.new(
         type: Models::Shared::TicketingEmailType::HOME
       ),
     ],
-    id: '56c7e167-7390-493b-a452-c8abcbb8613d',
+    id: '6e9c389c-8522-410f-85d1-53065d76b81a',
     metadata: [],
     name: 'Christian Windler',
     tags: [
@@ -218,7 +218,7 @@ req = Models::Operations::PatchTicketingCustomerRequest.new(
         type: Models::Shared::TicketingTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2026-06-25T12:42:47.435Z')
+    updated_at: DateTime.iso8601('2026-06-26T11:10:26.262Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -314,7 +314,7 @@ req = Models::Operations::UpdateTicketingCustomerRequest.new(
         type: Models::Shared::TicketingEmailType::HOME
       ),
     ],
-    id: '56c7e167-7390-493b-a452-c8abcbb8613d',
+    id: '6e9c389c-8522-410f-85d1-53065d76b81a',
     metadata: [],
     name: 'Christian Windler',
     tags: [
@@ -335,7 +335,7 @@ req = Models::Operations::UpdateTicketingCustomerRequest.new(
         type: Models::Shared::TicketingTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2026-06-25T12:42:47.435Z')
+    updated_at: DateTime.iso8601('2026-06-26T11:10:26.262Z')
   ),
   connection_id: '<id>',
   id: '<id>'

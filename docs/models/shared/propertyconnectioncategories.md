@@ -56,3 +56,4 @@ custom = PropertyConnectionCategories.deserialize("custom_value")
 | `HEALTHCARE`   | healthcare     |
 | `PROPERTY`     | property       |
 | `PLM`          | plm            |
+| `QMS`          | qms            |

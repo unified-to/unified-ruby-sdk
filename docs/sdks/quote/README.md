@@ -77,9 +77,9 @@ res = s.quote.create_property_quote(property_quote: Models::Shared::PropertyQuot
   created_at: DateTime.iso8601('2020-12-18T19:14:11.415Z'),
   currency: 'USD',
   deposit_amount: 594.54,
-  end_at: DateTime.iso8601('2026-11-27'),
+  end_at: DateTime.iso8601('2026-11-28'),
   guests: 2.0,
-  id: 'e002e936-90f6-4524-b0f2-cda9529c546d',
+  id: '50a3edaa-66fc-4320-bb00-c4c42d22ce6d',
   line_items: [
     Models::Shared::PropertyLineitem.new(
       amount: 1665.0,
@@ -101,7 +101,7 @@ res = s.quote.create_property_quote(property_quote: Models::Shared::PropertyQuot
       type: Models::Shared::PropertyLineitemType::TAX
     ),
   ],
-  start_at: DateTime.iso8601('2026-11-18'),
+  start_at: DateTime.iso8601('2026-11-19'),
   total_amount: 1981.8
 ), connection_id: '<id>')
 

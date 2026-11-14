@@ -50,6 +50,7 @@ module UnifiedRubySDK
           HEALTHCARE = new('healthcare')
           PROPERTY = new('property')
           PLM = new('plm')
+          QMS = new('qms')
         end
       end
     end

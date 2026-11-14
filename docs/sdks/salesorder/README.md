@@ -38,13 +38,13 @@ res = s.salesorder.create_accounting_salesorder(accounting_salesorder: Models::S
     region_code: 'MO'
   ),
   category_ids: [],
-  closed_at: DateTime.iso8601('2023-03-31T06:14:36.107Z'),
+  closed_at: DateTime.iso8601('2023-03-31T12:14:00.733Z'),
   created_at: DateTime.iso8601('2022-01-17T16:11:50.310Z'),
   currency: 'USD',
   discount_amount: 0.0,
   fees: [],
   fulfillment_type: Models::Shared::FulfillmentType::OTHER,
-  id: 'b05757db-4a71-465f-8156-4650cee854e5',
+  id: 'a566afcf-7ea6-42ce-97f3-c2d3e1e353a4',
   lineitems: [],
   metadata: [],
   order_number: '832663',
@@ -67,7 +67,7 @@ res = s.salesorder.create_accounting_salesorder(accounting_salesorder: Models::S
   tax_amount: 0.0,
   tip_amount: 0.0,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2023-03-31T06:14:36.107Z')
+  updated_at: DateTime.iso8601('2023-03-31T12:14:00.733Z')
 ), connection_id: '<id>')
 
 unless res.accounting_salesorder.nil?
@@ -211,13 +211,13 @@ req = Models::Operations::PatchAccountingSalesorderRequest.new(
       region_code: 'MO'
     ),
     category_ids: [],
-    closed_at: DateTime.iso8601('2023-03-31T06:14:36.118Z'),
+    closed_at: DateTime.iso8601('2023-03-31T12:14:00.745Z'),
     created_at: DateTime.iso8601('2022-01-17T16:11:50.310Z'),
     currency: 'USD',
     discount_amount: 0.0,
     fees: [],
     fulfillment_type: Models::Shared::FulfillmentType::OTHER,
-    id: '8c47e407-a49c-47c6-bee3-6c841d87ebf6',
+    id: 'f9a42e7a-730b-4a83-8e08-e55e57b4f0f3',
     lineitems: [],
     metadata: [],
     order_number: '832663',
@@ -240,7 +240,7 @@ req = Models::Operations::PatchAccountingSalesorderRequest.new(
     tax_amount: 0.0,
     tip_amount: 0.0,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-03-31T06:14:36.118Z')
+    updated_at: DateTime.iso8601('2023-03-31T12:14:00.745Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -339,13 +339,13 @@ req = Models::Operations::UpdateAccountingSalesorderRequest.new(
       region_code: 'MO'
     ),
     category_ids: [],
-    closed_at: DateTime.iso8601('2023-03-31T06:14:36.118Z'),
+    closed_at: DateTime.iso8601('2023-03-31T12:14:00.745Z'),
     created_at: DateTime.iso8601('2022-01-17T16:11:50.310Z'),
     currency: 'USD',
     discount_amount: 0.0,
     fees: [],
     fulfillment_type: Models::Shared::FulfillmentType::OTHER,
-    id: '8c47e407-a49c-47c6-bee3-6c841d87ebf6',
+    id: 'f9a42e7a-730b-4a83-8e08-e55e57b4f0f3',
     lineitems: [],
     metadata: [],
     order_number: '832663',
@@ -368,7 +368,7 @@ req = Models::Operations::UpdateAccountingSalesorderRequest.new(
     tax_amount: 0.0,
     tip_amount: 0.0,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-03-31T06:14:36.118Z')
+    updated_at: DateTime.iso8601('2023-03-31T12:14:00.745Z')
   ),
   connection_id: '<id>',
   id: '<id>'

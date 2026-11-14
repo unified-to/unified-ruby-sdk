@@ -48,6 +48,7 @@ module UnifiedRubySDK
           COST_TYPE = new('cost_type')
           DELIVERY_GOAL = new('delivery_goal')
           CREATIVE_SIZES = new('creative_sizes')
+          CONVERSION_TRACKING = new('conversion_tracking')
         end
       end
     end

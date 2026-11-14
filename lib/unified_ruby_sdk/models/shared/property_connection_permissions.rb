@@ -458,6 +458,14 @@ module UnifiedRubySDK
           PLM_CHANGE_WRITE = new('plm_change_write')
           PLM_CATEGORY_READ = new('plm_category_read')
           PLM_CATEGORY_WRITE = new('plm_category_write')
+          QMS_ISSUE_READ = new('qms_issue_read')
+          QMS_ISSUE_WRITE = new('qms_issue_write')
+          QMS_ACTION_READ = new('qms_action_read')
+          QMS_ACTION_WRITE = new('qms_action_write')
+          QMS_INSPECTION_READ = new('qms_inspection_read')
+          QMS_INSPECTION_WRITE = new('qms_inspection_write')
+          QMS_AUDIT_READ = new('qms_audit_read')
+          QMS_AUDIT_WRITE = new('qms_audit_write')
         end
         open!
       end

@@ -762,6 +762,22 @@ class UnifiedRubySDK::Models::Shared::PropertyWorkspaceIntegrationPatchOverriden
   def property_review_write=(str_); end
   def property_unittype_read(); end
   def property_unittype_read=(str_); end
+  def qms_action_read(); end
+  def qms_action_read=(str_); end
+  def qms_action_write(); end
+  def qms_action_write=(str_); end
+  def qms_audit_read(); end
+  def qms_audit_read=(str_); end
+  def qms_audit_write(); end
+  def qms_audit_write=(str_); end
+  def qms_inspection_read(); end
+  def qms_inspection_read=(str_); end
+  def qms_inspection_write(); end
+  def qms_inspection_write=(str_); end
+  def qms_issue_read(); end
+  def qms_issue_read=(str_); end
+  def qms_issue_write(); end
+  def qms_issue_write=(str_); end
   def repo_branch_read(); end
   def repo_branch_read=(str_); end
   def repo_branch_write(); end

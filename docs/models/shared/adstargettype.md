@@ -36,3 +36,6 @@ custom = AdsTargetType.deserialize("custom_value")
 | `BROWSER`          | BROWSER            |
 | `OPERATING_SYSTEM` | OPERATING_SYSTEM   |
 | `DEVICE_CATEGORY`  | DEVICE_CATEGORY    |
+| `EXCHANGE`         | EXCHANGE           |
+| `DEAL`             | DEAL               |
+| `DEAL_GROUP`       | DEAL_GROUP         |

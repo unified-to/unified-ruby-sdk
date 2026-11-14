@@ -35,14 +35,14 @@ res = s.deduction.create_hris_deduction(hris_deduction: Models::Shared::HrisDedu
   employer_type: Models::Shared::EmployerType::PERCENTAGE,
   frequency: Models::Shared::HrisDeductionFrequency::ONE_TIME,
   garnishment_type: Models::Shared::GarnishmentType::CHILD_SUPPORT,
-  id: '7ee44a6a-512e-4773-8a62-bbfce1e68271',
+  id: 'ad11935e-78ad-42e2-a958-177f7080e8ce',
   is_active: true,
   max_amount: 21_794.0,
   metadata: [],
   notes: 'Carmen desidero.',
-  start_at: DateTime.iso8601('2025-04-01T20:09:32.763Z'),
+  start_at: DateTime.iso8601('2025-04-02T14:30:20.359Z'),
   type: Models::Shared::HrisDeductionType::FIXED,
-  updated_at: DateTime.iso8601('2024-04-05T10:45:43.157Z')
+  updated_at: DateTime.iso8601('2024-04-06T01:35:13.106Z')
 ), connection_id: '<id>')
 
 unless res.hris_deduction.nil?
@@ -183,14 +183,14 @@ req = Models::Operations::PatchHrisDeductionRequest.new(
     employer_type: Models::Shared::EmployerType::PERCENTAGE,
     frequency: Models::Shared::HrisDeductionFrequency::ONE_TIME,
     garnishment_type: Models::Shared::GarnishmentType::CHILD_SUPPORT,
-    id: '4a6bae66-3518-4b16-b529-ca478b844455',
+    id: '5691a910-d4af-400d-91bd-6c4f8cc6a037',
     is_active: true,
     max_amount: 21_794.0,
     metadata: [],
     notes: 'Carmen desidero.',
-    start_at: DateTime.iso8601('2025-04-01T20:09:32.772Z'),
+    start_at: DateTime.iso8601('2025-04-02T14:30:20.368Z'),
     type: Models::Shared::HrisDeductionType::FIXED,
-    updated_at: DateTime.iso8601('2024-04-05T10:45:43.164Z')
+    updated_at: DateTime.iso8601('2024-04-06T01:35:13.113Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -286,14 +286,14 @@ req = Models::Operations::UpdateHrisDeductionRequest.new(
     employer_type: Models::Shared::EmployerType::PERCENTAGE,
     frequency: Models::Shared::HrisDeductionFrequency::ONE_TIME,
     garnishment_type: Models::Shared::GarnishmentType::CHILD_SUPPORT,
-    id: '4a6bae66-3518-4b16-b529-ca478b844455',
+    id: '5691a910-d4af-400d-91bd-6c4f8cc6a037',
     is_active: true,
     max_amount: 21_794.0,
     metadata: [],
     notes: 'Carmen desidero.',
-    start_at: DateTime.iso8601('2025-04-01T20:09:32.772Z'),
+    start_at: DateTime.iso8601('2025-04-02T14:30:20.368Z'),
     type: Models::Shared::HrisDeductionType::FIXED,
-    updated_at: DateTime.iso8601('2024-04-05T10:45:43.164Z')
+    updated_at: DateTime.iso8601('2024-04-06T01:35:13.113Z')
   ),
   connection_id: '<id>',
   id: '<id>'

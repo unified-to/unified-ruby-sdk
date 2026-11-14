@@ -382,6 +382,14 @@
 | `property_review_read`                 | *T.nilable(::String)*                  | :heavy_minus_sign:                     | N/A                                    |
 | `property_review_write`                | *T.nilable(::String)*                  | :heavy_minus_sign:                     | N/A                                    |
 | `property_unittype_read`               | *T.nilable(::String)*                  | :heavy_minus_sign:                     | N/A                                    |
+| `qms_action_read`                      | *T.nilable(::String)*                  | :heavy_minus_sign:                     | N/A                                    |
+| `qms_action_write`                     | *T.nilable(::String)*                  | :heavy_minus_sign:                     | N/A                                    |
+| `qms_audit_read`                       | *T.nilable(::String)*                  | :heavy_minus_sign:                     | N/A                                    |
+| `qms_audit_write`                      | *T.nilable(::String)*                  | :heavy_minus_sign:                     | N/A                                    |
+| `qms_inspection_read`                  | *T.nilable(::String)*                  | :heavy_minus_sign:                     | N/A                                    |
+| `qms_inspection_write`                 | *T.nilable(::String)*                  | :heavy_minus_sign:                     | N/A                                    |
+| `qms_issue_read`                       | *T.nilable(::String)*                  | :heavy_minus_sign:                     | N/A                                    |
+| `qms_issue_write`                      | *T.nilable(::String)*                  | :heavy_minus_sign:                     | N/A                                    |
 | `repo_branch_read`                     | *T.nilable(::String)*                  | :heavy_minus_sign:                     | N/A                                    |
 | `repo_branch_write`                    | *T.nilable(::String)*                  | :heavy_minus_sign:                     | N/A                                    |
 | `repo_commit_read`                     | *T.nilable(::String)*                  | :heavy_minus_sign:                     | N/A                                    |

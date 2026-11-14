@@ -36,12 +36,12 @@ res = s.bankfeedaccount.create_accounting_bankfeedaccount(accounting_bankfeedacc
   created_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
   currency: 'AUD',
   feed_start_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
-  id: '34f161bc-57b2-494a-8040-3b049fa9634a',
+  id: 'c9110239-ef3a-4097-a638-990590f06bb5',
   metadata: [],
   name: 'Corwin, Donnelly and Connelly Checking',
   routing_number: '694667752',
   status: Models::Shared::AccountingBankfeedaccountStatus::ACTIVE,
-  updated_at: DateTime.iso8601('2024-05-02T09:37:34.213Z')
+  updated_at: DateTime.iso8601('2024-05-02T18:36:02.833Z')
 ), connection_id: '<id>')
 
 unless res.accounting_bankfeedaccount.nil?
@@ -183,12 +183,12 @@ req = Models::Operations::PatchAccountingBankfeedaccountRequest.new(
     created_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
     currency: 'AUD',
     feed_start_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
-    id: 'b86515b7-6a6c-4ee1-bff9-19491b9cfe55',
+    id: 'b4e9d267-7c25-4d1d-a183-443011c2f2b7',
     metadata: [],
     name: 'Corwin, Donnelly and Connelly Checking',
     routing_number: '694667752',
     status: Models::Shared::AccountingBankfeedaccountStatus::ACTIVE,
-    updated_at: DateTime.iso8601('2024-05-02T09:37:34.218Z')
+    updated_at: DateTime.iso8601('2024-05-02T18:36:02.837Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -285,12 +285,12 @@ req = Models::Operations::UpdateAccountingBankfeedaccountRequest.new(
     created_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
     currency: 'AUD',
     feed_start_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
-    id: 'b86515b7-6a6c-4ee1-bff9-19491b9cfe55',
+    id: 'b4e9d267-7c25-4d1d-a183-443011c2f2b7',
     metadata: [],
     name: 'Corwin, Donnelly and Connelly Checking',
     routing_number: '694667752',
     status: Models::Shared::AccountingBankfeedaccountStatus::ACTIVE,
-    updated_at: DateTime.iso8601('2024-05-02T09:37:34.218Z')
+    updated_at: DateTime.iso8601('2024-05-02T18:36:02.837Z')
   ),
   connection_id: '<id>',
   id: '<id>'

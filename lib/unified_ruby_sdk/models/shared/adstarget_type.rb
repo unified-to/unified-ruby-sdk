@@ -29,6 +29,9 @@ module UnifiedRubySDK
           BROWSER = new('BROWSER')
           OPERATING_SYSTEM = new('OPERATING_SYSTEM')
           DEVICE_CATEGORY = new('DEVICE_CATEGORY')
+          EXCHANGE = new('EXCHANGE')
+          DEAL = new('DEAL')
+          DEAL_GROUP = new('DEAL_GROUP')
         end
         open!
       end

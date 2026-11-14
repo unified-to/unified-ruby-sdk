@@ -56,3 +56,4 @@ custom = PropertyWorkspaceIntegrationCategories.deserialize("custom_value")
 | `HEALTHCARE`   | healthcare     |
 | `PROPERTY`     | property       |
 | `PLM`          | plm            |
+| `QMS`          | qms            |

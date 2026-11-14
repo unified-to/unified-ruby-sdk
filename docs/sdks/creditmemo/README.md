@@ -35,7 +35,7 @@ res = s.creditmemo.create_accounting_creditmemo(accounting_creditmemo: Models::S
   creditmemo_number: 'CM-99537',
   currency: 'AUD',
   discount_amount: 0.0,
-  id: '08bed322-1175-4f11-81e8-092403c2326c',
+  id: '81e5a6ac-cfff-4c9b-b6aa-846a7bbc4e0f',
   lineitems: [],
   metadata: [],
   notes: 'Hic vorax dedecor amo adfero torqueo quas victoria.',
@@ -44,7 +44,7 @@ res = s.creditmemo.create_accounting_creditmemo(accounting_creditmemo: Models::S
   status: Models::Shared::AccountingCreditmemoStatus::AUTHORIZED,
   tax_amount: 0.0,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2025-09-26T01:55:18.371Z')
+  updated_at: DateTime.iso8601('2025-09-26T17:21:58.216Z')
 ), connection_id: '<id>')
 
 unless res.accounting_creditmemo.nil?
@@ -185,7 +185,7 @@ req = Models::Operations::PatchAccountingCreditmemoRequest.new(
     creditmemo_number: 'CM-99537',
     currency: 'AUD',
     discount_amount: 0.0,
-    id: '71c1a712-9643-413f-aed5-cbd1a10c2b89',
+    id: '56af1aff-4230-4bb5-b47a-9861af68a93d',
     lineitems: [],
     metadata: [],
     notes: 'Hic vorax dedecor amo adfero torqueo quas victoria.',
@@ -194,7 +194,7 @@ req = Models::Operations::PatchAccountingCreditmemoRequest.new(
     status: Models::Shared::AccountingCreditmemoStatus::AUTHORIZED,
     tax_amount: 0.0,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2025-09-26T01:55:18.393Z')
+    updated_at: DateTime.iso8601('2025-09-26T17:21:58.234Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -290,7 +290,7 @@ req = Models::Operations::UpdateAccountingCreditmemoRequest.new(
     creditmemo_number: 'CM-99537',
     currency: 'AUD',
     discount_amount: 0.0,
-    id: '71c1a712-9643-413f-aed5-cbd1a10c2b89',
+    id: '56af1aff-4230-4bb5-b47a-9861af68a93d',
     lineitems: [],
     metadata: [],
     notes: 'Hic vorax dedecor amo adfero torqueo quas victoria.',
@@ -299,7 +299,7 @@ req = Models::Operations::UpdateAccountingCreditmemoRequest.new(
     status: Models::Shared::AccountingCreditmemoStatus::AUTHORIZED,
     tax_amount: 0.0,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2025-09-26T01:55:18.393Z')
+    updated_at: DateTime.iso8601('2025-09-26T17:21:58.234Z')
   ),
   connection_id: '<id>',
   id: '<id>'

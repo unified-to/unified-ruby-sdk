@@ -252,6 +252,10 @@ module UnifiedRubySDK
           PLM_DOCUMENT = new('plm_document')
           PLM_CHANGE = new('plm_change')
           PLM_CATEGORY = new('plm_category')
+          QMS_ISSUE = new('qms_issue')
+          QMS_ACTION = new('qms_action')
+          QMS_INSPECTION = new('qms_inspection')
+          QMS_AUDIT = new('qms_audit')
         end
         open!
       end

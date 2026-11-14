@@ -57,15 +57,15 @@ res = s.observation.create_healthcare_observation(healthcare_observation: Models
     ),
   ],
   created_at: DateTime.iso8601('2022-12-06T21:34:04.293Z'),
-  id: '3910af59-9e13-4286-9b87-959ce91fbf28',
+  id: '326ae92d-324f-4bf6-b623-428d485e6340',
   interpretation: Models::Shared::Interpretation::CRITICAL_HIGH,
-  issued_at: DateTime.iso8601('2025-05-25T20:44:03.826Z'),
+  issued_at: DateTime.iso8601('2025-05-26T11:50:31.205Z'),
   metadata: [],
   name: 'Blood pressure panel',
-  observed_at: DateTime.iso8601('2025-02-01T18:47:25.669Z'),
+  observed_at: DateTime.iso8601('2025-02-02T08:00:06.837Z'),
   status: Models::Shared::HealthcareObservationStatus::CORRECTED,
   type: Models::Shared::HealthcareObservationType::VITAL_SIGNS,
-  updated_at: DateTime.iso8601('2026-04-12T20:23:37.006Z')
+  updated_at: DateTime.iso8601('2026-04-13T16:54:01.277Z')
 ), connection_id: '<id>')
 
 unless res.healthcare_observation.nil?

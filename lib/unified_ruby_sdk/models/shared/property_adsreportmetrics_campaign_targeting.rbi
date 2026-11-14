@@ -32,4 +32,6 @@ class UnifiedRubySDK::Models::Shared::PropertyAdsReportMetricsCampaignTargeting
   def placement=(str_); end
   def schedule(); end
   def schedule=(str_); end
+  def supply(); end
+  def supply=(str_); end
 end

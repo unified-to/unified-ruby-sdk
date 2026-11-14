@@ -1,0 +1,25 @@
+# QmsAuditStatus
+
+Normalized status of a quality record
+
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = QmsAuditStatus::OPEN
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = QmsAuditStatus.deserialize("custom_value")
+```
+
+
+## Values
+
+| Name          | Value         |
+| ------------- | ------------- |
+| `OPEN`        | OPEN          |
+| `IN_PROGRESS` | IN_PROGRESS   |
+| `IN_REVIEW`   | IN_REVIEW     |
+| `CLOSED`      | CLOSED        |
+| `CANCELLED`   | CANCELLED     |
