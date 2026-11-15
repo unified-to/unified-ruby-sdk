@@ -31,13 +31,13 @@ res = s.invoice.create_accounting_invoice(accounting_invoice: Models::Shared::Ac
   attachments: [
     Models::Shared::AccountingAttachment.new(
       download_url: 'https://glossy-markup.net/',
-      id: 'fa24ba36-7219-48ee-b3ab-a2ca99272968',
+      id: '7a64a16e-40e0-4ae6-b9c0-880e88f4c22c',
       mime_type: 'application/pdf',
       name: 'INV-77705.pdf'
     ),
     Models::Shared::AccountingAttachment.new(
       download_url: 'https://earnest-giggle.net',
-      id: '59a53a64-4882-474a-b65e-cdc53e44670f',
+      id: 'd974dd9c-e128-4e7a-a05d-d74c83495a6d',
       mime_type: 'application/pdf',
       name: 'INV-77705-1.pdf'
     ),
@@ -49,7 +49,7 @@ res = s.invoice.create_accounting_invoice(accounting_invoice: Models::Shared::Ac
   discount_amount: 0.0,
   due_at: DateTime.iso8601('2022-12-07T14:17:29.587Z'),
   extended_notes: [],
-  id: '31d264cf-a9d1-493f-9503-877be5bf3327',
+  id: '08be2266-dd30-4433-b509-8358a5653435',
   invoice_number: 'INV-77705',
   is_inclusive_of_tax: false,
   lineitems: [],
@@ -67,7 +67,7 @@ res = s.invoice.create_accounting_invoice(accounting_invoice: Models::Shared::Ac
   term: Models::Shared::AccountingInvoiceTerm::NET_25,
   total_amount: 0.0,
   type: Models::Shared::AccountingInvoiceType::INVOICE,
-  updated_at: DateTime.iso8601('2026-05-14T13:23:03.777Z'),
+  updated_at: DateTime.iso8601('2026-05-14T11:31:42.972Z'),
   url: 'https://gifted-yarmulke.info/invoices/INV-77705'
 ), connection_id: '<id>')
 
@@ -205,13 +205,13 @@ req = Models::Operations::PatchAccountingInvoiceRequest.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://glossy-markup.net/',
-        id: 'e27afb7a-5596-4e1c-a57d-5507cca0fa3d',
+        id: '358133b6-7d3a-4981-bb10-295bab2b49ae',
         mime_type: 'application/pdf',
         name: 'INV-77705.pdf'
       ),
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://earnest-giggle.net',
-        id: 'f919a2bf-56d3-40fc-9734-cc73dd1f9750',
+        id: 'a05a83a4-6e7a-4250-8030-5eb370b6f8a0',
         mime_type: 'application/pdf',
         name: 'INV-77705-1.pdf'
       ),
@@ -223,7 +223,7 @@ req = Models::Operations::PatchAccountingInvoiceRequest.new(
     discount_amount: 0.0,
     due_at: DateTime.iso8601('2022-12-07T14:17:29.587Z'),
     extended_notes: [],
-    id: '3764b166-c4e6-47c4-bd47-1f6960c98442',
+    id: 'cf4bfd70-a7d0-4840-8976-7181ac5bf2c7',
     invoice_number: 'INV-77705',
     is_inclusive_of_tax: false,
     lineitems: [],
@@ -241,7 +241,7 @@ req = Models::Operations::PatchAccountingInvoiceRequest.new(
     term: Models::Shared::AccountingInvoiceTerm::NET_25,
     total_amount: 0.0,
     type: Models::Shared::AccountingInvoiceType::INVOICE,
-    updated_at: DateTime.iso8601('2026-05-14T13:23:03.815Z'),
+    updated_at: DateTime.iso8601('2026-05-14T11:31:43.003Z'),
     url: 'https://gifted-yarmulke.info/invoices/INV-77705'
   ),
   connection_id: '<id>',
@@ -334,13 +334,13 @@ req = Models::Operations::UpdateAccountingInvoiceRequest.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://glossy-markup.net/',
-        id: 'e27afb7a-5596-4e1c-a57d-5507cca0fa3d',
+        id: '358133b6-7d3a-4981-bb10-295bab2b49ae',
         mime_type: 'application/pdf',
         name: 'INV-77705.pdf'
       ),
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://earnest-giggle.net',
-        id: 'f919a2bf-56d3-40fc-9734-cc73dd1f9750',
+        id: 'a05a83a4-6e7a-4250-8030-5eb370b6f8a0',
         mime_type: 'application/pdf',
         name: 'INV-77705-1.pdf'
       ),
@@ -352,7 +352,7 @@ req = Models::Operations::UpdateAccountingInvoiceRequest.new(
     discount_amount: 0.0,
     due_at: DateTime.iso8601('2022-12-07T14:17:29.587Z'),
     extended_notes: [],
-    id: '3764b166-c4e6-47c4-bd47-1f6960c98442',
+    id: 'cf4bfd70-a7d0-4840-8976-7181ac5bf2c7',
     invoice_number: 'INV-77705',
     is_inclusive_of_tax: false,
     lineitems: [],
@@ -370,7 +370,7 @@ req = Models::Operations::UpdateAccountingInvoiceRequest.new(
     term: Models::Shared::AccountingInvoiceTerm::NET_25,
     total_amount: 0.0,
     type: Models::Shared::AccountingInvoiceType::INVOICE,
-    updated_at: DateTime.iso8601('2026-05-14T13:23:03.815Z'),
+    updated_at: DateTime.iso8601('2026-05-14T11:31:43.003Z'),
     url: 'https://gifted-yarmulke.info/invoices/INV-77705'
   ),
   connection_id: '<id>',

@@ -34,7 +34,7 @@ res = s.subscription.create_payment_subscription(payment_subscription: Models::S
   current_period_start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
   day_of_month: 8.0,
   description: 'Innovative Mouse featuring important technology and Bamboo construction',
-  id: 'cd573386-a407-4347-b1c6-73f48b34ede3',
+  id: 'f951e7ad-6bdb-4a22-88f0-f6cbe8947bf7',
   interval: 1.0,
   interval_unit: Models::Shared::IntervalUnit::YEAR,
   lineitems: [],
@@ -43,7 +43,7 @@ res = s.subscription.create_payment_subscription(payment_subscription: Models::S
   start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
   status: Models::Shared::PaymentSubscriptionStatus::ACTIVE,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2023-10-07T09:00:26.250Z')
+  updated_at: DateTime.iso8601('2023-10-07T08:45:23.842Z')
 ), connection_id: '<id>')
 
 unless res.payment_subscription.nil?
@@ -183,7 +183,7 @@ req = Models::Operations::PatchPaymentSubscriptionRequest.new(
     current_period_start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     day_of_month: 8.0,
     description: 'Innovative Mouse featuring important technology and Bamboo construction',
-    id: 'b2eb8923-244a-4563-9836-440998c391d4',
+    id: 'cd561705-4fb0-4118-8403-5c6911f2d811',
     interval: 1.0,
     interval_unit: Models::Shared::IntervalUnit::YEAR,
     lineitems: [],
@@ -192,7 +192,7 @@ req = Models::Operations::PatchPaymentSubscriptionRequest.new(
     start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     status: Models::Shared::PaymentSubscriptionStatus::ACTIVE,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-10-07T09:00:26.252Z')
+    updated_at: DateTime.iso8601('2023-10-07T08:45:23.844Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -287,7 +287,7 @@ req = Models::Operations::UpdatePaymentSubscriptionRequest.new(
     current_period_start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     day_of_month: 8.0,
     description: 'Innovative Mouse featuring important technology and Bamboo construction',
-    id: 'b2eb8923-244a-4563-9836-440998c391d4',
+    id: 'cd561705-4fb0-4118-8403-5c6911f2d811',
     interval: 1.0,
     interval_unit: Models::Shared::IntervalUnit::YEAR,
     lineitems: [],
@@ -296,7 +296,7 @@ req = Models::Operations::UpdatePaymentSubscriptionRequest.new(
     start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     status: Models::Shared::PaymentSubscriptionStatus::ACTIVE,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-10-07T09:00:26.252Z')
+    updated_at: DateTime.iso8601('2023-10-07T08:45:23.844Z')
   ),
   connection_id: '<id>',
   id: '<id>'

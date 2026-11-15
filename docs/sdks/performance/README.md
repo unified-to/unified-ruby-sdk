@@ -36,7 +36,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.performance.create_performance_feedback(performance_feedback: Models::Shared::PerformanceFeedback.new(
   created_at: DateTime.iso8601('2023-04-11T16:21:53.862Z'),
-  id: '6f69a58a-70a8-4411-ac9f-f00ecd11cd60',
+  id: 'e4c75381-448a-4df3-b23f-55350c5a8713',
   is_visible: true,
   message: 'Tabernus corpus voluptate aestus.',
   metadata: [],
@@ -45,7 +45,7 @@ res = s.performance.create_performance_feedback(performance_feedback: Models::Sh
     'hexagon',
   ],
   type: Models::Shared::PerformanceFeedbackType::PRAISE,
-  updated_at: DateTime.iso8601('2025-09-20T10:34:15.739Z'),
+  updated_at: DateTime.iso8601('2025-09-20T09:07:42.133Z'),
   user_id: '<id>'
 ), connection_id: '<id>')
 
@@ -93,14 +93,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.performance.create_performance_goal(performance_goal: Models::Shared::PerformanceGoal.new(
   created_at: DateTime.iso8601('2020-01-09T20:43:07.380Z'),
   description: 'Suscipit suspendo vulnero vel facere valeo vallum degero.',
-  due_at: DateTime.iso8601('2026-08-21T23:25:07.023Z'),
-  id: '10436527-dd2e-4af1-942f-585c7032bc0d',
+  due_at: DateTime.iso8601('2026-08-21T21:22:09.201Z'),
+  id: '2305b804-3917-4785-811c-064ea33bcba3',
   metadata: [],
   milestones: [
     Models::Shared::PerformanceGoalMilestone.new(
       current_value: 10.0,
-      due_at: DateTime.iso8601('2026-06-26T13:06:24.500Z'),
-      id: '9386140c-882a-4dc7-b4f5-5e747882e377',
+      due_at: DateTime.iso8601('2026-06-26T11:06:18.990Z'),
+      id: '474656b0-9468-404f-aba3-eb7c13e132fc',
       is_completed: true,
       name: 'Team-oriented secondary matrix',
       target_value: 32.0,
@@ -109,8 +109,8 @@ res = s.performance.create_performance_goal(performance_goal: Models::Shared::Pe
     ),
     Models::Shared::PerformanceGoalMilestone.new(
       current_value: 0.0,
-      due_at: DateTime.iso8601('2026-08-31T18:31:25.375Z'),
-      id: 'c139523a-1ea9-455e-bcfc-c8aeef8cb80c',
+      due_at: DateTime.iso8601('2026-08-31T16:27:57.639Z'),
+      id: 'd55b194d-1254-4acc-8a3d-91d4ec593001',
       is_completed: true,
       name: 'Exclusive client-server conglomeration',
       target_value: 32.0,
@@ -119,8 +119,8 @@ res = s.performance.create_performance_goal(performance_goal: Models::Shared::Pe
     Models::Shared::PerformanceGoalMilestone.new(
       current_value: 31.0,
       description: 'Hic explicabo odit.',
-      due_at: DateTime.iso8601('2026-11-03T08:00:37.932Z'),
-      id: '7dfab057-51ce-4da8-906a-93585d84f040',
+      due_at: DateTime.iso8601('2026-11-03T05:53:56.104Z'),
+      id: '0ead2c4c-4c98-46b9-ac2b-cb254d5bbc99',
       is_completed: true,
       name: 'Synchronised immersive success',
       target_value: 32.0,
@@ -129,10 +129,10 @@ res = s.performance.create_performance_goal(performance_goal: Models::Shared::Pe
   ],
   name: 'Proactive national protocol',
   progress: 3.0,
-  start_at: DateTime.iso8601('2025-08-11T23:45:19.303Z'),
+  start_at: DateTime.iso8601('2025-08-11T22:01:26.535Z'),
   status: Models::Shared::PerformanceGoalStatus::CLOSED,
   type: Models::Shared::PerformanceGoalSchemasType::COMPANY,
-  updated_at: DateTime.iso8601('2022-09-22T12:57:04.287Z'),
+  updated_at: DateTime.iso8601('2022-09-22T12:06:51.380Z'),
   weight: 5.0
 ), connection_id: '<id>')
 
@@ -530,14 +530,14 @@ req = Models::Operations::PatchPerformanceGoalRequest.new(
   performance_goal: Models::Shared::PerformanceGoal.new(
     created_at: DateTime.iso8601('2020-01-09T20:43:07.380Z'),
     description: 'Suscipit suspendo vulnero vel facere valeo vallum degero.',
-    due_at: DateTime.iso8601('2026-08-21T23:25:07.041Z'),
-    id: 'ca8863a4-a9c6-4cc6-ab29-b050c403fb73',
+    due_at: DateTime.iso8601('2026-08-21T21:22:09.213Z'),
+    id: '7166a0b9-303d-4abd-b75e-a12920539c68',
     metadata: [],
     milestones: [
       Models::Shared::PerformanceGoalMilestone.new(
         current_value: 10.0,
-        due_at: DateTime.iso8601('2026-06-26T13:06:24.517Z'),
-        id: 'b3139f98-3aad-4854-a1f0-c9fab7f6102b',
+        due_at: DateTime.iso8601('2026-06-26T11:06:19.003Z'),
+        id: '1dcddbcc-0777-4523-b927-cb4c49229c45',
         is_completed: true,
         name: 'Team-oriented secondary matrix',
         target_value: 32.0,
@@ -546,8 +546,8 @@ req = Models::Operations::PatchPerformanceGoalRequest.new(
       ),
       Models::Shared::PerformanceGoalMilestone.new(
         current_value: 0.0,
-        due_at: DateTime.iso8601('2026-08-31T18:31:25.392Z'),
-        id: 'a1dac58d-5e4e-444d-b6b7-26dcdbff3e19',
+        due_at: DateTime.iso8601('2026-08-31T16:27:57.652Z'),
+        id: '3f44f859-adc0-4eb7-a11b-c9a3dddaf783',
         is_completed: true,
         name: 'Exclusive client-server conglomeration',
         target_value: 32.0,
@@ -556,8 +556,8 @@ req = Models::Operations::PatchPerformanceGoalRequest.new(
       Models::Shared::PerformanceGoalMilestone.new(
         current_value: 31.0,
         description: 'Hic explicabo odit.',
-        due_at: DateTime.iso8601('2026-11-03T08:00:37.950Z'),
-        id: '7cda0ed3-c86f-48d8-992b-8b97b182aeb7',
+        due_at: DateTime.iso8601('2026-11-03T05:53:56.117Z'),
+        id: '47b9433b-6607-43cd-91e5-0cd15ea07df3',
         is_completed: true,
         name: 'Synchronised immersive success',
         target_value: 32.0,
@@ -566,10 +566,10 @@ req = Models::Operations::PatchPerformanceGoalRequest.new(
     ],
     name: 'Proactive national protocol',
     progress: 3.0,
-    start_at: DateTime.iso8601('2025-08-11T23:45:19.318Z'),
+    start_at: DateTime.iso8601('2025-08-11T22:01:26.546Z'),
     status: Models::Shared::PerformanceGoalStatus::CLOSED,
     type: Models::Shared::PerformanceGoalSchemasType::COMPANY,
-    updated_at: DateTime.iso8601('2022-09-22T12:57:04.294Z'),
+    updated_at: DateTime.iso8601('2022-09-22T12:06:51.385Z'),
     weight: 5.0
   ),
   connection_id: '<id>',
@@ -661,14 +661,14 @@ req = Models::Operations::UpdatePerformanceGoalRequest.new(
   performance_goal: Models::Shared::PerformanceGoal.new(
     created_at: DateTime.iso8601('2020-01-09T20:43:07.380Z'),
     description: 'Suscipit suspendo vulnero vel facere valeo vallum degero.',
-    due_at: DateTime.iso8601('2026-08-21T23:25:07.041Z'),
-    id: 'ca8863a4-a9c6-4cc6-ab29-b050c403fb73',
+    due_at: DateTime.iso8601('2026-08-21T21:22:09.213Z'),
+    id: '7166a0b9-303d-4abd-b75e-a12920539c68',
     metadata: [],
     milestones: [
       Models::Shared::PerformanceGoalMilestone.new(
         current_value: 10.0,
-        due_at: DateTime.iso8601('2026-06-26T13:06:24.517Z'),
-        id: 'b3139f98-3aad-4854-a1f0-c9fab7f6102b',
+        due_at: DateTime.iso8601('2026-06-26T11:06:19.003Z'),
+        id: '1dcddbcc-0777-4523-b927-cb4c49229c45',
         is_completed: true,
         name: 'Team-oriented secondary matrix',
         target_value: 32.0,
@@ -677,8 +677,8 @@ req = Models::Operations::UpdatePerformanceGoalRequest.new(
       ),
       Models::Shared::PerformanceGoalMilestone.new(
         current_value: 0.0,
-        due_at: DateTime.iso8601('2026-08-31T18:31:25.392Z'),
-        id: 'a1dac58d-5e4e-444d-b6b7-26dcdbff3e19',
+        due_at: DateTime.iso8601('2026-08-31T16:27:57.652Z'),
+        id: '3f44f859-adc0-4eb7-a11b-c9a3dddaf783',
         is_completed: true,
         name: 'Exclusive client-server conglomeration',
         target_value: 32.0,
@@ -687,8 +687,8 @@ req = Models::Operations::UpdatePerformanceGoalRequest.new(
       Models::Shared::PerformanceGoalMilestone.new(
         current_value: 31.0,
         description: 'Hic explicabo odit.',
-        due_at: DateTime.iso8601('2026-11-03T08:00:37.950Z'),
-        id: '7cda0ed3-c86f-48d8-992b-8b97b182aeb7',
+        due_at: DateTime.iso8601('2026-11-03T05:53:56.117Z'),
+        id: '47b9433b-6607-43cd-91e5-0cd15ea07df3',
         is_completed: true,
         name: 'Synchronised immersive success',
         target_value: 32.0,
@@ -697,10 +697,10 @@ req = Models::Operations::UpdatePerformanceGoalRequest.new(
     ],
     name: 'Proactive national protocol',
     progress: 3.0,
-    start_at: DateTime.iso8601('2025-08-11T23:45:19.318Z'),
+    start_at: DateTime.iso8601('2025-08-11T22:01:26.546Z'),
     status: Models::Shared::PerformanceGoalStatus::CLOSED,
     type: Models::Shared::PerformanceGoalSchemasType::COMPANY,
-    updated_at: DateTime.iso8601('2022-09-22T12:57:04.294Z'),
+    updated_at: DateTime.iso8601('2022-09-22T12:06:51.385Z'),
     weight: 5.0
   ),
   connection_id: '<id>',

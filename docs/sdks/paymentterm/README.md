@@ -37,12 +37,12 @@ res = s.paymentterm.create_accounting_paymentterm(accounting_paymentterm: Models
   discount_percent: 5.0,
   due_days: 57.0,
   due_next_month_days: 9.0,
-  id: 'e5c8bc9e-03c5-4fcd-b769-c37dfb2b9365',
+  id: '6a4223c5-1148-4680-81e2-be14106f5cf6',
   is_active: false,
   metadata: [],
   name: 'Net 30',
   type: Models::Shared::AccountingPaymenttermType::NET_15,
-  updated_at: DateTime.iso8601('2026-01-28T20:17:17.751Z')
+  updated_at: DateTime.iso8601('2026-01-28T18:29:18.944Z')
 ), connection_id: '<id>')
 
 unless res.accounting_paymentterm.nil?
@@ -185,12 +185,12 @@ req = Models::Operations::PatchAccountingPaymenttermRequest.new(
     discount_percent: 5.0,
     due_days: 57.0,
     due_next_month_days: 9.0,
-    id: '3368a8b2-a543-43d8-b216-37f08410aa2a',
+    id: '1c11dcd8-3ee4-4b11-8851-aa187e8490b2',
     is_active: false,
     metadata: [],
     name: 'Net 30',
     type: Models::Shared::AccountingPaymenttermType::NET_15,
-    updated_at: DateTime.iso8601('2026-01-28T20:17:17.761Z')
+    updated_at: DateTime.iso8601('2026-01-28T18:29:18.958Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -288,12 +288,12 @@ req = Models::Operations::UpdateAccountingPaymenttermRequest.new(
     discount_percent: 5.0,
     due_days: 57.0,
     due_next_month_days: 9.0,
-    id: '3368a8b2-a543-43d8-b216-37f08410aa2a',
+    id: '1c11dcd8-3ee4-4b11-8851-aa187e8490b2',
     is_active: false,
     metadata: [],
     name: 'Net 30',
     type: Models::Shared::AccountingPaymenttermType::NET_15,
-    updated_at: DateTime.iso8601('2026-01-28T20:17:17.761Z')
+    updated_at: DateTime.iso8601('2026-01-28T18:29:18.958Z')
   ),
   connection_id: '<id>',
   id: '<id>'

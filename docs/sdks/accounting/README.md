@@ -165,7 +165,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: 'a714e827-c923-44ea-bee0-aca36cdd262e',
+  id: 'b8faefab-9230-454e-a309-f112a86c38e7',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -178,7 +178,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-13T00:11:49.220Z')
+  updated_at: DateTime.iso8601('2023-08-12T23:39:28.304Z')
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -231,12 +231,12 @@ res = s.accounting.create_accounting_bankfeedaccount(accounting_bankfeedaccount:
   created_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
   currency: 'AUD',
   feed_start_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
-  id: 'c9110239-ef3a-4097-a638-990590f06bb5',
+  id: '1f5cfdd9-a4b8-4bf5-8bbb-6f79a47a7ffa',
   metadata: [],
   name: 'Corwin, Donnelly and Connelly Checking',
   routing_number: '694667752',
   status: Models::Shared::AccountingBankfeedaccountStatus::ACTIVE,
-  updated_at: DateTime.iso8601('2024-05-02T18:36:02.833Z')
+  updated_at: DateTime.iso8601('2024-05-02T17:48:39.326Z')
 ), connection_id: '<id>')
 
 unless res.accounting_bankfeedaccount.nil?
@@ -287,15 +287,15 @@ res = s.accounting.create_accounting_bankfeedtransaction(accounting_bankfeedtran
   created_at: DateTime.iso8601('2022-03-24T23:41:08.374Z'),
   currency: 'CAD',
   description: 'Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781.',
-  id: 'a16542b7-5ece-4dd0-bb3e-61153419ac16',
+  id: 'ea3b4f29-98cf-4115-95c2-4ba9a39145d6',
   is_pending: true,
   merchant_name: 'Buckridge - Feest',
   metadata: [],
-  posted_at: DateTime.iso8601('2025-04-30T21:11:57.646Z'),
+  posted_at: DateTime.iso8601('2025-04-30T19:46:54.673Z'),
   reference: '79574105',
-  transaction_at: DateTime.iso8601('2022-08-01T04:05:52.815Z'),
+  transaction_at: DateTime.iso8601('2022-08-01T03:56:10.925Z'),
   type: Models::Shared::AccountingBankfeedtransactionType::CREDIT,
-  updated_at: DateTime.iso8601('2022-05-25T22:48:52.008Z')
+  updated_at: DateTime.iso8601('2022-05-25T22:44:12.901Z')
 ), connection_id: '<id>')
 
 unless res.accounting_bankfeedtransaction.nil?
@@ -343,13 +343,13 @@ res = s.accounting.create_accounting_bill(accounting_bill: Models::Shared::Accou
   attachments: [
     Models::Shared::AccountingAttachment.new(
       download_url: 'https://puny-foodstuffs.name',
-      id: 'a7500105-4d57-4e0d-be35-9139b806840a',
+      id: 'cf718dcc-8109-4085-9754-bdc494e07f0f',
       mime_type: 'application/pdf',
       name: 'BILL-2466.pdf'
     ),
     Models::Shared::AccountingAttachment.new(
       download_url: 'https://grimy-characterization.net',
-      id: 'edb92f88-2c1c-4262-9053-4231c4a77a00',
+      id: '8d305f69-3039-4752-a78d-700fe964bffc',
       mime_type: 'application/pdf',
       name: 'BILL-2466-1.pdf'
     ),
@@ -362,7 +362,7 @@ res = s.accounting.create_accounting_bill(accounting_bill: Models::Shared::Accou
   discount_amount: 0.0,
   due_at: DateTime.iso8601('2019-09-07T23:03:14.104Z'),
   extended_notes: [],
-  id: 'd9e587b8-d9f3-401d-92b3-f36088135536',
+  id: 'aaa3e5e6-41e9-4f60-a104-6a0a1cae2647',
   lineitems: [],
   metadata: [],
   notes: 'Admiratio deporto tutamen cilicium infit amissio ante demulceo.',
@@ -378,7 +378,7 @@ res = s.accounting.create_accounting_bill(accounting_bill: Models::Shared::Accou
   tax_amount: 0.0,
   term: Models::Shared::Term::NET_90,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2020-06-03T21:38:04.408Z'),
+  updated_at: DateTime.iso8601('2020-06-03T21:23:58.824Z'),
   url: 'https://cluttered-importance.org/bills/BILL-2466'
 ), connection_id: '<id>')
 
@@ -426,11 +426,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.accounting.create_accounting_category(accounting_category: Models::Shared::AccountingCategory.new(
   created_at: DateTime.iso8601('2023-05-30T12:29:04.257Z'),
   description: 'Textus ab thymum labore basium.',
-  id: '6d290f87-d5ba-4dc4-b7ee-56408de71163',
+  id: '4f2d3244-4d13-402f-8576-da43bb22e582',
   is_active: false,
   metadata: [],
   name: 'Beauty',
-  updated_at: DateTime.iso8601('2025-09-27T16:28:12.468Z')
+  updated_at: DateTime.iso8601('2025-09-27T15:02:28.945Z')
 ), connection_id: '<id>')
 
 unless res.accounting_category.nil?
@@ -499,7 +499,7 @@ res = s.accounting.create_accounting_contact(accounting_contact: Models::Shared:
     ),
   ],
   first_name: 'Delores',
-  id: '47960a82-120e-4a74-8cdb-38a7eb514447',
+  id: '146b386a-c852-4335-9197-d5b2dddccc78',
   identification: '531850872',
   is_active: true,
   is_customer: true,
@@ -510,7 +510,7 @@ res = s.accounting.create_accounting_contact(accounting_contact: Models::Shared:
   payment_methods: [
     Models::Shared::AccountingContactPaymentMethod.new(
       default: true,
-      id: 'b6c1545a-4dfa-430c-a562-2d6a632c9fdd',
+      id: '841c0d4e-49a8-4a1d-871b-2556cff9c267',
       name: 'Visa 7844',
       type: Models::Shared::AccountingContactPaymentMethodType::CARD
     ),
@@ -532,7 +532,7 @@ res = s.accounting.create_accounting_contact(accounting_contact: Models::Shared:
       type: Models::Shared::AccountingTelephoneType::FAX
     ),
   ],
-  updated_at: DateTime.iso8601('2023-12-30T17:39:10.406Z'),
+  updated_at: DateTime.iso8601('2023-12-30T16:41:35.619Z'),
   website: 'https://kertzmanngroup.com'
 ), connection_id: '<id>')
 
@@ -585,7 +585,7 @@ res = s.accounting.create_accounting_creditmemo(accounting_creditmemo: Models::S
   creditmemo_number: 'CM-99537',
   currency: 'AUD',
   discount_amount: 0.0,
-  id: '81e5a6ac-cfff-4c9b-b6aa-846a7bbc4e0f',
+  id: 'c4cb9624-405e-452d-a710-3c0c9a34f55b',
   lineitems: [],
   metadata: [],
   notes: 'Hic vorax dedecor amo adfero torqueo quas victoria.',
@@ -594,7 +594,7 @@ res = s.accounting.create_accounting_creditmemo(accounting_creditmemo: Models::S
   status: Models::Shared::AccountingCreditmemoStatus::AUTHORIZED,
   tax_amount: 0.0,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2025-09-26T17:21:58.216Z')
+  updated_at: DateTime.iso8601('2025-09-26T16:00:24.607Z')
 ), connection_id: '<id>')
 
 unless res.accounting_creditmemo.nil?
@@ -642,13 +642,13 @@ res = s.accounting.create_accounting_expense(accounting_expense: Models::Shared:
   attachments: [
     Models::Shared::AccountingAttachment.new(
       download_url: 'https://rubbery-couch.biz/',
-      id: 'd77a6fd5-32b1-458e-82dc-0b1c4038d3b9',
+      id: 'a85d9b6e-0e2f-4510-92f2-95c6efde50fe',
       mime_type: 'application/pdf',
       name: 'receipt-9696.pdf'
     ),
     Models::Shared::AccountingAttachment.new(
       download_url: 'https://appropriate-smog.biz/',
-      id: 'f3319c79-dce4-4869-8876-d3f390d0c733',
+      id: '8bbbd42c-f6f1-4373-9554-d39719d91d0b',
       mime_type: 'application/pdf',
       name: 'receipt-9696-1.pdf'
     ),
@@ -657,10 +657,10 @@ res = s.accounting.create_accounting_expense(accounting_expense: Models::Shared:
   created_at: DateTime.iso8601('2020-06-11T03:39:37.305Z'),
   currency: 'GBP',
   external_number: 'EXP-38303',
-  id: 'd79a197e-ed24-4add-9acd-946ea92caa25',
+  id: '0bca6dd5-ca8f-4415-ab50-84f72eb7aad6',
   lineitems: [
     Models::Shared::AccountingLineitem.new(
-      id: '1ec78734-ec5d-4bba-a4d4-c0ee19267ea8',
+      id: '9d324add-f68f-4c96-86ea-57d122ca3d15',
       item_name: 'Client dinner',
       tax_amount: 0.0,
       total_amount: 364.74,
@@ -668,7 +668,7 @@ res = s.accounting.create_accounting_expense(accounting_expense: Models::Shared:
       unit_quantity: 1.0
     ),
     Models::Shared::AccountingLineitem.new(
-      id: '87327ac2-b169-4da5-8335-034ad7586351',
+      id: '8d642dd6-eda4-444c-9f18-598692b647c4',
       item_name: 'Client dinner',
       tax_amount: 0.0,
       total_amount: 258.35,
@@ -676,7 +676,7 @@ res = s.accounting.create_accounting_expense(accounting_expense: Models::Shared:
       unit_quantity: 1.0
     ),
     Models::Shared::AccountingLineitem.new(
-      id: '2bff4444-158d-462c-8c72-0f11b34e194a',
+      id: '6dd7cdc6-9405-4c9b-b289-87bb5e6961e0',
       item_name: 'Conference ticket',
       notes: 'Casus umquam conicio cinis demitto sint.',
       tax_amount: 0.0,
@@ -685,7 +685,7 @@ res = s.accounting.create_accounting_expense(accounting_expense: Models::Shared:
       unit_quantity: 1.0
     ),
     Models::Shared::AccountingLineitem.new(
-      id: '979f7674-fcfc-4b4f-bd21-8747d80341bd',
+      id: '789b930b-b8d7-40db-9913-c458bb82dd01',
       item_name: 'Hotel',
       tax_amount: 0.0,
       total_amount: 157.04,
@@ -693,7 +693,7 @@ res = s.accounting.create_accounting_expense(accounting_expense: Models::Shared:
       unit_quantity: 1.0
     ),
     Models::Shared::AccountingLineitem.new(
-      id: '8294609a-0b23-4eb8-baf2-be6f852cf2a1',
+      id: '51a221e7-f733-41d6-9465-166abd4d755a',
       item_name: 'Hotel',
       tax_amount: 0.0,
       total_amount: 164.02,
@@ -709,7 +709,7 @@ res = s.accounting.create_accounting_expense(accounting_expense: Models::Shared:
   tax_amount: 0.0,
   total_amount: 972.29,
   type: Models::Shared::AccountingExpenseType::COMPANY,
-  updated_at: DateTime.iso8601('2020-09-03T03:55:09.901Z')
+  updated_at: DateTime.iso8601('2020-09-03T03:50:36.586Z')
 ), connection_id: '<id>')
 
 unless res.accounting_expense.nil?
@@ -754,16 +754,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
   )
 )
 res = s.accounting.create_accounting_expensereport(accounting_expensereport: Models::Shared::AccountingExpensereport.new(
-  approved_at: DateTime.iso8601('2021-04-22T19:46:36.130Z'),
+  approved_at: DateTime.iso8601('2021-04-22T19:28:52.562Z'),
   attachments: [],
   category_ids: [],
   created_at: DateTime.iso8601('2020-05-29T02:04:59.078Z'),
   currency: 'GBP',
   external_number: 'ER-31240',
-  id: '6264ca25-5cc1-4e94-9a71-3b76616faf84',
+  id: '524f1b27-2d8f-4ff9-8035-9c9feb26a80b',
   lineitems: [
     Models::Shared::AccountingLineitem.new(
-      id: 'b46e2386-3eb5-4b4c-8968-5936817b9fce',
+      id: '86c53f53-6b6e-4045-b772-1b33be664194',
       item_name: 'Conference ticket',
       tax_amount: 0.0,
       total_amount: 39.9,
@@ -771,7 +771,7 @@ res = s.accounting.create_accounting_expensereport(accounting_expensereport: Mod
       unit_quantity: 1.0
     ),
     Models::Shared::AccountingLineitem.new(
-      id: '3da130e8-7b4a-4bb9-852c-f4cfd112621b',
+      id: 'd0a4e41a-566b-4965-9ef6-8f6fc244fd30',
       item_name: 'Flight',
       notes: 'Soluta omnis dolor.',
       tax_amount: 0.0,
@@ -780,7 +780,7 @@ res = s.accounting.create_accounting_expensereport(accounting_expensereport: Mod
       unit_quantity: 1.0
     ),
     Models::Shared::AccountingLineitem.new(
-      id: '7ce43889-8ddb-43d4-bd32-edc00438335b',
+      id: '996c4c13-b9a4-4b34-a1f3-12326485fd7b',
       item_name: 'Client dinner',
       notes: 'Altus caveo capio.',
       tax_amount: 0.0,
@@ -789,7 +789,7 @@ res = s.accounting.create_accounting_expensereport(accounting_expensereport: Mod
       unit_quantity: 1.0
     ),
     Models::Shared::AccountingLineitem.new(
-      id: '579332d4-ecbb-4bdc-92e6-2e9465d8bf70',
+      id: 'c0b4b769-909c-463c-ad18-132899dda947',
       item_name: 'Flight',
       tax_amount: 0.0,
       total_amount: 445.27,
@@ -801,11 +801,11 @@ res = s.accounting.create_accounting_expensereport(accounting_expensereport: Mod
   name: 'Lolita Kunde - October expenses',
   posted_at: DateTime.iso8601('2020-05-29T02:04:59.078Z'),
   reimbursed_amount: 908.46,
-  reimbursed_at: DateTime.iso8601('2021-04-22T19:46:36.130Z'),
+  reimbursed_at: DateTime.iso8601('2021-04-22T19:28:52.562Z'),
   status: Models::Shared::AccountingExpensereportStatus::PAID,
   tax_amount: 0.0,
   total_amount: 908.46,
-  updated_at: DateTime.iso8601('2021-04-22T19:46:36.130Z')
+  updated_at: DateTime.iso8601('2021-04-22T19:28:52.562Z')
 ), connection_id: '<id>')
 
 unless res.accounting_expensereport.nil?
@@ -853,13 +853,13 @@ res = s.accounting.create_accounting_invoice(accounting_invoice: Models::Shared:
   attachments: [
     Models::Shared::AccountingAttachment.new(
       download_url: 'https://glossy-markup.net/',
-      id: 'fa24ba36-7219-48ee-b3ab-a2ca99272968',
+      id: '7a64a16e-40e0-4ae6-b9c0-880e88f4c22c',
       mime_type: 'application/pdf',
       name: 'INV-77705.pdf'
     ),
     Models::Shared::AccountingAttachment.new(
       download_url: 'https://earnest-giggle.net',
-      id: '59a53a64-4882-474a-b65e-cdc53e44670f',
+      id: 'd974dd9c-e128-4e7a-a05d-d74c83495a6d',
       mime_type: 'application/pdf',
       name: 'INV-77705-1.pdf'
     ),
@@ -871,7 +871,7 @@ res = s.accounting.create_accounting_invoice(accounting_invoice: Models::Shared:
   discount_amount: 0.0,
   due_at: DateTime.iso8601('2022-12-07T14:17:29.587Z'),
   extended_notes: [],
-  id: '31d264cf-a9d1-493f-9503-877be5bf3327',
+  id: '08be2266-dd30-4433-b509-8358a5653435',
   invoice_number: 'INV-77705',
   is_inclusive_of_tax: false,
   lineitems: [],
@@ -889,7 +889,7 @@ res = s.accounting.create_accounting_invoice(accounting_invoice: Models::Shared:
   term: Models::Shared::AccountingInvoiceTerm::NET_25,
   total_amount: 0.0,
   type: Models::Shared::AccountingInvoiceType::INVOICE,
-  updated_at: DateTime.iso8601('2026-05-14T13:23:03.777Z'),
+  updated_at: DateTime.iso8601('2026-05-14T11:31:42.972Z'),
   url: 'https://gifted-yarmulke.info/invoices/INV-77705'
 ), connection_id: '<id>')
 
@@ -940,16 +940,16 @@ res = s.accounting.create_accounting_journal(accounting_journal: Models::Shared:
   created_at: DateTime.iso8601('2020-02-20T15:14:55.881Z'),
   currency: 'CAD',
   description: 'Cilicium minima calco constans adipisci.',
-  id: 'ac4c9285-8368-45de-8dd2-e33e47498406',
+  id: '0f6cae7f-ee54-4d12-a2c0-9db105de9dd0',
   is_inclusive_of_tax: true,
   lineitems: [],
   metadata: [],
-  posted_at: DateTime.iso8601('2023-11-19T19:27:25.865Z'),
+  posted_at: DateTime.iso8601('2023-11-19T18:16:36.493Z'),
   reference: 'JE-78884',
   source: 'crustulum',
   status: Models::Shared::AccountingJournalStatus::VOID,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2022-01-17T15:07:42.922Z')
+  updated_at: DateTime.iso8601('2022-01-17T14:31:38.147Z')
 ), connection_id: '<id>')
 
 unless res.accounting_journal.nil?
@@ -1006,7 +1006,7 @@ res = s.accounting.create_accounting_order(accounting_order: Models::Shared::Acc
   ),
   created_at: DateTime.iso8601('2020-11-20T03:46:49.837Z'),
   currency: 'GBP',
-  id: 'd2870be9-6d34-4670-94f3-4c6ecffafa4c',
+  id: '6f26e9dc-17f7-4c6b-8449-5ae26e06217d',
   lineitems: [],
   metadata: [],
   posted_at: DateTime.iso8601('2020-11-20T03:46:49.837Z'),
@@ -1021,7 +1021,7 @@ res = s.accounting.create_accounting_order(accounting_order: Models::Shared::Acc
   status: Models::Shared::AccountingOrderStatus::AUTHORIZED,
   total_amount: 0.0,
   type: Models::Shared::AccountingOrderType::SALES,
-  updated_at: DateTime.iso8601('2022-02-13T06:03:09.702Z')
+  updated_at: DateTime.iso8601('2022-02-13T05:36:56.781Z')
 ), connection_id: '<id>')
 
 unless res.accounting_order.nil?
@@ -1075,12 +1075,12 @@ res = s.accounting.create_accounting_paymentterm(accounting_paymentterm: Models:
   discount_percent: 5.0,
   due_days: 57.0,
   due_next_month_days: 9.0,
-  id: 'e5c8bc9e-03c5-4fcd-b769-c37dfb2b9365',
+  id: '6a4223c5-1148-4680-81e2-be14106f5cf6',
   is_active: false,
   metadata: [],
   name: 'Net 30',
   type: Models::Shared::AccountingPaymenttermType::NET_15,
-  updated_at: DateTime.iso8601('2026-01-28T20:17:17.751Z')
+  updated_at: DateTime.iso8601('2026-01-28T18:29:18.944Z')
 ), connection_id: '<id>')
 
 unless res.accounting_paymentterm.nil?
@@ -1181,7 +1181,7 @@ res = s.accounting.create_accounting_purchaseorder(accounting_purchaseorder: Mod
   category_ids: [],
   created_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
   currency: 'EUR',
-  id: '78e5d52b-8b2e-46cf-8451-bdfb5c1f4560',
+  id: 'bd69c3ad-4948-400e-87fb-63281b433e71',
   lineitems: [],
   metadata: [],
   posted_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
@@ -1195,7 +1195,7 @@ res = s.accounting.create_accounting_purchaseorder(accounting_purchaseorder: Mod
   ),
   status: Models::Shared::AccountingPurchaseorderStatus::SUBMITTED,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2021-08-13T23:12:40.951Z')
+  updated_at: DateTime.iso8601('2021-08-13T22:58:17.189Z')
 ), connection_id: '<id>')
 
 unless res.accounting_purchaseorder.nil?
@@ -1293,13 +1293,13 @@ res = s.accounting.create_accounting_salesorder(accounting_salesorder: Models::S
     region_code: 'MO'
   ),
   category_ids: [],
-  closed_at: DateTime.iso8601('2023-03-31T12:14:00.733Z'),
+  closed_at: DateTime.iso8601('2023-03-31T11:42:22.760Z'),
   created_at: DateTime.iso8601('2022-01-17T16:11:50.310Z'),
   currency: 'USD',
   discount_amount: 0.0,
   fees: [],
   fulfillment_type: Models::Shared::FulfillmentType::OTHER,
-  id: 'a566afcf-7ea6-42ce-97f3-c2d3e1e353a4',
+  id: 'c8631e38-8198-4de1-bb64-f2f11095ca19',
   lineitems: [],
   metadata: [],
   order_number: '832663',
@@ -1322,7 +1322,7 @@ res = s.accounting.create_accounting_salesorder(accounting_salesorder: Models::S
   tax_amount: 0.0,
   tip_amount: 0.0,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2023-03-31T12:14:00.733Z')
+  updated_at: DateTime.iso8601('2023-03-31T11:42:22.760Z')
 ), connection_id: '<id>')
 
 unless res.accounting_salesorder.nil?
@@ -1378,7 +1378,7 @@ res = s.accounting.create_accounting_taxrate(accounting_taxrate: Models::Shared:
   created_at: DateTime.iso8601('2020-01-04T10:37:56.894Z'),
   description: 'Exempt (0%)',
   effective_rate: 0.0,
-  id: 'ab2ac5c5-95cf-4586-a809-59caf646de20',
+  id: 'ea0cac1b-63a8-464b-9e6d-a20463580990',
   is_active: false,
   is_compound: false,
   metadata: [],
@@ -1387,7 +1387,7 @@ res = s.accounting.create_accounting_taxrate(accounting_taxrate: Models::Shared:
   region: 'KS',
   total_rate: 0.0,
   type: Models::Shared::AccountingTaxrateType::SALES,
-  updated_at: DateTime.iso8601('2020-02-13T14:24:06.888Z')
+  updated_at: DateTime.iso8601('2020-02-13T14:22:04.515Z')
 ), connection_id: '<id>')
 
 unless res.accounting_taxrate.nil?
@@ -1433,12 +1433,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.accounting.create_accounting_transaction(accounting_transaction: Models::Shared::AccountingTransaction.new(
   created_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-  id: '5a4c69e4-5dbb-4ebf-8ce9-9e3bc0004777',
+  id: 'c1863842-7e02-4a7b-92ab-f6a29adc8f99',
   lineitems: [
     Models::Shared::AccountingTransactionLineItem.new(
       category_ids: [],
       description: 'The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability',
-      id: '69247553-ce54-4577-a652-e79872f4bd10',
+      id: '69ca74bd-cd06-4495-a659-8f69f8d6f4db',
       name: 'Shirt',
       total_amount: 10_184.0,
       unit_amount: 536.0,
@@ -1450,7 +1450,7 @@ res = s.accounting.create_accounting_transaction(accounting_transaction: Models:
   tax_amount: 0.0,
   total_amount: 10_184.0,
   transaction_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-  updated_at: DateTime.iso8601('2019-10-14T10:19:49.943Z')
+  updated_at: DateTime.iso8601('2019-10-14T10:18:54.450Z')
 ), connection_id: '<id>')
 
 unless res.accounting_transaction.nil?
@@ -1499,14 +1499,14 @@ res = s.accounting.create_accounting_vendorcredit(accounting_vendorcredit: Model
   balance_amount: 0.0,
   created_at: DateTime.iso8601('2023-04-15T21:14:08.197Z'),
   currency: 'USD',
-  id: '11797829-c10b-49ca-8540-21ce3ba69d29',
+  id: '5df46366-e499-4998-9fac-fa32377bb96c',
   lineitems: [],
   metadata: [],
   notes: 'Volup conatus cruciamentum decor avaritia.',
   posted_at: DateTime.iso8601('2023-04-15T21:14:08.197Z'),
   status: Models::Shared::AccountingVendorcreditStatus::AUTHORIZED,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2023-10-06T06:05:33.189Z')
+  updated_at: DateTime.iso8601('2023-10-06T05:48:41.255Z')
 ), connection_id: '<id>')
 
 unless res.accounting_vendorcredit.nil?
@@ -4085,7 +4085,7 @@ req = Models::Operations::PatchAccountingAccountRequest.new(
     currency: 'CAD',
     customer_defined_code: '6170',
     description: 'Voluptatibus valde spoliatio.',
-    id: 'd3fdf470-a104-4bb6-a1e1-2ffd5cf71d12',
+    id: '873ba1b6-4c96-4bf5-ae79-e6abd43f0e08',
     is_payable: false,
     metadata: [],
     name: 'Auto Loan Account',
@@ -4098,7 +4098,7 @@ req = Models::Operations::PatchAccountingAccountRequest.new(
       ),
     ],
     type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-    updated_at: DateTime.iso8601('2023-08-13T00:11:49.223Z')
+    updated_at: DateTime.iso8601('2023-08-12T23:39:28.308Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -4154,12 +4154,12 @@ req = Models::Operations::PatchAccountingBankfeedaccountRequest.new(
     created_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
     currency: 'AUD',
     feed_start_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
-    id: 'b4e9d267-7c25-4d1d-a183-443011c2f2b7',
+    id: '1a788441-7cf2-4f9a-bbb9-ae808324543d',
     metadata: [],
     name: 'Corwin, Donnelly and Connelly Checking',
     routing_number: '694667752',
     status: Models::Shared::AccountingBankfeedaccountStatus::ACTIVE,
-    updated_at: DateTime.iso8601('2024-05-02T18:36:02.837Z')
+    updated_at: DateTime.iso8601('2024-05-02T17:48:39.331Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -4213,15 +4213,15 @@ req = Models::Operations::PatchAccountingBankfeedtransactionRequest.new(
     created_at: DateTime.iso8601('2022-03-24T23:41:08.374Z'),
     currency: 'CAD',
     description: 'Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781.',
-    id: 'c79700be-e9bb-4a65-a2d2-09958b731357',
+    id: '28c62e2a-93cf-4592-bbf9-a75d48a8087b',
     is_pending: true,
     merchant_name: 'Buckridge - Feest',
     metadata: [],
-    posted_at: DateTime.iso8601('2025-04-30T21:11:57.661Z'),
+    posted_at: DateTime.iso8601('2025-04-30T19:46:54.686Z'),
     reference: '79574105',
-    transaction_at: DateTime.iso8601('2022-08-01T04:05:52.817Z'),
+    transaction_at: DateTime.iso8601('2022-08-01T03:56:10.926Z'),
     type: Models::Shared::AccountingBankfeedtransactionType::CREDIT,
-    updated_at: DateTime.iso8601('2022-05-25T22:48:52.008Z')
+    updated_at: DateTime.iso8601('2022-05-25T22:44:12.901Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -4272,13 +4272,13 @@ req = Models::Operations::PatchAccountingBillRequest.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://puny-foodstuffs.name',
-        id: '0a4726d8-ed43-4e41-a328-489c4294480b',
+        id: '0ccc0edc-e1ce-4888-bcc5-52df0ddd5a83',
         mime_type: 'application/pdf',
         name: 'BILL-2466.pdf'
       ),
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://grimy-characterization.net',
-        id: '46da6231-6c72-43ff-b5a7-55ea1b867180',
+        id: 'b6abfa51-0471-4fb4-8aaf-bbfe7104a290',
         mime_type: 'application/pdf',
         name: 'BILL-2466-1.pdf'
       ),
@@ -4291,7 +4291,7 @@ req = Models::Operations::PatchAccountingBillRequest.new(
     discount_amount: 0.0,
     due_at: DateTime.iso8601('2019-09-07T23:03:14.104Z'),
     extended_notes: [],
-    id: 'c96ec42f-51fb-440f-8f81-17fe48ddfaed',
+    id: '9f2e2ceb-45a6-4ef5-ba4d-2889db95f3d0',
     lineitems: [],
     metadata: [],
     notes: 'Admiratio deporto tutamen cilicium infit amissio ante demulceo.',
@@ -4307,7 +4307,7 @@ req = Models::Operations::PatchAccountingBillRequest.new(
     tax_amount: 0.0,
     term: Models::Shared::Term::NET_90,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2020-06-03T21:38:04.412Z'),
+    updated_at: DateTime.iso8601('2020-06-03T21:23:58.828Z'),
     url: 'https://cluttered-importance.org/bills/BILL-2466'
   ),
   connection_id: '<id>',
@@ -4358,11 +4358,11 @@ req = Models::Operations::PatchAccountingCategoryRequest.new(
   accounting_category: Models::Shared::AccountingCategory.new(
     created_at: DateTime.iso8601('2023-05-30T12:29:04.257Z'),
     description: 'Textus ab thymum labore basium.',
-    id: '675bcfd0-ce8b-426a-bd9c-04d86d71caf9',
+    id: '0dcd76e4-67ed-4b6e-8cf0-f07d1cf48b54',
     is_active: false,
     metadata: [],
     name: 'Beauty',
-    updated_at: DateTime.iso8601('2025-09-27T16:28:12.474Z')
+    updated_at: DateTime.iso8601('2025-09-27T15:02:28.954Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -4434,7 +4434,7 @@ req = Models::Operations::PatchAccountingContactRequest.new(
       ),
     ],
     first_name: 'Delores',
-    id: '5ad0247b-186a-4bcf-bc3f-7460dcde2915',
+    id: '4e2c2ff5-12c9-4a1c-851d-4c45d8f6f8b0',
     identification: '531850872',
     is_active: true,
     is_customer: true,
@@ -4445,7 +4445,7 @@ req = Models::Operations::PatchAccountingContactRequest.new(
     payment_methods: [
       Models::Shared::AccountingContactPaymentMethod.new(
         default: true,
-        id: 'fb75316c-4dad-4a4e-8bba-888a8615c99b',
+        id: '916a7b79-9035-49a6-ad81-48e4ed464e29',
         name: 'Visa 7844',
         type: Models::Shared::AccountingContactPaymentMethodType::CARD
       ),
@@ -4467,7 +4467,7 @@ req = Models::Operations::PatchAccountingContactRequest.new(
         type: Models::Shared::AccountingTelephoneType::FAX
       ),
     ],
-    updated_at: DateTime.iso8601('2023-12-30T17:39:10.419Z'),
+    updated_at: DateTime.iso8601('2023-12-30T16:41:35.639Z'),
     website: 'https://kertzmanngroup.com'
   ),
   connection_id: '<id>',
@@ -4523,7 +4523,7 @@ req = Models::Operations::PatchAccountingCreditmemoRequest.new(
     creditmemo_number: 'CM-99537',
     currency: 'AUD',
     discount_amount: 0.0,
-    id: '56af1aff-4230-4bb5-b47a-9861af68a93d',
+    id: '54656b63-863d-4d30-a70a-bb9540e498ea',
     lineitems: [],
     metadata: [],
     notes: 'Hic vorax dedecor amo adfero torqueo quas victoria.',
@@ -4532,7 +4532,7 @@ req = Models::Operations::PatchAccountingCreditmemoRequest.new(
     status: Models::Shared::AccountingCreditmemoStatus::AUTHORIZED,
     tax_amount: 0.0,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2025-09-26T17:21:58.234Z')
+    updated_at: DateTime.iso8601('2025-09-26T16:00:24.624Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -4583,13 +4583,13 @@ req = Models::Operations::PatchAccountingExpenseRequest.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://rubbery-couch.biz/',
-        id: '27700a50-c734-484e-ad2f-e615af5bc083',
+        id: 'fc27fcfe-9bff-4cd1-9e60-349d4f5f4f7a',
         mime_type: 'application/pdf',
         name: 'receipt-9696.pdf'
       ),
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://appropriate-smog.biz/',
-        id: '912f3682-a43c-4a55-84cd-7646f9ac30cd',
+        id: '109bc60a-ad08-4fa0-b2f7-790fc5f10dc0',
         mime_type: 'application/pdf',
         name: 'receipt-9696-1.pdf'
       ),
@@ -4598,10 +4598,10 @@ req = Models::Operations::PatchAccountingExpenseRequest.new(
     created_at: DateTime.iso8601('2020-06-11T03:39:37.305Z'),
     currency: 'GBP',
     external_number: 'EXP-38303',
-    id: '78137057-8dac-443b-8491-c068af684a67',
+    id: '2c732f9b-8cc8-4b99-8ec3-84e2ba54aead',
     lineitems: [
       Models::Shared::AccountingLineitem.new(
-        id: 'ec5a1bc8-4ec6-4eb2-b1ec-2654f9103770',
+        id: 'd721bf8d-6d07-41d1-a882-e111e30d257b',
         item_name: 'Client dinner',
         tax_amount: 0.0,
         total_amount: 364.74,
@@ -4609,7 +4609,7 @@ req = Models::Operations::PatchAccountingExpenseRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '688bbcc6-c13f-4911-a4e7-0faf43f787e8',
+        id: '52112b69-e38b-42a6-96d2-b0f8a536b07c',
         item_name: 'Client dinner',
         tax_amount: 0.0,
         total_amount: 258.35,
@@ -4617,7 +4617,7 @@ req = Models::Operations::PatchAccountingExpenseRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'db65c6a4-d722-40fb-9a52-29e003d7b7be',
+        id: 'ad2125a1-43db-48fc-a732-0c6749c6d56e',
         item_name: 'Conference ticket',
         notes: 'Casus umquam conicio cinis demitto sint.',
         tax_amount: 0.0,
@@ -4626,7 +4626,7 @@ req = Models::Operations::PatchAccountingExpenseRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'a5261856-b984-48bc-8b03-f4c8eaa8021e',
+        id: '781e72ad-5104-4ca1-ad73-993d8d1d60d0',
         item_name: 'Hotel',
         tax_amount: 0.0,
         total_amount: 157.04,
@@ -4634,7 +4634,7 @@ req = Models::Operations::PatchAccountingExpenseRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'ca613a61-3fa0-4330-a7bd-0e19b9a799df',
+        id: 'b39fbef9-3967-456c-be1d-0eb5058913ae',
         item_name: 'Hotel',
         tax_amount: 0.0,
         total_amount: 164.02,
@@ -4650,7 +4650,7 @@ req = Models::Operations::PatchAccountingExpenseRequest.new(
     tax_amount: 0.0,
     total_amount: 972.29,
     type: Models::Shared::AccountingExpenseType::COMPANY,
-    updated_at: DateTime.iso8601('2020-09-03T03:55:09.903Z')
+    updated_at: DateTime.iso8601('2020-09-03T03:50:36.587Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -4698,16 +4698,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchAccountingExpensereportRequest.new(
   accounting_expensereport: Models::Shared::AccountingExpensereport.new(
-    approved_at: DateTime.iso8601('2021-04-22T19:46:36.134Z'),
+    approved_at: DateTime.iso8601('2021-04-22T19:28:52.568Z'),
     attachments: [],
     category_ids: [],
     created_at: DateTime.iso8601('2020-05-29T02:04:59.078Z'),
     currency: 'GBP',
     external_number: 'ER-31240',
-    id: '8b59756b-276b-43fc-8e20-2529d753f90f',
+    id: '67ce5227-a6cf-4b81-8af2-1415f56609ca',
     lineitems: [
       Models::Shared::AccountingLineitem.new(
-        id: '39ec4711-311b-4f67-91dc-b565d7d255d7',
+        id: 'd7371772-15b7-4687-9324-94f1909a2d7b',
         item_name: 'Conference ticket',
         tax_amount: 0.0,
         total_amount: 39.9,
@@ -4715,7 +4715,7 @@ req = Models::Operations::PatchAccountingExpensereportRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '06563cf4-0965-4c02-8784-be19e91ba54e',
+        id: '86b430ae-e85b-4bc9-b8f9-f7b26c8f06dd',
         item_name: 'Flight',
         notes: 'Soluta omnis dolor.',
         tax_amount: 0.0,
@@ -4724,7 +4724,7 @@ req = Models::Operations::PatchAccountingExpensereportRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '2ea073d5-f8f6-4fba-aa49-761dc4ce2657',
+        id: '749963f0-7ba0-4904-9af2-50397a6212e4',
         item_name: 'Client dinner',
         notes: 'Altus caveo capio.',
         tax_amount: 0.0,
@@ -4733,7 +4733,7 @@ req = Models::Operations::PatchAccountingExpensereportRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '38462f3c-d0f2-4a09-a7ef-7d85bd1446dc',
+        id: '5e6a67c5-5775-4f76-b128-6bc7c458cb57',
         item_name: 'Flight',
         tax_amount: 0.0,
         total_amount: 445.27,
@@ -4745,11 +4745,11 @@ req = Models::Operations::PatchAccountingExpensereportRequest.new(
     name: 'Lolita Kunde - October expenses',
     posted_at: DateTime.iso8601('2020-05-29T02:04:59.078Z'),
     reimbursed_amount: 908.46,
-    reimbursed_at: DateTime.iso8601('2021-04-22T19:46:36.134Z'),
+    reimbursed_at: DateTime.iso8601('2021-04-22T19:28:52.568Z'),
     status: Models::Shared::AccountingExpensereportStatus::PAID,
     tax_amount: 0.0,
     total_amount: 908.46,
-    updated_at: DateTime.iso8601('2021-04-22T19:46:36.134Z')
+    updated_at: DateTime.iso8601('2021-04-22T19:28:52.568Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -4800,13 +4800,13 @@ req = Models::Operations::PatchAccountingInvoiceRequest.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://glossy-markup.net/',
-        id: 'e27afb7a-5596-4e1c-a57d-5507cca0fa3d',
+        id: '358133b6-7d3a-4981-bb10-295bab2b49ae',
         mime_type: 'application/pdf',
         name: 'INV-77705.pdf'
       ),
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://earnest-giggle.net',
-        id: 'f919a2bf-56d3-40fc-9734-cc73dd1f9750',
+        id: 'a05a83a4-6e7a-4250-8030-5eb370b6f8a0',
         mime_type: 'application/pdf',
         name: 'INV-77705-1.pdf'
       ),
@@ -4818,7 +4818,7 @@ req = Models::Operations::PatchAccountingInvoiceRequest.new(
     discount_amount: 0.0,
     due_at: DateTime.iso8601('2022-12-07T14:17:29.587Z'),
     extended_notes: [],
-    id: '3764b166-c4e6-47c4-bd47-1f6960c98442',
+    id: 'cf4bfd70-a7d0-4840-8976-7181ac5bf2c7',
     invoice_number: 'INV-77705',
     is_inclusive_of_tax: false,
     lineitems: [],
@@ -4836,7 +4836,7 @@ req = Models::Operations::PatchAccountingInvoiceRequest.new(
     term: Models::Shared::AccountingInvoiceTerm::NET_25,
     total_amount: 0.0,
     type: Models::Shared::AccountingInvoiceType::INVOICE,
-    updated_at: DateTime.iso8601('2026-05-14T13:23:03.815Z'),
+    updated_at: DateTime.iso8601('2026-05-14T11:31:43.003Z'),
     url: 'https://gifted-yarmulke.info/invoices/INV-77705'
   ),
   connection_id: '<id>',
@@ -4890,16 +4890,16 @@ req = Models::Operations::PatchAccountingJournalRequest.new(
     created_at: DateTime.iso8601('2020-02-20T15:14:55.881Z'),
     currency: 'CAD',
     description: 'Cilicium minima calco constans adipisci.',
-    id: '9504da39-6a13-4bd6-b967-448d4757cb27',
+    id: 'ff97de60-32c3-487a-8ece-336573c6f9a3',
     is_inclusive_of_tax: true,
     lineitems: [],
     metadata: [],
-    posted_at: DateTime.iso8601('2023-11-19T19:27:25.876Z'),
+    posted_at: DateTime.iso8601('2023-11-19T18:16:36.508Z'),
     reference: 'JE-78884',
     source: 'crustulum',
     status: Models::Shared::AccountingJournalStatus::VOID,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2022-01-17T15:07:42.927Z')
+    updated_at: DateTime.iso8601('2022-01-17T14:31:38.155Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -4959,7 +4959,7 @@ req = Models::Operations::PatchAccountingOrderRequest.new(
     ),
     created_at: DateTime.iso8601('2020-11-20T03:46:49.837Z'),
     currency: 'GBP',
-    id: '459d700c-1c48-432d-9fbc-3a4e2ffc1bcb',
+    id: 'e9f6d21c-2d57-4cdb-886f-7ba6f8d1e984',
     lineitems: [],
     metadata: [],
     posted_at: DateTime.iso8601('2020-11-20T03:46:49.837Z'),
@@ -4974,7 +4974,7 @@ req = Models::Operations::PatchAccountingOrderRequest.new(
     status: Models::Shared::AccountingOrderStatus::AUTHORIZED,
     total_amount: 0.0,
     type: Models::Shared::AccountingOrderType::SALES,
-    updated_at: DateTime.iso8601('2022-02-13T06:03:09.708Z')
+    updated_at: DateTime.iso8601('2022-02-13T05:36:56.790Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -5031,12 +5031,12 @@ req = Models::Operations::PatchAccountingPaymenttermRequest.new(
     discount_percent: 5.0,
     due_days: 57.0,
     due_next_month_days: 9.0,
-    id: '3368a8b2-a543-43d8-b216-37f08410aa2a',
+    id: '1c11dcd8-3ee4-4b11-8851-aa187e8490b2',
     is_active: false,
     metadata: [],
     name: 'Net 30',
     type: Models::Shared::AccountingPaymenttermType::NET_15,
-    updated_at: DateTime.iso8601('2026-01-28T20:17:17.761Z')
+    updated_at: DateTime.iso8601('2026-01-28T18:29:18.958Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -5143,7 +5143,7 @@ req = Models::Operations::PatchAccountingPurchaseorderRequest.new(
     category_ids: [],
     created_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
     currency: 'EUR',
-    id: '4321572c-2784-4ba3-baf1-29fbe64c149d',
+    id: 'e2fc2c5f-424e-4b25-8bff-1e939bb00dc1',
     lineitems: [],
     metadata: [],
     posted_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
@@ -5157,7 +5157,7 @@ req = Models::Operations::PatchAccountingPurchaseorderRequest.new(
     ),
     status: Models::Shared::AccountingPurchaseorderStatus::SUBMITTED,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2021-08-13T23:12:40.955Z')
+    updated_at: DateTime.iso8601('2021-08-13T22:58:17.194Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -5261,13 +5261,13 @@ req = Models::Operations::PatchAccountingSalesorderRequest.new(
       region_code: 'MO'
     ),
     category_ids: [],
-    closed_at: DateTime.iso8601('2023-03-31T12:14:00.745Z'),
+    closed_at: DateTime.iso8601('2023-03-31T11:42:22.776Z'),
     created_at: DateTime.iso8601('2022-01-17T16:11:50.310Z'),
     currency: 'USD',
     discount_amount: 0.0,
     fees: [],
     fulfillment_type: Models::Shared::FulfillmentType::OTHER,
-    id: 'f9a42e7a-730b-4a83-8e08-e55e57b4f0f3',
+    id: '6f4c0b1f-2f37-4c60-b77b-f8a12d32d9e3',
     lineitems: [],
     metadata: [],
     order_number: '832663',
@@ -5290,7 +5290,7 @@ req = Models::Operations::PatchAccountingSalesorderRequest.new(
     tax_amount: 0.0,
     tip_amount: 0.0,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-03-31T12:14:00.745Z')
+    updated_at: DateTime.iso8601('2023-03-31T11:42:22.776Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -5349,7 +5349,7 @@ req = Models::Operations::PatchAccountingTaxrateRequest.new(
     created_at: DateTime.iso8601('2020-01-04T10:37:56.894Z'),
     description: 'Exempt (0%)',
     effective_rate: 0.0,
-    id: 'feae6f46-35fd-4919-abfe-7f00c7efc969',
+    id: '71a5f736-7acb-4080-b431-7efc61ac25ee',
     is_active: false,
     is_compound: false,
     metadata: [],
@@ -5358,7 +5358,7 @@ req = Models::Operations::PatchAccountingTaxrateRequest.new(
     region: 'KS',
     total_rate: 0.0,
     type: Models::Shared::AccountingTaxrateType::SALES,
-    updated_at: DateTime.iso8601('2020-02-13T14:24:06.888Z')
+    updated_at: DateTime.iso8601('2020-02-13T14:22:04.516Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -5407,12 +5407,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAccountingTransactionRequest.new(
   accounting_transaction: Models::Shared::AccountingTransaction.new(
     created_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-    id: '4e46c0b7-487b-4cd8-aa08-d9be24c154d6',
+    id: 'a5cb74f9-c547-4ac8-9429-a888a6d41c5f',
     lineitems: [
       Models::Shared::AccountingTransactionLineItem.new(
         category_ids: [],
         description: 'The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability',
-        id: '95af0bba-8f4f-4686-8329-02bd3b3e0fa6',
+        id: '1768d536-661d-4d5e-8511-1d0b18929239',
         name: 'Shirt',
         total_amount: 10_184.0,
         unit_amount: 536.0,
@@ -5424,7 +5424,7 @@ req = Models::Operations::PatchAccountingTransactionRequest.new(
     tax_amount: 0.0,
     total_amount: 10_184.0,
     transaction_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-    updated_at: DateTime.iso8601('2019-10-14T10:19:49.943Z')
+    updated_at: DateTime.iso8601('2019-10-14T10:18:54.450Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -5476,14 +5476,14 @@ req = Models::Operations::PatchAccountingVendorcreditRequest.new(
     balance_amount: 0.0,
     created_at: DateTime.iso8601('2023-04-15T21:14:08.197Z'),
     currency: 'USD',
-    id: '52556dfa-7198-4314-9fe7-3bca5f4386ac',
+    id: '06266233-1a21-4cea-aec4-1184c33d5892',
     lineitems: [],
     metadata: [],
     notes: 'Volup conatus cruciamentum decor avaritia.',
     posted_at: DateTime.iso8601('2023-04-15T21:14:08.197Z'),
     status: Models::Shared::AccountingVendorcreditStatus::AUTHORIZED,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-10-06T06:05:33.193Z')
+    updated_at: DateTime.iso8601('2023-10-06T05:48:41.259Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -6358,7 +6358,7 @@ req = Models::Operations::UpdateAccountingAccountRequest.new(
     currency: 'CAD',
     customer_defined_code: '6170',
     description: 'Voluptatibus valde spoliatio.',
-    id: 'd3fdf470-a104-4bb6-a1e1-2ffd5cf71d12',
+    id: '873ba1b6-4c96-4bf5-ae79-e6abd43f0e08',
     is_payable: false,
     metadata: [],
     name: 'Auto Loan Account',
@@ -6371,7 +6371,7 @@ req = Models::Operations::UpdateAccountingAccountRequest.new(
       ),
     ],
     type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-    updated_at: DateTime.iso8601('2023-08-13T00:11:49.223Z')
+    updated_at: DateTime.iso8601('2023-08-12T23:39:28.308Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -6427,12 +6427,12 @@ req = Models::Operations::UpdateAccountingBankfeedaccountRequest.new(
     created_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
     currency: 'AUD',
     feed_start_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
-    id: 'b4e9d267-7c25-4d1d-a183-443011c2f2b7',
+    id: '1a788441-7cf2-4f9a-bbb9-ae808324543d',
     metadata: [],
     name: 'Corwin, Donnelly and Connelly Checking',
     routing_number: '694667752',
     status: Models::Shared::AccountingBankfeedaccountStatus::ACTIVE,
-    updated_at: DateTime.iso8601('2024-05-02T18:36:02.837Z')
+    updated_at: DateTime.iso8601('2024-05-02T17:48:39.331Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -6486,15 +6486,15 @@ req = Models::Operations::UpdateAccountingBankfeedtransactionRequest.new(
     created_at: DateTime.iso8601('2022-03-24T23:41:08.374Z'),
     currency: 'CAD',
     description: 'Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781.',
-    id: 'c79700be-e9bb-4a65-a2d2-09958b731357',
+    id: '28c62e2a-93cf-4592-bbf9-a75d48a8087b',
     is_pending: true,
     merchant_name: 'Buckridge - Feest',
     metadata: [],
-    posted_at: DateTime.iso8601('2025-04-30T21:11:57.661Z'),
+    posted_at: DateTime.iso8601('2025-04-30T19:46:54.686Z'),
     reference: '79574105',
-    transaction_at: DateTime.iso8601('2022-08-01T04:05:52.817Z'),
+    transaction_at: DateTime.iso8601('2022-08-01T03:56:10.926Z'),
     type: Models::Shared::AccountingBankfeedtransactionType::CREDIT,
-    updated_at: DateTime.iso8601('2022-05-25T22:48:52.008Z')
+    updated_at: DateTime.iso8601('2022-05-25T22:44:12.901Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -6545,13 +6545,13 @@ req = Models::Operations::UpdateAccountingBillRequest.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://puny-foodstuffs.name',
-        id: '0a4726d8-ed43-4e41-a328-489c4294480b',
+        id: '0ccc0edc-e1ce-4888-bcc5-52df0ddd5a83',
         mime_type: 'application/pdf',
         name: 'BILL-2466.pdf'
       ),
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://grimy-characterization.net',
-        id: '46da6231-6c72-43ff-b5a7-55ea1b867180',
+        id: 'b6abfa51-0471-4fb4-8aaf-bbfe7104a290',
         mime_type: 'application/pdf',
         name: 'BILL-2466-1.pdf'
       ),
@@ -6564,7 +6564,7 @@ req = Models::Operations::UpdateAccountingBillRequest.new(
     discount_amount: 0.0,
     due_at: DateTime.iso8601('2019-09-07T23:03:14.104Z'),
     extended_notes: [],
-    id: 'c96ec42f-51fb-440f-8f81-17fe48ddfaed',
+    id: '9f2e2ceb-45a6-4ef5-ba4d-2889db95f3d0',
     lineitems: [],
     metadata: [],
     notes: 'Admiratio deporto tutamen cilicium infit amissio ante demulceo.',
@@ -6580,7 +6580,7 @@ req = Models::Operations::UpdateAccountingBillRequest.new(
     tax_amount: 0.0,
     term: Models::Shared::Term::NET_90,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2020-06-03T21:38:04.412Z'),
+    updated_at: DateTime.iso8601('2020-06-03T21:23:58.828Z'),
     url: 'https://cluttered-importance.org/bills/BILL-2466'
   ),
   connection_id: '<id>',
@@ -6631,11 +6631,11 @@ req = Models::Operations::UpdateAccountingCategoryRequest.new(
   accounting_category: Models::Shared::AccountingCategory.new(
     created_at: DateTime.iso8601('2023-05-30T12:29:04.257Z'),
     description: 'Textus ab thymum labore basium.',
-    id: '675bcfd0-ce8b-426a-bd9c-04d86d71caf9',
+    id: '0dcd76e4-67ed-4b6e-8cf0-f07d1cf48b54',
     is_active: false,
     metadata: [],
     name: 'Beauty',
-    updated_at: DateTime.iso8601('2025-09-27T16:28:12.474Z')
+    updated_at: DateTime.iso8601('2025-09-27T15:02:28.954Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -6707,7 +6707,7 @@ req = Models::Operations::UpdateAccountingContactRequest.new(
       ),
     ],
     first_name: 'Delores',
-    id: '5ad0247b-186a-4bcf-bc3f-7460dcde2915',
+    id: '4e2c2ff5-12c9-4a1c-851d-4c45d8f6f8b0',
     identification: '531850872',
     is_active: true,
     is_customer: true,
@@ -6718,7 +6718,7 @@ req = Models::Operations::UpdateAccountingContactRequest.new(
     payment_methods: [
       Models::Shared::AccountingContactPaymentMethod.new(
         default: true,
-        id: 'fb75316c-4dad-4a4e-8bba-888a8615c99b',
+        id: '916a7b79-9035-49a6-ad81-48e4ed464e29',
         name: 'Visa 7844',
         type: Models::Shared::AccountingContactPaymentMethodType::CARD
       ),
@@ -6740,7 +6740,7 @@ req = Models::Operations::UpdateAccountingContactRequest.new(
         type: Models::Shared::AccountingTelephoneType::FAX
       ),
     ],
-    updated_at: DateTime.iso8601('2023-12-30T17:39:10.419Z'),
+    updated_at: DateTime.iso8601('2023-12-30T16:41:35.639Z'),
     website: 'https://kertzmanngroup.com'
   ),
   connection_id: '<id>',
@@ -6796,7 +6796,7 @@ req = Models::Operations::UpdateAccountingCreditmemoRequest.new(
     creditmemo_number: 'CM-99537',
     currency: 'AUD',
     discount_amount: 0.0,
-    id: '56af1aff-4230-4bb5-b47a-9861af68a93d',
+    id: '54656b63-863d-4d30-a70a-bb9540e498ea',
     lineitems: [],
     metadata: [],
     notes: 'Hic vorax dedecor amo adfero torqueo quas victoria.',
@@ -6805,7 +6805,7 @@ req = Models::Operations::UpdateAccountingCreditmemoRequest.new(
     status: Models::Shared::AccountingCreditmemoStatus::AUTHORIZED,
     tax_amount: 0.0,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2025-09-26T17:21:58.234Z')
+    updated_at: DateTime.iso8601('2025-09-26T16:00:24.624Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -6856,13 +6856,13 @@ req = Models::Operations::UpdateAccountingExpenseRequest.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://rubbery-couch.biz/',
-        id: '27700a50-c734-484e-ad2f-e615af5bc083',
+        id: 'fc27fcfe-9bff-4cd1-9e60-349d4f5f4f7a',
         mime_type: 'application/pdf',
         name: 'receipt-9696.pdf'
       ),
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://appropriate-smog.biz/',
-        id: '912f3682-a43c-4a55-84cd-7646f9ac30cd',
+        id: '109bc60a-ad08-4fa0-b2f7-790fc5f10dc0',
         mime_type: 'application/pdf',
         name: 'receipt-9696-1.pdf'
       ),
@@ -6871,10 +6871,10 @@ req = Models::Operations::UpdateAccountingExpenseRequest.new(
     created_at: DateTime.iso8601('2020-06-11T03:39:37.305Z'),
     currency: 'GBP',
     external_number: 'EXP-38303',
-    id: '78137057-8dac-443b-8491-c068af684a67',
+    id: '2c732f9b-8cc8-4b99-8ec3-84e2ba54aead',
     lineitems: [
       Models::Shared::AccountingLineitem.new(
-        id: 'ec5a1bc8-4ec6-4eb2-b1ec-2654f9103770',
+        id: 'd721bf8d-6d07-41d1-a882-e111e30d257b',
         item_name: 'Client dinner',
         tax_amount: 0.0,
         total_amount: 364.74,
@@ -6882,7 +6882,7 @@ req = Models::Operations::UpdateAccountingExpenseRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '688bbcc6-c13f-4911-a4e7-0faf43f787e8',
+        id: '52112b69-e38b-42a6-96d2-b0f8a536b07c',
         item_name: 'Client dinner',
         tax_amount: 0.0,
         total_amount: 258.35,
@@ -6890,7 +6890,7 @@ req = Models::Operations::UpdateAccountingExpenseRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'db65c6a4-d722-40fb-9a52-29e003d7b7be',
+        id: 'ad2125a1-43db-48fc-a732-0c6749c6d56e',
         item_name: 'Conference ticket',
         notes: 'Casus umquam conicio cinis demitto sint.',
         tax_amount: 0.0,
@@ -6899,7 +6899,7 @@ req = Models::Operations::UpdateAccountingExpenseRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'a5261856-b984-48bc-8b03-f4c8eaa8021e',
+        id: '781e72ad-5104-4ca1-ad73-993d8d1d60d0',
         item_name: 'Hotel',
         tax_amount: 0.0,
         total_amount: 157.04,
@@ -6907,7 +6907,7 @@ req = Models::Operations::UpdateAccountingExpenseRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'ca613a61-3fa0-4330-a7bd-0e19b9a799df',
+        id: 'b39fbef9-3967-456c-be1d-0eb5058913ae',
         item_name: 'Hotel',
         tax_amount: 0.0,
         total_amount: 164.02,
@@ -6923,7 +6923,7 @@ req = Models::Operations::UpdateAccountingExpenseRequest.new(
     tax_amount: 0.0,
     total_amount: 972.29,
     type: Models::Shared::AccountingExpenseType::COMPANY,
-    updated_at: DateTime.iso8601('2020-09-03T03:55:09.903Z')
+    updated_at: DateTime.iso8601('2020-09-03T03:50:36.587Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -6971,16 +6971,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateAccountingExpensereportRequest.new(
   accounting_expensereport: Models::Shared::AccountingExpensereport.new(
-    approved_at: DateTime.iso8601('2021-04-22T19:46:36.134Z'),
+    approved_at: DateTime.iso8601('2021-04-22T19:28:52.568Z'),
     attachments: [],
     category_ids: [],
     created_at: DateTime.iso8601('2020-05-29T02:04:59.078Z'),
     currency: 'GBP',
     external_number: 'ER-31240',
-    id: '8b59756b-276b-43fc-8e20-2529d753f90f',
+    id: '67ce5227-a6cf-4b81-8af2-1415f56609ca',
     lineitems: [
       Models::Shared::AccountingLineitem.new(
-        id: '39ec4711-311b-4f67-91dc-b565d7d255d7',
+        id: 'd7371772-15b7-4687-9324-94f1909a2d7b',
         item_name: 'Conference ticket',
         tax_amount: 0.0,
         total_amount: 39.9,
@@ -6988,7 +6988,7 @@ req = Models::Operations::UpdateAccountingExpensereportRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '06563cf4-0965-4c02-8784-be19e91ba54e',
+        id: '86b430ae-e85b-4bc9-b8f9-f7b26c8f06dd',
         item_name: 'Flight',
         notes: 'Soluta omnis dolor.',
         tax_amount: 0.0,
@@ -6997,7 +6997,7 @@ req = Models::Operations::UpdateAccountingExpensereportRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '2ea073d5-f8f6-4fba-aa49-761dc4ce2657',
+        id: '749963f0-7ba0-4904-9af2-50397a6212e4',
         item_name: 'Client dinner',
         notes: 'Altus caveo capio.',
         tax_amount: 0.0,
@@ -7006,7 +7006,7 @@ req = Models::Operations::UpdateAccountingExpensereportRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '38462f3c-d0f2-4a09-a7ef-7d85bd1446dc',
+        id: '5e6a67c5-5775-4f76-b128-6bc7c458cb57',
         item_name: 'Flight',
         tax_amount: 0.0,
         total_amount: 445.27,
@@ -7018,11 +7018,11 @@ req = Models::Operations::UpdateAccountingExpensereportRequest.new(
     name: 'Lolita Kunde - October expenses',
     posted_at: DateTime.iso8601('2020-05-29T02:04:59.078Z'),
     reimbursed_amount: 908.46,
-    reimbursed_at: DateTime.iso8601('2021-04-22T19:46:36.134Z'),
+    reimbursed_at: DateTime.iso8601('2021-04-22T19:28:52.568Z'),
     status: Models::Shared::AccountingExpensereportStatus::PAID,
     tax_amount: 0.0,
     total_amount: 908.46,
-    updated_at: DateTime.iso8601('2021-04-22T19:46:36.134Z')
+    updated_at: DateTime.iso8601('2021-04-22T19:28:52.568Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -7073,13 +7073,13 @@ req = Models::Operations::UpdateAccountingInvoiceRequest.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://glossy-markup.net/',
-        id: 'e27afb7a-5596-4e1c-a57d-5507cca0fa3d',
+        id: '358133b6-7d3a-4981-bb10-295bab2b49ae',
         mime_type: 'application/pdf',
         name: 'INV-77705.pdf'
       ),
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://earnest-giggle.net',
-        id: 'f919a2bf-56d3-40fc-9734-cc73dd1f9750',
+        id: 'a05a83a4-6e7a-4250-8030-5eb370b6f8a0',
         mime_type: 'application/pdf',
         name: 'INV-77705-1.pdf'
       ),
@@ -7091,7 +7091,7 @@ req = Models::Operations::UpdateAccountingInvoiceRequest.new(
     discount_amount: 0.0,
     due_at: DateTime.iso8601('2022-12-07T14:17:29.587Z'),
     extended_notes: [],
-    id: '3764b166-c4e6-47c4-bd47-1f6960c98442',
+    id: 'cf4bfd70-a7d0-4840-8976-7181ac5bf2c7',
     invoice_number: 'INV-77705',
     is_inclusive_of_tax: false,
     lineitems: [],
@@ -7109,7 +7109,7 @@ req = Models::Operations::UpdateAccountingInvoiceRequest.new(
     term: Models::Shared::AccountingInvoiceTerm::NET_25,
     total_amount: 0.0,
     type: Models::Shared::AccountingInvoiceType::INVOICE,
-    updated_at: DateTime.iso8601('2026-05-14T13:23:03.815Z'),
+    updated_at: DateTime.iso8601('2026-05-14T11:31:43.003Z'),
     url: 'https://gifted-yarmulke.info/invoices/INV-77705'
   ),
   connection_id: '<id>',
@@ -7163,16 +7163,16 @@ req = Models::Operations::UpdateAccountingJournalRequest.new(
     created_at: DateTime.iso8601('2020-02-20T15:14:55.881Z'),
     currency: 'CAD',
     description: 'Cilicium minima calco constans adipisci.',
-    id: '9504da39-6a13-4bd6-b967-448d4757cb27',
+    id: 'ff97de60-32c3-487a-8ece-336573c6f9a3',
     is_inclusive_of_tax: true,
     lineitems: [],
     metadata: [],
-    posted_at: DateTime.iso8601('2023-11-19T19:27:25.876Z'),
+    posted_at: DateTime.iso8601('2023-11-19T18:16:36.508Z'),
     reference: 'JE-78884',
     source: 'crustulum',
     status: Models::Shared::AccountingJournalStatus::VOID,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2022-01-17T15:07:42.927Z')
+    updated_at: DateTime.iso8601('2022-01-17T14:31:38.155Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -7232,7 +7232,7 @@ req = Models::Operations::UpdateAccountingOrderRequest.new(
     ),
     created_at: DateTime.iso8601('2020-11-20T03:46:49.837Z'),
     currency: 'GBP',
-    id: '459d700c-1c48-432d-9fbc-3a4e2ffc1bcb',
+    id: 'e9f6d21c-2d57-4cdb-886f-7ba6f8d1e984',
     lineitems: [],
     metadata: [],
     posted_at: DateTime.iso8601('2020-11-20T03:46:49.837Z'),
@@ -7247,7 +7247,7 @@ req = Models::Operations::UpdateAccountingOrderRequest.new(
     status: Models::Shared::AccountingOrderStatus::AUTHORIZED,
     total_amount: 0.0,
     type: Models::Shared::AccountingOrderType::SALES,
-    updated_at: DateTime.iso8601('2022-02-13T06:03:09.708Z')
+    updated_at: DateTime.iso8601('2022-02-13T05:36:56.790Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -7304,12 +7304,12 @@ req = Models::Operations::UpdateAccountingPaymenttermRequest.new(
     discount_percent: 5.0,
     due_days: 57.0,
     due_next_month_days: 9.0,
-    id: '3368a8b2-a543-43d8-b216-37f08410aa2a',
+    id: '1c11dcd8-3ee4-4b11-8851-aa187e8490b2',
     is_active: false,
     metadata: [],
     name: 'Net 30',
     type: Models::Shared::AccountingPaymenttermType::NET_15,
-    updated_at: DateTime.iso8601('2026-01-28T20:17:17.761Z')
+    updated_at: DateTime.iso8601('2026-01-28T18:29:18.958Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -7416,7 +7416,7 @@ req = Models::Operations::UpdateAccountingPurchaseorderRequest.new(
     category_ids: [],
     created_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
     currency: 'EUR',
-    id: '4321572c-2784-4ba3-baf1-29fbe64c149d',
+    id: 'e2fc2c5f-424e-4b25-8bff-1e939bb00dc1',
     lineitems: [],
     metadata: [],
     posted_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
@@ -7430,7 +7430,7 @@ req = Models::Operations::UpdateAccountingPurchaseorderRequest.new(
     ),
     status: Models::Shared::AccountingPurchaseorderStatus::SUBMITTED,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2021-08-13T23:12:40.955Z')
+    updated_at: DateTime.iso8601('2021-08-13T22:58:17.194Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -7534,13 +7534,13 @@ req = Models::Operations::UpdateAccountingSalesorderRequest.new(
       region_code: 'MO'
     ),
     category_ids: [],
-    closed_at: DateTime.iso8601('2023-03-31T12:14:00.745Z'),
+    closed_at: DateTime.iso8601('2023-03-31T11:42:22.776Z'),
     created_at: DateTime.iso8601('2022-01-17T16:11:50.310Z'),
     currency: 'USD',
     discount_amount: 0.0,
     fees: [],
     fulfillment_type: Models::Shared::FulfillmentType::OTHER,
-    id: 'f9a42e7a-730b-4a83-8e08-e55e57b4f0f3',
+    id: '6f4c0b1f-2f37-4c60-b77b-f8a12d32d9e3',
     lineitems: [],
     metadata: [],
     order_number: '832663',
@@ -7563,7 +7563,7 @@ req = Models::Operations::UpdateAccountingSalesorderRequest.new(
     tax_amount: 0.0,
     tip_amount: 0.0,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-03-31T12:14:00.745Z')
+    updated_at: DateTime.iso8601('2023-03-31T11:42:22.776Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -7622,7 +7622,7 @@ req = Models::Operations::UpdateAccountingTaxrateRequest.new(
     created_at: DateTime.iso8601('2020-01-04T10:37:56.894Z'),
     description: 'Exempt (0%)',
     effective_rate: 0.0,
-    id: 'feae6f46-35fd-4919-abfe-7f00c7efc969',
+    id: '71a5f736-7acb-4080-b431-7efc61ac25ee',
     is_active: false,
     is_compound: false,
     metadata: [],
@@ -7631,7 +7631,7 @@ req = Models::Operations::UpdateAccountingTaxrateRequest.new(
     region: 'KS',
     total_rate: 0.0,
     type: Models::Shared::AccountingTaxrateType::SALES,
-    updated_at: DateTime.iso8601('2020-02-13T14:24:06.888Z')
+    updated_at: DateTime.iso8601('2020-02-13T14:22:04.516Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -7680,12 +7680,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAccountingTransactionRequest.new(
   accounting_transaction: Models::Shared::AccountingTransaction.new(
     created_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-    id: '4e46c0b7-487b-4cd8-aa08-d9be24c154d6',
+    id: 'a5cb74f9-c547-4ac8-9429-a888a6d41c5f',
     lineitems: [
       Models::Shared::AccountingTransactionLineItem.new(
         category_ids: [],
         description: 'The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability',
-        id: '95af0bba-8f4f-4686-8329-02bd3b3e0fa6',
+        id: '1768d536-661d-4d5e-8511-1d0b18929239',
         name: 'Shirt',
         total_amount: 10_184.0,
         unit_amount: 536.0,
@@ -7697,7 +7697,7 @@ req = Models::Operations::UpdateAccountingTransactionRequest.new(
     tax_amount: 0.0,
     total_amount: 10_184.0,
     transaction_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-    updated_at: DateTime.iso8601('2019-10-14T10:19:49.943Z')
+    updated_at: DateTime.iso8601('2019-10-14T10:18:54.450Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -7749,14 +7749,14 @@ req = Models::Operations::UpdateAccountingVendorcreditRequest.new(
     balance_amount: 0.0,
     created_at: DateTime.iso8601('2023-04-15T21:14:08.197Z'),
     currency: 'USD',
-    id: '52556dfa-7198-4314-9fe7-3bca5f4386ac',
+    id: '06266233-1a21-4cea-aec4-1184c33d5892',
     lineitems: [],
     metadata: [],
     notes: 'Volup conatus cruciamentum decor avaritia.',
     posted_at: DateTime.iso8601('2023-04-15T21:14:08.197Z'),
     status: Models::Shared::AccountingVendorcreditStatus::AUTHORIZED,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-10-06T06:05:33.193Z')
+    updated_at: DateTime.iso8601('2023-10-06T05:48:41.259Z')
   ),
   connection_id: '<id>',
   id: '<id>'

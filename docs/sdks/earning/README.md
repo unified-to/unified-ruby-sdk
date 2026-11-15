@@ -32,12 +32,12 @@ res = s.earning.create_hris_earning(hris_earning: Models::Shared::HrisEarning.ne
   created_at: DateTime.iso8601('2019-01-26T12:44:52.326Z'),
   currency: 'USD',
   frequency: Models::Shared::HrisEarningFrequency::SEMIMONTHLY,
-  id: 'ea53ed78-a912-4ef2-93dd-1e3fab07ee49',
+  id: '2e936362-d9dd-45ab-bd96-bc29ede022f0',
   metadata: [],
   notes: 'Deporto truculenter vinum beatae.',
-  start_at: DateTime.iso8601('2022-08-05T08:11:40.070Z'),
+  start_at: DateTime.iso8601('2022-08-05T07:14:10.727Z'),
   status: Models::Shared::HrisEarningStatus::ENDED,
-  updated_at: DateTime.iso8601('2020-02-12T01:45:04.912Z')
+  updated_at: DateTime.iso8601('2020-02-12T01:28:02.175Z')
 ), connection_id: '<id>')
 
 unless res.hris_earning.nil?
@@ -175,12 +175,12 @@ req = Models::Operations::PatchHrisEarningRequest.new(
     created_at: DateTime.iso8601('2019-01-26T12:44:52.326Z'),
     currency: 'USD',
     frequency: Models::Shared::HrisEarningFrequency::SEMIMONTHLY,
-    id: '85246095-7ad3-4d03-9357-d5f3d68daa1b',
+    id: '619205ff-80cf-49b6-9936-62ad901e34bc',
     metadata: [],
     notes: 'Deporto truculenter vinum beatae.',
-    start_at: DateTime.iso8601('2022-08-05T08:11:40.077Z'),
+    start_at: DateTime.iso8601('2022-08-05T07:14:10.733Z'),
     status: Models::Shared::HrisEarningStatus::ENDED,
-    updated_at: DateTime.iso8601('2020-02-12T01:45:04.914Z')
+    updated_at: DateTime.iso8601('2020-02-12T01:28:02.177Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -273,12 +273,12 @@ req = Models::Operations::UpdateHrisEarningRequest.new(
     created_at: DateTime.iso8601('2019-01-26T12:44:52.326Z'),
     currency: 'USD',
     frequency: Models::Shared::HrisEarningFrequency::SEMIMONTHLY,
-    id: '85246095-7ad3-4d03-9357-d5f3d68daa1b',
+    id: '619205ff-80cf-49b6-9936-62ad901e34bc',
     metadata: [],
     notes: 'Deporto truculenter vinum beatae.',
-    start_at: DateTime.iso8601('2022-08-05T08:11:40.077Z'),
+    start_at: DateTime.iso8601('2022-08-05T07:14:10.733Z'),
     status: Models::Shared::HrisEarningStatus::ENDED,
-    updated_at: DateTime.iso8601('2020-02-12T01:45:04.914Z')
+    updated_at: DateTime.iso8601('2020-02-12T01:28:02.177Z')
   ),
   connection_id: '<id>',
   id: '<id>'

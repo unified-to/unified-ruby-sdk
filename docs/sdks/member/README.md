@@ -39,7 +39,7 @@ res = s.member.create_martech_member(marketing_member: Models::Shared::Marketing
     ),
   ],
   first_name: 'Jude',
-  id: '869d2639-6086-4ce0-9eca-c59e23cffa1d',
+  id: '1c93579a-0388-4948-bec2-08a18e6c2b02',
   last_name: 'Leffler',
   metadata: [],
   name: 'Jude Leffler',
@@ -48,7 +48,7 @@ res = s.member.create_martech_member(marketing_member: Models::Shared::Marketing
     'adnuo',
     'verumtamen',
   ],
-  updated_at: DateTime.iso8601('2025-07-26T00:17:58.697Z')
+  updated_at: DateTime.iso8601('2025-07-25T22:46:55.311Z')
 ), connection_id: '<id>')
 
 unless res.marketing_member.nil?
@@ -278,7 +278,7 @@ req = Models::Operations::PatchMartechMemberRequest.new(
       ),
     ],
     first_name: 'Jude',
-    id: '812fc047-98df-4613-aa32-1bd0404c1b8d',
+    id: 'b2d56c88-3ad7-4c96-ae11-4dd826fe0c3e',
     last_name: 'Leffler',
     metadata: [],
     name: 'Jude Leffler',
@@ -287,7 +287,7 @@ req = Models::Operations::PatchMartechMemberRequest.new(
       'adnuo',
       'verumtamen',
     ],
-    updated_at: DateTime.iso8601('2025-07-26T00:17:58.708Z')
+    updated_at: DateTime.iso8601('2025-07-25T22:46:55.324Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -385,7 +385,7 @@ req = Models::Operations::UpdateMartechMemberRequest.new(
       ),
     ],
     first_name: 'Jude',
-    id: '812fc047-98df-4613-aa32-1bd0404c1b8d',
+    id: 'b2d56c88-3ad7-4c96-ae11-4dd826fe0c3e',
     last_name: 'Leffler',
     metadata: [],
     name: 'Jude Leffler',
@@ -394,7 +394,7 @@ req = Models::Operations::UpdateMartechMemberRequest.new(
       'adnuo',
       'verumtamen',
     ],
-    updated_at: DateTime.iso8601('2025-07-26T00:17:58.708Z')
+    updated_at: DateTime.iso8601('2025-07-25T22:46:55.324Z')
   ),
   connection_id: '<id>',
   id: '<id>'

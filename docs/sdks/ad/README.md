@@ -35,11 +35,11 @@ res = s.ad.create_ads_ad(ads_ad: Models::Shared::AdsAd.new(
   creative_asset_url: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
   description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
   final_url: 'https://improbable-sanity.com',
-  id: '4e97b5a7-4b99-47b5-88de-1605690a46e6',
+  id: 'c86df58e-505b-43ba-bc1d-8af27d368b46',
   metadata: [],
   name: 'Hermiston Group',
   status: Models::Shared::AdsAdStatus::ARCHIVED,
-  updated_at: DateTime.iso8601('2024-06-28T08:43:07.161Z')
+  updated_at: DateTime.iso8601('2024-06-28T07:51:13.646Z')
 ), connection_id: '<id>')
 
 unless res.ads_ad.nil?
@@ -180,11 +180,11 @@ req = Models::Operations::PatchAdsAdRequest.new(
     creative_asset_url: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
     description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
     final_url: 'https://improbable-sanity.com',
-    id: '1c9ee7be-bbad-423d-be12-2bc36827394f',
+    id: 'ee4be19d-a03d-451e-b66b-4585bb61f368',
     metadata: [],
     name: 'Hermiston Group',
     status: Models::Shared::AdsAdStatus::ARCHIVED,
-    updated_at: DateTime.iso8601('2024-06-28T08:43:07.173Z')
+    updated_at: DateTime.iso8601('2024-06-28T07:51:13.659Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -280,11 +280,11 @@ req = Models::Operations::UpdateAdsAdRequest.new(
     creative_asset_url: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
     description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
     final_url: 'https://improbable-sanity.com',
-    id: '1c9ee7be-bbad-423d-be12-2bc36827394f',
+    id: 'ee4be19d-a03d-451e-b66b-4585bb61f368',
     metadata: [],
     name: 'Hermiston Group',
     status: Models::Shared::AdsAdStatus::ARCHIVED,
-    updated_at: DateTime.iso8601('2024-06-28T08:43:07.173Z')
+    updated_at: DateTime.iso8601('2024-06-28T07:51:13.659Z')
   ),
   connection_id: '<id>',
   id: '<id>'

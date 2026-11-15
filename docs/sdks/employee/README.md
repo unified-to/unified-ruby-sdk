@@ -64,7 +64,7 @@ res = s.employee.create_hris_employee(hris_employee: Models::Shared::HrisEmploye
   gender: Models::Shared::HrisEmployeeGender::MALE,
   has_mfa: true,
   hired_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
-  id: '7b887e90-438f-49b2-9a00-59cc3e78d455',
+  id: 'c1ce070f-7cbd-48f5-be73-0229cd1112e6',
   image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg',
   language_locale: 'in',
   last_name: 'Prohaska',
@@ -76,7 +76,7 @@ res = s.employee.create_hris_employee(hris_employee: Models::Shared::HrisEmploye
         'display_name' => 'Custom Property',
       },
       format: Models::Shared::HrisMetadataFormat::TEXT,
-      id: '0cfef72e-d8a7-4e0a-beee-c77588c5574a',
+      id: '22e1ea5e-4936-43fd-b811-6bb629de7964',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'tutis'
@@ -124,7 +124,7 @@ res = s.employee.create_hris_employee(hris_employee: Models::Shared::HrisEmploye
   timeoff_days_used: 9.0,
   timezone: 'Europe/Ljubljana',
   title: 'District Branding Specialist',
-  updated_at: DateTime.iso8601('2020-07-22T00:23:40.622Z')
+  updated_at: DateTime.iso8601('2020-07-22T00:08:37.390Z')
 ), connection_id: '<id>')
 
 unless res.hris_employee.nil?
@@ -294,7 +294,7 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
     gender: Models::Shared::HrisEmployeeGender::MALE,
     has_mfa: true,
     hired_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
-    id: 'e18a0461-61d3-4b53-a55a-012031976432',
+    id: 'c66b91cc-f11d-4504-b4d0-d59875cc76f9',
     image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg',
     language_locale: 'in',
     last_name: 'Prohaska',
@@ -306,7 +306,7 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::HrisMetadataFormat::TEXT,
-        id: '2141bd23-5a5d-4041-a1ad-88013ac55828',
+        id: '9f147f26-c019-4e53-bb1e-de68c273686b',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'tutis'
@@ -354,7 +354,7 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
     timeoff_days_used: 9.0,
     timezone: 'Europe/Ljubljana',
     title: 'District Branding Specialist',
-    updated_at: DateTime.iso8601('2020-07-22T00:23:40.631Z')
+    updated_at: DateTime.iso8601('2020-07-22T00:08:37.399Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -479,7 +479,7 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
     gender: Models::Shared::HrisEmployeeGender::MALE,
     has_mfa: true,
     hired_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
-    id: 'e18a0461-61d3-4b53-a55a-012031976432',
+    id: 'c66b91cc-f11d-4504-b4d0-d59875cc76f9',
     image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg',
     language_locale: 'in',
     last_name: 'Prohaska',
@@ -491,7 +491,7 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::HrisMetadataFormat::TEXT,
-        id: '2141bd23-5a5d-4041-a1ad-88013ac55828',
+        id: '9f147f26-c019-4e53-bb1e-de68c273686b',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'tutis'
@@ -539,7 +539,7 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
     timeoff_days_used: 9.0,
     timezone: 'Europe/Ljubljana',
     title: 'District Branding Specialist',
-    updated_at: DateTime.iso8601('2020-07-22T00:23:40.631Z')
+    updated_at: DateTime.iso8601('2020-07-22T00:08:37.399Z')
   ),
   connection_id: '<id>',
   id: '<id>'
