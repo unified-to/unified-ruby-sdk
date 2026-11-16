@@ -12,7 +12,7 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-        # A nonconformance, complaint, audit finding or problem report
+        # A nonconformance, complaint, audit finding or other quality issue
         field :qms_issue, Models::Shared::QmsIssue, { 'request': { 'media_type': 'application/json' } }
         # ID of the connection
         field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }

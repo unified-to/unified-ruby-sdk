@@ -37,13 +37,13 @@ res = s.expense.create_accounting_expense(accounting_expense: Models::Shared::Ac
   attachments: [
     Models::Shared::AccountingAttachment.new(
       download_url: 'https://rubbery-couch.biz/',
-      id: 'a85d9b6e-0e2f-4510-92f2-95c6efde50fe',
+      id: '8a964a8d-a97d-46b4-8657-1a9d2150a641',
       mime_type: 'application/pdf',
       name: 'receipt-9696.pdf'
     ),
     Models::Shared::AccountingAttachment.new(
       download_url: 'https://appropriate-smog.biz/',
-      id: '8bbbd42c-f6f1-4373-9554-d39719d91d0b',
+      id: '89f2b37e-23e2-4e87-8bd2-111a28a8cfc9',
       mime_type: 'application/pdf',
       name: 'receipt-9696-1.pdf'
     ),
@@ -52,10 +52,10 @@ res = s.expense.create_accounting_expense(accounting_expense: Models::Shared::Ac
   created_at: DateTime.iso8601('2020-06-11T03:39:37.305Z'),
   currency: 'GBP',
   external_number: 'EXP-38303',
-  id: '0bca6dd5-ca8f-4415-ab50-84f72eb7aad6',
+  id: '53cf0070-0ff5-40ce-b282-e0ee679fec99',
   lineitems: [
     Models::Shared::AccountingLineitem.new(
-      id: '9d324add-f68f-4c96-86ea-57d122ca3d15',
+      id: '4bb40dcb-789a-4d9d-bd38-dbfd14e8781d',
       item_name: 'Client dinner',
       tax_amount: 0.0,
       total_amount: 364.74,
@@ -63,7 +63,7 @@ res = s.expense.create_accounting_expense(accounting_expense: Models::Shared::Ac
       unit_quantity: 1.0
     ),
     Models::Shared::AccountingLineitem.new(
-      id: '8d642dd6-eda4-444c-9f18-598692b647c4',
+      id: '250ce801-4314-4265-89f6-b6f62c2318eb',
       item_name: 'Client dinner',
       tax_amount: 0.0,
       total_amount: 258.35,
@@ -71,7 +71,7 @@ res = s.expense.create_accounting_expense(accounting_expense: Models::Shared::Ac
       unit_quantity: 1.0
     ),
     Models::Shared::AccountingLineitem.new(
-      id: '6dd7cdc6-9405-4c9b-b289-87bb5e6961e0',
+      id: '57470dda-c2dc-4830-8eb5-edb0cf16b0ea',
       item_name: 'Conference ticket',
       notes: 'Casus umquam conicio cinis demitto sint.',
       tax_amount: 0.0,
@@ -80,7 +80,7 @@ res = s.expense.create_accounting_expense(accounting_expense: Models::Shared::Ac
       unit_quantity: 1.0
     ),
     Models::Shared::AccountingLineitem.new(
-      id: '789b930b-b8d7-40db-9913-c458bb82dd01',
+      id: '75cb9ac3-1f84-4ea0-a2d8-081f46d9b8e2',
       item_name: 'Hotel',
       tax_amount: 0.0,
       total_amount: 157.04,
@@ -88,7 +88,7 @@ res = s.expense.create_accounting_expense(accounting_expense: Models::Shared::Ac
       unit_quantity: 1.0
     ),
     Models::Shared::AccountingLineitem.new(
-      id: '51a221e7-f733-41d6-9465-166abd4d755a',
+      id: 'db82921a-b95d-42f1-b6a4-d7f3ea8a4315',
       item_name: 'Hotel',
       tax_amount: 0.0,
       total_amount: 164.02,
@@ -104,7 +104,7 @@ res = s.expense.create_accounting_expense(accounting_expense: Models::Shared::Ac
   tax_amount: 0.0,
   total_amount: 972.29,
   type: Models::Shared::AccountingExpenseType::COMPANY,
-  updated_at: DateTime.iso8601('2020-09-03T03:50:36.586Z')
+  updated_at: DateTime.iso8601('2020-09-03T05:38:14.436Z')
 ), connection_id: '<id>')
 
 unless res.accounting_expense.nil?
@@ -153,7 +153,7 @@ res = s.expense.create_legal_expense(legal_expense: Models::Shared::LegalExpense
   created_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
   currency: 'MVR',
   description: 'Temporibus agnitio sui.',
-  id: '4c2daaf6-0ccc-4d88-a94f-049278c56777',
+  id: '645c809d-0bb6-4232-9d90-ee1251f1110d',
   incurred_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
   is_billed: false,
   metadata: [],
@@ -161,7 +161,7 @@ res = s.expense.create_legal_expense(legal_expense: Models::Shared::LegalExpense
   quantity: 3.0,
   total_amount: 300.0,
   type: Models::Shared::LegalExpenseType::OTHER,
-  updated_at: DateTime.iso8601('2024-04-13T14:46:27.461Z')
+  updated_at: DateTime.iso8601('2024-04-14T19:20:45.276Z')
 ), connection_id: '<id>')
 
 unless res.legal_expense.nil?
@@ -385,13 +385,13 @@ req = Models::Operations::PatchAccountingExpenseRequest.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://rubbery-couch.biz/',
-        id: 'fc27fcfe-9bff-4cd1-9e60-349d4f5f4f7a',
+        id: 'a93870d7-3f04-4e76-9dd9-b144fe5c5f80',
         mime_type: 'application/pdf',
         name: 'receipt-9696.pdf'
       ),
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://appropriate-smog.biz/',
-        id: '109bc60a-ad08-4fa0-b2f7-790fc5f10dc0',
+        id: 'a1f863ad-7202-4c17-8f73-3b23e5f23546',
         mime_type: 'application/pdf',
         name: 'receipt-9696-1.pdf'
       ),
@@ -400,10 +400,10 @@ req = Models::Operations::PatchAccountingExpenseRequest.new(
     created_at: DateTime.iso8601('2020-06-11T03:39:37.305Z'),
     currency: 'GBP',
     external_number: 'EXP-38303',
-    id: '2c732f9b-8cc8-4b99-8ec3-84e2ba54aead',
+    id: '68d564a4-ef9b-4d1f-9798-67b17fa964f0',
     lineitems: [
       Models::Shared::AccountingLineitem.new(
-        id: 'd721bf8d-6d07-41d1-a882-e111e30d257b',
+        id: '4a3b0c38-2091-4e1d-a1c7-b3ce51e13ebb',
         item_name: 'Client dinner',
         tax_amount: 0.0,
         total_amount: 364.74,
@@ -411,7 +411,7 @@ req = Models::Operations::PatchAccountingExpenseRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '52112b69-e38b-42a6-96d2-b0f8a536b07c',
+        id: '75519235-6f8d-4f00-b559-9b5bc9b5de3d',
         item_name: 'Client dinner',
         tax_amount: 0.0,
         total_amount: 258.35,
@@ -419,7 +419,7 @@ req = Models::Operations::PatchAccountingExpenseRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'ad2125a1-43db-48fc-a732-0c6749c6d56e',
+        id: '1315fbe3-977c-412f-994a-753c026b7388',
         item_name: 'Conference ticket',
         notes: 'Casus umquam conicio cinis demitto sint.',
         tax_amount: 0.0,
@@ -428,7 +428,7 @@ req = Models::Operations::PatchAccountingExpenseRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '781e72ad-5104-4ca1-ad73-993d8d1d60d0',
+        id: '02f68c39-fd03-4cf5-90bb-2ebfe6b66c4e',
         item_name: 'Hotel',
         tax_amount: 0.0,
         total_amount: 157.04,
@@ -436,7 +436,7 @@ req = Models::Operations::PatchAccountingExpenseRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'b39fbef9-3967-456c-be1d-0eb5058913ae',
+        id: 'e51878d6-8b47-4fbc-938b-35d358049348',
         item_name: 'Hotel',
         tax_amount: 0.0,
         total_amount: 164.02,
@@ -452,7 +452,7 @@ req = Models::Operations::PatchAccountingExpenseRequest.new(
     tax_amount: 0.0,
     total_amount: 972.29,
     type: Models::Shared::AccountingExpenseType::COMPANY,
-    updated_at: DateTime.iso8601('2020-09-03T03:50:36.587Z')
+    updated_at: DateTime.iso8601('2020-09-03T05:38:14.438Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -504,7 +504,7 @@ req = Models::Operations::PatchLegalExpenseRequest.new(
     created_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
     currency: 'MVR',
     description: 'Temporibus agnitio sui.',
-    id: '12e56421-0246-4b93-b631-3bf8541e151f',
+    id: 'd8174135-31ea-43dd-8232-d5b186b231cf',
     incurred_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
     is_billed: false,
     metadata: [],
@@ -512,7 +512,7 @@ req = Models::Operations::PatchLegalExpenseRequest.new(
     quantity: 3.0,
     total_amount: 300.0,
     type: Models::Shared::LegalExpenseType::OTHER,
-    updated_at: DateTime.iso8601('2024-04-13T14:46:27.468Z')
+    updated_at: DateTime.iso8601('2024-04-14T19:20:45.285Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -645,13 +645,13 @@ req = Models::Operations::UpdateAccountingExpenseRequest.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://rubbery-couch.biz/',
-        id: 'fc27fcfe-9bff-4cd1-9e60-349d4f5f4f7a',
+        id: 'a93870d7-3f04-4e76-9dd9-b144fe5c5f80',
         mime_type: 'application/pdf',
         name: 'receipt-9696.pdf'
       ),
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://appropriate-smog.biz/',
-        id: '109bc60a-ad08-4fa0-b2f7-790fc5f10dc0',
+        id: 'a1f863ad-7202-4c17-8f73-3b23e5f23546',
         mime_type: 'application/pdf',
         name: 'receipt-9696-1.pdf'
       ),
@@ -660,10 +660,10 @@ req = Models::Operations::UpdateAccountingExpenseRequest.new(
     created_at: DateTime.iso8601('2020-06-11T03:39:37.305Z'),
     currency: 'GBP',
     external_number: 'EXP-38303',
-    id: '2c732f9b-8cc8-4b99-8ec3-84e2ba54aead',
+    id: '68d564a4-ef9b-4d1f-9798-67b17fa964f0',
     lineitems: [
       Models::Shared::AccountingLineitem.new(
-        id: 'd721bf8d-6d07-41d1-a882-e111e30d257b',
+        id: '4a3b0c38-2091-4e1d-a1c7-b3ce51e13ebb',
         item_name: 'Client dinner',
         tax_amount: 0.0,
         total_amount: 364.74,
@@ -671,7 +671,7 @@ req = Models::Operations::UpdateAccountingExpenseRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '52112b69-e38b-42a6-96d2-b0f8a536b07c',
+        id: '75519235-6f8d-4f00-b559-9b5bc9b5de3d',
         item_name: 'Client dinner',
         tax_amount: 0.0,
         total_amount: 258.35,
@@ -679,7 +679,7 @@ req = Models::Operations::UpdateAccountingExpenseRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'ad2125a1-43db-48fc-a732-0c6749c6d56e',
+        id: '1315fbe3-977c-412f-994a-753c026b7388',
         item_name: 'Conference ticket',
         notes: 'Casus umquam conicio cinis demitto sint.',
         tax_amount: 0.0,
@@ -688,7 +688,7 @@ req = Models::Operations::UpdateAccountingExpenseRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '781e72ad-5104-4ca1-ad73-993d8d1d60d0',
+        id: '02f68c39-fd03-4cf5-90bb-2ebfe6b66c4e',
         item_name: 'Hotel',
         tax_amount: 0.0,
         total_amount: 157.04,
@@ -696,7 +696,7 @@ req = Models::Operations::UpdateAccountingExpenseRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'b39fbef9-3967-456c-be1d-0eb5058913ae',
+        id: 'e51878d6-8b47-4fbc-938b-35d358049348',
         item_name: 'Hotel',
         tax_amount: 0.0,
         total_amount: 164.02,
@@ -712,7 +712,7 @@ req = Models::Operations::UpdateAccountingExpenseRequest.new(
     tax_amount: 0.0,
     total_amount: 972.29,
     type: Models::Shared::AccountingExpenseType::COMPANY,
-    updated_at: DateTime.iso8601('2020-09-03T03:50:36.587Z')
+    updated_at: DateTime.iso8601('2020-09-03T05:38:14.438Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -764,7 +764,7 @@ req = Models::Operations::UpdateLegalExpenseRequest.new(
     created_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
     currency: 'MVR',
     description: 'Temporibus agnitio sui.',
-    id: '12e56421-0246-4b93-b631-3bf8541e151f',
+    id: 'd8174135-31ea-43dd-8232-d5b186b231cf',
     incurred_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
     is_billed: false,
     metadata: [],
@@ -772,7 +772,7 @@ req = Models::Operations::UpdateLegalExpenseRequest.new(
     quantity: 3.0,
     total_amount: 300.0,
     type: Models::Shared::LegalExpenseType::OTHER,
-    updated_at: DateTime.iso8601('2024-04-13T14:46:27.468Z')
+    updated_at: DateTime.iso8601('2024-04-14T19:20:45.285Z')
   ),
   connection_id: '<id>',
   id: '<id>'

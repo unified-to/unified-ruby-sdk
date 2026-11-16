@@ -7,7 +7,7 @@
 module UnifiedRubySDK
   module Models
     module Shared
-      # QmsInspectionStatus - Normalized status of a quality record
+
       class QmsInspectionStatus
         include ::Crystalline::Enum
         enums do

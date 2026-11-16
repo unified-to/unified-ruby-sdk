@@ -14,6 +14,8 @@ module UnifiedRubySDK
 
 
         field :type, Models::Shared::KmsPageType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::KmsPageType, false) } }
+        # The page body, in the format given by `type`. Used to create/update only; read a page's body from `download_url`.
+        field :content, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
@@ -41,9 +43,10 @@ module UnifiedRubySDK
 
         field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
-        sig { params(type: Models::Shared::KmsPageType, created_at: T.nilable(::DateTime), download_url: T.nilable(::String), has_children: T.nilable(T::Boolean), id: T.nilable(::String), is_active: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::KmsPageMetadata]), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), space_id: T.nilable(::String), title: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), web_url: T.nilable(::String)).void }
-        def initialize(type:, created_at: nil, download_url: nil, has_children: nil, id: nil, is_active: nil, metadata: nil, parent_id: nil, raw: nil, space_id: nil, title: nil, updated_at: nil, user_id: nil, web_url: nil)
+        sig { params(type: Models::Shared::KmsPageType, content: T.nilable(::String), created_at: T.nilable(::DateTime), download_url: T.nilable(::String), has_children: T.nilable(T::Boolean), id: T.nilable(::String), is_active: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::KmsPageMetadata]), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), space_id: T.nilable(::String), title: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), web_url: T.nilable(::String)).void }
+        def initialize(type:, content: nil, created_at: nil, download_url: nil, has_children: nil, id: nil, is_active: nil, metadata: nil, parent_id: nil, raw: nil, space_id: nil, title: nil, updated_at: nil, user_id: nil, web_url: nil)
           @type = type
+          @content = content
           @created_at = created_at
           @download_url = download_url
           @has_children = has_children
@@ -63,6 +66,7 @@ module UnifiedRubySDK
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @type == other.type
+          return false unless @content == other.content
           return false unless @created_at == other.created_at
           return false unless @download_url == other.download_url
           return false unless @has_children == other.has_children

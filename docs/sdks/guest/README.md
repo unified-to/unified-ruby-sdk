@@ -8,6 +8,7 @@
 * [get_property_guest](#get_property_guest) - Retrieve a guest
 * [list_property_guests](#list_property_guests) - List all guests
 * [patch_property_guest](#patch_property_guest) - Update a guest
+* [remove_property_guest](#remove_property_guest) - Remove a guest
 * [update_property_guest](#update_property_guest) - Update a guest
 
 ## create_property_guest
@@ -44,7 +45,7 @@ res = s.guest.create_property_guest(property_guest: Models::Shared::PropertyGues
     ),
   ],
   first_name: 'Melissa',
-  id: '0f1f472c-2591-4050-8ea6-26f1fc7c6cf8',
+  id: '1e2e474d-2090-467c-9651-9ca5e94baaf9',
   image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg',
   language: 'es',
   last_name: 'Green',
@@ -58,7 +59,7 @@ res = s.guest.create_property_guest(property_guest: Models::Shared::PropertyGues
       type: Models::Shared::PropertyTelephoneType::MOBILE
     ),
   ],
-  updated_at: DateTime.iso8601('2025-07-14T13:11:20.875Z')
+  updated_at: DateTime.iso8601('2025-07-16T02:07:30.212Z')
 ), connection_id: '<id>')
 
 unless res.property_guest.nil?
@@ -209,7 +210,7 @@ req = Models::Operations::PatchPropertyGuestRequest.new(
       ),
     ],
     first_name: 'Melissa',
-    id: '30c721ac-c38b-4d29-bc8e-aeb0011f504d',
+    id: '2d7dd474-557f-4ff1-8806-59d7f54c5b55',
     image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg',
     language: 'es',
     last_name: 'Green',
@@ -223,7 +224,7 @@ req = Models::Operations::PatchPropertyGuestRequest.new(
         type: Models::Shared::PropertyTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2025-07-14T13:11:20.897Z')
+    updated_at: DateTime.iso8601('2025-07-16T02:07:30.230Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -245,6 +246,47 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::PatchPropertyGuestResponse)](../../models/operations/patchpropertyguestresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## remove_property_guest
+
+Deletes the PropertyGuest identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="removePropertyGuest" method="delete" path="/property/{connection_id}/guest/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.guest.remove_property_guest(connection_id: '<id>', id: '<id>')
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Guest      |
+
+### Response
+
+**[T.nilable(Models::Operations::RemovePropertyGuestResponse)](../../models/operations/removepropertyguestresponse.md)**
 
 ### Errors
 
@@ -288,7 +330,7 @@ req = Models::Operations::UpdatePropertyGuestRequest.new(
       ),
     ],
     first_name: 'Melissa',
-    id: '30c721ac-c38b-4d29-bc8e-aeb0011f504d',
+    id: '2d7dd474-557f-4ff1-8806-59d7f54c5b55',
     image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg',
     language: 'es',
     last_name: 'Green',
@@ -302,7 +344,7 @@ req = Models::Operations::UpdatePropertyGuestRequest.new(
         type: Models::Shared::PropertyTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2025-07-14T13:11:20.897Z')
+    updated_at: DateTime.iso8601('2025-07-16T02:07:30.230Z')
   ),
   connection_id: '<id>',
   id: '<id>'

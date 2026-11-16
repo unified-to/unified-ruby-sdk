@@ -40,6 +40,8 @@ module UnifiedRubySDK
         field :ip_address, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ip_address') } }
 
         field :is_billable, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_billable') } }
+        # Names of the query-string parameters sent with this API call (eg. updated_gte, offset). Values are not stored.
+        field :query_params, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('query_params') } }
         # The size of the response
         field :size, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size') } }
 
@@ -53,8 +55,8 @@ module UnifiedRubySDK
 
         field :environment, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('environment') } }
 
-        sig { params(integration_type: ::String, method: ::String, name: ::String, path: ::String, status: ::String, type: Models::Shared::ApiCallType, connection_id: T.nilable(::String), created_at: T.nilable(::DateTime), endapi_response_time: T.nilable(::Float), error: T.nilable(::String), external_xref: T.nilable(::String), id: T.nilable(::String), ip_address: T.nilable(::String), is_billable: T.nilable(T::Boolean), size: T.nilable(::Float), unified_response_time: T.nilable(::Float), user_agent: T.nilable(::String), webhook_id: T.nilable(::String), workspace_id: T.nilable(::String), environment: T.nilable(::String)).void }
-        def initialize(integration_type:, method:, name:, path:, status:, type:, connection_id: nil, created_at: nil, endapi_response_time: nil, error: nil, external_xref: nil, id: nil, ip_address: nil, is_billable: nil, size: nil, unified_response_time: nil, user_agent: nil, webhook_id: nil, workspace_id: nil, environment: 'Production')
+        sig { params(integration_type: ::String, method: ::String, name: ::String, path: ::String, status: ::String, type: Models::Shared::ApiCallType, connection_id: T.nilable(::String), created_at: T.nilable(::DateTime), endapi_response_time: T.nilable(::Float), error: T.nilable(::String), external_xref: T.nilable(::String), id: T.nilable(::String), ip_address: T.nilable(::String), is_billable: T.nilable(T::Boolean), query_params: T.nilable(T::Array[::String]), size: T.nilable(::Float), unified_response_time: T.nilable(::Float), user_agent: T.nilable(::String), webhook_id: T.nilable(::String), workspace_id: T.nilable(::String), environment: T.nilable(::String)).void }
+        def initialize(integration_type:, method:, name:, path:, status:, type:, connection_id: nil, created_at: nil, endapi_response_time: nil, error: nil, external_xref: nil, id: nil, ip_address: nil, is_billable: nil, query_params: nil, size: nil, unified_response_time: nil, user_agent: nil, webhook_id: nil, workspace_id: nil, environment: 'Production')
           @integration_type = integration_type
           @method = method
           @name = name
@@ -69,6 +71,7 @@ module UnifiedRubySDK
           @id = id
           @ip_address = ip_address
           @is_billable = is_billable
+          @query_params = query_params
           @size = size
           @unified_response_time = unified_response_time
           @user_agent = user_agent
@@ -94,6 +97,7 @@ module UnifiedRubySDK
           return false unless @id == other.id
           return false unless @ip_address == other.ip_address
           return false unless @is_billable == other.is_billable
+          return false unless @query_params == other.query_params
           return false unless @size == other.size
           return false unless @unified_response_time == other.unified_response_time
           return false unless @user_agent == other.user_agent

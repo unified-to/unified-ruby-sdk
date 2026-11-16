@@ -36,6 +36,8 @@ class UnifiedRubySDK::Models::Shared::ApiCall
   def ip_address=(str_); end
   def is_billable(); end
   def is_billable=(str_); end
+  def query_params(); end
+  def query_params=(str_); end
   def size(); end
   def size=(str_); end
   def unified_response_time(); end

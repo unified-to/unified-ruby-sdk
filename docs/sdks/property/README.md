@@ -31,7 +31,9 @@
 * [patch_property_reservation](#patch_property_reservation) - Update a reservation
 * [patch_property_review](#patch_property_review) - Update a review
 * [remove_analytics_property](#remove_analytics_property) - Remove a property
+* [remove_property_guest](#remove_property_guest) - Remove a guest
 * [remove_property_listing](#remove_property_listing) - Remove a listing
+* [remove_property_reservation](#remove_property_reservation) - Remove a reservation
 * [update_analytics_property](#update_analytics_property) - Update a property
 * [update_property_guest](#update_property_guest) - Update a guest
 * [update_property_listing](#update_property_listing) - Update a listing
@@ -57,10 +59,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.property.create_analytics_property(analytics_property: Models::Shared::AnalyticsProperty.new(
   created_at: DateTime.iso8601('2021-09-05T19:04:58.430Z'),
   currency: 'USD',
-  id: '3fe18edc-597e-4085-a2c7-95e41635c524',
+  id: 'd754a4a9-4d6f-4ce9-a4ac-51ac889a06cb',
   name: 'Daniel, Goldner and Dickinson',
   timezone: 'UTC',
-  updated_at: DateTime.iso8601('2021-09-14T23:13:04.050Z')
+  updated_at: DateTime.iso8601('2021-09-14T23:27:37.178Z')
 ), connection_id: '<id>')
 
 unless res.analytics_property.nil?
@@ -107,13 +109,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.property.create_property_conversation(property_conversation: Models::Shared::PropertyConversation.new(
   created_at: DateTime.iso8601('2022-06-20T00:02:46.530Z'),
   guest_name: 'Evie Okuneva',
-  id: 'c38ae989-73ba-4ace-85ec-463a02259d91',
+  id: '66f1e34c-5f7f-4455-86f0-cd6f61bda5a1',
   is_unread: false,
   messages: [
     Models::Shared::PropertyMessage.new(
       attachments: [],
-      created_at: DateTime.iso8601('2025-05-02T02:46:37.414Z'),
-      id: '9265bca8-f659-497d-a84e-bdd8821dc514',
+      created_at: DateTime.iso8601('2025-05-03T11:24:38.548Z'),
+      id: 'e87f5e00-7a9e-4ba7-8274-c5bd1e631353',
       is_automatic: false,
       message: 'Vinitor caterva amor sophismata admitto colo tempore aufero torrens.',
       sender_name: 'Evie Okuneva',
@@ -121,8 +123,8 @@ res = s.property.create_property_conversation(property_conversation: Models::Sha
     ),
     Models::Shared::PropertyMessage.new(
       attachments: [],
-      created_at: DateTime.iso8601('2026-05-18T22:10:41.396Z'),
-      id: '4d063089-7c3e-4a1d-b29c-ce6720ff754b',
+      created_at: DateTime.iso8601('2026-05-20T18:42:39.597Z'),
+      id: '818b4caa-4213-4f6b-a4d3-1b3779664363',
       message: 'Aequitas torqueo curiositas cimentarius repellendus auditor degero ademptio adnuo.',
       sender_name: 'Ms. Patti Lynch',
       sender_type: Models::Shared::SenderType::HOST
@@ -130,7 +132,7 @@ res = s.property.create_property_conversation(property_conversation: Models::Sha
   ],
   metadata: [],
   source: 'Airbnb',
-  updated_at: DateTime.iso8601('2026-05-18T22:10:41.396Z')
+  updated_at: DateTime.iso8601('2026-05-20T18:42:39.597Z')
 ), connection_id: '<id>')
 
 unless res.property_conversation.nil?
@@ -192,7 +194,7 @@ res = s.property.create_property_guest(property_guest: Models::Shared::PropertyG
     ),
   ],
   first_name: 'Melissa',
-  id: '0f1f472c-2591-4050-8ea6-26f1fc7c6cf8',
+  id: '1e2e474d-2090-467c-9651-9ca5e94baaf9',
   image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg',
   language: 'es',
   last_name: 'Green',
@@ -206,7 +208,7 @@ res = s.property.create_property_guest(property_guest: Models::Shared::PropertyG
       type: Models::Shared::PropertyTelephoneType::MOBILE
     ),
   ],
-  updated_at: DateTime.iso8601('2025-07-14T13:11:20.875Z')
+  updated_at: DateTime.iso8601('2025-07-16T02:07:30.212Z')
 ), connection_id: '<id>')
 
 unless res.property_guest.nil?
@@ -282,7 +284,7 @@ res = s.property.create_property_listing(property_listing: Models::Shared::Prope
   currency: 'USD',
   description: 'Cuius deputo cruentus demoror censura caveo sponte statim vespillo cursim. Arbitro barba summopere. Curto vulticulus comparo surgo vociferor carmen deputo defluo.',
   house_rules: 'No smoking. No parties or events.',
-  id: '1412bf06-fad6-4fd3-927b-941a429671f2',
+  id: '681f975d-1730-4872-a7cc-a555dad88f9e',
   image_urls: [
     'https://loremflickr.com/23/1328?lock=5798241296161663',
     'https://loremflickr.com/12/1312?lock=6354590363728966',
@@ -299,7 +301,7 @@ res = s.property.create_property_listing(property_listing: Models::Shared::Prope
   start_price_amount: 470.0,
   timezone: 'America/Los_Angeles',
   type: Models::Shared::PropertyListingType::ROOM,
-  updated_at: DateTime.iso8601('2026-09-21T10:02:09.534Z'),
+  updated_at: DateTime.iso8601('2026-09-23T10:53:30.436Z'),
   web_url: 'https://tight-pronoun.info/'
 ), connection_id: '<id>')
 
@@ -350,9 +352,9 @@ res = s.property.create_property_quote(property_quote: Models::Shared::PropertyQ
   created_at: DateTime.iso8601('2020-12-18T19:14:11.415Z'),
   currency: 'USD',
   deposit_amount: 594.54,
-  end_at: DateTime.iso8601('2026-11-28'),
+  end_at: DateTime.iso8601('2026-11-30'),
   guests: 2.0,
-  id: '30d0aa4b-117b-4239-a113-cb2d1af200d6',
+  id: '66d5c9bd-04fe-4d43-807a-4413c685821d',
   line_items: [
     Models::Shared::PropertyLineitem.new(
       amount: 1665.0,
@@ -374,7 +376,7 @@ res = s.property.create_property_quote(property_quote: Models::Shared::PropertyQ
       type: Models::Shared::PropertyLineitemType::TAX
     ),
   ],
-  start_at: DateTime.iso8601('2026-11-19'),
+  start_at: DateTime.iso8601('2026-11-21'),
   total_amount: 1981.8
 ), connection_id: '<id>')
 
@@ -431,7 +433,7 @@ res = s.property.create_property_reservation(property_reservation: Models::Share
   guest_email: 'anya.parisian@hotmail.com',
   guest_name: 'Anya Parisian',
   guests: 6.0,
-  id: '993aae9b-274c-45d0-9239-631b4bae2c3b',
+  id: 'e89012a2-d3d1-4c7e-9ec1-9dca4d732818',
   line_items: [
     Models::Shared::PropertyLineitem.new(
       amount: 1980.0,
@@ -468,7 +470,7 @@ res = s.property.create_property_reservation(property_reservation: Models::Share
   start_at: DateTime.iso8601('2022-09-25T17:17:08.838Z'),
   status: Models::Shared::PropertyReservationStatus::PENDING,
   total_amount: 2181.6,
-  updated_at: DateTime.iso8601('2022-11-17T23:45:09.840Z'),
+  updated_at: DateTime.iso8601('2022-11-18T04:55:53.352Z'),
   web_url: 'https://antique-tennis.biz/'
 ), connection_id: '<id>')
 
@@ -1171,10 +1173,10 @@ req = Models::Operations::PatchAnalyticsPropertyRequest.new(
   analytics_property: Models::Shared::AnalyticsProperty.new(
     created_at: DateTime.iso8601('2021-09-05T19:04:58.430Z'),
     currency: 'USD',
-    id: '075794dd-6d00-4e5f-8bd4-465b65d20c96',
+    id: '4394bdce-b534-4909-b0d2-93749d403078',
     name: 'Daniel, Goldner and Dickinson',
     timezone: 'UTC',
-    updated_at: DateTime.iso8601('2021-09-14T23:13:04.050Z')
+    updated_at: DateTime.iso8601('2021-09-14T23:27:37.178Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1239,7 +1241,7 @@ req = Models::Operations::PatchPropertyGuestRequest.new(
       ),
     ],
     first_name: 'Melissa',
-    id: '30c721ac-c38b-4d29-bc8e-aeb0011f504d',
+    id: '2d7dd474-557f-4ff1-8806-59d7f54c5b55',
     image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg',
     language: 'es',
     last_name: 'Green',
@@ -1253,7 +1255,7 @@ req = Models::Operations::PatchPropertyGuestRequest.new(
         type: Models::Shared::PropertyTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2025-07-14T13:11:20.897Z')
+    updated_at: DateTime.iso8601('2025-07-16T02:07:30.230Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1332,7 +1334,7 @@ req = Models::Operations::PatchPropertyListingRequest.new(
     currency: 'USD',
     description: 'Cuius deputo cruentus demoror censura caveo sponte statim vespillo cursim. Arbitro barba summopere. Curto vulticulus comparo surgo vociferor carmen deputo defluo.',
     house_rules: 'No smoking. No parties or events.',
-    id: '8325a575-beb8-499e-a0ac-b28595d47dfc',
+    id: '8f3eb99b-cd0b-47a7-9da1-497f21c94188',
     image_urls: [
       'https://loremflickr.com/23/1328?lock=5798241296161663',
       'https://loremflickr.com/12/1312?lock=6354590363728966',
@@ -1349,7 +1351,7 @@ req = Models::Operations::PatchPropertyListingRequest.new(
     start_price_amount: 470.0,
     timezone: 'America/Los_Angeles',
     type: Models::Shared::PropertyListingType::ROOM,
-    updated_at: DateTime.iso8601('2026-09-21T10:02:09.571Z'),
+    updated_at: DateTime.iso8601('2026-09-23T10:53:30.469Z'),
     web_url: 'https://tight-pronoun.info/'
   ),
   connection_id: '<id>',
@@ -1409,7 +1411,7 @@ req = Models::Operations::PatchPropertyReservationRequest.new(
     guest_email: 'anya.parisian@hotmail.com',
     guest_name: 'Anya Parisian',
     guests: 6.0,
-    id: '3c0bfed0-82f2-407d-b339-a26fe0ec32e4',
+    id: '7cf7282e-ec88-4d87-a2b6-f8f35e029ff3',
     line_items: [
       Models::Shared::PropertyLineitem.new(
         amount: 1980.0,
@@ -1446,7 +1448,7 @@ req = Models::Operations::PatchPropertyReservationRequest.new(
     start_at: DateTime.iso8601('2022-09-25T17:17:08.838Z'),
     status: Models::Shared::PropertyReservationStatus::PENDING,
     total_amount: 2181.6,
-    updated_at: DateTime.iso8601('2022-11-17T23:45:09.843Z'),
+    updated_at: DateTime.iso8601('2022-11-18T04:55:53.354Z'),
     web_url: 'https://antique-tennis.biz/'
   ),
   connection_id: '<id>',
@@ -1527,13 +1529,13 @@ req = Models::Operations::PatchPropertyReviewRequest.new(
     ],
     content: 'Delectus conscendo communis custodia statim. Tutis adsuesco attonbitus comitatus auditor ea tergo nostrum deleo. Comprehendo tertius summopere vaco apparatus incidunt tabula pauci confido colo.',
     created_at: DateTime.iso8601('2022-10-17T11:17:07.682Z'),
-    id: '60543b62-4cbb-44ff-bea6-9ac2c0df1ab3',
+    id: '123bf61c-20d2-46c5-812a-7ee129d31f02',
     is_public: true,
     metadata: [],
     private_feedback: 'Tripudio neque communis.',
     rating: 3.0,
     source: 'Airbnb',
-    updated_at: DateTime.iso8601('2026-03-02T17:39:53.299Z')
+    updated_at: DateTime.iso8601('2026-03-04T11:09:04.435Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1603,6 +1605,47 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## remove_property_guest
+
+Deletes the PropertyGuest identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="removePropertyGuest" method="delete" path="/property/{connection_id}/guest/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.property.remove_property_guest(connection_id: '<id>', id: '<id>')
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Guest      |
+
+### Response
+
+**[T.nilable(Models::Operations::RemovePropertyGuestResponse)](../../models/operations/removepropertyguestresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## remove_property_listing
 
 Deletes the PropertyListing identified by `id`.
@@ -1644,6 +1687,47 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## remove_property_reservation
+
+Deletes the PropertyReservation identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="removePropertyReservation" method="delete" path="/property/{connection_id}/reservation/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.property.remove_property_reservation(connection_id: '<id>', id: '<id>')
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter             | Type                  | Required              | Description           |
+| --------------------- | --------------------- | --------------------- | --------------------- |
+| `connection_id`       | *::String*            | :heavy_check_mark:    | ID of the connection  |
+| `id`                  | *::String*            | :heavy_check_mark:    | ID of the Reservation |
+
+### Response
+
+**[T.nilable(Models::Operations::RemovePropertyReservationResponse)](../../models/operations/removepropertyreservationresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## update_analytics_property
 
 Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to change in the request body.
@@ -1665,10 +1749,10 @@ req = Models::Operations::UpdateAnalyticsPropertyRequest.new(
   analytics_property: Models::Shared::AnalyticsProperty.new(
     created_at: DateTime.iso8601('2021-09-05T19:04:58.430Z'),
     currency: 'USD',
-    id: '075794dd-6d00-4e5f-8bd4-465b65d20c96',
+    id: '4394bdce-b534-4909-b0d2-93749d403078',
     name: 'Daniel, Goldner and Dickinson',
     timezone: 'UTC',
-    updated_at: DateTime.iso8601('2021-09-14T23:13:04.050Z')
+    updated_at: DateTime.iso8601('2021-09-14T23:27:37.178Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1733,7 +1817,7 @@ req = Models::Operations::UpdatePropertyGuestRequest.new(
       ),
     ],
     first_name: 'Melissa',
-    id: '30c721ac-c38b-4d29-bc8e-aeb0011f504d',
+    id: '2d7dd474-557f-4ff1-8806-59d7f54c5b55',
     image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg',
     language: 'es',
     last_name: 'Green',
@@ -1747,7 +1831,7 @@ req = Models::Operations::UpdatePropertyGuestRequest.new(
         type: Models::Shared::PropertyTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2025-07-14T13:11:20.897Z')
+    updated_at: DateTime.iso8601('2025-07-16T02:07:30.230Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1826,7 +1910,7 @@ req = Models::Operations::UpdatePropertyListingRequest.new(
     currency: 'USD',
     description: 'Cuius deputo cruentus demoror censura caveo sponte statim vespillo cursim. Arbitro barba summopere. Curto vulticulus comparo surgo vociferor carmen deputo defluo.',
     house_rules: 'No smoking. No parties or events.',
-    id: '8325a575-beb8-499e-a0ac-b28595d47dfc',
+    id: '8f3eb99b-cd0b-47a7-9da1-497f21c94188',
     image_urls: [
       'https://loremflickr.com/23/1328?lock=5798241296161663',
       'https://loremflickr.com/12/1312?lock=6354590363728966',
@@ -1843,7 +1927,7 @@ req = Models::Operations::UpdatePropertyListingRequest.new(
     start_price_amount: 470.0,
     timezone: 'America/Los_Angeles',
     type: Models::Shared::PropertyListingType::ROOM,
-    updated_at: DateTime.iso8601('2026-09-21T10:02:09.571Z'),
+    updated_at: DateTime.iso8601('2026-09-23T10:53:30.469Z'),
     web_url: 'https://tight-pronoun.info/'
   ),
   connection_id: '<id>',
@@ -1903,7 +1987,7 @@ req = Models::Operations::UpdatePropertyReservationRequest.new(
     guest_email: 'anya.parisian@hotmail.com',
     guest_name: 'Anya Parisian',
     guests: 6.0,
-    id: '3c0bfed0-82f2-407d-b339-a26fe0ec32e4',
+    id: '7cf7282e-ec88-4d87-a2b6-f8f35e029ff3',
     line_items: [
       Models::Shared::PropertyLineitem.new(
         amount: 1980.0,
@@ -1940,7 +2024,7 @@ req = Models::Operations::UpdatePropertyReservationRequest.new(
     start_at: DateTime.iso8601('2022-09-25T17:17:08.838Z'),
     status: Models::Shared::PropertyReservationStatus::PENDING,
     total_amount: 2181.6,
-    updated_at: DateTime.iso8601('2022-11-17T23:45:09.843Z'),
+    updated_at: DateTime.iso8601('2022-11-18T04:55:53.354Z'),
     web_url: 'https://antique-tennis.biz/'
   ),
   connection_id: '<id>',
@@ -2021,13 +2105,13 @@ req = Models::Operations::UpdatePropertyReviewRequest.new(
     ],
     content: 'Delectus conscendo communis custodia statim. Tutis adsuesco attonbitus comitatus auditor ea tergo nostrum deleo. Comprehendo tertius summopere vaco apparatus incidunt tabula pauci confido colo.',
     created_at: DateTime.iso8601('2022-10-17T11:17:07.682Z'),
-    id: '60543b62-4cbb-44ff-bea6-9ac2c0df1ab3',
+    id: '123bf61c-20d2-46c5-812a-7ee129d31f02',
     is_public: true,
     metadata: [],
     private_feedback: 'Tripudio neque communis.',
     rating: 3.0,
     source: 'Airbnb',
-    updated_at: DateTime.iso8601('2026-03-02T17:39:53.299Z')
+    updated_at: DateTime.iso8601('2026-03-04T11:09:04.435Z')
   ),
   connection_id: '<id>',
   id: '<id>'

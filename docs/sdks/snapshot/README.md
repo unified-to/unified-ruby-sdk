@@ -7,7 +7,9 @@
 * [create_compute_snapshot](#create_compute_snapshot) - Create a snapshot
 * [get_compute_snapshot](#get_compute_snapshot) - Retrieve a snapshot
 * [list_compute_snapshots](#list_compute_snapshots) - List all snapshots
+* [patch_compute_snapshot](#patch_compute_snapshot) - Update a snapshot
 * [remove_compute_snapshot](#remove_compute_snapshot) - Remove a snapshot
+* [update_compute_snapshot](#update_compute_snapshot) - Update a snapshot
 
 ## create_compute_snapshot
 
@@ -27,13 +29,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.snapshot.create_compute_snapshot(compute_snapshot: Models::Shared::ComputeSnapshot.new(
   created_at: DateTime.iso8601('2021-09-24T14:40:06.110Z'),
-  id: '522b73a5-ef34-4eb0-8b48-2f0a319bd0f9',
+  id: '8051edc7-5e22-4bb3-922d-c18ed28f7bba',
   metadata: [],
   name: 'snap-alius',
   size_mb: 169_984.0,
   status: Models::Shared::ComputeSnapshotStatus::DELETING,
   type: Models::Shared::ComputeSnapshotType::DISK,
-  updated_at: DateTime.iso8601('2026-04-21T04:23:30.814Z')
+  updated_at: DateTime.iso8601('2026-04-23T00:58:54.499Z')
 ), connection_id: '<id>')
 
 unless res.compute_snapshot.nil?
@@ -148,6 +150,61 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## patch_compute_snapshot
+
+Updates the ComputeSnapshot identified by `id`. Provide the unified ComputeSnapshot fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="patchComputeSnapshot" method="patch" path="/compute/{connection_id}/snapshot/{id}" example="compute_snapshot" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+
+req = Models::Operations::PatchComputeSnapshotRequest.new(
+  compute_snapshot: Models::Shared::ComputeSnapshot.new(
+    created_at: DateTime.iso8601('2021-09-24T14:40:06.110Z'),
+    id: '61f1ee1a-e728-466c-ac34-d1ac62844197',
+    metadata: [],
+    name: 'snap-alius',
+    size_mb: 169_984.0,
+    status: Models::Shared::ComputeSnapshotStatus::DELETING,
+    type: Models::Shared::ComputeSnapshotType::DISK,
+    updated_at: DateTime.iso8601('2026-04-23T00:58:54.506Z')
+  ),
+  connection_id: '<id>',
+  id: '<id>'
+)
+res = s.snapshot.patch_compute_snapshot(request: req)
+
+unless res.compute_snapshot.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                 | [Models::Operations::PatchComputeSnapshotRequest](../../models/operations/patchcomputesnapshotrequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+
+### Response
+
+**[T.nilable(Models::Operations::PatchComputeSnapshotResponse)](../../models/operations/patchcomputesnapshotresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## remove_compute_snapshot
 
 Deletes the ComputeSnapshot identified by `id`.
@@ -182,6 +239,61 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::RemoveComputeSnapshotResponse)](../../models/operations/removecomputesnapshotresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## update_compute_snapshot
+
+Updates the ComputeSnapshot identified by `id`. Provide the unified ComputeSnapshot fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="updateComputeSnapshot" method="put" path="/compute/{connection_id}/snapshot/{id}" example="compute_snapshot" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+
+req = Models::Operations::UpdateComputeSnapshotRequest.new(
+  compute_snapshot: Models::Shared::ComputeSnapshot.new(
+    created_at: DateTime.iso8601('2021-09-24T14:40:06.110Z'),
+    id: '61f1ee1a-e728-466c-ac34-d1ac62844197',
+    metadata: [],
+    name: 'snap-alius',
+    size_mb: 169_984.0,
+    status: Models::Shared::ComputeSnapshotStatus::DELETING,
+    type: Models::Shared::ComputeSnapshotType::DISK,
+    updated_at: DateTime.iso8601('2026-04-23T00:58:54.506Z')
+  ),
+  connection_id: '<id>',
+  id: '<id>'
+)
+res = s.snapshot.update_compute_snapshot(request: req)
+
+unless res.compute_snapshot.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                   | [Models::Operations::UpdateComputeSnapshotRequest](../../models/operations/updatecomputesnapshotrequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+
+### Response
+
+**[T.nilable(Models::Operations::UpdateComputeSnapshotResponse)](../../models/operations/updatecomputesnapshotresponse.md)**
 
 ### Errors
 

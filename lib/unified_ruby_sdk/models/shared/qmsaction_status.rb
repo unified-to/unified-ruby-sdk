@@ -7,7 +7,7 @@
 module UnifiedRubySDK
   module Models
     module Shared
-      # QmsActionStatus - Normalized status of a quality record
+
       class QmsActionStatus
         include ::Crystalline::Enum
         enums do

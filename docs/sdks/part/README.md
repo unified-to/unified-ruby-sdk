@@ -8,6 +8,7 @@
 * [get_plm_part](#get_plm_part) - Retrieve a part
 * [list_plm_parts](#list_plm_parts) - List all parts
 * [patch_plm_part](#patch_plm_part) - Update a part
+* [remove_plm_part](#remove_plm_part) - Remove a part
 * [update_plm_part](#update_plm_part) - Update a part
 
 ## create_plm_part
@@ -31,10 +32,10 @@ res = s.part.create_plm_part(plm_part: Models::Shared::PlmPart.new(
   description: 'Pectus tero ulterius aestivus talis tero ullam cruciamentum.',
   document_ids: [],
   file_ids: [],
-  id: 'edd759cb-829f-4fba-8cd1-f34789c1ed7d',
+  id: '5fd45e3c-4a77-4ace-8d9d-e1e91f54bc9a',
   is_assembly: false,
   lifecycle_state: 'Design',
-  master_identifier: 'da826483-fbec-429d-aac2-0aa822331622',
+  master_identifier: '124a759f-5d74-4b7d-92c0-090f1e40e953',
   metadata: [],
   name: 'grumpy PCB',
   number: 'PRT-009154',
@@ -44,7 +45,7 @@ res = s.part.create_plm_part(plm_part: Models::Shared::PlmPart.new(
   status: Models::Shared::PlmPartStatus::IN_WORK,
   type: Models::Shared::PlmPartType::SOFTWARE,
   unit_of_measure: 'EA',
-  updated_at: DateTime.iso8601('2021-04-12T09:47:20.050Z'),
+  updated_at: DateTime.iso8601('2021-04-12T22:59:23.166Z'),
   url: 'https://inborn-independence.info'
 ), connection_id: '<id>')
 
@@ -183,10 +184,10 @@ req = Models::Operations::PatchPlmPartRequest.new(
     description: 'Pectus tero ulterius aestivus talis tero ullam cruciamentum.',
     document_ids: [],
     file_ids: [],
-    id: 'c8a046ae-426d-44f2-b292-2844b2b42612',
+    id: '9bc76715-50e1-46ac-af71-3a2d6eb32abc',
     is_assembly: false,
     lifecycle_state: 'Design',
-    master_identifier: '3f9c4ea8-5210-4498-a541-315554381cd2',
+    master_identifier: '46b87da6-e098-45d4-aa18-e68077fa14c2',
     metadata: [],
     name: 'grumpy PCB',
     number: 'PRT-009154',
@@ -196,7 +197,7 @@ req = Models::Operations::PatchPlmPartRequest.new(
     status: Models::Shared::PlmPartStatus::IN_WORK,
     type: Models::Shared::PlmPartType::SOFTWARE,
     unit_of_measure: 'EA',
-    updated_at: DateTime.iso8601('2021-04-12T09:47:20.055Z'),
+    updated_at: DateTime.iso8601('2021-04-12T22:59:23.171Z'),
     url: 'https://inborn-independence.info'
   ),
   connection_id: '<id>',
@@ -219,6 +220,47 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::PatchPlmPartResponse)](../../models/operations/patchplmpartresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## remove_plm_part
+
+Deletes the PlmPart identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="removePlmPart" method="delete" path="/plm/{connection_id}/part/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.part.remove_plm_part(connection_id: '<id>', id: '<id>')
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Part       |
+
+### Response
+
+**[T.nilable(Models::Operations::RemovePlmPartResponse)](../../models/operations/removeplmpartresponse.md)**
 
 ### Errors
 
@@ -249,10 +291,10 @@ req = Models::Operations::UpdatePlmPartRequest.new(
     description: 'Pectus tero ulterius aestivus talis tero ullam cruciamentum.',
     document_ids: [],
     file_ids: [],
-    id: 'c8a046ae-426d-44f2-b292-2844b2b42612',
+    id: '9bc76715-50e1-46ac-af71-3a2d6eb32abc',
     is_assembly: false,
     lifecycle_state: 'Design',
-    master_identifier: '3f9c4ea8-5210-4498-a541-315554381cd2',
+    master_identifier: '46b87da6-e098-45d4-aa18-e68077fa14c2',
     metadata: [],
     name: 'grumpy PCB',
     number: 'PRT-009154',
@@ -262,7 +304,7 @@ req = Models::Operations::UpdatePlmPartRequest.new(
     status: Models::Shared::PlmPartStatus::IN_WORK,
     type: Models::Shared::PlmPartType::SOFTWARE,
     unit_of_measure: 'EA',
-    updated_at: DateTime.iso8601('2021-04-12T09:47:20.055Z'),
+    updated_at: DateTime.iso8601('2021-04-12T22:59:23.171Z'),
     url: 'https://inborn-independence.info'
   ),
   connection_id: '<id>',

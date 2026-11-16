@@ -8,6 +8,9 @@
 * [get_hris_taxonomy](#get_hris_taxonomy) - Retrieve a taxonomy
 * [list_crm_taxonomies](#list_crm_taxonomies) - List all taxonomies
 * [list_hris_taxonomies](#list_hris_taxonomies) - List all taxonomies
+* [patch_hris_taxonomy](#patch_hris_taxonomy) - Update a taxonomy
+* [remove_hris_taxonomy](#remove_hris_taxonomy) - Remove a taxonomy
+* [update_hris_taxonomy](#update_hris_taxonomy) - Update a taxonomy
 
 ## create_hris_taxonomy
 
@@ -33,13 +36,13 @@ res = s.taxonomy.create_hris_taxonomy(hris_taxonomy: Models::Shared::HrisTaxonom
   created_at: DateTime.iso8601('2022-06-23T02:10:00.789Z'),
   description: 'Uterque vespillo adnuo ea commodo turbo suscipio condico.',
   domain: 'Health',
-  id: '8c456555-cb3b-42b0-ae9f-0cf521bde301',
+  id: '994da848-bc0f-42c3-8f15-873674ec929e',
   is_active: false,
   metadata: [],
   name: 'International Functionality Architect',
   subcategory: 'Marble',
   type: Models::Shared::HrisTaxonomyType::KNOWLEDGE,
-  updated_at: DateTime.iso8601('2023-06-03T11:00:04.146Z'),
+  updated_at: DateTime.iso8601('2023-06-03T21:47:07.538Z'),
   url: 'https://fixed-membership.biz/'
 ), connection_id: '<id>')
 
@@ -192,6 +195,171 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::ListHrisTaxonomiesResponse)](../../models/operations/listhristaxonomiesresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## patch_hris_taxonomy
+
+Updates the HrisTaxonomy identified by `id`. Provide the unified HrisTaxonomy fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="patchHrisTaxonomy" method="patch" path="/hris/{connection_id}/taxonomy/{id}" example="hris_taxonomy" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+
+req = Models::Operations::PatchHrisTaxonomyRequest.new(
+  hris_taxonomy: Models::Shared::HrisTaxonomy.new(
+    alternative_names: [
+      'Facilitator',
+      'National',
+    ],
+    created_at: DateTime.iso8601('2022-06-23T02:10:00.789Z'),
+    description: 'Uterque vespillo adnuo ea commodo turbo suscipio condico.',
+    domain: 'Health',
+    id: '3caa2881-a29a-4a41-ae2b-1c0d75ecaf62',
+    is_active: false,
+    metadata: [],
+    name: 'International Functionality Architect',
+    subcategory: 'Marble',
+    type: Models::Shared::HrisTaxonomyType::KNOWLEDGE,
+    updated_at: DateTime.iso8601('2023-06-03T21:47:07.541Z'),
+    url: 'https://fixed-membership.biz/'
+  ),
+  connection_id: '<id>',
+  id: '<id>'
+)
+res = s.taxonomy.patch_hris_taxonomy(request: req)
+
+unless res.hris_taxonomy.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [Models::Operations::PatchHrisTaxonomyRequest](../../models/operations/patchhristaxonomyrequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+
+### Response
+
+**[T.nilable(Models::Operations::PatchHrisTaxonomyResponse)](../../models/operations/patchhristaxonomyresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## remove_hris_taxonomy
+
+Deletes the HrisTaxonomy identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="removeHrisTaxonomy" method="delete" path="/hris/{connection_id}/taxonomy/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.taxonomy.remove_hris_taxonomy(connection_id: '<id>', id: '<id>')
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Taxonomy   |
+
+### Response
+
+**[T.nilable(Models::Operations::RemoveHrisTaxonomyResponse)](../../models/operations/removehristaxonomyresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## update_hris_taxonomy
+
+Updates the HrisTaxonomy identified by `id`. Provide the unified HrisTaxonomy fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="updateHrisTaxonomy" method="put" path="/hris/{connection_id}/taxonomy/{id}" example="hris_taxonomy" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+
+req = Models::Operations::UpdateHrisTaxonomyRequest.new(
+  hris_taxonomy: Models::Shared::HrisTaxonomy.new(
+    alternative_names: [
+      'Facilitator',
+      'National',
+    ],
+    created_at: DateTime.iso8601('2022-06-23T02:10:00.789Z'),
+    description: 'Uterque vespillo adnuo ea commodo turbo suscipio condico.',
+    domain: 'Health',
+    id: '3caa2881-a29a-4a41-ae2b-1c0d75ecaf62',
+    is_active: false,
+    metadata: [],
+    name: 'International Functionality Architect',
+    subcategory: 'Marble',
+    type: Models::Shared::HrisTaxonomyType::KNOWLEDGE,
+    updated_at: DateTime.iso8601('2023-06-03T21:47:07.541Z'),
+    url: 'https://fixed-membership.biz/'
+  ),
+  connection_id: '<id>',
+  id: '<id>'
+)
+res = s.taxonomy.update_hris_taxonomy(request: req)
+
+unless res.hris_taxonomy.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `request`                                                                                             | [Models::Operations::UpdateHrisTaxonomyRequest](../../models/operations/updatehristaxonomyrequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+
+### Response
+
+**[T.nilable(Models::Operations::UpdateHrisTaxonomyResponse)](../../models/operations/updatehristaxonomyresponse.md)**
 
 ### Errors
 

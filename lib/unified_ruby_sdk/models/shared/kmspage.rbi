@@ -10,6 +10,8 @@ end
 class UnifiedRubySDK::Models::Shared::KmsPage
   def type(); end
   def type=(str_); end
+  def content(); end
+  def content=(str_); end
   def created_at(); end
   def created_at=(str_); end
   def download_url(); end

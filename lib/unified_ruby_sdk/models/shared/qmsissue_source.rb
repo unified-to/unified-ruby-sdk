@@ -7,7 +7,7 @@
 module UnifiedRubySDK
   module Models
     module Shared
-      # QmsIssueSource - Where a quality issue was found
+
       class QmsIssueSource
         include ::Crystalline::Enum
         enums do

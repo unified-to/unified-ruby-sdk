@@ -30,11 +30,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.practicearea.create_legal_practicearea(legal_practicearea: Models::Shared::LegalPracticearea.new(
   code: 'QCA',
   created_at: DateTime.iso8601('2023-01-28T21:00:26.264Z'),
-  id: '3ac6d997-2d2b-4cc0-95d6-d6917feabd37',
+  id: '57c5f123-9f9e-4efa-98a6-feb6638f0ca7',
   metadata: [],
   name: 'witty Law',
   type: Models::Shared::LegalPracticeareaType::EDUCATION,
-  updated_at: DateTime.iso8601('2025-09-13T06:30:34.752Z')
+  updated_at: DateTime.iso8601('2025-09-14T17:11:05.027Z')
 ), connection_id: '<id>')
 
 unless res.legal_practicearea.nil?
@@ -170,11 +170,11 @@ req = Models::Operations::PatchLegalPracticeareaRequest.new(
   legal_practicearea: Models::Shared::LegalPracticearea.new(
     code: 'QCA',
     created_at: DateTime.iso8601('2023-01-28T21:00:26.264Z'),
-    id: '95780dd7-3bbe-4722-a142-5a2953178010',
+    id: 'f7767e2f-8bf8-4e4f-8236-bceca8da45d1',
     metadata: [],
     name: 'witty Law',
     type: Models::Shared::LegalPracticeareaType::EDUCATION,
-    updated_at: DateTime.iso8601('2025-09-13T06:30:34.760Z')
+    updated_at: DateTime.iso8601('2025-09-14T17:11:05.037Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -265,11 +265,11 @@ req = Models::Operations::UpdateLegalPracticeareaRequest.new(
   legal_practicearea: Models::Shared::LegalPracticearea.new(
     code: 'QCA',
     created_at: DateTime.iso8601('2023-01-28T21:00:26.264Z'),
-    id: '95780dd7-3bbe-4722-a142-5a2953178010',
+    id: 'f7767e2f-8bf8-4e4f-8236-bceca8da45d1',
     metadata: [],
     name: 'witty Law',
     type: Models::Shared::LegalPracticeareaType::EDUCATION,
-    updated_at: DateTime.iso8601('2025-09-13T06:30:34.760Z')
+    updated_at: DateTime.iso8601('2025-09-14T17:11:05.037Z')
   ),
   connection_id: '<id>',
   id: '<id>'

@@ -32,7 +32,7 @@ res = s.ticket.create_ticketing_ticket(ticketing_ticket: Models::Shared::Ticketi
   created_at: DateTime.iso8601('2021-06-25T19:19:31.279Z'),
   description: 'Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.',
   due_at: DateTime.iso8601('2021-07-07T17:39:49.813Z'),
-  id: 'cc765fad-358b-4d5f-9294-f303f12abe84',
+  id: 'f4c18dcb-b02a-40a5-b514-6d98550ee7aa',
   metadata: [],
   priority: 'MEDIUM',
   source: 'email',
@@ -41,7 +41,7 @@ res = s.ticket.create_ticketing_ticket(ticketing_ticket: Models::Shared::Ticketi
   tags: [
     'vilicus',
   ],
-  updated_at: DateTime.iso8601('2021-07-03T20:50:10.476Z'),
+  updated_at: DateTime.iso8601('2021-07-03T21:02:29.917Z'),
   url: 'https://similar-velocity.net/'
 ), connection_id: '<id>')
 
@@ -180,7 +180,7 @@ req = Models::Operations::PatchTicketingTicketRequest.new(
     created_at: DateTime.iso8601('2021-06-25T19:19:31.279Z'),
     description: 'Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.',
     due_at: DateTime.iso8601('2021-07-07T17:39:49.813Z'),
-    id: 'd8aad2f5-a614-423c-ab01-bfb0143e5259',
+    id: '399add14-845a-41f2-975f-254f153df0dd',
     metadata: [],
     priority: 'MEDIUM',
     source: 'email',
@@ -189,7 +189,7 @@ req = Models::Operations::PatchTicketingTicketRequest.new(
     tags: [
       'vilicus',
     ],
-    updated_at: DateTime.iso8601('2021-07-03T20:50:10.476Z'),
+    updated_at: DateTime.iso8601('2021-07-03T21:02:29.917Z'),
     url: 'https://similar-velocity.net/'
   ),
   connection_id: '<id>',
@@ -283,7 +283,7 @@ req = Models::Operations::UpdateTicketingTicketRequest.new(
     created_at: DateTime.iso8601('2021-06-25T19:19:31.279Z'),
     description: 'Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.',
     due_at: DateTime.iso8601('2021-07-07T17:39:49.813Z'),
-    id: 'd8aad2f5-a614-423c-ab01-bfb0143e5259',
+    id: '399add14-845a-41f2-975f-254f153df0dd',
     metadata: [],
     priority: 'MEDIUM',
     source: 'email',
@@ -292,7 +292,7 @@ req = Models::Operations::UpdateTicketingTicketRequest.new(
     tags: [
       'vilicus',
     ],
-    updated_at: DateTime.iso8601('2021-07-03T20:50:10.476Z'),
+    updated_at: DateTime.iso8601('2021-07-03T21:02:29.917Z'),
     url: 'https://similar-velocity.net/'
   ),
   connection_id: '<id>',

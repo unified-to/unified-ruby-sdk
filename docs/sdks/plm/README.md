@@ -23,6 +23,7 @@
 * [patch_plm_document](#patch_plm_document) - Update a document
 * [patch_plm_part](#patch_plm_part) - Update a part
 * [remove_plm_bomline](#remove_plm_bomline) - Remove a bomline
+* [remove_plm_part](#remove_plm_part) - Remove a part
 * [update_plm_bomline](#update_plm_bomline) - Update a bomline
 * [update_plm_change](#update_plm_change) - Update a change
 * [update_plm_document](#update_plm_document) - Update a document
@@ -47,11 +48,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.plm.create_plm_bomline(plm_bomline: Models::Shared::PlmBomline.new(
   created_at: DateTime.iso8601('2022-04-02T07:09:29.598Z'),
   effective_at: DateTime.iso8601('2022-04-02T07:09:29.598Z'),
-  id: '084760f9-f299-46dd-a747-839c373781b9',
+  id: '978f5b3c-f20f-4ce5-b503-f62e1749e961',
   quantity: 7.0,
   reference_designators: [],
   unit_of_measure: 'EA',
-  updated_at: DateTime.iso8601('2023-04-19T22:55:28.202Z')
+  updated_at: DateTime.iso8601('2023-04-20T10:17:37.093Z')
 ), connection_id: '<id>')
 
 unless res.plm_bomline.nil?
@@ -99,14 +100,14 @@ res = s.plm.create_plm_change(plm_change: Models::Shared::PlmChange.new(
   affected_items: [],
   created_at: DateTime.iso8601('2021-08-02T05:58:32.287Z'),
   description: 'Vorago spiculum avaritia adipiscor callide.',
-  id: '86b8e604-b537-4df4-923f-58f0b014d5ff',
+  id: 'c4dc961d-9659-4e54-bbed-dd1e4910037c',
   metadata: [],
   name: 'Update goodwill',
   number: 'ECO-6591',
   priority: 'Medium',
   status: Models::Shared::PlmChangeStatus::IN_REVIEW,
   type: Models::Shared::PlmChangeType::ORDER,
-  updated_at: DateTime.iso8601('2026-09-27T08:17:37.683Z'),
+  updated_at: DateTime.iso8601('2026-09-29T09:10:10.619Z'),
   url: 'https://warmhearted-fraudster.biz/'
 ), connection_id: '<id>')
 
@@ -154,9 +155,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.plm.create_plm_document(plm_document: Models::Shared::PlmDocument.new(
   created_at: DateTime.iso8601('2020-10-16T01:44:30.293Z'),
   file_ids: [],
-  id: 'a7e10011-7e06-407a-8587-a29b59fbf86c',
+  id: '5d2600e6-4066-4a8c-896e-5865e31f3c5d',
   lifecycle_state: 'Under Review',
-  master_identifier: '3997ba56-185c-4ae2-b2aa-44a75e8b5701',
+  master_identifier: '0783dd05-855b-45e9-9318-8471e9803552',
   metadata: [],
   name: 'Procedure taxicab',
   number: 'DOC-086886',
@@ -164,7 +165,7 @@ res = s.plm.create_plm_document(plm_document: Models::Shared::PlmDocument.new(
   revision: 'C',
   status: Models::Shared::PlmDocumentStatus::IN_REVIEW,
   type: Models::Shared::PlmDocumentType::PROCEDURE,
-  updated_at: DateTime.iso8601('2026-09-08T01:44:22.082Z'),
+  updated_at: DateTime.iso8601('2026-09-10T02:20:30.065Z'),
   url: 'https://uncommon-guide.info/'
 ), connection_id: '<id>')
 
@@ -214,10 +215,10 @@ res = s.plm.create_plm_part(plm_part: Models::Shared::PlmPart.new(
   description: 'Pectus tero ulterius aestivus talis tero ullam cruciamentum.',
   document_ids: [],
   file_ids: [],
-  id: 'edd759cb-829f-4fba-8cd1-f34789c1ed7d',
+  id: '5fd45e3c-4a77-4ace-8d9d-e1e91f54bc9a',
   is_assembly: false,
   lifecycle_state: 'Design',
-  master_identifier: 'da826483-fbec-429d-aac2-0aa822331622',
+  master_identifier: '124a759f-5d74-4b7d-92c0-090f1e40e953',
   metadata: [],
   name: 'grumpy PCB',
   number: 'PRT-009154',
@@ -227,7 +228,7 @@ res = s.plm.create_plm_part(plm_part: Models::Shared::PlmPart.new(
   status: Models::Shared::PlmPartStatus::IN_WORK,
   type: Models::Shared::PlmPartType::SOFTWARE,
   unit_of_measure: 'EA',
-  updated_at: DateTime.iso8601('2021-04-12T09:47:20.050Z'),
+  updated_at: DateTime.iso8601('2021-04-12T22:59:23.166Z'),
   url: 'https://inborn-independence.info'
 ), connection_id: '<id>')
 
@@ -712,11 +713,11 @@ req = Models::Operations::PatchPlmBomlineRequest.new(
   plm_bomline: Models::Shared::PlmBomline.new(
     created_at: DateTime.iso8601('2022-04-02T07:09:29.598Z'),
     effective_at: DateTime.iso8601('2022-04-02T07:09:29.598Z'),
-    id: '5534fa1f-679d-4794-bc39-420973bbcc9f',
+    id: '52696eac-3f03-4637-b652-0f72e71c02e6',
     quantity: 7.0,
     reference_designators: [],
     unit_of_measure: 'EA',
-    updated_at: DateTime.iso8601('2023-04-19T22:55:28.204Z')
+    updated_at: DateTime.iso8601('2023-04-20T10:17:37.095Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -767,14 +768,14 @@ req = Models::Operations::PatchPlmChangeRequest.new(
     affected_items: [],
     created_at: DateTime.iso8601('2021-08-02T05:58:32.287Z'),
     description: 'Vorago spiculum avaritia adipiscor callide.',
-    id: 'c4098027-ad3e-42da-9079-05d0001df474',
+    id: '4cdf50fc-a7ff-4554-80cb-4303a3851934',
     metadata: [],
     name: 'Update goodwill',
     number: 'ECO-6591',
     priority: 'Medium',
     status: Models::Shared::PlmChangeStatus::IN_REVIEW,
     type: Models::Shared::PlmChangeType::ORDER,
-    updated_at: DateTime.iso8601('2026-09-27T08:17:37.707Z'),
+    updated_at: DateTime.iso8601('2026-09-29T09:10:10.639Z'),
     url: 'https://warmhearted-fraudster.biz/'
   ),
   connection_id: '<id>',
@@ -825,9 +826,9 @@ req = Models::Operations::PatchPlmDocumentRequest.new(
   plm_document: Models::Shared::PlmDocument.new(
     created_at: DateTime.iso8601('2020-10-16T01:44:30.293Z'),
     file_ids: [],
-    id: 'ea6aee38-78d4-4ab4-b138-c666aec2b5c0',
+    id: '7cc1b85b-9762-4fa1-9e79-ea3b1d8dabe2',
     lifecycle_state: 'Under Review',
-    master_identifier: '3915710a-c783-426e-b6a5-9d0ca594a3ef',
+    master_identifier: 'e87f4a9c-c285-4b0b-877f-c8329f22dcca',
     metadata: [],
     name: 'Procedure taxicab',
     number: 'DOC-086886',
@@ -835,7 +836,7 @@ req = Models::Operations::PatchPlmDocumentRequest.new(
     revision: 'C',
     status: Models::Shared::PlmDocumentStatus::IN_REVIEW,
     type: Models::Shared::PlmDocumentType::PROCEDURE,
-    updated_at: DateTime.iso8601('2026-09-08T01:44:22.099Z'),
+    updated_at: DateTime.iso8601('2026-09-10T02:20:30.082Z'),
     url: 'https://uncommon-guide.info/'
   ),
   connection_id: '<id>',
@@ -888,10 +889,10 @@ req = Models::Operations::PatchPlmPartRequest.new(
     description: 'Pectus tero ulterius aestivus talis tero ullam cruciamentum.',
     document_ids: [],
     file_ids: [],
-    id: 'c8a046ae-426d-44f2-b292-2844b2b42612',
+    id: '9bc76715-50e1-46ac-af71-3a2d6eb32abc',
     is_assembly: false,
     lifecycle_state: 'Design',
-    master_identifier: '3f9c4ea8-5210-4498-a541-315554381cd2',
+    master_identifier: '46b87da6-e098-45d4-aa18-e68077fa14c2',
     metadata: [],
     name: 'grumpy PCB',
     number: 'PRT-009154',
@@ -901,7 +902,7 @@ req = Models::Operations::PatchPlmPartRequest.new(
     status: Models::Shared::PlmPartStatus::IN_WORK,
     type: Models::Shared::PlmPartType::SOFTWARE,
     unit_of_measure: 'EA',
-    updated_at: DateTime.iso8601('2021-04-12T09:47:20.055Z'),
+    updated_at: DateTime.iso8601('2021-04-12T22:59:23.171Z'),
     url: 'https://inborn-independence.info'
   ),
   connection_id: '<id>',
@@ -972,6 +973,47 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## remove_plm_part
+
+Deletes the PlmPart identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="removePlmPart" method="delete" path="/plm/{connection_id}/part/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.plm.remove_plm_part(connection_id: '<id>', id: '<id>')
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Part       |
+
+### Response
+
+**[T.nilable(Models::Operations::RemovePlmPartResponse)](../../models/operations/removeplmpartresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## update_plm_bomline
 
 Updates the PlmBomline identified by `id`. Provide the unified PlmBomline fields to change in the request body.
@@ -993,11 +1035,11 @@ req = Models::Operations::UpdatePlmBomlineRequest.new(
   plm_bomline: Models::Shared::PlmBomline.new(
     created_at: DateTime.iso8601('2022-04-02T07:09:29.598Z'),
     effective_at: DateTime.iso8601('2022-04-02T07:09:29.598Z'),
-    id: '5534fa1f-679d-4794-bc39-420973bbcc9f',
+    id: '52696eac-3f03-4637-b652-0f72e71c02e6',
     quantity: 7.0,
     reference_designators: [],
     unit_of_measure: 'EA',
-    updated_at: DateTime.iso8601('2023-04-19T22:55:28.204Z')
+    updated_at: DateTime.iso8601('2023-04-20T10:17:37.095Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1048,14 +1090,14 @@ req = Models::Operations::UpdatePlmChangeRequest.new(
     affected_items: [],
     created_at: DateTime.iso8601('2021-08-02T05:58:32.287Z'),
     description: 'Vorago spiculum avaritia adipiscor callide.',
-    id: 'c4098027-ad3e-42da-9079-05d0001df474',
+    id: '4cdf50fc-a7ff-4554-80cb-4303a3851934',
     metadata: [],
     name: 'Update goodwill',
     number: 'ECO-6591',
     priority: 'Medium',
     status: Models::Shared::PlmChangeStatus::IN_REVIEW,
     type: Models::Shared::PlmChangeType::ORDER,
-    updated_at: DateTime.iso8601('2026-09-27T08:17:37.707Z'),
+    updated_at: DateTime.iso8601('2026-09-29T09:10:10.639Z'),
     url: 'https://warmhearted-fraudster.biz/'
   ),
   connection_id: '<id>',
@@ -1106,9 +1148,9 @@ req = Models::Operations::UpdatePlmDocumentRequest.new(
   plm_document: Models::Shared::PlmDocument.new(
     created_at: DateTime.iso8601('2020-10-16T01:44:30.293Z'),
     file_ids: [],
-    id: 'ea6aee38-78d4-4ab4-b138-c666aec2b5c0',
+    id: '7cc1b85b-9762-4fa1-9e79-ea3b1d8dabe2',
     lifecycle_state: 'Under Review',
-    master_identifier: '3915710a-c783-426e-b6a5-9d0ca594a3ef',
+    master_identifier: 'e87f4a9c-c285-4b0b-877f-c8329f22dcca',
     metadata: [],
     name: 'Procedure taxicab',
     number: 'DOC-086886',
@@ -1116,7 +1158,7 @@ req = Models::Operations::UpdatePlmDocumentRequest.new(
     revision: 'C',
     status: Models::Shared::PlmDocumentStatus::IN_REVIEW,
     type: Models::Shared::PlmDocumentType::PROCEDURE,
-    updated_at: DateTime.iso8601('2026-09-08T01:44:22.099Z'),
+    updated_at: DateTime.iso8601('2026-09-10T02:20:30.082Z'),
     url: 'https://uncommon-guide.info/'
   ),
   connection_id: '<id>',
@@ -1169,10 +1211,10 @@ req = Models::Operations::UpdatePlmPartRequest.new(
     description: 'Pectus tero ulterius aestivus talis tero ullam cruciamentum.',
     document_ids: [],
     file_ids: [],
-    id: 'c8a046ae-426d-44f2-b292-2844b2b42612',
+    id: '9bc76715-50e1-46ac-af71-3a2d6eb32abc',
     is_assembly: false,
     lifecycle_state: 'Design',
-    master_identifier: '3f9c4ea8-5210-4498-a541-315554381cd2',
+    master_identifier: '46b87da6-e098-45d4-aa18-e68077fa14c2',
     metadata: [],
     name: 'grumpy PCB',
     number: 'PRT-009154',
@@ -1182,7 +1224,7 @@ req = Models::Operations::UpdatePlmPartRequest.new(
     status: Models::Shared::PlmPartStatus::IN_WORK,
     type: Models::Shared::PlmPartType::SOFTWARE,
     unit_of_measure: 'EA',
-    updated_at: DateTime.iso8601('2021-04-12T09:47:20.055Z'),
+    updated_at: DateTime.iso8601('2021-04-12T22:59:23.171Z'),
     url: 'https://inborn-independence.info'
   ),
   connection_id: '<id>',

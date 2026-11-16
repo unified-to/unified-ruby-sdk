@@ -24,6 +24,7 @@ module UnifiedRubySDK
           HAS_CHILDREN = new('has_children')
           WEB_URL = new('web_url')
           RAW = new('raw')
+          CONTENT = new('content')
         end
       end
     end

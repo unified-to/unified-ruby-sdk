@@ -41,20 +41,20 @@ res = s.issue.create_qms_issue(qms_issue: Models::Shared::QmsIssue.new(
   change_ids: [],
   created_at: DateTime.iso8601('2020-06-10T05:10:42.904Z'),
   description: 'Adfero delectatio earum contabesco convoco uxor avaritia volaticus dens.',
-  due_at: DateTime.iso8601('2024-07-23T23:37:43.459Z'),
+  due_at: DateTime.iso8601('2024-07-25T07:25:37.266Z'),
   file_ids: [],
-  id: 'dac8fe79-8dd0-4201-b691-4033967222df',
+  id: 'ab897ec7-d53c-4fdb-83f9-23a316261d07',
   lifecycle_state: 'In Progress',
   metadata: [],
   name: 'Labeling error on tuxedo',
   number: 'CMP-5154',
-  opened_at: DateTime.iso8601('2024-07-08T23:03:19.667Z'),
+  opened_at: DateTime.iso8601('2024-07-10T06:51:13.474Z'),
   original_type: 'Customer Complaint',
   severity: Models::Shared::Severity::MEDIUM,
   source: Models::Shared::QmsIssueSource::CUSTOMER,
   status: Models::Shared::QmsIssueStatus::IN_PROGRESS,
   type: Models::Shared::QmsIssueType::COMPLAINT,
-  updated_at: DateTime.iso8601('2021-03-13T04:42:34.092Z'),
+  updated_at: DateTime.iso8601('2021-03-13T10:36:00.765Z'),
   url: 'https://annual-cycle.org/'
 ), connection_id: '<id>')
 
@@ -68,7 +68,7 @@ end
 
 | Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `qms_issue`                                                                                                                                      | [Models::Shared::QmsIssue](../../models/shared/qmsissue.md)                                                                                      | :heavy_check_mark:                                                                                                                               | A nonconformance, complaint, audit finding or problem report                                                                                     |
+| `qms_issue`                                                                                                                                      | [Models::Shared::QmsIssue](../../models/shared/qmsissue.md)                                                                                      | :heavy_check_mark:                                                                                                                               | A nonconformance, complaint, audit finding or other quality issue                                                                                |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateQmsIssueQueryParamFields](../../models/operations/createqmsissuequeryparamfields.md)>                        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
@@ -283,20 +283,20 @@ req = Models::Operations::PatchQmsIssueRequest.new(
     change_ids: [],
     created_at: DateTime.iso8601('2020-06-10T05:10:42.904Z'),
     description: 'Adfero delectatio earum contabesco convoco uxor avaritia volaticus dens.',
-    due_at: DateTime.iso8601('2024-07-23T23:37:43.476Z'),
+    due_at: DateTime.iso8601('2024-07-25T07:25:37.282Z'),
     file_ids: [],
-    id: '8a9e7df1-1596-4ce2-bd79-760a4b7582be',
+    id: '65256f15-f2a5-4d7b-b903-ea8a921e4325',
     lifecycle_state: 'In Progress',
     metadata: [],
     name: 'Labeling error on tuxedo',
     number: 'CMP-5154',
-    opened_at: DateTime.iso8601('2024-07-08T23:03:19.684Z'),
+    opened_at: DateTime.iso8601('2024-07-10T06:51:13.490Z'),
     original_type: 'Customer Complaint',
     severity: Models::Shared::Severity::MEDIUM,
     source: Models::Shared::QmsIssueSource::CUSTOMER,
     status: Models::Shared::QmsIssueStatus::IN_PROGRESS,
     type: Models::Shared::QmsIssueType::COMPLAINT,
-    updated_at: DateTime.iso8601('2021-03-13T04:42:34.095Z'),
+    updated_at: DateTime.iso8601('2021-03-13T10:36:00.768Z'),
     url: 'https://annual-cycle.org/'
   ),
   connection_id: '<id>',
@@ -357,20 +357,20 @@ req = Models::Operations::UpdateQmsIssueRequest.new(
     change_ids: [],
     created_at: DateTime.iso8601('2020-06-10T05:10:42.904Z'),
     description: 'Adfero delectatio earum contabesco convoco uxor avaritia volaticus dens.',
-    due_at: DateTime.iso8601('2024-07-23T23:37:43.476Z'),
+    due_at: DateTime.iso8601('2024-07-25T07:25:37.282Z'),
     file_ids: [],
-    id: '8a9e7df1-1596-4ce2-bd79-760a4b7582be',
+    id: '65256f15-f2a5-4d7b-b903-ea8a921e4325',
     lifecycle_state: 'In Progress',
     metadata: [],
     name: 'Labeling error on tuxedo',
     number: 'CMP-5154',
-    opened_at: DateTime.iso8601('2024-07-08T23:03:19.684Z'),
+    opened_at: DateTime.iso8601('2024-07-10T06:51:13.490Z'),
     original_type: 'Customer Complaint',
     severity: Models::Shared::Severity::MEDIUM,
     source: Models::Shared::QmsIssueSource::CUSTOMER,
     status: Models::Shared::QmsIssueStatus::IN_PROGRESS,
     type: Models::Shared::QmsIssueType::COMPLAINT,
-    updated_at: DateTime.iso8601('2021-03-13T04:42:34.095Z'),
+    updated_at: DateTime.iso8601('2021-03-13T10:36:00.768Z'),
     url: 'https://annual-cycle.org/'
   ),
   connection_id: '<id>',

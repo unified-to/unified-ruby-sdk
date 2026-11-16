@@ -9,7 +9,9 @@
 * [list_unified_secretsmanager_instructions](#list_unified_secretsmanager_instructions) - List secrets manager setup instructions
 * [list_unified_secretsmanager_secrets](#list_unified_secretsmanager_secrets) - List secrets in a secrets manager
 * [list_unified_secretsmanagers](#list_unified_secretsmanagers) - List secrets managers
+* [patch_unified_secretsmanager](#patch_unified_secretsmanager) - Update secrets manager
 * [remove_unified_secretsmanager](#remove_unified_secretsmanager) - Remove secrets manager
+* [update_unified_secretsmanager](#update_unified_secretsmanager) - Update secrets manager
 
 ## create_unified_secretsmanager
 
@@ -219,6 +221,54 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## patch_unified_secretsmanager
+
+Update secrets manager
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="patchUnifiedSecretsmanager" method="patch" path="/unified/secretsmanager/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.secretsmanager.patch_unified_secretsmanager(secrets_manager: Models::Shared::SecretsManager.new(
+  auth: {
+    'key' => '<value>',
+    'key1' => '<value>',
+  },
+  name: '<value>',
+  type: Models::Shared::SecretsManagerType::AKEYLESS
+), id: '<id>')
+
+unless res.secrets_manager.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `secrets_manager`                                                       | [Models::Shared::SecretsManager](../../models/shared/secretsmanager.md) | :heavy_check_mark:                                                      | N/A                                                                     |
+| `id`                                                                    | *::String*                                                              | :heavy_check_mark:                                                      | ID of the Secretsmanager                                                |
+
+### Response
+
+**[T.nilable(Models::Operations::PatchUnifiedSecretsmanagerResponse)](../../models/operations/patchunifiedsecretsmanagerresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## remove_unified_secretsmanager
 
 Remove secrets manager
@@ -252,6 +302,53 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::RemoveUnifiedSecretsmanagerResponse)](../../models/operations/removeunifiedsecretsmanagerresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## update_unified_secretsmanager
+
+Update secrets manager
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="updateUnifiedSecretsmanager" method="put" path="/unified/secretsmanager/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.secretsmanager.update_unified_secretsmanager(secrets_manager: Models::Shared::SecretsManager.new(
+  auth: {
+    'key' => '<value>',
+  },
+  name: '<value>',
+  type: Models::Shared::SecretsManagerType::ALIBABACLOUD
+), id: '<id>')
+
+unless res.secrets_manager.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `secrets_manager`                                                       | [Models::Shared::SecretsManager](../../models/shared/secretsmanager.md) | :heavy_check_mark:                                                      | N/A                                                                     |
+| `id`                                                                    | *::String*                                                              | :heavy_check_mark:                                                      | ID of the Secretsmanager                                                |
+
+### Response
+
+**[T.nilable(Models::Operations::UpdateUnifiedSecretsmanagerResponse)](../../models/operations/updateunifiedsecretsmanagerresponse.md)**
 
 ### Errors
 

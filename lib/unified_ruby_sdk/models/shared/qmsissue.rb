@@ -7,7 +7,7 @@
 module UnifiedRubySDK
   module Models
     module Shared
-      # A nonconformance, complaint, audit finding or problem report
+      # A nonconformance, complaint, audit finding or other quality issue
       class QmsIssue
         extend T::Sig
         include Crystalline::MetadataFields
@@ -24,7 +24,7 @@ module UnifiedRubySDK
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
-        # What to do with the nonconforming material
+
         field :disposition, Crystalline::Nilable.new(Models::Shared::Disposition), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('disposition'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::Disposition, true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :due_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('due_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
@@ -52,9 +52,9 @@ module UnifiedRubySDK
         field :reporter_user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reporter_user_id') } }
 
         field :severity, Crystalline::Nilable.new(Models::Shared::Severity), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('severity'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::Severity, true) } }
-        # Where a quality issue was found
+
         field :source, Crystalline::Nilable.new(Models::Shared::QmsIssueSource), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('source'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::QmsIssueSource, true) } }
-        # Normalized status of a quality record
+
         field :status, Crystalline::Nilable.new(Models::Shared::QmsIssueStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::QmsIssueStatus, true) } }
 
         field :supplier_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('supplier_name') } }

@@ -30,6 +30,7 @@
 * [list_unified_webhooks](#list_unified_webhooks) - Returns all registered webhooks
 * [list_unified_workspaceintegrations](#list_unified_workspaceintegrations) - List workspace integrations
 * [patch_unified_connection](#patch_unified_connection) - Update connection
+* [patch_unified_secretsmanager](#patch_unified_secretsmanager) - Update secrets manager
 * [patch_unified_webhook](#patch_unified_webhook) - Update webhook subscription
 * [patch_unified_webhook_resume](#patch_unified_webhook_resume) - Resume an unhealthy webhook subscription
 * [patch_unified_webhook_trigger](#patch_unified_webhook_trigger) - Trigger webhook
@@ -40,6 +41,7 @@
 * [remove_unified_webhook](#remove_unified_webhook) - Remove webhook subscription
 * [remove_unified_workspaceintegration](#remove_unified_workspaceintegration) - Remove workspace integration
 * [update_unified_connection](#update_unified_connection) - Update connection
+* [update_unified_secretsmanager](#update_unified_secretsmanager) - Update secrets manager
 * [update_unified_webhook](#update_unified_webhook) - Update webhook subscription
 * [update_unified_webhook_resume](#update_unified_webhook_resume) - Resume an unhealthy webhook subscription
 * [update_unified_webhook_trigger](#update_unified_webhook_trigger) - Trigger webhook
@@ -1134,6 +1136,54 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## patch_unified_secretsmanager
+
+Update secrets manager
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="patchUnifiedSecretsmanager" method="patch" path="/unified/secretsmanager/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.unified.patch_unified_secretsmanager(secrets_manager: Models::Shared::SecretsManager.new(
+  auth: {
+    'key' => '<value>',
+    'key1' => '<value>',
+  },
+  name: '<value>',
+  type: Models::Shared::SecretsManagerType::AKEYLESS
+), id: '<id>')
+
+unless res.secrets_manager.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `secrets_manager`                                                       | [Models::Shared::SecretsManager](../../models/shared/secretsmanager.md) | :heavy_check_mark:                                                      | N/A                                                                     |
+| `id`                                                                    | *::String*                                                              | :heavy_check_mark:                                                      | ID of the Secretsmanager                                                |
+
+### Response
+
+**[T.nilable(Models::Operations::PatchUnifiedSecretsmanagerResponse)](../../models/operations/patchunifiedsecretsmanagerresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## patch_unified_webhook
 
 Update webhook subscription
@@ -1540,6 +1590,53 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::UpdateUnifiedConnectionResponse)](../../models/operations/updateunifiedconnectionresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## update_unified_secretsmanager
+
+Update secrets manager
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="updateUnifiedSecretsmanager" method="put" path="/unified/secretsmanager/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.unified.update_unified_secretsmanager(secrets_manager: Models::Shared::SecretsManager.new(
+  auth: {
+    'key' => '<value>',
+  },
+  name: '<value>',
+  type: Models::Shared::SecretsManagerType::ALIBABACLOUD
+), id: '<id>')
+
+unless res.secrets_manager.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `secrets_manager`                                                       | [Models::Shared::SecretsManager](../../models/shared/secretsmanager.md) | :heavy_check_mark:                                                      | N/A                                                                     |
+| `id`                                                                    | *::String*                                                              | :heavy_check_mark:                                                      | ID of the Secretsmanager                                                |
+
+### Response
+
+**[T.nilable(Models::Operations::UpdateUnifiedSecretsmanagerResponse)](../../models/operations/updateunifiedsecretsmanagerresponse.md)**
 
 ### Errors
 

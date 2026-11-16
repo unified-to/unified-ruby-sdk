@@ -7,7 +7,7 @@
 module UnifiedRubySDK
   module Models
     module Shared
-      # Disposition - What to do with the nonconforming material
+
       class Disposition
         include ::Crystalline::Enum
         enums do

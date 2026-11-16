@@ -56,7 +56,7 @@ module UnifiedRubySDK
         field :revision, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('revision') } }
 
         field :serial_number, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('serial_number') } }
-        # Normalized status of a quality record
+
         field :status, Crystalline::Nilable.new(Models::Shared::QmsInspectionStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::QmsInspectionStatus, true) } }
 
         field :supplier_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('supplier_name') } }

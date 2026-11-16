@@ -29,17 +29,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.application.create_ats_application(ats_application: Models::Shared::AtsApplication.new(
   answers: [],
-  applied_at: DateTime.iso8601('2025-10-15T07:16:24.339Z'),
+  applied_at: DateTime.iso8601('2025-10-16T15:47:08.372Z'),
   created_at: DateTime.iso8601('2023-10-17T07:19:48.787Z'),
-  hired_at: DateTime.iso8601('2026-06-02T04:34:44.490Z'),
-  id: '7a729cbc-377a-45ee-8ab7-8fe2c5f4339c',
+  hired_at: DateTime.iso8601('2026-06-03T23:20:38.090Z'),
+  id: 'c60ea63c-3123-4d9b-810c-c30ad2fff1ee',
   metadata: [
     Models::Shared::AtsMetadata.new(
       extra_data: {
 
       },
       format: Models::Shared::AtsMetadataFormat::TEXT,
-      id: '6f5ab72f-5730-4989-84cd-960abfb0b365',
+      id: '3d021213-153c-4594-a7bb-59bd4e951848',
       namespace: 'application',
       slug: 'stella',
       value: 'Caput.'
@@ -48,12 +48,12 @@ res = s.application.create_ats_application(ats_application: Models::Shared::AtsA
   offers: [],
   original_status: 'vomica',
   original_substatus: 'allatus',
-  rejected_at: DateTime.iso8601('2026-11-04T06:26:41.638Z'),
+  rejected_at: DateTime.iso8601('2026-11-06T08:07:33.707Z'),
   rejected_reason: 'Cometes amplitudo videlicet talio.',
   source: 'credo',
   status: Models::Shared::AtsApplicationStatus::REVIEWING,
   summary: 'Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.',
-  updated_at: DateTime.iso8601('2026-11-11T06:15:22.775Z')
+  updated_at: DateTime.iso8601('2026-11-13T08:14:57.466Z')
 ), connection_id: '<id>')
 
 unless res.ats_application.nil?
@@ -188,17 +188,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAtsApplicationRequest.new(
   ats_application: Models::Shared::AtsApplication.new(
     answers: [],
-    applied_at: DateTime.iso8601('2025-10-15T07:16:24.353Z'),
+    applied_at: DateTime.iso8601('2025-10-16T15:47:08.391Z'),
     created_at: DateTime.iso8601('2023-10-17T07:19:48.787Z'),
-    hired_at: DateTime.iso8601('2026-06-02T04:34:44.509Z'),
-    id: 'bf058136-b5e7-4664-a442-f6b29f9b6c97',
+    hired_at: DateTime.iso8601('2026-06-03T23:20:38.115Z'),
+    id: '19a00be0-9f65-499b-96c8-7df0b133da38',
     metadata: [
       Models::Shared::AtsMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: 'e3f46efa-8716-4dc3-a829-0edf73b04f38',
+        id: '146e4e2d-6c2d-410e-9a46-671f7613dd92',
         namespace: 'application',
         slug: 'stella',
         value: 'Caput.'
@@ -207,12 +207,12 @@ req = Models::Operations::PatchAtsApplicationRequest.new(
     offers: [],
     original_status: 'vomica',
     original_substatus: 'allatus',
-    rejected_at: DateTime.iso8601('2026-11-04T06:26:41.660Z'),
+    rejected_at: DateTime.iso8601('2026-11-06T08:07:33.735Z'),
     rejected_reason: 'Cometes amplitudo videlicet talio.',
     source: 'credo',
     status: Models::Shared::AtsApplicationStatus::REVIEWING,
     summary: 'Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.',
-    updated_at: DateTime.iso8601('2026-11-11T06:15:22.797Z')
+    updated_at: DateTime.iso8601('2026-11-13T08:14:57.495Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -302,17 +302,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAtsApplicationRequest.new(
   ats_application: Models::Shared::AtsApplication.new(
     answers: [],
-    applied_at: DateTime.iso8601('2025-10-15T07:16:24.353Z'),
+    applied_at: DateTime.iso8601('2025-10-16T15:47:08.391Z'),
     created_at: DateTime.iso8601('2023-10-17T07:19:48.787Z'),
-    hired_at: DateTime.iso8601('2026-06-02T04:34:44.509Z'),
-    id: 'bf058136-b5e7-4664-a442-f6b29f9b6c97',
+    hired_at: DateTime.iso8601('2026-06-03T23:20:38.115Z'),
+    id: '19a00be0-9f65-499b-96c8-7df0b133da38',
     metadata: [
       Models::Shared::AtsMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: 'e3f46efa-8716-4dc3-a829-0edf73b04f38',
+        id: '146e4e2d-6c2d-410e-9a46-671f7613dd92',
         namespace: 'application',
         slug: 'stella',
         value: 'Caput.'
@@ -321,12 +321,12 @@ req = Models::Operations::UpdateAtsApplicationRequest.new(
     offers: [],
     original_status: 'vomica',
     original_substatus: 'allatus',
-    rejected_at: DateTime.iso8601('2026-11-04T06:26:41.660Z'),
+    rejected_at: DateTime.iso8601('2026-11-06T08:07:33.735Z'),
     rejected_reason: 'Cometes amplitudo videlicet talio.',
     source: 'credo',
     status: Models::Shared::AtsApplicationStatus::REVIEWING,
     summary: 'Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.',
-    updated_at: DateTime.iso8601('2026-11-11T06:15:22.797Z')
+    updated_at: DateTime.iso8601('2026-11-13T08:14:57.495Z')
   ),
   connection_id: '<id>',
   id: '<id>'

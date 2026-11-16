@@ -47,7 +47,7 @@ res = s.qms.create_qms_action(qms_action: Models::Shared::QmsAction.new(
   description: 'Auditor sunt tego apparatus aegre ascisco.',
   due_at: DateTime.iso8601('2022-04-04T03:42:01.290Z'),
   file_ids: [],
-  id: 'bd14e857-20d6-4ecb-a994-c67bfc441705',
+  id: '01e4e66f-0ff5-4b08-93ac-d2f8069bd784',
   issue_ids: [],
   lifecycle_state: 'Cancelled',
   metadata: [],
@@ -58,7 +58,7 @@ res = s.qms.create_qms_action(qms_action: Models::Shared::QmsAction.new(
   root_cause: 'Worn tooling',
   status: Models::Shared::QmsActionStatus::CANCELLED,
   type: Models::Shared::QmsActionType::CORRECTIVE,
-  updated_at: DateTime.iso8601('2025-02-16T23:31:25.591Z'),
+  updated_at: DateTime.iso8601('2025-02-18T07:03:30.956Z'),
   url: 'https://incomplete-conservation.org'
 ), connection_id: '<id>')
 
@@ -105,9 +105,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.qms.create_qms_audit(qms_audit: Models::Shared::QmsAudit.new(
   created_at: DateTime.iso8601('2021-02-20T23:02:37.667Z'),
-  end_at: DateTime.iso8601('2026-03-27T10:15:21.924Z'),
+  end_at: DateTime.iso8601('2026-03-29T06:49:19.614Z'),
   file_ids: [],
-  id: 'bd69840a-7c7d-4309-8765-7fb2c05477fc',
+  id: 'da741b6e-bef1-4be5-9e1c-4a10d5a95422',
   issue_ids: [],
   lifecycle_state: 'In Review',
   metadata: [],
@@ -116,10 +116,10 @@ res = s.qms.create_qms_audit(qms_audit: Models::Shared::QmsAudit.new(
   scheduled_at: DateTime.iso8601('2021-02-20T23:02:37.667Z'),
   scope: 'Calibration',
   standard: 'ISO 9001:2015',
-  start_at: DateTime.iso8601('2023-01-25T01:00:07.846Z'),
+  start_at: DateTime.iso8601('2023-01-25T17:50:38.202Z'),
   status: Models::Shared::QmsAuditStatus::IN_REVIEW,
   type: Models::Shared::QmsAuditType::CERTIFICATION,
-  updated_at: DateTime.iso8601('2024-02-08T13:52:13.375Z'),
+  updated_at: DateTime.iso8601('2024-02-09T15:48:13.095Z'),
   url: 'https://mushy-obesity.name/'
 ), connection_id: '<id>')
 
@@ -196,8 +196,8 @@ res = s.qms.create_qms_inspection(qms_inspection: Models::Shared::QmsInspection.
   ],
   created_at: DateTime.iso8601('2020-04-18T21:23:54.000Z'),
   file_ids: [],
-  id: '499397cf-07c2-4b54-96b2-bbb95043f2a4',
-  inspected_at: DateTime.iso8601('2021-02-07T08:47:06.470Z'),
+  id: 'c5d16529-78fe-4796-b005-dfa09fb061b3',
+  inspected_at: DateTime.iso8601('2021-02-07T14:56:00.924Z'),
   issue_ids: [],
   lifecycle_state: 'Complete',
   metadata: [],
@@ -212,7 +212,7 @@ res = s.qms.create_qms_inspection(qms_inspection: Models::Shared::QmsInspection.
   status: Models::Shared::QmsInspectionStatus::CLOSED,
   supplier_name: 'Gerlach LLC',
   type: Models::Shared::QmsInspectionType::SOURCE,
-  updated_at: DateTime.iso8601('2026-05-08T14:17:43.908Z'),
+  updated_at: DateTime.iso8601('2026-05-10T12:27:13.591Z'),
   url: 'https://purple-newsprint.name/'
 ), connection_id: '<id>')
 
@@ -270,20 +270,20 @@ res = s.qms.create_qms_issue(qms_issue: Models::Shared::QmsIssue.new(
   change_ids: [],
   created_at: DateTime.iso8601('2020-06-10T05:10:42.904Z'),
   description: 'Adfero delectatio earum contabesco convoco uxor avaritia volaticus dens.',
-  due_at: DateTime.iso8601('2024-07-23T23:37:43.459Z'),
+  due_at: DateTime.iso8601('2024-07-25T07:25:37.266Z'),
   file_ids: [],
-  id: 'dac8fe79-8dd0-4201-b691-4033967222df',
+  id: 'ab897ec7-d53c-4fdb-83f9-23a316261d07',
   lifecycle_state: 'In Progress',
   metadata: [],
   name: 'Labeling error on tuxedo',
   number: 'CMP-5154',
-  opened_at: DateTime.iso8601('2024-07-08T23:03:19.667Z'),
+  opened_at: DateTime.iso8601('2024-07-10T06:51:13.474Z'),
   original_type: 'Customer Complaint',
   severity: Models::Shared::Severity::MEDIUM,
   source: Models::Shared::QmsIssueSource::CUSTOMER,
   status: Models::Shared::QmsIssueStatus::IN_PROGRESS,
   type: Models::Shared::QmsIssueType::COMPLAINT,
-  updated_at: DateTime.iso8601('2021-03-13T04:42:34.092Z'),
+  updated_at: DateTime.iso8601('2021-03-13T10:36:00.765Z'),
   url: 'https://annual-cycle.org/'
 ), connection_id: '<id>')
 
@@ -297,7 +297,7 @@ end
 
 | Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `qms_issue`                                                                                                                                      | [Models::Shared::QmsIssue](../../models/shared/qmsissue.md)                                                                                      | :heavy_check_mark:                                                                                                                               | A nonconformance, complaint, audit finding or problem report                                                                                     |
+| `qms_issue`                                                                                                                                      | [Models::Shared::QmsIssue](../../models/shared/qmsissue.md)                                                                                      | :heavy_check_mark:                                                                                                                               | A nonconformance, complaint, audit finding or other quality issue                                                                                |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateQmsIssueQueryParamFields](../../models/operations/createqmsissuequeryparamfields.md)>                        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
@@ -684,7 +684,7 @@ req = Models::Operations::PatchQmsActionRequest.new(
     description: 'Auditor sunt tego apparatus aegre ascisco.',
     due_at: DateTime.iso8601('2022-04-04T03:42:01.290Z'),
     file_ids: [],
-    id: '8cef4acc-7cac-4e97-a8dd-8e2d130a608c',
+    id: '4f2a0f15-cc4f-46c6-8a8d-65aaa62df656',
     issue_ids: [],
     lifecycle_state: 'Cancelled',
     metadata: [],
@@ -695,7 +695,7 @@ req = Models::Operations::PatchQmsActionRequest.new(
     root_cause: 'Worn tooling',
     status: Models::Shared::QmsActionStatus::CANCELLED,
     type: Models::Shared::QmsActionType::CORRECTIVE,
-    updated_at: DateTime.iso8601('2025-02-16T23:31:25.608Z'),
+    updated_at: DateTime.iso8601('2025-02-18T07:03:30.972Z'),
     url: 'https://incomplete-conservation.org'
   ),
   connection_id: '<id>',
@@ -745,9 +745,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchQmsAuditRequest.new(
   qms_audit: Models::Shared::QmsAudit.new(
     created_at: DateTime.iso8601('2021-02-20T23:02:37.667Z'),
-    end_at: DateTime.iso8601('2026-03-27T10:15:21.944Z'),
+    end_at: DateTime.iso8601('2026-03-29T06:49:19.632Z'),
     file_ids: [],
-    id: '9062ffff-4124-43e0-934f-cc62221e3f9d',
+    id: '868a7148-53a7-489a-be2e-848ad29ab13d',
     issue_ids: [],
     lifecycle_state: 'In Review',
     metadata: [],
@@ -756,10 +756,10 @@ req = Models::Operations::PatchQmsAuditRequest.new(
     scheduled_at: DateTime.iso8601('2021-02-20T23:02:37.667Z'),
     scope: 'Calibration',
     standard: 'ISO 9001:2015',
-    start_at: DateTime.iso8601('2023-01-25T01:00:07.854Z'),
+    start_at: DateTime.iso8601('2023-01-25T17:50:38.209Z'),
     status: Models::Shared::QmsAuditStatus::IN_REVIEW,
     type: Models::Shared::QmsAuditType::CERTIFICATION,
-    updated_at: DateTime.iso8601('2024-02-08T13:52:13.387Z'),
+    updated_at: DateTime.iso8601('2024-02-09T15:48:13.106Z'),
     url: 'https://mushy-obesity.name/'
   ),
   connection_id: '<id>',
@@ -839,8 +839,8 @@ req = Models::Operations::PatchQmsInspectionRequest.new(
     ],
     created_at: DateTime.iso8601('2020-04-18T21:23:54.000Z'),
     file_ids: [],
-    id: '7a40717f-de41-4f0b-b69d-a8bc211741e0',
-    inspected_at: DateTime.iso8601('2021-02-07T08:47:06.474Z'),
+    id: '3f51d908-a5d9-4def-bba0-ada1c62fe822',
+    inspected_at: DateTime.iso8601('2021-02-07T14:56:00.927Z'),
     issue_ids: [],
     lifecycle_state: 'Complete',
     metadata: [],
@@ -855,7 +855,7 @@ req = Models::Operations::PatchQmsInspectionRequest.new(
     status: Models::Shared::QmsInspectionStatus::CLOSED,
     supplier_name: 'Gerlach LLC',
     type: Models::Shared::QmsInspectionType::SOURCE,
-    updated_at: DateTime.iso8601('2026-05-08T14:17:43.934Z'),
+    updated_at: DateTime.iso8601('2026-05-10T12:27:13.616Z'),
     url: 'https://purple-newsprint.name/'
   ),
   connection_id: '<id>',
@@ -916,20 +916,20 @@ req = Models::Operations::PatchQmsIssueRequest.new(
     change_ids: [],
     created_at: DateTime.iso8601('2020-06-10T05:10:42.904Z'),
     description: 'Adfero delectatio earum contabesco convoco uxor avaritia volaticus dens.',
-    due_at: DateTime.iso8601('2024-07-23T23:37:43.476Z'),
+    due_at: DateTime.iso8601('2024-07-25T07:25:37.282Z'),
     file_ids: [],
-    id: '8a9e7df1-1596-4ce2-bd79-760a4b7582be',
+    id: '65256f15-f2a5-4d7b-b903-ea8a921e4325',
     lifecycle_state: 'In Progress',
     metadata: [],
     name: 'Labeling error on tuxedo',
     number: 'CMP-5154',
-    opened_at: DateTime.iso8601('2024-07-08T23:03:19.684Z'),
+    opened_at: DateTime.iso8601('2024-07-10T06:51:13.490Z'),
     original_type: 'Customer Complaint',
     severity: Models::Shared::Severity::MEDIUM,
     source: Models::Shared::QmsIssueSource::CUSTOMER,
     status: Models::Shared::QmsIssueStatus::IN_PROGRESS,
     type: Models::Shared::QmsIssueType::COMPLAINT,
-    updated_at: DateTime.iso8601('2021-03-13T04:42:34.095Z'),
+    updated_at: DateTime.iso8601('2021-03-13T10:36:00.768Z'),
     url: 'https://annual-cycle.org/'
   ),
   connection_id: '<id>',
@@ -983,7 +983,7 @@ req = Models::Operations::UpdateQmsActionRequest.new(
     description: 'Auditor sunt tego apparatus aegre ascisco.',
     due_at: DateTime.iso8601('2022-04-04T03:42:01.290Z'),
     file_ids: [],
-    id: '8cef4acc-7cac-4e97-a8dd-8e2d130a608c',
+    id: '4f2a0f15-cc4f-46c6-8a8d-65aaa62df656',
     issue_ids: [],
     lifecycle_state: 'Cancelled',
     metadata: [],
@@ -994,7 +994,7 @@ req = Models::Operations::UpdateQmsActionRequest.new(
     root_cause: 'Worn tooling',
     status: Models::Shared::QmsActionStatus::CANCELLED,
     type: Models::Shared::QmsActionType::CORRECTIVE,
-    updated_at: DateTime.iso8601('2025-02-16T23:31:25.608Z'),
+    updated_at: DateTime.iso8601('2025-02-18T07:03:30.972Z'),
     url: 'https://incomplete-conservation.org'
   ),
   connection_id: '<id>',
@@ -1044,9 +1044,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateQmsAuditRequest.new(
   qms_audit: Models::Shared::QmsAudit.new(
     created_at: DateTime.iso8601('2021-02-20T23:02:37.667Z'),
-    end_at: DateTime.iso8601('2026-03-27T10:15:21.944Z'),
+    end_at: DateTime.iso8601('2026-03-29T06:49:19.632Z'),
     file_ids: [],
-    id: '9062ffff-4124-43e0-934f-cc62221e3f9d',
+    id: '868a7148-53a7-489a-be2e-848ad29ab13d',
     issue_ids: [],
     lifecycle_state: 'In Review',
     metadata: [],
@@ -1055,10 +1055,10 @@ req = Models::Operations::UpdateQmsAuditRequest.new(
     scheduled_at: DateTime.iso8601('2021-02-20T23:02:37.667Z'),
     scope: 'Calibration',
     standard: 'ISO 9001:2015',
-    start_at: DateTime.iso8601('2023-01-25T01:00:07.854Z'),
+    start_at: DateTime.iso8601('2023-01-25T17:50:38.209Z'),
     status: Models::Shared::QmsAuditStatus::IN_REVIEW,
     type: Models::Shared::QmsAuditType::CERTIFICATION,
-    updated_at: DateTime.iso8601('2024-02-08T13:52:13.387Z'),
+    updated_at: DateTime.iso8601('2024-02-09T15:48:13.106Z'),
     url: 'https://mushy-obesity.name/'
   ),
   connection_id: '<id>',
@@ -1138,8 +1138,8 @@ req = Models::Operations::UpdateQmsInspectionRequest.new(
     ],
     created_at: DateTime.iso8601('2020-04-18T21:23:54.000Z'),
     file_ids: [],
-    id: '7a40717f-de41-4f0b-b69d-a8bc211741e0',
-    inspected_at: DateTime.iso8601('2021-02-07T08:47:06.474Z'),
+    id: '3f51d908-a5d9-4def-bba0-ada1c62fe822',
+    inspected_at: DateTime.iso8601('2021-02-07T14:56:00.927Z'),
     issue_ids: [],
     lifecycle_state: 'Complete',
     metadata: [],
@@ -1154,7 +1154,7 @@ req = Models::Operations::UpdateQmsInspectionRequest.new(
     status: Models::Shared::QmsInspectionStatus::CLOSED,
     supplier_name: 'Gerlach LLC',
     type: Models::Shared::QmsInspectionType::SOURCE,
-    updated_at: DateTime.iso8601('2026-05-08T14:17:43.934Z'),
+    updated_at: DateTime.iso8601('2026-05-10T12:27:13.616Z'),
     url: 'https://purple-newsprint.name/'
   ),
   connection_id: '<id>',
@@ -1215,20 +1215,20 @@ req = Models::Operations::UpdateQmsIssueRequest.new(
     change_ids: [],
     created_at: DateTime.iso8601('2020-06-10T05:10:42.904Z'),
     description: 'Adfero delectatio earum contabesco convoco uxor avaritia volaticus dens.',
-    due_at: DateTime.iso8601('2024-07-23T23:37:43.476Z'),
+    due_at: DateTime.iso8601('2024-07-25T07:25:37.282Z'),
     file_ids: [],
-    id: '8a9e7df1-1596-4ce2-bd79-760a4b7582be',
+    id: '65256f15-f2a5-4d7b-b903-ea8a921e4325',
     lifecycle_state: 'In Progress',
     metadata: [],
     name: 'Labeling error on tuxedo',
     number: 'CMP-5154',
-    opened_at: DateTime.iso8601('2024-07-08T23:03:19.684Z'),
+    opened_at: DateTime.iso8601('2024-07-10T06:51:13.490Z'),
     original_type: 'Customer Complaint',
     severity: Models::Shared::Severity::MEDIUM,
     source: Models::Shared::QmsIssueSource::CUSTOMER,
     status: Models::Shared::QmsIssueStatus::IN_PROGRESS,
     type: Models::Shared::QmsIssueType::COMPLAINT,
-    updated_at: DateTime.iso8601('2021-03-13T04:42:34.095Z'),
+    updated_at: DateTime.iso8601('2021-03-13T10:36:00.768Z'),
     url: 'https://annual-cycle.org/'
   ),
   connection_id: '<id>',
