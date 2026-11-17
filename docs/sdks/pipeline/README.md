@@ -31,7 +31,7 @@ res = s.pipeline.create_crm_pipeline(crm_pipeline: Models::Shared::CrmPipeline.n
   created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
   deal_probability: 99.0,
   display_order: 8.0,
-  id: '57c6910c-3232-4adb-a5ec-a068543e9635',
+  id: 'd5868a9f-d0f7-4e86-abdc-1a4264247301',
   is_active: true,
   metadata: [],
   name: 'Small Steel Bacon',
@@ -41,13 +41,13 @@ res = s.pipeline.create_crm_pipeline(crm_pipeline: Models::Shared::CrmPipeline.n
       created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
       deal_probability: 84.0,
       display_order: 72.0,
-      id: '32f278dd-1302-46ba-85b5-43c0945268ae',
+      id: '4b337526-4673-436f-a6c0-e768424c024f',
       is_closed: true,
       name: 'Veniam.',
-      updated_at: DateTime.iso8601('2025-10-29T12:28:53.402Z')
+      updated_at: DateTime.iso8601('2025-10-30T05:02:56.742Z')
     ),
   ],
-  updated_at: DateTime.iso8601('2025-11-20T15:39:45.556Z')
+  updated_at: DateTime.iso8601('2025-11-21T08:35:03.150Z')
 ), connection_id: '<id>')
 
 unless res.crm_pipeline.nil?
@@ -184,7 +184,7 @@ req = Models::Operations::PatchCrmPipelineRequest.new(
     created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
     deal_probability: 99.0,
     display_order: 8.0,
-    id: '5b4ef83a-83fe-487a-875c-0bba9d3a403e',
+    id: '01f61d84-66c7-4217-85d3-5cde92723ad4',
     is_active: true,
     metadata: [],
     name: 'Small Steel Bacon',
@@ -194,13 +194,13 @@ req = Models::Operations::PatchCrmPipelineRequest.new(
         created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
         deal_probability: 84.0,
         display_order: 72.0,
-        id: '3f5abe45-b2f6-4443-a5cd-cb8880775e3d',
+        id: 'a8f699e8-849f-42db-bf75-9b2f2510ef2d',
         is_closed: true,
         name: 'Veniam.',
-        updated_at: DateTime.iso8601('2025-10-29T12:28:53.414Z')
+        updated_at: DateTime.iso8601('2025-10-30T05:02:56.749Z')
       ),
     ],
-    updated_at: DateTime.iso8601('2025-11-20T15:39:45.568Z')
+    updated_at: DateTime.iso8601('2025-11-21T08:35:03.157Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -292,7 +292,7 @@ req = Models::Operations::UpdateCrmPipelineRequest.new(
     created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
     deal_probability: 99.0,
     display_order: 8.0,
-    id: '5b4ef83a-83fe-487a-875c-0bba9d3a403e',
+    id: '01f61d84-66c7-4217-85d3-5cde92723ad4',
     is_active: true,
     metadata: [],
     name: 'Small Steel Bacon',
@@ -302,13 +302,13 @@ req = Models::Operations::UpdateCrmPipelineRequest.new(
         created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
         deal_probability: 84.0,
         display_order: 72.0,
-        id: '3f5abe45-b2f6-4443-a5cd-cb8880775e3d',
+        id: 'a8f699e8-849f-42db-bf75-9b2f2510ef2d',
         is_closed: true,
         name: 'Veniam.',
-        updated_at: DateTime.iso8601('2025-10-29T12:28:53.414Z')
+        updated_at: DateTime.iso8601('2025-10-30T05:02:56.749Z')
       ),
     ],
-    updated_at: DateTime.iso8601('2025-11-20T15:39:45.568Z')
+    updated_at: DateTime.iso8601('2025-11-21T08:35:03.157Z')
   ),
   connection_id: '<id>',
   id: '<id>'

@@ -28,16 +28,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
   )
 )
 res = s.expensereport.create_accounting_expensereport(accounting_expensereport: Models::Shared::AccountingExpensereport.new(
-  approved_at: DateTime.iso8601('2021-04-23T02:27:42.451Z'),
+  approved_at: DateTime.iso8601('2021-04-23T05:37:18.245Z'),
   attachments: [],
   category_ids: [],
   created_at: DateTime.iso8601('2020-05-29T02:04:59.078Z'),
   currency: 'GBP',
   external_number: 'ER-31240',
-  id: '49c84042-5aca-4276-a48e-a4e072bb9b98',
+  id: '8b6c5c03-a1ba-4036-a818-32b785ed560d',
   lineitems: [
     Models::Shared::AccountingLineitem.new(
-      id: '3047f937-eda1-4aa5-937f-3af3d2739ae0',
+      id: 'bd593af2-96e4-49fe-a1f4-51ca20eb44da',
       item_name: 'Conference ticket',
       tax_amount: 0.0,
       total_amount: 39.9,
@@ -45,7 +45,7 @@ res = s.expensereport.create_accounting_expensereport(accounting_expensereport: 
       unit_quantity: 1.0
     ),
     Models::Shared::AccountingLineitem.new(
-      id: '05d27cdb-de28-4ac7-962a-8464c36cebd5',
+      id: '1a6b0dd0-cc7d-4344-8b8b-71fc9fa5cffa',
       item_name: 'Flight',
       notes: 'Soluta omnis dolor.',
       tax_amount: 0.0,
@@ -54,7 +54,7 @@ res = s.expensereport.create_accounting_expensereport(accounting_expensereport: 
       unit_quantity: 1.0
     ),
     Models::Shared::AccountingLineitem.new(
-      id: 'a31dd1d6-bc75-4dc0-8ebd-8aa6adbd5bc1',
+      id: '0fc23cbd-f141-4de3-8291-4ba031b320b1',
       item_name: 'Client dinner',
       notes: 'Altus caveo capio.',
       tax_amount: 0.0,
@@ -63,7 +63,7 @@ res = s.expensereport.create_accounting_expensereport(accounting_expensereport: 
       unit_quantity: 1.0
     ),
     Models::Shared::AccountingLineitem.new(
-      id: '0158933c-0d82-497a-a435-e6ca9f644e63',
+      id: 'ffcb7198-bf62-4040-bffb-22580093cc90',
       item_name: 'Flight',
       tax_amount: 0.0,
       total_amount: 445.27,
@@ -75,11 +75,11 @@ res = s.expensereport.create_accounting_expensereport(accounting_expensereport: 
   name: 'Lolita Kunde - October expenses',
   posted_at: DateTime.iso8601('2020-05-29T02:04:59.078Z'),
   reimbursed_amount: 908.46,
-  reimbursed_at: DateTime.iso8601('2021-04-23T02:27:42.451Z'),
+  reimbursed_at: DateTime.iso8601('2021-04-23T05:37:18.245Z'),
   status: Models::Shared::AccountingExpensereportStatus::PAID,
   tax_amount: 0.0,
   total_amount: 908.46,
-  updated_at: DateTime.iso8601('2021-04-23T02:27:42.451Z')
+  updated_at: DateTime.iso8601('2021-04-23T05:37:18.245Z')
 ), connection_id: '<id>')
 
 unless res.accounting_expensereport.nil?
@@ -213,16 +213,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchAccountingExpensereportRequest.new(
   accounting_expensereport: Models::Shared::AccountingExpensereport.new(
-    approved_at: DateTime.iso8601('2021-04-23T02:27:42.456Z'),
+    approved_at: DateTime.iso8601('2021-04-23T05:37:18.248Z'),
     attachments: [],
     category_ids: [],
     created_at: DateTime.iso8601('2020-05-29T02:04:59.078Z'),
     currency: 'GBP',
     external_number: 'ER-31240',
-    id: '979116c9-e3b0-4362-848b-9a107cbebb31',
+    id: 'f1a2a334-1d18-47c4-b7f0-8e20574b8f0b',
     lineitems: [
       Models::Shared::AccountingLineitem.new(
-        id: '4653a972-b0a3-40fe-87e4-56ccb04246ee',
+        id: '7d5a436f-cc36-40d2-ae21-abd748778433',
         item_name: 'Conference ticket',
         tax_amount: 0.0,
         total_amount: 39.9,
@@ -230,7 +230,7 @@ req = Models::Operations::PatchAccountingExpensereportRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '5931b97e-7971-4ea3-8537-2ed3c0030ae3',
+        id: '0ce275aa-a10d-442e-bad1-f170394135ae',
         item_name: 'Flight',
         notes: 'Soluta omnis dolor.',
         tax_amount: 0.0,
@@ -239,7 +239,7 @@ req = Models::Operations::PatchAccountingExpensereportRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'f127ba83-db24-41ab-aa49-416f1ed16b7e',
+        id: '28377ecc-7562-45ee-afe1-d5e6e1d00e87',
         item_name: 'Client dinner',
         notes: 'Altus caveo capio.',
         tax_amount: 0.0,
@@ -248,7 +248,7 @@ req = Models::Operations::PatchAccountingExpensereportRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'f26d0b47-8e45-41e1-96a6-c09643c25f6e',
+        id: '3b7ca2b3-61b8-46ad-a364-223926b029e4',
         item_name: 'Flight',
         tax_amount: 0.0,
         total_amount: 445.27,
@@ -260,11 +260,11 @@ req = Models::Operations::PatchAccountingExpensereportRequest.new(
     name: 'Lolita Kunde - October expenses',
     posted_at: DateTime.iso8601('2020-05-29T02:04:59.078Z'),
     reimbursed_amount: 908.46,
-    reimbursed_at: DateTime.iso8601('2021-04-23T02:27:42.456Z'),
+    reimbursed_at: DateTime.iso8601('2021-04-23T05:37:18.248Z'),
     status: Models::Shared::AccountingExpensereportStatus::PAID,
     tax_amount: 0.0,
     total_amount: 908.46,
-    updated_at: DateTime.iso8601('2021-04-23T02:27:42.456Z')
+    updated_at: DateTime.iso8601('2021-04-23T05:37:18.248Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -353,16 +353,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateAccountingExpensereportRequest.new(
   accounting_expensereport: Models::Shared::AccountingExpensereport.new(
-    approved_at: DateTime.iso8601('2021-04-23T02:27:42.456Z'),
+    approved_at: DateTime.iso8601('2021-04-23T05:37:18.248Z'),
     attachments: [],
     category_ids: [],
     created_at: DateTime.iso8601('2020-05-29T02:04:59.078Z'),
     currency: 'GBP',
     external_number: 'ER-31240',
-    id: '979116c9-e3b0-4362-848b-9a107cbebb31',
+    id: 'f1a2a334-1d18-47c4-b7f0-8e20574b8f0b',
     lineitems: [
       Models::Shared::AccountingLineitem.new(
-        id: '4653a972-b0a3-40fe-87e4-56ccb04246ee',
+        id: '7d5a436f-cc36-40d2-ae21-abd748778433',
         item_name: 'Conference ticket',
         tax_amount: 0.0,
         total_amount: 39.9,
@@ -370,7 +370,7 @@ req = Models::Operations::UpdateAccountingExpensereportRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '5931b97e-7971-4ea3-8537-2ed3c0030ae3',
+        id: '0ce275aa-a10d-442e-bad1-f170394135ae',
         item_name: 'Flight',
         notes: 'Soluta omnis dolor.',
         tax_amount: 0.0,
@@ -379,7 +379,7 @@ req = Models::Operations::UpdateAccountingExpensereportRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'f127ba83-db24-41ab-aa49-416f1ed16b7e',
+        id: '28377ecc-7562-45ee-afe1-d5e6e1d00e87',
         item_name: 'Client dinner',
         notes: 'Altus caveo capio.',
         tax_amount: 0.0,
@@ -388,7 +388,7 @@ req = Models::Operations::UpdateAccountingExpensereportRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'f26d0b47-8e45-41e1-96a6-c09643c25f6e',
+        id: '3b7ca2b3-61b8-46ad-a364-223926b029e4',
         item_name: 'Flight',
         tax_amount: 0.0,
         total_amount: 445.27,
@@ -400,11 +400,11 @@ req = Models::Operations::UpdateAccountingExpensereportRequest.new(
     name: 'Lolita Kunde - October expenses',
     posted_at: DateTime.iso8601('2020-05-29T02:04:59.078Z'),
     reimbursed_amount: 908.46,
-    reimbursed_at: DateTime.iso8601('2021-04-23T02:27:42.456Z'),
+    reimbursed_at: DateTime.iso8601('2021-04-23T05:37:18.248Z'),
     status: Models::Shared::AccountingExpensereportStatus::PAID,
     tax_amount: 0.0,
     total_amount: 908.46,
-    updated_at: DateTime.iso8601('2021-04-23T02:27:42.456Z')
+    updated_at: DateTime.iso8601('2021-04-23T05:37:18.248Z')
   ),
   connection_id: '<id>',
   id: '<id>'

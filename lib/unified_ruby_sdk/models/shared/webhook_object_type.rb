@@ -94,6 +94,7 @@ module UnifiedRubySDK
           HRIS_PAYROLL = new('hris_payroll')
           HRIS_PAYCODE = new('hris_paycode')
           HRIS_EARNING = new('hris_earning')
+          HRIS_TAXWITHHOLDING = new('hris_taxwithholding')
           MARTECH_LIST = new('martech_list')
           MARTECH_MEMBER = new('martech_member')
           MARTECH_CAMPAIGN = new('martech_campaign')

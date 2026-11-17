@@ -295,6 +295,8 @@
 | `hris_payslip_write`                   | *T.nilable(::String)*                  | :heavy_minus_sign:                     | N/A                                    |
 | `hris_taxonomy_read`                   | *T.nilable(::String)*                  | :heavy_minus_sign:                     | N/A                                    |
 | `hris_taxonomy_write`                  | *T.nilable(::String)*                  | :heavy_minus_sign:                     | N/A                                    |
+| `hris_taxwithholding_read`             | *T.nilable(::String)*                  | :heavy_minus_sign:                     | N/A                                    |
+| `hris_taxwithholding_write`            | *T.nilable(::String)*                  | :heavy_minus_sign:                     | N/A                                    |
 | `hris_timeoff_read`                    | *T.nilable(::String)*                  | :heavy_minus_sign:                     | N/A                                    |
 | `hris_timeoff_write`                   | *T.nilable(::String)*                  | :heavy_minus_sign:                     | N/A                                    |
 | `hris_timeshift_read`                  | *T.nilable(::String)*                  | :heavy_minus_sign:                     | N/A                                    |

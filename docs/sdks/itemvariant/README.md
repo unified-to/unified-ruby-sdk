@@ -32,7 +32,7 @@ res = s.itemvariant.create_commerce_itemvariant(commerce_itemvariant: Models::Sh
   created_at: DateTime.iso8601('2022-01-20T13:49:12.968Z'),
   description: 'Stylish Salad designed to make you stand out with little looks',
   height: 54.0,
-  id: '0f341883-ee67-46ee-b600-ba1d9b405d5f',
+  id: 'faf12e1c-31f0-4017-86f4-916cec16098f',
   is_active: true,
   is_featured: false,
   is_visible: false,
@@ -41,10 +41,10 @@ res = s.itemvariant.create_commerce_itemvariant(commerce_itemvariant: Models::Sh
     Models::Shared::CommerceItemMedia.new(
       alt: 'Hic desipio thorax.',
       height: 961.0,
-      id: 'dd01905e-7a67-4c7b-af5b-b80d7c8ddbd2',
+      id: 'c6b18250-6a5f-40cc-9425-3dd1a5f1fdbe',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: '87ef5861-7afe-4e01-adf4-ecac436f7451',
+          id: 'a895da47-1c37-46c2-b4aa-0265b62f4eda',
           slug: 'ubi',
           value: 'textus'
         ),
@@ -61,7 +61,7 @@ res = s.itemvariant.create_commerce_itemvariant(commerce_itemvariant: Models::Sh
         'display_name' => 'Custom Property',
       },
       format: Models::Shared::CommerceMetadataFormat::TEXT,
-      id: 'b0d77821-e9c1-4efe-af78-030b0f0fc745',
+      id: '6e4850d4-afa5-4df0-835b-3f3e4e0f3471',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'absens'
@@ -70,7 +70,7 @@ res = s.itemvariant.create_commerce_itemvariant(commerce_itemvariant: Models::Sh
   name: 'Chair',
   options: [
     Models::Shared::CommerceItemOption.new(
-      id: '66b7aa02-188e-495b-913d-5ac7e7251ff5',
+      id: '3347faa3-364c-48c6-873e-4435a721951e',
       name: 'Color',
       position: 1.0,
       values: [
@@ -78,7 +78,7 @@ res = s.itemvariant.create_commerce_itemvariant(commerce_itemvariant: Models::Sh
       ]
     ),
     Models::Shared::CommerceItemOption.new(
-      id: '69aaf5c6-d4a2-44c4-9217-3a80802744b4',
+      id: '91564d6d-1d12-4c9c-89f0-c532be0b3b00',
       name: 'Size',
       position: 2.0,
       values: [
@@ -101,7 +101,7 @@ res = s.itemvariant.create_commerce_itemvariant(commerce_itemvariant: Models::Sh
     'deserunt',
   ],
   total_stock: 436.0,
-  updated_at: DateTime.iso8601('2026-04-01T07:36:20.111Z'),
+  updated_at: DateTime.iso8601('2026-04-02T03:20:35.393Z'),
   weight: 46.0,
   weight_unit: Models::Shared::CommerceItemvariantWeightUnit::OZ,
   width: 40.0
@@ -242,7 +242,7 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
     created_at: DateTime.iso8601('2022-01-20T13:49:12.968Z'),
     description: 'Stylish Salad designed to make you stand out with little looks',
     height: 54.0,
-    id: 'df9e748c-59d3-4fc9-a500-fc7616b2ecd5',
+    id: '1967aad2-0aad-4eed-bf30-597158336f0e',
     is_active: true,
     is_featured: false,
     is_visible: false,
@@ -251,10 +251,10 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Hic desipio thorax.',
         height: 961.0,
-        id: '1168a038-fcc3-426f-b2ae-dbb6a5daa8b2',
+        id: '1a7a62b3-d1e8-40b6-863a-3c46898d072a',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '0e172bf6-de10-491f-b013-0f40f12f558f',
+            id: '8123242f-0029-476d-b6b9-a4e3005d30cd',
             slug: 'ubi',
             value: 'textus'
           ),
@@ -271,7 +271,7 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CommerceMetadataFormat::TEXT,
-        id: '151b4e40-3584-4d19-8ce7-39c8ae190366',
+        id: '2ddca037-5503-4d93-9a66-8de8148ab411',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'absens'
@@ -280,7 +280,7 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
     name: 'Chair',
     options: [
       Models::Shared::CommerceItemOption.new(
-        id: '073a0bfc-6dc2-414f-9032-65809dc0bb8a',
+        id: '9f347807-6302-47ae-845b-8167a286aa1c',
         name: 'Color',
         position: 1.0,
         values: [
@@ -288,7 +288,7 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
         ]
       ),
       Models::Shared::CommerceItemOption.new(
-        id: 'e812c855-9c64-4417-a58c-183e65200d44',
+        id: 'ead48654-7ce1-4d2a-bddb-b2a23fbc73db',
         name: 'Size',
         position: 2.0,
         values: [
@@ -311,7 +311,7 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
       'deserunt',
     ],
     total_stock: 436.0,
-    updated_at: DateTime.iso8601('2026-04-01T07:36:20.137Z'),
+    updated_at: DateTime.iso8601('2026-04-02T03:20:35.411Z'),
     weight: 46.0,
     weight_unit: Models::Shared::CommerceItemvariantWeightUnit::OZ,
     width: 40.0
@@ -407,7 +407,7 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
     created_at: DateTime.iso8601('2022-01-20T13:49:12.968Z'),
     description: 'Stylish Salad designed to make you stand out with little looks',
     height: 54.0,
-    id: 'df9e748c-59d3-4fc9-a500-fc7616b2ecd5',
+    id: '1967aad2-0aad-4eed-bf30-597158336f0e',
     is_active: true,
     is_featured: false,
     is_visible: false,
@@ -416,10 +416,10 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Hic desipio thorax.',
         height: 961.0,
-        id: '1168a038-fcc3-426f-b2ae-dbb6a5daa8b2',
+        id: '1a7a62b3-d1e8-40b6-863a-3c46898d072a',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '0e172bf6-de10-491f-b013-0f40f12f558f',
+            id: '8123242f-0029-476d-b6b9-a4e3005d30cd',
             slug: 'ubi',
             value: 'textus'
           ),
@@ -436,7 +436,7 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CommerceMetadataFormat::TEXT,
-        id: '151b4e40-3584-4d19-8ce7-39c8ae190366',
+        id: '2ddca037-5503-4d93-9a66-8de8148ab411',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'absens'
@@ -445,7 +445,7 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
     name: 'Chair',
     options: [
       Models::Shared::CommerceItemOption.new(
-        id: '073a0bfc-6dc2-414f-9032-65809dc0bb8a',
+        id: '9f347807-6302-47ae-845b-8167a286aa1c',
         name: 'Color',
         position: 1.0,
         values: [
@@ -453,7 +453,7 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
         ]
       ),
       Models::Shared::CommerceItemOption.new(
-        id: 'e812c855-9c64-4417-a58c-183e65200d44',
+        id: 'ead48654-7ce1-4d2a-bddb-b2a23fbc73db',
         name: 'Size',
         position: 2.0,
         values: [
@@ -476,7 +476,7 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
       'deserunt',
     ],
     total_stock: 436.0,
-    updated_at: DateTime.iso8601('2026-04-01T07:36:20.137Z'),
+    updated_at: DateTime.iso8601('2026-04-02T03:20:35.411Z'),
     weight: 46.0,
     weight_unit: Models::Shared::CommerceItemvariantWeightUnit::OZ,
     width: 40.0

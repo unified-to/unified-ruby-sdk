@@ -38,7 +38,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.activity.create_ats_activity(ats_activity: Models::Shared::AtsActivity.new(
   created_at: DateTime.iso8601('2022-08-07T03:16:43.865Z'),
   description: 'Sapiente.',
-  id: 'e350880a-ff10-4d95-9498-f9f023afebcc',
+  id: '0edf4785-b292-48cd-95d4-085b41895e9a',
   is_private: false,
   metadata: [
     Models::Shared::AtsMetadata.new(
@@ -46,7 +46,7 @@ res = s.activity.create_ats_activity(ats_activity: Models::Shared::AtsActivity.n
 
       },
       format: Models::Shared::AtsMetadataFormat::TEXT,
-      id: '341f740a-9a0d-4f7c-aa0f-765131798e41',
+      id: 'bcdbe578-5b16-4be5-811a-89d2e229b807',
       namespace: 'activity',
       slug: 'cimentarius',
       value: 'Reprehenderit verto.'
@@ -55,7 +55,7 @@ res = s.activity.create_ats_activity(ats_activity: Models::Shared::AtsActivity.n
   sub_type: 'TASK',
   title: 'Venio blandior aureus.',
   type: Models::Shared::AtsActivityType::TASK,
-  updated_at: DateTime.iso8601('2026-04-26T21:49:01.761Z')
+  updated_at: DateTime.iso8601('2026-04-27T17:33:07.029Z')
 ), connection_id: '<id>')
 
 unless res.ats_activity.nil?
@@ -101,15 +101,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.activity.create_lms_activity(lms_activity: Models::Shared::LmsActivity.new(
   assigned_grade: 'summopere',
-  completed_at: DateTime.iso8601('2023-12-19T13:21:47.228Z'),
+  completed_at: DateTime.iso8601('2023-12-20T01:11:44.665Z'),
   created_at: DateTime.iso8601('2020-10-17T01:25:21.745Z'),
   duration_minutes: 55.0,
-  id: '9a8e50d3-9317-402a-acd5-3756811d2744',
+  id: '9f5e4b59-c618-40d6-9655-7b7ea729a609',
   is_completed: true,
   metadata: [],
   progress_percentage: 100.0,
-  started_at: DateTime.iso8601('2021-04-27T10:28:29.619Z'),
-  updated_at: DateTime.iso8601('2022-02-05T13:38:56.398Z')
+  started_at: DateTime.iso8601('2021-04-27T12:26:23.242Z'),
+  updated_at: DateTime.iso8601('2022-02-05T18:30:57.437Z')
 ), connection_id: '<id>')
 
 unless res.lms_activity.nil?
@@ -419,7 +419,7 @@ req = Models::Operations::PatchAtsActivityRequest.new(
   ats_activity: Models::Shared::AtsActivity.new(
     created_at: DateTime.iso8601('2022-08-07T03:16:43.865Z'),
     description: 'Sapiente.',
-    id: '4971cf93-67e3-4ec3-ac28-6ad2f3a5347b',
+    id: '56c1c034-ddc7-4115-a417-62c7abf8546f',
     is_private: false,
     metadata: [
       Models::Shared::AtsMetadata.new(
@@ -427,7 +427,7 @@ req = Models::Operations::PatchAtsActivityRequest.new(
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: 'b1b0c0f6-c6c2-419f-b1d4-a279a2cec288',
+        id: 'd3cfff10-4cbd-473f-a456-b2354c0b047c',
         namespace: 'activity',
         slug: 'cimentarius',
         value: 'Reprehenderit verto.'
@@ -436,7 +436,7 @@ req = Models::Operations::PatchAtsActivityRequest.new(
     sub_type: 'TASK',
     title: 'Venio blandior aureus.',
     type: Models::Shared::AtsActivityType::TASK,
-    updated_at: DateTime.iso8601('2026-04-26T21:49:01.777Z')
+    updated_at: DateTime.iso8601('2026-04-27T17:33:07.046Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -485,15 +485,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchLmsActivityRequest.new(
   lms_activity: Models::Shared::LmsActivity.new(
     assigned_grade: 'summopere',
-    completed_at: DateTime.iso8601('2023-12-19T13:21:47.235Z'),
+    completed_at: DateTime.iso8601('2023-12-20T01:11:44.669Z'),
     created_at: DateTime.iso8601('2020-10-17T01:25:21.745Z'),
     duration_minutes: 55.0,
-    id: 'ff1b1bb0-1fdd-4e9e-ac2a-ba3063e5cadd',
+    id: '5bf29ee0-90c4-4b0c-8f38-3482c639c0b7',
     is_completed: true,
     metadata: [],
     progress_percentage: 100.0,
-    started_at: DateTime.iso8601('2021-04-27T10:28:29.620Z'),
-    updated_at: DateTime.iso8601('2022-02-05T13:38:56.401Z')
+    started_at: DateTime.iso8601('2021-04-27T12:26:23.243Z'),
+    updated_at: DateTime.iso8601('2022-02-05T18:30:57.439Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -625,7 +625,7 @@ req = Models::Operations::UpdateAtsActivityRequest.new(
   ats_activity: Models::Shared::AtsActivity.new(
     created_at: DateTime.iso8601('2022-08-07T03:16:43.865Z'),
     description: 'Sapiente.',
-    id: '4971cf93-67e3-4ec3-ac28-6ad2f3a5347b',
+    id: '56c1c034-ddc7-4115-a417-62c7abf8546f',
     is_private: false,
     metadata: [
       Models::Shared::AtsMetadata.new(
@@ -633,7 +633,7 @@ req = Models::Operations::UpdateAtsActivityRequest.new(
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: 'b1b0c0f6-c6c2-419f-b1d4-a279a2cec288',
+        id: 'd3cfff10-4cbd-473f-a456-b2354c0b047c',
         namespace: 'activity',
         slug: 'cimentarius',
         value: 'Reprehenderit verto.'
@@ -642,7 +642,7 @@ req = Models::Operations::UpdateAtsActivityRequest.new(
     sub_type: 'TASK',
     title: 'Venio blandior aureus.',
     type: Models::Shared::AtsActivityType::TASK,
-    updated_at: DateTime.iso8601('2026-04-26T21:49:01.777Z')
+    updated_at: DateTime.iso8601('2026-04-27T17:33:07.046Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -691,15 +691,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateLmsActivityRequest.new(
   lms_activity: Models::Shared::LmsActivity.new(
     assigned_grade: 'summopere',
-    completed_at: DateTime.iso8601('2023-12-19T13:21:47.235Z'),
+    completed_at: DateTime.iso8601('2023-12-20T01:11:44.669Z'),
     created_at: DateTime.iso8601('2020-10-17T01:25:21.745Z'),
     duration_minutes: 55.0,
-    id: 'ff1b1bb0-1fdd-4e9e-ac2a-ba3063e5cadd',
+    id: '5bf29ee0-90c4-4b0c-8f38-3482c639c0b7',
     is_completed: true,
     metadata: [],
     progress_percentage: 100.0,
-    started_at: DateTime.iso8601('2021-04-27T10:28:29.620Z'),
-    updated_at: DateTime.iso8601('2022-02-05T13:38:56.401Z')
+    started_at: DateTime.iso8601('2021-04-27T12:26:23.243Z'),
+    updated_at: DateTime.iso8601('2022-02-05T18:30:57.439Z')
   ),
   connection_id: '<id>',
   id: '<id>'

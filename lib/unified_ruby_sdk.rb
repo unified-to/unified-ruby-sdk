@@ -150,6 +150,7 @@ module UnifiedRubySDK
   autoload :Paycode, 'unified_ruby_sdk/paycode'
   autoload :Payroll, 'unified_ruby_sdk/payroll'
   autoload :Payslip, 'unified_ruby_sdk/payslip'
+  autoload :Taxwithholding, 'unified_ruby_sdk/taxwithholding'
   autoload :Timeoff, 'unified_ruby_sdk/timeoff'
   autoload :Timeshift, 'unified_ruby_sdk/timeshift'
   autoload :Kms, 'unified_ruby_sdk/kms'

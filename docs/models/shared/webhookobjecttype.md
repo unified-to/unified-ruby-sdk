@@ -101,6 +101,7 @@ custom = WebhookObjectType.deserialize("custom_value")
 | `HRIS_PAYROLL`                   | hris_payroll                     |
 | `HRIS_PAYCODE`                   | hris_paycode                     |
 | `HRIS_EARNING`                   | hris_earning                     |
+| `HRIS_TAXWITHHOLDING`            | hris_taxwithholding              |
 | `MARTECH_LIST`                   | martech_list                     |
 | `MARTECH_MEMBER`                 | martech_member                   |
 | `MARTECH_CAMPAIGN`               | martech_campaign                 |

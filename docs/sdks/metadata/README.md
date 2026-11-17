@@ -30,17 +30,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.metadata.create_metadata_metadata(metadata_metadata: Models::Shared::MetadataMetadata.new(
   created_at: DateTime.iso8601('2021-03-25T03:02:17.656Z'),
   format: Models::Shared::MetadataMetadataFormat::PRICE,
-  id: '1b177f84-884e-4667-ad44-fd920777fb18',
+  id: 'd76bb8a8-a591-49f9-917b-330e1a95885e',
   is_required: false,
   name: 'autem',
-  object_type: 'healthcare_practitioner',
+  object_type: 'healthcare_patient',
   objects: {
 
   },
   options: [],
   original_format: 'advoco',
   slug: 'arbustum',
-  updated_at: DateTime.iso8601('2025-04-09T14:17:28.177Z')
+  updated_at: DateTime.iso8601('2025-04-10T06:32:05.478Z')
 ), connection_id: '<id>')
 
 unless res.metadata_metadata.nil?
@@ -176,17 +176,17 @@ req = Models::Operations::PatchMetadataMetadataRequest.new(
   metadata_metadata: Models::Shared::MetadataMetadata.new(
     created_at: DateTime.iso8601('2021-03-25T03:02:17.656Z'),
     format: Models::Shared::MetadataMetadataFormat::PRICE,
-    id: 'e1ca8aa9-4419-4766-be48-0bfaa5bb6945',
+    id: '7441eef5-3926-4334-a5c6-1325dd842d62',
     is_required: false,
     name: 'autem',
-    object_type: 'healthcare_practitioner',
+    object_type: 'healthcare_patient',
     objects: {
 
     },
     options: [],
     original_format: 'advoco',
     slug: 'arbustum',
-    updated_at: DateTime.iso8601('2025-04-09T14:17:28.184Z')
+    updated_at: DateTime.iso8601('2025-04-10T06:32:05.485Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -277,17 +277,17 @@ req = Models::Operations::UpdateMetadataMetadataRequest.new(
   metadata_metadata: Models::Shared::MetadataMetadata.new(
     created_at: DateTime.iso8601('2021-03-25T03:02:17.656Z'),
     format: Models::Shared::MetadataMetadataFormat::PRICE,
-    id: 'e1ca8aa9-4419-4766-be48-0bfaa5bb6945',
+    id: '7441eef5-3926-4334-a5c6-1325dd842d62',
     is_required: false,
     name: 'autem',
-    object_type: 'healthcare_practitioner',
+    object_type: 'healthcare_patient',
     objects: {
 
     },
     options: [],
     original_format: 'advoco',
     slug: 'arbustum',
-    updated_at: DateTime.iso8601('2025-04-09T14:17:28.184Z')
+    updated_at: DateTime.iso8601('2025-04-10T06:32:05.485Z')
   ),
   connection_id: '<id>',
   id: '<id>'

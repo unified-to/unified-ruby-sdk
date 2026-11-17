@@ -17,6 +17,7 @@
 * [create_hris_job](#create_hris_job) - Create a job
 * [create_hris_location](#create_hris_location) - Create a location
 * [create_hris_taxonomy](#create_hris_taxonomy) - Create a taxonomy
+* [create_hris_taxwithholding](#create_hris_taxwithholding) - Create a taxwithholding
 * [create_hris_timeoff](#create_hris_timeoff) - Create a timeoff
 * [create_hris_timeshift](#create_hris_timeshift) - Create a timeshift
 * [get_hris_attendance](#get_hris_attendance) - Retrieve an attendance
@@ -35,6 +36,7 @@
 * [get_hris_payroll](#get_hris_payroll) - Retrieve a payroll
 * [get_hris_payslip](#get_hris_payslip) - Retrieve a payslip
 * [get_hris_taxonomy](#get_hris_taxonomy) - Retrieve a taxonomy
+* [get_hris_taxwithholding](#get_hris_taxwithholding) - Retrieve a taxwithholding
 * [get_hris_timeoff](#get_hris_timeoff) - Retrieve a timeoff
 * [get_hris_timeshift](#get_hris_timeshift) - Retrieve a timeshift
 * [list_hris_attendances](#list_hris_attendances) - List all attendances
@@ -53,6 +55,7 @@
 * [list_hris_payrolls](#list_hris_payrolls) - List all payrolls
 * [list_hris_payslips](#list_hris_payslips) - List all payslips
 * [list_hris_taxonomies](#list_hris_taxonomies) - List all taxonomies
+* [list_hris_taxwithholdings](#list_hris_taxwithholdings) - List all taxwithholdings
 * [list_hris_timeoffs](#list_hris_timeoffs) - List all timeoffs
 * [list_hris_timeshifts](#list_hris_timeshifts) - List all timeshifts
 * [patch_hris_attendance](#patch_hris_attendance) - Update an attendance
@@ -68,6 +71,7 @@
 * [patch_hris_job](#patch_hris_job) - Update a job
 * [patch_hris_location](#patch_hris_location) - Update a location
 * [patch_hris_taxonomy](#patch_hris_taxonomy) - Update a taxonomy
+* [patch_hris_taxwithholding](#patch_hris_taxwithholding) - Update a taxwithholding
 * [patch_hris_timeoff](#patch_hris_timeoff) - Update a timeoff
 * [patch_hris_timeshift](#patch_hris_timeshift) - Update a timeshift
 * [remove_hris_attendance](#remove_hris_attendance) - Remove an attendance
@@ -83,6 +87,7 @@
 * [remove_hris_job](#remove_hris_job) - Remove a job
 * [remove_hris_location](#remove_hris_location) - Remove a location
 * [remove_hris_taxonomy](#remove_hris_taxonomy) - Remove a taxonomy
+* [remove_hris_taxwithholding](#remove_hris_taxwithholding) - Remove a taxwithholding
 * [remove_hris_timeoff](#remove_hris_timeoff) - Remove a timeoff
 * [remove_hris_timeshift](#remove_hris_timeshift) - Remove a timeshift
 * [update_hris_attendance](#update_hris_attendance) - Update an attendance
@@ -98,6 +103,7 @@
 * [update_hris_job](#update_hris_job) - Update a job
 * [update_hris_location](#update_hris_location) - Update a location
 * [update_hris_taxonomy](#update_hris_taxonomy) - Update a taxonomy
+* [update_hris_taxwithholding](#update_hris_taxwithholding) - Update a taxwithholding
 * [update_hris_timeoff](#update_hris_timeoff) - Update a timeoff
 * [update_hris_timeshift](#update_hris_timeshift) - Update a timeshift
 
@@ -126,32 +132,32 @@ res = s.hris.create_hris_attendance(hris_attendance: Models::Shared::HrisAttenda
     region: 'Tennessee',
     region_code: 'CA'
   ),
-  approved_at: DateTime.iso8601('2021-09-20T03:11:44.712Z'),
+  approved_at: DateTime.iso8601('2021-09-20T03:40:16.455Z'),
   breaks: [
     Models::Shared::HrisAttendanceBreak.new(
       duration_minutes: 51.0,
-      end_at: DateTime.iso8601('2024-02-27T03:17:49.750Z'),
-      id: 'e3f5cca1-33d9-4148-9518-b2386b297e30',
+      end_at: DateTime.iso8601('2024-02-27T14:16:13.735Z'),
+      id: '02f8c784-fcc8-4c21-b8a0-2d4f349753f5',
       is_paid: false,
       name: 'Lunch',
-      start_at: DateTime.iso8601('2023-11-10T01:40:16.359Z')
+      start_at: DateTime.iso8601('2023-11-10T11:21:29.001Z')
     ),
   ],
   created_at: DateTime.iso8601('2021-08-10T19:43:18.452Z'),
   currency: 'EUR',
   declared_tips_amount: 54.0,
   employee_user_id: '<id>',
-  end_at: DateTime.iso8601('2024-05-06T20:28:01.154Z'),
+  end_at: DateTime.iso8601('2024-05-07T08:15:45.464Z'),
   hourly_rate: 16.0,
   hours: 10.0,
-  id: 'b3b03504-f863-4ee7-a32c-3ed801faf942',
+  id: '2f460629-0e55-4fbd-92ea-0acc2eb41dbd',
   job_name: 'Human Accountability Administrator',
   metadata: [],
   non_cash_tips_amount: 167.0,
-  start_at: DateTime.iso8601('2021-11-12T07:16:58.874Z'),
+  start_at: DateTime.iso8601('2021-11-12T08:23:08.388Z'),
   status: Models::Shared::HrisAttendanceStatus::OPEN,
   timezone: 'America/Atikokan',
-  updated_at: DateTime.iso8601('2022-01-22T02:24:36.007Z')
+  updated_at: DateTime.iso8601('2022-01-22T04:20:51.771Z')
 ), connection_id: '<id>')
 
 unless res.hris_attendance.nil?
@@ -203,7 +209,7 @@ res = s.hris.create_hris_bankaccount(hris_bankaccount: Models::Shared::HrisBanka
   country_code: 'US',
   created_at: DateTime.iso8601('2019-11-16T16:43:45.976Z'),
   currency: 'USD',
-  id: '71772de1-fcc9-4c5d-a5b0-26dca9186545',
+  id: '8877ae66-a779-43a9-94d8-50adb8b102ea',
   is_primary: true,
   metadata: [],
   name: 'Granville Schumm - Checking',
@@ -211,7 +217,7 @@ res = s.hris.create_hris_bankaccount(hris_bankaccount: Models::Shared::HrisBanka
   routing_number: '448650724',
   split_amount: 98.0,
   split_type: Models::Shared::SplitType::PERCENTAGE,
-  updated_at: DateTime.iso8601('2025-07-22T09:05:18.433Z')
+  updated_at: DateTime.iso8601('2025-07-23T03:29:56.409Z')
 ), connection_id: '<id>')
 
 unless res.hris_bankaccount.nil?
@@ -264,13 +270,13 @@ res = s.hris.create_hris_benefit(hris_benefit: Models::Shared::HrisBenefit.new(
   employer_contribution_max_amount: 179_093.0,
   employer_contribution_type: Models::Shared::EmployerContributionType::PERCENTAGE,
   frequency: Models::Shared::HrisBenefitFrequency::MONTH,
-  id: '374c5dc2-75ad-4545-8d9d-817ca71e08e6',
+  id: 'a4086aaf-2e9e-4e2d-8bcc-75bfdb377015',
   is_active: false,
   metadata: [],
   name: 'Frozen Wooden Ball',
   tax: Models::Shared::Tax::PRE_TAX,
   type: Models::Shared::HrisBenefitType::OTHER,
-  updated_at: DateTime.iso8601('2023-04-01T04:34:21.407Z')
+  updated_at: DateTime.iso8601('2023-04-01T14:27:46.645Z')
 ), connection_id: '<id>')
 
 unless res.hris_benefit.nil?
@@ -324,11 +330,11 @@ res = s.hris.create_hris_company(hris_company: Models::Shared::HrisCompany.new(
     region_code: 'MO'
   ),
   created_at: DateTime.iso8601('2021-05-02T22:27:38.970Z'),
-  id: '50deb9cd-a1c8-4ffa-ae98-c4aa67e3c030',
+  id: '5cbd66c4-b714-4ed6-b59a-78260b4b66f2',
   legal_name: 'Gottlieb Group LLC',
   metadata: [],
   name: 'Gottlieb Group',
-  updated_at: DateTime.iso8601('2026-11-03T12:54:10.617Z')
+  updated_at: DateTime.iso8601('2026-11-04T11:26:51.633Z')
 ), connection_id: '<id>')
 
 unless res.hris_company.nil?
@@ -380,14 +386,14 @@ res = s.hris.create_hris_deduction(hris_deduction: Models::Shared::HrisDeduction
   employer_type: Models::Shared::EmployerType::PERCENTAGE,
   frequency: Models::Shared::HrisDeductionFrequency::ONE_TIME,
   garnishment_type: Models::Shared::GarnishmentType::CHILD_SUPPORT,
-  id: 'a8b9dd12-fb63-467e-86b6-8da1543caec9',
+  id: '89f5c425-1b05-4264-b1b3-ab7be70fa145',
   is_active: true,
   max_amount: 21_794.0,
   metadata: [],
   notes: 'Carmen desidero.',
-  start_at: DateTime.iso8601('2025-04-04T03:02:35.634Z'),
+  start_at: DateTime.iso8601('2025-04-04T20:18:50.658Z'),
   type: Models::Shared::HrisDeductionType::FIXED,
-  updated_at: DateTime.iso8601('2024-04-07T07:06:40.561Z')
+  updated_at: DateTime.iso8601('2024-04-07T21:04:01.267Z')
 ), connection_id: '<id>')
 
 unless res.hris_deduction.nil?
@@ -440,7 +446,7 @@ res = s.hris.create_hris_device(hris_device: Models::Shared::HrisDevice.new(
   has_hd_encrypted: true,
   has_password_manager: true,
   has_screenlock: false,
-  id: '22349424-b6e2-4929-b3f4-1004b01fdb21',
+  id: '894212b6-137b-4507-a245-5497e8153c02',
   is_missing: false,
   manufacturer: 'Hackett Inc',
   metadata: [],
@@ -448,7 +454,7 @@ res = s.hris.create_hris_device(hris_device: Models::Shared::HrisDevice.new(
   name: 'august-laptop',
   os: 'transmitter',
   os_version: '8.4.8',
-  updated_at: DateTime.iso8601('2023-06-22T16:56:07.531Z'),
+  updated_at: DateTime.iso8601('2023-06-23T05:29:28.381Z'),
   version: '4.15.7'
 ), connection_id: '<id>')
 
@@ -497,10 +503,10 @@ res = s.hris.create_hris_document(hris_document: Models::Shared::HrisDocument.ne
   created_at: DateTime.iso8601('2022-10-27T11:47:26.086Z'),
   document_url: 'https://sore-decision.biz/',
   filename: 'ridge_forager.xsl',
-  id: '830c51fe-cb8c-439b-ae33-31e312cf15c8',
+  id: 'f7dfdd36-d510-4417-a28f-570cb7f64aa3',
   metadata: [],
   type: Models::Shared::HrisDocumentType::POLICY,
-  updated_at: DateTime.iso8601('2025-10-30T21:45:06.055Z')
+  updated_at: DateTime.iso8601('2025-10-31T14:35:49.078Z')
 ), connection_id: '<id>')
 
 unless res.hris_document.nil?
@@ -549,12 +555,12 @@ res = s.hris.create_hris_earning(hris_earning: Models::Shared::HrisEarning.new(
   created_at: DateTime.iso8601('2019-01-26T12:44:52.326Z'),
   currency: 'USD',
   frequency: Models::Shared::HrisEarningFrequency::SEMIMONTHLY,
-  id: 'dc1ddb10-080c-46de-b6ab-80d5042a95ed',
+  id: 'c686e33c-1b52-49ed-b702-e842f56e1694',
   metadata: [],
   notes: 'Deporto truculenter vinum beatae.',
-  start_at: DateTime.iso8601('2022-08-06T05:52:27.626Z'),
+  start_at: DateTime.iso8601('2022-08-06T16:07:19.724Z'),
   status: Models::Shared::HrisEarningStatus::ENDED,
-  updated_at: DateTime.iso8601('2020-02-12T08:10:46.168Z')
+  updated_at: DateTime.iso8601('2020-02-12T11:13:04.749Z')
 ), connection_id: '<id>')
 
 unless res.hris_earning.nil?
@@ -635,7 +641,7 @@ res = s.hris.create_hris_employee(hris_employee: Models::Shared::HrisEmployee.ne
   gender: Models::Shared::HrisEmployeeGender::MALE,
   has_mfa: true,
   hired_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
-  id: '4a2c7a2e-6f81-4c61-bc97-0040a1867a1a',
+  id: 'b2961cb4-5a68-4bf9-8dd7-de78498e0201',
   image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg',
   language_locale: 'in',
   last_name: 'Prohaska',
@@ -647,7 +653,7 @@ res = s.hris.create_hris_employee(hris_employee: Models::Shared::HrisEmployee.ne
         'display_name' => 'Custom Property',
       },
       format: Models::Shared::HrisMetadataFormat::TEXT,
-      id: 'df309302-3f2b-49b6-8d34-c3721e94f7f3',
+      id: 'd7d0e5f2-d0d3-42d7-9ff2-9441034efbcf',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'tutis'
@@ -695,7 +701,7 @@ res = s.hris.create_hris_employee(hris_employee: Models::Shared::HrisEmployee.ne
   timeoff_days_used: 9.0,
   timezone: 'Europe/Ljubljana',
   title: 'District Branding Specialist',
-  updated_at: DateTime.iso8601('2020-07-22T06:04:17.882Z')
+  updated_at: DateTime.iso8601('2020-07-22T08:45:18.342Z')
 ), connection_id: '<id>')
 
 unless res.hris_employee.nil?
@@ -742,12 +748,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.hris.create_hris_group(hris_group: Models::Shared::HrisGroup.new(
   created_at: DateTime.iso8601('2023-11-01T13:13:40.714Z'),
   description: 'Absorbeo casso.',
-  id: '665b34c6-6f82-41ab-b12d-2d64ba517255',
+  id: '78fedb4e-57de-4112-948a-3c75d9d7c4b5',
   is_active: false,
   metadata: [],
   name: 'Games',
   type: Models::Shared::HrisGroupType::BRANCH,
-  updated_at: DateTime.iso8601('2026-06-13T08:18:34.119Z')
+  updated_at: DateTime.iso8601('2026-06-14T03:48:51.129Z')
 ), connection_id: '<id>')
 
 unless res.hris_group.nil?
@@ -796,11 +802,11 @@ res = s.hris.create_hris_job(hris_job: Models::Shared::HrisJob.new(
   created_at: DateTime.iso8601('2020-10-28T01:13:19.491Z'),
   description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
   employment_type: Models::Shared::HrisJobEmploymentType::FREELANCE,
-  id: 'acdb9677-c596-4cfe-a44f-def653ce69cb',
+  id: '3fd3fb82-59e1-4918-bf3b-518523969a9e',
   is_active: false,
   metadata: [],
   name: 'Internal Integration Specialist',
-  updated_at: DateTime.iso8601('2023-02-09T00:56:02.927Z')
+  updated_at: DateTime.iso8601('2023-02-09T09:29:41.208Z')
 ), connection_id: '<id>')
 
 unless res.hris_job.nil?
@@ -857,7 +863,7 @@ res = s.hris.create_hris_location(hris_location: Models::Shared::HrisLocation.ne
   created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
   currency: 'MNT',
   description: 'Commemoro acervus.',
-  id: '52238525-3e2a-411d-9b98-7789a1167c6d',
+  id: '13184b72-11cc-40c9-8762-28c1ebe7dad8',
   is_active: false,
   is_hq: true,
   language_locale: 'it',
@@ -878,7 +884,7 @@ res = s.hris.create_hris_location(hris_location: Models::Shared::HrisLocation.ne
     ),
   ],
   timezone: 'Asia/Jerusalem',
-  updated_at: DateTime.iso8601('2023-06-30T14:53:40.875Z')
+  updated_at: DateTime.iso8601('2023-06-30T23:11:39.030Z')
 ), connection_id: '<id>')
 
 unless res.hris_location.nil?
@@ -930,13 +936,13 @@ res = s.hris.create_hris_taxonomy(hris_taxonomy: Models::Shared::HrisTaxonomy.ne
   created_at: DateTime.iso8601('2022-06-23T02:10:00.789Z'),
   description: 'Uterque vespillo adnuo ea commodo turbo suscipio condico.',
   domain: 'Health',
-  id: '994da848-bc0f-42c3-8f15-873674ec929e',
+  id: '93f1d0f6-076a-49b1-bf8a-33c293823a81',
   is_active: false,
   metadata: [],
   name: 'International Functionality Architect',
   subcategory: 'Marble',
   type: Models::Shared::HrisTaxonomyType::KNOWLEDGE,
-  updated_at: DateTime.iso8601('2023-06-03T21:47:07.538Z'),
+  updated_at: DateTime.iso8601('2023-06-04T02:40:02.142Z'),
   url: 'https://fixed-membership.biz/'
 ), connection_id: '<id>')
 
@@ -965,6 +971,66 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## create_hris_taxwithholding
+
+Creates a HrisTaxwithholding. Provide the unified HrisTaxwithholding fields in the request body; they are mapped to the provider's API. Returns the created HrisTaxwithholding.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="createHrisTaxwithholding" method="post" path="/hris/{connection_id}/taxwithholding" example="hris_taxwithholding" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.hris.create_hris_taxwithholding(hris_taxwithholding: Models::Shared::HrisTaxwithholding.new(
+  allowances: 1.0,
+  country: 'US',
+  created_at: DateTime.iso8601('2022-08-14T05:49:35.141Z'),
+  effective_at: DateTime.iso8601('2022-08-14T05:49:35.141Z'),
+  extra_withholding_amount: 10.0,
+  filing_status: Models::Shared::FilingStatus::QUALIFYING_SURVIVOR,
+  form: Models::Shared::Form::STATE_FORM,
+  id: 'f9385ebd-97a0-42cf-84e2-13b552ec9052',
+  is_exempt: false,
+  is_resident: true,
+  jurisdiction: 'OH',
+  jurisdiction_type: Models::Shared::JurisdictionType::STATE,
+  metadata: [],
+  override_amount: 19.0,
+  override_type: Models::Shared::OverrideType::FIXED_AMOUNT,
+  updated_at: DateTime.iso8601('2026-09-28T07:44:56.032Z')
+), connection_id: '<id>')
+
+unless res.hris_taxwithholding.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `hris_taxwithholding`                                                                                                                            | [Models::Shared::HrisTaxwithholding](../../models/shared/hristaxwithholding.md)                                                                  | :heavy_check_mark:                                                                                                                               | Employee tax withholding settings for one jurisdiction (eg. W-4)                                                                                 |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateHrisTaxwithholdingQueryParamFields](../../models/operations/createhristaxwithholdingqueryparamfields.md)>    | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::CreateHrisTaxwithholdingResponse)](../../models/operations/createhristaxwithholdingresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## create_hris_timeoff
 
 Creates a HrisTimeoff. Provide the unified HrisTimeoff fields in the request body; they are mapped to the provider's API. Returns the created HrisTimeoff.
@@ -982,7 +1048,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
   )
 )
 res = s.hris.create_hris_timeoff(hris_timeoff: Models::Shared::HrisTimeoff.new(
-  approved_at: DateTime.iso8601('2022-02-25T08:31:08.160Z'),
+  approved_at: DateTime.iso8601('2022-02-25T10:14:24.544Z'),
   attachments: [
     Models::Shared::HrisAttachment.new(
       content_type: 'application/pdf',
@@ -996,16 +1062,16 @@ res = s.hris.create_hris_timeoff(hris_timeoff: Models::Shared::HrisTimeoff.new(
   created_at: DateTime.iso8601('2021-10-06T18:00:20.615Z'),
   duration: 4.0,
   duration_type: Models::Shared::DurationType::DAY,
-  end_at: DateTime.iso8601('2025-01-14T09:18:49.606Z'),
-  id: '00e11cdc-ca22-4d78-b86e-f998c2332fa3',
+  end_at: DateTime.iso8601('2025-01-14T23:50:48.711Z'),
+  id: '39959273-181d-49af-8a8d-1f6f1b3f1311',
   is_paid: true,
   metadata: [],
   original_type: 'acerbitas ut',
   reason: 'verto',
-  start_at: DateTime.iso8601('2023-09-14T16:14:52.517Z'),
+  start_at: DateTime.iso8601('2023-09-15T00:51:10.204Z'),
   status: Models::Shared::HrisTimeoffStatus::DENIED,
   type: Models::Shared::HrisTimeoffType::IN_LIEU,
-  updated_at: DateTime.iso8601('2022-07-16T18:23:06.118Z'),
+  updated_at: DateTime.iso8601('2022-07-16T21:49:30.415Z'),
   user_id: '<id>'
 ), connection_id: '<id>')
 
@@ -1051,7 +1117,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
   )
 )
 res = s.hris.create_hris_timeshift(hris_timeshift: Models::Shared::HrisTimeshift.new(
-  approved_at: DateTime.iso8601('2022-07-28T22:06:10.340Z'),
+  approved_at: DateTime.iso8601('2022-07-29T07:33:29.821Z'),
   compensation: [
     Models::Shared::HrisCompensation.new(
       amount: 76_761.0,
@@ -1063,13 +1129,13 @@ res = s.hris.create_hris_timeshift(hris_timeshift: Models::Shared::HrisTimeshift
   ],
   created_at: DateTime.iso8601('2019-07-01T23:53:15.738Z'),
   employee_user_id: '<id>',
-  end_at: DateTime.iso8601('2026-10-22T20:12:53.060Z'),
+  end_at: DateTime.iso8601('2026-10-23T18:41:44.692Z'),
   hours: 6.0,
-  id: '8a44c681-5115-4c05-a77a-74bde7033318',
+  id: 'aee68c5a-e37c-433d-9288-fcd0496fe272',
   is_approved: false,
   metadata: [],
-  start_at: DateTime.iso8601('2023-07-27T08:59:44.953Z'),
-  updated_at: DateTime.iso8601('2021-07-09T00:56:01.786Z')
+  start_at: DateTime.iso8601('2023-07-27T21:30:41.888Z'),
+  updated_at: DateTime.iso8601('2021-07-09T07:08:54.256Z')
 ), connection_id: '<id>')
 
 unless res.hris_timeshift.nil?
@@ -1778,6 +1844,49 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::GetHrisTaxonomyResponse)](../../models/operations/gethristaxonomyresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## get_hris_taxwithholding
+
+Retrieves a single HrisTaxwithholding by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getHrisTaxwithholding" method="get" path="/hris/{connection_id}/taxwithholding/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.hris.get_hris_taxwithholding(connection_id: '<id>', id: '<id>')
+
+unless res.hris_taxwithholding.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Taxwithholding                                                                                                                         |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetHrisTaxwithholdingQueryParamFields](../../models/operations/gethristaxwithholdingqueryparamfields.md)>          | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetHrisTaxwithholdingResponse)](../../models/operations/gethristaxwithholdingresponse.md)**
 
 ### Errors
 
@@ -2575,6 +2684,50 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## list_hris_taxwithholdings
+
+Returns a list of HrisTaxwithholdings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listHrisTaxwithholdings" method="get" path="/hris/{connection_id}/taxwithholding" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+
+req = Models::Operations::ListHrisTaxwithholdingsRequest.new(
+  connection_id: '<id>'
+)
+res = s.hris.list_hris_taxwithholdings(request: req)
+
+unless res.hris_taxwithholdings.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                       | [Models::Operations::ListHrisTaxwithholdingsRequest](../../models/operations/listhristaxwithholdingsrequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+
+### Response
+
+**[T.nilable(Models::Operations::ListHrisTaxwithholdingsResponse)](../../models/operations/listhristaxwithholdingsresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## list_hris_timeoffs
 
 Returns a list of HrisTimeoffs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -2690,32 +2843,32 @@ req = Models::Operations::PatchHrisAttendanceRequest.new(
       region: 'Tennessee',
       region_code: 'CA'
     ),
-    approved_at: DateTime.iso8601('2021-09-20T03:11:44.713Z'),
+    approved_at: DateTime.iso8601('2021-09-20T03:40:16.456Z'),
     breaks: [
       Models::Shared::HrisAttendanceBreak.new(
         duration_minutes: 51.0,
-        end_at: DateTime.iso8601('2024-02-27T03:17:49.764Z'),
-        id: '11b7f288-5eaf-4600-982e-e22fd6c51a87',
+        end_at: DateTime.iso8601('2024-02-27T14:16:13.746Z'),
+        id: 'ad4f4e9b-779b-4ea5-82a7-2a04a9845df6',
         is_paid: false,
         name: 'Lunch',
-        start_at: DateTime.iso8601('2023-11-10T01:40:16.371Z')
+        start_at: DateTime.iso8601('2023-11-10T11:21:29.010Z')
       ),
     ],
     created_at: DateTime.iso8601('2021-08-10T19:43:18.452Z'),
     currency: 'EUR',
     declared_tips_amount: 54.0,
     employee_user_id: '<id>',
-    end_at: DateTime.iso8601('2024-05-06T20:28:01.169Z'),
+    end_at: DateTime.iso8601('2024-05-07T08:15:45.475Z'),
     hourly_rate: 16.0,
     hours: 10.0,
-    id: '155d4b16-c2fc-4d03-a797-9f6fda901bd0',
+    id: 'ccd4ee58-1e90-41a2-9038-9bcdacd0d7f1',
     job_name: 'Human Accountability Administrator',
     metadata: [],
     non_cash_tips_amount: 167.0,
-    start_at: DateTime.iso8601('2021-11-12T07:16:58.876Z'),
+    start_at: DateTime.iso8601('2021-11-12T08:23:08.389Z'),
     status: Models::Shared::HrisAttendanceStatus::OPEN,
     timezone: 'America/Atikokan',
-    updated_at: DateTime.iso8601('2022-01-22T02:24:36.010Z')
+    updated_at: DateTime.iso8601('2022-01-22T04:20:51.773Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2770,7 +2923,7 @@ req = Models::Operations::PatchHrisBankaccountRequest.new(
     country_code: 'US',
     created_at: DateTime.iso8601('2019-11-16T16:43:45.976Z'),
     currency: 'USD',
-    id: 'db73f46a-1c46-4e39-af4a-45705fe4bad2',
+    id: '8383570c-c73e-44b4-9190-b03a18e5e01f',
     is_primary: true,
     metadata: [],
     name: 'Granville Schumm - Checking',
@@ -2778,7 +2931,7 @@ req = Models::Operations::PatchHrisBankaccountRequest.new(
     routing_number: '448650724',
     split_amount: 98.0,
     split_type: Models::Shared::SplitType::PERCENTAGE,
-    updated_at: DateTime.iso8601('2025-07-22T09:05:18.447Z')
+    updated_at: DateTime.iso8601('2025-07-23T03:29:56.418Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2834,13 +2987,13 @@ req = Models::Operations::PatchHrisBenefitRequest.new(
     employer_contribution_max_amount: 179_093.0,
     employer_contribution_type: Models::Shared::EmployerContributionType::PERCENTAGE,
     frequency: Models::Shared::HrisBenefitFrequency::MONTH,
-    id: '6f67903f-81d1-4daa-9129-ffcc71f39143',
+    id: 'e4fd63d4-b5c9-4ae6-b419-9246440c6856',
     is_active: false,
     metadata: [],
     name: 'Frozen Wooden Ball',
     tax: Models::Shared::Tax::PRE_TAX,
     type: Models::Shared::HrisBenefitType::OTHER,
-    updated_at: DateTime.iso8601('2023-04-01T04:34:21.415Z')
+    updated_at: DateTime.iso8601('2023-04-01T14:27:46.652Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2897,11 +3050,11 @@ req = Models::Operations::PatchHrisCompanyRequest.new(
       region_code: 'MO'
     ),
     created_at: DateTime.iso8601('2021-05-02T22:27:38.970Z'),
-    id: '7380664e-a08b-4daf-8cbf-da047c161d80',
+    id: 'ec91717a-1a09-4384-9173-37bf58cd4718',
     legal_name: 'Gottlieb Group LLC',
     metadata: [],
     name: 'Gottlieb Group',
-    updated_at: DateTime.iso8601('2026-11-03T12:54:10.633Z')
+    updated_at: DateTime.iso8601('2026-11-04T11:26:51.644Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2956,14 +3109,14 @@ req = Models::Operations::PatchHrisDeductionRequest.new(
     employer_type: Models::Shared::EmployerType::PERCENTAGE,
     frequency: Models::Shared::HrisDeductionFrequency::ONE_TIME,
     garnishment_type: Models::Shared::GarnishmentType::CHILD_SUPPORT,
-    id: '01218889-a485-477f-b274-0abc7c64af2c',
+    id: 'a78e8570-f07b-4d98-b621-0d4c919e6b2d',
     is_active: true,
     max_amount: 21_794.0,
     metadata: [],
     notes: 'Carmen desidero.',
-    start_at: DateTime.iso8601('2025-04-04T03:02:35.647Z'),
+    start_at: DateTime.iso8601('2025-04-04T20:18:50.668Z'),
     type: Models::Shared::HrisDeductionType::FIXED,
-    updated_at: DateTime.iso8601('2024-04-07T07:06:40.572Z')
+    updated_at: DateTime.iso8601('2024-04-07T21:04:01.275Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -3019,7 +3172,7 @@ req = Models::Operations::PatchHrisDeviceRequest.new(
     has_hd_encrypted: true,
     has_password_manager: true,
     has_screenlock: false,
-    id: '2d84f65e-63cf-4e71-89bc-6ececfae28a0',
+    id: 'b40b5294-6eac-419d-bf3b-a2bb4f62f83a',
     is_missing: false,
     manufacturer: 'Hackett Inc',
     metadata: [],
@@ -3027,7 +3180,7 @@ req = Models::Operations::PatchHrisDeviceRequest.new(
     name: 'august-laptop',
     os: 'transmitter',
     os_version: '8.4.8',
-    updated_at: DateTime.iso8601('2023-06-22T16:56:07.540Z'),
+    updated_at: DateTime.iso8601('2023-06-23T05:29:28.390Z'),
     version: '4.15.7'
   ),
   connection_id: '<id>',
@@ -3079,10 +3232,10 @@ req = Models::Operations::PatchHrisDocumentRequest.new(
     created_at: DateTime.iso8601('2022-10-27T11:47:26.086Z'),
     document_url: 'https://sore-decision.biz/',
     filename: 'ridge_forager.xsl',
-    id: 'abed8b83-d568-4fac-80ef-a0808fb01942',
+    id: '2194e17c-1906-4ee9-a902-216848176274',
     metadata: [],
     type: Models::Shared::HrisDocumentType::POLICY,
-    updated_at: DateTime.iso8601('2025-10-30T21:45:06.060Z')
+    updated_at: DateTime.iso8601('2025-10-31T14:35:49.090Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -3134,12 +3287,12 @@ req = Models::Operations::PatchHrisEarningRequest.new(
     created_at: DateTime.iso8601('2019-01-26T12:44:52.326Z'),
     currency: 'USD',
     frequency: Models::Shared::HrisEarningFrequency::SEMIMONTHLY,
-    id: 'acd57537-ec8a-485b-887a-59ee12b46667',
+    id: '3a78acd0-22ae-4d36-a614-1ed632041b85',
     metadata: [],
     notes: 'Deporto truculenter vinum beatae.',
-    start_at: DateTime.iso8601('2022-08-06T05:52:27.633Z'),
+    start_at: DateTime.iso8601('2022-08-06T16:07:19.729Z'),
     status: Models::Shared::HrisEarningStatus::ENDED,
-    updated_at: DateTime.iso8601('2020-02-12T08:10:46.170Z')
+    updated_at: DateTime.iso8601('2020-02-12T11:13:04.750Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -3223,7 +3376,7 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
     gender: Models::Shared::HrisEmployeeGender::MALE,
     has_mfa: true,
     hired_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
-    id: 'fcdba9d4-87d2-4fd3-b0fc-100bf3de0e84',
+    id: 'c687dc96-bdd6-4e91-869e-8fa852fef5e6',
     image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg',
     language_locale: 'in',
     last_name: 'Prohaska',
@@ -3235,7 +3388,7 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::HrisMetadataFormat::TEXT,
-        id: '4cbe8ab7-89c2-4e64-8a72-994157e294c4',
+        id: '5584864d-00a1-4ef7-b690-0bba1a6256db',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'tutis'
@@ -3283,7 +3436,7 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
     timeoff_days_used: 9.0,
     timezone: 'Europe/Ljubljana',
     title: 'District Branding Specialist',
-    updated_at: DateTime.iso8601('2020-07-22T06:04:17.890Z')
+    updated_at: DateTime.iso8601('2020-07-22T08:45:18.350Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -3333,12 +3486,12 @@ req = Models::Operations::PatchHrisGroupRequest.new(
   hris_group: Models::Shared::HrisGroup.new(
     created_at: DateTime.iso8601('2023-11-01T13:13:40.714Z'),
     description: 'Absorbeo casso.',
-    id: '19f2bd5a-97fe-4749-b308-3ea1be56a138',
+    id: 'dd65bc99-5a9d-4a5b-9bf8-64b877873019',
     is_active: false,
     metadata: [],
     name: 'Games',
     type: Models::Shared::HrisGroupType::BRANCH,
-    updated_at: DateTime.iso8601('2026-06-13T08:18:34.133Z')
+    updated_at: DateTime.iso8601('2026-06-14T03:48:51.136Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -3390,11 +3543,11 @@ req = Models::Operations::PatchHrisJobRequest.new(
     created_at: DateTime.iso8601('2020-10-28T01:13:19.491Z'),
     description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
     employment_type: Models::Shared::HrisJobEmploymentType::FREELANCE,
-    id: '81cc7512-6c29-4b24-a538-3ae29eff52da',
+    id: 'dcd71a8b-9c7e-41f1-a7b4-596c5f097cf3',
     is_active: false,
     metadata: [],
     name: 'Internal Integration Specialist',
-    updated_at: DateTime.iso8601('2023-02-09T00:56:02.979Z')
+    updated_at: DateTime.iso8601('2023-02-09T09:29:41.245Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -3454,7 +3607,7 @@ req = Models::Operations::PatchHrisLocationRequest.new(
     created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
     currency: 'MNT',
     description: 'Commemoro acervus.',
-    id: '3ed0c0bb-a686-4323-ac29-c866855f8412',
+    id: 'eae14702-49ae-44b5-8dea-b3e54cf04ec2',
     is_active: false,
     is_hq: true,
     language_locale: 'it',
@@ -3475,7 +3628,7 @@ req = Models::Operations::PatchHrisLocationRequest.new(
       ),
     ],
     timezone: 'Asia/Jerusalem',
-    updated_at: DateTime.iso8601('2023-06-30T14:53:40.883Z')
+    updated_at: DateTime.iso8601('2023-06-30T23:11:39.038Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -3530,13 +3683,13 @@ req = Models::Operations::PatchHrisTaxonomyRequest.new(
     created_at: DateTime.iso8601('2022-06-23T02:10:00.789Z'),
     description: 'Uterque vespillo adnuo ea commodo turbo suscipio condico.',
     domain: 'Health',
-    id: '3caa2881-a29a-4a41-ae2b-1c0d75ecaf62',
+    id: 'e1da55d4-9be4-4440-aa4d-b35292dab2fb',
     is_active: false,
     metadata: [],
     name: 'International Functionality Architect',
     subcategory: 'Marble',
     type: Models::Shared::HrisTaxonomyType::KNOWLEDGE,
-    updated_at: DateTime.iso8601('2023-06-03T21:47:07.541Z'),
+    updated_at: DateTime.iso8601('2023-06-04T02:40:02.145Z'),
     url: 'https://fixed-membership.biz/'
   ),
   connection_id: '<id>',
@@ -3566,6 +3719,69 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## patch_hris_taxwithholding
+
+Updates the HrisTaxwithholding identified by `id`. Provide the unified HrisTaxwithholding fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="patchHrisTaxwithholding" method="patch" path="/hris/{connection_id}/taxwithholding/{id}" example="hris_taxwithholding" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+
+req = Models::Operations::PatchHrisTaxwithholdingRequest.new(
+  hris_taxwithholding: Models::Shared::HrisTaxwithholding.new(
+    allowances: 1.0,
+    country: 'US',
+    created_at: DateTime.iso8601('2022-08-14T05:49:35.141Z'),
+    effective_at: DateTime.iso8601('2022-08-14T05:49:35.141Z'),
+    extra_withholding_amount: 10.0,
+    filing_status: Models::Shared::FilingStatus::QUALIFYING_SURVIVOR,
+    form: Models::Shared::Form::STATE_FORM,
+    id: 'd3e3ab16-0ab1-4567-b03d-ef21d49d4b52',
+    is_exempt: false,
+    is_resident: true,
+    jurisdiction: 'OH',
+    jurisdiction_type: Models::Shared::JurisdictionType::STATE,
+    metadata: [],
+    override_amount: 19.0,
+    override_type: Models::Shared::OverrideType::FIXED_AMOUNT,
+    updated_at: DateTime.iso8601('2026-09-28T07:44:56.047Z')
+  ),
+  connection_id: '<id>',
+  id: '<id>'
+)
+res = s.hris.patch_hris_taxwithholding(request: req)
+
+unless res.hris_taxwithholding.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                       | [Models::Operations::PatchHrisTaxwithholdingRequest](../../models/operations/patchhristaxwithholdingrequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+
+### Response
+
+**[T.nilable(Models::Operations::PatchHrisTaxwithholdingResponse)](../../models/operations/patchhristaxwithholdingresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## patch_hris_timeoff
 
 Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the request body.
@@ -3585,7 +3801,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchHrisTimeoffRequest.new(
   hris_timeoff: Models::Shared::HrisTimeoff.new(
-    approved_at: DateTime.iso8601('2022-02-25T08:31:08.161Z'),
+    approved_at: DateTime.iso8601('2022-02-25T10:14:24.545Z'),
     attachments: [
       Models::Shared::HrisAttachment.new(
         content_type: 'application/pdf',
@@ -3599,16 +3815,16 @@ req = Models::Operations::PatchHrisTimeoffRequest.new(
     created_at: DateTime.iso8601('2021-10-06T18:00:20.615Z'),
     duration: 4.0,
     duration_type: Models::Shared::DurationType::DAY,
-    end_at: DateTime.iso8601('2025-01-14T09:18:49.619Z'),
-    id: '436f803c-b8dd-44c7-9f26-0137536ca4a8',
+    end_at: DateTime.iso8601('2025-01-14T23:50:48.719Z'),
+    id: 'fe24d2eb-8c7d-40d8-b974-8048305077c3',
     is_paid: true,
     metadata: [],
     original_type: 'acerbitas ut',
     reason: 'verto',
-    start_at: DateTime.iso8601('2023-09-14T16:14:52.525Z'),
+    start_at: DateTime.iso8601('2023-09-15T00:51:10.209Z'),
     status: Models::Shared::HrisTimeoffStatus::DENIED,
     type: Models::Shared::HrisTimeoffType::IN_LIEU,
-    updated_at: DateTime.iso8601('2022-07-16T18:23:06.121Z'),
+    updated_at: DateTime.iso8601('2022-07-16T21:49:30.417Z'),
     user_id: '<id>'
   ),
   connection_id: '<id>',
@@ -3657,7 +3873,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchHrisTimeshiftRequest.new(
   hris_timeshift: Models::Shared::HrisTimeshift.new(
-    approved_at: DateTime.iso8601('2022-07-28T22:06:10.349Z'),
+    approved_at: DateTime.iso8601('2022-07-29T07:33:29.826Z'),
     compensation: [
       Models::Shared::HrisCompensation.new(
         amount: 76_761.0,
@@ -3669,13 +3885,13 @@ req = Models::Operations::PatchHrisTimeshiftRequest.new(
     ],
     created_at: DateTime.iso8601('2019-07-01T23:53:15.738Z'),
     employee_user_id: '<id>',
-    end_at: DateTime.iso8601('2026-10-22T20:12:53.080Z'),
+    end_at: DateTime.iso8601('2026-10-23T18:41:44.703Z'),
     hours: 6.0,
-    id: '05a75330-6012-4165-bcfe-058b9e7e1fa2',
+    id: 'eb1e0f94-5663-4b05-93a8-eb8c6a619d0f',
     is_approved: false,
     metadata: [],
-    start_at: DateTime.iso8601('2023-07-27T08:59:44.965Z'),
-    updated_at: DateTime.iso8601('2021-07-09T00:56:01.791Z')
+    start_at: DateTime.iso8601('2023-07-27T21:30:41.894Z'),
+    updated_at: DateTime.iso8601('2021-07-09T07:08:54.260Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -4237,6 +4453,47 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## remove_hris_taxwithholding
+
+Deletes the HrisTaxwithholding identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="removeHrisTaxwithholding" method="delete" path="/hris/{connection_id}/taxwithholding/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.hris.remove_hris_taxwithholding(connection_id: '<id>', id: '<id>')
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                | Type                     | Required                 | Description              |
+| ------------------------ | ------------------------ | ------------------------ | ------------------------ |
+| `connection_id`          | *::String*               | :heavy_check_mark:       | ID of the connection     |
+| `id`                     | *::String*               | :heavy_check_mark:       | ID of the Taxwithholding |
+
+### Response
+
+**[T.nilable(Models::Operations::RemoveHrisTaxwithholdingResponse)](../../models/operations/removehristaxwithholdingresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## remove_hris_timeoff
 
 Deletes the HrisTimeoff identified by `id`.
@@ -4346,32 +4603,32 @@ req = Models::Operations::UpdateHrisAttendanceRequest.new(
       region: 'Tennessee',
       region_code: 'CA'
     ),
-    approved_at: DateTime.iso8601('2021-09-20T03:11:44.713Z'),
+    approved_at: DateTime.iso8601('2021-09-20T03:40:16.456Z'),
     breaks: [
       Models::Shared::HrisAttendanceBreak.new(
         duration_minutes: 51.0,
-        end_at: DateTime.iso8601('2024-02-27T03:17:49.764Z'),
-        id: '11b7f288-5eaf-4600-982e-e22fd6c51a87',
+        end_at: DateTime.iso8601('2024-02-27T14:16:13.746Z'),
+        id: 'ad4f4e9b-779b-4ea5-82a7-2a04a9845df6',
         is_paid: false,
         name: 'Lunch',
-        start_at: DateTime.iso8601('2023-11-10T01:40:16.371Z')
+        start_at: DateTime.iso8601('2023-11-10T11:21:29.010Z')
       ),
     ],
     created_at: DateTime.iso8601('2021-08-10T19:43:18.452Z'),
     currency: 'EUR',
     declared_tips_amount: 54.0,
     employee_user_id: '<id>',
-    end_at: DateTime.iso8601('2024-05-06T20:28:01.169Z'),
+    end_at: DateTime.iso8601('2024-05-07T08:15:45.475Z'),
     hourly_rate: 16.0,
     hours: 10.0,
-    id: '155d4b16-c2fc-4d03-a797-9f6fda901bd0',
+    id: 'ccd4ee58-1e90-41a2-9038-9bcdacd0d7f1',
     job_name: 'Human Accountability Administrator',
     metadata: [],
     non_cash_tips_amount: 167.0,
-    start_at: DateTime.iso8601('2021-11-12T07:16:58.876Z'),
+    start_at: DateTime.iso8601('2021-11-12T08:23:08.389Z'),
     status: Models::Shared::HrisAttendanceStatus::OPEN,
     timezone: 'America/Atikokan',
-    updated_at: DateTime.iso8601('2022-01-22T02:24:36.010Z')
+    updated_at: DateTime.iso8601('2022-01-22T04:20:51.773Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -4426,7 +4683,7 @@ req = Models::Operations::UpdateHrisBankaccountRequest.new(
     country_code: 'US',
     created_at: DateTime.iso8601('2019-11-16T16:43:45.976Z'),
     currency: 'USD',
-    id: 'db73f46a-1c46-4e39-af4a-45705fe4bad2',
+    id: '8383570c-c73e-44b4-9190-b03a18e5e01f',
     is_primary: true,
     metadata: [],
     name: 'Granville Schumm - Checking',
@@ -4434,7 +4691,7 @@ req = Models::Operations::UpdateHrisBankaccountRequest.new(
     routing_number: '448650724',
     split_amount: 98.0,
     split_type: Models::Shared::SplitType::PERCENTAGE,
-    updated_at: DateTime.iso8601('2025-07-22T09:05:18.447Z')
+    updated_at: DateTime.iso8601('2025-07-23T03:29:56.418Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -4490,13 +4747,13 @@ req = Models::Operations::UpdateHrisBenefitRequest.new(
     employer_contribution_max_amount: 179_093.0,
     employer_contribution_type: Models::Shared::EmployerContributionType::PERCENTAGE,
     frequency: Models::Shared::HrisBenefitFrequency::MONTH,
-    id: '6f67903f-81d1-4daa-9129-ffcc71f39143',
+    id: 'e4fd63d4-b5c9-4ae6-b419-9246440c6856',
     is_active: false,
     metadata: [],
     name: 'Frozen Wooden Ball',
     tax: Models::Shared::Tax::PRE_TAX,
     type: Models::Shared::HrisBenefitType::OTHER,
-    updated_at: DateTime.iso8601('2023-04-01T04:34:21.415Z')
+    updated_at: DateTime.iso8601('2023-04-01T14:27:46.652Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -4553,11 +4810,11 @@ req = Models::Operations::UpdateHrisCompanyRequest.new(
       region_code: 'MO'
     ),
     created_at: DateTime.iso8601('2021-05-02T22:27:38.970Z'),
-    id: '7380664e-a08b-4daf-8cbf-da047c161d80',
+    id: 'ec91717a-1a09-4384-9173-37bf58cd4718',
     legal_name: 'Gottlieb Group LLC',
     metadata: [],
     name: 'Gottlieb Group',
-    updated_at: DateTime.iso8601('2026-11-03T12:54:10.633Z')
+    updated_at: DateTime.iso8601('2026-11-04T11:26:51.644Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -4612,14 +4869,14 @@ req = Models::Operations::UpdateHrisDeductionRequest.new(
     employer_type: Models::Shared::EmployerType::PERCENTAGE,
     frequency: Models::Shared::HrisDeductionFrequency::ONE_TIME,
     garnishment_type: Models::Shared::GarnishmentType::CHILD_SUPPORT,
-    id: '01218889-a485-477f-b274-0abc7c64af2c',
+    id: 'a78e8570-f07b-4d98-b621-0d4c919e6b2d',
     is_active: true,
     max_amount: 21_794.0,
     metadata: [],
     notes: 'Carmen desidero.',
-    start_at: DateTime.iso8601('2025-04-04T03:02:35.647Z'),
+    start_at: DateTime.iso8601('2025-04-04T20:18:50.668Z'),
     type: Models::Shared::HrisDeductionType::FIXED,
-    updated_at: DateTime.iso8601('2024-04-07T07:06:40.572Z')
+    updated_at: DateTime.iso8601('2024-04-07T21:04:01.275Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -4675,7 +4932,7 @@ req = Models::Operations::UpdateHrisDeviceRequest.new(
     has_hd_encrypted: true,
     has_password_manager: true,
     has_screenlock: false,
-    id: '2d84f65e-63cf-4e71-89bc-6ececfae28a0',
+    id: 'b40b5294-6eac-419d-bf3b-a2bb4f62f83a',
     is_missing: false,
     manufacturer: 'Hackett Inc',
     metadata: [],
@@ -4683,7 +4940,7 @@ req = Models::Operations::UpdateHrisDeviceRequest.new(
     name: 'august-laptop',
     os: 'transmitter',
     os_version: '8.4.8',
-    updated_at: DateTime.iso8601('2023-06-22T16:56:07.540Z'),
+    updated_at: DateTime.iso8601('2023-06-23T05:29:28.390Z'),
     version: '4.15.7'
   ),
   connection_id: '<id>',
@@ -4735,10 +4992,10 @@ req = Models::Operations::UpdateHrisDocumentRequest.new(
     created_at: DateTime.iso8601('2022-10-27T11:47:26.086Z'),
     document_url: 'https://sore-decision.biz/',
     filename: 'ridge_forager.xsl',
-    id: 'abed8b83-d568-4fac-80ef-a0808fb01942',
+    id: '2194e17c-1906-4ee9-a902-216848176274',
     metadata: [],
     type: Models::Shared::HrisDocumentType::POLICY,
-    updated_at: DateTime.iso8601('2025-10-30T21:45:06.060Z')
+    updated_at: DateTime.iso8601('2025-10-31T14:35:49.090Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -4790,12 +5047,12 @@ req = Models::Operations::UpdateHrisEarningRequest.new(
     created_at: DateTime.iso8601('2019-01-26T12:44:52.326Z'),
     currency: 'USD',
     frequency: Models::Shared::HrisEarningFrequency::SEMIMONTHLY,
-    id: 'acd57537-ec8a-485b-887a-59ee12b46667',
+    id: '3a78acd0-22ae-4d36-a614-1ed632041b85',
     metadata: [],
     notes: 'Deporto truculenter vinum beatae.',
-    start_at: DateTime.iso8601('2022-08-06T05:52:27.633Z'),
+    start_at: DateTime.iso8601('2022-08-06T16:07:19.729Z'),
     status: Models::Shared::HrisEarningStatus::ENDED,
-    updated_at: DateTime.iso8601('2020-02-12T08:10:46.170Z')
+    updated_at: DateTime.iso8601('2020-02-12T11:13:04.750Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -4879,7 +5136,7 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
     gender: Models::Shared::HrisEmployeeGender::MALE,
     has_mfa: true,
     hired_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
-    id: 'fcdba9d4-87d2-4fd3-b0fc-100bf3de0e84',
+    id: 'c687dc96-bdd6-4e91-869e-8fa852fef5e6',
     image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg',
     language_locale: 'in',
     last_name: 'Prohaska',
@@ -4891,7 +5148,7 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::HrisMetadataFormat::TEXT,
-        id: '4cbe8ab7-89c2-4e64-8a72-994157e294c4',
+        id: '5584864d-00a1-4ef7-b690-0bba1a6256db',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'tutis'
@@ -4939,7 +5196,7 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
     timeoff_days_used: 9.0,
     timezone: 'Europe/Ljubljana',
     title: 'District Branding Specialist',
-    updated_at: DateTime.iso8601('2020-07-22T06:04:17.890Z')
+    updated_at: DateTime.iso8601('2020-07-22T08:45:18.350Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -4989,12 +5246,12 @@ req = Models::Operations::UpdateHrisGroupRequest.new(
   hris_group: Models::Shared::HrisGroup.new(
     created_at: DateTime.iso8601('2023-11-01T13:13:40.714Z'),
     description: 'Absorbeo casso.',
-    id: '19f2bd5a-97fe-4749-b308-3ea1be56a138',
+    id: 'dd65bc99-5a9d-4a5b-9bf8-64b877873019',
     is_active: false,
     metadata: [],
     name: 'Games',
     type: Models::Shared::HrisGroupType::BRANCH,
-    updated_at: DateTime.iso8601('2026-06-13T08:18:34.133Z')
+    updated_at: DateTime.iso8601('2026-06-14T03:48:51.136Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -5046,11 +5303,11 @@ req = Models::Operations::UpdateHrisJobRequest.new(
     created_at: DateTime.iso8601('2020-10-28T01:13:19.491Z'),
     description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
     employment_type: Models::Shared::HrisJobEmploymentType::FREELANCE,
-    id: '81cc7512-6c29-4b24-a538-3ae29eff52da',
+    id: 'dcd71a8b-9c7e-41f1-a7b4-596c5f097cf3',
     is_active: false,
     metadata: [],
     name: 'Internal Integration Specialist',
-    updated_at: DateTime.iso8601('2023-02-09T00:56:02.979Z')
+    updated_at: DateTime.iso8601('2023-02-09T09:29:41.245Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -5110,7 +5367,7 @@ req = Models::Operations::UpdateHrisLocationRequest.new(
     created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
     currency: 'MNT',
     description: 'Commemoro acervus.',
-    id: '3ed0c0bb-a686-4323-ac29-c866855f8412',
+    id: 'eae14702-49ae-44b5-8dea-b3e54cf04ec2',
     is_active: false,
     is_hq: true,
     language_locale: 'it',
@@ -5131,7 +5388,7 @@ req = Models::Operations::UpdateHrisLocationRequest.new(
       ),
     ],
     timezone: 'Asia/Jerusalem',
-    updated_at: DateTime.iso8601('2023-06-30T14:53:40.883Z')
+    updated_at: DateTime.iso8601('2023-06-30T23:11:39.038Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -5186,13 +5443,13 @@ req = Models::Operations::UpdateHrisTaxonomyRequest.new(
     created_at: DateTime.iso8601('2022-06-23T02:10:00.789Z'),
     description: 'Uterque vespillo adnuo ea commodo turbo suscipio condico.',
     domain: 'Health',
-    id: '3caa2881-a29a-4a41-ae2b-1c0d75ecaf62',
+    id: 'e1da55d4-9be4-4440-aa4d-b35292dab2fb',
     is_active: false,
     metadata: [],
     name: 'International Functionality Architect',
     subcategory: 'Marble',
     type: Models::Shared::HrisTaxonomyType::KNOWLEDGE,
-    updated_at: DateTime.iso8601('2023-06-03T21:47:07.541Z'),
+    updated_at: DateTime.iso8601('2023-06-04T02:40:02.145Z'),
     url: 'https://fixed-membership.biz/'
   ),
   connection_id: '<id>',
@@ -5222,6 +5479,69 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## update_hris_taxwithholding
+
+Updates the HrisTaxwithholding identified by `id`. Provide the unified HrisTaxwithholding fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="updateHrisTaxwithholding" method="put" path="/hris/{connection_id}/taxwithholding/{id}" example="hris_taxwithholding" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+
+req = Models::Operations::UpdateHrisTaxwithholdingRequest.new(
+  hris_taxwithholding: Models::Shared::HrisTaxwithholding.new(
+    allowances: 1.0,
+    country: 'US',
+    created_at: DateTime.iso8601('2022-08-14T05:49:35.141Z'),
+    effective_at: DateTime.iso8601('2022-08-14T05:49:35.141Z'),
+    extra_withholding_amount: 10.0,
+    filing_status: Models::Shared::FilingStatus::QUALIFYING_SURVIVOR,
+    form: Models::Shared::Form::STATE_FORM,
+    id: 'd3e3ab16-0ab1-4567-b03d-ef21d49d4b52',
+    is_exempt: false,
+    is_resident: true,
+    jurisdiction: 'OH',
+    jurisdiction_type: Models::Shared::JurisdictionType::STATE,
+    metadata: [],
+    override_amount: 19.0,
+    override_type: Models::Shared::OverrideType::FIXED_AMOUNT,
+    updated_at: DateTime.iso8601('2026-09-28T07:44:56.047Z')
+  ),
+  connection_id: '<id>',
+  id: '<id>'
+)
+res = s.hris.update_hris_taxwithholding(request: req)
+
+unless res.hris_taxwithholding.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                         | [Models::Operations::UpdateHrisTaxwithholdingRequest](../../models/operations/updatehristaxwithholdingrequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+
+### Response
+
+**[T.nilable(Models::Operations::UpdateHrisTaxwithholdingResponse)](../../models/operations/updatehristaxwithholdingresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## update_hris_timeoff
 
 Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the request body.
@@ -5241,7 +5561,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateHrisTimeoffRequest.new(
   hris_timeoff: Models::Shared::HrisTimeoff.new(
-    approved_at: DateTime.iso8601('2022-02-25T08:31:08.161Z'),
+    approved_at: DateTime.iso8601('2022-02-25T10:14:24.545Z'),
     attachments: [
       Models::Shared::HrisAttachment.new(
         content_type: 'application/pdf',
@@ -5255,16 +5575,16 @@ req = Models::Operations::UpdateHrisTimeoffRequest.new(
     created_at: DateTime.iso8601('2021-10-06T18:00:20.615Z'),
     duration: 4.0,
     duration_type: Models::Shared::DurationType::DAY,
-    end_at: DateTime.iso8601('2025-01-14T09:18:49.619Z'),
-    id: '436f803c-b8dd-44c7-9f26-0137536ca4a8',
+    end_at: DateTime.iso8601('2025-01-14T23:50:48.719Z'),
+    id: 'fe24d2eb-8c7d-40d8-b974-8048305077c3',
     is_paid: true,
     metadata: [],
     original_type: 'acerbitas ut',
     reason: 'verto',
-    start_at: DateTime.iso8601('2023-09-14T16:14:52.525Z'),
+    start_at: DateTime.iso8601('2023-09-15T00:51:10.209Z'),
     status: Models::Shared::HrisTimeoffStatus::DENIED,
     type: Models::Shared::HrisTimeoffType::IN_LIEU,
-    updated_at: DateTime.iso8601('2022-07-16T18:23:06.121Z'),
+    updated_at: DateTime.iso8601('2022-07-16T21:49:30.417Z'),
     user_id: '<id>'
   ),
   connection_id: '<id>',
@@ -5313,7 +5633,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateHrisTimeshiftRequest.new(
   hris_timeshift: Models::Shared::HrisTimeshift.new(
-    approved_at: DateTime.iso8601('2022-07-28T22:06:10.349Z'),
+    approved_at: DateTime.iso8601('2022-07-29T07:33:29.826Z'),
     compensation: [
       Models::Shared::HrisCompensation.new(
         amount: 76_761.0,
@@ -5325,13 +5645,13 @@ req = Models::Operations::UpdateHrisTimeshiftRequest.new(
     ],
     created_at: DateTime.iso8601('2019-07-01T23:53:15.738Z'),
     employee_user_id: '<id>',
-    end_at: DateTime.iso8601('2026-10-22T20:12:53.080Z'),
+    end_at: DateTime.iso8601('2026-10-23T18:41:44.703Z'),
     hours: 6.0,
-    id: '05a75330-6012-4165-bcfe-058b9e7e1fa2',
+    id: 'eb1e0f94-5663-4b05-93a8-eb8c6a619d0f',
     is_approved: false,
     metadata: [],
-    start_at: DateTime.iso8601('2023-07-27T08:59:44.965Z'),
-    updated_at: DateTime.iso8601('2021-07-09T00:56:01.791Z')
+    start_at: DateTime.iso8601('2023-07-27T21:30:41.894Z'),
+    updated_at: DateTime.iso8601('2021-07-09T07:08:54.260Z')
   ),
   connection_id: '<id>',
   id: '<id>'

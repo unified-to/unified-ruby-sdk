@@ -31,7 +31,7 @@ res = s.service.create_compute_service(compute_service: Models::Shared::ComputeS
   branch: 'main',
   build_command: 'npm run build',
   created_at: DateTime.iso8601('2023-10-04T02:06:29.391Z'),
-  id: '9f98cf23-69bd-4981-810f-c1d3e2a80133',
+  id: '67321be9-e23a-4713-b02a-377009b81e44',
   instance_count: 6.0,
   max_instance_count: 6.0,
   metadata: [],
@@ -42,7 +42,7 @@ res = s.service.create_compute_service(compute_service: Models::Shared::ComputeS
   runtime: 'python',
   status: Models::Shared::ComputeServiceStatus::SUSPENDED,
   type: Models::Shared::ComputeServiceType::OTHER,
-  updated_at: DateTime.iso8601('2025-04-17T12:17:14.868Z'),
+  updated_at: DateTime.iso8601('2025-04-17T23:28:10.294Z'),
   url: 'https://tame-sideboard.rotating-shoulder.biz'
 ), connection_id: '<id>')
 
@@ -180,7 +180,7 @@ req = Models::Operations::PatchComputeServiceRequest.new(
     branch: 'main',
     build_command: 'npm run build',
     created_at: DateTime.iso8601('2023-10-04T02:06:29.391Z'),
-    id: '428adcb5-327d-4861-adfa-57dbfcfadc22',
+    id: '00923da3-227b-4f88-be53-eb3b5334a022',
     instance_count: 6.0,
     max_instance_count: 6.0,
     metadata: [],
@@ -191,7 +191,7 @@ req = Models::Operations::PatchComputeServiceRequest.new(
     runtime: 'python',
     status: Models::Shared::ComputeServiceStatus::SUSPENDED,
     type: Models::Shared::ComputeServiceType::OTHER,
-    updated_at: DateTime.iso8601('2025-04-17T12:17:14.876Z'),
+    updated_at: DateTime.iso8601('2025-04-17T23:28:10.302Z'),
     url: 'https://tame-sideboard.rotating-shoulder.biz'
   ),
   connection_id: '<id>',
@@ -284,7 +284,7 @@ req = Models::Operations::UpdateComputeServiceRequest.new(
     branch: 'main',
     build_command: 'npm run build',
     created_at: DateTime.iso8601('2023-10-04T02:06:29.391Z'),
-    id: '428adcb5-327d-4861-adfa-57dbfcfadc22',
+    id: '00923da3-227b-4f88-be53-eb3b5334a022',
     instance_count: 6.0,
     max_instance_count: 6.0,
     metadata: [],
@@ -295,7 +295,7 @@ req = Models::Operations::UpdateComputeServiceRequest.new(
     runtime: 'python',
     status: Models::Shared::ComputeServiceStatus::SUSPENDED,
     type: Models::Shared::ComputeServiceType::OTHER,
-    updated_at: DateTime.iso8601('2025-04-17T12:17:14.876Z'),
+    updated_at: DateTime.iso8601('2025-04-17T23:28:10.302Z'),
     url: 'https://tame-sideboard.rotating-shoulder.biz'
   ),
   connection_id: '<id>',

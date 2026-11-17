@@ -588,6 +588,10 @@ class UnifiedRubySDK::Models::Shared::PropertyWorkspaceIntegrationOverridenScope
   def hris_taxonomy_read=(str_); end
   def hris_taxonomy_write(); end
   def hris_taxonomy_write=(str_); end
+  def hris_taxwithholding_read(); end
+  def hris_taxwithholding_read=(str_); end
+  def hris_taxwithholding_write(); end
+  def hris_taxwithholding_write=(str_); end
   def hris_timeoff_read(); end
   def hris_timeoff_read=(str_); end
   def hris_timeoff_write(); end

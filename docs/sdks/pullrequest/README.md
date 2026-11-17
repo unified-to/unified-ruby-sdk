@@ -28,9 +28,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
   )
 )
 res = s.pullrequest.create_repo_pullrequest(repo_pullrequest: Models::Shared::RepoPullrequest.new(
-  closed_at: DateTime.iso8601('2025-05-17T02:15:51.891Z'),
+  closed_at: DateTime.iso8601('2025-05-17T15:47:36.942Z'),
   created_at: DateTime.iso8601('2023-02-27T09:37:13.663Z'),
-  id: '95e07975-47d2-4faf-b6c4-734ed422aced',
+  id: 'df65074a-988a-4498-a285-fe681f86044d',
   labels: [
     'creptio',
     'tutamen',
@@ -39,7 +39,7 @@ res = s.pullrequest.create_repo_pullrequest(repo_pullrequest: Models::Shared::Re
   notes: 'Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.',
   status: Models::Shared::RepoPullrequestStatus::APPROVED,
   title: 'reboot mobile application',
-  updated_at: DateTime.iso8601('2026-02-06T21:43:51.843Z')
+  updated_at: DateTime.iso8601('2026-02-07T15:42:06.085Z')
 ), connection_id: '<id>')
 
 unless res.repo_pullrequest.nil?
@@ -173,9 +173,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchRepoPullrequestRequest.new(
   repo_pullrequest: Models::Shared::RepoPullrequest.new(
-    closed_at: DateTime.iso8601('2025-05-17T02:15:51.900Z'),
+    closed_at: DateTime.iso8601('2025-05-17T15:47:36.949Z'),
     created_at: DateTime.iso8601('2023-02-27T09:37:13.663Z'),
-    id: '7a3cc10c-4699-423e-b860-a01345b1d671',
+    id: '683229e6-26d0-4558-b58e-44d8fe1c04a8',
     labels: [
       'creptio',
       'tutamen',
@@ -184,7 +184,7 @@ req = Models::Operations::PatchRepoPullrequestRequest.new(
     notes: 'Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.',
     status: Models::Shared::RepoPullrequestStatus::APPROVED,
     title: 'reboot mobile application',
-    updated_at: DateTime.iso8601('2026-02-06T21:43:51.855Z')
+    updated_at: DateTime.iso8601('2026-02-07T15:42:06.093Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -273,9 +273,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateRepoPullrequestRequest.new(
   repo_pullrequest: Models::Shared::RepoPullrequest.new(
-    closed_at: DateTime.iso8601('2025-05-17T02:15:51.900Z'),
+    closed_at: DateTime.iso8601('2025-05-17T15:47:36.949Z'),
     created_at: DateTime.iso8601('2023-02-27T09:37:13.663Z'),
-    id: '7a3cc10c-4699-423e-b860-a01345b1d671',
+    id: '683229e6-26d0-4558-b58e-44d8fe1c04a8',
     labels: [
       'creptio',
       'tutamen',
@@ -284,7 +284,7 @@ req = Models::Operations::UpdateRepoPullrequestRequest.new(
     notes: 'Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.',
     status: Models::Shared::RepoPullrequestStatus::APPROVED,
     title: 'reboot mobile application',
-    updated_at: DateTime.iso8601('2026-02-06T21:43:51.855Z')
+    updated_at: DateTime.iso8601('2026-02-07T15:42:06.093Z')
   ),
   connection_id: '<id>',
   id: '<id>'

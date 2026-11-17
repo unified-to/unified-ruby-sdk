@@ -184,6 +184,8 @@ module UnifiedRubySDK
           HRIS_PAYCODE_WRITE = new('hris_paycode_write')
           HRIS_EARNING_READ = new('hris_earning_read')
           HRIS_EARNING_WRITE = new('hris_earning_write')
+          HRIS_TAXWITHHOLDING_READ = new('hris_taxwithholding_read')
+          HRIS_TAXWITHHOLDING_WRITE = new('hris_taxwithholding_write')
           UC_CALL_READ = new('uc_call_read')
           UC_CALL_WRITE = new('uc_call_write')
           UC_CONTACT_READ = new('uc_contact_read')

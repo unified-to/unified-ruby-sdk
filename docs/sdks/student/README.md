@@ -41,7 +41,7 @@ res = s.student.create_lms_student(lms_student: Models::Shared::LmsStudent.new(
     Models::Shared::LmsEmail.new,
   ],
   first_name: 'Marcella',
-  id: 'e2c9ffa9-585e-45a1-aa62-a4d4c280a1c3',
+  id: '6bc50526-5021-436a-8eed-5dcee6a1de5a',
   image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg',
   last_name: 'Murazik',
   metadata: [],
@@ -60,7 +60,7 @@ res = s.student.create_lms_student(lms_student: Models::Shared::LmsStudent.new(
       type: Models::Shared::LmsTelephoneType::FAX
     ),
   ],
-  updated_at: DateTime.iso8601('2022-07-09T23:02:59.267Z')
+  updated_at: DateTime.iso8601('2022-07-10T06:52:58.733Z')
 ), connection_id: '<id>')
 
 unless res.lms_student.nil?
@@ -207,7 +207,7 @@ req = Models::Operations::PatchLmsStudentRequest.new(
       Models::Shared::LmsEmail.new,
     ],
     first_name: 'Marcella',
-    id: '5a611721-2912-4564-ae11-bee8286b4d01',
+    id: 'f227652e-2fc1-4bf2-95e7-f58e7ae7c8b1',
     image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg',
     last_name: 'Murazik',
     metadata: [],
@@ -226,7 +226,7 @@ req = Models::Operations::PatchLmsStudentRequest.new(
         type: Models::Shared::LmsTelephoneType::FAX
       ),
     ],
-    updated_at: DateTime.iso8601('2022-07-09T23:02:59.278Z')
+    updated_at: DateTime.iso8601('2022-07-10T06:52:58.739Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -328,7 +328,7 @@ req = Models::Operations::UpdateLmsStudentRequest.new(
       Models::Shared::LmsEmail.new,
     ],
     first_name: 'Marcella',
-    id: '5a611721-2912-4564-ae11-bee8286b4d01',
+    id: 'f227652e-2fc1-4bf2-95e7-f58e7ae7c8b1',
     image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg',
     last_name: 'Murazik',
     metadata: [],
@@ -347,7 +347,7 @@ req = Models::Operations::UpdateLmsStudentRequest.new(
         type: Models::Shared::LmsTelephoneType::FAX
       ),
     ],
-    updated_at: DateTime.iso8601('2022-07-09T23:02:59.278Z')
+    updated_at: DateTime.iso8601('2022-07-10T06:52:58.739Z')
   ),
   connection_id: '<id>',
   id: '<id>'

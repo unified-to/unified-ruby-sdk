@@ -38,7 +38,7 @@ res = s.list.create_martech_list(marketing_list: Models::Shared::MarketingList.n
   ),
   created_at: DateTime.iso8601('2019-09-18T02:01:36.950Z'),
   description: 'Vilis.',
-  id: 'c82bde77-7948-485b-921e-c014b09efede',
+  id: '8a0efefe-241c-4fff-9c75-9ca3cac93783',
   is_active: true,
   language: 'ru',
   metadata: [],
@@ -48,7 +48,7 @@ res = s.list.create_martech_list(marketing_list: Models::Shared::MarketingList.n
   sender_name: 'Blake Kuhn',
   sender_phone: '359.305.7962 x28115',
   subject: 'Theca caecus copia crebro valeo ulciscor.',
-  updated_at: DateTime.iso8601('2022-09-24T09:14:33.352Z')
+  updated_at: DateTime.iso8601('2022-09-24T18:48:05.195Z')
 ), connection_id: '<id>')
 
 unless res.marketing_list.nil?
@@ -192,7 +192,7 @@ req = Models::Operations::PatchMartechListRequest.new(
     ),
     created_at: DateTime.iso8601('2019-09-18T02:01:36.950Z'),
     description: 'Vilis.',
-    id: '0e3b3465-d33b-44c7-a01a-43b4c14b7cec',
+    id: '1af05363-4815-44c6-a0bd-9a34e427a4b2',
     is_active: true,
     language: 'ru',
     metadata: [],
@@ -202,7 +202,7 @@ req = Models::Operations::PatchMartechListRequest.new(
     sender_name: 'Blake Kuhn',
     sender_phone: '359.305.7962 x28115',
     subject: 'Theca caecus copia crebro valeo ulciscor.',
-    updated_at: DateTime.iso8601('2022-09-24T09:14:33.359Z')
+    updated_at: DateTime.iso8601('2022-09-24T18:48:05.201Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -301,7 +301,7 @@ req = Models::Operations::UpdateMartechListRequest.new(
     ),
     created_at: DateTime.iso8601('2019-09-18T02:01:36.950Z'),
     description: 'Vilis.',
-    id: '0e3b3465-d33b-44c7-a01a-43b4c14b7cec',
+    id: '1af05363-4815-44c6-a0bd-9a34e427a4b2',
     is_active: true,
     language: 'ru',
     metadata: [],
@@ -311,7 +311,7 @@ req = Models::Operations::UpdateMartechListRequest.new(
     sender_name: 'Blake Kuhn',
     sender_phone: '359.305.7962 x28115',
     subject: 'Theca caecus copia crebro valeo ulciscor.',
-    updated_at: DateTime.iso8601('2022-09-24T09:14:33.359Z')
+    updated_at: DateTime.iso8601('2022-09-24T18:48:05.201Z')
   ),
   connection_id: '<id>',
   id: '<id>'
