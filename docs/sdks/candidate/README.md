@@ -80,7 +80,7 @@ res = s.candidate.create_ats_candidate(ats_candidate: Models::Shared::AtsCandida
   ],
   first_name: 'Ardith',
   has_do_not_contact: false,
-  id: '3e110c35-94b3-455a-a02e-7f8913c22c4b',
+  id: 'b373cfba-9fde-470c-b4f3-c8c9243e408a',
   image_url: 'https://avatars.githubusercontent.com/u/27464445',
   is_private: true,
   job_ids: [],
@@ -94,7 +94,7 @@ res = s.candidate.create_ats_candidate(ats_candidate: Models::Shared::AtsCandida
 
       },
       format: Models::Shared::AtsMetadataFormat::TEXT,
-      id: '888923fb-7657-43e5-93ba-6206033c8599',
+      id: '50bc8bd5-2e20-489e-a944-773b3ee39bdc',
       namespace: 'custom',
       slug: 'custom_field',
       value: 'officia'
@@ -121,7 +121,7 @@ res = s.candidate.create_ats_candidate(ats_candidate: Models::Shared::AtsCandida
     ),
   ],
   title: 'Customer Division Producer',
-  updated_at: DateTime.iso8601('2024-05-03T12:42:53.391Z'),
+  updated_at: DateTime.iso8601('2024-05-03T16:15:45.055Z'),
   web_url: 'https://fragrant-husband.net/'
 ), connection_id: '<id>')
 
@@ -308,7 +308,7 @@ req = Models::Operations::PatchAtsCandidateRequest.new(
     ],
     first_name: 'Ardith',
     has_do_not_contact: false,
-    id: '57799dde-adce-4769-afeb-68402b9df8ea',
+    id: '343c2245-7191-4ad3-8019-5e3fc0fd036d',
     image_url: 'https://avatars.githubusercontent.com/u/27464445',
     is_private: true,
     job_ids: [],
@@ -322,7 +322,7 @@ req = Models::Operations::PatchAtsCandidateRequest.new(
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '17f18069-0f8f-49e6-b99b-7d10ce27d5cb',
+        id: '44579df6-3cf1-4546-bd1b-ee00b1b4c263',
         namespace: 'custom',
         slug: 'custom_field',
         value: 'officia'
@@ -349,7 +349,7 @@ req = Models::Operations::PatchAtsCandidateRequest.new(
       ),
     ],
     title: 'Customer Division Producer',
-    updated_at: DateTime.iso8601('2024-05-03T12:42:53.397Z'),
+    updated_at: DateTime.iso8601('2024-05-03T16:15:45.062Z'),
     web_url: 'https://fragrant-husband.net/'
   ),
   connection_id: '<id>',
@@ -491,7 +491,7 @@ req = Models::Operations::UpdateAtsCandidateRequest.new(
     ],
     first_name: 'Ardith',
     has_do_not_contact: false,
-    id: '57799dde-adce-4769-afeb-68402b9df8ea',
+    id: '343c2245-7191-4ad3-8019-5e3fc0fd036d',
     image_url: 'https://avatars.githubusercontent.com/u/27464445',
     is_private: true,
     job_ids: [],
@@ -505,7 +505,7 @@ req = Models::Operations::UpdateAtsCandidateRequest.new(
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '17f18069-0f8f-49e6-b99b-7d10ce27d5cb',
+        id: '44579df6-3cf1-4546-bd1b-ee00b1b4c263',
         namespace: 'custom',
         slug: 'custom_field',
         value: 'officia'
@@ -532,7 +532,7 @@ req = Models::Operations::UpdateAtsCandidateRequest.new(
       ),
     ],
     title: 'Customer Division Producer',
-    updated_at: DateTime.iso8601('2024-05-03T12:42:53.397Z'),
+    updated_at: DateTime.iso8601('2024-05-03T16:15:45.062Z'),
     web_url: 'https://fragrant-husband.net/'
   ),
   connection_id: '<id>',

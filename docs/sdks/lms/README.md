@@ -65,15 +65,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.lms.create_lms_activity(lms_activity: Models::Shared::LmsActivity.new(
   assigned_grade: 'summopere',
-  completed_at: DateTime.iso8601('2023-12-20T01:11:44.665Z'),
+  completed_at: DateTime.iso8601('2023-12-20T11:36:54.874Z'),
   created_at: DateTime.iso8601('2020-10-17T01:25:21.745Z'),
   duration_minutes: 55.0,
-  id: '9f5e4b59-c618-40d6-9655-7b7ea729a609',
+  id: '382111ca-2645-4a52-86c1-044e3d7fb382',
   is_completed: true,
   metadata: [],
   progress_percentage: 100.0,
-  started_at: DateTime.iso8601('2021-04-27T12:26:23.242Z'),
-  updated_at: DateTime.iso8601('2022-02-05T18:30:57.437Z')
+  started_at: DateTime.iso8601('2021-04-27T14:10:12.093Z'),
+  updated_at: DateTime.iso8601('2022-02-05T22:48:06.014Z')
 ), connection_id: '<id>')
 
 unless res.lms_activity.nil?
@@ -120,7 +120,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.lms.create_lms_class(lms_class: Models::Shared::LmsClass.new(
   created_at: DateTime.iso8601('2020-02-20T14:48:51.845Z'),
   description: 'Anser sperno decerno.',
-  id: '3f56771f-7d01-473a-ae5d-348a5a86aa8c',
+  id: '31382114-f544-4b6a-9d06-9771e4b8045d',
   instructors: [],
   languages: [
     'in',
@@ -142,7 +142,7 @@ res = s.lms.create_lms_class(lms_class: Models::Shared::LmsClass.new(
   metadata: [],
   name: 'virtus',
   students: [],
-  updated_at: DateTime.iso8601('2025-08-25T22:47:28.331Z')
+  updated_at: DateTime.iso8601('2025-08-26T15:07:49.945Z')
 ), connection_id: '<id>')
 
 unless res.lms_class.nil?
@@ -189,7 +189,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.lms.create_lms_collection(lms_collection: Models::Shared::LmsCollection.new(
   created_at: DateTime.iso8601('2019-08-19T14:40:29.227Z'),
   description: 'Ab.',
-  id: '727901f7-d99c-4538-bb81-e0d4ffcf9ae5',
+  id: '0fda30dc-dfdc-4d24-bfa8-c11e6f9da360',
   is_active: true,
   media: [
     Models::Shared::LmsMedia.new(
@@ -206,7 +206,7 @@ res = s.lms.create_lms_collection(lms_collection: Models::Shared::LmsCollection.
   ],
   metadata: [],
   name: 'ara',
-  updated_at: DateTime.iso8601('2026-08-25T09:42:26.705Z')
+  updated_at: DateTime.iso8601('2026-08-26T05:03:06.942Z')
 ), connection_id: '<id>')
 
 unless res.lms_collection.nil?
@@ -258,7 +258,7 @@ res = s.lms.create_lms_content(lms_content: Models::Shared::LmsContent.new(
   description: 'Usque laboriosam ventosus adflicto.',
   difficulty: 'Beginner',
   duration_minutes: 19.0,
-  id: '9ebcb4c2-7092-4f94-943d-160987b1285c',
+  id: '5ce2e41f-7331-421c-809d-3c5b8262232a',
   instructors: [],
   is_active: true,
   languages: [
@@ -318,7 +318,7 @@ res = s.lms.create_lms_content(lms_content: Models::Shared::LmsContent.new(
   metadata: [],
   name: 'ut',
   provider_name: 'Bins LLC',
-  published_at: DateTime.iso8601('2022-09-11T15:24:14.115Z'),
+  published_at: DateTime.iso8601('2022-09-11T21:36:42.824Z'),
   short_description: 'Caritas.',
   skills: [
     'trucido',
@@ -333,7 +333,7 @@ res = s.lms.create_lms_content(lms_content: Models::Shared::LmsContent.new(
   tags: [
     'dens',
   ],
-  updated_at: DateTime.iso8601('2022-10-12T22:49:03.992Z')
+  updated_at: DateTime.iso8601('2022-10-13T05:18:28.688Z')
 ), connection_id: '<id>')
 
 unless res.lms_content.nil?
@@ -386,7 +386,7 @@ res = s.lms.create_lms_course(lms_course: Models::Shared::LmsCourse.new(
   currency: 'FJD',
   description: 'Vinco alias aut capitulus.',
   duration_minutes: 148.0,
-  id: '0f9df434-a150-483c-9f9d-dd1b14020280',
+  id: 'a4401cc3-7251-4dc3-b182-030260ba40d0',
   instructors: [],
   is_active: true,
   is_private: false,
@@ -413,14 +413,14 @@ res = s.lms.create_lms_course(lms_course: Models::Shared::LmsCourse.new(
   name: 'comptus',
   price_amount: 84.0,
   provider_name: 'Homenick - Wunsch',
-  published_at: DateTime.iso8601('2022-11-06T07:29:24.768Z'),
+  published_at: DateTime.iso8601('2022-11-06T07:54:03.443Z'),
   skills: [
     'adiuvo',
     'tam',
   ],
   students: [],
   time_estimate_minutes: 100.0,
-  updated_at: DateTime.iso8601('2023-02-12T01:44:26.082Z')
+  updated_at: DateTime.iso8601('2023-02-12T03:27:03.518Z')
 ), connection_id: '<id>')
 
 unless res.lms_course.nil?
@@ -470,7 +470,7 @@ res = s.lms.create_lms_instructor(lms_instructor: Models::Shared::LmsInstructor.
     Models::Shared::LmsEmail.new,
   ],
   first_name: 'Deangelo',
-  id: '9ec390b8-4991-4f06-9bdc-8daa330806b4',
+  id: 'ecfd71e4-df36-4abc-9723-db067301c244',
   image_url: 'https://avatars.githubusercontent.com/u/95131132',
   last_name: 'Ritchie',
   metadata: [],
@@ -486,7 +486,7 @@ res = s.lms.create_lms_instructor(lms_instructor: Models::Shared::LmsInstructor.
     ),
   ],
   title: 'Regional Security Agent',
-  updated_at: DateTime.iso8601('2025-08-13T17:23:20.314Z')
+  updated_at: DateTime.iso8601('2025-08-14T08:25:29.771Z')
 ), connection_id: '<id>')
 
 unless res.lms_instructor.nil?
@@ -544,7 +544,7 @@ res = s.lms.create_lms_student(lms_student: Models::Shared::LmsStudent.new(
     Models::Shared::LmsEmail.new,
   ],
   first_name: 'Marcella',
-  id: '6bc50526-5021-436a-8eed-5dcee6a1de5a',
+  id: 'cac95706-5e1e-4f3f-abda-6e26bf5ddf70',
   image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg',
   last_name: 'Murazik',
   metadata: [],
@@ -563,7 +563,7 @@ res = s.lms.create_lms_student(lms_student: Models::Shared::LmsStudent.new(
       type: Models::Shared::LmsTelephoneType::FAX
     ),
   ],
-  updated_at: DateTime.iso8601('2022-07-10T06:52:58.733Z')
+  updated_at: DateTime.iso8601('2022-07-10T13:46:50.421Z')
 ), connection_id: '<id>')
 
 unless res.lms_student.nil?
@@ -1220,15 +1220,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchLmsActivityRequest.new(
   lms_activity: Models::Shared::LmsActivity.new(
     assigned_grade: 'summopere',
-    completed_at: DateTime.iso8601('2023-12-20T01:11:44.669Z'),
+    completed_at: DateTime.iso8601('2023-12-20T11:36:54.881Z'),
     created_at: DateTime.iso8601('2020-10-17T01:25:21.745Z'),
     duration_minutes: 55.0,
-    id: '5bf29ee0-90c4-4b0c-8f38-3482c639c0b7',
+    id: 'e91ec75a-d3c6-4c46-8628-510ad25f710d',
     is_completed: true,
     metadata: [],
     progress_percentage: 100.0,
-    started_at: DateTime.iso8601('2021-04-27T12:26:23.243Z'),
-    updated_at: DateTime.iso8601('2022-02-05T18:30:57.439Z')
+    started_at: DateTime.iso8601('2021-04-27T14:10:12.094Z'),
+    updated_at: DateTime.iso8601('2022-02-05T22:48:06.017Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1278,7 +1278,7 @@ req = Models::Operations::PatchLmsClassRequest.new(
   lms_class: Models::Shared::LmsClass.new(
     created_at: DateTime.iso8601('2020-02-20T14:48:51.845Z'),
     description: 'Anser sperno decerno.',
-    id: '7407631e-3680-4044-9c2f-fb47c5a77ac5',
+    id: '55cb6023-750b-41d5-ae57-ec3fe2b1c1ea',
     instructors: [],
     languages: [
       'in',
@@ -1300,7 +1300,7 @@ req = Models::Operations::PatchLmsClassRequest.new(
     metadata: [],
     name: 'virtus',
     students: [],
-    updated_at: DateTime.iso8601('2025-08-25T22:47:28.340Z')
+    updated_at: DateTime.iso8601('2025-08-26T15:07:49.961Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1350,7 +1350,7 @@ req = Models::Operations::PatchLmsCollectionRequest.new(
   lms_collection: Models::Shared::LmsCollection.new(
     created_at: DateTime.iso8601('2019-08-19T14:40:29.227Z'),
     description: 'Ab.',
-    id: 'cec497d8-eb33-4640-9f14-5e2fc2ec25f1',
+    id: '1b7aca6b-973d-406f-b91d-f11fbe55ebd2',
     is_active: true,
     media: [
       Models::Shared::LmsMedia.new(
@@ -1367,7 +1367,7 @@ req = Models::Operations::PatchLmsCollectionRequest.new(
     ],
     metadata: [],
     name: 'ara',
-    updated_at: DateTime.iso8601('2026-08-25T09:42:26.725Z')
+    updated_at: DateTime.iso8601('2026-08-26T05:03:06.961Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1422,7 +1422,7 @@ req = Models::Operations::PatchLmsContentRequest.new(
     description: 'Usque laboriosam ventosus adflicto.',
     difficulty: 'Beginner',
     duration_minutes: 19.0,
-    id: 'e8cf8244-5633-4f76-ab4c-dec37e362614',
+    id: '465c95c0-5222-4526-9e51-6e767c738c7a',
     instructors: [],
     is_active: true,
     languages: [
@@ -1482,7 +1482,7 @@ req = Models::Operations::PatchLmsContentRequest.new(
     metadata: [],
     name: 'ut',
     provider_name: 'Bins LLC',
-    published_at: DateTime.iso8601('2022-09-11T15:24:14.120Z'),
+    published_at: DateTime.iso8601('2022-09-11T21:36:42.833Z'),
     short_description: 'Caritas.',
     skills: [
       'trucido',
@@ -1497,7 +1497,7 @@ req = Models::Operations::PatchLmsContentRequest.new(
     tags: [
       'dens',
     ],
-    updated_at: DateTime.iso8601('2022-10-12T22:49:03.998Z')
+    updated_at: DateTime.iso8601('2022-10-13T05:18:28.698Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1553,7 +1553,7 @@ req = Models::Operations::PatchLmsCourseRequest.new(
     currency: 'FJD',
     description: 'Vinco alias aut capitulus.',
     duration_minutes: 148.0,
-    id: '74e7f71c-c2ed-4e33-b944-a6f826b6634f',
+    id: '826727c9-0177-460e-8065-90233b318e30',
     instructors: [],
     is_active: true,
     is_private: false,
@@ -1580,14 +1580,14 @@ req = Models::Operations::PatchLmsCourseRequest.new(
     name: 'comptus',
     price_amount: 84.0,
     provider_name: 'Homenick - Wunsch',
-    published_at: DateTime.iso8601('2022-11-06T07:29:24.768Z'),
+    published_at: DateTime.iso8601('2022-11-06T07:54:03.443Z'),
     skills: [
       'adiuvo',
       'tam',
     ],
     students: [],
     time_estimate_minutes: 100.0,
-    updated_at: DateTime.iso8601('2023-02-12T01:44:26.084Z')
+    updated_at: DateTime.iso8601('2023-02-12T03:27:03.520Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1640,7 +1640,7 @@ req = Models::Operations::PatchLmsInstructorRequest.new(
       Models::Shared::LmsEmail.new,
     ],
     first_name: 'Deangelo',
-    id: '3be86038-c3f0-491d-99f6-26c563922c86',
+    id: '767e7609-c540-48c3-aced-3d355c27748e',
     image_url: 'https://avatars.githubusercontent.com/u/95131132',
     last_name: 'Ritchie',
     metadata: [],
@@ -1656,7 +1656,7 @@ req = Models::Operations::PatchLmsInstructorRequest.new(
       ),
     ],
     title: 'Regional Security Agent',
-    updated_at: DateTime.iso8601('2025-08-13T17:23:20.323Z')
+    updated_at: DateTime.iso8601('2025-08-14T08:25:29.782Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1717,7 +1717,7 @@ req = Models::Operations::PatchLmsStudentRequest.new(
       Models::Shared::LmsEmail.new,
     ],
     first_name: 'Marcella',
-    id: 'f227652e-2fc1-4bf2-95e7-f58e7ae7c8b1',
+    id: '9b1554cb-0118-416d-bdf4-3bfca0e2fbc2',
     image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg',
     last_name: 'Murazik',
     metadata: [],
@@ -1736,7 +1736,7 @@ req = Models::Operations::PatchLmsStudentRequest.new(
         type: Models::Shared::LmsTelephoneType::FAX
       ),
     ],
-    updated_at: DateTime.iso8601('2022-07-10T06:52:58.739Z')
+    updated_at: DateTime.iso8601('2022-07-10T13:46:50.429Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2072,15 +2072,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateLmsActivityRequest.new(
   lms_activity: Models::Shared::LmsActivity.new(
     assigned_grade: 'summopere',
-    completed_at: DateTime.iso8601('2023-12-20T01:11:44.669Z'),
+    completed_at: DateTime.iso8601('2023-12-20T11:36:54.881Z'),
     created_at: DateTime.iso8601('2020-10-17T01:25:21.745Z'),
     duration_minutes: 55.0,
-    id: '5bf29ee0-90c4-4b0c-8f38-3482c639c0b7',
+    id: 'e91ec75a-d3c6-4c46-8628-510ad25f710d',
     is_completed: true,
     metadata: [],
     progress_percentage: 100.0,
-    started_at: DateTime.iso8601('2021-04-27T12:26:23.243Z'),
-    updated_at: DateTime.iso8601('2022-02-05T18:30:57.439Z')
+    started_at: DateTime.iso8601('2021-04-27T14:10:12.094Z'),
+    updated_at: DateTime.iso8601('2022-02-05T22:48:06.017Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2130,7 +2130,7 @@ req = Models::Operations::UpdateLmsClassRequest.new(
   lms_class: Models::Shared::LmsClass.new(
     created_at: DateTime.iso8601('2020-02-20T14:48:51.845Z'),
     description: 'Anser sperno decerno.',
-    id: '7407631e-3680-4044-9c2f-fb47c5a77ac5',
+    id: '55cb6023-750b-41d5-ae57-ec3fe2b1c1ea',
     instructors: [],
     languages: [
       'in',
@@ -2152,7 +2152,7 @@ req = Models::Operations::UpdateLmsClassRequest.new(
     metadata: [],
     name: 'virtus',
     students: [],
-    updated_at: DateTime.iso8601('2025-08-25T22:47:28.340Z')
+    updated_at: DateTime.iso8601('2025-08-26T15:07:49.961Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2202,7 +2202,7 @@ req = Models::Operations::UpdateLmsCollectionRequest.new(
   lms_collection: Models::Shared::LmsCollection.new(
     created_at: DateTime.iso8601('2019-08-19T14:40:29.227Z'),
     description: 'Ab.',
-    id: 'cec497d8-eb33-4640-9f14-5e2fc2ec25f1',
+    id: '1b7aca6b-973d-406f-b91d-f11fbe55ebd2',
     is_active: true,
     media: [
       Models::Shared::LmsMedia.new(
@@ -2219,7 +2219,7 @@ req = Models::Operations::UpdateLmsCollectionRequest.new(
     ],
     metadata: [],
     name: 'ara',
-    updated_at: DateTime.iso8601('2026-08-25T09:42:26.725Z')
+    updated_at: DateTime.iso8601('2026-08-26T05:03:06.961Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2274,7 +2274,7 @@ req = Models::Operations::UpdateLmsContentRequest.new(
     description: 'Usque laboriosam ventosus adflicto.',
     difficulty: 'Beginner',
     duration_minutes: 19.0,
-    id: 'e8cf8244-5633-4f76-ab4c-dec37e362614',
+    id: '465c95c0-5222-4526-9e51-6e767c738c7a',
     instructors: [],
     is_active: true,
     languages: [
@@ -2334,7 +2334,7 @@ req = Models::Operations::UpdateLmsContentRequest.new(
     metadata: [],
     name: 'ut',
     provider_name: 'Bins LLC',
-    published_at: DateTime.iso8601('2022-09-11T15:24:14.120Z'),
+    published_at: DateTime.iso8601('2022-09-11T21:36:42.833Z'),
     short_description: 'Caritas.',
     skills: [
       'trucido',
@@ -2349,7 +2349,7 @@ req = Models::Operations::UpdateLmsContentRequest.new(
     tags: [
       'dens',
     ],
-    updated_at: DateTime.iso8601('2022-10-12T22:49:03.998Z')
+    updated_at: DateTime.iso8601('2022-10-13T05:18:28.698Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2405,7 +2405,7 @@ req = Models::Operations::UpdateLmsCourseRequest.new(
     currency: 'FJD',
     description: 'Vinco alias aut capitulus.',
     duration_minutes: 148.0,
-    id: '74e7f71c-c2ed-4e33-b944-a6f826b6634f',
+    id: '826727c9-0177-460e-8065-90233b318e30',
     instructors: [],
     is_active: true,
     is_private: false,
@@ -2432,14 +2432,14 @@ req = Models::Operations::UpdateLmsCourseRequest.new(
     name: 'comptus',
     price_amount: 84.0,
     provider_name: 'Homenick - Wunsch',
-    published_at: DateTime.iso8601('2022-11-06T07:29:24.768Z'),
+    published_at: DateTime.iso8601('2022-11-06T07:54:03.443Z'),
     skills: [
       'adiuvo',
       'tam',
     ],
     students: [],
     time_estimate_minutes: 100.0,
-    updated_at: DateTime.iso8601('2023-02-12T01:44:26.084Z')
+    updated_at: DateTime.iso8601('2023-02-12T03:27:03.520Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2492,7 +2492,7 @@ req = Models::Operations::UpdateLmsInstructorRequest.new(
       Models::Shared::LmsEmail.new,
     ],
     first_name: 'Deangelo',
-    id: '3be86038-c3f0-491d-99f6-26c563922c86',
+    id: '767e7609-c540-48c3-aced-3d355c27748e',
     image_url: 'https://avatars.githubusercontent.com/u/95131132',
     last_name: 'Ritchie',
     metadata: [],
@@ -2508,7 +2508,7 @@ req = Models::Operations::UpdateLmsInstructorRequest.new(
       ),
     ],
     title: 'Regional Security Agent',
-    updated_at: DateTime.iso8601('2025-08-13T17:23:20.323Z')
+    updated_at: DateTime.iso8601('2025-08-14T08:25:29.782Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2569,7 +2569,7 @@ req = Models::Operations::UpdateLmsStudentRequest.new(
       Models::Shared::LmsEmail.new,
     ],
     first_name: 'Marcella',
-    id: 'f227652e-2fc1-4bf2-95e7-f58e7ae7c8b1',
+    id: '9b1554cb-0118-416d-bdf4-3bfca0e2fbc2',
     image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg',
     last_name: 'Murazik',
     metadata: [],
@@ -2588,7 +2588,7 @@ req = Models::Operations::UpdateLmsStudentRequest.new(
         type: Models::Shared::LmsTelephoneType::FAX
       ),
     ],
-    updated_at: DateTime.iso8601('2022-07-10T06:52:58.739Z')
+    updated_at: DateTime.iso8601('2022-07-10T13:46:50.429Z')
   ),
   connection_id: '<id>',
   id: '<id>'

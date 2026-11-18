@@ -30,7 +30,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.metadata.create_metadata_metadata(metadata_metadata: Models::Shared::MetadataMetadata.new(
   created_at: DateTime.iso8601('2021-03-25T03:02:17.656Z'),
   format: Models::Shared::MetadataMetadataFormat::PRICE,
-  id: 'd76bb8a8-a591-49f9-917b-330e1a95885e',
+  id: '47bd41ab-4871-4d37-8449-9ffc78d2a1da',
   is_required: false,
   name: 'autem',
   object_type: 'healthcare_patient',
@@ -40,7 +40,7 @@ res = s.metadata.create_metadata_metadata(metadata_metadata: Models::Shared::Met
   options: [],
   original_format: 'advoco',
   slug: 'arbustum',
-  updated_at: DateTime.iso8601('2025-04-10T06:32:05.478Z')
+  updated_at: DateTime.iso8601('2025-04-10T20:50:19.153Z')
 ), connection_id: '<id>')
 
 unless res.metadata_metadata.nil?
@@ -176,7 +176,7 @@ req = Models::Operations::PatchMetadataMetadataRequest.new(
   metadata_metadata: Models::Shared::MetadataMetadata.new(
     created_at: DateTime.iso8601('2021-03-25T03:02:17.656Z'),
     format: Models::Shared::MetadataMetadataFormat::PRICE,
-    id: '7441eef5-3926-4334-a5c6-1325dd842d62',
+    id: 'bb01d161-9f84-4dd1-a3bd-b593d8240f89',
     is_required: false,
     name: 'autem',
     object_type: 'healthcare_patient',
@@ -186,7 +186,7 @@ req = Models::Operations::PatchMetadataMetadataRequest.new(
     options: [],
     original_format: 'advoco',
     slug: 'arbustum',
-    updated_at: DateTime.iso8601('2025-04-10T06:32:05.485Z')
+    updated_at: DateTime.iso8601('2025-04-10T20:50:19.162Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -277,7 +277,7 @@ req = Models::Operations::UpdateMetadataMetadataRequest.new(
   metadata_metadata: Models::Shared::MetadataMetadata.new(
     created_at: DateTime.iso8601('2021-03-25T03:02:17.656Z'),
     format: Models::Shared::MetadataMetadataFormat::PRICE,
-    id: '7441eef5-3926-4334-a5c6-1325dd842d62',
+    id: 'bb01d161-9f84-4dd1-a3bd-b593d8240f89',
     is_required: false,
     name: 'autem',
     object_type: 'healthcare_patient',
@@ -287,7 +287,7 @@ req = Models::Operations::UpdateMetadataMetadataRequest.new(
     options: [],
     original_format: 'advoco',
     slug: 'arbustum',
-    updated_at: DateTime.iso8601('2025-04-10T06:32:05.485Z')
+    updated_at: DateTime.iso8601('2025-04-10T20:50:19.162Z')
   ),
   connection_id: '<id>',
   id: '<id>'
