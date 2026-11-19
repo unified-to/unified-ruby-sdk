@@ -64,7 +64,7 @@ res = s.job.create_ats_job(ats_job: Models::Shared::AtsJob.new(
   description: 'Global',
   employment_type: Models::Shared::EmploymentType::FREELANCE,
   hiring_managers: [],
-  id: 'c9f4072b-db4f-4dc2-862d-137c56e6d29a',
+  id: '92423a6f-6375-4982-abc4-e2d6a6a7c589',
   industry: 'Handcrafted Bamboo Soap',
   language_locale: 'en',
   metadata: [
@@ -73,7 +73,7 @@ res = s.job.create_ats_job(ats_job: Models::Shared::AtsJob.new(
         'display_name' => 'Custom Property',
       },
       format: Models::Shared::AtsMetadataFormat::TEXT,
-      id: '729afbc7-d0ba-4dc4-ae56-86b5038ea799',
+      id: 'bd9f49af-3292-4413-b91b-98f24a4c2634',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'desolo'
@@ -86,7 +86,7 @@ res = s.job.create_ats_job(ats_job: Models::Shared::AtsJob.new(
   openings: [
     Models::Shared::AtsJobOpening.new(
       close_reason: 'Admoveo trado textilis.',
-      opened_at: DateTime.iso8601('2026-07-02T14:46:58.601Z'),
+      opened_at: DateTime.iso8601('2026-07-03T16:53:02.939Z'),
       status: Models::Shared::AtsJobOpeningStatus::OPEN
     ),
   ],
@@ -100,14 +100,14 @@ res = s.job.create_ats_job(ats_job: Models::Shared::AtsJob.new(
         region: 'Wisconsin',
         region_code: 'CO'
       ),
-      created_at: DateTime.iso8601('2026-08-27T23:53:02.370Z'),
+      created_at: DateTime.iso8601('2026-08-29T03:18:30.425Z'),
       description: 'Beatus eum volutabrum balbus victus ipsa tubineus claustrum.',
-      id: '26efdfbe-9326-4f93-a3ed-8ae4848e27a0',
+      id: 'd38c2d5c-a469-4f6d-b1a6-12ab423e7d76',
       is_active: false,
       location: '1725 Hessel Keys',
       name: 'International Identity Manager',
       posting_url: 'https://obedient-yak.com',
-      updated_at: DateTime.iso8601('2026-09-23T21:37:18.752Z')
+      updated_at: DateTime.iso8601('2026-09-25T01:40:40.187Z')
     ),
   ],
   public_job_urls: [
@@ -117,7 +117,7 @@ res = s.job.create_ats_job(ats_job: Models::Shared::AtsJob.new(
   questions: [
     Models::Shared::AtsJobQuestion.new(
       description: 'Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.',
-      id: '5907ac5b-9941-46e6-93c7-f95f5669307b',
+      id: '8293da1e-8122-443b-bae7-f2b57ec8847f',
       max_length: 117.0,
       min_length: 1.0,
       options: [
@@ -130,7 +130,7 @@ res = s.job.create_ats_job(ats_job: Models::Shared::AtsJob.new(
       type: Models::Shared::AtsJobQuestionType::TEXT
     ),
     Models::Shared::AtsJobQuestion.new(
-      id: '1938db33-f15c-43cc-9561-c7a7fdf2e7a6',
+      id: 'b1c690a1-876b-4ee4-8285-b3fb5b69569c',
       max_length: 453.0,
       min_length: 1.0,
       options: [
@@ -143,7 +143,7 @@ res = s.job.create_ats_job(ats_job: Models::Shared::AtsJob.new(
     ),
     Models::Shared::AtsJobQuestion.new(
       description: 'Taceo rem compello spectaculum mollitia arcus compello.',
-      id: '33079aca-adda-46d4-8c66-8f52c91b1a2c',
+      id: '0452ea10-b3f2-4708-9ca8-0609c9ab46e4',
       max_length: 66.0,
       min_length: 1.0,
       options: [
@@ -161,7 +161,7 @@ res = s.job.create_ats_job(ats_job: Models::Shared::AtsJob.new(
   ],
   status: Models::Shared::AtsJobStatus::ARCHIVED,
   summary: 'Crepusculum adsuesco vere.',
-  updated_at: DateTime.iso8601('2026-03-21T20:16:19.860Z')
+  updated_at: DateTime.iso8601('2026-03-22T19:57:40.618Z')
 ), connection_id: '<id>')
 
 unless res.ats_job.nil?
@@ -210,11 +210,11 @@ res = s.job.create_hris_job(hris_job: Models::Shared::HrisJob.new(
   created_at: DateTime.iso8601('2020-10-28T01:13:19.491Z'),
   description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
   employment_type: Models::Shared::HrisJobEmploymentType::FREELANCE,
-  id: 'a19b9ac7-85b8-4769-b9db-46d28eda4b85',
+  id: 'c5a475fb-27ea-4f1b-b977-5eb7d0e27180',
   is_active: false,
   metadata: [],
   name: 'Internal Integration Specialist',
-  updated_at: DateTime.iso8601('2023-02-09T17:01:58.080Z')
+  updated_at: DateTime.iso8601('2023-02-10T04:06:23.713Z')
 ), connection_id: '<id>')
 
 unless res.hris_job.nil?
@@ -465,7 +465,7 @@ req = Models::Operations::PatchAtsJobRequest.new(
     description: 'Global',
     employment_type: Models::Shared::EmploymentType::FREELANCE,
     hiring_managers: [],
-    id: 'c671d43c-25d4-463b-af70-4b244ba75063',
+    id: '10f14a74-2630-4a25-9929-c059ff02f380',
     industry: 'Handcrafted Bamboo Soap',
     language_locale: 'en',
     metadata: [
@@ -474,7 +474,7 @@ req = Models::Operations::PatchAtsJobRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: 'e7a4bd5b-5f70-42d9-b850-1717a3db4da9',
+        id: 'c4c8afa5-d5ef-4717-be84-832b5936f038',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'desolo'
@@ -487,7 +487,7 @@ req = Models::Operations::PatchAtsJobRequest.new(
     openings: [
       Models::Shared::AtsJobOpening.new(
         close_reason: 'Admoveo trado textilis.',
-        opened_at: DateTime.iso8601('2026-07-02T14:46:58.649Z'),
+        opened_at: DateTime.iso8601('2026-07-03T16:53:02.991Z'),
         status: Models::Shared::AtsJobOpeningStatus::OPEN
       ),
     ],
@@ -501,14 +501,14 @@ req = Models::Operations::PatchAtsJobRequest.new(
           region: 'Wisconsin',
           region_code: 'CO'
         ),
-        created_at: DateTime.iso8601('2026-08-27T23:53:02.420Z'),
+        created_at: DateTime.iso8601('2026-08-29T03:18:30.480Z'),
         description: 'Beatus eum volutabrum balbus victus ipsa tubineus claustrum.',
-        id: 'd55b0f7f-ceb7-4e57-bfbd-4149dc60ab01',
+        id: 'b3dc9288-789a-4d53-8d3f-832260c37a92',
         is_active: false,
         location: '1725 Hessel Keys',
         name: 'International Identity Manager',
         posting_url: 'https://obedient-yak.com',
-        updated_at: DateTime.iso8601('2026-09-23T21:37:18.803Z')
+        updated_at: DateTime.iso8601('2026-09-25T01:40:40.244Z')
       ),
     ],
     public_job_urls: [
@@ -518,7 +518,7 @@ req = Models::Operations::PatchAtsJobRequest.new(
     questions: [
       Models::Shared::AtsJobQuestion.new(
         description: 'Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.',
-        id: '9ffa41cd-3b84-4006-afae-3f7e5c3d3668',
+        id: 'b3ad3771-9558-4158-bfd2-3d9f9e273857',
         max_length: 117.0,
         min_length: 1.0,
         options: [
@@ -531,7 +531,7 @@ req = Models::Operations::PatchAtsJobRequest.new(
         type: Models::Shared::AtsJobQuestionType::TEXT
       ),
       Models::Shared::AtsJobQuestion.new(
-        id: 'd388c67a-1794-4706-b185-f03e0fc6e08f',
+        id: '9252cf79-3d0f-48d0-895a-e6748e430ace',
         max_length: 453.0,
         min_length: 1.0,
         options: [
@@ -544,7 +544,7 @@ req = Models::Operations::PatchAtsJobRequest.new(
       ),
       Models::Shared::AtsJobQuestion.new(
         description: 'Taceo rem compello spectaculum mollitia arcus compello.',
-        id: '9d297f55-4188-402c-aff7-0d828771e915',
+        id: '3b66ef6e-dcca-4079-ad7c-a1029e48123d',
         max_length: 66.0,
         min_length: 1.0,
         options: [
@@ -562,7 +562,7 @@ req = Models::Operations::PatchAtsJobRequest.new(
     ],
     status: Models::Shared::AtsJobStatus::ARCHIVED,
     summary: 'Crepusculum adsuesco vere.',
-    updated_at: DateTime.iso8601('2026-03-21T20:16:19.904Z')
+    updated_at: DateTime.iso8601('2026-03-22T19:57:40.666Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -614,11 +614,11 @@ req = Models::Operations::PatchHrisJobRequest.new(
     created_at: DateTime.iso8601('2020-10-28T01:13:19.491Z'),
     description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
     employment_type: Models::Shared::HrisJobEmploymentType::FREELANCE,
-    id: '482c4bda-a62b-4d09-857e-306456bcfe1b',
+    id: '511e177a-f77a-4349-85ca-23bb4082c864',
     is_active: false,
     metadata: [],
     name: 'Internal Integration Specialist',
-    updated_at: DateTime.iso8601('2023-02-09T17:01:58.136Z')
+    updated_at: DateTime.iso8601('2023-02-10T04:06:23.769Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -778,7 +778,7 @@ req = Models::Operations::UpdateAtsJobRequest.new(
     description: 'Global',
     employment_type: Models::Shared::EmploymentType::FREELANCE,
     hiring_managers: [],
-    id: 'c671d43c-25d4-463b-af70-4b244ba75063',
+    id: '10f14a74-2630-4a25-9929-c059ff02f380',
     industry: 'Handcrafted Bamboo Soap',
     language_locale: 'en',
     metadata: [
@@ -787,7 +787,7 @@ req = Models::Operations::UpdateAtsJobRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: 'e7a4bd5b-5f70-42d9-b850-1717a3db4da9',
+        id: 'c4c8afa5-d5ef-4717-be84-832b5936f038',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'desolo'
@@ -800,7 +800,7 @@ req = Models::Operations::UpdateAtsJobRequest.new(
     openings: [
       Models::Shared::AtsJobOpening.new(
         close_reason: 'Admoveo trado textilis.',
-        opened_at: DateTime.iso8601('2026-07-02T14:46:58.649Z'),
+        opened_at: DateTime.iso8601('2026-07-03T16:53:02.991Z'),
         status: Models::Shared::AtsJobOpeningStatus::OPEN
       ),
     ],
@@ -814,14 +814,14 @@ req = Models::Operations::UpdateAtsJobRequest.new(
           region: 'Wisconsin',
           region_code: 'CO'
         ),
-        created_at: DateTime.iso8601('2026-08-27T23:53:02.420Z'),
+        created_at: DateTime.iso8601('2026-08-29T03:18:30.480Z'),
         description: 'Beatus eum volutabrum balbus victus ipsa tubineus claustrum.',
-        id: 'd55b0f7f-ceb7-4e57-bfbd-4149dc60ab01',
+        id: 'b3dc9288-789a-4d53-8d3f-832260c37a92',
         is_active: false,
         location: '1725 Hessel Keys',
         name: 'International Identity Manager',
         posting_url: 'https://obedient-yak.com',
-        updated_at: DateTime.iso8601('2026-09-23T21:37:18.803Z')
+        updated_at: DateTime.iso8601('2026-09-25T01:40:40.244Z')
       ),
     ],
     public_job_urls: [
@@ -831,7 +831,7 @@ req = Models::Operations::UpdateAtsJobRequest.new(
     questions: [
       Models::Shared::AtsJobQuestion.new(
         description: 'Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.',
-        id: '9ffa41cd-3b84-4006-afae-3f7e5c3d3668',
+        id: 'b3ad3771-9558-4158-bfd2-3d9f9e273857',
         max_length: 117.0,
         min_length: 1.0,
         options: [
@@ -844,7 +844,7 @@ req = Models::Operations::UpdateAtsJobRequest.new(
         type: Models::Shared::AtsJobQuestionType::TEXT
       ),
       Models::Shared::AtsJobQuestion.new(
-        id: 'd388c67a-1794-4706-b185-f03e0fc6e08f',
+        id: '9252cf79-3d0f-48d0-895a-e6748e430ace',
         max_length: 453.0,
         min_length: 1.0,
         options: [
@@ -857,7 +857,7 @@ req = Models::Operations::UpdateAtsJobRequest.new(
       ),
       Models::Shared::AtsJobQuestion.new(
         description: 'Taceo rem compello spectaculum mollitia arcus compello.',
-        id: '9d297f55-4188-402c-aff7-0d828771e915',
+        id: '3b66ef6e-dcca-4079-ad7c-a1029e48123d',
         max_length: 66.0,
         min_length: 1.0,
         options: [
@@ -875,7 +875,7 @@ req = Models::Operations::UpdateAtsJobRequest.new(
     ],
     status: Models::Shared::AtsJobStatus::ARCHIVED,
     summary: 'Crepusculum adsuesco vere.',
-    updated_at: DateTime.iso8601('2026-03-21T20:16:19.904Z')
+    updated_at: DateTime.iso8601('2026-03-22T19:57:40.666Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -927,11 +927,11 @@ req = Models::Operations::UpdateHrisJobRequest.new(
     created_at: DateTime.iso8601('2020-10-28T01:13:19.491Z'),
     description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
     employment_type: Models::Shared::HrisJobEmploymentType::FREELANCE,
-    id: '482c4bda-a62b-4d09-857e-306456bcfe1b',
+    id: '511e177a-f77a-4349-85ca-23bb4082c864',
     is_active: false,
     metadata: [],
     name: 'Internal Integration Specialist',
-    updated_at: DateTime.iso8601('2023-02-09T17:01:58.136Z')
+    updated_at: DateTime.iso8601('2023-02-10T04:06:23.769Z')
   ),
   connection_id: '<id>',
   id: '<id>'

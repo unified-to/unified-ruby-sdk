@@ -88,7 +88,7 @@ res = s.crm.create_crm_company(crm_company: Models::Shared::CrmCompany.new(
     ),
   ],
   employees: 4177.0,
-  id: '9c0f4412-23fc-42bb-83d4-bea17eaac77c',
+  id: '04fda89a-2c3a-42c9-9114-6d1038baaec4',
   industry: 'Metrics',
   is_active: true,
   link_urls: [
@@ -100,7 +100,7 @@ res = s.crm.create_crm_company(crm_company: Models::Shared::CrmCompany.new(
         'display_name' => 'Custom Property',
       },
       format: Models::Shared::CrmMetadataFormat::TEXT,
-      id: '5e9f646c-9700-480b-a60f-887665da3162',
+      id: 'f3a3b288-a8ba-4c85-a16b-43d2b4931dac',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'unde'
@@ -119,7 +119,7 @@ res = s.crm.create_crm_company(crm_company: Models::Shared::CrmCompany.new(
     ),
   ],
   timezone: 'Atlantic/Azores',
-  updated_at: DateTime.iso8601('2025-03-23T21:35:37.364Z'),
+  updated_at: DateTime.iso8601('2025-03-24T19:29:43.487Z'),
   websites: [
     'https://www.goodwinsons.com',
   ]
@@ -185,7 +185,7 @@ res = s.crm.create_crm_contact(crm_contact: Models::Shared::CrmContact.new(
     ),
   ],
   first_name: 'Mohammad',
-  id: '231f7b43-d8ec-47d1-bd4b-715e66f86d8e',
+  id: '1f4181d6-0442-4d9b-8d76-34b7fd6530c2',
   image_url: 'https://avatars.githubusercontent.com/u/26803724',
   last_name: 'Bartell',
   link_urls: [
@@ -197,7 +197,7 @@ res = s.crm.create_crm_contact(crm_contact: Models::Shared::CrmContact.new(
         'display_name' => 'Custom Property',
       },
       format: Models::Shared::CrmMetadataFormat::TEXT,
-      id: 'fc24a670-c631-4197-8d74-39d486a40934',
+      id: 'e2639ad3-568a-4224-8197-6c44a869dad3',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'antiquus'
@@ -215,7 +215,7 @@ res = s.crm.create_crm_contact(crm_contact: Models::Shared::CrmContact.new(
     ),
   ],
   title: 'National Tactics Analyst',
-  updated_at: DateTime.iso8601('2021-02-24T21:51:31.093Z')
+  updated_at: DateTime.iso8601('2021-02-24T22:35:43.778Z')
 ), connection_id: '<id>')
 
 unless res.crm_contact.nil?
@@ -261,19 +261,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.crm.create_crm_deal(crm_deal: Models::Shared::CrmDeal.new(
   amount: 98_162.0,
-  closed_at: DateTime.iso8601('2024-03-16T04:29:52.062Z'),
-  closing_at: DateTime.iso8601('2025-09-18T17:34:34.890Z'),
+  closed_at: DateTime.iso8601('2024-03-16T10:35:08.853Z'),
+  closing_at: DateTime.iso8601('2025-09-19T12:47:54.800Z'),
   created_at: DateTime.iso8601('2023-07-04T12:48:48.470Z'),
   currency: 'USD',
   description: 'Comis tepidus sit cavus crustulum trans tubineus adfectus.',
-  id: '6373e04f-32ad-46fd-8294-b1408b8e57f9',
+  id: 'ce1addd0-aa34-4091-8ec9-300e21c2fc62',
   metadata: [
     Models::Shared::CrmMetadata.new(
       extra_data: {
         'display_name' => 'Custom Property',
       },
       format: Models::Shared::CrmMetadataFormat::TEXT,
-      id: 'be43a845-58f6-4a51-a79b-e1e2ebe9c96c',
+      id: '7ce65a45-4398-4d54-8996-d83fba82cdf4',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'conatus'
@@ -286,7 +286,7 @@ res = s.crm.create_crm_deal(crm_deal: Models::Shared::CrmDeal.new(
     'causa',
     'suus',
   ],
-  updated_at: DateTime.iso8601('2024-10-22T14:55:39.299Z'),
+  updated_at: DateTime.iso8601('2024-10-23T02:15:53.615Z'),
   won_reason: 'Usque libero soleo.'
 ), connection_id: '<id>')
 
@@ -335,13 +335,13 @@ res = s.crm.create_crm_event(crm_event: Models::Shared::CrmEvent.new(
   call: Models::Shared::PropertyCrmEventCall.new(
     description: 'Arbitro aptus.',
     duration: 64.0,
-    start_at: DateTime.iso8601('2024-12-30T14:02:58.511Z')
+    start_at: DateTime.iso8601('2024-12-31T10:41:33.677Z')
   ),
   created_at: DateTime.iso8601('2020-07-14T04:53:23.784Z'),
-  id: '5b851785-d88f-40d5-b4fe-b2164332f628',
+  id: 'ba9a0d90-cdfc-4916-8b50-40472a933f5e',
   metadata: [],
   type: Models::Shared::CrmEventType::CALL,
-  updated_at: DateTime.iso8601('2026-11-08T05:12:12.957Z')
+  updated_at: DateTime.iso8601('2026-11-09T10:25:35.546Z')
 ), connection_id: '<id>')
 
 unless res.crm_event.nil?
@@ -403,7 +403,7 @@ res = s.crm.create_crm_lead(crm_lead: Models::Shared::CrmLead.new(
     ),
   ],
   first_name: 'Velda',
-  id: '6420ab74-9ea2-468c-ba83-3aa2f10f833d',
+  id: 'd1045ff4-14ea-4a2f-b295-41e59405b445',
   is_active: true,
   last_name: 'Sporer',
   link_urls: [
@@ -415,7 +415,7 @@ res = s.crm.create_crm_lead(crm_lead: Models::Shared::CrmLead.new(
         'display_name' => 'Custom Property',
       },
       format: Models::Shared::CrmMetadataFormat::TEXT,
-      id: '7359a339-7f8d-4021-8906-9a98ce61fdb8',
+      id: 'eacf3b18-1d21-4f51-8538-b40980f6f0f1',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'vitiosus'
@@ -439,7 +439,7 @@ res = s.crm.create_crm_lead(crm_lead: Models::Shared::CrmLead.new(
     ),
   ],
   title: 'International Factors Administrator',
-  updated_at: DateTime.iso8601('2020-05-20T06:22:10.838Z')
+  updated_at: DateTime.iso8601('2020-05-20T08:52:04.646Z')
 ), connection_id: '<id>')
 
 unless res.crm_lead.nil?
@@ -487,7 +487,7 @@ res = s.crm.create_crm_pipeline(crm_pipeline: Models::Shared::CrmPipeline.new(
   created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
   deal_probability: 99.0,
   display_order: 8.0,
-  id: '551b8f4e-3a54-499c-b175-0100ff0ee2cf',
+  id: '9d631832-7675-45f9-b84c-12c27e722069',
   is_active: true,
   metadata: [],
   name: 'Small Steel Bacon',
@@ -497,13 +497,13 @@ res = s.crm.create_crm_pipeline(crm_pipeline: Models::Shared::CrmPipeline.new(
       created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
       deal_probability: 84.0,
       display_order: 72.0,
-      id: 'e451d8ba-5ac8-488a-a882-05a6afbce99d',
+      id: '8cd4f5df-0b2e-4a7e-9f8d-4dceac2318d9',
       is_closed: true,
       name: 'Veniam.',
-      updated_at: DateTime.iso8601('2025-10-30T19:38:15.047Z')
+      updated_at: DateTime.iso8601('2025-10-31T17:04:07.880Z')
     ),
   ],
-  updated_at: DateTime.iso8601('2025-11-21T23:29:03.486Z')
+  updated_at: DateTime.iso8601('2025-11-22T21:22:24.655Z')
 ), connection_id: '<id>')
 
 unless res.crm_pipeline.nil?
@@ -1145,7 +1145,7 @@ req = Models::Operations::PatchCrmCompanyRequest.new(
       ),
     ],
     employees: 4177.0,
-    id: 'c5077259-c664-4200-9dbb-1b1edb808bc3',
+    id: '91e4a144-6a41-427e-b085-849f01b77f90',
     industry: 'Metrics',
     is_active: true,
     link_urls: [
@@ -1157,7 +1157,7 @@ req = Models::Operations::PatchCrmCompanyRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '42c6d511-de40-4e19-8177-abf47bde4068',
+        id: '7b8762c3-793c-455e-98fa-14230efe78e9',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'unde'
@@ -1176,7 +1176,7 @@ req = Models::Operations::PatchCrmCompanyRequest.new(
       ),
     ],
     timezone: 'Atlantic/Azores',
-    updated_at: DateTime.iso8601('2025-03-23T21:35:37.398Z'),
+    updated_at: DateTime.iso8601('2025-03-24T19:29:43.499Z'),
     websites: [
       'https://www.goodwinsons.com',
     ]
@@ -1245,7 +1245,7 @@ req = Models::Operations::PatchCrmContactRequest.new(
       ),
     ],
     first_name: 'Mohammad',
-    id: '596393ad-9691-4e52-bb96-51dccfb4436d',
+    id: '713d09c4-fe61-4343-9470-c99069fa0d68',
     image_url: 'https://avatars.githubusercontent.com/u/26803724',
     last_name: 'Bartell',
     link_urls: [
@@ -1257,7 +1257,7 @@ req = Models::Operations::PatchCrmContactRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '49a8c3b7-ca6c-4155-8624-98064181a554',
+        id: '9211fc79-11f8-4910-9ab1-826c3dab8eb6',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'antiquus'
@@ -1275,7 +1275,7 @@ req = Models::Operations::PatchCrmContactRequest.new(
       ),
     ],
     title: 'National Tactics Analyst',
-    updated_at: DateTime.iso8601('2021-02-24T21:51:31.094Z')
+    updated_at: DateTime.iso8601('2021-02-24T22:35:43.778Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1324,19 +1324,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchCrmDealRequest.new(
   crm_deal: Models::Shared::CrmDeal.new(
     amount: 98_162.0,
-    closed_at: DateTime.iso8601('2024-03-16T04:29:52.066Z'),
-    closing_at: DateTime.iso8601('2025-09-18T17:34:34.904Z'),
+    closed_at: DateTime.iso8601('2024-03-16T10:35:08.856Z'),
+    closing_at: DateTime.iso8601('2025-09-19T12:47:54.809Z'),
     created_at: DateTime.iso8601('2023-07-04T12:48:48.470Z'),
     currency: 'USD',
     description: 'Comis tepidus sit cavus crustulum trans tubineus adfectus.',
-    id: '149ea763-24c5-4754-bfa5-43b5470acaf7',
+    id: '2946f515-944b-4f05-b351-a56397517643',
     metadata: [
       Models::Shared::CrmMetadata.new(
         extra_data: {
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '1ead385a-7818-4b59-a2e4-0d7b54e32123',
+        id: '057cc126-673f-4497-917e-89dd42dd3d1c',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'conatus'
@@ -1349,7 +1349,7 @@ req = Models::Operations::PatchCrmDealRequest.new(
       'causa',
       'suus',
     ],
-    updated_at: DateTime.iso8601('2024-10-22T14:55:39.307Z'),
+    updated_at: DateTime.iso8601('2024-10-23T02:15:53.620Z'),
     won_reason: 'Usque libero soleo.'
   ),
   connection_id: '<id>',
@@ -1401,13 +1401,13 @@ req = Models::Operations::PatchCrmEventRequest.new(
     call: Models::Shared::PropertyCrmEventCall.new(
       description: 'Arbitro aptus.',
       duration: 64.0,
-      start_at: DateTime.iso8601('2024-12-30T14:02:58.551Z')
+      start_at: DateTime.iso8601('2024-12-31T10:41:33.699Z')
     ),
     created_at: DateTime.iso8601('2020-07-14T04:53:23.784Z'),
-    id: '7bfdbd13-e052-411c-9861-a031cac33bce',
+    id: 'b35d71cc-1294-402c-bc62-a6f6d5259cf7',
     metadata: [],
     type: Models::Shared::CrmEventType::CALL,
-    updated_at: DateTime.iso8601('2026-11-08T05:12:13.011Z')
+    updated_at: DateTime.iso8601('2026-11-09T10:25:35.577Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1472,7 +1472,7 @@ req = Models::Operations::PatchCrmLeadRequest.new(
       ),
     ],
     first_name: 'Velda',
-    id: '0e72f87b-50d4-41e9-9efc-80f46fcef4f5',
+    id: '6619d4e1-536e-4810-9789-923def5dc05f',
     is_active: true,
     last_name: 'Sporer',
     link_urls: [
@@ -1484,7 +1484,7 @@ req = Models::Operations::PatchCrmLeadRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: 'f4d2d0fc-d6b5-4664-84b8-afe0dab37d31',
+        id: 'b017f687-9004-4b9e-afaa-ce471f9dcac6',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'vitiosus'
@@ -1508,7 +1508,7 @@ req = Models::Operations::PatchCrmLeadRequest.new(
       ),
     ],
     title: 'International Factors Administrator',
-    updated_at: DateTime.iso8601('2020-05-20T06:22:10.840Z')
+    updated_at: DateTime.iso8601('2020-05-20T08:52:04.648Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1559,7 +1559,7 @@ req = Models::Operations::PatchCrmPipelineRequest.new(
     created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
     deal_probability: 99.0,
     display_order: 8.0,
-    id: '82ce1d52-26e0-474b-8c7f-d54a507106c6',
+    id: '6c9ac85e-2bc6-4ccb-bf83-29364a78273d',
     is_active: true,
     metadata: [],
     name: 'Small Steel Bacon',
@@ -1569,13 +1569,13 @@ req = Models::Operations::PatchCrmPipelineRequest.new(
         created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
         deal_probability: 84.0,
         display_order: 72.0,
-        id: '15cb42de-873a-4f5e-8914-b14f932594a3',
+        id: '047732a0-8777-48da-9484-61de8fe3fd74',
         is_closed: true,
         name: 'Veniam.',
-        updated_at: DateTime.iso8601('2025-10-30T19:38:15.057Z')
+        updated_at: DateTime.iso8601('2025-10-31T17:04:07.886Z')
       ),
     ],
-    updated_at: DateTime.iso8601('2025-11-21T23:29:03.496Z')
+    updated_at: DateTime.iso8601('2025-11-22T21:22:24.662Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1898,7 +1898,7 @@ req = Models::Operations::UpdateCrmCompanyRequest.new(
       ),
     ],
     employees: 4177.0,
-    id: 'c5077259-c664-4200-9dbb-1b1edb808bc3',
+    id: '91e4a144-6a41-427e-b085-849f01b77f90',
     industry: 'Metrics',
     is_active: true,
     link_urls: [
@@ -1910,7 +1910,7 @@ req = Models::Operations::UpdateCrmCompanyRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '42c6d511-de40-4e19-8177-abf47bde4068',
+        id: '7b8762c3-793c-455e-98fa-14230efe78e9',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'unde'
@@ -1929,7 +1929,7 @@ req = Models::Operations::UpdateCrmCompanyRequest.new(
       ),
     ],
     timezone: 'Atlantic/Azores',
-    updated_at: DateTime.iso8601('2025-03-23T21:35:37.398Z'),
+    updated_at: DateTime.iso8601('2025-03-24T19:29:43.499Z'),
     websites: [
       'https://www.goodwinsons.com',
     ]
@@ -1998,7 +1998,7 @@ req = Models::Operations::UpdateCrmContactRequest.new(
       ),
     ],
     first_name: 'Mohammad',
-    id: '596393ad-9691-4e52-bb96-51dccfb4436d',
+    id: '713d09c4-fe61-4343-9470-c99069fa0d68',
     image_url: 'https://avatars.githubusercontent.com/u/26803724',
     last_name: 'Bartell',
     link_urls: [
@@ -2010,7 +2010,7 @@ req = Models::Operations::UpdateCrmContactRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '49a8c3b7-ca6c-4155-8624-98064181a554',
+        id: '9211fc79-11f8-4910-9ab1-826c3dab8eb6',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'antiquus'
@@ -2028,7 +2028,7 @@ req = Models::Operations::UpdateCrmContactRequest.new(
       ),
     ],
     title: 'National Tactics Analyst',
-    updated_at: DateTime.iso8601('2021-02-24T21:51:31.094Z')
+    updated_at: DateTime.iso8601('2021-02-24T22:35:43.778Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2077,19 +2077,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateCrmDealRequest.new(
   crm_deal: Models::Shared::CrmDeal.new(
     amount: 98_162.0,
-    closed_at: DateTime.iso8601('2024-03-16T04:29:52.066Z'),
-    closing_at: DateTime.iso8601('2025-09-18T17:34:34.904Z'),
+    closed_at: DateTime.iso8601('2024-03-16T10:35:08.856Z'),
+    closing_at: DateTime.iso8601('2025-09-19T12:47:54.809Z'),
     created_at: DateTime.iso8601('2023-07-04T12:48:48.470Z'),
     currency: 'USD',
     description: 'Comis tepidus sit cavus crustulum trans tubineus adfectus.',
-    id: '149ea763-24c5-4754-bfa5-43b5470acaf7',
+    id: '2946f515-944b-4f05-b351-a56397517643',
     metadata: [
       Models::Shared::CrmMetadata.new(
         extra_data: {
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '1ead385a-7818-4b59-a2e4-0d7b54e32123',
+        id: '057cc126-673f-4497-917e-89dd42dd3d1c',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'conatus'
@@ -2102,7 +2102,7 @@ req = Models::Operations::UpdateCrmDealRequest.new(
       'causa',
       'suus',
     ],
-    updated_at: DateTime.iso8601('2024-10-22T14:55:39.307Z'),
+    updated_at: DateTime.iso8601('2024-10-23T02:15:53.620Z'),
     won_reason: 'Usque libero soleo.'
   ),
   connection_id: '<id>',
@@ -2154,13 +2154,13 @@ req = Models::Operations::UpdateCrmEventRequest.new(
     call: Models::Shared::PropertyCrmEventCall.new(
       description: 'Arbitro aptus.',
       duration: 64.0,
-      start_at: DateTime.iso8601('2024-12-30T14:02:58.551Z')
+      start_at: DateTime.iso8601('2024-12-31T10:41:33.699Z')
     ),
     created_at: DateTime.iso8601('2020-07-14T04:53:23.784Z'),
-    id: '7bfdbd13-e052-411c-9861-a031cac33bce',
+    id: 'b35d71cc-1294-402c-bc62-a6f6d5259cf7',
     metadata: [],
     type: Models::Shared::CrmEventType::CALL,
-    updated_at: DateTime.iso8601('2026-11-08T05:12:13.011Z')
+    updated_at: DateTime.iso8601('2026-11-09T10:25:35.577Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2225,7 +2225,7 @@ req = Models::Operations::UpdateCrmLeadRequest.new(
       ),
     ],
     first_name: 'Velda',
-    id: '0e72f87b-50d4-41e9-9efc-80f46fcef4f5',
+    id: '6619d4e1-536e-4810-9789-923def5dc05f',
     is_active: true,
     last_name: 'Sporer',
     link_urls: [
@@ -2237,7 +2237,7 @@ req = Models::Operations::UpdateCrmLeadRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: 'f4d2d0fc-d6b5-4664-84b8-afe0dab37d31',
+        id: 'b017f687-9004-4b9e-afaa-ce471f9dcac6',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'vitiosus'
@@ -2261,7 +2261,7 @@ req = Models::Operations::UpdateCrmLeadRequest.new(
       ),
     ],
     title: 'International Factors Administrator',
-    updated_at: DateTime.iso8601('2020-05-20T06:22:10.840Z')
+    updated_at: DateTime.iso8601('2020-05-20T08:52:04.648Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2312,7 +2312,7 @@ req = Models::Operations::UpdateCrmPipelineRequest.new(
     created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
     deal_probability: 99.0,
     display_order: 8.0,
-    id: '82ce1d52-26e0-474b-8c7f-d54a507106c6',
+    id: '6c9ac85e-2bc6-4ccb-bf83-29364a78273d',
     is_active: true,
     metadata: [],
     name: 'Small Steel Bacon',
@@ -2322,13 +2322,13 @@ req = Models::Operations::UpdateCrmPipelineRequest.new(
         created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
         deal_probability: 84.0,
         display_order: 72.0,
-        id: '15cb42de-873a-4f5e-8914-b14f932594a3',
+        id: '047732a0-8777-48da-9484-61de8fe3fd74',
         is_closed: true,
         name: 'Veniam.',
-        updated_at: DateTime.iso8601('2025-10-30T19:38:15.057Z')
+        updated_at: DateTime.iso8601('2025-10-31T17:04:07.886Z')
       ),
     ],
-    updated_at: DateTime.iso8601('2025-11-21T23:29:03.496Z')
+    updated_at: DateTime.iso8601('2025-11-22T21:22:24.662Z')
   ),
   connection_id: '<id>',
   id: '<id>'

@@ -48,10 +48,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
   )
 )
 res = s.task.create_genai_task(genai_task: Models::Shared::GenaiTask.new(
-  completed_at: DateTime.iso8601('2025-10-24T04:19:06.129Z'),
+  completed_at: DateTime.iso8601('2025-10-25T04:29:54.505Z'),
   created_at: DateTime.iso8601('2020-10-25T20:19:33.247Z'),
   files_changed: 19.0,
-  id: '5bd5ef8a-9fee-46db-8217-6b83819a2903',
+  id: '5f6faee2-99ea-40c9-ae22-334e74859e7e',
   instructions: 'Benigne canonicus officiis solvo adsidue deleo angustus.',
   lines_added: 244.0,
   lines_deleted: 118.0,
@@ -66,12 +66,12 @@ res = s.task.create_genai_task(genai_task: Models::Shared::GenaiTask.new(
   pullrequest_url: 'https://github.com/berenice.satterfield/joshingly-ignorance/pull/383',
   repo_url: 'https://github.com/berenice.satterfield/joshingly-ignorance',
   source_branch_identifier: 'main',
-  started_at: DateTime.iso8601('2024-06-07T00:14:42.740Z'),
+  started_at: DateTime.iso8601('2024-06-07T17:44:34.568Z'),
   status: Models::Shared::GenaiTaskStatus::BLOCKED,
   summary: 'Cur aeternus cogito vesper.',
   target_branch_identifier: 'agent/joshingly-ignorance',
   tokens_used: 2165.0,
-  updated_at: DateTime.iso8601('2023-03-09T03:39:22.369Z'),
+  updated_at: DateTime.iso8601('2023-03-09T15:06:42.858Z'),
   web_url: 'https://inexperienced-adrenalin.biz/'
 ), connection_id: '<id>')
 
@@ -119,10 +119,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.task.create_task_comment(task_comment: Models::Shared::TaskComment.new(
   created_at: DateTime.iso8601('2019-10-12T20:33:37.879Z'),
   has_children: true,
-  id: 'd0a8c909-e6c6-42a8-8235-759fd3ec0496',
+  id: 'c841c771-2c2a-45bf-9134-5d504ace546d',
   metadata: [],
   text: 'Colo ulciscor sublime tabernus.',
-  updated_at: DateTime.iso8601('2021-10-11T03:36:11.343Z')
+  updated_at: DateTime.iso8601('2021-10-11T11:51:23.446Z')
 ), connection_id: '<id>')
 
 unless res.task_comment.nil?
@@ -171,14 +171,14 @@ res = s.task.create_task_project(task_project: Models::Shared::TaskProject.new(
   description: 'Valetudo aggredior accommodo curiositas vox.',
   has_children: false,
   has_tasks: false,
-  id: '1725d39f-3140-4ef4-ac6d-f42086acae9c',
+  id: '41057dea-f166-4e9e-9a3d-6c0bfbd91014',
   metadata: [
     Models::Shared::TaskMetadata.new(
       extra_data: {
 
       },
       format: Models::Shared::TaskMetadataFormat::TEXT,
-      id: '4529dab7-de53-4b80-96a7-b7a727572883',
+      id: 'e8f1c419-32c2-43d5-bd52-02d8b6dbe073',
       namespace: 'custom',
       slug: 'decens',
       value: 'uterque'
@@ -188,14 +188,14 @@ res = s.task.create_task_project(task_project: Models::Shared::TaskProject.new(
 
       },
       format: Models::Shared::TaskMetadataFormat::TEXT,
-      id: 'fcb1c2a6-f56f-41fa-9ec6-c6b79031c272',
+      id: 'fbd6c5bc-1ada-435e-be12-d8af923940ba',
       namespace: 'custom',
       slug: 'benevolentia',
       value: 'pariatur'
     ),
   ],
   name: 'Garden',
-  updated_at: DateTime.iso8601('2023-10-14T02:50:04.958Z')
+  updated_at: DateTime.iso8601('2023-10-14T05:29:18.810Z')
 ), connection_id: '<id>')
 
 unless res.task_project.nil?
@@ -242,15 +242,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.task.create_task_task(task_task: Models::Shared::TaskTask.new(
   attachment_ids: [],
   created_at: DateTime.iso8601('2019-01-31T08:34:55.626Z'),
-  due_at: DateTime.iso8601('2025-10-05T06:48:30.932Z'),
+  due_at: DateTime.iso8601('2025-10-06T07:39:00.010Z'),
   has_children: true,
-  id: 'b48936f5-8599-437f-b85f-b2aebaa41be3',
+  id: 'e13e08bd-6ad9-45ad-baf3-1897ec2a99d6',
   metadata: [],
   name: 'I\'ll compress the optical IB interface, that should capacitor the JBOD system!',
   notes: 'Argentum ventosus rem talis neque thymbra. Absconditus peccatus crustulum tollo cometes volva vacuus eos cedo. Somnus utpote coadunatio denuncio adopto autus sono atrocitas. Concido rerum cura aveho torqueo tempore tubineus vomer tempore suscipit. Clibanus valetudo vulnero pauper caput absorbeo correptius vir deduco.',
   priority: 'MEDIUM',
   progress: 33.0,
-  start_at: DateTime.iso8601('2025-09-06T20:57:01.970Z'),
+  start_at: DateTime.iso8601('2025-09-07T21:47:31.048Z'),
   status: Models::Shared::TaskTaskStatus::OPENED,
   story_points: 0.0,
   tags: [
@@ -260,7 +260,7 @@ res = s.task.create_task_task(task_task: Models::Shared::TaskTask.new(
   time_spent: 5359.0,
   time_spent_unit: 'SECONDS',
   type: 'magni',
-  updated_at: DateTime.iso8601('2022-04-18T13:01:32.286Z'),
+  updated_at: DateTime.iso8601('2022-04-19T01:06:56.948Z'),
   url: 'https://elementary-utilization.net/'
 ), connection_id: '<id>')
 
@@ -743,10 +743,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchGenaiTaskRequest.new(
   genai_task: Models::Shared::GenaiTask.new(
-    completed_at: DateTime.iso8601('2025-10-24T04:19:06.142Z'),
+    completed_at: DateTime.iso8601('2025-10-25T04:29:54.514Z'),
     created_at: DateTime.iso8601('2020-10-25T20:19:33.247Z'),
     files_changed: 19.0,
-    id: '1efaa4ca-6e43-4528-90a8-0d643967f372',
+    id: '97bc1f2d-52c2-48f2-8a69-2dad18b271d0',
     instructions: 'Benigne canonicus officiis solvo adsidue deleo angustus.',
     lines_added: 244.0,
     lines_deleted: 118.0,
@@ -761,12 +761,12 @@ req = Models::Operations::PatchGenaiTaskRequest.new(
     pullrequest_url: 'https://github.com/berenice.satterfield/joshingly-ignorance/pull/383',
     repo_url: 'https://github.com/berenice.satterfield/joshingly-ignorance',
     source_branch_identifier: 'main',
-    started_at: DateTime.iso8601('2024-06-07T00:14:42.749Z'),
+    started_at: DateTime.iso8601('2024-06-07T17:44:34.574Z'),
     status: Models::Shared::GenaiTaskStatus::BLOCKED,
     summary: 'Cur aeternus cogito vesper.',
     target_branch_identifier: 'agent/joshingly-ignorance',
     tokens_used: 2165.0,
-    updated_at: DateTime.iso8601('2023-03-09T03:39:22.376Z'),
+    updated_at: DateTime.iso8601('2023-03-09T15:06:42.862Z'),
     web_url: 'https://inexperienced-adrenalin.biz/'
   ),
   connection_id: '<id>',
@@ -817,10 +817,10 @@ req = Models::Operations::PatchTaskCommentRequest.new(
   task_comment: Models::Shared::TaskComment.new(
     created_at: DateTime.iso8601('2019-10-12T20:33:37.879Z'),
     has_children: true,
-    id: 'f4ee7e43-95d8-4708-bc5e-374f3092e0a6',
+    id: '9ac6040a-9f4f-4ac2-a5c6-a914634ebf39',
     metadata: [],
     text: 'Colo ulciscor sublime tabernus.',
-    updated_at: DateTime.iso8601('2021-10-11T03:36:11.346Z')
+    updated_at: DateTime.iso8601('2021-10-11T11:51:23.449Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -872,14 +872,14 @@ req = Models::Operations::PatchTaskProjectRequest.new(
     description: 'Valetudo aggredior accommodo curiositas vox.',
     has_children: false,
     has_tasks: false,
-    id: '45df10b7-ead1-4cab-8ea4-39b49e2ecd4f',
+    id: 'e78dc0e7-3a25-40cf-be1a-37f0c33353a0',
     metadata: [
       Models::Shared::TaskMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: 'f62a800c-9f32-46c0-8a9c-267c2d0150f5',
+        id: '75d3b961-73e8-4b97-9d11-5f56d3733d61',
         namespace: 'custom',
         slug: 'decens',
         value: 'uterque'
@@ -889,14 +889,14 @@ req = Models::Operations::PatchTaskProjectRequest.new(
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: 'b1b2b6e0-50dd-4b76-9e41-158f3e54f9e1',
+        id: 'ef5a05db-9df6-498f-bf63-068bb8e9c050',
         namespace: 'custom',
         slug: 'benevolentia',
         value: 'pariatur'
       ),
     ],
     name: 'Garden',
-    updated_at: DateTime.iso8601('2023-10-14T02:50:04.959Z')
+    updated_at: DateTime.iso8601('2023-10-14T05:29:18.810Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -946,15 +946,15 @@ req = Models::Operations::PatchTaskTaskRequest.new(
   task_task: Models::Shared::TaskTask.new(
     attachment_ids: [],
     created_at: DateTime.iso8601('2019-01-31T08:34:55.626Z'),
-    due_at: DateTime.iso8601('2025-10-05T06:48:30.949Z'),
+    due_at: DateTime.iso8601('2025-10-06T07:39:00.028Z'),
     has_children: true,
-    id: '145b4c96-1cb7-4866-a289-8303f4185aa2',
+    id: '9d668e27-5515-4932-9cc8-a1c23358af4f',
     metadata: [],
     name: 'I\'ll compress the optical IB interface, that should capacitor the JBOD system!',
     notes: 'Argentum ventosus rem talis neque thymbra. Absconditus peccatus crustulum tollo cometes volva vacuus eos cedo. Somnus utpote coadunatio denuncio adopto autus sono atrocitas. Concido rerum cura aveho torqueo tempore tubineus vomer tempore suscipit. Clibanus valetudo vulnero pauper caput absorbeo correptius vir deduco.',
     priority: 'MEDIUM',
     progress: 33.0,
-    start_at: DateTime.iso8601('2025-09-06T20:57:01.987Z'),
+    start_at: DateTime.iso8601('2025-09-07T21:47:31.066Z'),
     status: Models::Shared::TaskTaskStatus::OPENED,
     story_points: 0.0,
     tags: [
@@ -964,7 +964,7 @@ req = Models::Operations::PatchTaskTaskRequest.new(
     time_spent: 5359.0,
     time_spent_unit: 'SECONDS',
     type: 'magni',
-    updated_at: DateTime.iso8601('2022-04-18T13:01:32.293Z'),
+    updated_at: DateTime.iso8601('2022-04-19T01:06:56.956Z'),
     url: 'https://elementary-utilization.net/'
   ),
   connection_id: '<id>',
@@ -1177,10 +1177,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateGenaiTaskRequest.new(
   genai_task: Models::Shared::GenaiTask.new(
-    completed_at: DateTime.iso8601('2025-10-24T04:19:06.142Z'),
+    completed_at: DateTime.iso8601('2025-10-25T04:29:54.514Z'),
     created_at: DateTime.iso8601('2020-10-25T20:19:33.247Z'),
     files_changed: 19.0,
-    id: '1efaa4ca-6e43-4528-90a8-0d643967f372',
+    id: '97bc1f2d-52c2-48f2-8a69-2dad18b271d0',
     instructions: 'Benigne canonicus officiis solvo adsidue deleo angustus.',
     lines_added: 244.0,
     lines_deleted: 118.0,
@@ -1195,12 +1195,12 @@ req = Models::Operations::UpdateGenaiTaskRequest.new(
     pullrequest_url: 'https://github.com/berenice.satterfield/joshingly-ignorance/pull/383',
     repo_url: 'https://github.com/berenice.satterfield/joshingly-ignorance',
     source_branch_identifier: 'main',
-    started_at: DateTime.iso8601('2024-06-07T00:14:42.749Z'),
+    started_at: DateTime.iso8601('2024-06-07T17:44:34.574Z'),
     status: Models::Shared::GenaiTaskStatus::BLOCKED,
     summary: 'Cur aeternus cogito vesper.',
     target_branch_identifier: 'agent/joshingly-ignorance',
     tokens_used: 2165.0,
-    updated_at: DateTime.iso8601('2023-03-09T03:39:22.376Z'),
+    updated_at: DateTime.iso8601('2023-03-09T15:06:42.862Z'),
     web_url: 'https://inexperienced-adrenalin.biz/'
   ),
   connection_id: '<id>',
@@ -1251,10 +1251,10 @@ req = Models::Operations::UpdateTaskCommentRequest.new(
   task_comment: Models::Shared::TaskComment.new(
     created_at: DateTime.iso8601('2019-10-12T20:33:37.879Z'),
     has_children: true,
-    id: 'f4ee7e43-95d8-4708-bc5e-374f3092e0a6',
+    id: '9ac6040a-9f4f-4ac2-a5c6-a914634ebf39',
     metadata: [],
     text: 'Colo ulciscor sublime tabernus.',
-    updated_at: DateTime.iso8601('2021-10-11T03:36:11.346Z')
+    updated_at: DateTime.iso8601('2021-10-11T11:51:23.449Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1306,14 +1306,14 @@ req = Models::Operations::UpdateTaskProjectRequest.new(
     description: 'Valetudo aggredior accommodo curiositas vox.',
     has_children: false,
     has_tasks: false,
-    id: '45df10b7-ead1-4cab-8ea4-39b49e2ecd4f',
+    id: 'e78dc0e7-3a25-40cf-be1a-37f0c33353a0',
     metadata: [
       Models::Shared::TaskMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: 'f62a800c-9f32-46c0-8a9c-267c2d0150f5',
+        id: '75d3b961-73e8-4b97-9d11-5f56d3733d61',
         namespace: 'custom',
         slug: 'decens',
         value: 'uterque'
@@ -1323,14 +1323,14 @@ req = Models::Operations::UpdateTaskProjectRequest.new(
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: 'b1b2b6e0-50dd-4b76-9e41-158f3e54f9e1',
+        id: 'ef5a05db-9df6-498f-bf63-068bb8e9c050',
         namespace: 'custom',
         slug: 'benevolentia',
         value: 'pariatur'
       ),
     ],
     name: 'Garden',
-    updated_at: DateTime.iso8601('2023-10-14T02:50:04.959Z')
+    updated_at: DateTime.iso8601('2023-10-14T05:29:18.810Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1380,15 +1380,15 @@ req = Models::Operations::UpdateTaskTaskRequest.new(
   task_task: Models::Shared::TaskTask.new(
     attachment_ids: [],
     created_at: DateTime.iso8601('2019-01-31T08:34:55.626Z'),
-    due_at: DateTime.iso8601('2025-10-05T06:48:30.949Z'),
+    due_at: DateTime.iso8601('2025-10-06T07:39:00.028Z'),
     has_children: true,
-    id: '145b4c96-1cb7-4866-a289-8303f4185aa2',
+    id: '9d668e27-5515-4932-9cc8-a1c23358af4f',
     metadata: [],
     name: 'I\'ll compress the optical IB interface, that should capacitor the JBOD system!',
     notes: 'Argentum ventosus rem talis neque thymbra. Absconditus peccatus crustulum tollo cometes volva vacuus eos cedo. Somnus utpote coadunatio denuncio adopto autus sono atrocitas. Concido rerum cura aveho torqueo tempore tubineus vomer tempore suscipit. Clibanus valetudo vulnero pauper caput absorbeo correptius vir deduco.',
     priority: 'MEDIUM',
     progress: 33.0,
-    start_at: DateTime.iso8601('2025-09-06T20:57:01.987Z'),
+    start_at: DateTime.iso8601('2025-09-07T21:47:31.066Z'),
     status: Models::Shared::TaskTaskStatus::OPENED,
     story_points: 0.0,
     tags: [
@@ -1398,7 +1398,7 @@ req = Models::Operations::UpdateTaskTaskRequest.new(
     time_spent: 5359.0,
     time_spent_unit: 'SECONDS',
     type: 'magni',
-    updated_at: DateTime.iso8601('2022-04-18T13:01:32.293Z'),
+    updated_at: DateTime.iso8601('2022-04-19T01:06:56.956Z'),
     url: 'https://elementary-utilization.net/'
   ),
   connection_id: '<id>',

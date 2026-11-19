@@ -28,9 +28,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.audit.create_qms_audit(qms_audit: Models::Shared::QmsAudit.new(
   created_at: DateTime.iso8601('2021-02-20T23:02:37.667Z'),
-  end_at: DateTime.iso8601('2026-03-30T20:45:39.626Z'),
+  end_at: DateTime.iso8601('2026-03-31T22:51:28.093Z'),
   file_ids: [],
-  id: '2776773e-e71c-4224-a62d-07bd1784bf62',
+  id: 'a1c07a62-89f5-4ffb-af42-1eb7af6039a2',
   issue_ids: [],
   lifecycle_state: 'In Review',
   metadata: [],
@@ -39,10 +39,10 @@ res = s.audit.create_qms_audit(qms_audit: Models::Shared::QmsAudit.new(
   scheduled_at: DateTime.iso8601('2021-02-20T23:02:37.667Z'),
   scope: 'Calibration',
   standard: 'ISO 9001:2015',
-  start_at: DateTime.iso8601('2023-01-26T08:10:52.600Z'),
+  start_at: DateTime.iso8601('2023-01-26T18:02:36.284Z'),
   status: Models::Shared::QmsAuditStatus::IN_REVIEW,
   type: Models::Shared::QmsAuditType::CERTIFICATION,
-  updated_at: DateTime.iso8601('2024-02-10T13:52:49.880Z'),
+  updated_at: DateTime.iso8601('2024-02-11T05:03:59.095Z'),
   url: 'https://mushy-obesity.name/'
 ), connection_id: '<id>')
 
@@ -178,9 +178,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchQmsAuditRequest.new(
   qms_audit: Models::Shared::QmsAudit.new(
     created_at: DateTime.iso8601('2021-02-20T23:02:37.667Z'),
-    end_at: DateTime.iso8601('2026-03-30T20:45:39.647Z'),
+    end_at: DateTime.iso8601('2026-03-31T22:51:28.111Z'),
     file_ids: [],
-    id: 'ff4eb517-2f35-4e01-b706-48f213dae335',
+    id: '69fa2923-614a-4808-8242-560730667be7',
     issue_ids: [],
     lifecycle_state: 'In Review',
     metadata: [],
@@ -189,10 +189,10 @@ req = Models::Operations::PatchQmsAuditRequest.new(
     scheduled_at: DateTime.iso8601('2021-02-20T23:02:37.667Z'),
     scope: 'Calibration',
     standard: 'ISO 9001:2015',
-    start_at: DateTime.iso8601('2023-01-26T08:10:52.608Z'),
+    start_at: DateTime.iso8601('2023-01-26T18:02:36.291Z'),
     status: Models::Shared::QmsAuditStatus::IN_REVIEW,
     type: Models::Shared::QmsAuditType::CERTIFICATION,
-    updated_at: DateTime.iso8601('2024-02-10T13:52:49.892Z'),
+    updated_at: DateTime.iso8601('2024-02-11T05:03:59.105Z'),
     url: 'https://mushy-obesity.name/'
   ),
   connection_id: '<id>',
@@ -242,9 +242,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateQmsAuditRequest.new(
   qms_audit: Models::Shared::QmsAudit.new(
     created_at: DateTime.iso8601('2021-02-20T23:02:37.667Z'),
-    end_at: DateTime.iso8601('2026-03-30T20:45:39.647Z'),
+    end_at: DateTime.iso8601('2026-03-31T22:51:28.111Z'),
     file_ids: [],
-    id: 'ff4eb517-2f35-4e01-b706-48f213dae335',
+    id: '69fa2923-614a-4808-8242-560730667be7',
     issue_ids: [],
     lifecycle_state: 'In Review',
     metadata: [],
@@ -253,10 +253,10 @@ req = Models::Operations::UpdateQmsAuditRequest.new(
     scheduled_at: DateTime.iso8601('2021-02-20T23:02:37.667Z'),
     scope: 'Calibration',
     standard: 'ISO 9001:2015',
-    start_at: DateTime.iso8601('2023-01-26T08:10:52.608Z'),
+    start_at: DateTime.iso8601('2023-01-26T18:02:36.291Z'),
     status: Models::Shared::QmsAuditStatus::IN_REVIEW,
     type: Models::Shared::QmsAuditType::CERTIFICATION,
-    updated_at: DateTime.iso8601('2024-02-10T13:52:49.892Z'),
+    updated_at: DateTime.iso8601('2024-02-11T05:03:59.105Z'),
     url: 'https://mushy-obesity.name/'
   ),
   connection_id: '<id>',

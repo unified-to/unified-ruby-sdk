@@ -29,19 +29,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.deal.create_crm_deal(crm_deal: Models::Shared::CrmDeal.new(
   amount: 98_162.0,
-  closed_at: DateTime.iso8601('2024-03-16T04:29:52.062Z'),
-  closing_at: DateTime.iso8601('2025-09-18T17:34:34.890Z'),
+  closed_at: DateTime.iso8601('2024-03-16T10:35:08.853Z'),
+  closing_at: DateTime.iso8601('2025-09-19T12:47:54.800Z'),
   created_at: DateTime.iso8601('2023-07-04T12:48:48.470Z'),
   currency: 'USD',
   description: 'Comis tepidus sit cavus crustulum trans tubineus adfectus.',
-  id: '6373e04f-32ad-46fd-8294-b1408b8e57f9',
+  id: 'ce1addd0-aa34-4091-8ec9-300e21c2fc62',
   metadata: [
     Models::Shared::CrmMetadata.new(
       extra_data: {
         'display_name' => 'Custom Property',
       },
       format: Models::Shared::CrmMetadataFormat::TEXT,
-      id: 'be43a845-58f6-4a51-a79b-e1e2ebe9c96c',
+      id: '7ce65a45-4398-4d54-8996-d83fba82cdf4',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'conatus'
@@ -54,7 +54,7 @@ res = s.deal.create_crm_deal(crm_deal: Models::Shared::CrmDeal.new(
     'causa',
     'suus',
   ],
-  updated_at: DateTime.iso8601('2024-10-22T14:55:39.299Z'),
+  updated_at: DateTime.iso8601('2024-10-23T02:15:53.615Z'),
   won_reason: 'Usque libero soleo.'
 ), connection_id: '<id>')
 
@@ -190,19 +190,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchCrmDealRequest.new(
   crm_deal: Models::Shared::CrmDeal.new(
     amount: 98_162.0,
-    closed_at: DateTime.iso8601('2024-03-16T04:29:52.066Z'),
-    closing_at: DateTime.iso8601('2025-09-18T17:34:34.904Z'),
+    closed_at: DateTime.iso8601('2024-03-16T10:35:08.856Z'),
+    closing_at: DateTime.iso8601('2025-09-19T12:47:54.809Z'),
     created_at: DateTime.iso8601('2023-07-04T12:48:48.470Z'),
     currency: 'USD',
     description: 'Comis tepidus sit cavus crustulum trans tubineus adfectus.',
-    id: '149ea763-24c5-4754-bfa5-43b5470acaf7',
+    id: '2946f515-944b-4f05-b351-a56397517643',
     metadata: [
       Models::Shared::CrmMetadata.new(
         extra_data: {
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '1ead385a-7818-4b59-a2e4-0d7b54e32123',
+        id: '057cc126-673f-4497-917e-89dd42dd3d1c',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'conatus'
@@ -215,7 +215,7 @@ req = Models::Operations::PatchCrmDealRequest.new(
       'causa',
       'suus',
     ],
-    updated_at: DateTime.iso8601('2024-10-22T14:55:39.307Z'),
+    updated_at: DateTime.iso8601('2024-10-23T02:15:53.620Z'),
     won_reason: 'Usque libero soleo.'
   ),
   connection_id: '<id>',
@@ -306,19 +306,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateCrmDealRequest.new(
   crm_deal: Models::Shared::CrmDeal.new(
     amount: 98_162.0,
-    closed_at: DateTime.iso8601('2024-03-16T04:29:52.066Z'),
-    closing_at: DateTime.iso8601('2025-09-18T17:34:34.904Z'),
+    closed_at: DateTime.iso8601('2024-03-16T10:35:08.856Z'),
+    closing_at: DateTime.iso8601('2025-09-19T12:47:54.809Z'),
     created_at: DateTime.iso8601('2023-07-04T12:48:48.470Z'),
     currency: 'USD',
     description: 'Comis tepidus sit cavus crustulum trans tubineus adfectus.',
-    id: '149ea763-24c5-4754-bfa5-43b5470acaf7',
+    id: '2946f515-944b-4f05-b351-a56397517643',
     metadata: [
       Models::Shared::CrmMetadata.new(
         extra_data: {
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '1ead385a-7818-4b59-a2e4-0d7b54e32123',
+        id: '057cc126-673f-4497-917e-89dd42dd3d1c',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'conatus'
@@ -331,7 +331,7 @@ req = Models::Operations::UpdateCrmDealRequest.new(
       'causa',
       'suus',
     ],
-    updated_at: DateTime.iso8601('2024-10-22T14:55:39.307Z'),
+    updated_at: DateTime.iso8601('2024-10-23T02:15:53.620Z'),
     won_reason: 'Usque libero soleo.'
   ),
   connection_id: '<id>',

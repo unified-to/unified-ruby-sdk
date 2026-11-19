@@ -36,7 +36,7 @@ res = s.device.create_hris_device(hris_device: Models::Shared::HrisDevice.new(
   has_hd_encrypted: true,
   has_password_manager: true,
   has_screenlock: false,
-  id: '3a8f1112-5634-48a3-baf4-6c2b515667c4',
+  id: '97fdbf87-ae05-4361-b120-6f9fa4c2cfb5',
   is_missing: false,
   manufacturer: 'Hackett Inc',
   metadata: [],
@@ -44,7 +44,7 @@ res = s.device.create_hris_device(hris_device: Models::Shared::HrisDevice.new(
   name: 'august-laptop',
   os: 'transmitter',
   os_version: '8.4.8',
-  updated_at: DateTime.iso8601('2023-06-23T16:32:49.877Z'),
+  updated_at: DateTime.iso8601('2023-06-24T08:47:20.463Z'),
   version: '4.15.7'
 ), connection_id: '<id>')
 
@@ -187,7 +187,7 @@ req = Models::Operations::PatchHrisDeviceRequest.new(
     has_hd_encrypted: true,
     has_password_manager: true,
     has_screenlock: false,
-    id: '92118f0a-2b30-4623-be85-185ca4edddc9',
+    id: '6e15d45f-8f14-4727-9081-37186232d654',
     is_missing: false,
     manufacturer: 'Hackett Inc',
     metadata: [],
@@ -195,7 +195,7 @@ req = Models::Operations::PatchHrisDeviceRequest.new(
     name: 'august-laptop',
     os: 'transmitter',
     os_version: '8.4.8',
-    updated_at: DateTime.iso8601('2023-06-23T16:32:49.887Z'),
+    updated_at: DateTime.iso8601('2023-06-24T08:47:20.472Z'),
     version: '4.15.7'
   ),
   connection_id: '<id>',
@@ -293,7 +293,7 @@ req = Models::Operations::UpdateHrisDeviceRequest.new(
     has_hd_encrypted: true,
     has_password_manager: true,
     has_screenlock: false,
-    id: '92118f0a-2b30-4623-be85-185ca4edddc9',
+    id: '6e15d45f-8f14-4727-9081-37186232d654',
     is_missing: false,
     manufacturer: 'Hackett Inc',
     metadata: [],
@@ -301,7 +301,7 @@ req = Models::Operations::UpdateHrisDeviceRequest.new(
     name: 'august-laptop',
     os: 'transmitter',
     os_version: '8.4.8',
-    updated_at: DateTime.iso8601('2023-06-23T16:32:49.887Z'),
+    updated_at: DateTime.iso8601('2023-06-24T08:47:20.472Z'),
     version: '4.15.7'
   ),
   connection_id: '<id>',

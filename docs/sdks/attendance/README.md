@@ -36,32 +36,32 @@ res = s.attendance.create_hris_attendance(hris_attendance: Models::Shared::HrisA
     region: 'Tennessee',
     region_code: 'CA'
   ),
-  approved_at: DateTime.iso8601('2021-09-20T04:05:23.727Z'),
+  approved_at: DateTime.iso8601('2021-09-20T04:42:17.992Z'),
   breaks: [
     Models::Shared::HrisAttendanceBreak.new(
       duration_minutes: 51.0,
-      end_at: DateTime.iso8601('2024-02-27T23:55:58.886Z'),
-      id: '493dc5af-ecde-4d60-9f41-bc9f23befa21',
+      end_at: DateTime.iso8601('2024-02-28T14:07:40.174Z'),
+      id: '60a5b52f-3b79-456a-a706-206944f99520',
       is_paid: false,
       name: 'Lunch',
-      start_at: DateTime.iso8601('2023-11-10T19:53:16.032Z')
+      start_at: DateTime.iso8601('2023-11-11T08:25:06.341Z')
     ),
   ],
   created_at: DateTime.iso8601('2021-08-10T19:43:18.452Z'),
   currency: 'EUR',
   declared_tips_amount: 54.0,
   employee_user_id: '<id>',
-  end_at: DateTime.iso8601('2024-05-07T18:38:57.322Z'),
+  end_at: DateTime.iso8601('2024-05-08T09:54:28.007Z'),
   hourly_rate: 16.0,
   hours: 10.0,
-  id: '88bc1642-6e4b-4835-9d48-1e46fdc94b19',
+  id: '2226bc6c-3725-41c5-8e57-14ce98fcc6c4',
   job_name: 'Human Accountability Administrator',
   metadata: [],
   non_cash_tips_amount: 167.0,
-  start_at: DateTime.iso8601('2021-11-12T09:21:23.734Z'),
+  start_at: DateTime.iso8601('2021-11-12T10:46:58.590Z'),
   status: Models::Shared::HrisAttendanceStatus::OPEN,
   timezone: 'America/Atikokan',
-  updated_at: DateTime.iso8601('2022-01-22T06:03:14.265Z')
+  updated_at: DateTime.iso8601('2022-01-22T08:33:37.925Z')
 ), connection_id: '<id>')
 
 unless res.hris_attendance.nil?
@@ -203,32 +203,32 @@ req = Models::Operations::PatchHrisAttendanceRequest.new(
       region: 'Tennessee',
       region_code: 'CA'
     ),
-    approved_at: DateTime.iso8601('2021-09-20T04:05:23.728Z'),
+    approved_at: DateTime.iso8601('2021-09-20T04:42:17.993Z'),
     breaks: [
       Models::Shared::HrisAttendanceBreak.new(
         duration_minutes: 51.0,
-        end_at: DateTime.iso8601('2024-02-27T23:55:58.900Z'),
-        id: '44284a9b-5765-41a2-bdbe-e23077695b6d',
+        end_at: DateTime.iso8601('2024-02-28T14:07:40.187Z'),
+        id: '7f68814d-efb8-488a-b840-ebb31452f9b5',
         is_paid: false,
         name: 'Lunch',
-        start_at: DateTime.iso8601('2023-11-10T19:53:16.045Z')
+        start_at: DateTime.iso8601('2023-11-11T08:25:06.352Z')
       ),
     ],
     created_at: DateTime.iso8601('2021-08-10T19:43:18.452Z'),
     currency: 'EUR',
     declared_tips_amount: 54.0,
     employee_user_id: '<id>',
-    end_at: DateTime.iso8601('2024-05-07T18:38:57.337Z'),
+    end_at: DateTime.iso8601('2024-05-08T09:54:28.021Z'),
     hourly_rate: 16.0,
     hours: 10.0,
-    id: '25614613-308c-4145-9389-6d117503ed28',
+    id: '7742124f-a2e1-48a6-bece-aedcc6c62df6',
     job_name: 'Human Accountability Administrator',
     metadata: [],
     non_cash_tips_amount: 167.0,
-    start_at: DateTime.iso8601('2021-11-12T09:21:23.736Z'),
+    start_at: DateTime.iso8601('2021-11-12T10:46:58.591Z'),
     status: Models::Shared::HrisAttendanceStatus::OPEN,
     timezone: 'America/Atikokan',
-    updated_at: DateTime.iso8601('2022-01-22T06:03:14.268Z')
+    updated_at: DateTime.iso8601('2022-01-22T08:33:37.928Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -325,32 +325,32 @@ req = Models::Operations::UpdateHrisAttendanceRequest.new(
       region: 'Tennessee',
       region_code: 'CA'
     ),
-    approved_at: DateTime.iso8601('2021-09-20T04:05:23.728Z'),
+    approved_at: DateTime.iso8601('2021-09-20T04:42:17.993Z'),
     breaks: [
       Models::Shared::HrisAttendanceBreak.new(
         duration_minutes: 51.0,
-        end_at: DateTime.iso8601('2024-02-27T23:55:58.900Z'),
-        id: '44284a9b-5765-41a2-bdbe-e23077695b6d',
+        end_at: DateTime.iso8601('2024-02-28T14:07:40.187Z'),
+        id: '7f68814d-efb8-488a-b840-ebb31452f9b5',
         is_paid: false,
         name: 'Lunch',
-        start_at: DateTime.iso8601('2023-11-10T19:53:16.045Z')
+        start_at: DateTime.iso8601('2023-11-11T08:25:06.352Z')
       ),
     ],
     created_at: DateTime.iso8601('2021-08-10T19:43:18.452Z'),
     currency: 'EUR',
     declared_tips_amount: 54.0,
     employee_user_id: '<id>',
-    end_at: DateTime.iso8601('2024-05-07T18:38:57.337Z'),
+    end_at: DateTime.iso8601('2024-05-08T09:54:28.021Z'),
     hourly_rate: 16.0,
     hours: 10.0,
-    id: '25614613-308c-4145-9389-6d117503ed28',
+    id: '7742124f-a2e1-48a6-bece-aedcc6c62df6',
     job_name: 'Human Accountability Administrator',
     metadata: [],
     non_cash_tips_amount: 167.0,
-    start_at: DateTime.iso8601('2021-11-12T09:21:23.736Z'),
+    start_at: DateTime.iso8601('2021-11-12T10:46:58.591Z'),
     status: Models::Shared::HrisAttendanceStatus::OPEN,
     timezone: 'America/Atikokan',
-    updated_at: DateTime.iso8601('2022-01-22T06:03:14.268Z')
+    updated_at: DateTime.iso8601('2022-01-22T08:33:37.928Z')
   ),
   connection_id: '<id>',
   id: '<id>'
