@@ -62,4 +62,6 @@ class UnifiedRubySDK::Models::Shared::HrisPayslip
   def updated_at=(str_); end
   def user_id(); end
   def user_id=(str_); end
+  def ytd_hours(); end
+  def ytd_hours=(str_); end
 end

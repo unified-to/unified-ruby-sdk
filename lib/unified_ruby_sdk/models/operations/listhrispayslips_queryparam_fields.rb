@@ -35,6 +35,7 @@ module UnifiedRubySDK
           EMPLOYER_CONTRIBUTION_AMOUNT = new('employer_contribution_amount')
           GROSS_YTD_AMOUNT = new('gross_ytd_amount')
           NET_YTD_AMOUNT = new('net_ytd_amount')
+          YTD_HOURS = new('ytd_hours')
           METADATA = new('metadata')
           RAW = new('raw')
         end

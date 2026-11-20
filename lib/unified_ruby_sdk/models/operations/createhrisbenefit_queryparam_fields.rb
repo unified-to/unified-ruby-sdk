@@ -25,6 +25,9 @@ module UnifiedRubySDK
           EMPLOYER_CONTRIBUTION_MAX_AMOUNT = new('employer_contribution_max_amount')
           COVERAGE_LEVEL = new('coverage_level')
           CURRENCY = new('currency')
+          CODE = new('code')
+          RETIREMENT_PLAN_TYPE = new('retirement_plan_type')
+          EMPLOYER_CONTRIBUTION_CATEGORY = new('employer_contribution_category')
           METADATA = new('metadata')
           RAW = new('raw')
         end

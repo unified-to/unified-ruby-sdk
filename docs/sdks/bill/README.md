@@ -31,13 +31,13 @@ res = s.bill.create_accounting_bill(accounting_bill: Models::Shared::AccountingB
   attachments: [
     Models::Shared::AccountingAttachment.new(
       download_url: 'https://puny-foodstuffs.name',
-      id: 'fd1639f8-eed6-4f69-89ca-46beceaaa732',
+      id: 'bed4aef9-f717-4319-ae59-badd8a3e38b1',
       mime_type: 'application/pdf',
       name: 'BILL-2466.pdf'
     ),
     Models::Shared::AccountingAttachment.new(
       download_url: 'https://grimy-characterization.net',
-      id: '853f8c9f-76e6-482a-b2ff-732458098376',
+      id: '947039ef-2da2-49b5-a570-766c0cfa8bdf',
       mime_type: 'application/pdf',
       name: 'BILL-2466-1.pdf'
     ),
@@ -50,7 +50,7 @@ res = s.bill.create_accounting_bill(accounting_bill: Models::Shared::AccountingB
   discount_amount: 0.0,
   due_at: DateTime.iso8601('2019-09-07T23:03:14.104Z'),
   extended_notes: [],
-  id: 'd23cfb06-17ac-4eb1-a975-9d099a55c6f3',
+  id: '7c7a803f-f777-4689-8911-0185f6ba03bf',
   lineitems: [],
   metadata: [],
   notes: 'Admiratio deporto tutamen cilicium infit amissio ante demulceo.',
@@ -66,7 +66,7 @@ res = s.bill.create_accounting_bill(accounting_bill: Models::Shared::AccountingB
   tax_amount: 0.0,
   term: Models::Shared::Term::NET_90,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2020-06-04T10:55:24.247Z'),
+  updated_at: DateTime.iso8601('2020-06-04T13:31:31.012Z'),
   url: 'https://cluttered-importance.org/bills/BILL-2466'
 ), connection_id: '<id>')
 
@@ -204,13 +204,13 @@ req = Models::Operations::PatchAccountingBillRequest.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://puny-foodstuffs.name',
-        id: 'cdb633e5-ba2b-4873-aee4-53789d32981c',
+        id: '8d01dc31-85c0-4e07-ab67-e0c8d931d118',
         mime_type: 'application/pdf',
         name: 'BILL-2466.pdf'
       ),
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://grimy-characterization.net',
-        id: '42d142ad-674e-43a3-bb73-4eb3d28f4fef',
+        id: 'da6f5ede-6066-4298-85cb-c66ed32ef3ec',
         mime_type: 'application/pdf',
         name: 'BILL-2466-1.pdf'
       ),
@@ -223,7 +223,7 @@ req = Models::Operations::PatchAccountingBillRequest.new(
     discount_amount: 0.0,
     due_at: DateTime.iso8601('2019-09-07T23:03:14.104Z'),
     extended_notes: [],
-    id: 'd2f42770-5c84-4ae0-a108-d1536c7185f3',
+    id: '514d63c4-cf33-434e-b12d-fedf287c1d13',
     lineitems: [],
     metadata: [],
     notes: 'Admiratio deporto tutamen cilicium infit amissio ante demulceo.',
@@ -239,7 +239,7 @@ req = Models::Operations::PatchAccountingBillRequest.new(
     tax_amount: 0.0,
     term: Models::Shared::Term::NET_90,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2020-06-04T10:55:24.251Z'),
+    updated_at: DateTime.iso8601('2020-06-04T13:31:31.018Z'),
     url: 'https://cluttered-importance.org/bills/BILL-2466'
   ),
   connection_id: '<id>',
@@ -332,13 +332,13 @@ req = Models::Operations::UpdateAccountingBillRequest.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://puny-foodstuffs.name',
-        id: 'cdb633e5-ba2b-4873-aee4-53789d32981c',
+        id: '8d01dc31-85c0-4e07-ab67-e0c8d931d118',
         mime_type: 'application/pdf',
         name: 'BILL-2466.pdf'
       ),
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://grimy-characterization.net',
-        id: '42d142ad-674e-43a3-bb73-4eb3d28f4fef',
+        id: 'da6f5ede-6066-4298-85cb-c66ed32ef3ec',
         mime_type: 'application/pdf',
         name: 'BILL-2466-1.pdf'
       ),
@@ -351,7 +351,7 @@ req = Models::Operations::UpdateAccountingBillRequest.new(
     discount_amount: 0.0,
     due_at: DateTime.iso8601('2019-09-07T23:03:14.104Z'),
     extended_notes: [],
-    id: 'd2f42770-5c84-4ae0-a108-d1536c7185f3',
+    id: '514d63c4-cf33-434e-b12d-fedf287c1d13',
     lineitems: [],
     metadata: [],
     notes: 'Admiratio deporto tutamen cilicium infit amissio ante demulceo.',
@@ -367,7 +367,7 @@ req = Models::Operations::UpdateAccountingBillRequest.new(
     tax_amount: 0.0,
     term: Models::Shared::Term::NET_90,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2020-06-04T10:55:24.251Z'),
+    updated_at: DateTime.iso8601('2020-06-04T13:31:31.018Z'),
     url: 'https://cluttered-importance.org/bills/BILL-2466'
   ),
   connection_id: '<id>',

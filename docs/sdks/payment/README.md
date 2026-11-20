@@ -48,13 +48,13 @@ res = s.payment.create_payment_link(payment_link: Models::Shared::PaymentLink.ne
   created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
   currency: 'CAD',
   description: 'Savor the tender essence in our Ball, designed for dim culinary adventures',
-  id: '17a643eb-677d-4e4b-81d3-13e0ac9f9bca',
+  id: '3c007901-8aa5-483b-a1a8-ea3a92c3b7dc',
   is_active: true,
   is_chargeable_now: true,
   lineitems: [
     Models::Shared::PaymentLineitem.new(
       created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-      id: '2969cb7d-6a12-4dcc-9250-a5aa3e065048',
+      id: 'a25f1ef5-4d65-4a43-adca-2642de4fcf4c',
       item_description: 'Discover the worst new Computer with an exciting mix of Steel ingredients',
       item_name: 'Soft Marble Cheese',
       tax_amount: 0.0,
@@ -66,7 +66,7 @@ res = s.payment.create_payment_link(payment_link: Models::Shared::PaymentLink.ne
     Models::Shared::PaymentLineitem.new(
       created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
       discount_amount: 424.32,
-      id: '7fded7e0-bc6a-4f62-8b9f-f24431c71564',
+      id: '35fa0d68-cc88-4cf2-b8ea-eed660f0c7a1',
       item_description: 'Innovative Shoes featuring utilized technology and Cotton construction',
       item_name: 'Sleek Aluminum Shoes',
       notes: 'Cervus decretum viridis doloremque.',
@@ -78,7 +78,7 @@ res = s.payment.create_payment_link(payment_link: Models::Shared::PaymentLink.ne
     ),
     Models::Shared::PaymentLineitem.new(
       created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-      id: 'c1649b9a-4e8f-4359-b4fa-31cd263abf65',
+      id: '7400e14c-1867-4b92-934f-7d9c2037bad2',
       item_description: 'Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance',
       item_name: 'Elegant Concrete Gloves',
       notes: 'Desipio usque vacuus currus cetera testimonium.',
@@ -91,8 +91,8 @@ res = s.payment.create_payment_link(payment_link: Models::Shared::PaymentLink.ne
   ],
   metadata: [],
   success_url: 'https://tinted-jet.info',
-  updated_at: DateTime.iso8601('2024-04-20T18:31:08.106Z'),
-  url: 'https://pay.example.com/17a643eb-677d-4e4b-81d3-13e0ac9f9bca'
+  updated_at: DateTime.iso8601('2024-04-21T00:29:25.227Z'),
+  url: 'https://pay.example.com/3c007901-8aa5-483b-a1a8-ea3a92c3b7dc'
 ), connection_id: '<id>')
 
 unless res.payment_link.nil?
@@ -144,7 +144,7 @@ res = s.payment.create_payment_payment(payment_payment: Models::Shared::PaymentP
   created_at: DateTime.iso8601('2022-03-10T00:19:42.086Z'),
   currency: 'EUR',
   fee_amount: 2055.82,
-  id: '1963ca22-303f-4605-b5dd-429b4a0952e0',
+  id: '2440fc43-71b7-466e-ada3-56ee5332da7f',
   metadata: [],
   net_amount: 68_824.18,
   notes: 'Bibo tactus vilicus.',
@@ -156,7 +156,7 @@ res = s.payment.create_payment_payment(payment_payment: Models::Shared::PaymentP
   tip_amount: 0.0,
   total_amount: 70_880.0,
   type: Models::Shared::PaymentPaymentType::INVOICE,
-  updated_at: DateTime.iso8601('2025-10-30T12:51:13.483Z')
+  updated_at: DateTime.iso8601('2025-10-31T07:04:51.183Z')
 ), connection_id: '<id>')
 
 unless res.payment_payment.nil?
@@ -207,7 +207,7 @@ res = s.payment.create_payment_subscription(payment_subscription: Models::Shared
   current_period_start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
   day_of_month: 8.0,
   description: 'Innovative Mouse featuring important technology and Bamboo construction',
-  id: '0a6089ad-f653-410e-b271-32d807d5ddb8',
+  id: '8d5bedb0-3dab-4498-89a8-80e7750b797c',
   interval: 1.0,
   interval_unit: Models::Shared::IntervalUnit::YEAR,
   lineitems: [],
@@ -216,7 +216,7 @@ res = s.payment.create_payment_subscription(payment_subscription: Models::Shared
   start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
   status: Models::Shared::PaymentSubscriptionStatus::ACTIVE,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2023-10-07T23:11:24.488Z')
+  updated_at: DateTime.iso8601('2023-10-08T01:58:01.387Z')
 ), connection_id: '<id>')
 
 unless res.payment_subscription.nil?
@@ -702,13 +702,13 @@ req = Models::Operations::PatchPaymentLinkRequest.new(
     created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
     currency: 'CAD',
     description: 'Savor the tender essence in our Ball, designed for dim culinary adventures',
-    id: 'e665a48a-e2c0-47c4-904b-4d3866c57a55',
+    id: 'a57a78d3-bd55-4edd-9933-0f8d4dba3044',
     is_active: true,
     is_chargeable_now: true,
     lineitems: [
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-        id: '4784877e-9e52-46b8-8622-e383114be09a',
+        id: '30e229dc-7695-46eb-aa35-936a48ee9f33',
         item_description: 'Discover the worst new Computer with an exciting mix of Steel ingredients',
         item_name: 'Soft Marble Cheese',
         tax_amount: 0.0,
@@ -720,7 +720,7 @@ req = Models::Operations::PatchPaymentLinkRequest.new(
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
         discount_amount: 424.32,
-        id: 'd04e3302-ecdb-4c0e-8866-b82f631189c2',
+        id: 'a86e9134-0a8f-4895-9514-05c0ba9bde19',
         item_description: 'Innovative Shoes featuring utilized technology and Cotton construction',
         item_name: 'Sleek Aluminum Shoes',
         notes: 'Cervus decretum viridis doloremque.',
@@ -732,7 +732,7 @@ req = Models::Operations::PatchPaymentLinkRequest.new(
       ),
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-        id: '054d9565-5eba-48c9-9150-1e262de52460',
+        id: '8c4e2ca0-fc76-4190-a170-cea83443323a',
         item_description: 'Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance',
         item_name: 'Elegant Concrete Gloves',
         notes: 'Desipio usque vacuus currus cetera testimonium.',
@@ -745,8 +745,8 @@ req = Models::Operations::PatchPaymentLinkRequest.new(
     ],
     metadata: [],
     success_url: 'https://tinted-jet.info',
-    updated_at: DateTime.iso8601('2024-04-20T18:31:08.110Z'),
-    url: 'https://pay.example.com/e665a48a-e2c0-47c4-904b-4d3866c57a55'
+    updated_at: DateTime.iso8601('2024-04-21T00:29:25.231Z'),
+    url: 'https://pay.example.com/a57a78d3-bd55-4edd-9933-0f8d4dba3044'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -801,7 +801,7 @@ req = Models::Operations::PatchPaymentPaymentRequest.new(
     created_at: DateTime.iso8601('2022-03-10T00:19:42.086Z'),
     currency: 'EUR',
     fee_amount: 2055.82,
-    id: '891149ae-cd71-4058-af9e-a3cea86c469c',
+    id: 'fcdf96eb-d023-4a37-a2cf-1f3317e0e354',
     metadata: [],
     net_amount: 68_824.18,
     notes: 'Bibo tactus vilicus.',
@@ -813,7 +813,7 @@ req = Models::Operations::PatchPaymentPaymentRequest.new(
     tip_amount: 0.0,
     total_amount: 70_880.0,
     type: Models::Shared::PaymentPaymentType::INVOICE,
-    updated_at: DateTime.iso8601('2025-10-30T12:51:13.499Z')
+    updated_at: DateTime.iso8601('2025-10-31T07:04:51.203Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -867,7 +867,7 @@ req = Models::Operations::PatchPaymentSubscriptionRequest.new(
     current_period_start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     day_of_month: 8.0,
     description: 'Innovative Mouse featuring important technology and Bamboo construction',
-    id: 'e3675988-e77e-4976-b176-b002bb393203',
+    id: '656c31cc-f06d-4c7c-9157-8c8fabcf5523',
     interval: 1.0,
     interval_unit: Models::Shared::IntervalUnit::YEAR,
     lineitems: [],
@@ -876,7 +876,7 @@ req = Models::Operations::PatchPaymentSubscriptionRequest.new(
     start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     status: Models::Shared::PaymentSubscriptionStatus::ACTIVE,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-10-07T23:11:24.490Z')
+    updated_at: DateTime.iso8601('2023-10-08T01:58:01.391Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1051,13 +1051,13 @@ req = Models::Operations::UpdatePaymentLinkRequest.new(
     created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
     currency: 'CAD',
     description: 'Savor the tender essence in our Ball, designed for dim culinary adventures',
-    id: 'e665a48a-e2c0-47c4-904b-4d3866c57a55',
+    id: 'a57a78d3-bd55-4edd-9933-0f8d4dba3044',
     is_active: true,
     is_chargeable_now: true,
     lineitems: [
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-        id: '4784877e-9e52-46b8-8622-e383114be09a',
+        id: '30e229dc-7695-46eb-aa35-936a48ee9f33',
         item_description: 'Discover the worst new Computer with an exciting mix of Steel ingredients',
         item_name: 'Soft Marble Cheese',
         tax_amount: 0.0,
@@ -1069,7 +1069,7 @@ req = Models::Operations::UpdatePaymentLinkRequest.new(
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
         discount_amount: 424.32,
-        id: 'd04e3302-ecdb-4c0e-8866-b82f631189c2',
+        id: 'a86e9134-0a8f-4895-9514-05c0ba9bde19',
         item_description: 'Innovative Shoes featuring utilized technology and Cotton construction',
         item_name: 'Sleek Aluminum Shoes',
         notes: 'Cervus decretum viridis doloremque.',
@@ -1081,7 +1081,7 @@ req = Models::Operations::UpdatePaymentLinkRequest.new(
       ),
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-        id: '054d9565-5eba-48c9-9150-1e262de52460',
+        id: '8c4e2ca0-fc76-4190-a170-cea83443323a',
         item_description: 'Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance',
         item_name: 'Elegant Concrete Gloves',
         notes: 'Desipio usque vacuus currus cetera testimonium.',
@@ -1094,8 +1094,8 @@ req = Models::Operations::UpdatePaymentLinkRequest.new(
     ],
     metadata: [],
     success_url: 'https://tinted-jet.info',
-    updated_at: DateTime.iso8601('2024-04-20T18:31:08.110Z'),
-    url: 'https://pay.example.com/e665a48a-e2c0-47c4-904b-4d3866c57a55'
+    updated_at: DateTime.iso8601('2024-04-21T00:29:25.231Z'),
+    url: 'https://pay.example.com/a57a78d3-bd55-4edd-9933-0f8d4dba3044'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1150,7 +1150,7 @@ req = Models::Operations::UpdatePaymentPaymentRequest.new(
     created_at: DateTime.iso8601('2022-03-10T00:19:42.086Z'),
     currency: 'EUR',
     fee_amount: 2055.82,
-    id: '891149ae-cd71-4058-af9e-a3cea86c469c',
+    id: 'fcdf96eb-d023-4a37-a2cf-1f3317e0e354',
     metadata: [],
     net_amount: 68_824.18,
     notes: 'Bibo tactus vilicus.',
@@ -1162,7 +1162,7 @@ req = Models::Operations::UpdatePaymentPaymentRequest.new(
     tip_amount: 0.0,
     total_amount: 70_880.0,
     type: Models::Shared::PaymentPaymentType::INVOICE,
-    updated_at: DateTime.iso8601('2025-10-30T12:51:13.499Z')
+    updated_at: DateTime.iso8601('2025-10-31T07:04:51.203Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1216,7 +1216,7 @@ req = Models::Operations::UpdatePaymentSubscriptionRequest.new(
     current_period_start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     day_of_month: 8.0,
     description: 'Innovative Mouse featuring important technology and Bamboo construction',
-    id: 'e3675988-e77e-4976-b176-b002bb393203',
+    id: '656c31cc-f06d-4c7c-9157-8c8fabcf5523',
     interval: 1.0,
     interval_unit: Models::Shared::IntervalUnit::YEAR,
     lineitems: [],
@@ -1225,7 +1225,7 @@ req = Models::Operations::UpdatePaymentSubscriptionRequest.new(
     start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     status: Models::Shared::PaymentSubscriptionStatus::ACTIVE,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-10-07T23:11:24.490Z')
+    updated_at: DateTime.iso8601('2023-10-08T01:58:01.391Z')
   ),
   connection_id: '<id>',
   id: '<id>'

@@ -64,7 +64,7 @@ res = s.employee.create_hris_employee(hris_employee: Models::Shared::HrisEmploye
   gender: Models::Shared::HrisEmployeeGender::MALE,
   has_mfa: true,
   hired_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
-  id: '7e108cf4-662b-49ce-af61-586b35dacc92',
+  id: '2f9be645-d935-48ba-b2b4-021a2e5c1aa2',
   image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg',
   language_locale: 'in',
   last_name: 'Prohaska',
@@ -76,7 +76,7 @@ res = s.employee.create_hris_employee(hris_employee: Models::Shared::HrisEmploye
         'display_name' => 'Custom Property',
       },
       format: Models::Shared::HrisMetadataFormat::TEXT,
-      id: '4294f326-437b-4375-856c-45286416e8dd',
+      id: '6f56df5f-5045-4ab7-9fee-b6d972075203',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'tutis'
@@ -106,6 +106,8 @@ res = s.employee.create_hris_employee(hris_employee: Models::Shared::HrisEmploye
     ),
   ],
   salutation: 'Ms.',
+  seniority_started_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
+  service_started_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
   ssn_sin: '284-82-8167',
   storage_quota_allocated: 3_653_713.0,
   storage_quota_available: 3_017_275.0,
@@ -124,7 +126,7 @@ res = s.employee.create_hris_employee(hris_employee: Models::Shared::HrisEmploye
   timeoff_days_used: 9.0,
   timezone: 'Europe/Ljubljana',
   title: 'District Branding Specialist',
-  updated_at: DateTime.iso8601('2020-07-22T14:35:21.276Z')
+  updated_at: DateTime.iso8601('2020-07-22T17:22:06.534Z')
 ), connection_id: '<id>')
 
 unless res.hris_employee.nil?
@@ -294,7 +296,7 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
     gender: Models::Shared::HrisEmployeeGender::MALE,
     has_mfa: true,
     hired_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
-    id: '9f076b98-0197-4053-b78b-c3f66a85f143',
+    id: '8dd162b8-b2b0-4442-9570-a84d89a3a0ef',
     image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg',
     language_locale: 'in',
     last_name: 'Prohaska',
@@ -306,7 +308,7 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::HrisMetadataFormat::TEXT,
-        id: 'cf89a6ef-529b-43ac-a303-bd6205e0e836',
+        id: '72a58622-bfb8-4683-ba65-6a0bb6a5143c',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'tutis'
@@ -336,6 +338,8 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
       ),
     ],
     salutation: 'Ms.',
+    seniority_started_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
+    service_started_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
     ssn_sin: '284-82-8167',
     storage_quota_allocated: 3_653_713.0,
     storage_quota_available: 3_017_275.0,
@@ -354,7 +358,7 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
     timeoff_days_used: 9.0,
     timezone: 'Europe/Ljubljana',
     title: 'District Branding Specialist',
-    updated_at: DateTime.iso8601('2020-07-22T14:35:21.287Z')
+    updated_at: DateTime.iso8601('2020-07-22T17:22:06.542Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -479,7 +483,7 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
     gender: Models::Shared::HrisEmployeeGender::MALE,
     has_mfa: true,
     hired_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
-    id: '9f076b98-0197-4053-b78b-c3f66a85f143',
+    id: '8dd162b8-b2b0-4442-9570-a84d89a3a0ef',
     image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg',
     language_locale: 'in',
     last_name: 'Prohaska',
@@ -491,7 +495,7 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::HrisMetadataFormat::TEXT,
-        id: 'cf89a6ef-529b-43ac-a303-bd6205e0e836',
+        id: '72a58622-bfb8-4683-ba65-6a0bb6a5143c',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'tutis'
@@ -521,6 +525,8 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
       ),
     ],
     salutation: 'Ms.',
+    seniority_started_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
+    service_started_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
     ssn_sin: '284-82-8167',
     storage_quota_allocated: 3_653_713.0,
     storage_quota_available: 3_017_275.0,
@@ -539,7 +545,7 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
     timeoff_days_used: 9.0,
     timezone: 'Europe/Ljubljana',
     title: 'District Branding Specialist',
-    updated_at: DateTime.iso8601('2020-07-22T14:35:21.287Z')
+    updated_at: DateTime.iso8601('2020-07-22T17:22:06.542Z')
   ),
   connection_id: '<id>',
   id: '<id>'

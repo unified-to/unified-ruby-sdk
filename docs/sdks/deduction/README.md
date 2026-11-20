@@ -35,14 +35,15 @@ res = s.deduction.create_hris_deduction(hris_deduction: Models::Shared::HrisDedu
   employer_type: Models::Shared::EmployerType::PERCENTAGE,
   frequency: Models::Shared::HrisDeductionFrequency::ONE_TIME,
   garnishment_type: Models::Shared::GarnishmentType::CHILD_SUPPORT,
-  id: '2be0f9ab-c362-4e1c-a106-b89e1246a913',
+  id: 'cca84a71-990d-41c4-9931-e32dc4abcb23',
   is_active: true,
+  loan_identifier: 'DRB9M6VM',
   max_amount: 21_794.0,
   metadata: [],
   notes: 'Carmen desidero.',
-  start_at: DateTime.iso8601('2025-04-06T09:51:46.723Z'),
+  start_at: DateTime.iso8601('2025-04-07T03:45:00.870Z'),
   type: Models::Shared::HrisDeductionType::FIXED,
-  updated_at: DateTime.iso8601('2024-04-09T03:24:30.673Z')
+  updated_at: DateTime.iso8601('2024-04-09T17:51:44.548Z')
 ), connection_id: '<id>')
 
 unless res.hris_deduction.nil?
@@ -183,14 +184,15 @@ req = Models::Operations::PatchHrisDeductionRequest.new(
     employer_type: Models::Shared::EmployerType::PERCENTAGE,
     frequency: Models::Shared::HrisDeductionFrequency::ONE_TIME,
     garnishment_type: Models::Shared::GarnishmentType::CHILD_SUPPORT,
-    id: 'f4c521f4-4516-4534-aaf5-7eab8f189faf',
+    id: '4f2a3831-00a1-43c7-b18b-2886b177b985',
     is_active: true,
+    loan_identifier: 'DRB9M6VM',
     max_amount: 21_794.0,
     metadata: [],
     notes: 'Carmen desidero.',
-    start_at: DateTime.iso8601('2025-04-06T09:51:46.737Z'),
+    start_at: DateTime.iso8601('2025-04-07T03:45:00.880Z'),
     type: Models::Shared::HrisDeductionType::FIXED,
-    updated_at: DateTime.iso8601('2024-04-09T03:24:30.685Z')
+    updated_at: DateTime.iso8601('2024-04-09T17:51:44.556Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -286,14 +288,15 @@ req = Models::Operations::UpdateHrisDeductionRequest.new(
     employer_type: Models::Shared::EmployerType::PERCENTAGE,
     frequency: Models::Shared::HrisDeductionFrequency::ONE_TIME,
     garnishment_type: Models::Shared::GarnishmentType::CHILD_SUPPORT,
-    id: 'f4c521f4-4516-4534-aaf5-7eab8f189faf',
+    id: '4f2a3831-00a1-43c7-b18b-2886b177b985',
     is_active: true,
+    loan_identifier: 'DRB9M6VM',
     max_amount: 21_794.0,
     metadata: [],
     notes: 'Carmen desidero.',
-    start_at: DateTime.iso8601('2025-04-06T09:51:46.737Z'),
+    start_at: DateTime.iso8601('2025-04-07T03:45:00.880Z'),
     type: Models::Shared::HrisDeductionType::FIXED,
-    updated_at: DateTime.iso8601('2024-04-09T03:24:30.685Z')
+    updated_at: DateTime.iso8601('2024-04-09T17:51:44.556Z')
   ),
   connection_id: '<id>',
   id: '<id>'

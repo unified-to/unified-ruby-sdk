@@ -55,7 +55,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: 'fc0bbd78-5a25-4b16-924e-df26196936c0',
+  id: 'dfdde34e-7f2d-4418-9369-013a01fe96e4',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -68,7 +68,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-14T06:41:57.950Z')
+  updated_at: DateTime.iso8601('2023-08-14T12:40:17.883Z')
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -105,7 +105,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: 'fc0bbd78-5a25-4b16-924e-df26196936c0',
+  id: 'dfdde34e-7f2d-4418-9369-013a01fe96e4',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -118,7 +118,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-14T06:41:57.950Z')
+  updated_at: DateTime.iso8601('2023-08-14T12:40:17.883Z')
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -3166,7 +3166,7 @@ begin
       currency: 'CAD',
       customer_defined_code: '6170',
       description: 'Voluptatibus valde spoliatio.',
-      id: 'fc0bbd78-5a25-4b16-924e-df26196936c0',
+      id: 'dfdde34e-7f2d-4418-9369-013a01fe96e4',
       is_payable: false,
       metadata: [],
       name: 'Auto Loan Account',
@@ -3179,7 +3179,7 @@ begin
         ),
       ],
       type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-      updated_at: DateTime.iso8601('2023-08-14T06:41:57.950Z')
+      updated_at: DateTime.iso8601('2023-08-14T12:40:17.883Z')
     ), connection_id: '<id>')
 
     unless res.accounting_account.nil?
@@ -3224,7 +3224,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: 'fc0bbd78-5a25-4b16-924e-df26196936c0',
+  id: 'dfdde34e-7f2d-4418-9369-013a01fe96e4',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -3237,7 +3237,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-14T06:41:57.950Z')
+  updated_at: DateTime.iso8601('2023-08-14T12:40:17.883Z')
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -3265,7 +3265,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: 'fc0bbd78-5a25-4b16-924e-df26196936c0',
+  id: 'dfdde34e-7f2d-4418-9369-013a01fe96e4',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -3278,7 +3278,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-14T06:41:57.950Z')
+  updated_at: DateTime.iso8601('2023-08-14T12:40:17.883Z')
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?

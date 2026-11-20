@@ -30,10 +30,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.webinar.create_calendar_webinar(calendar_webinar: Models::Shared::CalendarWebinar.new(
   conference: [],
   created_at: DateTime.iso8601('2022-07-06T11:45:14.631Z'),
-  end_at: DateTime.iso8601('2025-11-20T03:01:00.583Z'),
+  end_at: DateTime.iso8601('2025-11-20T21:09:22.048Z'),
   has_polls: false,
   has_recording: false,
-  id: '1d90e26d-f5b8-4f3d-a9ac-e0f8b4034303',
+  id: '7e933272-aef5-4d1e-aae3-d6b66e6ce6d4',
   is_auto_approve: false,
   is_enabled: true,
   is_webcast: false,
@@ -43,13 +43,13 @@ res = s.webinar.create_calendar_webinar(calendar_webinar: Models::Shared::Calend
   recurrence: [
     Models::Shared::CalendarEventRecurrence.new(
       count: 10.0,
-      end_at: DateTime.iso8601('2023-09-08T09:53:47.378Z'),
+      end_at: DateTime.iso8601('2023-09-08T16:12:30.449Z'),
       excluded_dates: [
-        '2025-03-02T15:46:13.674Z',
+        '2025-03-03T06:02:50.317Z',
       ],
       frequency: Models::Shared::CalendarEventRecurrenceFrequency::MONTHLY,
       included_dates: [
-        '2024-05-10T12:47:44.976Z',
+        '2024-05-10T22:42:53.835Z',
       ],
       interval: 8.0,
       on_days: [
@@ -440,16 +440,16 @@ res = s.webinar.create_calendar_webinar(calendar_webinar: Models::Shared::Calend
     ),
     Models::Shared::CalendarEventRecurrence.new(
       count: 3.0,
-      end_at: DateTime.iso8601('2022-10-02T06:30:59.476Z'),
+      end_at: DateTime.iso8601('2022-10-02T07:48:29.899Z'),
       excluded_dates: [
-        '2024-09-16T08:17:50.431Z',
-        '2024-08-31T12:25:34.209Z',
+        '2024-09-16T20:06:43.403Z',
+        '2024-09-01T00:00:28.662Z',
       ],
       frequency: Models::Shared::CalendarEventRecurrenceFrequency::DAILY,
       included_dates: [
-        '2024-04-05T19:03:29.213Z',
-        '2026-02-06T05:24:10.812Z',
-        '2023-08-21T17:45:08.140Z',
+        '2024-04-06T04:27:57.696Z',
+        '2026-02-07T00:41:29.757Z',
+        '2023-08-21T23:48:14.964Z',
       ],
       interval: 1.0,
       on_days: [
@@ -593,16 +593,16 @@ res = s.webinar.create_calendar_webinar(calendar_webinar: Models::Shared::Calend
     ),
     Models::Shared::CalendarEventRecurrence.new(
       count: 8.0,
-      end_at: DateTime.iso8601('2026-08-22T22:47:15.853Z'),
+      end_at: DateTime.iso8601('2026-08-23T20:59:09.659Z'),
       excluded_dates: [
-        '2023-06-25T00:41:57.748Z',
-        '2023-06-13T20:40:10.256Z',
+        '2023-06-25T05:54:07.235Z',
+        '2023-06-14T01:42:28.100Z',
       ],
       frequency: Models::Shared::CalendarEventRecurrenceFrequency::WEEKLY,
       included_dates: [
-        '2024-04-13T23:30:00.814Z',
-        '2023-08-27T15:45:37.050Z',
-        '2024-10-12T00:16:28.266Z',
+        '2024-04-14T09:01:42.919Z',
+        '2023-08-27T21:53:57.339Z',
+        '2024-10-12T12:28:00.934Z',
       ],
       interval: 8.0,
       on_days: [
@@ -755,11 +755,11 @@ res = s.webinar.create_calendar_webinar(calendar_webinar: Models::Shared::Calend
   registrant_password: 'W7J6DhkM',
   require_address: false,
   require_job_title: false,
-  start_at: DateTime.iso8601('2025-05-19T14:59:34.205Z'),
+  start_at: DateTime.iso8601('2025-05-20T06:25:01.345Z'),
   status: Models::Shared::CalendarWebinarStatus::TENTATIVE,
   subject: 'Harum culpa decipio ex cubo ancilla cresco.',
   timezone: 'Europe/Kaliningrad',
-  updated_at: DateTime.iso8601('2026-10-29T03:21:53.418Z'),
+  updated_at: DateTime.iso8601('2026-10-30T02:33:06.793Z'),
   web_url: 'https://quiet-permafrost.name'
 ), connection_id: '<id>')
 
@@ -896,10 +896,10 @@ req = Models::Operations::PatchCalendarWebinarRequest.new(
   calendar_webinar: Models::Shared::CalendarWebinar.new(
     conference: [],
     created_at: DateTime.iso8601('2022-07-06T11:45:14.631Z'),
-    end_at: DateTime.iso8601('2025-11-20T03:01:00.617Z'),
+    end_at: DateTime.iso8601('2025-11-20T21:09:22.072Z'),
     has_polls: false,
     has_recording: false,
-    id: 'bf2d9db6-ae6c-4be9-839f-e7865eac46ad',
+    id: '7f3f9ec0-3c8e-4492-8e48-b20c0d07d32d',
     is_auto_approve: false,
     is_enabled: true,
     is_webcast: false,
@@ -909,13 +909,13 @@ req = Models::Operations::PatchCalendarWebinarRequest.new(
     recurrence: [
       Models::Shared::CalendarEventRecurrence.new(
         count: 10.0,
-        end_at: DateTime.iso8601('2023-09-08T09:53:47.390Z'),
+        end_at: DateTime.iso8601('2023-09-08T16:12:30.457Z'),
         excluded_dates: [
-          '2025-03-02T15:46:13.700Z',
+          '2025-03-03T06:02:50.335Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::MONTHLY,
         included_dates: [
-          '2024-05-10T12:47:44.995Z',
+          '2024-05-10T22:42:53.847Z',
         ],
         interval: 8.0,
         on_days: [
@@ -1306,16 +1306,16 @@ req = Models::Operations::PatchCalendarWebinarRequest.new(
       ),
       Models::Shared::CalendarEventRecurrence.new(
         count: 3.0,
-        end_at: DateTime.iso8601('2022-10-02T06:30:59.479Z'),
+        end_at: DateTime.iso8601('2022-10-02T07:48:29.901Z'),
         excluded_dates: [
-          '2024-09-16T08:17:50.453Z',
-          '2024-08-31T12:25:34.231Z',
+          '2024-09-16T20:06:43.418Z',
+          '2024-09-01T00:00:28.677Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::DAILY,
         included_dates: [
-          '2024-04-05T19:03:29.231Z',
-          '2026-02-06T05:24:10.847Z',
-          '2023-08-21T17:45:08.151Z',
+          '2024-04-06T04:27:57.708Z',
+          '2026-02-07T00:41:29.782Z',
+          '2023-08-21T23:48:14.972Z',
         ],
         interval: 1.0,
         on_days: [
@@ -1459,16 +1459,16 @@ req = Models::Operations::PatchCalendarWebinarRequest.new(
       ),
       Models::Shared::CalendarEventRecurrence.new(
         count: 8.0,
-        end_at: DateTime.iso8601('2026-08-22T22:47:15.894Z'),
+        end_at: DateTime.iso8601('2026-08-23T20:59:09.688Z'),
         excluded_dates: [
-          '2023-06-25T00:41:57.757Z',
-          '2023-06-13T20:40:10.265Z',
+          '2023-06-25T05:54:07.242Z',
+          '2023-06-14T01:42:28.107Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::WEEKLY,
         included_dates: [
-          '2024-04-13T23:30:00.832Z',
-          '2023-08-27T15:45:37.061Z',
-          '2024-10-12T00:16:28.289Z',
+          '2024-04-14T09:01:42.931Z',
+          '2023-08-27T21:53:57.347Z',
+          '2024-10-12T12:28:00.949Z',
         ],
         interval: 8.0,
         on_days: [
@@ -1621,11 +1621,11 @@ req = Models::Operations::PatchCalendarWebinarRequest.new(
     registrant_password: 'W7J6DhkM',
     require_address: false,
     require_job_title: false,
-    start_at: DateTime.iso8601('2025-05-19T14:59:34.234Z'),
+    start_at: DateTime.iso8601('2025-05-20T06:25:01.365Z'),
     status: Models::Shared::CalendarWebinarStatus::TENTATIVE,
     subject: 'Harum culpa decipio ex cubo ancilla cresco.',
     timezone: 'Europe/Kaliningrad',
-    updated_at: DateTime.iso8601('2026-10-29T03:21:53.461Z'),
+    updated_at: DateTime.iso8601('2026-10-30T02:33:06.823Z'),
     web_url: 'https://quiet-permafrost.name'
   ),
   connection_id: '<id>',
@@ -1717,10 +1717,10 @@ req = Models::Operations::UpdateCalendarWebinarRequest.new(
   calendar_webinar: Models::Shared::CalendarWebinar.new(
     conference: [],
     created_at: DateTime.iso8601('2022-07-06T11:45:14.631Z'),
-    end_at: DateTime.iso8601('2025-11-20T03:01:00.617Z'),
+    end_at: DateTime.iso8601('2025-11-20T21:09:22.072Z'),
     has_polls: false,
     has_recording: false,
-    id: 'bf2d9db6-ae6c-4be9-839f-e7865eac46ad',
+    id: '7f3f9ec0-3c8e-4492-8e48-b20c0d07d32d',
     is_auto_approve: false,
     is_enabled: true,
     is_webcast: false,
@@ -1730,13 +1730,13 @@ req = Models::Operations::UpdateCalendarWebinarRequest.new(
     recurrence: [
       Models::Shared::CalendarEventRecurrence.new(
         count: 10.0,
-        end_at: DateTime.iso8601('2023-09-08T09:53:47.390Z'),
+        end_at: DateTime.iso8601('2023-09-08T16:12:30.457Z'),
         excluded_dates: [
-          '2025-03-02T15:46:13.700Z',
+          '2025-03-03T06:02:50.335Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::MONTHLY,
         included_dates: [
-          '2024-05-10T12:47:44.995Z',
+          '2024-05-10T22:42:53.847Z',
         ],
         interval: 8.0,
         on_days: [
@@ -2127,16 +2127,16 @@ req = Models::Operations::UpdateCalendarWebinarRequest.new(
       ),
       Models::Shared::CalendarEventRecurrence.new(
         count: 3.0,
-        end_at: DateTime.iso8601('2022-10-02T06:30:59.479Z'),
+        end_at: DateTime.iso8601('2022-10-02T07:48:29.901Z'),
         excluded_dates: [
-          '2024-09-16T08:17:50.453Z',
-          '2024-08-31T12:25:34.231Z',
+          '2024-09-16T20:06:43.418Z',
+          '2024-09-01T00:00:28.677Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::DAILY,
         included_dates: [
-          '2024-04-05T19:03:29.231Z',
-          '2026-02-06T05:24:10.847Z',
-          '2023-08-21T17:45:08.151Z',
+          '2024-04-06T04:27:57.708Z',
+          '2026-02-07T00:41:29.782Z',
+          '2023-08-21T23:48:14.972Z',
         ],
         interval: 1.0,
         on_days: [
@@ -2280,16 +2280,16 @@ req = Models::Operations::UpdateCalendarWebinarRequest.new(
       ),
       Models::Shared::CalendarEventRecurrence.new(
         count: 8.0,
-        end_at: DateTime.iso8601('2026-08-22T22:47:15.894Z'),
+        end_at: DateTime.iso8601('2026-08-23T20:59:09.688Z'),
         excluded_dates: [
-          '2023-06-25T00:41:57.757Z',
-          '2023-06-13T20:40:10.265Z',
+          '2023-06-25T05:54:07.242Z',
+          '2023-06-14T01:42:28.107Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::WEEKLY,
         included_dates: [
-          '2024-04-13T23:30:00.832Z',
-          '2023-08-27T15:45:37.061Z',
-          '2024-10-12T00:16:28.289Z',
+          '2024-04-14T09:01:42.931Z',
+          '2023-08-27T21:53:57.347Z',
+          '2024-10-12T12:28:00.949Z',
         ],
         interval: 8.0,
         on_days: [
@@ -2442,11 +2442,11 @@ req = Models::Operations::UpdateCalendarWebinarRequest.new(
     registrant_password: 'W7J6DhkM',
     require_address: false,
     require_job_title: false,
-    start_at: DateTime.iso8601('2025-05-19T14:59:34.234Z'),
+    start_at: DateTime.iso8601('2025-05-20T06:25:01.365Z'),
     status: Models::Shared::CalendarWebinarStatus::TENTATIVE,
     subject: 'Harum culpa decipio ex cubo ancilla cresco.',
     timezone: 'Europe/Kaliningrad',
-    updated_at: DateTime.iso8601('2026-10-29T03:21:53.461Z'),
+    updated_at: DateTime.iso8601('2026-10-30T02:33:06.823Z'),
     web_url: 'https://quiet-permafrost.name'
   ),
   connection_id: '<id>',

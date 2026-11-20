@@ -33,7 +33,7 @@ res = s.account.create_accounting_account(accounting_account: Models::Shared::Ac
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: 'fc0bbd78-5a25-4b16-924e-df26196936c0',
+  id: 'dfdde34e-7f2d-4418-9369-013a01fe96e4',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -46,7 +46,7 @@ res = s.account.create_accounting_account(accounting_account: Models::Shared::Ac
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-14T06:41:57.950Z')
+  updated_at: DateTime.iso8601('2023-08-14T12:40:17.883Z')
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -185,7 +185,7 @@ req = Models::Operations::PatchAccountingAccountRequest.new(
     currency: 'CAD',
     customer_defined_code: '6170',
     description: 'Voluptatibus valde spoliatio.',
-    id: 'a98bfa79-44be-49f8-9a17-01398f0de1fc',
+    id: '0113437d-ada9-4334-ac7e-0e7c7c019df8',
     is_payable: false,
     metadata: [],
     name: 'Auto Loan Account',
@@ -198,7 +198,7 @@ req = Models::Operations::PatchAccountingAccountRequest.new(
       ),
     ],
     type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-    updated_at: DateTime.iso8601('2023-08-14T06:41:57.955Z')
+    updated_at: DateTime.iso8601('2023-08-14T12:40:17.887Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -292,7 +292,7 @@ req = Models::Operations::UpdateAccountingAccountRequest.new(
     currency: 'CAD',
     customer_defined_code: '6170',
     description: 'Voluptatibus valde spoliatio.',
-    id: 'a98bfa79-44be-49f8-9a17-01398f0de1fc',
+    id: '0113437d-ada9-4334-ac7e-0e7c7c019df8',
     is_payable: false,
     metadata: [],
     name: 'Auto Loan Account',
@@ -305,7 +305,7 @@ req = Models::Operations::UpdateAccountingAccountRequest.new(
       ),
     ],
     type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-    updated_at: DateTime.iso8601('2023-08-14T06:41:57.955Z')
+    updated_at: DateTime.iso8601('2023-08-14T12:40:17.887Z')
   ),
   connection_id: '<id>',
   id: '<id>'

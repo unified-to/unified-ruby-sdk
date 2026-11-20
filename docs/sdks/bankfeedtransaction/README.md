@@ -34,15 +34,15 @@ res = s.bankfeedtransaction.create_accounting_bankfeedtransaction(accounting_ban
   created_at: DateTime.iso8601('2022-03-24T23:41:08.374Z'),
   currency: 'CAD',
   description: 'Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781.',
-  id: 'aedd00eb-ce7f-4d13-b65e-9ff805494909',
+  id: 'de5a60e6-8973-452b-b1f0-68e9da2d7846',
   is_pending: true,
   merchant_name: 'Buckridge - Feest',
   metadata: [],
-  posted_at: DateTime.iso8601('2025-05-04T05:23:57.885Z'),
+  posted_at: DateTime.iso8601('2025-05-04T21:06:07.624Z'),
   reference: '79574105',
-  transaction_at: DateTime.iso8601('2022-08-01T13:14:35.500Z'),
+  transaction_at: DateTime.iso8601('2022-08-01T15:02:01.570Z'),
   type: Models::Shared::AccountingBankfeedtransactionType::CREDIT,
-  updated_at: DateTime.iso8601('2022-05-26T03:12:03.543Z')
+  updated_at: DateTime.iso8601('2022-05-26T04:03:35.434Z')
 ), connection_id: '<id>')
 
 unless res.accounting_bankfeedtransaction.nil?
@@ -182,15 +182,15 @@ req = Models::Operations::PatchAccountingBankfeedtransactionRequest.new(
     created_at: DateTime.iso8601('2022-03-24T23:41:08.374Z'),
     currency: 'CAD',
     description: 'Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781.',
-    id: '154891a8-7fa7-480c-854f-e5d6b5c63437',
+    id: '54f1f24f-cb55-4e9e-91ee-f06da97141f8',
     is_pending: true,
     merchant_name: 'Buckridge - Feest',
     metadata: [],
-    posted_at: DateTime.iso8601('2025-05-04T05:23:57.899Z'),
+    posted_at: DateTime.iso8601('2025-05-04T21:06:07.641Z'),
     reference: '79574105',
-    transaction_at: DateTime.iso8601('2022-08-01T13:14:35.502Z'),
+    transaction_at: DateTime.iso8601('2022-08-01T15:02:01.572Z'),
     type: Models::Shared::AccountingBankfeedtransactionType::CREDIT,
-    updated_at: DateTime.iso8601('2022-05-26T03:12:03.544Z')
+    updated_at: DateTime.iso8601('2022-05-26T04:03:35.435Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -285,15 +285,15 @@ req = Models::Operations::UpdateAccountingBankfeedtransactionRequest.new(
     created_at: DateTime.iso8601('2022-03-24T23:41:08.374Z'),
     currency: 'CAD',
     description: 'Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781.',
-    id: '154891a8-7fa7-480c-854f-e5d6b5c63437',
+    id: '54f1f24f-cb55-4e9e-91ee-f06da97141f8',
     is_pending: true,
     merchant_name: 'Buckridge - Feest',
     metadata: [],
-    posted_at: DateTime.iso8601('2025-05-04T05:23:57.899Z'),
+    posted_at: DateTime.iso8601('2025-05-04T21:06:07.641Z'),
     reference: '79574105',
-    transaction_at: DateTime.iso8601('2022-08-01T13:14:35.502Z'),
+    transaction_at: DateTime.iso8601('2022-08-01T15:02:01.572Z'),
     type: Models::Shared::AccountingBankfeedtransactionType::CREDIT,
-    updated_at: DateTime.iso8601('2022-05-26T03:12:03.544Z')
+    updated_at: DateTime.iso8601('2022-05-26T04:03:35.435Z')
   ),
   connection_id: '<id>',
   id: '<id>'

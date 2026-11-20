@@ -68,7 +68,7 @@ res = s.healthcare.create_healthcare_appointment(healthcare_appointment: Models:
   created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
   description: 'clarus aptus cetera',
   end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-  id: 'ef27ae9a-0642-4812-9d2f-435eebb4f4f9',
+  id: 'a3722996-78db-40bf-8ee8-e983d9ff034b',
   is_virtual: true,
   meeting_url: 'https://expensive-slipper.name/',
   metadata: [],
@@ -84,7 +84,7 @@ res = s.healthcare.create_healthcare_appointment(healthcare_appointment: Models:
   slot_ids: [],
   start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
   status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-  updated_at: DateTime.iso8601('2026-10-20T14:21:20.847Z')
+  updated_at: DateTime.iso8601('2026-10-21T13:19:31.480Z')
 ), connection_id: '<id>')
 
 unless res.healthcare_appointment.nil?
@@ -140,13 +140,13 @@ res = s.healthcare.create_healthcare_document(healthcare_document: Models::Share
   created_at: DateTime.iso8601('2023-07-16T04:00:25.853Z'),
   document_url: 'https://overcooked-yogurt.org',
   filename: 'ugh_after.elc',
-  id: '0d47d8af-933a-4424-9b83-4a9dfcce4f1b',
+  id: '47d9f6fd-3b39-4af6-9e68-16ab5f90f0ec',
   metadata: [],
   mime_type: 'application/pdf',
   name: 'History and physical',
   status: Models::Shared::HealthcareDocumentStatus::SUPERSEDED,
   type: Models::Shared::HealthcareDocumentType::CONSULTATION_NOTE,
-  updated_at: DateTime.iso8601('2025-01-08T15:41:59.417Z')
+  updated_at: DateTime.iso8601('2025-01-09T02:07:51.519Z')
 ), connection_id: '<id>')
 
 unless res.healthcare_document.nil?
@@ -223,15 +223,15 @@ res = s.healthcare.create_healthcare_observation(healthcare_observation: Models:
     ),
   ],
   created_at: DateTime.iso8601('2022-12-06T21:34:04.293Z'),
-  id: '011f041b-64dd-4bbe-ae89-e4c9adc5b04d',
+  id: 'b563683b-e288-4b30-8662-e8d50c4d844a',
   interpretation: Models::Shared::Interpretation::CRITICAL_HIGH,
-  issued_at: DateTime.iso8601('2025-05-29T15:04:12.028Z'),
+  issued_at: DateTime.iso8601('2025-05-30T05:47:56.765Z'),
   metadata: [],
   name: 'Blood pressure panel',
-  observed_at: DateTime.iso8601('2025-02-05T01:47:16.684Z'),
+  observed_at: DateTime.iso8601('2025-02-05T14:40:06.236Z'),
   status: Models::Shared::HealthcareObservationStatus::CORRECTED,
   type: Models::Shared::HealthcareObservationType::VITAL_SIGNS,
-  updated_at: DateTime.iso8601('2026-04-17T23:00:47.694Z')
+  updated_at: DateTime.iso8601('2026-04-18T19:00:22.343Z')
 ), connection_id: '<id>')
 
 unless res.healthcare_observation.nil?
@@ -283,7 +283,7 @@ res = s.healthcare.create_healthcare_patient(healthcare_patient: Models::Shared:
     postal_code: '54031',
     region: 'Nebraska'
   ),
-  birthdate: '2025-03-13',
+  birthdate: '2025-03-14',
   contacts: [
     Models::Shared::HealthcarePatientContact.new(
       emails: [],
@@ -306,7 +306,7 @@ res = s.healthcare.create_healthcare_patient(healthcare_patient: Models::Shared:
   ],
   first_name: 'Alejandrin',
   gender: Models::Shared::HealthcarePatientGender::FEMALE,
-  id: '7126e38d-1ebd-4835-bb72-2470b9aaa94a',
+  id: '03bcbcae-6e34-4aa0-944c-dd87a640c367',
   identifiers: [
     Models::Shared::HealthcareIdentifier.new(
       type: Models::Shared::HealthcareIdentifierType::MRN,
@@ -326,7 +326,7 @@ res = s.healthcare.create_healthcare_patient(healthcare_patient: Models::Shared:
       type: Models::Shared::HealthcareTelephoneType::MOBILE
     ),
   ],
-  updated_at: DateTime.iso8601('2026-07-20T02:03:45.359Z')
+  updated_at: DateTime.iso8601('2026-07-21T00:07:07.283Z')
 ), connection_id: '<id>')
 
 unless res.healthcare_patient.nil?
@@ -1855,7 +1855,7 @@ req = Models::Operations::PatchHealthcareAppointmentRequest.new(
     created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
     description: 'clarus aptus cetera',
     end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-    id: '97d14418-66d2-430d-b0de-fd2faf8cc002',
+    id: '7eb67128-a649-45cd-bf81-c35b65e9d924',
     is_virtual: true,
     meeting_url: 'https://expensive-slipper.name/',
     metadata: [],
@@ -1871,7 +1871,7 @@ req = Models::Operations::PatchHealthcareAppointmentRequest.new(
     slot_ids: [],
     start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
     status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-    updated_at: DateTime.iso8601('2026-10-20T14:21:20.881Z')
+    updated_at: DateTime.iso8601('2026-10-21T13:19:31.509Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1926,7 +1926,7 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
       postal_code: '54031',
       region: 'Nebraska'
     ),
-    birthdate: '2025-03-13',
+    birthdate: '2025-03-14',
     contacts: [
       Models::Shared::HealthcarePatientContact.new(
         emails: [],
@@ -1949,7 +1949,7 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
     ],
     first_name: 'Alejandrin',
     gender: Models::Shared::HealthcarePatientGender::FEMALE,
-    id: '9e653f77-8de9-47b0-a5bb-c0928ae8732e',
+    id: '394b4f44-9a7a-4b72-9dc1-0150eaa57e53',
     identifiers: [
       Models::Shared::HealthcareIdentifier.new(
         type: Models::Shared::HealthcareIdentifierType::MRN,
@@ -1969,7 +1969,7 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
         type: Models::Shared::HealthcareTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2026-07-20T02:03:45.397Z')
+    updated_at: DateTime.iso8601('2026-07-21T00:07:07.314Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2061,7 +2061,7 @@ req = Models::Operations::UpdateHealthcareAppointmentRequest.new(
     created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
     description: 'clarus aptus cetera',
     end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-    id: '97d14418-66d2-430d-b0de-fd2faf8cc002',
+    id: '7eb67128-a649-45cd-bf81-c35b65e9d924',
     is_virtual: true,
     meeting_url: 'https://expensive-slipper.name/',
     metadata: [],
@@ -2077,7 +2077,7 @@ req = Models::Operations::UpdateHealthcareAppointmentRequest.new(
     slot_ids: [],
     start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
     status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-    updated_at: DateTime.iso8601('2026-10-20T14:21:20.881Z')
+    updated_at: DateTime.iso8601('2026-10-21T13:19:31.509Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2132,7 +2132,7 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
       postal_code: '54031',
       region: 'Nebraska'
     ),
-    birthdate: '2025-03-13',
+    birthdate: '2025-03-14',
     contacts: [
       Models::Shared::HealthcarePatientContact.new(
         emails: [],
@@ -2155,7 +2155,7 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
     ],
     first_name: 'Alejandrin',
     gender: Models::Shared::HealthcarePatientGender::FEMALE,
-    id: '9e653f77-8de9-47b0-a5bb-c0928ae8732e',
+    id: '394b4f44-9a7a-4b72-9dc1-0150eaa57e53',
     identifiers: [
       Models::Shared::HealthcareIdentifier.new(
         type: Models::Shared::HealthcareIdentifierType::MRN,
@@ -2175,7 +2175,7 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
         type: Models::Shared::HealthcareTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2026-07-20T02:03:45.397Z')
+    updated_at: DateTime.iso8601('2026-07-21T00:07:07.314Z')
   ),
   connection_id: '<id>',
   id: '<id>'

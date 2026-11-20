@@ -31,7 +31,7 @@ res = s.appointment.create_healthcare_appointment(healthcare_appointment: Models
   created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
   description: 'clarus aptus cetera',
   end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-  id: 'ef27ae9a-0642-4812-9d2f-435eebb4f4f9',
+  id: 'a3722996-78db-40bf-8ee8-e983d9ff034b',
   is_virtual: true,
   meeting_url: 'https://expensive-slipper.name/',
   metadata: [],
@@ -47,7 +47,7 @@ res = s.appointment.create_healthcare_appointment(healthcare_appointment: Models
   slot_ids: [],
   start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
   status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-  updated_at: DateTime.iso8601('2026-10-20T14:21:20.847Z')
+  updated_at: DateTime.iso8601('2026-10-21T13:19:31.480Z')
 ), connection_id: '<id>')
 
 unless res.healthcare_appointment.nil?
@@ -184,7 +184,7 @@ req = Models::Operations::PatchHealthcareAppointmentRequest.new(
     created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
     description: 'clarus aptus cetera',
     end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-    id: '97d14418-66d2-430d-b0de-fd2faf8cc002',
+    id: '7eb67128-a649-45cd-bf81-c35b65e9d924',
     is_virtual: true,
     meeting_url: 'https://expensive-slipper.name/',
     metadata: [],
@@ -200,7 +200,7 @@ req = Models::Operations::PatchHealthcareAppointmentRequest.new(
     slot_ids: [],
     start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
     status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-    updated_at: DateTime.iso8601('2026-10-20T14:21:20.881Z')
+    updated_at: DateTime.iso8601('2026-10-21T13:19:31.509Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -292,7 +292,7 @@ req = Models::Operations::UpdateHealthcareAppointmentRequest.new(
     created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
     description: 'clarus aptus cetera',
     end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-    id: '97d14418-66d2-430d-b0de-fd2faf8cc002',
+    id: '7eb67128-a649-45cd-bf81-c35b65e9d924',
     is_virtual: true,
     meeting_url: 'https://expensive-slipper.name/',
     metadata: [],
@@ -308,7 +308,7 @@ req = Models::Operations::UpdateHealthcareAppointmentRequest.new(
     slot_ids: [],
     start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
     status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-    updated_at: DateTime.iso8601('2026-10-20T14:21:20.881Z')
+    updated_at: DateTime.iso8601('2026-10-21T13:19:31.509Z')
   ),
   connection_id: '<id>',
   id: '<id>'

@@ -32,6 +32,8 @@ class UnifiedRubySDK::Models::Shared::PropertyHrisPayslipDeduction
   def id=(str_); end
   def is_active(); end
   def is_active=(str_); end
+  def loan_identifier(); end
+  def loan_identifier=(str_); end
   def max_amount(); end
   def max_amount=(str_); end
   def metadata(); end

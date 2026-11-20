@@ -39,7 +39,7 @@ res = s.taxrate.create_accounting_taxrate(accounting_taxrate: Models::Shared::Ac
   created_at: DateTime.iso8601('2020-01-04T10:37:56.894Z'),
   description: 'Exempt (0%)',
   effective_rate: 0.0,
-  id: 'c127b306-53a8-44dc-9b96-511e6bd8f5af',
+  id: 'f9d9a4f8-360f-4fa2-a105-0e4cfcaedde0',
   is_active: false,
   is_compound: false,
   metadata: [],
@@ -48,7 +48,7 @@ res = s.taxrate.create_accounting_taxrate(accounting_taxrate: Models::Shared::Ac
   region: 'KS',
   total_rate: 0.0,
   type: Models::Shared::AccountingTaxrateType::SALES,
-  updated_at: DateTime.iso8601('2020-02-13T16:19:30.261Z')
+  updated_at: DateTime.iso8601('2020-02-13T16:42:05.818Z')
 ), connection_id: '<id>')
 
 unless res.accounting_taxrate.nil?
@@ -193,7 +193,7 @@ req = Models::Operations::PatchAccountingTaxrateRequest.new(
     created_at: DateTime.iso8601('2020-01-04T10:37:56.894Z'),
     description: 'Exempt (0%)',
     effective_rate: 0.0,
-    id: '9679dc6f-31dc-49c9-9fdd-0751f34ad0f9',
+    id: '5fa5933f-7734-47ec-b010-cb8bc69ac810',
     is_active: false,
     is_compound: false,
     metadata: [],
@@ -202,7 +202,7 @@ req = Models::Operations::PatchAccountingTaxrateRequest.new(
     region: 'KS',
     total_rate: 0.0,
     type: Models::Shared::AccountingTaxrateType::SALES,
-    updated_at: DateTime.iso8601('2020-02-13T16:19:30.262Z')
+    updated_at: DateTime.iso8601('2020-02-13T16:42:05.818Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -302,7 +302,7 @@ req = Models::Operations::UpdateAccountingTaxrateRequest.new(
     created_at: DateTime.iso8601('2020-01-04T10:37:56.894Z'),
     description: 'Exempt (0%)',
     effective_rate: 0.0,
-    id: '9679dc6f-31dc-49c9-9fdd-0751f34ad0f9',
+    id: '5fa5933f-7734-47ec-b010-cb8bc69ac810',
     is_active: false,
     is_compound: false,
     metadata: [],
@@ -311,7 +311,7 @@ req = Models::Operations::UpdateAccountingTaxrateRequest.new(
     region: 'KS',
     total_rate: 0.0,
     type: Models::Shared::AccountingTaxrateType::SALES,
-    updated_at: DateTime.iso8601('2020-02-13T16:19:30.262Z')
+    updated_at: DateTime.iso8601('2020-02-13T16:42:05.818Z')
   ),
   connection_id: '<id>',
   id: '<id>'

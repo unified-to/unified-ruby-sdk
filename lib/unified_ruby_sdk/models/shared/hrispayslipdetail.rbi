@@ -26,6 +26,10 @@ class UnifiedRubySDK::Models::Shared::HrisPayslipDetail
   def is_employer=(str_); end
   def is_pre_tax(); end
   def is_pre_tax=(str_); end
+  def is_retirement_eligible(); end
+  def is_retirement_eligible=(str_); end
+  def loan_identifier(); end
+  def loan_identifier=(str_); end
   def name(); end
   def name=(str_); end
   def original_type(); end
@@ -38,4 +42,6 @@ class UnifiedRubySDK::Models::Shared::HrisPayslipDetail
   def type=(str_); end
   def ytd_amount(); end
   def ytd_amount=(str_); end
+  def ytd_hours(); end
+  def ytd_hours=(str_); end
 end

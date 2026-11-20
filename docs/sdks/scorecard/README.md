@@ -32,7 +32,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.scorecard.create_ats_scorecard(ats_scorecard: Models::Shared::AtsScorecard.new(
   comment: 'Maiores enim.',
   created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
-  id: '82e12e74-e4a7-4c63-b5d5-85355e1fee9d',
+  id: '95c350a5-d9de-46ad-a749-7cc8b743ade7',
   metadata: [],
   questions: [
     Models::Shared::AtsScorecardQuestion.new(
@@ -46,7 +46,7 @@ res = s.scorecard.create_ats_scorecard(ats_scorecard: Models::Shared::AtsScoreca
     ),
   ],
   recommendation: Models::Shared::Recommendation::STRONG_YES,
-  updated_at: DateTime.iso8601('2023-06-13T13:45:52.408Z')
+  updated_at: DateTime.iso8601('2023-06-13T20:14:43.850Z')
 ), connection_id: '<id>')
 
 unless res.ats_scorecard.nil?
@@ -269,7 +269,7 @@ req = Models::Operations::PatchAtsScorecardRequest.new(
   ats_scorecard: Models::Shared::AtsScorecard.new(
     comment: 'Maiores enim.',
     created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
-    id: 'd6f1e346-02d2-4992-a2f1-ce07fa4d92cd',
+    id: '94e6b0ed-f85e-411a-89fd-824d9040e1ed',
     metadata: [],
     questions: [
       Models::Shared::AtsScorecardQuestion.new(
@@ -283,7 +283,7 @@ req = Models::Operations::PatchAtsScorecardRequest.new(
       ),
     ],
     recommendation: Models::Shared::Recommendation::STRONG_YES,
-    updated_at: DateTime.iso8601('2023-06-13T13:45:52.412Z')
+    updated_at: DateTime.iso8601('2023-06-13T20:14:43.853Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -374,7 +374,7 @@ req = Models::Operations::UpdateAtsScorecardRequest.new(
   ats_scorecard: Models::Shared::AtsScorecard.new(
     comment: 'Maiores enim.',
     created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
-    id: 'd6f1e346-02d2-4992-a2f1-ce07fa4d92cd',
+    id: '94e6b0ed-f85e-411a-89fd-824d9040e1ed',
     metadata: [],
     questions: [
       Models::Shared::AtsScorecardQuestion.new(
@@ -388,7 +388,7 @@ req = Models::Operations::UpdateAtsScorecardRequest.new(
       ),
     ],
     recommendation: Models::Shared::Recommendation::STRONG_YES,
-    updated_at: DateTime.iso8601('2023-06-13T13:45:52.412Z')
+    updated_at: DateTime.iso8601('2023-06-13T20:14:43.853Z')
   ),
   connection_id: '<id>',
   id: '<id>'

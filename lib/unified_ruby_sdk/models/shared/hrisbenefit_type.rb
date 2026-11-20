@@ -31,6 +31,12 @@ module UnifiedRubySDK
           COMMUTER = new('COMMUTER')
           DEPENDENT_CARE = new('DEPENDENT_CARE')
           PENSION = new('PENSION')
+          RETIREMENT_CATCHUP = new('RETIREMENT_CATCHUP')
+          RETIREMENT_ROTH_CATCHUP = new('RETIREMENT_ROTH_CATCHUP')
+          RETIREMENT_AFTER_TAX = new('RETIREMENT_AFTER_TAX')
+          COLLEGE_SAVINGS = new('COLLEGE_SAVINGS')
+          EARNED_WAGE_ACCESS = new('EARNED_WAGE_ACCESS')
+          UNION_DUES = new('UNION_DUES')
         end
         open!
       end

@@ -34,6 +34,8 @@ module UnifiedRubySDK
         field :employee_roles, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::PropertyHrisEmployeeEmployeeRoles)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employee_roles') } }
 
         field :employment_status, Crystalline::Nilable.new(Models::Shared::EmploymentStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employment_status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::EmploymentStatus, true) } }
+        # why the employee is not actively working (eg. LEAVE, TERMINATED, RETIRED)
+        field :employment_status_reason, Crystalline::Nilable.new(Models::Shared::EmploymentStatusReason), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employment_status_reason'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::EmploymentStatusReason, true) } }
 
         field :employment_type, Crystalline::Nilable.new(Models::Shared::HrisEmployeeEmploymentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employment_type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::HrisEmployeeEmploymentType, true) } }
         # The employee's first (given) name
@@ -58,6 +60,10 @@ module UnifiedRubySDK
         field :language_locale, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('language_locale') } }
         # The employee's last (family) name
         field :last_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('last_name') } }
+        # expected or actual end of the current leave of absence (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+        field :leave_end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('leave_end_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
+        # start of the current leave of absence (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+        field :leave_start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('leave_start_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :locations, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HrisLocation)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('locations') } }
 
@@ -74,10 +80,16 @@ module UnifiedRubySDK
         field :pronouns, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('pronouns') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        # most recent rehire date (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+        field :rehired_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rehired_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # the employee's personal relationships (eg. emergency contacts, spouse, dependants, ...)
         field :relationships, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HrisEmployeerelationship)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('relationships') } }
         # Mr. Mrs. Ms.
         field :salutation, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('salutation') } }
+        # seniority date (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+        field :seniority_started_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('seniority_started_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
+        # adjusted service date used for benefits eligibility and vesting (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+        field :service_started_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('service_started_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :ssn_sin, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ssn_sin') } }
 
@@ -103,8 +115,8 @@ module UnifiedRubySDK
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(address: T.nilable(Models::Shared::PropertyHrisEmployeeAddress), bio: T.nilable(::String), company_id: T.nilable(::String), compensation: T.nilable(T::Array[Models::Shared::HrisCompensation]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), date_of_birth: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::HrisEmail]), employee_number: T.nilable(::String), employee_roles: T.nilable(T::Array[Models::Shared::PropertyHrisEmployeeEmployeeRoles]), employment_status: T.nilable(Models::Shared::EmploymentStatus), employment_type: T.nilable(Models::Shared::HrisEmployeeEmploymentType), first_name: T.nilable(::String), flsa_status: T.nilable(Models::Shared::FlsaStatus), gender: T.nilable(Models::Shared::HrisEmployeeGender), groups: T.nilable(T::Array[Models::Shared::HrisGroup]), has_mfa: T.nilable(T::Boolean), hired_at: T.nilable(::DateTime), id: T.nilable(::String), image_url: T.nilable(::String), job_id: T.nilable(::String), language_locale: T.nilable(::String), last_name: T.nilable(::String), locations: T.nilable(T::Array[Models::Shared::HrisLocation]), manager_id: T.nilable(::String), marital_status: T.nilable(Models::Shared::HrisEmployeeMaritalStatus), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), name: T.nilable(::String), pay_frequency: T.nilable(Models::Shared::PayFrequency), pronouns: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), relationships: T.nilable(T::Array[Models::Shared::HrisEmployeerelationship]), salutation: T.nilable(::String), ssn_sin: T.nilable(::String), storage_quota_allocated: T.nilable(::Float), storage_quota_available: T.nilable(::Float), storage_quota_used: T.nilable(::Float), telephones: T.nilable(T::Array[Models::Shared::HrisTelephone]), terminated_at: T.nilable(::DateTime), termination_reason: T.nilable(::String), timeoff_days_total: T.nilable(::Float), timeoff_days_used: T.nilable(::Float), timezone: T.nilable(::String), title: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-        def initialize(address: nil, bio: nil, company_id: nil, compensation: nil, created_at: nil, currency: nil, date_of_birth: nil, emails: nil, employee_number: nil, employee_roles: nil, employment_status: nil, employment_type: nil, first_name: nil, flsa_status: nil, gender: nil, groups: nil, has_mfa: nil, hired_at: nil, id: nil, image_url: nil, job_id: nil, language_locale: nil, last_name: nil, locations: nil, manager_id: nil, marital_status: nil, metadata: nil, name: nil, pay_frequency: nil, pronouns: nil, raw: nil, relationships: nil, salutation: nil, ssn_sin: nil, storage_quota_allocated: nil, storage_quota_available: nil, storage_quota_used: nil, telephones: nil, terminated_at: nil, termination_reason: nil, timeoff_days_total: nil, timeoff_days_used: nil, timezone: nil, title: nil, updated_at: nil)
+        sig { params(address: T.nilable(Models::Shared::PropertyHrisEmployeeAddress), bio: T.nilable(::String), company_id: T.nilable(::String), compensation: T.nilable(T::Array[Models::Shared::HrisCompensation]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), date_of_birth: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::HrisEmail]), employee_number: T.nilable(::String), employee_roles: T.nilable(T::Array[Models::Shared::PropertyHrisEmployeeEmployeeRoles]), employment_status: T.nilable(Models::Shared::EmploymentStatus), employment_status_reason: T.nilable(Models::Shared::EmploymentStatusReason), employment_type: T.nilable(Models::Shared::HrisEmployeeEmploymentType), first_name: T.nilable(::String), flsa_status: T.nilable(Models::Shared::FlsaStatus), gender: T.nilable(Models::Shared::HrisEmployeeGender), groups: T.nilable(T::Array[Models::Shared::HrisGroup]), has_mfa: T.nilable(T::Boolean), hired_at: T.nilable(::DateTime), id: T.nilable(::String), image_url: T.nilable(::String), job_id: T.nilable(::String), language_locale: T.nilable(::String), last_name: T.nilable(::String), leave_end_at: T.nilable(::DateTime), leave_start_at: T.nilable(::DateTime), locations: T.nilable(T::Array[Models::Shared::HrisLocation]), manager_id: T.nilable(::String), marital_status: T.nilable(Models::Shared::HrisEmployeeMaritalStatus), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), name: T.nilable(::String), pay_frequency: T.nilable(Models::Shared::PayFrequency), pronouns: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), rehired_at: T.nilable(::DateTime), relationships: T.nilable(T::Array[Models::Shared::HrisEmployeerelationship]), salutation: T.nilable(::String), seniority_started_at: T.nilable(::DateTime), service_started_at: T.nilable(::DateTime), ssn_sin: T.nilable(::String), storage_quota_allocated: T.nilable(::Float), storage_quota_available: T.nilable(::Float), storage_quota_used: T.nilable(::Float), telephones: T.nilable(T::Array[Models::Shared::HrisTelephone]), terminated_at: T.nilable(::DateTime), termination_reason: T.nilable(::String), timeoff_days_total: T.nilable(::Float), timeoff_days_used: T.nilable(::Float), timezone: T.nilable(::String), title: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        def initialize(address: nil, bio: nil, company_id: nil, compensation: nil, created_at: nil, currency: nil, date_of_birth: nil, emails: nil, employee_number: nil, employee_roles: nil, employment_status: nil, employment_status_reason: nil, employment_type: nil, first_name: nil, flsa_status: nil, gender: nil, groups: nil, has_mfa: nil, hired_at: nil, id: nil, image_url: nil, job_id: nil, language_locale: nil, last_name: nil, leave_end_at: nil, leave_start_at: nil, locations: nil, manager_id: nil, marital_status: nil, metadata: nil, name: nil, pay_frequency: nil, pronouns: nil, raw: nil, rehired_at: nil, relationships: nil, salutation: nil, seniority_started_at: nil, service_started_at: nil, ssn_sin: nil, storage_quota_allocated: nil, storage_quota_available: nil, storage_quota_used: nil, telephones: nil, terminated_at: nil, termination_reason: nil, timeoff_days_total: nil, timeoff_days_used: nil, timezone: nil, title: nil, updated_at: nil)
           @address = address
           @bio = bio
           @company_id = company_id
@@ -116,6 +128,7 @@ module UnifiedRubySDK
           @employee_number = employee_number
           @employee_roles = employee_roles
           @employment_status = employment_status
+          @employment_status_reason = employment_status_reason
           @employment_type = employment_type
           @first_name = first_name
           @flsa_status = flsa_status
@@ -128,6 +141,8 @@ module UnifiedRubySDK
           @job_id = job_id
           @language_locale = language_locale
           @last_name = last_name
+          @leave_end_at = leave_end_at
+          @leave_start_at = leave_start_at
           @locations = locations
           @manager_id = manager_id
           @marital_status = marital_status
@@ -136,8 +151,11 @@ module UnifiedRubySDK
           @pay_frequency = pay_frequency
           @pronouns = pronouns
           @raw = raw
+          @rehired_at = rehired_at
           @relationships = relationships
           @salutation = salutation
+          @seniority_started_at = seniority_started_at
+          @service_started_at = service_started_at
           @ssn_sin = ssn_sin
           @storage_quota_allocated = storage_quota_allocated
           @storage_quota_available = storage_quota_available
@@ -166,6 +184,7 @@ module UnifiedRubySDK
           return false unless @employee_number == other.employee_number
           return false unless @employee_roles == other.employee_roles
           return false unless @employment_status == other.employment_status
+          return false unless @employment_status_reason == other.employment_status_reason
           return false unless @employment_type == other.employment_type
           return false unless @first_name == other.first_name
           return false unless @flsa_status == other.flsa_status
@@ -178,6 +197,8 @@ module UnifiedRubySDK
           return false unless @job_id == other.job_id
           return false unless @language_locale == other.language_locale
           return false unless @last_name == other.last_name
+          return false unless @leave_end_at == other.leave_end_at
+          return false unless @leave_start_at == other.leave_start_at
           return false unless @locations == other.locations
           return false unless @manager_id == other.manager_id
           return false unless @marital_status == other.marital_status
@@ -186,8 +207,11 @@ module UnifiedRubySDK
           return false unless @pay_frequency == other.pay_frequency
           return false unless @pronouns == other.pronouns
           return false unless @raw == other.raw
+          return false unless @rehired_at == other.rehired_at
           return false unless @relationships == other.relationships
           return false unless @salutation == other.salutation
+          return false unless @seniority_started_at == other.seniority_started_at
+          return false unless @service_started_at == other.service_started_at
           return false unless @ssn_sin == other.ssn_sin
           return false unless @storage_quota_allocated == other.storage_quota_allocated
           return false unless @storage_quota_available == other.storage_quota_available

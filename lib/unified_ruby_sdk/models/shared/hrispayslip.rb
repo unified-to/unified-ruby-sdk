@@ -66,9 +66,11 @@ module UnifiedRubySDK
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # the employee (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
+        # year-to-date hours paid as of this payslip
+        field :ytd_hours, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ytd_hours') } }
 
-        sig { params(company_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), deduction: T.nilable(Models::Shared::PropertyHrisPayslipDeduction), deduction_amount: T.nilable(::Float), details: T.nilable(T::Array[Models::Shared::HrisPayslipDetail]), employee_tax_amount: T.nilable(::Float), employer_contribution_amount: T.nilable(::Float), employer_tax_amount: T.nilable(::Float), end_at: T.nilable(::DateTime), gross_amount: T.nilable(::Float), gross_ytd_amount: T.nilable(::Float), group_id: T.nilable(::String), hours: T.nilable(::Float), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), net_amount: T.nilable(::Float), net_ytd_amount: T.nilable(::Float), paid_at: T.nilable(::DateTime), payment_reference: T.nilable(::String), payment_type: T.nilable(Models::Shared::PaymentType), payroll_id: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), start_at: T.nilable(::DateTime), type: T.nilable(Models::Shared::HrisPayslipType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-        def initialize(company_id: nil, created_at: nil, currency: nil, deduction: nil, deduction_amount: nil, details: nil, employee_tax_amount: nil, employer_contribution_amount: nil, employer_tax_amount: nil, end_at: nil, gross_amount: nil, gross_ytd_amount: nil, group_id: nil, hours: nil, id: nil, metadata: nil, net_amount: nil, net_ytd_amount: nil, paid_at: nil, payment_reference: nil, payment_type: nil, payroll_id: nil, raw: nil, start_at: nil, type: nil, updated_at: nil, user_id: nil)
+        sig { params(company_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), deduction: T.nilable(Models::Shared::PropertyHrisPayslipDeduction), deduction_amount: T.nilable(::Float), details: T.nilable(T::Array[Models::Shared::HrisPayslipDetail]), employee_tax_amount: T.nilable(::Float), employer_contribution_amount: T.nilable(::Float), employer_tax_amount: T.nilable(::Float), end_at: T.nilable(::DateTime), gross_amount: T.nilable(::Float), gross_ytd_amount: T.nilable(::Float), group_id: T.nilable(::String), hours: T.nilable(::Float), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), net_amount: T.nilable(::Float), net_ytd_amount: T.nilable(::Float), paid_at: T.nilable(::DateTime), payment_reference: T.nilable(::String), payment_type: T.nilable(Models::Shared::PaymentType), payroll_id: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), start_at: T.nilable(::DateTime), type: T.nilable(Models::Shared::HrisPayslipType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), ytd_hours: T.nilable(::Float)).void }
+        def initialize(company_id: nil, created_at: nil, currency: nil, deduction: nil, deduction_amount: nil, details: nil, employee_tax_amount: nil, employer_contribution_amount: nil, employer_tax_amount: nil, end_at: nil, gross_amount: nil, gross_ytd_amount: nil, group_id: nil, hours: nil, id: nil, metadata: nil, net_amount: nil, net_ytd_amount: nil, paid_at: nil, payment_reference: nil, payment_type: nil, payroll_id: nil, raw: nil, start_at: nil, type: nil, updated_at: nil, user_id: nil, ytd_hours: nil)
           @company_id = company_id
           @created_at = created_at
           @currency = currency
@@ -96,6 +98,7 @@ module UnifiedRubySDK
           @type = type
           @updated_at = updated_at
           @user_id = user_id
+          @ytd_hours = ytd_hours
         end
 
         sig { params(other: T.untyped).returns(T::Boolean) }
@@ -128,6 +131,7 @@ module UnifiedRubySDK
           return false unless @type == other.type
           return false unless @updated_at == other.updated_at
           return false unless @user_id == other.user_id
+          return false unless @ytd_hours == other.ytd_hours
           true
         end
       end

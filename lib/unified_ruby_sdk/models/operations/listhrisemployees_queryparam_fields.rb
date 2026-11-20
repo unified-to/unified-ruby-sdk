@@ -54,6 +54,12 @@ module UnifiedRubySDK
           TIMEOFF_DAYS_USED = new('timeoff_days_used')
           FLSA_STATUS = new('flsa_status')
           PAY_FREQUENCY = new('pay_frequency')
+          REHIRED_AT = new('rehired_at')
+          SERVICE_STARTED_AT = new('service_started_at')
+          SENIORITY_STARTED_AT = new('seniority_started_at')
+          LEAVE_START_AT = new('leave_start_at')
+          LEAVE_END_AT = new('leave_end_at')
+          EMPLOYMENT_STATUS_REASON = new('employment_status_reason')
           RAW = new('raw')
         end
       end

@@ -3631,3 +3631,11 @@ Based on:
 - Speakeasy CLI 1.810.0 (2.961.1) https://github.com/speakeasy-api/speakeasy
 ### Generated
 - [ruby v0.69.9] .
+
+## 2026-11-20 00:17:17
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.810.0 (2.961.1) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [ruby v0.69.10] .

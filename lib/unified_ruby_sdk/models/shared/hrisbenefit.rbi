@@ -8,6 +8,8 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::HrisBenefit
+  def code(); end
+  def code=(str_); end
   def company_id(); end
   def company_id=(str_); end
   def coverage_level(); end
@@ -20,6 +22,8 @@ class UnifiedRubySDK::Models::Shared::HrisBenefit
   def description=(str_); end
   def employer_contribution_amount(); end
   def employer_contribution_amount=(str_); end
+  def employer_contribution_category(); end
+  def employer_contribution_category=(str_); end
   def employer_contribution_max_amount(); end
   def employer_contribution_max_amount=(str_); end
   def employer_contribution_type(); end
@@ -36,6 +40,8 @@ class UnifiedRubySDK::Models::Shared::HrisBenefit
   def name=(str_); end
   def raw(); end
   def raw=(str_); end
+  def retirement_plan_type(); end
+  def retirement_plan_type=(str_); end
   def tax(); end
   def tax=(str_); end
   def type(); end

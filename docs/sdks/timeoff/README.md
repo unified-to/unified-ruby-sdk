@@ -28,7 +28,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
   )
 )
 res = s.timeoff.create_hris_timeoff(hris_timeoff: Models::Shared::HrisTimeoff.new(
-  approved_at: DateTime.iso8601('2022-02-25T13:58:56.219Z'),
+  approved_at: DateTime.iso8601('2022-02-25T15:45:53.765Z'),
   attachments: [
     Models::Shared::HrisAttachment.new(
       content_type: 'application/pdf',
@@ -42,16 +42,16 @@ res = s.timeoff.create_hris_timeoff(hris_timeoff: Models::Shared::HrisTimeoff.ne
   created_at: DateTime.iso8601('2021-10-06T18:00:20.615Z'),
   duration: 4.0,
   duration_type: Models::Shared::DurationType::DAY,
-  end_at: DateTime.iso8601('2025-01-16T07:26:36.649Z'),
-  id: '00227fab-e894-4a32-8e6a-e4fbf5e17aff',
+  end_at: DateTime.iso8601('2025-01-16T22:29:43.121Z'),
+  id: '6624f0be-0bbf-4de5-89d2-ff296ec35131',
   is_paid: true,
   metadata: [],
   original_type: 'acerbitas ut',
   reason: 'verto',
-  start_at: DateTime.iso8601('2023-09-15T19:33:39.368Z'),
+  start_at: DateTime.iso8601('2023-09-16T04:28:22.707Z'),
   status: Models::Shared::HrisTimeoffStatus::DENIED,
   type: Models::Shared::HrisTimeoffType::IN_LIEU,
-  updated_at: DateTime.iso8601('2022-07-17T05:18:15.344Z'),
+  updated_at: DateTime.iso8601('2022-07-17T08:52:01.659Z'),
   user_id: '<id>'
 ), connection_id: '<id>')
 
@@ -186,7 +186,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchHrisTimeoffRequest.new(
   hris_timeoff: Models::Shared::HrisTimeoff.new(
-    approved_at: DateTime.iso8601('2022-02-25T13:58:56.221Z'),
+    approved_at: DateTime.iso8601('2022-02-25T15:45:53.766Z'),
     attachments: [
       Models::Shared::HrisAttachment.new(
         content_type: 'application/pdf',
@@ -200,16 +200,16 @@ req = Models::Operations::PatchHrisTimeoffRequest.new(
     created_at: DateTime.iso8601('2021-10-06T18:00:20.615Z'),
     duration: 4.0,
     duration_type: Models::Shared::DurationType::DAY,
-    end_at: DateTime.iso8601('2025-01-16T07:26:36.664Z'),
-    id: 'bfbbfe7b-2b38-49a0-bf56-b50b43081b7a',
+    end_at: DateTime.iso8601('2025-01-16T22:29:43.127Z'),
+    id: '3f649cb9-1f1e-40da-9eff-6cede70fb19f',
     is_paid: true,
     metadata: [],
     original_type: 'acerbitas ut',
     reason: 'verto',
-    start_at: DateTime.iso8601('2023-09-15T19:33:39.377Z'),
+    start_at: DateTime.iso8601('2023-09-16T04:28:22.711Z'),
     status: Models::Shared::HrisTimeoffStatus::DENIED,
     type: Models::Shared::HrisTimeoffType::IN_LIEU,
-    updated_at: DateTime.iso8601('2022-07-17T05:18:15.348Z'),
+    updated_at: DateTime.iso8601('2022-07-17T08:52:01.661Z'),
     user_id: '<id>'
   ),
   connection_id: '<id>',
@@ -299,7 +299,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateHrisTimeoffRequest.new(
   hris_timeoff: Models::Shared::HrisTimeoff.new(
-    approved_at: DateTime.iso8601('2022-02-25T13:58:56.221Z'),
+    approved_at: DateTime.iso8601('2022-02-25T15:45:53.766Z'),
     attachments: [
       Models::Shared::HrisAttachment.new(
         content_type: 'application/pdf',
@@ -313,16 +313,16 @@ req = Models::Operations::UpdateHrisTimeoffRequest.new(
     created_at: DateTime.iso8601('2021-10-06T18:00:20.615Z'),
     duration: 4.0,
     duration_type: Models::Shared::DurationType::DAY,
-    end_at: DateTime.iso8601('2025-01-16T07:26:36.664Z'),
-    id: 'bfbbfe7b-2b38-49a0-bf56-b50b43081b7a',
+    end_at: DateTime.iso8601('2025-01-16T22:29:43.127Z'),
+    id: '3f649cb9-1f1e-40da-9eff-6cede70fb19f',
     is_paid: true,
     metadata: [],
     original_type: 'acerbitas ut',
     reason: 'verto',
-    start_at: DateTime.iso8601('2023-09-15T19:33:39.377Z'),
+    start_at: DateTime.iso8601('2023-09-16T04:28:22.711Z'),
     status: Models::Shared::HrisTimeoffStatus::DENIED,
     type: Models::Shared::HrisTimeoffType::IN_LIEU,
-    updated_at: DateTime.iso8601('2022-07-17T05:18:15.348Z'),
+    updated_at: DateTime.iso8601('2022-07-17T08:52:01.661Z'),
     user_id: '<id>'
   ),
   connection_id: '<id>',

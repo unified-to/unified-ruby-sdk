@@ -22,6 +22,7 @@ module UnifiedRubySDK
           IS_PRE_TAX = new('is_pre_tax')
           IS_EMPLOYER = new('is_employer')
           IS_ACTIVE = new('is_active')
+          IS_RETIREMENT_ELIGIBLE = new('is_retirement_eligible')
           METADATA = new('metadata')
           RAW = new('raw')
         end

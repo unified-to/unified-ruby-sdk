@@ -33,16 +33,16 @@ res = s.journal.create_accounting_journal(accounting_journal: Models::Shared::Ac
   created_at: DateTime.iso8601('2020-02-20T15:14:55.881Z'),
   currency: 'CAD',
   description: 'Cilicium minima calco constans adipisci.',
-  id: 'a7587f98-a09d-44f4-a38d-2bda4d5073bf',
+  id: '5f90cca9-c27f-4d5e-ba67-c7f90f5711f2',
   is_inclusive_of_tax: true,
   lineitems: [],
   metadata: [],
-  posted_at: DateTime.iso8601('2023-11-22T14:14:17.528Z'),
+  posted_at: DateTime.iso8601('2023-11-23T03:18:48.775Z'),
   reference: 'JE-78884',
   source: 'crustulum',
   status: Models::Shared::AccountingJournalStatus::VOID,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2022-01-19T01:08:56.788Z')
+  updated_at: DateTime.iso8601('2022-01-19T07:48:36.480Z')
 ), connection_id: '<id>')
 
 unless res.accounting_journal.nil?
@@ -181,16 +181,16 @@ req = Models::Operations::PatchAccountingJournalRequest.new(
     created_at: DateTime.iso8601('2020-02-20T15:14:55.881Z'),
     currency: 'CAD',
     description: 'Cilicium minima calco constans adipisci.',
-    id: '73c3c6d5-7e76-476a-9e94-089a1f6bd1d4',
+    id: 'f3637344-0e3a-423b-badd-fa51293db816',
     is_inclusive_of_tax: true,
     lineitems: [],
     metadata: [],
-    posted_at: DateTime.iso8601('2023-11-22T14:14:17.542Z'),
+    posted_at: DateTime.iso8601('2023-11-23T03:18:48.786Z'),
     reference: 'JE-78884',
     source: 'crustulum',
     status: Models::Shared::AccountingJournalStatus::VOID,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2022-01-19T01:08:56.795Z')
+    updated_at: DateTime.iso8601('2022-01-19T07:48:36.486Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -284,16 +284,16 @@ req = Models::Operations::UpdateAccountingJournalRequest.new(
     created_at: DateTime.iso8601('2020-02-20T15:14:55.881Z'),
     currency: 'CAD',
     description: 'Cilicium minima calco constans adipisci.',
-    id: '73c3c6d5-7e76-476a-9e94-089a1f6bd1d4',
+    id: 'f3637344-0e3a-423b-badd-fa51293db816',
     is_inclusive_of_tax: true,
     lineitems: [],
     metadata: [],
-    posted_at: DateTime.iso8601('2023-11-22T14:14:17.542Z'),
+    posted_at: DateTime.iso8601('2023-11-23T03:18:48.786Z'),
     reference: 'JE-78884',
     source: 'crustulum',
     status: Models::Shared::AccountingJournalStatus::VOID,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2022-01-19T01:08:56.795Z')
+    updated_at: DateTime.iso8601('2022-01-19T07:48:36.486Z')
   ),
   connection_id: '<id>',
   id: '<id>'

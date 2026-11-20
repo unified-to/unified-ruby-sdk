@@ -30,6 +30,8 @@ class UnifiedRubySDK::Models::Shared::HrisEmployee
   def employee_roles=(str_); end
   def employment_status(); end
   def employment_status=(str_); end
+  def employment_status_reason(); end
+  def employment_status_reason=(str_); end
   def employment_type(); end
   def employment_type=(str_); end
   def first_name(); end
@@ -54,6 +56,10 @@ class UnifiedRubySDK::Models::Shared::HrisEmployee
   def language_locale=(str_); end
   def last_name(); end
   def last_name=(str_); end
+  def leave_end_at(); end
+  def leave_end_at=(str_); end
+  def leave_start_at(); end
+  def leave_start_at=(str_); end
   def locations(); end
   def locations=(str_); end
   def manager_id(); end
@@ -70,10 +76,16 @@ class UnifiedRubySDK::Models::Shared::HrisEmployee
   def pronouns=(str_); end
   def raw(); end
   def raw=(str_); end
+  def rehired_at(); end
+  def rehired_at=(str_); end
   def relationships(); end
   def relationships=(str_); end
   def salutation(); end
   def salutation=(str_); end
+  def seniority_started_at(); end
+  def seniority_started_at=(str_); end
+  def service_started_at(); end
+  def service_started_at=(str_); end
   def ssn_sin(); end
   def ssn_sin=(str_); end
   def storage_quota_allocated(); end

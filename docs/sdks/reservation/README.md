@@ -39,13 +39,13 @@ res = s.reservation.create_commerce_reservation(commerce_reservation: Models::Sh
   guest_email: 'julien.bartoletti@icloud.com',
   guest_name: 'Julien Bartoletti',
   guest_phone: '(728) 596-2620',
-  id: '45fc3c04-4e61-4d93-8e31-9934a54b47aa',
+  id: '27741023-523a-4682-a6bd-34b147391c1d',
   metadata: [],
   notes: 'Adsum textilis ipsum despecto.',
   size: 10.0,
   start_at: DateTime.iso8601('2021-12-18T00:40:25.125Z'),
   status: Models::Shared::CommerceReservationStatus::PENDING,
-  updated_at: DateTime.iso8601('2023-01-10T04:47:38.253Z'),
+  updated_at: DateTime.iso8601('2023-01-10T09:54:06.326Z'),
   url: 'https://expensive-gift.org'
 ), connection_id: '<id>')
 
@@ -102,7 +102,7 @@ res = s.reservation.create_property_reservation(property_reservation: Models::Sh
   guest_email: 'anya.parisian@hotmail.com',
   guest_name: 'Anya Parisian',
   guests: 6.0,
-  id: '4767685f-a404-4618-a9fc-8b5c92663dc7',
+  id: '7330e4fe-d577-4162-853d-bc70d950d965',
   line_items: [
     Models::Shared::PropertyLineitem.new(
       amount: 1980.0,
@@ -139,7 +139,7 @@ res = s.reservation.create_property_reservation(property_reservation: Models::Sh
   start_at: DateTime.iso8601('2022-09-25T17:17:08.838Z'),
   status: Models::Shared::PropertyReservationStatus::PENDING,
   total_amount: 2181.6,
-  updated_at: DateTime.iso8601('2022-11-18T12:22:21.693Z'),
+  updated_at: DateTime.iso8601('2022-11-18T14:48:02.438Z'),
   web_url: 'https://antique-tennis.biz/'
 ), connection_id: '<id>')
 
@@ -366,13 +366,13 @@ req = Models::Operations::PatchCommerceReservationRequest.new(
     guest_email: 'julien.bartoletti@icloud.com',
     guest_name: 'Julien Bartoletti',
     guest_phone: '(728) 596-2620',
-    id: '797c0b9e-ab3b-4f96-a824-63e3d1feed6c',
+    id: '67e1a38e-640d-4ad0-b209-c1b16a77f378',
     metadata: [],
     notes: 'Adsum textilis ipsum despecto.',
     size: 10.0,
     start_at: DateTime.iso8601('2021-12-18T00:40:25.125Z'),
     status: Models::Shared::CommerceReservationStatus::PENDING,
-    updated_at: DateTime.iso8601('2023-01-10T04:47:38.256Z'),
+    updated_at: DateTime.iso8601('2023-01-10T09:54:06.328Z'),
     url: 'https://expensive-gift.org'
   ),
   connection_id: '<id>',
@@ -432,7 +432,7 @@ req = Models::Operations::PatchPropertyReservationRequest.new(
     guest_email: 'anya.parisian@hotmail.com',
     guest_name: 'Anya Parisian',
     guests: 6.0,
-    id: 'ba83a562-282c-475c-954a-9ab2f3d083a4',
+    id: '2b8f40c0-5ac6-4580-b600-d3394c9fcae1',
     line_items: [
       Models::Shared::PropertyLineitem.new(
         amount: 1980.0,
@@ -469,7 +469,7 @@ req = Models::Operations::PatchPropertyReservationRequest.new(
     start_at: DateTime.iso8601('2022-09-25T17:17:08.838Z'),
     status: Models::Shared::PropertyReservationStatus::PENDING,
     total_amount: 2181.6,
-    updated_at: DateTime.iso8601('2022-11-18T12:22:21.696Z'),
+    updated_at: DateTime.iso8601('2022-11-18T14:48:02.441Z'),
     web_url: 'https://antique-tennis.biz/'
   ),
   connection_id: '<id>',
@@ -605,13 +605,13 @@ req = Models::Operations::UpdateCommerceReservationRequest.new(
     guest_email: 'julien.bartoletti@icloud.com',
     guest_name: 'Julien Bartoletti',
     guest_phone: '(728) 596-2620',
-    id: '797c0b9e-ab3b-4f96-a824-63e3d1feed6c',
+    id: '67e1a38e-640d-4ad0-b209-c1b16a77f378',
     metadata: [],
     notes: 'Adsum textilis ipsum despecto.',
     size: 10.0,
     start_at: DateTime.iso8601('2021-12-18T00:40:25.125Z'),
     status: Models::Shared::CommerceReservationStatus::PENDING,
-    updated_at: DateTime.iso8601('2023-01-10T04:47:38.256Z'),
+    updated_at: DateTime.iso8601('2023-01-10T09:54:06.328Z'),
     url: 'https://expensive-gift.org'
   ),
   connection_id: '<id>',
@@ -671,7 +671,7 @@ req = Models::Operations::UpdatePropertyReservationRequest.new(
     guest_email: 'anya.parisian@hotmail.com',
     guest_name: 'Anya Parisian',
     guests: 6.0,
-    id: 'ba83a562-282c-475c-954a-9ab2f3d083a4',
+    id: '2b8f40c0-5ac6-4580-b600-d3394c9fcae1',
     line_items: [
       Models::Shared::PropertyLineitem.new(
         amount: 1980.0,
@@ -708,7 +708,7 @@ req = Models::Operations::UpdatePropertyReservationRequest.new(
     start_at: DateTime.iso8601('2022-09-25T17:17:08.838Z'),
     status: Models::Shared::PropertyReservationStatus::PENDING,
     total_amount: 2181.6,
-    updated_at: DateTime.iso8601('2022-11-18T12:22:21.696Z'),
+    updated_at: DateTime.iso8601('2022-11-18T14:48:02.441Z'),
     web_url: 'https://antique-tennis.biz/'
   ),
   connection_id: '<id>',

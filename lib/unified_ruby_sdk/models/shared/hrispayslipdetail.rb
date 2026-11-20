@@ -30,6 +30,10 @@ module UnifiedRubySDK
         field :is_employer, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_employer') } }
 
         field :is_pre_tax, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_pre_tax') } }
+        # true when this line counts as retirement-plan compensation
+        field :is_retirement_eligible, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_retirement_eligible') } }
+        # the payroll system's identifier for the retirement-plan loan this line repays
+        field :loan_identifier, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('loan_identifier') } }
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # integration pay-code label before normalization
@@ -42,9 +46,11 @@ module UnifiedRubySDK
         field :type, Crystalline::Nilable.new(Models::Shared::HrisPayslipDetailType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::HrisPayslipDetailType, true) } }
         # year-to-date amount for this line
         field :ytd_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ytd_amount') } }
+        # year-to-date hours for this line
+        field :ytd_hours, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ytd_hours') } }
 
-        sig { params(amount: ::Float, benefit_id: T.nilable(::String), company_amount: T.nilable(::Float), deduction_id: T.nilable(::String), description: T.nilable(::String), employee_amount: T.nilable(::Float), hours: T.nilable(::Float), is_employer: T.nilable(T::Boolean), is_pre_tax: T.nilable(T::Boolean), name: T.nilable(::String), original_type: T.nilable(::String), paycode_id: T.nilable(::String), rate_amount: T.nilable(::Float), type: T.nilable(Models::Shared::HrisPayslipDetailType), ytd_amount: T.nilable(::Float)).void }
-        def initialize(amount:, benefit_id: nil, company_amount: nil, deduction_id: nil, description: nil, employee_amount: nil, hours: nil, is_employer: nil, is_pre_tax: nil, name: nil, original_type: nil, paycode_id: nil, rate_amount: nil, type: nil, ytd_amount: nil)
+        sig { params(amount: ::Float, benefit_id: T.nilable(::String), company_amount: T.nilable(::Float), deduction_id: T.nilable(::String), description: T.nilable(::String), employee_amount: T.nilable(::Float), hours: T.nilable(::Float), is_employer: T.nilable(T::Boolean), is_pre_tax: T.nilable(T::Boolean), is_retirement_eligible: T.nilable(T::Boolean), loan_identifier: T.nilable(::String), name: T.nilable(::String), original_type: T.nilable(::String), paycode_id: T.nilable(::String), rate_amount: T.nilable(::Float), type: T.nilable(Models::Shared::HrisPayslipDetailType), ytd_amount: T.nilable(::Float), ytd_hours: T.nilable(::Float)).void }
+        def initialize(amount:, benefit_id: nil, company_amount: nil, deduction_id: nil, description: nil, employee_amount: nil, hours: nil, is_employer: nil, is_pre_tax: nil, is_retirement_eligible: nil, loan_identifier: nil, name: nil, original_type: nil, paycode_id: nil, rate_amount: nil, type: nil, ytd_amount: nil, ytd_hours: nil)
           @amount = amount
           @benefit_id = benefit_id
           @company_amount = company_amount
@@ -54,12 +60,15 @@ module UnifiedRubySDK
           @hours = hours
           @is_employer = is_employer
           @is_pre_tax = is_pre_tax
+          @is_retirement_eligible = is_retirement_eligible
+          @loan_identifier = loan_identifier
           @name = name
           @original_type = original_type
           @paycode_id = paycode_id
           @rate_amount = rate_amount
           @type = type
           @ytd_amount = ytd_amount
+          @ytd_hours = ytd_hours
         end
 
         sig { params(other: T.untyped).returns(T::Boolean) }
@@ -74,12 +83,15 @@ module UnifiedRubySDK
           return false unless @hours == other.hours
           return false unless @is_employer == other.is_employer
           return false unless @is_pre_tax == other.is_pre_tax
+          return false unless @is_retirement_eligible == other.is_retirement_eligible
+          return false unless @loan_identifier == other.loan_identifier
           return false unless @name == other.name
           return false unless @original_type == other.original_type
           return false unless @paycode_id == other.paycode_id
           return false unless @rate_amount == other.rate_amount
           return false unless @type == other.type
           return false unless @ytd_amount == other.ytd_amount
+          return false unless @ytd_hours == other.ytd_hours
           true
         end
       end
