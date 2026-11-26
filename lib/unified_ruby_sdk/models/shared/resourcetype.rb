@@ -7,12 +7,22 @@
 module UnifiedRubySDK
   module Models
     module Shared
-
+      # ResourceType - Always AllergyIntolerance
       class ResourceType
         include ::Crystalline::Enum
         enums do
-          USER = new('User')
-          GROUP = new('Group')
+          PATIENT = new('Patient')
+          PRACTITIONER = new('Practitioner')
+          ENCOUNTER = new('Encounter')
+          OBSERVATION = new('Observation')
+          CONDITION = new('Condition')
+          ALLERGY_INTOLERANCE = new('AllergyIntolerance')
+          MEDICATION_REQUEST = new('MedicationRequest')
+          IMMUNIZATION = new('Immunization')
+          BUNDLE = new('Bundle')
+          OPERATION_OUTCOME = new('OperationOutcome')
+          CAPABILITY_STATEMENT = new('CapabilityStatement')
+          DIAGNOSTIC_REPORT = new('DiagnosticReport')
         end
         open!
       end

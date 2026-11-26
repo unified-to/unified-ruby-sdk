@@ -29,16 +29,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.creative.create_ads_creative(ads_creative: Models::Shared::AdsCreative.new(
   created_at: DateTime.iso8601('2020-02-17T11:24:51.093Z'),
-  id: '305c61ad-748a-4be1-b783-6b392f8c8a02',
+  id: 'ebad2271-73a9-4ff3-9a85-7594b5f88367',
   labels: [
-    'coma',
-    'accedo',
-    'termes',
+    'ventosus',
+    'in',
+    'delego',
   ],
   metadata: [],
-  name: 'Brekke, Bradtke and Robel',
+  name: 'Sauer, Stiedemann and Bauch',
   status: Models::Shared::AdsCreativeStatus::PAUSED,
-  updated_at: DateTime.iso8601('2021-07-03T20:51:34.288Z')
+  updated_at: DateTime.iso8601('2021-07-05T01:58:49.819Z')
 ), connection_id: '<id>')
 
 unless res.ads_creative.nil?
@@ -173,16 +173,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAdsCreativeRequest.new(
   ads_creative: Models::Shared::AdsCreative.new(
     created_at: DateTime.iso8601('2020-02-17T11:24:51.093Z'),
-    id: 'c8ca7ed9-10f6-4ae9-86a4-d713fc69d29e',
+    id: 'a1a513bb-0fb2-42cd-b059-fe3d9b66a54d',
     labels: [
-      'coma',
-      'accedo',
-      'termes',
+      'ventosus',
+      'in',
+      'delego',
     ],
     metadata: [],
-    name: 'Brekke, Bradtke and Robel',
+    name: 'Sauer, Stiedemann and Bauch',
     status: Models::Shared::AdsCreativeStatus::PAUSED,
-    updated_at: DateTime.iso8601('2021-07-03T20:51:34.292Z')
+    updated_at: DateTime.iso8601('2021-07-05T01:58:49.829Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -272,16 +272,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAdsCreativeRequest.new(
   ads_creative: Models::Shared::AdsCreative.new(
     created_at: DateTime.iso8601('2020-02-17T11:24:51.093Z'),
-    id: 'c8ca7ed9-10f6-4ae9-86a4-d713fc69d29e',
+    id: 'a1a513bb-0fb2-42cd-b059-fe3d9b66a54d',
     labels: [
-      'coma',
-      'accedo',
-      'termes',
+      'ventosus',
+      'in',
+      'delego',
     ],
     metadata: [],
-    name: 'Brekke, Bradtke and Robel',
+    name: 'Sauer, Stiedemann and Bauch',
     status: Models::Shared::AdsCreativeStatus::PAUSED,
-    updated_at: DateTime.iso8601('2021-07-03T20:51:34.292Z')
+    updated_at: DateTime.iso8601('2021-07-05T01:58:49.829Z')
   ),
   connection_id: '<id>',
   id: '<id>'

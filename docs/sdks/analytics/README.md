@@ -42,13 +42,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.analytics.create_analytics_event(analytics_event: Models::Shared::AnalyticsEvent.new(
   created_at: DateTime.iso8601('2023-06-21T03:13:22.954Z'),
   event_type: Models::Shared::EventType::SCREEN_VIEW,
-  id: '677e2e05-e1be-429f-a365-30f231eb92cb',
+  id: '5debe4f5-7d91-4929-8e10-b7d06fb91b96',
   metadata: {
     'key' => Models::Shared::PropertyAnalyticsEventMetadata.new,
   },
   name: 'page_view',
-  page_url: 'https://golden-carboxyl.biz',
-  updated_at: DateTime.iso8601('2023-09-27T00:51:44.650Z')
+  page_url: 'https://colossal-intellect.info/',
+  updated_at: DateTime.iso8601('2023-09-27T12:05:01.864Z')
 ), connection_id: '<id>')
 
 unless res.analytics_event.nil?
@@ -95,10 +95,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.analytics.create_analytics_property(analytics_property: Models::Shared::AnalyticsProperty.new(
   created_at: DateTime.iso8601('2021-09-05T19:04:58.430Z'),
   currency: 'USD',
-  id: 'd28aa8ab-999b-4e6e-91ad-9e985c21ee8f',
-  name: 'Daniel, Goldner and Dickinson',
+  id: 'e69c93fb-4fb7-4ef5-b923-10d54343cfc1',
+  name: 'Graham - Glover',
   timezone: 'UTC',
-  updated_at: DateTime.iso8601('2021-09-14T23:55:21.105Z')
+  updated_at: DateTime.iso8601('2021-09-15T00:36:53.196Z')
 ), connection_id: '<id>')
 
 unless res.analytics_property.nil?
@@ -144,15 +144,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.analytics.create_analytics_visitor(analytics_visitor: Models::Shared::AnalyticsVisitor.new(
   created_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
-  email: 'desiree.o.hara@icloud.com',
+  email: 'madisen.jenkins@icloud.com',
   first_seen_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
-  id: 'd819c8d1-1377-403b-b5a2-b43df17a5b48',
-  last_seen_at: DateTime.iso8601('2025-02-02T03:20:40.398Z'),
+  id: '19026171-1d65-43b8-9051-d2f8bbc5959f',
+  last_seen_at: DateTime.iso8601('2025-02-06T11:25:09.655Z'),
   metadata: {
     'segment' => Models::Shared::PropertyAnalyticsVisitorMetadata.new,
   },
   total_events: 2916.0,
-  updated_at: DateTime.iso8601('2025-07-23T16:20:23.517Z')
+  updated_at: DateTime.iso8601('2025-07-28T10:36:11.341Z')
 ), connection_id: '<id>')
 
 unless res.analytics_visitor.nil?
@@ -593,10 +593,10 @@ req = Models::Operations::PatchAnalyticsPropertyRequest.new(
   analytics_property: Models::Shared::AnalyticsProperty.new(
     created_at: DateTime.iso8601('2021-09-05T19:04:58.430Z'),
     currency: 'USD',
-    id: '16534336-7829-4376-837d-15a6d1a6e12c',
-    name: 'Daniel, Goldner and Dickinson',
+    id: 'b437fcb3-723b-4cc3-af66-f552018dbb8e',
+    name: 'Graham - Glover',
     timezone: 'UTC',
-    updated_at: DateTime.iso8601('2021-09-14T23:55:21.105Z')
+    updated_at: DateTime.iso8601('2021-09-15T00:36:53.196Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -645,15 +645,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAnalyticsVisitorRequest.new(
   analytics_visitor: Models::Shared::AnalyticsVisitor.new(
     created_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
-    email: 'desiree.o.hara@icloud.com',
+    email: 'madisen.jenkins@icloud.com',
     first_seen_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
-    id: '8619acdb-247c-4697-935f-9e672690c48b',
-    last_seen_at: DateTime.iso8601('2025-02-02T03:20:40.408Z'),
+    id: '2238c225-c2d6-4bb7-9431-9d8da1f8873c',
+    last_seen_at: DateTime.iso8601('2025-02-06T11:25:09.664Z'),
     metadata: {
       'segment' => Models::Shared::PropertyAnalyticsVisitorMetadata.new,
     },
     total_events: 2916.0,
-    updated_at: DateTime.iso8601('2025-07-23T16:20:23.527Z')
+    updated_at: DateTime.iso8601('2025-07-28T10:36:11.351Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -785,10 +785,10 @@ req = Models::Operations::UpdateAnalyticsPropertyRequest.new(
   analytics_property: Models::Shared::AnalyticsProperty.new(
     created_at: DateTime.iso8601('2021-09-05T19:04:58.430Z'),
     currency: 'USD',
-    id: '16534336-7829-4376-837d-15a6d1a6e12c',
-    name: 'Daniel, Goldner and Dickinson',
+    id: 'b437fcb3-723b-4cc3-af66-f552018dbb8e',
+    name: 'Graham - Glover',
     timezone: 'UTC',
-    updated_at: DateTime.iso8601('2021-09-14T23:55:21.105Z')
+    updated_at: DateTime.iso8601('2021-09-15T00:36:53.196Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -837,15 +837,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAnalyticsVisitorRequest.new(
   analytics_visitor: Models::Shared::AnalyticsVisitor.new(
     created_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
-    email: 'desiree.o.hara@icloud.com',
+    email: 'madisen.jenkins@icloud.com',
     first_seen_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
-    id: '8619acdb-247c-4697-935f-9e672690c48b',
-    last_seen_at: DateTime.iso8601('2025-02-02T03:20:40.408Z'),
+    id: '2238c225-c2d6-4bb7-9431-9d8da1f8873c',
+    last_seen_at: DateTime.iso8601('2025-02-06T11:25:09.664Z'),
     metadata: {
       'segment' => Models::Shared::PropertyAnalyticsVisitorMetadata.new,
     },
     total_events: 2916.0,
-    updated_at: DateTime.iso8601('2025-07-23T16:20:23.527Z')
+    updated_at: DateTime.iso8601('2025-07-28T10:36:11.351Z')
   ),
   connection_id: '<id>',
   id: '<id>'

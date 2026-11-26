@@ -30,45 +30,45 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.item.create_commerce_item(commerce_item: Models::Shared::CommerceItem.new(
   collections: [],
   created_at: DateTime.iso8601('2019-06-21T20:16:18.628Z'),
-  description: 'Decretum vulnero ustulo abeo.',
+  description: 'Abeo surculus custodia ventus solio.',
   duration: 104.0,
   global_code: '978-0-85270-680-0',
-  id: '9689da96-3114-4d1d-9e2d-efb11e05edc2',
+  id: '1f72a837-ed78-4a20-bc63-d19a30ec925c',
   is_active: false,
   is_featured: false,
   is_taxable: true,
   is_visible: true,
   media: [
     Models::Shared::CommerceItemMedia.new(
-      alt: 'Caterva eveniet acies candidus.',
+      alt: 'Eveniet acies.',
       height: 876.0,
-      id: '0fadbac6-8c90-44db-b300-60b04a4328b0',
+      id: '2ae6eabd-2f00-47a4-af14-20aa08fe3f7d',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: '90080328-a716-40a1-9cdc-69a0ef2dfa29',
-          slug: 'doloremque',
-          value: 'allatus'
+          id: '5f3628a9-765c-4bfb-a025-edab067c536f',
+          slug: 'candidus',
+          value: 'doloremque'
         ),
       ],
       position: 21.0,
       type: Models::Shared::CommerceItemMediaType::VIDEO,
-      url: 'https://picsum.photos/seed/v73y0uzyK/3001/972',
+      url: 'https://picsum.photos/seed/uzyKI/235/2194',
       width: 67.0
     ),
     Models::Shared::CommerceItemMedia.new(
       alt: 'Comedo.',
       height: 651.0,
-      id: 'd20f27e3-65a8-428f-a182-7118267dd177',
+      id: '95800f28-5637-41db-8dab-a5b934219e42',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: '3dd49821-010d-4c36-abcf-22ab23177dc5',
+          id: 'a67f70f8-1dbb-4449-a504-4baf47552e29',
           slug: 'bis',
           value: 'somniculosus'
         ),
       ],
       position: 51.0,
       type: Models::Shared::CommerceItemMediaType::IMAGE,
-      url: 'https://picsum.photos/seed/Ao4iatfO/771/3906',
+      url: 'https://picsum.photos/seed/NFAo4iatfO/383/771',
       width: 3.0
     ),
   ],
@@ -78,31 +78,31 @@ res = s.item.create_commerce_item(commerce_item: Models::Shared::CommerceItem.ne
         'display_name' => 'Custom Property',
       },
       format: Models::Shared::CommerceMetadataFormat::TEXT,
-      id: '3075bef8-7023-4be3-8e1c-e233ec19cb3e',
+      id: 'd699e6a7-5191-48b5-9bd2-36daa9d12c6f',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'abstergo'
     ),
   ],
-  name: 'Handcrafted Rubber Tuna',
+  name: 'Oriental Gold Tuna',
   prices: [
     Models::Shared::CommerceItemPrice.new(
       currency: 'USD',
       price: 78.11
     ),
   ],
-  public_description: 'Custodia ventus solio compono.',
-  public_name: 'Handcrafted Rubber Tuna',
+  public_description: 'Adfero neque.',
+  public_name: 'Oriental Gold Tuna',
   requires_shipping: true,
-  slug: 'handcrafted-rubber-tuna',
+  slug: 'oriental-gold-tuna',
   tags: [
-    'beatae',
-    'blanditiis',
+    'dolores',
+    'amplus',
   ],
   total_stock: 682.0,
   type: 'SERVICE',
-  updated_at: DateTime.iso8601('2022-05-01T01:35:46.216Z'),
-  vendor_name: 'Mayer - Flatley',
+  updated_at: DateTime.iso8601('2022-05-03T08:44:44.568Z'),
+  vendor_name: 'Rohan - Pouros',
   weight: 37.0,
   weight_unit: Models::Shared::WeightUnit::OZ
 ), connection_id: '<id>')
@@ -240,45 +240,45 @@ req = Models::Operations::PatchCommerceItemRequest.new(
   commerce_item: Models::Shared::CommerceItem.new(
     collections: [],
     created_at: DateTime.iso8601('2019-06-21T20:16:18.628Z'),
-    description: 'Decretum vulnero ustulo abeo.',
+    description: 'Abeo surculus custodia ventus solio.',
     duration: 104.0,
     global_code: '978-0-85270-680-0',
-    id: '345ebae4-4acf-4a0c-8987-53e4315dfbe7',
+    id: 'd5365fec-8167-4658-b2b7-05f9898a7533',
     is_active: false,
     is_featured: false,
     is_taxable: true,
     is_visible: true,
     media: [
       Models::Shared::CommerceItemMedia.new(
-        alt: 'Caterva eveniet acies candidus.',
+        alt: 'Eveniet acies.',
         height: 876.0,
-        id: '6f922632-f127-4415-9db1-b0dd1f1c2c26',
+        id: 'd4cc62f5-6d51-41eb-bbda-788878d0a20b',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'd24f3866-1735-4a27-9557-5cf121a80753',
-            slug: 'doloremque',
-            value: 'allatus'
+            id: 'b92e6e74-0fe5-4547-a0f8-f9e426d6adf0',
+            slug: 'candidus',
+            value: 'doloremque'
           ),
         ],
         position: 21.0,
         type: Models::Shared::CommerceItemMediaType::VIDEO,
-        url: 'https://picsum.photos/seed/v73y0uzyK/3001/972',
+        url: 'https://picsum.photos/seed/uzyKI/235/2194',
         width: 67.0
       ),
       Models::Shared::CommerceItemMedia.new(
         alt: 'Comedo.',
         height: 651.0,
-        id: '7794ee97-17ea-4958-a47d-e24793a3b5cc',
+        id: '9198952b-4b4d-4dc2-bdc0-fe4575ca14bd',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '56c5094f-376c-4f23-be1d-5fe9f0c35da2',
+            id: '3801067d-8b48-41bb-91cb-ccd0dbffe017',
             slug: 'bis',
             value: 'somniculosus'
           ),
         ],
         position: 51.0,
         type: Models::Shared::CommerceItemMediaType::IMAGE,
-        url: 'https://picsum.photos/seed/Ao4iatfO/771/3906',
+        url: 'https://picsum.photos/seed/NFAo4iatfO/383/771',
         width: 3.0
       ),
     ],
@@ -288,31 +288,31 @@ req = Models::Operations::PatchCommerceItemRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CommerceMetadataFormat::TEXT,
-        id: '91a68cf9-3491-4e78-b082-fdb5125a8040',
+        id: '61f83778-f4e1-4e44-bded-44bd9accba3c',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'abstergo'
       ),
     ],
-    name: 'Handcrafted Rubber Tuna',
+    name: 'Oriental Gold Tuna',
     prices: [
       Models::Shared::CommerceItemPrice.new(
         currency: 'USD',
         price: 78.11
       ),
     ],
-    public_description: 'Custodia ventus solio compono.',
-    public_name: 'Handcrafted Rubber Tuna',
+    public_description: 'Adfero neque.',
+    public_name: 'Oriental Gold Tuna',
     requires_shipping: true,
-    slug: 'handcrafted-rubber-tuna',
+    slug: 'oriental-gold-tuna',
     tags: [
-      'beatae',
-      'blanditiis',
+      'dolores',
+      'amplus',
     ],
     total_stock: 682.0,
     type: 'SERVICE',
-    updated_at: DateTime.iso8601('2022-05-01T01:35:46.231Z'),
-    vendor_name: 'Mayer - Flatley',
+    updated_at: DateTime.iso8601('2022-05-03T08:44:44.580Z'),
+    vendor_name: 'Rohan - Pouros',
     weight: 37.0,
     weight_unit: Models::Shared::WeightUnit::OZ
   ),
@@ -405,45 +405,45 @@ req = Models::Operations::UpdateCommerceItemRequest.new(
   commerce_item: Models::Shared::CommerceItem.new(
     collections: [],
     created_at: DateTime.iso8601('2019-06-21T20:16:18.628Z'),
-    description: 'Decretum vulnero ustulo abeo.',
+    description: 'Abeo surculus custodia ventus solio.',
     duration: 104.0,
     global_code: '978-0-85270-680-0',
-    id: '345ebae4-4acf-4a0c-8987-53e4315dfbe7',
+    id: 'd5365fec-8167-4658-b2b7-05f9898a7533',
     is_active: false,
     is_featured: false,
     is_taxable: true,
     is_visible: true,
     media: [
       Models::Shared::CommerceItemMedia.new(
-        alt: 'Caterva eveniet acies candidus.',
+        alt: 'Eveniet acies.',
         height: 876.0,
-        id: '6f922632-f127-4415-9db1-b0dd1f1c2c26',
+        id: 'd4cc62f5-6d51-41eb-bbda-788878d0a20b',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'd24f3866-1735-4a27-9557-5cf121a80753',
-            slug: 'doloremque',
-            value: 'allatus'
+            id: 'b92e6e74-0fe5-4547-a0f8-f9e426d6adf0',
+            slug: 'candidus',
+            value: 'doloremque'
           ),
         ],
         position: 21.0,
         type: Models::Shared::CommerceItemMediaType::VIDEO,
-        url: 'https://picsum.photos/seed/v73y0uzyK/3001/972',
+        url: 'https://picsum.photos/seed/uzyKI/235/2194',
         width: 67.0
       ),
       Models::Shared::CommerceItemMedia.new(
         alt: 'Comedo.',
         height: 651.0,
-        id: '7794ee97-17ea-4958-a47d-e24793a3b5cc',
+        id: '9198952b-4b4d-4dc2-bdc0-fe4575ca14bd',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '56c5094f-376c-4f23-be1d-5fe9f0c35da2',
+            id: '3801067d-8b48-41bb-91cb-ccd0dbffe017',
             slug: 'bis',
             value: 'somniculosus'
           ),
         ],
         position: 51.0,
         type: Models::Shared::CommerceItemMediaType::IMAGE,
-        url: 'https://picsum.photos/seed/Ao4iatfO/771/3906',
+        url: 'https://picsum.photos/seed/NFAo4iatfO/383/771',
         width: 3.0
       ),
     ],
@@ -453,31 +453,31 @@ req = Models::Operations::UpdateCommerceItemRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CommerceMetadataFormat::TEXT,
-        id: '91a68cf9-3491-4e78-b082-fdb5125a8040',
+        id: '61f83778-f4e1-4e44-bded-44bd9accba3c',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'abstergo'
       ),
     ],
-    name: 'Handcrafted Rubber Tuna',
+    name: 'Oriental Gold Tuna',
     prices: [
       Models::Shared::CommerceItemPrice.new(
         currency: 'USD',
         price: 78.11
       ),
     ],
-    public_description: 'Custodia ventus solio compono.',
-    public_name: 'Handcrafted Rubber Tuna',
+    public_description: 'Adfero neque.',
+    public_name: 'Oriental Gold Tuna',
     requires_shipping: true,
-    slug: 'handcrafted-rubber-tuna',
+    slug: 'oriental-gold-tuna',
     tags: [
-      'beatae',
-      'blanditiis',
+      'dolores',
+      'amplus',
     ],
     total_stock: 682.0,
     type: 'SERVICE',
-    updated_at: DateTime.iso8601('2022-05-01T01:35:46.231Z'),
-    vendor_name: 'Mayer - Flatley',
+    updated_at: DateTime.iso8601('2022-05-03T08:44:44.580Z'),
+    vendor_name: 'Rohan - Pouros',
     weight: 37.0,
     weight_unit: Models::Shared::WeightUnit::OZ
   ),

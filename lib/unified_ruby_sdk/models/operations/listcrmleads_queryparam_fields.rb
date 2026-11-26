@@ -30,6 +30,7 @@ module UnifiedRubySDK
           TITLE = new('title')
           LINK_URLS = new('link_urls')
           METADATA = new('metadata')
+          VEHICLE_IDS = new('vehicle_ids')
           RAW = new('raw')
         end
       end

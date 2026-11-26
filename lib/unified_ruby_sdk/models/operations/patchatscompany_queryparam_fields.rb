@@ -20,6 +20,7 @@ module UnifiedRubySDK
           PARENT_ID = new('parent_id')
           RECRUITER_IDS = new('recruiter_ids')
           METADATA = new('metadata')
+          FEES = new('fees')
           RAW = new('raw')
         end
       end

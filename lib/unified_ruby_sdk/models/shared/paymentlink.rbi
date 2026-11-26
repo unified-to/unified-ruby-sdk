@@ -10,8 +10,14 @@ end
 class UnifiedRubySDK::Models::Shared::PaymentLink
   def amount(); end
   def amount=(str_); end
+  def contact_email(); end
+  def contact_email=(str_); end
   def contact_id(); end
   def contact_id=(str_); end
+  def contact_name(); end
+  def contact_name=(str_); end
+  def contact_phone(); end
+  def contact_phone=(str_); end
   def created_at(); end
   def created_at=(str_); end
   def currency(); end

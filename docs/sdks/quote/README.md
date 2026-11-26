@@ -5,6 +5,7 @@
 ### Available Operations
 
 * [create_accounting_quote](#create_accounting_quote) - Create a quote
+* [create_printing_quote](#create_printing_quote) - Create a quote
 * [create_property_quote](#create_property_quote) - Create a quote
 * [get_accounting_quote](#get_accounting_quote) - Retrieve a quote
 * [list_accounting_quotes](#list_accounting_quotes) - List all quotes
@@ -55,6 +56,122 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## create_printing_quote
+
+Creates a PrintingQuote. Provide the unified PrintingQuote fields in the request body; they are mapped to the provider's API. Returns the created PrintingQuote.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="createPrintingQuote" method="post" path="/printing/{connection_id}/quote" example="printing_quote" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.quote.create_printing_quote(printing_quote: Models::Shared::PrintingQuote.new(
+  created_at: DateTime.iso8601('2019-01-02T03:42:06.944Z'),
+  currency: 'USD',
+  discount_amount: 0.0,
+  id: '7bd11fb6-1cb4-4421-8ded-507f3564a83b',
+  lineitems: [
+    Models::Shared::PrintingLineitem.new(
+      files: [
+        Models::Shared::PrintingLineitemFile.new(
+          placement: 'default',
+          url: 'https://picsum.photos/seed/0Y5Bjnoiwx/3057/3113'
+        ),
+      ],
+      id: '1',
+      name: 'Practical Wooden Salad',
+      quantity: 2.0,
+      retail_price_amount: 50.83,
+      unit_price_amount: 21.72
+    ),
+    Models::Shared::PrintingLineitem.new(
+      files: [
+        Models::Shared::PrintingLineitemFile.new(
+          placement: 'default',
+          url: 'https://picsum.photos/seed/rcPUF/2295/1801'
+        ),
+      ],
+      id: '2',
+      name: 'Handmade Gold Car',
+      quantity: 4.0,
+      retail_price_amount: 35.47,
+      sku: 'I79GIBCK',
+      unit_price_amount: 17.64
+    ),
+  ],
+  metadata: [],
+  shipping_address: Models::Shared::PropertyPrintingQuoteShippingAddress.new(
+    address1: '4290 Garden Street',
+    address2: 'Suite 874',
+    city: 'Cartwrightshire',
+    company_name: 'Kris and Sons',
+    country: 'United States',
+    country_code: 'US',
+    email: 'jada73@hotmail.com',
+    name: 'Heaven Crist',
+    postal_code: '92871',
+    region: 'North Carolina',
+    region_code: 'KY',
+    telephone: '653.412.8900 x9387'
+  ),
+  shipping_amount: 4.69,
+  shipping_method: 'STANDARD',
+  shipping_options: [
+    Models::Shared::PrintingShippingoption.new(
+      amount: 4.69,
+      code: 'STANDARD',
+      currency: 'USD',
+      max_delivery_days: 5.0,
+      min_delivery_days: 3.0,
+      name: 'Flat Rate (3-5 business days after fulfillment)'
+    ),
+    Models::Shared::PrintingShippingoption.new(
+      amount: 12.99,
+      code: 'EXPRESS',
+      currency: 'USD',
+      max_delivery_days: 3.0,
+      min_delivery_days: 1.0,
+      name: 'Express (1-3 business days after fulfillment)'
+    ),
+  ],
+  subtotal_amount: 114.0,
+  tax_amount: 9.12,
+  total_amount: 127.81,
+  updated_at: DateTime.iso8601('2019-01-02T03:42:06.944Z')
+), connection_id: '<id>')
+
+unless res.printing_quote.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `printing_quote`                                                                                                                                 | [Models::Shared::PrintingQuote](../../models/shared/printingquote.md)                                                                            | :heavy_check_mark:                                                                                                                               | A cost and shipping estimate for a prospective print order                                                                                       |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreatePrintingQuoteQueryParamFields](../../models/operations/createprintingquotequeryparamfields.md)>              | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::CreatePrintingQuoteResponse)](../../models/operations/createprintingquoteresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## create_property_quote
 
 Creates a PropertyQuote. Provide the unified PropertyQuote fields in the request body; they are mapped to the provider's API. Returns the created PropertyQuote.
@@ -77,9 +194,9 @@ res = s.quote.create_property_quote(property_quote: Models::Shared::PropertyQuot
   created_at: DateTime.iso8601('2020-12-18T19:14:11.415Z'),
   currency: 'USD',
   deposit_amount: 594.54,
-  end_at: DateTime.iso8601('2026-12-04'),
+  end_at: DateTime.iso8601('2026-12-10'),
   guests: 2.0,
-  id: 'bcdd518a-5481-4177-9250-0ec7d62602fa',
+  id: '5ecd1a32-b53c-4d9f-bcb2-6add85ab81f4',
   line_items: [
     Models::Shared::PropertyLineitem.new(
       amount: 1665.0,
@@ -101,7 +218,7 @@ res = s.quote.create_property_quote(property_quote: Models::Shared::PropertyQuot
       type: Models::Shared::PropertyLineitemType::TAX
     ),
   ],
-  start_at: DateTime.iso8601('2026-11-25'),
+  start_at: DateTime.iso8601('2026-12-01'),
   total_amount: 1981.8
 ), connection_id: '<id>')
 

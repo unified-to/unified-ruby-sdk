@@ -30,23 +30,23 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
   )
 )
 res = s.scorecard.create_ats_scorecard(ats_scorecard: Models::Shared::AtsScorecard.new(
-  comment: 'Maiores enim.',
+  comment: 'Aliquam.',
   created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
-  id: '95c350a5-d9de-46ad-a749-7cc8b743ade7',
+  id: 'cd3413cc-47a7-4d28-8633-f4cbbfe20baa',
   metadata: [],
   questions: [
     Models::Shared::AtsScorecardQuestion.new(
-      description: 'Sulum textor eveniet facere vita.',
-      text: 'Aliquam.'
+      description: 'Pecto vulpes libero vomer comburo.',
+      text: 'Desidero modi tamdiu auxilium defessus adimpleo clementia tero.'
     ),
     Models::Shared::AtsScorecardQuestion.new(
-      answer: 'Decretum.',
-      description: 'Conatus cicuta doloremque statua bonus.',
-      text: 'Pecto vulpes libero vomer comburo.'
+      answer: 'Conatus cicuta doloremque statua bonus.',
+      description: 'Aduro viscus celebrer.',
+      text: 'Decretum.'
     ),
   ],
   recommendation: Models::Shared::Recommendation::STRONG_YES,
-  updated_at: DateTime.iso8601('2023-06-13T20:14:43.850Z')
+  updated_at: DateTime.iso8601('2023-06-15T11:42:00.755Z')
 ), connection_id: '<id>')
 
 unless res.ats_scorecard.nil?
@@ -267,23 +267,23 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchAtsScorecardRequest.new(
   ats_scorecard: Models::Shared::AtsScorecard.new(
-    comment: 'Maiores enim.',
+    comment: 'Aliquam.',
     created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
-    id: '94e6b0ed-f85e-411a-89fd-824d9040e1ed',
+    id: 'b2414b1a-38f0-4936-ade4-440138ad0bcf',
     metadata: [],
     questions: [
       Models::Shared::AtsScorecardQuestion.new(
-        description: 'Sulum textor eveniet facere vita.',
-        text: 'Aliquam.'
+        description: 'Pecto vulpes libero vomer comburo.',
+        text: 'Desidero modi tamdiu auxilium defessus adimpleo clementia tero.'
       ),
       Models::Shared::AtsScorecardQuestion.new(
-        answer: 'Decretum.',
-        description: 'Conatus cicuta doloremque statua bonus.',
-        text: 'Pecto vulpes libero vomer comburo.'
+        answer: 'Conatus cicuta doloremque statua bonus.',
+        description: 'Aduro viscus celebrer.',
+        text: 'Decretum.'
       ),
     ],
     recommendation: Models::Shared::Recommendation::STRONG_YES,
-    updated_at: DateTime.iso8601('2023-06-13T20:14:43.853Z')
+    updated_at: DateTime.iso8601('2023-06-15T11:42:00.759Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -372,23 +372,23 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateAtsScorecardRequest.new(
   ats_scorecard: Models::Shared::AtsScorecard.new(
-    comment: 'Maiores enim.',
+    comment: 'Aliquam.',
     created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
-    id: '94e6b0ed-f85e-411a-89fd-824d9040e1ed',
+    id: 'b2414b1a-38f0-4936-ade4-440138ad0bcf',
     metadata: [],
     questions: [
       Models::Shared::AtsScorecardQuestion.new(
-        description: 'Sulum textor eveniet facere vita.',
-        text: 'Aliquam.'
+        description: 'Pecto vulpes libero vomer comburo.',
+        text: 'Desidero modi tamdiu auxilium defessus adimpleo clementia tero.'
       ),
       Models::Shared::AtsScorecardQuestion.new(
-        answer: 'Decretum.',
-        description: 'Conatus cicuta doloremque statua bonus.',
-        text: 'Pecto vulpes libero vomer comburo.'
+        answer: 'Conatus cicuta doloremque statua bonus.',
+        description: 'Aduro viscus celebrer.',
+        text: 'Decretum.'
       ),
     ],
     recommendation: Models::Shared::Recommendation::STRONG_YES,
-    updated_at: DateTime.iso8601('2023-06-13T20:14:43.853Z')
+    updated_at: DateTime.iso8601('2023-06-15T11:42:00.759Z')
   ),
   connection_id: '<id>',
   id: '<id>'

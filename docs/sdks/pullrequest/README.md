@@ -28,18 +28,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
   )
 )
 res = s.pullrequest.create_repo_pullrequest(repo_pullrequest: Models::Shared::RepoPullrequest.new(
-  closed_at: DateTime.iso8601('2025-05-19T11:13:13.200Z'),
+  closed_at: DateTime.iso8601('2025-05-23T00:31:27.098Z'),
   created_at: DateTime.iso8601('2023-02-27T09:37:13.663Z'),
-  id: 'ef069dbc-1959-4b72-bcf4-403bc7bb9055',
+  id: '892c61e1-dd93-440e-a565-bc333129ce18',
   labels: [
-    'creptio',
-    'tutamen',
+    'crudelis',
+    'uxor',
   ],
   metadata: [],
-  notes: 'Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.',
+  notes: 'Amet asporto defero coadunatio. Curtus ceno consuasor aggero veritatis suggero adeo creptio tutamen. Aqua delicate adopto derelinquo caritas bibo maiores vulgivagus succurro temporibus.',
   status: Models::Shared::RepoPullrequestStatus::APPROVED,
-  title: 'reboot mobile application',
-  updated_at: DateTime.iso8601('2026-02-10T01:23:05.360Z')
+  title: 'compress redundant application',
+  updated_at: DateTime.iso8601('2026-02-14T18:41:33.912Z')
 ), connection_id: '<id>')
 
 unless res.repo_pullrequest.nil?
@@ -173,18 +173,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchRepoPullrequestRequest.new(
   repo_pullrequest: Models::Shared::RepoPullrequest.new(
-    closed_at: DateTime.iso8601('2025-05-19T11:13:13.205Z'),
+    closed_at: DateTime.iso8601('2025-05-23T00:31:27.106Z'),
     created_at: DateTime.iso8601('2023-02-27T09:37:13.663Z'),
-    id: '662df6d7-e1c8-4d41-a8dc-f91d8cbed796',
+    id: '5d0a35a7-d5e9-4758-8ba9-4e08f7f419bd',
     labels: [
-      'creptio',
-      'tutamen',
+      'crudelis',
+      'uxor',
     ],
     metadata: [],
-    notes: 'Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.',
+    notes: 'Amet asporto defero coadunatio. Curtus ceno consuasor aggero veritatis suggero adeo creptio tutamen. Aqua delicate adopto derelinquo caritas bibo maiores vulgivagus succurro temporibus.',
     status: Models::Shared::RepoPullrequestStatus::APPROVED,
-    title: 'reboot mobile application',
-    updated_at: DateTime.iso8601('2026-02-10T01:23:05.369Z')
+    title: 'compress redundant application',
+    updated_at: DateTime.iso8601('2026-02-14T18:41:33.924Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -273,18 +273,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateRepoPullrequestRequest.new(
   repo_pullrequest: Models::Shared::RepoPullrequest.new(
-    closed_at: DateTime.iso8601('2025-05-19T11:13:13.205Z'),
+    closed_at: DateTime.iso8601('2025-05-23T00:31:27.106Z'),
     created_at: DateTime.iso8601('2023-02-27T09:37:13.663Z'),
-    id: '662df6d7-e1c8-4d41-a8dc-f91d8cbed796',
+    id: '5d0a35a7-d5e9-4758-8ba9-4e08f7f419bd',
     labels: [
-      'creptio',
-      'tutamen',
+      'crudelis',
+      'uxor',
     ],
     metadata: [],
-    notes: 'Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.',
+    notes: 'Amet asporto defero coadunatio. Curtus ceno consuasor aggero veritatis suggero adeo creptio tutamen. Aqua delicate adopto derelinquo caritas bibo maiores vulgivagus succurro temporibus.',
     status: Models::Shared::RepoPullrequestStatus::APPROVED,
-    title: 'reboot mobile application',
-    updated_at: DateTime.iso8601('2026-02-10T01:23:05.369Z')
+    title: 'compress redundant application',
+    updated_at: DateTime.iso8601('2026-02-14T18:41:33.924Z')
   ),
   connection_id: '<id>',
   id: '<id>'

@@ -33,8 +33,8 @@ res = s.subscription.create_payment_subscription(payment_subscription: Models::S
   current_period_end_at: DateTime.iso8601('2024-02-08T10:05:22.912Z'),
   current_period_start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
   day_of_month: 8.0,
-  description: 'Innovative Mouse featuring important technology and Bamboo construction',
-  id: '8d5bedb0-3dab-4498-89a8-80e7750b797c',
+  description: 'New Bike model with 94 GB RAM, 813 GB storage, and narrow features',
+  id: '8959891f-e861-4cbb-9a36-c3f19c3e6368',
   interval: 1.0,
   interval_unit: Models::Shared::IntervalUnit::YEAR,
   lineitems: [],
@@ -43,7 +43,7 @@ res = s.subscription.create_payment_subscription(payment_subscription: Models::S
   start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
   status: Models::Shared::PaymentSubscriptionStatus::ACTIVE,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2023-10-08T01:58:01.387Z')
+  updated_at: DateTime.iso8601('2023-10-08T18:52:20.743Z')
 ), connection_id: '<id>')
 
 unless res.payment_subscription.nil?
@@ -182,8 +182,8 @@ req = Models::Operations::PatchPaymentSubscriptionRequest.new(
     current_period_end_at: DateTime.iso8601('2024-02-08T10:05:22.912Z'),
     current_period_start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     day_of_month: 8.0,
-    description: 'Innovative Mouse featuring important technology and Bamboo construction',
-    id: '656c31cc-f06d-4c7c-9157-8c8fabcf5523',
+    description: 'New Bike model with 94 GB RAM, 813 GB storage, and narrow features',
+    id: 'd81217f1-6019-4ad1-a743-cfde982e27d1',
     interval: 1.0,
     interval_unit: Models::Shared::IntervalUnit::YEAR,
     lineitems: [],
@@ -192,7 +192,7 @@ req = Models::Operations::PatchPaymentSubscriptionRequest.new(
     start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     status: Models::Shared::PaymentSubscriptionStatus::ACTIVE,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-10-08T01:58:01.391Z')
+    updated_at: DateTime.iso8601('2023-10-08T18:52:20.746Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -286,8 +286,8 @@ req = Models::Operations::UpdatePaymentSubscriptionRequest.new(
     current_period_end_at: DateTime.iso8601('2024-02-08T10:05:22.912Z'),
     current_period_start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     day_of_month: 8.0,
-    description: 'Innovative Mouse featuring important technology and Bamboo construction',
-    id: '656c31cc-f06d-4c7c-9157-8c8fabcf5523',
+    description: 'New Bike model with 94 GB RAM, 813 GB storage, and narrow features',
+    id: 'd81217f1-6019-4ad1-a743-cfde982e27d1',
     interval: 1.0,
     interval_unit: Models::Shared::IntervalUnit::YEAR,
     lineitems: [],
@@ -296,7 +296,7 @@ req = Models::Operations::UpdatePaymentSubscriptionRequest.new(
     start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     status: Models::Shared::PaymentSubscriptionStatus::ACTIVE,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-10-08T01:58:01.391Z')
+    updated_at: DateTime.iso8601('2023-10-08T18:52:20.746Z')
   ),
   connection_id: '<id>',
   id: '<id>'

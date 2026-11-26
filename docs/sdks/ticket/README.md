@@ -30,19 +30,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.ticket.create_ticketing_ticket(ticketing_ticket: Models::Shared::TicketingTicket.new(
   attachment_ids: [],
   created_at: DateTime.iso8601('2021-06-25T19:19:31.279Z'),
-  description: 'Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.',
+  description: 'Aut clibanus vulgaris patrocinor confugo laborum acies. Antepono coniuratio conculco correptius curiositas sono. Coma socius bestia suus tot.',
   due_at: DateTime.iso8601('2021-07-07T17:39:49.813Z'),
-  id: 'ca27bfa6-2e16-4054-bd2d-2cce568d498a',
+  id: '8c9b78cd-5567-4764-9c8a-4e480854ff18',
   metadata: [],
   priority: 'MEDIUM',
   source: 'email',
   status: Models::Shared::TicketingTicketStatus::ACTIVE,
-  subject: 'Thymbra ratione minus arbitro tricesimus cetera validus.',
+  subject: 'Arbitro tricesimus cetera validus solium defendo.',
   tags: [
-    'vilicus',
+    'cotidie',
   ],
-  updated_at: DateTime.iso8601('2021-07-03T21:25:59.074Z'),
-  url: 'https://similar-velocity.net/'
+  updated_at: DateTime.iso8601('2021-07-03T22:01:09.585Z'),
+  url: 'https://royal-flu.com'
 ), connection_id: '<id>')
 
 unless res.ticketing_ticket.nil?
@@ -178,19 +178,19 @@ req = Models::Operations::PatchTicketingTicketRequest.new(
   ticketing_ticket: Models::Shared::TicketingTicket.new(
     attachment_ids: [],
     created_at: DateTime.iso8601('2021-06-25T19:19:31.279Z'),
-    description: 'Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.',
+    description: 'Aut clibanus vulgaris patrocinor confugo laborum acies. Antepono coniuratio conculco correptius curiositas sono. Coma socius bestia suus tot.',
     due_at: DateTime.iso8601('2021-07-07T17:39:49.813Z'),
-    id: '340c6c09-595d-4fa8-9548-025142a8dee3',
+    id: 'b8854898-d469-4e14-b900-f232f318a472',
     metadata: [],
     priority: 'MEDIUM',
     source: 'email',
     status: Models::Shared::TicketingTicketStatus::ACTIVE,
-    subject: 'Thymbra ratione minus arbitro tricesimus cetera validus.',
+    subject: 'Arbitro tricesimus cetera validus solium defendo.',
     tags: [
-      'vilicus',
+      'cotidie',
     ],
-    updated_at: DateTime.iso8601('2021-07-03T21:25:59.074Z'),
-    url: 'https://similar-velocity.net/'
+    updated_at: DateTime.iso8601('2021-07-03T22:01:09.585Z'),
+    url: 'https://royal-flu.com'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -281,19 +281,19 @@ req = Models::Operations::UpdateTicketingTicketRequest.new(
   ticketing_ticket: Models::Shared::TicketingTicket.new(
     attachment_ids: [],
     created_at: DateTime.iso8601('2021-06-25T19:19:31.279Z'),
-    description: 'Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.',
+    description: 'Aut clibanus vulgaris patrocinor confugo laborum acies. Antepono coniuratio conculco correptius curiositas sono. Coma socius bestia suus tot.',
     due_at: DateTime.iso8601('2021-07-07T17:39:49.813Z'),
-    id: '340c6c09-595d-4fa8-9548-025142a8dee3',
+    id: 'b8854898-d469-4e14-b900-f232f318a472',
     metadata: [],
     priority: 'MEDIUM',
     source: 'email',
     status: Models::Shared::TicketingTicketStatus::ACTIVE,
-    subject: 'Thymbra ratione minus arbitro tricesimus cetera validus.',
+    subject: 'Arbitro tricesimus cetera validus solium defendo.',
     tags: [
-      'vilicus',
+      'cotidie',
     ],
-    updated_at: DateTime.iso8601('2021-07-03T21:25:59.074Z'),
-    url: 'https://similar-velocity.net/'
+    updated_at: DateTime.iso8601('2021-07-03T22:01:09.585Z'),
+    url: 'https://royal-flu.com'
   ),
   connection_id: '<id>',
   id: '<id>'

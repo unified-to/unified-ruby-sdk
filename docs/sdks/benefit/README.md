@@ -28,22 +28,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
   )
 )
 res = s.benefit.create_hris_benefit(hris_benefit: Models::Shared::HrisBenefit.new(
-  code: 'E7P1FZ',
+  code: 'FZL1QZ',
   coverage_level: Models::Shared::CoverageLevel::EMPLOYEE_SPOUSE,
   created_at: DateTime.iso8601('2020-06-11T01:24:05.654Z'),
   currency: 'GBP',
-  description: 'Vomito voluptas dolor sed.',
+  description: 'Cupressus blanditiis supellex adhaero.',
   employer_contribution_amount: 185_006.0,
   employer_contribution_max_amount: 179_093.0,
   employer_contribution_type: Models::Shared::EmployerContributionType::PERCENTAGE,
   frequency: Models::Shared::HrisBenefitFrequency::MONTH,
-  id: '2ce82406-99eb-4c43-b4ec-7f2c651cca09',
+  id: '6a7ec10d-a2a1-4615-982d-bcd2c0cd4907',
   is_active: false,
   metadata: [],
-  name: 'Frozen Wooden Ball',
+  name: 'Unbranded Wooden Keyboard',
   tax: Models::Shared::Tax::PRE_TAX,
   type: Models::Shared::HrisBenefitType::EMPLOYER_TAX_CONTRIBUTION,
-  updated_at: DateTime.iso8601('2025-07-18T08:01:58.580Z')
+  updated_at: DateTime.iso8601('2025-07-23T01:17:46.331Z')
 ), connection_id: '<id>')
 
 unless res.hris_benefit.nil?
@@ -177,22 +177,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchHrisBenefitRequest.new(
   hris_benefit: Models::Shared::HrisBenefit.new(
-    code: 'E7P1FZ',
+    code: 'FZL1QZ',
     coverage_level: Models::Shared::CoverageLevel::EMPLOYEE_SPOUSE,
     created_at: DateTime.iso8601('2020-06-11T01:24:05.654Z'),
     currency: 'GBP',
-    description: 'Vomito voluptas dolor sed.',
+    description: 'Cupressus blanditiis supellex adhaero.',
     employer_contribution_amount: 185_006.0,
     employer_contribution_max_amount: 179_093.0,
     employer_contribution_type: Models::Shared::EmployerContributionType::PERCENTAGE,
     frequency: Models::Shared::HrisBenefitFrequency::MONTH,
-    id: 'd89c503e-2c9b-4665-b63f-16bb1c054a1e',
+    id: '66211c31-17af-43e8-9f10-dfeaa07e38ee',
     is_active: false,
     metadata: [],
-    name: 'Frozen Wooden Ball',
+    name: 'Unbranded Wooden Keyboard',
     tax: Models::Shared::Tax::PRE_TAX,
     type: Models::Shared::HrisBenefitType::EMPLOYER_TAX_CONTRIBUTION,
-    updated_at: DateTime.iso8601('2025-07-18T08:01:58.589Z')
+    updated_at: DateTime.iso8601('2025-07-23T01:17:46.353Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -281,22 +281,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateHrisBenefitRequest.new(
   hris_benefit: Models::Shared::HrisBenefit.new(
-    code: 'E7P1FZ',
+    code: 'FZL1QZ',
     coverage_level: Models::Shared::CoverageLevel::EMPLOYEE_SPOUSE,
     created_at: DateTime.iso8601('2020-06-11T01:24:05.654Z'),
     currency: 'GBP',
-    description: 'Vomito voluptas dolor sed.',
+    description: 'Cupressus blanditiis supellex adhaero.',
     employer_contribution_amount: 185_006.0,
     employer_contribution_max_amount: 179_093.0,
     employer_contribution_type: Models::Shared::EmployerContributionType::PERCENTAGE,
     frequency: Models::Shared::HrisBenefitFrequency::MONTH,
-    id: 'd89c503e-2c9b-4665-b63f-16bb1c054a1e',
+    id: '66211c31-17af-43e8-9f10-dfeaa07e38ee',
     is_active: false,
     metadata: [],
-    name: 'Frozen Wooden Ball',
+    name: 'Unbranded Wooden Keyboard',
     tax: Models::Shared::Tax::PRE_TAX,
     type: Models::Shared::HrisBenefitType::EMPLOYER_TAX_CONTRIBUTION,
-    updated_at: DateTime.iso8601('2025-07-18T08:01:58.589Z')
+    updated_at: DateTime.iso8601('2025-07-23T01:17:46.353Z')
   ),
   connection_id: '<id>',
   id: '<id>'

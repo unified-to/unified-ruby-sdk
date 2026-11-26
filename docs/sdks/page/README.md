@@ -29,15 +29,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.page.create_kms_page(kms_page: Models::Shared::KmsPage.new(
   created_at: DateTime.iso8601('2019-05-20T18:06:50.749Z'),
-  download_url: 'https://agitated-validity.info',
+  download_url: 'https://rusty-amnesty.name/',
   has_children: true,
-  id: '766941f5-b04b-4170-a5de-bc405de2ed4d',
+  id: 'c6b12b1e-9689-44f6-94bf-3c29468f90d8',
   is_active: true,
   metadata: [],
-  title: 'even minister extract',
+  title: 'unbearably phooey validity',
   type: Models::Shared::KmsPageType::HTML,
-  updated_at: DateTime.iso8601('2025-11-04T00:09:30.391Z'),
-  web_url: 'https://another-petticoat.info'
+  updated_at: DateTime.iso8601('2025-11-09T03:18:03.085Z'),
+  web_url: 'https://spiffy-bend.org/'
 ), connection_id: '<id>')
 
 unless res.kms_page.nil?
@@ -172,15 +172,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchKmsPageRequest.new(
   kms_page: Models::Shared::KmsPage.new(
     created_at: DateTime.iso8601('2019-05-20T18:06:50.749Z'),
-    download_url: 'https://agitated-validity.info',
+    download_url: 'https://rusty-amnesty.name/',
     has_children: true,
-    id: '45930fd4-d214-419c-8256-a4e4e18294fe',
+    id: 'fb2b25a0-d68b-4e46-90d9-3a2f137c18c3',
     is_active: true,
     metadata: [],
-    title: 'even minister extract',
+    title: 'unbearably phooey validity',
     type: Models::Shared::KmsPageType::HTML,
-    updated_at: DateTime.iso8601('2025-11-04T00:09:30.402Z'),
-    web_url: 'https://another-petticoat.info'
+    updated_at: DateTime.iso8601('2025-11-09T03:18:03.096Z'),
+    web_url: 'https://spiffy-bend.org/'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -270,15 +270,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateKmsPageRequest.new(
   kms_page: Models::Shared::KmsPage.new(
     created_at: DateTime.iso8601('2019-05-20T18:06:50.749Z'),
-    download_url: 'https://agitated-validity.info',
+    download_url: 'https://rusty-amnesty.name/',
     has_children: true,
-    id: '45930fd4-d214-419c-8256-a4e4e18294fe',
+    id: 'fb2b25a0-d68b-4e46-90d9-3a2f137c18c3',
     is_active: true,
     metadata: [],
-    title: 'even minister extract',
+    title: 'unbearably phooey validity',
     type: Models::Shared::KmsPageType::HTML,
-    updated_at: DateTime.iso8601('2025-11-04T00:09:30.402Z'),
-    web_url: 'https://another-petticoat.info'
+    updated_at: DateTime.iso8601('2025-11-09T03:18:03.096Z'),
+    web_url: 'https://spiffy-bend.org/'
   ),
   connection_id: '<id>',
   id: '<id>'

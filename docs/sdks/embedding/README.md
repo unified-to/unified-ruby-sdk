@@ -25,13 +25,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.embedding.create_genai_embedding(genai_embedding: Models::Shared::GenaiEmbedding.new(
   content: [
     Models::Shared::GenaiEmbeddingContent.new(
-      text: 'Utrimque temptatio pecco demulceo.'
+      text: 'Demulceo adulescens est delectatio solitudo videlicet volo.'
     ),
   ],
   dimension: 423.0,
-  embeddings: 'Est.',
-  enconding_format: Models::Shared::EncondingFormat::FLOAT,
-  id: '649cc913-e656-45ec-9131-9189450bd351',
+  embeddings: 'Venia tutis cernuus viscus officiis utilis porro utique.',
+  encoding_format: Models::Shared::EncodingFormat::FLOAT,
+  id: '07e9cc1b-3b33-474d-95dd-eab4382a4391',
   max_tokens: 223.0,
   tokens_used: 836.0,
   type: 'classification'

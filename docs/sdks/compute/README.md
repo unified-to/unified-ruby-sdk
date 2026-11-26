@@ -82,18 +82,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.compute.create_compute_deployment(compute_deployment: Models::Shared::ComputeDeployment.new(
   branch: 'develop',
-  commit_identifier: 'fadfe54eefd8fea670bea6d58b4b15d406c4b02b',
-  commit_message: 'copy primary pixel',
+  commit_identifier: 'fe54eefd8fea670bea6d58b4b15d406c4b02b7aa',
+  commit_message: 'transmit auxiliary microchip',
   created_at: DateTime.iso8601('2022-06-07T03:52:04.613Z'),
   environment: Models::Shared::Environment::PREVIEW,
-  finished_at: DateTime.iso8601('2025-09-20T18:48:47.788Z'),
-  id: 'a64e6445-bfb3-459b-8e79-ef5eb3320bc8',
+  finished_at: DateTime.iso8601('2025-09-25T04:27:29.743Z'),
+  id: '1a5e5fe3-a583-4d06-932c-fb3ced7dee5f',
   metadata: [],
-  started_at: DateTime.iso8601('2025-04-29T19:30:44.192Z'),
+  started_at: DateTime.iso8601('2025-05-03T16:29:58.363Z'),
   status: Models::Shared::ComputeDeploymentStatus::LIVE,
   trigger: Models::Shared::Trigger::API,
-  updated_at: DateTime.iso8601('2026-03-26T08:19:22.910Z'),
-  url: 'https://comfortable-petal.name'
+  updated_at: DateTime.iso8601('2026-03-31T10:22:13.323Z'),
+  url: 'https://dismal-creature.info'
 ), connection_id: '<id>')
 
 unless res.compute_deployment.nil?
@@ -139,12 +139,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.compute.create_compute_domain(compute_domain: Models::Shared::ComputeDomain.new(
   created_at: DateTime.iso8601('2019-11-22T16:38:26.009Z'),
-  id: '3cdff451-ac27-4143-bb96-6b1329428d00',
+  id: '2d2fbeca-1933-4757-bdb2-2b68913b0de2',
   is_primary: false,
   metadata: [],
-  name: 'mysterious-republican.usable-section.info',
+  name: 'steel-hovercraft.humiliating-lender.com',
   status: Models::Shared::ComputeDomainStatus::PENDING,
-  updated_at: DateTime.iso8601('2023-11-20T18:24:07.231Z')
+  updated_at: DateTime.iso8601('2023-11-24T04:06:10.933Z')
 ), connection_id: '<id>')
 
 unless res.compute_domain.nil?
@@ -193,11 +193,11 @@ res = s.compute.create_compute_envvar(compute_envvar: Models::Shared::ComputeEnv
   environments: [
     Models::Shared::PropertyComputeEnvvarEnvironments::PREVIEW,
   ],
-  id: 'dd18c460-0fc5-428d-9b45-63e07420ec90',
+  id: '29f6916a-3d86-4aa0-b721-3da16ccabb77',
   is_secret: true,
   metadata: [],
-  name: 'AEGER_SUBSTANTIA',
-  updated_at: DateTime.iso8601('2025-07-26T01:42:22.678Z')
+  name: 'CLAMO_TOLLO',
+  updated_at: DateTime.iso8601('2025-07-30T12:51:56.491Z')
 ), connection_id: '<id>')
 
 unless res.compute_envvar.nil?
@@ -255,31 +255,31 @@ res = s.compute.create_compute_instance(compute_instance: Models::Shared::Comput
       is_auth_required: true,
       port: 8080.0,
       protocol: Models::Shared::Protocol::HTTPS,
-      url: 'https://serene-shark.biz/'
+      url: 'https://equatorial-fog.net/'
     ),
   ],
   gpu_count: 0.0,
   has_internet_access: true,
-  id: 'bdf8ef25-b06b-44bc-9e0a-2e78aa591a03',
+  id: '17ee5032-6692-4c18-9626-610c2968b33d',
   image: 'ubuntu:24.04',
   market: Models::Shared::Market::SPOT,
   memory_mb: 2048.0,
   metadata: [],
-  name: 'digital-panel',
+  name: 'optical-microchip',
   on_idle: Models::Shared::OnIdle::TERMINATE,
   price_amount: 24.90_336_107_776_966,
   price_unit: Models::Shared::PriceUnit::PER_INSTANCE_HOUR,
-  project_identifier: 'g547KrivqY',
+  project_identifier: '7sg547Kriv',
   ssh: Models::Shared::PropertyComputeInstanceSsh.new(
-    host: '116.42.165.89',
+    host: '206.84.216.197',
     port: 22.0,
     username: 'root'
   ),
-  started_at: DateTime.iso8601('2025-04-11T05:55:49.593Z'),
+  started_at: DateTime.iso8601('2025-04-14T21:04:48.017Z'),
   status: Models::Shared::ComputeInstanceStatus::ERROR,
-  status_reason: 'Sponte quasi adversus alioqui reiciendis arca carmen canis.',
+  status_reason: 'Alioqui reiciendis arca.',
   type: Models::Shared::ComputeInstanceType::BAREMETAL,
-  updated_at: DateTime.iso8601('2025-07-06T04:35:54.639Z')
+  updated_at: DateTime.iso8601('2025-07-10T03:55:08.951Z')
 ), connection_id: '<id>')
 
 unless res.compute_instance.nil?
@@ -325,11 +325,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.compute.create_compute_key(compute_key: Models::Shared::ComputeKey.new(
   created_at: DateTime.iso8601('2023-08-19T14:31:46.492Z'),
-  id: '6d0b0135-52aa-433f-9d4d-e4a33d595a76',
+  id: '13e465b5-d1f9-4bea-9cdc-b512f421c210',
   metadata: [],
-  name: 'nienow-secret',
+  name: 'huels-secret',
   type: Models::Shared::ComputeKeyType::SECRET,
-  updated_at: DateTime.iso8601('2024-10-17T16:51:00.259Z')
+  updated_at: DateTime.iso8601('2024-10-19T20:00:46.314Z')
 ), connection_id: '<id>')
 
 unless res.compute_key.nil?
@@ -377,19 +377,19 @@ res = s.compute.create_compute_service(compute_service: Models::Shared::ComputeS
   branch: 'main',
   build_command: 'npm run build',
   created_at: DateTime.iso8601('2023-10-04T02:06:29.391Z'),
-  id: '4aac5b6e-3326-40d9-ad26-1196d5f5224f',
+  id: '8754960f-5aaa-4a50-be9c-26a5f85af891',
   instance_count: 6.0,
   max_instance_count: 6.0,
   metadata: [],
   min_instance_count: 1.0,
-  name: 'tame-sideboard',
-  project_identifier: '4nyWICvPfi',
-  repo_url: 'https://github.com/Kimberly_Muller95/tame-sideboard',
+  name: 'infatuated-operating',
+  project_identifier: 'vPfiw4BdJh',
+  repo_url: 'https://github.com/Alexie.Bartoletti/infatuated-operating',
   runtime: 'python',
   status: Models::Shared::ComputeServiceStatus::SUSPENDED,
   type: Models::Shared::ComputeServiceType::OTHER,
-  updated_at: DateTime.iso8601('2025-04-19T11:21:44.910Z'),
-  url: 'https://tame-sideboard.rotating-shoulder.biz'
+  updated_at: DateTime.iso8601('2025-04-22T09:52:03.176Z'),
+  url: 'https://infatuated-operating.warlike-publication.name'
 ), connection_id: '<id>')
 
 unless res.compute_service.nil?
@@ -435,13 +435,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.compute.create_compute_snapshot(compute_snapshot: Models::Shared::ComputeSnapshot.new(
   created_at: DateTime.iso8601('2021-09-24T14:40:06.110Z'),
-  id: 'c16b9213-76ff-4429-a32a-83fb3bcdcf75',
+  id: '0830b956-92a5-4a25-84e3-e6749bb406df',
   metadata: [],
-  name: 'snap-alius',
+  name: 'snap-cito',
   size_mb: 169_984.0,
   status: Models::Shared::ComputeSnapshotStatus::DELETING,
   type: Models::Shared::ComputeSnapshotType::DISK,
-  updated_at: DateTime.iso8601('2026-04-26T13:57:25.398Z')
+  updated_at: DateTime.iso8601('2026-05-01T21:13:33.517Z')
 ), connection_id: '<id>')
 
 unless res.compute_snapshot.nil?
@@ -492,18 +492,18 @@ res = s.compute.create_compute_template(compute_template: Models::Shared::Comput
   dockerfile: "FROM ubuntu:24.04\nRUN apt-get update",
   gpu_count: 2.0,
   gpu_model: Models::Shared::ComputeTemplateGpuModel::NVIDIA_GH200,
-  id: 'e7c2e3a2-6309-4ca6-abde-88a7908ddfe6',
-  image: 'perfumed-molasses/cohibeo:5.2',
+  id: '9936879d-8033-42c3-b036-25a916b9e38b',
+  image: 'jaunty-tarragon/demum:5.2',
   is_public: false,
-  last_used_at: DateTime.iso8601('2026-04-18T02:32:30.779Z'),
+  last_used_at: DateTime.iso8601('2026-04-23T02:57:48.891Z'),
   memory_mb: 8192.0,
   metadata: [],
-  name: 'multi-byte-card',
+  name: 'online-matrix',
   ports: [
     8080.0,
   ],
   status: Models::Shared::ComputeTemplateStatus::OTHER,
-  updated_at: DateTime.iso8601('2025-02-28T22:59:06.215Z')
+  updated_at: DateTime.iso8601('2025-03-04T04:08:33.599Z')
 ), connection_id: '<id>')
 
 unless res.compute_template.nil?
@@ -549,14 +549,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.compute.create_compute_volume(compute_volume: Models::Shared::ComputeVolume.new(
   created_at: DateTime.iso8601('2022-11-15T15:12:48.055Z'),
-  id: '9ae452c4-c4e2-4ad4-be72-bf53c488f761',
+  id: '5cd22859-5263-460d-b268-492297497caf',
   instance_ids: [],
   metadata: [],
-  name: 'vol-solum',
+  name: 'vol-accommodo',
   size_mb: 1_024_000.0,
   status: Models::Shared::ComputeVolumeStatus::OTHER,
   type: Models::Shared::ComputeVolumeType::HIGH_PERFORMANCE,
-  updated_at: DateTime.iso8601('2024-02-19T08:10:47.507Z'),
+  updated_at: DateTime.iso8601('2024-02-21T05:08:52.638Z'),
   used_mb: 524_986.0
 ), connection_id: '<id>')
 
@@ -1606,18 +1606,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchComputeDeploymentRequest.new(
   compute_deployment: Models::Shared::ComputeDeployment.new(
     branch: 'develop',
-    commit_identifier: 'fadfe54eefd8fea670bea6d58b4b15d406c4b02b',
-    commit_message: 'copy primary pixel',
+    commit_identifier: 'fe54eefd8fea670bea6d58b4b15d406c4b02b7aa',
+    commit_message: 'transmit auxiliary microchip',
     created_at: DateTime.iso8601('2022-06-07T03:52:04.613Z'),
     environment: Models::Shared::Environment::PREVIEW,
-    finished_at: DateTime.iso8601('2025-09-20T18:48:47.799Z'),
-    id: '0653e45b-5936-4a98-ab5f-d6a39981e22d',
+    finished_at: DateTime.iso8601('2025-09-25T04:27:29.755Z'),
+    id: '812d54f4-c088-499d-a39b-35cb85428b5c',
     metadata: [],
-    started_at: DateTime.iso8601('2025-04-29T19:30:44.201Z'),
+    started_at: DateTime.iso8601('2025-05-03T16:29:58.373Z'),
     status: Models::Shared::ComputeDeploymentStatus::LIVE,
     trigger: Models::Shared::Trigger::API,
-    updated_at: DateTime.iso8601('2026-03-26T08:19:22.921Z'),
-    url: 'https://comfortable-petal.name'
+    updated_at: DateTime.iso8601('2026-03-31T10:22:13.336Z'),
+    url: 'https://dismal-creature.info'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1666,12 +1666,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchComputeDomainRequest.new(
   compute_domain: Models::Shared::ComputeDomain.new(
     created_at: DateTime.iso8601('2019-11-22T16:38:26.009Z'),
-    id: 'a46d6cc9-1732-4233-8502-bb1f0a1648bf',
+    id: '12841307-9099-41ae-a7f1-0b8a2e8e760c',
     is_primary: false,
     metadata: [],
-    name: 'mysterious-republican.usable-section.info',
+    name: 'steel-hovercraft.humiliating-lender.com',
     status: Models::Shared::ComputeDomainStatus::PENDING,
-    updated_at: DateTime.iso8601('2023-11-20T18:24:07.234Z')
+    updated_at: DateTime.iso8601('2023-11-24T04:06:10.939Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1723,11 +1723,11 @@ req = Models::Operations::PatchComputeEnvvarRequest.new(
     environments: [
       Models::Shared::PropertyComputeEnvvarEnvironments::PREVIEW,
     ],
-    id: '0b1140ad-0e0c-4f40-a2a2-a3fece6c6f67',
+    id: 'e5b6a98c-8697-445c-ac42-e8f138641d8f',
     is_secret: true,
     metadata: [],
-    name: 'AEGER_SUBSTANTIA',
-    updated_at: DateTime.iso8601('2025-07-26T01:42:22.683Z')
+    name: 'CLAMO_TOLLO',
+    updated_at: DateTime.iso8601('2025-07-30T12:51:56.500Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1788,31 +1788,31 @@ req = Models::Operations::PatchComputeInstanceRequest.new(
         is_auth_required: true,
         port: 8080.0,
         protocol: Models::Shared::Protocol::HTTPS,
-        url: 'https://serene-shark.biz/'
+        url: 'https://equatorial-fog.net/'
       ),
     ],
     gpu_count: 0.0,
     has_internet_access: true,
-    id: '63022c88-48d3-427f-975f-6aa180ad72f3',
+    id: 'f65291a9-c660-4440-b278-ddda58fa2e6b',
     image: 'ubuntu:24.04',
     market: Models::Shared::Market::SPOT,
     memory_mb: 2048.0,
     metadata: [],
-    name: 'digital-panel',
+    name: 'optical-microchip',
     on_idle: Models::Shared::OnIdle::TERMINATE,
     price_amount: 24.90_336_107_776_966,
     price_unit: Models::Shared::PriceUnit::PER_INSTANCE_HOUR,
-    project_identifier: 'g547KrivqY',
+    project_identifier: '7sg547Kriv',
     ssh: Models::Shared::PropertyComputeInstanceSsh.new(
-      host: '116.42.165.89',
+      host: '206.84.216.197',
       port: 22.0,
       username: 'root'
     ),
-    started_at: DateTime.iso8601('2025-04-11T05:55:49.614Z'),
+    started_at: DateTime.iso8601('2025-04-14T21:04:48.037Z'),
     status: Models::Shared::ComputeInstanceStatus::ERROR,
-    status_reason: 'Sponte quasi adversus alioqui reiciendis arca carmen canis.',
+    status_reason: 'Alioqui reiciendis arca.',
     type: Models::Shared::ComputeInstanceType::BAREMETAL,
-    updated_at: DateTime.iso8601('2025-07-06T04:35:54.662Z')
+    updated_at: DateTime.iso8601('2025-07-10T03:55:08.973Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1861,11 +1861,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchComputeKeyRequest.new(
   compute_key: Models::Shared::ComputeKey.new(
     created_at: DateTime.iso8601('2023-08-19T14:31:46.492Z'),
-    id: '2f487000-12de-430c-a3eb-ed88899d64f8',
+    id: '1bc0c82a-c6bf-4454-a405-25f1da644c42',
     metadata: [],
-    name: 'nienow-secret',
+    name: 'huels-secret',
     type: Models::Shared::ComputeKeyType::SECRET,
-    updated_at: DateTime.iso8601('2024-10-17T16:51:00.262Z')
+    updated_at: DateTime.iso8601('2024-10-19T20:00:46.319Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1916,19 +1916,19 @@ req = Models::Operations::PatchComputeServiceRequest.new(
     branch: 'main',
     build_command: 'npm run build',
     created_at: DateTime.iso8601('2023-10-04T02:06:29.391Z'),
-    id: 'e904b960-e65a-45cf-80e6-d43e007830a9',
+    id: '08fa3b06-7dd6-4942-93c0-31c19cbc42cf',
     instance_count: 6.0,
     max_instance_count: 6.0,
     metadata: [],
     min_instance_count: 1.0,
-    name: 'tame-sideboard',
-    project_identifier: '4nyWICvPfi',
-    repo_url: 'https://github.com/Kimberly_Muller95/tame-sideboard',
+    name: 'infatuated-operating',
+    project_identifier: 'vPfiw4BdJh',
+    repo_url: 'https://github.com/Alexie.Bartoletti/infatuated-operating',
     runtime: 'python',
     status: Models::Shared::ComputeServiceStatus::SUSPENDED,
     type: Models::Shared::ComputeServiceType::OTHER,
-    updated_at: DateTime.iso8601('2025-04-19T11:21:44.919Z'),
-    url: 'https://tame-sideboard.rotating-shoulder.biz'
+    updated_at: DateTime.iso8601('2025-04-22T09:52:03.186Z'),
+    url: 'https://infatuated-operating.warlike-publication.name'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1977,13 +1977,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchComputeSnapshotRequest.new(
   compute_snapshot: Models::Shared::ComputeSnapshot.new(
     created_at: DateTime.iso8601('2021-09-24T14:40:06.110Z'),
-    id: '6d81a8b7-375c-4533-9275-60ed792b3d3c',
+    id: '02decb7d-ab3c-4cd1-8d68-2efdb2c0e743',
     metadata: [],
-    name: 'snap-alius',
+    name: 'snap-cito',
     size_mb: 169_984.0,
     status: Models::Shared::ComputeSnapshotStatus::DELETING,
     type: Models::Shared::ComputeSnapshotType::DISK,
-    updated_at: DateTime.iso8601('2026-04-26T13:57:25.404Z')
+    updated_at: DateTime.iso8601('2026-05-01T21:13:33.525Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2037,18 +2037,18 @@ req = Models::Operations::PatchComputeTemplateRequest.new(
     dockerfile: "FROM ubuntu:24.04\nRUN apt-get update",
     gpu_count: 2.0,
     gpu_model: Models::Shared::ComputeTemplateGpuModel::NVIDIA_GH200,
-    id: '24ef6e71-2d25-4a46-baa8-fc1d5d1f34f9',
-    image: 'perfumed-molasses/cohibeo:5.2',
+    id: '49b29db7-e626-4cf0-9f20-e9412f241973',
+    image: 'jaunty-tarragon/demum:5.2',
     is_public: false,
-    last_used_at: DateTime.iso8601('2026-04-18T02:32:30.790Z'),
+    last_used_at: DateTime.iso8601('2026-04-23T02:57:48.906Z'),
     memory_mb: 8192.0,
     metadata: [],
-    name: 'multi-byte-card',
+    name: 'online-matrix',
     ports: [
       8080.0,
     ],
     status: Models::Shared::ComputeTemplateStatus::OTHER,
-    updated_at: DateTime.iso8601('2025-02-28T22:59:06.222Z')
+    updated_at: DateTime.iso8601('2025-03-04T04:08:33.609Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2097,14 +2097,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchComputeVolumeRequest.new(
   compute_volume: Models::Shared::ComputeVolume.new(
     created_at: DateTime.iso8601('2022-11-15T15:12:48.055Z'),
-    id: 'c51d2866-8ee5-4816-aa08-c13c5b2a96db',
+    id: '6edb9587-05bc-43d1-8ef5-0ee31601a303',
     instance_ids: [],
     metadata: [],
-    name: 'vol-solum',
+    name: 'vol-accommodo',
     size_mb: 1_024_000.0,
     status: Models::Shared::ComputeVolumeStatus::OTHER,
     type: Models::Shared::ComputeVolumeType::HIGH_PERFORMANCE,
-    updated_at: DateTime.iso8601('2024-02-19T08:10:47.511Z'),
+    updated_at: DateTime.iso8601('2024-02-21T05:08:52.641Z'),
     used_mb: 524_986.0
   ),
   connection_id: '<id>',
@@ -2523,18 +2523,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateComputeDeploymentRequest.new(
   compute_deployment: Models::Shared::ComputeDeployment.new(
     branch: 'develop',
-    commit_identifier: 'fadfe54eefd8fea670bea6d58b4b15d406c4b02b',
-    commit_message: 'copy primary pixel',
+    commit_identifier: 'fe54eefd8fea670bea6d58b4b15d406c4b02b7aa',
+    commit_message: 'transmit auxiliary microchip',
     created_at: DateTime.iso8601('2022-06-07T03:52:04.613Z'),
     environment: Models::Shared::Environment::PREVIEW,
-    finished_at: DateTime.iso8601('2025-09-20T18:48:47.799Z'),
-    id: '0653e45b-5936-4a98-ab5f-d6a39981e22d',
+    finished_at: DateTime.iso8601('2025-09-25T04:27:29.755Z'),
+    id: '812d54f4-c088-499d-a39b-35cb85428b5c',
     metadata: [],
-    started_at: DateTime.iso8601('2025-04-29T19:30:44.201Z'),
+    started_at: DateTime.iso8601('2025-05-03T16:29:58.373Z'),
     status: Models::Shared::ComputeDeploymentStatus::LIVE,
     trigger: Models::Shared::Trigger::API,
-    updated_at: DateTime.iso8601('2026-03-26T08:19:22.921Z'),
-    url: 'https://comfortable-petal.name'
+    updated_at: DateTime.iso8601('2026-03-31T10:22:13.336Z'),
+    url: 'https://dismal-creature.info'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2583,12 +2583,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateComputeDomainRequest.new(
   compute_domain: Models::Shared::ComputeDomain.new(
     created_at: DateTime.iso8601('2019-11-22T16:38:26.009Z'),
-    id: 'a46d6cc9-1732-4233-8502-bb1f0a1648bf',
+    id: '12841307-9099-41ae-a7f1-0b8a2e8e760c',
     is_primary: false,
     metadata: [],
-    name: 'mysterious-republican.usable-section.info',
+    name: 'steel-hovercraft.humiliating-lender.com',
     status: Models::Shared::ComputeDomainStatus::PENDING,
-    updated_at: DateTime.iso8601('2023-11-20T18:24:07.234Z')
+    updated_at: DateTime.iso8601('2023-11-24T04:06:10.939Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2640,11 +2640,11 @@ req = Models::Operations::UpdateComputeEnvvarRequest.new(
     environments: [
       Models::Shared::PropertyComputeEnvvarEnvironments::PREVIEW,
     ],
-    id: '0b1140ad-0e0c-4f40-a2a2-a3fece6c6f67',
+    id: 'e5b6a98c-8697-445c-ac42-e8f138641d8f',
     is_secret: true,
     metadata: [],
-    name: 'AEGER_SUBSTANTIA',
-    updated_at: DateTime.iso8601('2025-07-26T01:42:22.683Z')
+    name: 'CLAMO_TOLLO',
+    updated_at: DateTime.iso8601('2025-07-30T12:51:56.500Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2705,31 +2705,31 @@ req = Models::Operations::UpdateComputeInstanceRequest.new(
         is_auth_required: true,
         port: 8080.0,
         protocol: Models::Shared::Protocol::HTTPS,
-        url: 'https://serene-shark.biz/'
+        url: 'https://equatorial-fog.net/'
       ),
     ],
     gpu_count: 0.0,
     has_internet_access: true,
-    id: '63022c88-48d3-427f-975f-6aa180ad72f3',
+    id: 'f65291a9-c660-4440-b278-ddda58fa2e6b',
     image: 'ubuntu:24.04',
     market: Models::Shared::Market::SPOT,
     memory_mb: 2048.0,
     metadata: [],
-    name: 'digital-panel',
+    name: 'optical-microchip',
     on_idle: Models::Shared::OnIdle::TERMINATE,
     price_amount: 24.90_336_107_776_966,
     price_unit: Models::Shared::PriceUnit::PER_INSTANCE_HOUR,
-    project_identifier: 'g547KrivqY',
+    project_identifier: '7sg547Kriv',
     ssh: Models::Shared::PropertyComputeInstanceSsh.new(
-      host: '116.42.165.89',
+      host: '206.84.216.197',
       port: 22.0,
       username: 'root'
     ),
-    started_at: DateTime.iso8601('2025-04-11T05:55:49.614Z'),
+    started_at: DateTime.iso8601('2025-04-14T21:04:48.037Z'),
     status: Models::Shared::ComputeInstanceStatus::ERROR,
-    status_reason: 'Sponte quasi adversus alioqui reiciendis arca carmen canis.',
+    status_reason: 'Alioqui reiciendis arca.',
     type: Models::Shared::ComputeInstanceType::BAREMETAL,
-    updated_at: DateTime.iso8601('2025-07-06T04:35:54.662Z')
+    updated_at: DateTime.iso8601('2025-07-10T03:55:08.973Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2778,11 +2778,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateComputeKeyRequest.new(
   compute_key: Models::Shared::ComputeKey.new(
     created_at: DateTime.iso8601('2023-08-19T14:31:46.492Z'),
-    id: '2f487000-12de-430c-a3eb-ed88899d64f8',
+    id: '1bc0c82a-c6bf-4454-a405-25f1da644c42',
     metadata: [],
-    name: 'nienow-secret',
+    name: 'huels-secret',
     type: Models::Shared::ComputeKeyType::SECRET,
-    updated_at: DateTime.iso8601('2024-10-17T16:51:00.262Z')
+    updated_at: DateTime.iso8601('2024-10-19T20:00:46.319Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2833,19 +2833,19 @@ req = Models::Operations::UpdateComputeServiceRequest.new(
     branch: 'main',
     build_command: 'npm run build',
     created_at: DateTime.iso8601('2023-10-04T02:06:29.391Z'),
-    id: 'e904b960-e65a-45cf-80e6-d43e007830a9',
+    id: '08fa3b06-7dd6-4942-93c0-31c19cbc42cf',
     instance_count: 6.0,
     max_instance_count: 6.0,
     metadata: [],
     min_instance_count: 1.0,
-    name: 'tame-sideboard',
-    project_identifier: '4nyWICvPfi',
-    repo_url: 'https://github.com/Kimberly_Muller95/tame-sideboard',
+    name: 'infatuated-operating',
+    project_identifier: 'vPfiw4BdJh',
+    repo_url: 'https://github.com/Alexie.Bartoletti/infatuated-operating',
     runtime: 'python',
     status: Models::Shared::ComputeServiceStatus::SUSPENDED,
     type: Models::Shared::ComputeServiceType::OTHER,
-    updated_at: DateTime.iso8601('2025-04-19T11:21:44.919Z'),
-    url: 'https://tame-sideboard.rotating-shoulder.biz'
+    updated_at: DateTime.iso8601('2025-04-22T09:52:03.186Z'),
+    url: 'https://infatuated-operating.warlike-publication.name'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2894,13 +2894,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateComputeSnapshotRequest.new(
   compute_snapshot: Models::Shared::ComputeSnapshot.new(
     created_at: DateTime.iso8601('2021-09-24T14:40:06.110Z'),
-    id: '6d81a8b7-375c-4533-9275-60ed792b3d3c',
+    id: '02decb7d-ab3c-4cd1-8d68-2efdb2c0e743',
     metadata: [],
-    name: 'snap-alius',
+    name: 'snap-cito',
     size_mb: 169_984.0,
     status: Models::Shared::ComputeSnapshotStatus::DELETING,
     type: Models::Shared::ComputeSnapshotType::DISK,
-    updated_at: DateTime.iso8601('2026-04-26T13:57:25.404Z')
+    updated_at: DateTime.iso8601('2026-05-01T21:13:33.525Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2954,18 +2954,18 @@ req = Models::Operations::UpdateComputeTemplateRequest.new(
     dockerfile: "FROM ubuntu:24.04\nRUN apt-get update",
     gpu_count: 2.0,
     gpu_model: Models::Shared::ComputeTemplateGpuModel::NVIDIA_GH200,
-    id: '24ef6e71-2d25-4a46-baa8-fc1d5d1f34f9',
-    image: 'perfumed-molasses/cohibeo:5.2',
+    id: '49b29db7-e626-4cf0-9f20-e9412f241973',
+    image: 'jaunty-tarragon/demum:5.2',
     is_public: false,
-    last_used_at: DateTime.iso8601('2026-04-18T02:32:30.790Z'),
+    last_used_at: DateTime.iso8601('2026-04-23T02:57:48.906Z'),
     memory_mb: 8192.0,
     metadata: [],
-    name: 'multi-byte-card',
+    name: 'online-matrix',
     ports: [
       8080.0,
     ],
     status: Models::Shared::ComputeTemplateStatus::OTHER,
-    updated_at: DateTime.iso8601('2025-02-28T22:59:06.222Z')
+    updated_at: DateTime.iso8601('2025-03-04T04:08:33.609Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -3014,14 +3014,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateComputeVolumeRequest.new(
   compute_volume: Models::Shared::ComputeVolume.new(
     created_at: DateTime.iso8601('2022-11-15T15:12:48.055Z'),
-    id: 'c51d2866-8ee5-4816-aa08-c13c5b2a96db',
+    id: '6edb9587-05bc-43d1-8ef5-0ee31601a303',
     instance_ids: [],
     metadata: [],
-    name: 'vol-solum',
+    name: 'vol-accommodo',
     size_mb: 1_024_000.0,
     status: Models::Shared::ComputeVolumeStatus::OTHER,
     type: Models::Shared::ComputeVolumeType::HIGH_PERFORMANCE,
-    updated_at: DateTime.iso8601('2024-02-19T08:10:47.511Z'),
+    updated_at: DateTime.iso8601('2024-02-21T05:08:52.641Z'),
     used_mb: 524_986.0
   ),
   connection_id: '<id>',

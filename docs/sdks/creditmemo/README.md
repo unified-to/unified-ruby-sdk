@@ -35,16 +35,16 @@ res = s.creditmemo.create_accounting_creditmemo(accounting_creditmemo: Models::S
   creditmemo_number: 'CM-99537',
   currency: 'AUD',
   discount_amount: 0.0,
-  id: '3f84b20f-5265-405c-af7c-41b84cc4f8de',
+  id: '3d5bb4e2-c115-431b-b937-b0d858c43dd0',
   lineitems: [],
   metadata: [],
-  notes: 'Hic vorax dedecor amo adfero torqueo quas victoria.',
+  notes: 'Amo adfero torqueo quas victoria.',
   posted_at: DateTime.iso8601('2023-09-20T01:47:01.571Z'),
   send: true,
   status: Models::Shared::AccountingCreditmemoStatus::AUTHORIZED,
   tax_amount: 0.0,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2025-09-30T13:19:47.467Z')
+  updated_at: DateTime.iso8601('2025-10-04T08:59:55.017Z')
 ), connection_id: '<id>')
 
 unless res.accounting_creditmemo.nil?
@@ -185,16 +185,16 @@ req = Models::Operations::PatchAccountingCreditmemoRequest.new(
     creditmemo_number: 'CM-99537',
     currency: 'AUD',
     discount_amount: 0.0,
-    id: 'b5c6621c-04ec-43e8-89be-d8ffd540f02b',
+    id: '11b732d9-4f30-4320-9905-44039fae0029',
     lineitems: [],
     metadata: [],
-    notes: 'Hic vorax dedecor amo adfero torqueo quas victoria.',
+    notes: 'Amo adfero torqueo quas victoria.',
     posted_at: DateTime.iso8601('2023-09-20T01:47:01.571Z'),
     send: true,
     status: Models::Shared::AccountingCreditmemoStatus::AUTHORIZED,
     tax_amount: 0.0,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2025-09-30T13:19:47.485Z')
+    updated_at: DateTime.iso8601('2025-10-04T08:59:55.043Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -290,16 +290,16 @@ req = Models::Operations::UpdateAccountingCreditmemoRequest.new(
     creditmemo_number: 'CM-99537',
     currency: 'AUD',
     discount_amount: 0.0,
-    id: 'b5c6621c-04ec-43e8-89be-d8ffd540f02b',
+    id: '11b732d9-4f30-4320-9905-44039fae0029',
     lineitems: [],
     metadata: [],
-    notes: 'Hic vorax dedecor amo adfero torqueo quas victoria.',
+    notes: 'Amo adfero torqueo quas victoria.',
     posted_at: DateTime.iso8601('2023-09-20T01:47:01.571Z'),
     send: true,
     status: Models::Shared::AccountingCreditmemoStatus::AUTHORIZED,
     tax_amount: 0.0,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2025-09-30T13:19:47.485Z')
+    updated_at: DateTime.iso8601('2025-10-04T08:59:55.043Z')
   ),
   connection_id: '<id>',
   id: '<id>'

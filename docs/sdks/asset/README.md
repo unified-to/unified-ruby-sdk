@@ -27,13 +27,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.asset.create_ads_asset(ads_asset: Models::Shared::AdsAsset.new(
   created_at: DateTime.iso8601('2020-03-27T20:14:38.603Z'),
   height: 400.0,
-  id: '45232571-76d9-40e3-80fc-b38ce0ec2b60',
+  id: 'adc51a2f-3cfe-40db-8c3c-1693414d22b9',
   metadata: [],
   mime_type: 'IMAGE_PNG',
-  name: 'Lockman - DuBuque',
+  name: 'Gibson and Sons',
   type: Models::Shared::AdsAssetType::IMAGE,
-  updated_at: DateTime.iso8601('2022-04-03T06:59:02.600Z'),
-  url: 'https://informal-perfection.com/',
+  updated_at: DateTime.iso8601('2022-04-05T02:21:50.255Z'),
+  url: 'https://soulful-mom.net',
   width: 600.0
 ), connection_id: '<id>')
 

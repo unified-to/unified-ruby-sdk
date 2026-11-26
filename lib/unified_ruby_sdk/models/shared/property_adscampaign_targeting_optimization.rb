@@ -17,11 +17,11 @@ module UnifiedRubySDK
 
         field :advantage_placements, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('advantage_placements') } }
         # Google: bid_only falsetrue
-        field :mode, Crystalline::Nilable.new(Models::Shared::Mode), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('mode'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::Mode, true) } }
+        field :mode, Crystalline::Nilable.new(Models::Shared::PropertyAdsCampaignTargetingOptimizationMode), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('mode'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PropertyAdsCampaignTargetingOptimizationMode, true) } }
 
         field :targeting_optimization_expansion_all, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('targeting_optimization_expansion_all') } }
 
-        sig { params(advantage_audience: T.nilable(T::Boolean), advantage_placements: T.nilable(T::Boolean), mode: T.nilable(Models::Shared::Mode), targeting_optimization_expansion_all: T.nilable(T::Boolean)).void }
+        sig { params(advantage_audience: T.nilable(T::Boolean), advantage_placements: T.nilable(T::Boolean), mode: T.nilable(Models::Shared::PropertyAdsCampaignTargetingOptimizationMode), targeting_optimization_expansion_all: T.nilable(T::Boolean)).void }
         def initialize(advantage_audience: nil, advantage_placements: nil, mode: nil, targeting_optimization_expansion_all: nil)
           @advantage_audience = advantage_audience
           @advantage_placements = advantage_placements

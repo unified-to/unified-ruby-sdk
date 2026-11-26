@@ -1,13 +1,13 @@
 # Mode
 
-Google: bid_only falsetrue
+server
 
 ## Example Usage
 
 ```ruby
 require "unified_ruby_sdk"
 
-value = Mode::TARGETING
+value = Mode::SERVER
 
 # Open enum: use .deserialize() to create instances from custom string values
 custom = Mode.deserialize("custom_value")
@@ -16,7 +16,6 @@ custom = Mode.deserialize("custom_value")
 
 ## Values
 
-| Name          | Value         |
-| ------------- | ------------- |
-| `TARGETING`   | TARGETING     |
-| `OBSERVATION` | OBSERVATION   |
+| Name     | Value    |
+| -------- | -------- |
+| `SERVER` | server   |

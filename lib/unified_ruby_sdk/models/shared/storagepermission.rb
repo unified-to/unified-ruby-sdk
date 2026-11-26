@@ -18,16 +18,19 @@ module UnifiedRubySDK
         field :group_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('group_id') } }
 
         field :is_hidden, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_hidden') } }
+        # Shared with everyone in the owner's organization/domain/enterprise (e.g. Google Drive domain, Box company or Microsoft organization sharing links)
+        field :is_organization, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_organization') } }
 
         field :is_public, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_public') } }
         # (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(roles: T::Array[Models::Shared::PropertyStoragePermissionRoles], group_id: T.nilable(::String), is_hidden: T.nilable(T::Boolean), is_public: T.nilable(T::Boolean), user_id: T.nilable(::String)).void }
-        def initialize(roles:, group_id: nil, is_hidden: nil, is_public: nil, user_id: nil)
+        sig { params(roles: T::Array[Models::Shared::PropertyStoragePermissionRoles], group_id: T.nilable(::String), is_hidden: T.nilable(T::Boolean), is_organization: T.nilable(T::Boolean), is_public: T.nilable(T::Boolean), user_id: T.nilable(::String)).void }
+        def initialize(roles:, group_id: nil, is_hidden: nil, is_organization: nil, is_public: nil, user_id: nil)
           @roles = roles
           @group_id = group_id
           @is_hidden = is_hidden
+          @is_organization = is_organization
           @is_public = is_public
           @user_id = user_id
         end
@@ -38,6 +41,7 @@ module UnifiedRubySDK
           return false unless @roles == other.roles
           return false unless @group_id == other.group_id
           return false unless @is_hidden == other.is_hidden
+          return false unless @is_organization == other.is_organization
           return false unless @is_public == other.is_public
           return false unless @user_id == other.user_id
           true

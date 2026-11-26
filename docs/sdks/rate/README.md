@@ -24,7 +24,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.rate.create_shipping_rate(shipping_rate: Models::Shared::ShippingRate.new(
   currency: 'USD',
-  id: 'ebd4664f-6e38-4860-bde4-16a75c239c74',
+  id: 'ddf02032-735a-4297-a557-3e53a0e78923',
   metadata: [],
   rates: [
     Models::Shared::ShippingRateRate.new(
@@ -32,7 +32,7 @@ res = s.rate.create_shipping_rate(shipping_rate: Models::Shared::ShippingRate.ne
       base_amount: 46.01,
       currency: 'USD',
       delivery_days: 2.0,
-      description: 'Veniam denego vulgo bos turpis pax.',
+      description: 'Bos turpis pax amet dolorem sufficio demonstro complectus benevolentia rerum.',
       discount_amount: 4.6,
       estimated_days: 2.0,
       estimated_delivery_end_at: DateTime.iso8601('2021-09-03T01:03:36.021Z'),

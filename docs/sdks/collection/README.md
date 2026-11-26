@@ -35,47 +35,47 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.collection.create_commerce_collection(commerce_collection: Models::Shared::CommerceCollection.new(
   created_at: DateTime.iso8601('2023-07-14T00:42:54.742Z'),
-  description: 'The Integrated leading edge website Cheese offers reliable performance and productive design',
-  id: '01d14345-84d8-40f8-8ea4-bbf8e0964ee6',
+  description: 'Ward - Hudson\'s most advanced Computer technology increases graceful capabilities',
+  id: 'd937d9f2-1ba5-4e86-ae20-cfb0465f9a44',
   is_active: true,
   is_featured: false,
   is_visible: false,
   item_metadata: [],
   media: [
     Models::Shared::CommerceItemMedia.new(
-      alt: 'Defungo adopto thorax.',
+      alt: 'Armarium amiculum amet defendo.',
       height: 759.0,
-      id: 'fadb10ee-771a-4855-8198-1244a4a98a07',
+      id: '32d3fa91-2770-4359-ad16-193a8f6f51f5',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: '195b1e12-631e-4d4b-8895-34dab64c32fa',
-          slug: 'censura',
-          value: 'toties'
+          id: '6ff98a33-3458-479c-8ae1-0bbda230dcfe',
+          slug: 'cernuus',
+          value: 'torrens'
         ),
       ],
       position: 80.0,
       type: Models::Shared::CommerceItemMediaType::VIDEO,
-      url: 'https://loremflickr.com/1319/1257?lock=7280448425732025',
+      url: 'https://picsum.photos/seed/62m4msPNw/3209/1074',
       width: 40.0
     ),
   ],
   metadata: [
     Models::Shared::CommerceMetadata.new(
-      id: '1cf8f8f7-ee4d-484b-9038-08f24e62445c',
-      slug: 'aetas',
-      value: 'consuasor'
+      id: '906e9077-4bf8-40fb-ae5c-1c8d2a06cce5',
+      slug: 'velit',
+      value: 'aureus'
     ),
   ],
-  name: 'Small Marble Chips',
-  public_description: 'Generic Gloves designed with Cotton for miserable performance',
-  public_name: 'Small Marble Chips',
+  name: 'Rustic Gold Mouse',
+  public_description: 'Introducing the Sint Maarten-inspired Gloves, blending awful style with local craftsmanship',
+  public_name: 'Rustic Gold Mouse',
   tags: [
-    'ambulo',
-    'adeptio',
-    'contego',
+    'viridis',
+    'deserunt',
+    'comparo',
   ],
   type: Models::Shared::CommerceCollectionType::COLLECTION,
-  updated_at: DateTime.iso8601('2025-03-30T08:47:46.840Z')
+  updated_at: DateTime.iso8601('2025-04-02T09:48:42.539Z')
 ), connection_id: '<id>')
 
 unless res.commerce_collection.nil?
@@ -121,25 +121,25 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.collection.create_lms_collection(lms_collection: Models::Shared::LmsCollection.new(
   created_at: DateTime.iso8601('2019-08-19T14:40:29.227Z'),
-  description: 'Ab.',
-  id: '4f0ea5fd-e7ff-4822-838b-c4cee1bf3fb8',
+  description: 'Defluo.',
+  id: '257fcdb8-7749-4b28-986a-0c6678c1398f',
   is_active: true,
   media: [
     Models::Shared::LmsMedia.new(
-      content: 'Accusamus earum sulum libero adficio testimonium vitae. Calcar contra vergo curis sollers. Caste brevis denuo. Tam amita ducimus capillus. Vulgaris temporibus arbustum solium id. Suppono commodo fuga surculus tripudio doloribus.',
-      description: 'Aliquam tardus careo hic umbra.',
+      content: 'Sollers adeo caste brevis denuo attonbitus. Amita ducimus capillus claudeo vulgaris temporibus arbustum solium. Degusto suppono commodo fuga surculus tripudio doloribus. Quaerat cauda civitas carcer alveus alienus sperno vetus. Adulescens conspergo appositus arguo. Fugiat cimentarius depono angustus somniculosus tubineus terra beatae sui.',
+      description: 'Alias sit careo vesco tollo.',
       languages: [
-        'gl',
+        'eo',
       ],
-      name: 'thymum',
-      thumbnail_url: 'https://picsum.photos/seed/15O5EfV/2982/752',
+      name: 'aiunt',
+      thumbnail_url: 'https://picsum.photos/seed/Iy2MXlem/2398/73',
       type: Models::Shared::LmsMediaType::HEADSHOT,
-      url: 'https://loremflickr.com/2679/70?lock=6078357625960554'
+      url: 'https://picsum.photos/seed/5KfxRKbzo1/2699/3216'
     ),
   ],
   metadata: [],
-  name: 'ara',
-  updated_at: DateTime.iso8601('2026-08-28T08:13:18.208Z')
+  name: 'spargo',
+  updated_at: DateTime.iso8601('2026-09-03T02:44:02.948Z')
 ), connection_id: '<id>')
 
 unless res.lms_collection.nil?
@@ -361,47 +361,47 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchCommerceCollectionRequest.new(
   commerce_collection: Models::Shared::CommerceCollection.new(
     created_at: DateTime.iso8601('2023-07-14T00:42:54.742Z'),
-    description: 'The Integrated leading edge website Cheese offers reliable performance and productive design',
-    id: '55dc4d0c-1777-4f71-800f-fc2c1c8370f5',
+    description: 'Ward - Hudson\'s most advanced Computer technology increases graceful capabilities',
+    id: 'c5c3c0e5-4bb8-4898-9ced-a8f4a3aac72e',
     is_active: true,
     is_featured: false,
     is_visible: false,
     item_metadata: [],
     media: [
       Models::Shared::CommerceItemMedia.new(
-        alt: 'Defungo adopto thorax.',
+        alt: 'Armarium amiculum amet defendo.',
         height: 759.0,
-        id: '3d2e94f5-a988-49a2-bec8-65ac4ce63b5e',
+        id: '7f4de751-9ecb-4258-b6ad-6962100989f7',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '7aafe6a0-77d9-4a6d-abb8-676e8b4a00b7',
-            slug: 'censura',
-            value: 'toties'
+            id: '6c10efcd-08ef-4372-9b2a-921b7f8faea2',
+            slug: 'cernuus',
+            value: 'torrens'
           ),
         ],
         position: 80.0,
         type: Models::Shared::CommerceItemMediaType::VIDEO,
-        url: 'https://loremflickr.com/1319/1257?lock=7280448425732025',
+        url: 'https://picsum.photos/seed/62m4msPNw/3209/1074',
         width: 40.0
       ),
     ],
     metadata: [
       Models::Shared::CommerceMetadata.new(
-        id: 'a35665a5-2e92-4588-8628-6873eb2c5fbf',
-        slug: 'aetas',
-        value: 'consuasor'
+        id: '7c93fecb-a70e-488c-b6ac-bc315a9f54ce',
+        slug: 'velit',
+        value: 'aureus'
       ),
     ],
-    name: 'Small Marble Chips',
-    public_description: 'Generic Gloves designed with Cotton for miserable performance',
-    public_name: 'Small Marble Chips',
+    name: 'Rustic Gold Mouse',
+    public_description: 'Introducing the Sint Maarten-inspired Gloves, blending awful style with local craftsmanship',
+    public_name: 'Rustic Gold Mouse',
     tags: [
-      'ambulo',
-      'adeptio',
-      'contego',
+      'viridis',
+      'deserunt',
+      'comparo',
     ],
     type: Models::Shared::CommerceCollectionType::COLLECTION,
-    updated_at: DateTime.iso8601('2025-03-30T08:47:46.849Z')
+    updated_at: DateTime.iso8601('2025-04-02T09:48:42.554Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -450,25 +450,25 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchLmsCollectionRequest.new(
   lms_collection: Models::Shared::LmsCollection.new(
     created_at: DateTime.iso8601('2019-08-19T14:40:29.227Z'),
-    description: 'Ab.',
-    id: '07049f71-f400-466e-a6e6-5cf5cf6cdc52',
+    description: 'Defluo.',
+    id: '01831fe3-dd11-4639-9245-2b0a706378c6',
     is_active: true,
     media: [
       Models::Shared::LmsMedia.new(
-        content: 'Accusamus earum sulum libero adficio testimonium vitae. Calcar contra vergo curis sollers. Caste brevis denuo. Tam amita ducimus capillus. Vulgaris temporibus arbustum solium id. Suppono commodo fuga surculus tripudio doloribus.',
-        description: 'Aliquam tardus careo hic umbra.',
+        content: 'Sollers adeo caste brevis denuo attonbitus. Amita ducimus capillus claudeo vulgaris temporibus arbustum solium. Degusto suppono commodo fuga surculus tripudio doloribus. Quaerat cauda civitas carcer alveus alienus sperno vetus. Adulescens conspergo appositus arguo. Fugiat cimentarius depono angustus somniculosus tubineus terra beatae sui.',
+        description: 'Alias sit careo vesco tollo.',
         languages: [
-          'gl',
+          'eo',
         ],
-        name: 'thymum',
-        thumbnail_url: 'https://picsum.photos/seed/15O5EfV/2982/752',
+        name: 'aiunt',
+        thumbnail_url: 'https://picsum.photos/seed/Iy2MXlem/2398/73',
         type: Models::Shared::LmsMediaType::HEADSHOT,
-        url: 'https://loremflickr.com/2679/70?lock=6078357625960554'
+        url: 'https://picsum.photos/seed/5KfxRKbzo1/2699/3216'
       ),
     ],
     metadata: [],
-    name: 'ara',
-    updated_at: DateTime.iso8601('2026-08-28T08:13:18.217Z')
+    name: 'spargo',
+    updated_at: DateTime.iso8601('2026-09-03T02:44:02.968Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -599,47 +599,47 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateCommerceCollectionRequest.new(
   commerce_collection: Models::Shared::CommerceCollection.new(
     created_at: DateTime.iso8601('2023-07-14T00:42:54.742Z'),
-    description: 'The Integrated leading edge website Cheese offers reliable performance and productive design',
-    id: '55dc4d0c-1777-4f71-800f-fc2c1c8370f5',
+    description: 'Ward - Hudson\'s most advanced Computer technology increases graceful capabilities',
+    id: 'c5c3c0e5-4bb8-4898-9ced-a8f4a3aac72e',
     is_active: true,
     is_featured: false,
     is_visible: false,
     item_metadata: [],
     media: [
       Models::Shared::CommerceItemMedia.new(
-        alt: 'Defungo adopto thorax.',
+        alt: 'Armarium amiculum amet defendo.',
         height: 759.0,
-        id: '3d2e94f5-a988-49a2-bec8-65ac4ce63b5e',
+        id: '7f4de751-9ecb-4258-b6ad-6962100989f7',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '7aafe6a0-77d9-4a6d-abb8-676e8b4a00b7',
-            slug: 'censura',
-            value: 'toties'
+            id: '6c10efcd-08ef-4372-9b2a-921b7f8faea2',
+            slug: 'cernuus',
+            value: 'torrens'
           ),
         ],
         position: 80.0,
         type: Models::Shared::CommerceItemMediaType::VIDEO,
-        url: 'https://loremflickr.com/1319/1257?lock=7280448425732025',
+        url: 'https://picsum.photos/seed/62m4msPNw/3209/1074',
         width: 40.0
       ),
     ],
     metadata: [
       Models::Shared::CommerceMetadata.new(
-        id: 'a35665a5-2e92-4588-8628-6873eb2c5fbf',
-        slug: 'aetas',
-        value: 'consuasor'
+        id: '7c93fecb-a70e-488c-b6ac-bc315a9f54ce',
+        slug: 'velit',
+        value: 'aureus'
       ),
     ],
-    name: 'Small Marble Chips',
-    public_description: 'Generic Gloves designed with Cotton for miserable performance',
-    public_name: 'Small Marble Chips',
+    name: 'Rustic Gold Mouse',
+    public_description: 'Introducing the Sint Maarten-inspired Gloves, blending awful style with local craftsmanship',
+    public_name: 'Rustic Gold Mouse',
     tags: [
-      'ambulo',
-      'adeptio',
-      'contego',
+      'viridis',
+      'deserunt',
+      'comparo',
     ],
     type: Models::Shared::CommerceCollectionType::COLLECTION,
-    updated_at: DateTime.iso8601('2025-03-30T08:47:46.849Z')
+    updated_at: DateTime.iso8601('2025-04-02T09:48:42.554Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -688,25 +688,25 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateLmsCollectionRequest.new(
   lms_collection: Models::Shared::LmsCollection.new(
     created_at: DateTime.iso8601('2019-08-19T14:40:29.227Z'),
-    description: 'Ab.',
-    id: '07049f71-f400-466e-a6e6-5cf5cf6cdc52',
+    description: 'Defluo.',
+    id: '01831fe3-dd11-4639-9245-2b0a706378c6',
     is_active: true,
     media: [
       Models::Shared::LmsMedia.new(
-        content: 'Accusamus earum sulum libero adficio testimonium vitae. Calcar contra vergo curis sollers. Caste brevis denuo. Tam amita ducimus capillus. Vulgaris temporibus arbustum solium id. Suppono commodo fuga surculus tripudio doloribus.',
-        description: 'Aliquam tardus careo hic umbra.',
+        content: 'Sollers adeo caste brevis denuo attonbitus. Amita ducimus capillus claudeo vulgaris temporibus arbustum solium. Degusto suppono commodo fuga surculus tripudio doloribus. Quaerat cauda civitas carcer alveus alienus sperno vetus. Adulescens conspergo appositus arguo. Fugiat cimentarius depono angustus somniculosus tubineus terra beatae sui.',
+        description: 'Alias sit careo vesco tollo.',
         languages: [
-          'gl',
+          'eo',
         ],
-        name: 'thymum',
-        thumbnail_url: 'https://picsum.photos/seed/15O5EfV/2982/752',
+        name: 'aiunt',
+        thumbnail_url: 'https://picsum.photos/seed/Iy2MXlem/2398/73',
         type: Models::Shared::LmsMediaType::HEADSHOT,
-        url: 'https://loremflickr.com/2679/70?lock=6078357625960554'
+        url: 'https://picsum.photos/seed/5KfxRKbzo1/2699/3216'
       ),
     ],
     metadata: [],
-    name: 'ara',
-    updated_at: DateTime.iso8601('2026-08-28T08:13:18.217Z')
+    name: 'spargo',
+    updated_at: DateTime.iso8601('2026-09-03T02:44:02.968Z')
   ),
   connection_id: '<id>',
   id: '<id>'

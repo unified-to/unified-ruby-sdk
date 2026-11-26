@@ -29,39 +29,39 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.attendance.create_hris_attendance(hris_attendance: Models::Shared::HrisAttendance.new(
   address: Models::Shared::PropertyHrisAttendanceAddress.new(
-    address1: '14108 Allie Flats',
-    city: 'Kearaborough',
+    address1: '18002 Elm Street',
+    city: 'Port Gaetano',
     country_code: 'US',
-    postal_code: '23844-2344',
-    region: 'Tennessee',
-    region_code: 'CA'
+    postal_code: '42344',
+    region: 'Vermont',
+    region_code: 'MI'
   ),
-  approved_at: DateTime.iso8601('2021-09-20T05:11:50.831Z'),
+  approved_at: DateTime.iso8601('2021-09-20T08:11:43.528Z'),
   breaks: [
     Models::Shared::HrisAttendanceBreak.new(
       duration_minutes: 51.0,
-      end_at: DateTime.iso8601('2024-02-29T01:29:34.123Z'),
-      id: '8dbd78df-6131-4381-b8b2-a8b05e2674aa',
+      end_at: DateTime.iso8601('2024-03-02T22:40:50.360Z'),
+      id: '9d06c10b-9125-46c9-b765-643a1d8569aa',
       is_paid: false,
       name: 'Lunch',
-      start_at: DateTime.iso8601('2023-11-11T18:27:03.646Z')
+      start_at: DateTime.iso8601('2023-11-14T07:31:38.843Z')
     ),
   ],
   created_at: DateTime.iso8601('2021-08-10T19:43:18.452Z'),
   currency: 'EUR',
   declared_tips_amount: 54.0,
   employee_user_id: '<id>',
-  end_at: DateTime.iso8601('2024-05-08T22:07:27.939Z'),
+  end_at: DateTime.iso8601('2024-05-12T00:29:49.295Z'),
   hourly_rate: 16.0,
   hours: 10.0,
-  id: 'ca37274d-2138-48c5-9a18-9281bba97b2a',
+  id: '5fbba4a3-8670-4235-8e77-75ab93b9f8b5',
   job_name: 'Human Accountability Administrator',
   metadata: [],
   non_cash_tips_amount: 167.0,
-  start_at: DateTime.iso8601('2021-11-12T11:55:29.782Z'),
+  start_at: DateTime.iso8601('2021-11-12T18:52:37.926Z'),
   status: Models::Shared::HrisAttendanceStatus::OPEN,
-  timezone: 'America/Atikokan',
-  updated_at: DateTime.iso8601('2022-01-22T10:34:02.666Z')
+  timezone: 'Africa/Ouagadougou',
+  updated_at: DateTime.iso8601('2022-01-22T22:47:05.496Z')
 ), connection_id: '<id>')
 
 unless res.hris_attendance.nil?
@@ -196,39 +196,39 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchHrisAttendanceRequest.new(
   hris_attendance: Models::Shared::HrisAttendance.new(
     address: Models::Shared::PropertyHrisAttendanceAddress.new(
-      address1: '14108 Allie Flats',
-      city: 'Kearaborough',
+      address1: '18002 Elm Street',
+      city: 'Port Gaetano',
       country_code: 'US',
-      postal_code: '23844-2344',
-      region: 'Tennessee',
-      region_code: 'CA'
+      postal_code: '42344',
+      region: 'Vermont',
+      region_code: 'MI'
     ),
-    approved_at: DateTime.iso8601('2021-09-20T05:11:50.831Z'),
+    approved_at: DateTime.iso8601('2021-09-20T08:11:43.528Z'),
     breaks: [
       Models::Shared::HrisAttendanceBreak.new(
         duration_minutes: 51.0,
-        end_at: DateTime.iso8601('2024-02-29T01:29:34.131Z'),
-        id: 'f1e175a8-d925-4fd2-ae9b-3407e8ea74ce',
+        end_at: DateTime.iso8601('2024-03-02T22:40:50.369Z'),
+        id: '6d721d3b-43c5-4d01-b14a-a04f2e0f9efa',
         is_paid: false,
         name: 'Lunch',
-        start_at: DateTime.iso8601('2023-11-11T18:27:03.654Z')
+        start_at: DateTime.iso8601('2023-11-14T07:31:38.851Z')
       ),
     ],
     created_at: DateTime.iso8601('2021-08-10T19:43:18.452Z'),
     currency: 'EUR',
     declared_tips_amount: 54.0,
     employee_user_id: '<id>',
-    end_at: DateTime.iso8601('2024-05-08T22:07:27.948Z'),
+    end_at: DateTime.iso8601('2024-05-12T00:29:49.305Z'),
     hourly_rate: 16.0,
     hours: 10.0,
-    id: '91ab2873-36ba-4b39-ab80-3ca44473c9e8',
+    id: 'f014c53c-3c7e-4fca-8f7a-bfc10ab6d822',
     job_name: 'Human Accountability Administrator',
     metadata: [],
     non_cash_tips_amount: 167.0,
-    start_at: DateTime.iso8601('2021-11-12T11:55:29.783Z'),
+    start_at: DateTime.iso8601('2021-11-12T18:52:37.927Z'),
     status: Models::Shared::HrisAttendanceStatus::OPEN,
-    timezone: 'America/Atikokan',
-    updated_at: DateTime.iso8601('2022-01-22T10:34:02.668Z')
+    timezone: 'Africa/Ouagadougou',
+    updated_at: DateTime.iso8601('2022-01-22T22:47:05.497Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -318,39 +318,39 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateHrisAttendanceRequest.new(
   hris_attendance: Models::Shared::HrisAttendance.new(
     address: Models::Shared::PropertyHrisAttendanceAddress.new(
-      address1: '14108 Allie Flats',
-      city: 'Kearaborough',
+      address1: '18002 Elm Street',
+      city: 'Port Gaetano',
       country_code: 'US',
-      postal_code: '23844-2344',
-      region: 'Tennessee',
-      region_code: 'CA'
+      postal_code: '42344',
+      region: 'Vermont',
+      region_code: 'MI'
     ),
-    approved_at: DateTime.iso8601('2021-09-20T05:11:50.831Z'),
+    approved_at: DateTime.iso8601('2021-09-20T08:11:43.528Z'),
     breaks: [
       Models::Shared::HrisAttendanceBreak.new(
         duration_minutes: 51.0,
-        end_at: DateTime.iso8601('2024-02-29T01:29:34.131Z'),
-        id: 'f1e175a8-d925-4fd2-ae9b-3407e8ea74ce',
+        end_at: DateTime.iso8601('2024-03-02T22:40:50.369Z'),
+        id: '6d721d3b-43c5-4d01-b14a-a04f2e0f9efa',
         is_paid: false,
         name: 'Lunch',
-        start_at: DateTime.iso8601('2023-11-11T18:27:03.654Z')
+        start_at: DateTime.iso8601('2023-11-14T07:31:38.851Z')
       ),
     ],
     created_at: DateTime.iso8601('2021-08-10T19:43:18.452Z'),
     currency: 'EUR',
     declared_tips_amount: 54.0,
     employee_user_id: '<id>',
-    end_at: DateTime.iso8601('2024-05-08T22:07:27.948Z'),
+    end_at: DateTime.iso8601('2024-05-12T00:29:49.305Z'),
     hourly_rate: 16.0,
     hours: 10.0,
-    id: '91ab2873-36ba-4b39-ab80-3ca44473c9e8',
+    id: 'f014c53c-3c7e-4fca-8f7a-bfc10ab6d822',
     job_name: 'Human Accountability Administrator',
     metadata: [],
     non_cash_tips_amount: 167.0,
-    start_at: DateTime.iso8601('2021-11-12T11:55:29.783Z'),
+    start_at: DateTime.iso8601('2021-11-12T18:52:37.927Z'),
     status: Models::Shared::HrisAttendanceStatus::OPEN,
-    timezone: 'America/Atikokan',
-    updated_at: DateTime.iso8601('2022-01-22T10:34:02.668Z')
+    timezone: 'Africa/Ouagadougou',
+    updated_at: DateTime.iso8601('2022-01-22T22:47:05.497Z')
   ),
   connection_id: '<id>',
   id: '<id>'

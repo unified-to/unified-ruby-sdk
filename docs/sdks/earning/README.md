@@ -32,12 +32,12 @@ res = s.earning.create_hris_earning(hris_earning: Models::Shared::HrisEarning.ne
   created_at: DateTime.iso8601('2019-01-26T12:44:52.326Z'),
   currency: 'USD',
   frequency: Models::Shared::HrisEarningFrequency::SEMIMONTHLY,
-  id: '837fb343-7242-4677-bc4f-0bd2fc11af5e',
+  id: '5d87c200-d1d0-40de-94b7-45ebbdc5e714',
   metadata: [],
-  notes: 'Deporto truculenter vinum beatae.',
-  start_at: DateTime.iso8601('2022-08-08T01:00:56.413Z'),
+  notes: 'Beatae degusto decipio volo sum.',
+  start_at: DateTime.iso8601('2022-08-10T17:37:44.384Z'),
   status: Models::Shared::HrisEarningStatus::ENDED,
-  updated_at: DateTime.iso8601('2020-02-12T20:58:15.533Z')
+  updated_at: DateTime.iso8601('2020-02-13T16:07:44.260Z')
 ), connection_id: '<id>')
 
 unless res.hris_earning.nil?
@@ -175,12 +175,12 @@ req = Models::Operations::PatchHrisEarningRequest.new(
     created_at: DateTime.iso8601('2019-01-26T12:44:52.326Z'),
     currency: 'USD',
     frequency: Models::Shared::HrisEarningFrequency::SEMIMONTHLY,
-    id: 'cdd9ad71-02c2-4bf8-aa9f-8efc6143a8bf',
+    id: '659ee199-acab-45f9-85b6-475212303b65',
     metadata: [],
-    notes: 'Deporto truculenter vinum beatae.',
-    start_at: DateTime.iso8601('2022-08-08T01:00:56.417Z'),
+    notes: 'Beatae degusto decipio volo sum.',
+    start_at: DateTime.iso8601('2022-08-10T17:37:44.391Z'),
     status: Models::Shared::HrisEarningStatus::ENDED,
-    updated_at: DateTime.iso8601('2020-02-12T20:58:15.534Z')
+    updated_at: DateTime.iso8601('2020-02-13T16:07:44.262Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -273,12 +273,12 @@ req = Models::Operations::UpdateHrisEarningRequest.new(
     created_at: DateTime.iso8601('2019-01-26T12:44:52.326Z'),
     currency: 'USD',
     frequency: Models::Shared::HrisEarningFrequency::SEMIMONTHLY,
-    id: 'cdd9ad71-02c2-4bf8-aa9f-8efc6143a8bf',
+    id: '659ee199-acab-45f9-85b6-475212303b65',
     metadata: [],
-    notes: 'Deporto truculenter vinum beatae.',
-    start_at: DateTime.iso8601('2022-08-08T01:00:56.417Z'),
+    notes: 'Beatae degusto decipio volo sum.',
+    start_at: DateTime.iso8601('2022-08-10T17:37:44.391Z'),
     status: Models::Shared::HrisEarningStatus::ENDED,
-    updated_at: DateTime.iso8601('2020-02-12T20:58:15.534Z')
+    updated_at: DateTime.iso8601('2020-02-13T16:07:44.262Z')
   ),
   connection_id: '<id>',
   id: '<id>'

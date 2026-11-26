@@ -39,6 +39,7 @@ module UnifiedRubySDK
           USER_ID = new('user_id')
           INDUSTRY = new('industry')
           SUMMARY = new('summary')
+          FEES = new('fees')
           RAW = new('raw')
         end
       end

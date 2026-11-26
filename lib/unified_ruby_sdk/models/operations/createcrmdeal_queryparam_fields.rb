@@ -30,6 +30,7 @@ module UnifiedRubySDK
           COMPANY_IDS = new('company_ids')
           DESCRIPTION = new('description')
           METADATA = new('metadata')
+          VEHICLE_IDS = new('vehicle_ids')
           RAW = new('raw')
         end
       end

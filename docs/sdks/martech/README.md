@@ -42,18 +42,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.martech.create_martech_campaign(marketing_campaign: Models::Shared::MarketingCampaign.new(
   created_at: DateTime.iso8601('2019-05-19T11:18:15.589Z'),
-  from_email: 'graham.mertz@gmail.com',
-  from_name: 'Graham Mertz',
-  id: 'e985785f-aefc-47bf-86d1-0ce50ee63763',
+  from_email: 'liana.dare@gmail.com',
+  from_name: 'Liana Dare',
+  id: 'b9999750-5479-41b4-9a47-e5fc91112480',
   metadata: [],
-  name: 'Consequatur atqui sustineo.',
-  preview_text: 'Auctus votum ver umbra corroboro turpis spoliatio tamen strues auxilium benigne tempus error eaque suasoria.',
-  reply_to_email: 'graham.mertz@icloud.com',
+  name: 'Sumo trepide utpote conculco tibi solio supplanto.',
+  preview_text: 'Spoliatio tamen strues auxilium benigne tempus error eaque suasoria soleo tergeo contra solutio vilitas.',
+  reply_to_email: 'liana.dare@icloud.com',
   send_at: DateTime.iso8601('2024-01-23T21:19:26.708Z'),
   status: Models::Shared::MarketingCampaignStatus::SCHEDULED,
-  subject_line: 'Trepide utpote conculco tibi solio supplanto peior tibi.',
+  subject_line: 'Tibi volo auctus votum ver umbra corroboro.',
   type: 'absplit',
-  updated_at: DateTime.iso8601('2022-07-04T14:44:36.592Z')
+  updated_at: DateTime.iso8601('2022-07-07T02:19:49.042Z')
 ), connection_id: '<id>')
 
 unless res.marketing_campaign.nil?
@@ -99,26 +99,26 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.martech.create_martech_list(marketing_list: Models::Shared::MarketingList.new(
   address: Models::Shared::PropertyMarketingListAddress.new(
-    address1: '76564 Coronation Road',
-    address2: 'Suite 922',
-    city: 'West Jordon',
-    country: 'Mexico',
-    postal_code: '04183',
-    region: 'NC'
+    address1: '33559 Darian Center',
+    address2: 'Suite 796',
+    city: 'East Braulio',
+    country: 'Liechtenstein',
+    postal_code: '65647-1692',
+    region: 'AZ'
   ),
   created_at: DateTime.iso8601('2019-09-18T02:01:36.950Z'),
-  description: 'Vilis.',
-  id: 'f6cfa872-0096-4162-b4a5-9a2d16845324',
+  description: 'Adamo currus at tutamen cubo.',
+  id: '2034c613-5ce4-45ed-8aca-a1a2541a95f5',
   is_active: true,
-  language: 'ru',
+  language: 'pl',
   metadata: [],
-  name: 'Electronics Newsletter',
-  sender_company: 'Koepp and Sons',
-  sender_email: 'blake.kuhn@hotmail.com',
-  sender_name: 'Blake Kuhn',
-  sender_phone: '359.305.7962 x28115',
-  subject: 'Theca caecus copia crebro valeo ulciscor.',
-  updated_at: DateTime.iso8601('2022-09-26T01:29:00.377Z')
+  name: 'Kids Newsletter',
+  sender_company: 'Monahan, Kerluke and Grant',
+  sender_email: 'kaci.weissnat@hotmail.com',
+  sender_name: 'Kaci Weissnat',
+  sender_phone: '595.823.3882 x724',
+  subject: 'Celo calco contra asporto vallum solutio deficio paens demergo.',
+  updated_at: DateTime.iso8601('2022-09-28T13:45:09.414Z')
 ), connection_id: '<id>')
 
 unless res.marketing_list.nil?
@@ -163,25 +163,25 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
   )
 )
 res = s.martech.create_martech_member(marketing_member: Models::Shared::MarketingMember.new(
-  company: 'Miller - Franecki',
+  company: 'Abernathy - Carter',
   created_at: DateTime.iso8601('2022-04-15T15:32:38.496Z'),
   emails: [
     Models::Shared::MarketingEmail.new(
-      email: 'jude.leffler@hotmail.com',
+      email: 'jeremy.franecki@hotmail.com',
       type: Models::Shared::MarketingEmailType::HOME
     ),
   ],
-  first_name: 'Jude',
-  id: 'bfbcad3c-8432-4e5d-ba64-0bd03fdc922e',
-  last_name: 'Leffler',
+  first_name: 'Jeremy',
+  id: '539f1ad4-5a11-49e6-80df-3372559920af',
+  last_name: 'Franecki',
   metadata: [],
-  name: 'Jude Leffler',
+  name: 'Jeremy Franecki',
   status: Models::Shared::MarketingMemberStatus::UNSUBSCRIBED,
   tags: [
-    'adnuo',
-    'verumtamen',
+    'deleniti',
+    'subvenio',
   ],
-  updated_at: DateTime.iso8601('2025-07-30T06:58:18.853Z')
+  updated_at: DateTime.iso8601('2025-08-03T13:18:53.346Z')
 ), connection_id: '<id>')
 
 unless res.marketing_member.nil?
@@ -534,18 +534,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchMartechCampaignRequest.new(
   marketing_campaign: Models::Shared::MarketingCampaign.new(
     created_at: DateTime.iso8601('2019-05-19T11:18:15.589Z'),
-    from_email: 'graham.mertz@gmail.com',
-    from_name: 'Graham Mertz',
-    id: 'b11f0d5c-ca62-4436-8286-3f6ab1c0a06d',
+    from_email: 'liana.dare@gmail.com',
+    from_name: 'Liana Dare',
+    id: '49346fe2-fe26-4673-941d-d0e4c62837af',
     metadata: [],
-    name: 'Consequatur atqui sustineo.',
-    preview_text: 'Auctus votum ver umbra corroboro turpis spoliatio tamen strues auxilium benigne tempus error eaque suasoria.',
-    reply_to_email: 'graham.mertz@icloud.com',
+    name: 'Sumo trepide utpote conculco tibi solio supplanto.',
+    preview_text: 'Spoliatio tamen strues auxilium benigne tempus error eaque suasoria soleo tergeo contra solutio vilitas.',
+    reply_to_email: 'liana.dare@icloud.com',
     send_at: DateTime.iso8601('2024-01-23T21:19:26.708Z'),
     status: Models::Shared::MarketingCampaignStatus::SCHEDULED,
-    subject_line: 'Trepide utpote conculco tibi solio supplanto peior tibi.',
+    subject_line: 'Tibi volo auctus votum ver umbra corroboro.',
     type: 'absplit',
-    updated_at: DateTime.iso8601('2022-07-04T14:44:36.597Z')
+    updated_at: DateTime.iso8601('2022-07-07T02:19:49.047Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -594,26 +594,26 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchMartechListRequest.new(
   marketing_list: Models::Shared::MarketingList.new(
     address: Models::Shared::PropertyMarketingListAddress.new(
-      address1: '76564 Coronation Road',
-      address2: 'Suite 922',
-      city: 'West Jordon',
-      country: 'Mexico',
-      postal_code: '04183',
-      region: 'NC'
+      address1: '33559 Darian Center',
+      address2: 'Suite 796',
+      city: 'East Braulio',
+      country: 'Liechtenstein',
+      postal_code: '65647-1692',
+      region: 'AZ'
     ),
     created_at: DateTime.iso8601('2019-09-18T02:01:36.950Z'),
-    description: 'Vilis.',
-    id: '724dd7c0-2d5e-48d1-b8fa-988a8e1a47ae',
+    description: 'Adamo currus at tutamen cubo.',
+    id: 'df83446a-7ddc-4c97-9786-941e320d747e',
     is_active: true,
-    language: 'ru',
+    language: 'pl',
     metadata: [],
-    name: 'Electronics Newsletter',
-    sender_company: 'Koepp and Sons',
-    sender_email: 'blake.kuhn@hotmail.com',
-    sender_name: 'Blake Kuhn',
-    sender_phone: '359.305.7962 x28115',
-    subject: 'Theca caecus copia crebro valeo ulciscor.',
-    updated_at: DateTime.iso8601('2022-09-26T01:29:00.382Z')
+    name: 'Kids Newsletter',
+    sender_company: 'Monahan, Kerluke and Grant',
+    sender_email: 'kaci.weissnat@hotmail.com',
+    sender_name: 'Kaci Weissnat',
+    sender_phone: '595.823.3882 x724',
+    subject: 'Celo calco contra asporto vallum solutio deficio paens demergo.',
+    updated_at: DateTime.iso8601('2022-09-28T13:45:09.420Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -661,25 +661,25 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchMartechMemberRequest.new(
   marketing_member: Models::Shared::MarketingMember.new(
-    company: 'Miller - Franecki',
+    company: 'Abernathy - Carter',
     created_at: DateTime.iso8601('2022-04-15T15:32:38.496Z'),
     emails: [
       Models::Shared::MarketingEmail.new(
-        email: 'jude.leffler@hotmail.com',
+        email: 'jeremy.franecki@hotmail.com',
         type: Models::Shared::MarketingEmailType::HOME
       ),
     ],
-    first_name: 'Jude',
-    id: 'a9788865-99ab-4c07-b66b-3956553b5260',
-    last_name: 'Leffler',
+    first_name: 'Jeremy',
+    id: '45cd96fd-e13e-437e-b147-9f9e21922590',
+    last_name: 'Franecki',
     metadata: [],
-    name: 'Jude Leffler',
+    name: 'Jeremy Franecki',
     status: Models::Shared::MarketingMemberStatus::UNSUBSCRIBED,
     tags: [
-      'adnuo',
-      'verumtamen',
+      'deleniti',
+      'subvenio',
     ],
-    updated_at: DateTime.iso8601('2025-07-30T06:58:18.864Z')
+    updated_at: DateTime.iso8601('2025-08-03T13:18:53.355Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -851,18 +851,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateMartechCampaignRequest.new(
   marketing_campaign: Models::Shared::MarketingCampaign.new(
     created_at: DateTime.iso8601('2019-05-19T11:18:15.589Z'),
-    from_email: 'graham.mertz@gmail.com',
-    from_name: 'Graham Mertz',
-    id: 'b11f0d5c-ca62-4436-8286-3f6ab1c0a06d',
+    from_email: 'liana.dare@gmail.com',
+    from_name: 'Liana Dare',
+    id: '49346fe2-fe26-4673-941d-d0e4c62837af',
     metadata: [],
-    name: 'Consequatur atqui sustineo.',
-    preview_text: 'Auctus votum ver umbra corroboro turpis spoliatio tamen strues auxilium benigne tempus error eaque suasoria.',
-    reply_to_email: 'graham.mertz@icloud.com',
+    name: 'Sumo trepide utpote conculco tibi solio supplanto.',
+    preview_text: 'Spoliatio tamen strues auxilium benigne tempus error eaque suasoria soleo tergeo contra solutio vilitas.',
+    reply_to_email: 'liana.dare@icloud.com',
     send_at: DateTime.iso8601('2024-01-23T21:19:26.708Z'),
     status: Models::Shared::MarketingCampaignStatus::SCHEDULED,
-    subject_line: 'Trepide utpote conculco tibi solio supplanto peior tibi.',
+    subject_line: 'Tibi volo auctus votum ver umbra corroboro.',
     type: 'absplit',
-    updated_at: DateTime.iso8601('2022-07-04T14:44:36.597Z')
+    updated_at: DateTime.iso8601('2022-07-07T02:19:49.047Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -911,26 +911,26 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateMartechListRequest.new(
   marketing_list: Models::Shared::MarketingList.new(
     address: Models::Shared::PropertyMarketingListAddress.new(
-      address1: '76564 Coronation Road',
-      address2: 'Suite 922',
-      city: 'West Jordon',
-      country: 'Mexico',
-      postal_code: '04183',
-      region: 'NC'
+      address1: '33559 Darian Center',
+      address2: 'Suite 796',
+      city: 'East Braulio',
+      country: 'Liechtenstein',
+      postal_code: '65647-1692',
+      region: 'AZ'
     ),
     created_at: DateTime.iso8601('2019-09-18T02:01:36.950Z'),
-    description: 'Vilis.',
-    id: '724dd7c0-2d5e-48d1-b8fa-988a8e1a47ae',
+    description: 'Adamo currus at tutamen cubo.',
+    id: 'df83446a-7ddc-4c97-9786-941e320d747e',
     is_active: true,
-    language: 'ru',
+    language: 'pl',
     metadata: [],
-    name: 'Electronics Newsletter',
-    sender_company: 'Koepp and Sons',
-    sender_email: 'blake.kuhn@hotmail.com',
-    sender_name: 'Blake Kuhn',
-    sender_phone: '359.305.7962 x28115',
-    subject: 'Theca caecus copia crebro valeo ulciscor.',
-    updated_at: DateTime.iso8601('2022-09-26T01:29:00.382Z')
+    name: 'Kids Newsletter',
+    sender_company: 'Monahan, Kerluke and Grant',
+    sender_email: 'kaci.weissnat@hotmail.com',
+    sender_name: 'Kaci Weissnat',
+    sender_phone: '595.823.3882 x724',
+    subject: 'Celo calco contra asporto vallum solutio deficio paens demergo.',
+    updated_at: DateTime.iso8601('2022-09-28T13:45:09.420Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -978,25 +978,25 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateMartechMemberRequest.new(
   marketing_member: Models::Shared::MarketingMember.new(
-    company: 'Miller - Franecki',
+    company: 'Abernathy - Carter',
     created_at: DateTime.iso8601('2022-04-15T15:32:38.496Z'),
     emails: [
       Models::Shared::MarketingEmail.new(
-        email: 'jude.leffler@hotmail.com',
+        email: 'jeremy.franecki@hotmail.com',
         type: Models::Shared::MarketingEmailType::HOME
       ),
     ],
-    first_name: 'Jude',
-    id: 'a9788865-99ab-4c07-b66b-3956553b5260',
-    last_name: 'Leffler',
+    first_name: 'Jeremy',
+    id: '45cd96fd-e13e-437e-b147-9f9e21922590',
+    last_name: 'Franecki',
     metadata: [],
-    name: 'Jude Leffler',
+    name: 'Jeremy Franecki',
     status: Models::Shared::MarketingMemberStatus::UNSUBSCRIBED,
     tags: [
-      'adnuo',
-      'verumtamen',
+      'deleniti',
+      'subvenio',
     ],
-    updated_at: DateTime.iso8601('2025-07-30T06:58:18.864Z')
+    updated_at: DateTime.iso8601('2025-08-03T13:18:53.355Z')
   ),
   connection_id: '<id>',
   id: '<id>'

@@ -29,37 +29,37 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.guest.create_property_guest(property_guest: Models::Shared::PropertyGuest.new(
   address: Models::Shared::PropertyPropertyGuestAddress.new(
-    address1: '874 Rice Trafficway',
-    city: 'East Dollyside',
-    country: 'Cameroon',
-    country_code: 'MX',
-    postal_code: '51113-4329',
-    region: 'Missouri'
+    address1: '5781 Jules Rest',
+    city: 'Brandiborough',
+    country: 'Uruguay',
+    country_code: 'IS',
+    postal_code: '29167',
+    region: 'Mississippi'
   ),
-  company_name: 'Kertzmann, Bednar and Bashirian',
+  company_name: 'Hettinger - Lockman',
   created_at: DateTime.iso8601('2021-10-17T05:59:05.070Z'),
   emails: [
     Models::Shared::PropertyEmail.new(
-      email: 'melissa.green@icloud.com',
+      email: 'ed.pacocha@icloud.com',
       type: Models::Shared::PropertyEmailType::HOME
     ),
   ],
-  first_name: 'Melissa',
-  id: '8f9a9951-ad74-4f87-b3b8-b15a701d7e8c',
-  image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg',
+  first_name: 'Ed',
+  id: 'f34f7c1d-be49-44a7-a684-271618a3b60b',
+  image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/48.jpg',
   language: 'es',
-  last_name: 'Green',
+  last_name: 'Pacocha',
   metadata: [],
-  name: 'Melissa Green',
-  nationality: 'SI',
-  notes: 'Minus incidunt corporis.',
+  name: 'Ed Pacocha',
+  nationality: 'AW',
+  notes: 'Officia cinis corrumpo conspergo delibero contra bos repellat.',
   telephones: [
     Models::Shared::PropertyTelephone.new(
-      telephone: '+14564841285',
+      telephone: '+14843285877',
       type: Models::Shared::PropertyTelephoneType::MOBILE
     ),
   ],
-  updated_at: DateTime.iso8601('2025-07-19T00:30:50.932Z')
+  updated_at: DateTime.iso8601('2025-07-23T09:56:13.546Z')
 ), connection_id: '<id>')
 
 unless res.property_guest.nil?
@@ -194,37 +194,37 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchPropertyGuestRequest.new(
   property_guest: Models::Shared::PropertyGuest.new(
     address: Models::Shared::PropertyPropertyGuestAddress.new(
-      address1: '874 Rice Trafficway',
-      city: 'East Dollyside',
-      country: 'Cameroon',
-      country_code: 'MX',
-      postal_code: '51113-4329',
-      region: 'Missouri'
+      address1: '5781 Jules Rest',
+      city: 'Brandiborough',
+      country: 'Uruguay',
+      country_code: 'IS',
+      postal_code: '29167',
+      region: 'Mississippi'
     ),
-    company_name: 'Kertzmann, Bednar and Bashirian',
+    company_name: 'Hettinger - Lockman',
     created_at: DateTime.iso8601('2021-10-17T05:59:05.070Z'),
     emails: [
       Models::Shared::PropertyEmail.new(
-        email: 'melissa.green@icloud.com',
+        email: 'ed.pacocha@icloud.com',
         type: Models::Shared::PropertyEmailType::HOME
       ),
     ],
-    first_name: 'Melissa',
-    id: '8bce7668-4b92-42ca-9d83-1e1e2250c2d2',
-    image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg',
+    first_name: 'Ed',
+    id: '6c04270e-509b-4d53-b378-333997929a96',
+    image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/48.jpg',
     language: 'es',
-    last_name: 'Green',
+    last_name: 'Pacocha',
     metadata: [],
-    name: 'Melissa Green',
-    nationality: 'SI',
-    notes: 'Minus incidunt corporis.',
+    name: 'Ed Pacocha',
+    nationality: 'AW',
+    notes: 'Officia cinis corrumpo conspergo delibero contra bos repellat.',
     telephones: [
       Models::Shared::PropertyTelephone.new(
-        telephone: '+14564841285',
+        telephone: '+14843285877',
         type: Models::Shared::PropertyTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2025-07-19T00:30:50.950Z')
+    updated_at: DateTime.iso8601('2025-07-23T09:56:13.558Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -314,37 +314,37 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdatePropertyGuestRequest.new(
   property_guest: Models::Shared::PropertyGuest.new(
     address: Models::Shared::PropertyPropertyGuestAddress.new(
-      address1: '874 Rice Trafficway',
-      city: 'East Dollyside',
-      country: 'Cameroon',
-      country_code: 'MX',
-      postal_code: '51113-4329',
-      region: 'Missouri'
+      address1: '5781 Jules Rest',
+      city: 'Brandiborough',
+      country: 'Uruguay',
+      country_code: 'IS',
+      postal_code: '29167',
+      region: 'Mississippi'
     ),
-    company_name: 'Kertzmann, Bednar and Bashirian',
+    company_name: 'Hettinger - Lockman',
     created_at: DateTime.iso8601('2021-10-17T05:59:05.070Z'),
     emails: [
       Models::Shared::PropertyEmail.new(
-        email: 'melissa.green@icloud.com',
+        email: 'ed.pacocha@icloud.com',
         type: Models::Shared::PropertyEmailType::HOME
       ),
     ],
-    first_name: 'Melissa',
-    id: '8bce7668-4b92-42ca-9d83-1e1e2250c2d2',
-    image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg',
+    first_name: 'Ed',
+    id: '6c04270e-509b-4d53-b378-333997929a96',
+    image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/48.jpg',
     language: 'es',
-    last_name: 'Green',
+    last_name: 'Pacocha',
     metadata: [],
-    name: 'Melissa Green',
-    nationality: 'SI',
-    notes: 'Minus incidunt corporis.',
+    name: 'Ed Pacocha',
+    nationality: 'AW',
+    notes: 'Officia cinis corrumpo conspergo delibero contra bos repellat.',
     telephones: [
       Models::Shared::PropertyTelephone.new(
-        telephone: '+14564841285',
+        telephone: '+14843285877',
         type: Models::Shared::PropertyTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2025-07-19T00:30:50.950Z')
+    updated_at: DateTime.iso8601('2025-07-23T09:56:13.558Z')
   ),
   connection_id: '<id>',
   id: '<id>'

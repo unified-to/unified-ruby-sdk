@@ -29,26 +29,26 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.list.create_martech_list(marketing_list: Models::Shared::MarketingList.new(
   address: Models::Shared::PropertyMarketingListAddress.new(
-    address1: '76564 Coronation Road',
-    address2: 'Suite 922',
-    city: 'West Jordon',
-    country: 'Mexico',
-    postal_code: '04183',
-    region: 'NC'
+    address1: '33559 Darian Center',
+    address2: 'Suite 796',
+    city: 'East Braulio',
+    country: 'Liechtenstein',
+    postal_code: '65647-1692',
+    region: 'AZ'
   ),
   created_at: DateTime.iso8601('2019-09-18T02:01:36.950Z'),
-  description: 'Vilis.',
-  id: 'f6cfa872-0096-4162-b4a5-9a2d16845324',
+  description: 'Adamo currus at tutamen cubo.',
+  id: '2034c613-5ce4-45ed-8aca-a1a2541a95f5',
   is_active: true,
-  language: 'ru',
+  language: 'pl',
   metadata: [],
-  name: 'Electronics Newsletter',
-  sender_company: 'Koepp and Sons',
-  sender_email: 'blake.kuhn@hotmail.com',
-  sender_name: 'Blake Kuhn',
-  sender_phone: '359.305.7962 x28115',
-  subject: 'Theca caecus copia crebro valeo ulciscor.',
-  updated_at: DateTime.iso8601('2022-09-26T01:29:00.377Z')
+  name: 'Kids Newsletter',
+  sender_company: 'Monahan, Kerluke and Grant',
+  sender_email: 'kaci.weissnat@hotmail.com',
+  sender_name: 'Kaci Weissnat',
+  sender_phone: '595.823.3882 x724',
+  subject: 'Celo calco contra asporto vallum solutio deficio paens demergo.',
+  updated_at: DateTime.iso8601('2022-09-28T13:45:09.414Z')
 ), connection_id: '<id>')
 
 unless res.marketing_list.nil?
@@ -183,26 +183,26 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchMartechListRequest.new(
   marketing_list: Models::Shared::MarketingList.new(
     address: Models::Shared::PropertyMarketingListAddress.new(
-      address1: '76564 Coronation Road',
-      address2: 'Suite 922',
-      city: 'West Jordon',
-      country: 'Mexico',
-      postal_code: '04183',
-      region: 'NC'
+      address1: '33559 Darian Center',
+      address2: 'Suite 796',
+      city: 'East Braulio',
+      country: 'Liechtenstein',
+      postal_code: '65647-1692',
+      region: 'AZ'
     ),
     created_at: DateTime.iso8601('2019-09-18T02:01:36.950Z'),
-    description: 'Vilis.',
-    id: '724dd7c0-2d5e-48d1-b8fa-988a8e1a47ae',
+    description: 'Adamo currus at tutamen cubo.',
+    id: 'df83446a-7ddc-4c97-9786-941e320d747e',
     is_active: true,
-    language: 'ru',
+    language: 'pl',
     metadata: [],
-    name: 'Electronics Newsletter',
-    sender_company: 'Koepp and Sons',
-    sender_email: 'blake.kuhn@hotmail.com',
-    sender_name: 'Blake Kuhn',
-    sender_phone: '359.305.7962 x28115',
-    subject: 'Theca caecus copia crebro valeo ulciscor.',
-    updated_at: DateTime.iso8601('2022-09-26T01:29:00.382Z')
+    name: 'Kids Newsletter',
+    sender_company: 'Monahan, Kerluke and Grant',
+    sender_email: 'kaci.weissnat@hotmail.com',
+    sender_name: 'Kaci Weissnat',
+    sender_phone: '595.823.3882 x724',
+    subject: 'Celo calco contra asporto vallum solutio deficio paens demergo.',
+    updated_at: DateTime.iso8601('2022-09-28T13:45:09.420Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -292,26 +292,26 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateMartechListRequest.new(
   marketing_list: Models::Shared::MarketingList.new(
     address: Models::Shared::PropertyMarketingListAddress.new(
-      address1: '76564 Coronation Road',
-      address2: 'Suite 922',
-      city: 'West Jordon',
-      country: 'Mexico',
-      postal_code: '04183',
-      region: 'NC'
+      address1: '33559 Darian Center',
+      address2: 'Suite 796',
+      city: 'East Braulio',
+      country: 'Liechtenstein',
+      postal_code: '65647-1692',
+      region: 'AZ'
     ),
     created_at: DateTime.iso8601('2019-09-18T02:01:36.950Z'),
-    description: 'Vilis.',
-    id: '724dd7c0-2d5e-48d1-b8fa-988a8e1a47ae',
+    description: 'Adamo currus at tutamen cubo.',
+    id: 'df83446a-7ddc-4c97-9786-941e320d747e',
     is_active: true,
-    language: 'ru',
+    language: 'pl',
     metadata: [],
-    name: 'Electronics Newsletter',
-    sender_company: 'Koepp and Sons',
-    sender_email: 'blake.kuhn@hotmail.com',
-    sender_name: 'Blake Kuhn',
-    sender_phone: '359.305.7962 x28115',
-    subject: 'Theca caecus copia crebro valeo ulciscor.',
-    updated_at: DateTime.iso8601('2022-09-26T01:29:00.382Z')
+    name: 'Kids Newsletter',
+    sender_company: 'Monahan, Kerluke and Grant',
+    sender_email: 'kaci.weissnat@hotmail.com',
+    sender_name: 'Kaci Weissnat',
+    sender_phone: '595.823.3882 x724',
+    subject: 'Celo calco contra asporto vallum solutio deficio paens demergo.',
+    updated_at: DateTime.iso8601('2022-09-28T13:45:09.420Z')
   ),
   connection_id: '<id>',
   id: '<id>'

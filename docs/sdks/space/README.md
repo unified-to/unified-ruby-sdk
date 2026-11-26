@@ -29,12 +29,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.space.create_kms_space(kms_space: Models::Shared::KmsSpace.new(
   created_at: DateTime.iso8601('2022-10-31T00:56:54.246Z'),
-  description: 'Acer.',
-  id: '317ab049-9969-47d8-abcd-127d45ea6732',
+  description: 'Ante statua defluo virga autem.',
+  id: '03ed5ff2-8c7a-4a32-82cb-c4d2710133cf',
   is_active: false,
   metadata: [],
-  name: 'into nor afore',
-  updated_at: DateTime.iso8601('2026-01-22T20:21:51.184Z')
+  name: 'remark',
+  updated_at: DateTime.iso8601('2026-01-27T14:18:31.639Z')
 ), connection_id: '<id>')
 
 unless res.kms_space.nil?
@@ -169,12 +169,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchKmsSpaceRequest.new(
   kms_space: Models::Shared::KmsSpace.new(
     created_at: DateTime.iso8601('2022-10-31T00:56:54.246Z'),
-    description: 'Acer.',
-    id: '34af9522-0c19-487a-89ec-cffa039a1c0c',
+    description: 'Ante statua defluo virga autem.',
+    id: '6f628a33-840f-4365-8c75-241ebf8e2e6e',
     is_active: false,
     metadata: [],
-    name: 'into nor afore',
-    updated_at: DateTime.iso8601('2026-01-22T20:21:51.191Z')
+    name: 'remark',
+    updated_at: DateTime.iso8601('2026-01-27T14:18:31.650Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -264,12 +264,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateKmsSpaceRequest.new(
   kms_space: Models::Shared::KmsSpace.new(
     created_at: DateTime.iso8601('2022-10-31T00:56:54.246Z'),
-    description: 'Acer.',
-    id: '34af9522-0c19-487a-89ec-cffa039a1c0c',
+    description: 'Ante statua defluo virga autem.',
+    id: '6f628a33-840f-4365-8c75-241ebf8e2e6e',
     is_active: false,
     metadata: [],
-    name: 'into nor afore',
-    updated_at: DateTime.iso8601('2026-01-22T20:21:51.191Z')
+    name: 'remark',
+    updated_at: DateTime.iso8601('2026-01-27T14:18:31.650Z')
   ),
   connection_id: '<id>',
   id: '<id>'

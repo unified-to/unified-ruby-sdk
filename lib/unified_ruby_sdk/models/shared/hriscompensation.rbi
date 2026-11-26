@@ -12,12 +12,16 @@ class UnifiedRubySDK::Models::Shared::HrisCompensation
   def amount=(str_); end
   def currency(); end
   def currency=(str_); end
+  def end_at(); end
+  def end_at=(str_); end
   def frequency(); end
   def frequency=(str_); end
   def group_id(); end
   def group_id=(str_); end
   def notes(); end
   def notes=(str_); end
+  def start_at(); end
+  def start_at=(str_); end
   def type(); end
   def type=(str_); end
 end

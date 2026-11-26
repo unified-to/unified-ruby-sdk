@@ -29,38 +29,38 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.student.create_lms_student(lms_student: Models::Shared::LmsStudent.new(
   address: Models::Shared::PropertyLmsStudentAddress.new(
-    address1: '15033 Corwin Circles',
-    city: 'New Craigside',
+    address1: '4610 Smith Cove',
+    city: 'Lake Milanchester',
     country_code: 'US',
-    postal_code: '73966',
-    region: 'New Jersey',
-    region_code: 'TX'
+    postal_code: '58634-4787',
+    region: 'Iowa',
+    region_code: 'AZ'
   ),
   created_at: DateTime.iso8601('2020-03-23T06:59:29.777Z'),
   emails: [
     Models::Shared::LmsEmail.new,
   ],
-  first_name: 'Marcella',
-  id: '29d616cc-8671-4401-b9bf-34a23d73996c',
-  image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg',
-  last_name: 'Murazik',
+  first_name: 'Lazaro',
+  id: '023ec190-473d-418b-8dab-cf3d151679cf',
+  image_url: 'https://avatars.githubusercontent.com/u/3245424',
+  last_name: 'Zulauf-Schowalter',
   metadata: [],
-  name: 'Marcella Murazik',
+  name: 'Lazaro Zulauf-Schowalter',
   telephones: [
     Models::Shared::LmsTelephone.new(
-      telephone: '(899) 827-6400',
+      telephone: '(476) 500-2870',
       type: Models::Shared::LmsTelephoneType::WORK
     ),
     Models::Shared::LmsTelephone.new(
-      telephone: '(487) 213-8236',
+      telephone: '(338) 436-9806',
       type: Models::Shared::LmsTelephoneType::FAX
     ),
     Models::Shared::LmsTelephone.new(
-      telephone: '(980) 775-2940',
+      telephone: '(852) 940-8205',
       type: Models::Shared::LmsTelephoneType::FAX
     ),
   ],
-  updated_at: DateTime.iso8601('2022-07-11T08:01:34.859Z')
+  updated_at: DateTime.iso8601('2022-07-13T09:24:57.222Z')
 ), connection_id: '<id>')
 
 unless res.lms_student.nil?
@@ -195,38 +195,38 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchLmsStudentRequest.new(
   lms_student: Models::Shared::LmsStudent.new(
     address: Models::Shared::PropertyLmsStudentAddress.new(
-      address1: '15033 Corwin Circles',
-      city: 'New Craigside',
+      address1: '4610 Smith Cove',
+      city: 'Lake Milanchester',
       country_code: 'US',
-      postal_code: '73966',
-      region: 'New Jersey',
-      region_code: 'TX'
+      postal_code: '58634-4787',
+      region: 'Iowa',
+      region_code: 'AZ'
     ),
     created_at: DateTime.iso8601('2020-03-23T06:59:29.777Z'),
     emails: [
       Models::Shared::LmsEmail.new,
     ],
-    first_name: 'Marcella',
-    id: '52970fef-7377-493d-8f29-f3f729c75c10',
-    image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg',
-    last_name: 'Murazik',
+    first_name: 'Lazaro',
+    id: '75c0ef46-3f4e-46d4-be26-d64892281432',
+    image_url: 'https://avatars.githubusercontent.com/u/3245424',
+    last_name: 'Zulauf-Schowalter',
     metadata: [],
-    name: 'Marcella Murazik',
+    name: 'Lazaro Zulauf-Schowalter',
     telephones: [
       Models::Shared::LmsTelephone.new(
-        telephone: '(899) 827-6400',
+        telephone: '(476) 500-2870',
         type: Models::Shared::LmsTelephoneType::WORK
       ),
       Models::Shared::LmsTelephone.new(
-        telephone: '(487) 213-8236',
+        telephone: '(338) 436-9806',
         type: Models::Shared::LmsTelephoneType::FAX
       ),
       Models::Shared::LmsTelephone.new(
-        telephone: '(980) 775-2940',
+        telephone: '(852) 940-8205',
         type: Models::Shared::LmsTelephoneType::FAX
       ),
     ],
-    updated_at: DateTime.iso8601('2022-07-11T08:01:34.864Z')
+    updated_at: DateTime.iso8601('2022-07-13T09:24:57.228Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -316,38 +316,38 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateLmsStudentRequest.new(
   lms_student: Models::Shared::LmsStudent.new(
     address: Models::Shared::PropertyLmsStudentAddress.new(
-      address1: '15033 Corwin Circles',
-      city: 'New Craigside',
+      address1: '4610 Smith Cove',
+      city: 'Lake Milanchester',
       country_code: 'US',
-      postal_code: '73966',
-      region: 'New Jersey',
-      region_code: 'TX'
+      postal_code: '58634-4787',
+      region: 'Iowa',
+      region_code: 'AZ'
     ),
     created_at: DateTime.iso8601('2020-03-23T06:59:29.777Z'),
     emails: [
       Models::Shared::LmsEmail.new,
     ],
-    first_name: 'Marcella',
-    id: '52970fef-7377-493d-8f29-f3f729c75c10',
-    image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg',
-    last_name: 'Murazik',
+    first_name: 'Lazaro',
+    id: '75c0ef46-3f4e-46d4-be26-d64892281432',
+    image_url: 'https://avatars.githubusercontent.com/u/3245424',
+    last_name: 'Zulauf-Schowalter',
     metadata: [],
-    name: 'Marcella Murazik',
+    name: 'Lazaro Zulauf-Schowalter',
     telephones: [
       Models::Shared::LmsTelephone.new(
-        telephone: '(899) 827-6400',
+        telephone: '(476) 500-2870',
         type: Models::Shared::LmsTelephoneType::WORK
       ),
       Models::Shared::LmsTelephone.new(
-        telephone: '(487) 213-8236',
+        telephone: '(338) 436-9806',
         type: Models::Shared::LmsTelephoneType::FAX
       ),
       Models::Shared::LmsTelephone.new(
-        telephone: '(980) 775-2940',
+        telephone: '(852) 940-8205',
         type: Models::Shared::LmsTelephoneType::FAX
       ),
     ],
-    updated_at: DateTime.iso8601('2022-07-11T08:01:34.864Z')
+    updated_at: DateTime.iso8601('2022-07-13T09:24:57.228Z')
   ),
   connection_id: '<id>',
   id: '<id>'

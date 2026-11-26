@@ -41,31 +41,31 @@ res = s.instance.create_compute_instance(compute_instance: Models::Shared::Compu
       is_auth_required: true,
       port: 8080.0,
       protocol: Models::Shared::Protocol::HTTPS,
-      url: 'https://serene-shark.biz/'
+      url: 'https://equatorial-fog.net/'
     ),
   ],
   gpu_count: 0.0,
   has_internet_access: true,
-  id: 'bdf8ef25-b06b-44bc-9e0a-2e78aa591a03',
+  id: '17ee5032-6692-4c18-9626-610c2968b33d',
   image: 'ubuntu:24.04',
   market: Models::Shared::Market::SPOT,
   memory_mb: 2048.0,
   metadata: [],
-  name: 'digital-panel',
+  name: 'optical-microchip',
   on_idle: Models::Shared::OnIdle::TERMINATE,
   price_amount: 24.90_336_107_776_966,
   price_unit: Models::Shared::PriceUnit::PER_INSTANCE_HOUR,
-  project_identifier: 'g547KrivqY',
+  project_identifier: '7sg547Kriv',
   ssh: Models::Shared::PropertyComputeInstanceSsh.new(
-    host: '116.42.165.89',
+    host: '206.84.216.197',
     port: 22.0,
     username: 'root'
   ),
-  started_at: DateTime.iso8601('2025-04-11T05:55:49.593Z'),
+  started_at: DateTime.iso8601('2025-04-14T21:04:48.017Z'),
   status: Models::Shared::ComputeInstanceStatus::ERROR,
-  status_reason: 'Sponte quasi adversus alioqui reiciendis arca carmen canis.',
+  status_reason: 'Alioqui reiciendis arca.',
   type: Models::Shared::ComputeInstanceType::BAREMETAL,
-  updated_at: DateTime.iso8601('2025-07-06T04:35:54.639Z')
+  updated_at: DateTime.iso8601('2025-07-10T03:55:08.951Z')
 ), connection_id: '<id>')
 
 unless res.compute_instance.nil?
@@ -212,31 +212,31 @@ req = Models::Operations::PatchComputeInstanceRequest.new(
         is_auth_required: true,
         port: 8080.0,
         protocol: Models::Shared::Protocol::HTTPS,
-        url: 'https://serene-shark.biz/'
+        url: 'https://equatorial-fog.net/'
       ),
     ],
     gpu_count: 0.0,
     has_internet_access: true,
-    id: '63022c88-48d3-427f-975f-6aa180ad72f3',
+    id: 'f65291a9-c660-4440-b278-ddda58fa2e6b',
     image: 'ubuntu:24.04',
     market: Models::Shared::Market::SPOT,
     memory_mb: 2048.0,
     metadata: [],
-    name: 'digital-panel',
+    name: 'optical-microchip',
     on_idle: Models::Shared::OnIdle::TERMINATE,
     price_amount: 24.90_336_107_776_966,
     price_unit: Models::Shared::PriceUnit::PER_INSTANCE_HOUR,
-    project_identifier: 'g547KrivqY',
+    project_identifier: '7sg547Kriv',
     ssh: Models::Shared::PropertyComputeInstanceSsh.new(
-      host: '116.42.165.89',
+      host: '206.84.216.197',
       port: 22.0,
       username: 'root'
     ),
-    started_at: DateTime.iso8601('2025-04-11T05:55:49.614Z'),
+    started_at: DateTime.iso8601('2025-04-14T21:04:48.037Z'),
     status: Models::Shared::ComputeInstanceStatus::ERROR,
-    status_reason: 'Sponte quasi adversus alioqui reiciendis arca carmen canis.',
+    status_reason: 'Alioqui reiciendis arca.',
     type: Models::Shared::ComputeInstanceType::BAREMETAL,
-    updated_at: DateTime.iso8601('2025-07-06T04:35:54.662Z')
+    updated_at: DateTime.iso8601('2025-07-10T03:55:08.973Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -338,31 +338,31 @@ req = Models::Operations::UpdateComputeInstanceRequest.new(
         is_auth_required: true,
         port: 8080.0,
         protocol: Models::Shared::Protocol::HTTPS,
-        url: 'https://serene-shark.biz/'
+        url: 'https://equatorial-fog.net/'
       ),
     ],
     gpu_count: 0.0,
     has_internet_access: true,
-    id: '63022c88-48d3-427f-975f-6aa180ad72f3',
+    id: 'f65291a9-c660-4440-b278-ddda58fa2e6b',
     image: 'ubuntu:24.04',
     market: Models::Shared::Market::SPOT,
     memory_mb: 2048.0,
     metadata: [],
-    name: 'digital-panel',
+    name: 'optical-microchip',
     on_idle: Models::Shared::OnIdle::TERMINATE,
     price_amount: 24.90_336_107_776_966,
     price_unit: Models::Shared::PriceUnit::PER_INSTANCE_HOUR,
-    project_identifier: 'g547KrivqY',
+    project_identifier: '7sg547Kriv',
     ssh: Models::Shared::PropertyComputeInstanceSsh.new(
-      host: '116.42.165.89',
+      host: '206.84.216.197',
       port: 22.0,
       username: 'root'
     ),
-    started_at: DateTime.iso8601('2025-04-11T05:55:49.614Z'),
+    started_at: DateTime.iso8601('2025-04-14T21:04:48.037Z'),
     status: Models::Shared::ComputeInstanceStatus::ERROR,
-    status_reason: 'Sponte quasi adversus alioqui reiciendis arca carmen canis.',
+    status_reason: 'Alioqui reiciendis arca.',
     type: Models::Shared::ComputeInstanceType::BAREMETAL,
-    updated_at: DateTime.iso8601('2025-07-06T04:35:54.662Z')
+    updated_at: DateTime.iso8601('2025-07-10T03:55:08.973Z')
   ),
   connection_id: '<id>',
   id: '<id>'

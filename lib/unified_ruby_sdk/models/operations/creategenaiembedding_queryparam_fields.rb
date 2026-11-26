@@ -12,7 +12,7 @@ module UnifiedRubySDK
         enums do
           MODEL_ID = new('model_id')
           CONTENT = new('content')
-          ENCONDING_FORMAT = new('enconding_format')
+          ENCODING_FORMAT = new('encoding_format')
           TYPE = new('type')
           DIMENSION = new('dimension')
           MAX_TOKENS = new('max_tokens')

@@ -36,24 +36,24 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.job.create_ats_job(ats_job: Models::Shared::AtsJob.new(
   addresses: [
     Models::Shared::AtsAddress.new(
-      address1: '98097 Carlo Trail',
-      city: 'South Judd',
+      address1: '458 E 8th Street',
+      city: 'Visalia',
       country_code: 'US',
-      postal_code: '89776-0669',
-      region: 'Mississippi',
-      region_code: 'FL'
+      postal_code: '60669-0678',
+      region: 'Oregon',
+      region_code: 'DE'
     ),
   ],
   compensation: [
     Models::Shared::AtsCompensation.new(
-      currency: 'AUD',
+      currency: 'GBP',
       frequency: Models::Shared::Frequency::DAY,
       max: 174_303.0,
       min: 174_042.0,
       type: Models::Shared::AtsCompensationType::BONUS
     ),
     Models::Shared::AtsCompensation.new(
-      currency: 'MZN',
+      currency: 'KMF',
       frequency: Models::Shared::Frequency::MONTH,
       max: 171_171.0,
       min: 151_975.0,
@@ -61,11 +61,18 @@ res = s.job.create_ats_job(ats_job: Models::Shared::AtsJob.new(
     ),
   ],
   created_at: DateTime.iso8601('2023-06-16T12:51:44.518Z'),
-  description: 'Global',
+  description: 'Senior',
   employment_type: Models::Shared::EmploymentType::FREELANCE,
+  fees: [
+    Models::Shared::AtsFee.new(
+      amount: 35_146.0,
+      currency: 'AFN',
+      type: Models::Shared::AtsFeeType::CONTINGENCY
+    ),
+  ],
   hiring_managers: [],
-  id: '39463393-840d-42a3-b0c9-989fdeef5f39',
-  industry: 'Handcrafted Bamboo Soap',
+  id: 'b949f9da-ca21-4d9c-8117-d531606379e7',
+  industry: 'Refined Ceramic Keyboard',
   language_locale: 'en',
   metadata: [
     Models::Shared::AtsMetadata.new(
@@ -73,95 +80,95 @@ res = s.job.create_ats_job(ats_job: Models::Shared::AtsJob.new(
         'display_name' => 'Custom Property',
       },
       format: Models::Shared::AtsMetadataFormat::TEXT,
-      id: 'd0c7e75e-f9d4-40d5-878a-2af19a4b6c47',
+      id: '7ccc59aa-bac4-4d3e-89db-58561bdc206c',
       namespace: 'custom',
       slug: 'custom_property',
-      value: 'desolo'
+      value: 'cursus'
     ),
   ],
   minimum_degree: 'Bachelor',
   minimum_experience_years: 3.0,
-  name: 'Forward Brand Producer',
+  name: 'Senior Interactions Developer',
   number_of_openings: 1.0,
   openings: [
     Models::Shared::AtsJobOpening.new(
-      close_reason: 'Admoveo trado textilis.',
-      opened_at: DateTime.iso8601('2026-07-04T13:46:55.155Z'),
+      close_reason: 'Tolero aequus tamquam inflammatio asporto canis vinitor utrum.',
+      opened_at: DateTime.iso8601('2026-07-09T21:00:12.848Z'),
       status: Models::Shared::AtsJobOpeningStatus::OPEN
     ),
   ],
   postings: [
     Models::Shared::AtsJobPosting.new(
       address: Models::Shared::PropertyAtsJobPostingAddress.new(
-        address1: '75008 Medhurst Road',
-        city: 'Madelynnshire',
+        address1: '295 First Street',
+        city: 'East Agustinton',
         country_code: 'US',
-        postal_code: '98754',
-        region: 'Wisconsin',
-        region_code: 'CO'
+        postal_code: '57059',
+        region: 'Utah',
+        region_code: 'NE'
       ),
-      created_at: DateTime.iso8601('2026-08-30T01:15:56.695Z'),
-      description: 'Beatus eum volutabrum balbus victus ipsa tubineus claustrum.',
-      id: 'd3cfcb57-015a-4585-a041-d99b1239ff43',
+      created_at: DateTime.iso8601('2026-09-04T14:56:13.534Z'),
+      description: 'Sublime.',
+      id: '858bf9ab-d73a-48d6-857f-50b61589449b',
       is_active: false,
-      location: '1725 Hessel Keys',
-      name: 'International Identity Manager',
-      posting_url: 'https://obedient-yak.com',
-      updated_at: DateTime.iso8601('2026-09-26T00:08:26.631Z')
+      location: '5699 Purdy Motorway',
+      name: 'Legacy Implementation Orchestrator',
+      posting_url: 'https://elementary-privilege.com/',
+      updated_at: DateTime.iso8601('2026-10-01T16:53:24.299Z')
     ),
   ],
   public_job_urls: [
-    'https://trustworthy-elver.info',
     'https://parched-dash.info',
+    'https://mild-midwife.org/',
   ],
   questions: [
     Models::Shared::AtsJobQuestion.new(
-      description: 'Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.',
-      id: '300b0e07-4767-4530-8d3e-2cc976efab54',
-      max_length: 117.0,
+      description: 'Capitulus.',
+      id: '59a5b77a-593c-4f75-94c0-8437f7e9cb53',
+      max_length: 214.0,
       min_length: 1.0,
       options: [
-        'tactus',
-        'vehemens',
+        'aetas',
+        'vado',
       ],
-      prompt: 'Totam maxime tres tergiversatio.',
-      question: 'Doloribus mollitia.',
+      prompt: 'Agnosco tendo.',
+      question: 'Deporto tolero.',
       required: true,
       type: Models::Shared::AtsJobQuestionType::TEXT
     ),
     Models::Shared::AtsJobQuestion.new(
-      id: 'b852429c-a8d9-4034-a435-48c92fae0b9e',
-      max_length: 453.0,
+      id: '1d1c6e0f-88c8-40eb-8273-976482a05f6e',
+      max_length: 309.0,
       min_length: 1.0,
       options: [
-        'constans',
+        'sodalitas',
       ],
-      prompt: 'Veritatis sodalitas nemo natus attonbitus reprehenderit voro depono.',
-      question: 'Nam.',
+      prompt: 'Supra veritatis.',
+      question: 'Maxime tres tergiversatio tactus vehemens architecto ab nam defetiscor.',
       required: false,
       type: Models::Shared::AtsJobQuestionType::TEXT
     ),
     Models::Shared::AtsJobQuestion.new(
-      description: 'Taceo rem compello spectaculum mollitia arcus compello.',
-      id: '1ceef3b8-67ee-4f76-b9d4-b568c8281bb7',
-      max_length: 66.0,
+      description: 'Confero trepide.',
+      id: 'bf858dcb-5592-4737-9b33-af223dc5ceb1',
+      max_length: 428.0,
       min_length: 1.0,
       options: [
-        'repellendus',
+        'censura',
       ],
-      prompt: 'Tum tamisium autus.',
-      question: 'Confero trepide.',
+      prompt: 'Taceo rem compello spectaculum mollitia arcus compello.',
+      question: 'Attonbitus reprehenderit voro depono constans vehemens.',
       required: false,
       type: Models::Shared::AtsJobQuestionType::TEXT
     ),
   ],
   skills: [
-    'suadeo',
-    'utrimque',
+    'similique',
+    'absque',
   ],
   status: Models::Shared::AtsJobStatus::ARCHIVED,
-  summary: 'Crepusculum adsuesco vere.',
-  updated_at: DateTime.iso8601('2026-03-23T14:55:40.357Z')
+  summary: 'Contra damno desolo suadeo utrimque cresco aetas turpis.',
+  updated_at: DateTime.iso8601('2026-03-28T10:23:32.850Z')
 ), connection_id: '<id>')
 
 unless res.ats_job.nil?
@@ -206,15 +213,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
   )
 )
 res = s.job.create_hris_job(hris_job: Models::Shared::HrisJob.new(
-  code: 'P-05547',
+  code: 'P-54753',
   created_at: DateTime.iso8601('2020-10-28T01:13:19.491Z'),
-  description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
+  description: 'Bonus vobis creator tabella callide cavus triumphus caveo abbas patria.',
   employment_type: Models::Shared::HrisJobEmploymentType::FREELANCE,
-  id: 'a78a7af9-c522-40c1-8ee7-ce7aee87c35b',
+  id: 'f1722d67-0c2e-42bd-bf52-5643fcbbd55a',
   is_active: false,
   metadata: [],
-  name: 'Internal Integration Specialist',
-  updated_at: DateTime.iso8601('2023-02-10T12:58:21.947Z')
+  name: 'Customer Security Assistant',
+  updated_at: DateTime.iso8601('2023-02-12T18:56:53.670Z')
 ), connection_id: '<id>')
 
 unless res.hris_job.nil?
@@ -437,24 +444,24 @@ req = Models::Operations::PatchAtsJobRequest.new(
   ats_job: Models::Shared::AtsJob.new(
     addresses: [
       Models::Shared::AtsAddress.new(
-        address1: '98097 Carlo Trail',
-        city: 'South Judd',
+        address1: '458 E 8th Street',
+        city: 'Visalia',
         country_code: 'US',
-        postal_code: '89776-0669',
-        region: 'Mississippi',
-        region_code: 'FL'
+        postal_code: '60669-0678',
+        region: 'Oregon',
+        region_code: 'DE'
       ),
     ],
     compensation: [
       Models::Shared::AtsCompensation.new(
-        currency: 'AUD',
+        currency: 'GBP',
         frequency: Models::Shared::Frequency::DAY,
         max: 174_303.0,
         min: 174_042.0,
         type: Models::Shared::AtsCompensationType::BONUS
       ),
       Models::Shared::AtsCompensation.new(
-        currency: 'MZN',
+        currency: 'KMF',
         frequency: Models::Shared::Frequency::MONTH,
         max: 171_171.0,
         min: 151_975.0,
@@ -462,11 +469,18 @@ req = Models::Operations::PatchAtsJobRequest.new(
       ),
     ],
     created_at: DateTime.iso8601('2023-06-16T12:51:44.518Z'),
-    description: 'Global',
+    description: 'Senior',
     employment_type: Models::Shared::EmploymentType::FREELANCE,
+    fees: [
+      Models::Shared::AtsFee.new(
+        amount: 35_146.0,
+        currency: 'AFN',
+        type: Models::Shared::AtsFeeType::CONTINGENCY
+      ),
+    ],
     hiring_managers: [],
-    id: '5645e9b7-0b83-47f6-9100-225281700b47',
-    industry: 'Handcrafted Bamboo Soap',
+    id: 'efc74b55-a2f1-493e-b446-8dddcd27dbb5',
+    industry: 'Refined Ceramic Keyboard',
     language_locale: 'en',
     metadata: [
       Models::Shared::AtsMetadata.new(
@@ -474,95 +488,95 @@ req = Models::Operations::PatchAtsJobRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '9cb3c597-a081-4a8a-8029-08ad8a6206c5',
+        id: '8f8fb25b-cf84-451a-b199-66179e59e6b0',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'desolo'
+        value: 'cursus'
       ),
     ],
     minimum_degree: 'Bachelor',
     minimum_experience_years: 3.0,
-    name: 'Forward Brand Producer',
+    name: 'Senior Interactions Developer',
     number_of_openings: 1.0,
     openings: [
       Models::Shared::AtsJobOpening.new(
-        close_reason: 'Admoveo trado textilis.',
-        opened_at: DateTime.iso8601('2026-07-04T13:46:55.191Z'),
+        close_reason: 'Tolero aequus tamquam inflammatio asporto canis vinitor utrum.',
+        opened_at: DateTime.iso8601('2026-07-09T21:00:12.896Z'),
         status: Models::Shared::AtsJobOpeningStatus::OPEN
       ),
     ],
     postings: [
       Models::Shared::AtsJobPosting.new(
         address: Models::Shared::PropertyAtsJobPostingAddress.new(
-          address1: '75008 Medhurst Road',
-          city: 'Madelynnshire',
+          address1: '295 First Street',
+          city: 'East Agustinton',
           country_code: 'US',
-          postal_code: '98754',
-          region: 'Wisconsin',
-          region_code: 'CO'
+          postal_code: '57059',
+          region: 'Utah',
+          region_code: 'NE'
         ),
-        created_at: DateTime.iso8601('2026-08-30T01:15:56.733Z'),
-        description: 'Beatus eum volutabrum balbus victus ipsa tubineus claustrum.',
-        id: '7c0c9622-568f-4d5b-b4e4-1e9496c95f29',
+        created_at: DateTime.iso8601('2026-09-04T14:56:13.585Z'),
+        description: 'Sublime.',
+        id: '360a801c-3e7d-4557-a96e-7712025c35fd',
         is_active: false,
-        location: '1725 Hessel Keys',
-        name: 'International Identity Manager',
-        posting_url: 'https://obedient-yak.com',
-        updated_at: DateTime.iso8601('2026-09-26T00:08:26.670Z')
+        location: '5699 Purdy Motorway',
+        name: 'Legacy Implementation Orchestrator',
+        posting_url: 'https://elementary-privilege.com/',
+        updated_at: DateTime.iso8601('2026-10-01T16:53:24.351Z')
       ),
     ],
     public_job_urls: [
-      'https://trustworthy-elver.info',
       'https://parched-dash.info',
+      'https://mild-midwife.org/',
     ],
     questions: [
       Models::Shared::AtsJobQuestion.new(
-        description: 'Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.',
-        id: 'aeda7d95-f7a7-470e-ba7a-1965d76f4e9c',
-        max_length: 117.0,
+        description: 'Capitulus.',
+        id: '09cb20d3-3ea5-406b-a781-b1a0cfe2c639',
+        max_length: 214.0,
         min_length: 1.0,
         options: [
-          'tactus',
-          'vehemens',
+          'aetas',
+          'vado',
         ],
-        prompt: 'Totam maxime tres tergiversatio.',
-        question: 'Doloribus mollitia.',
+        prompt: 'Agnosco tendo.',
+        question: 'Deporto tolero.',
         required: true,
         type: Models::Shared::AtsJobQuestionType::TEXT
       ),
       Models::Shared::AtsJobQuestion.new(
-        id: 'a468f4a2-878d-483c-8e3f-4d3526e0fd11',
-        max_length: 453.0,
+        id: 'd90d35d4-111b-42b6-8e19-5a91cfa96311',
+        max_length: 309.0,
         min_length: 1.0,
         options: [
-          'constans',
+          'sodalitas',
         ],
-        prompt: 'Veritatis sodalitas nemo natus attonbitus reprehenderit voro depono.',
-        question: 'Nam.',
+        prompt: 'Supra veritatis.',
+        question: 'Maxime tres tergiversatio tactus vehemens architecto ab nam defetiscor.',
         required: false,
         type: Models::Shared::AtsJobQuestionType::TEXT
       ),
       Models::Shared::AtsJobQuestion.new(
-        description: 'Taceo rem compello spectaculum mollitia arcus compello.',
-        id: '4e0959bc-85e1-45ff-a3c9-a142363652e1',
-        max_length: 66.0,
+        description: 'Confero trepide.',
+        id: '0bf31191-8d7e-49e2-a16d-590217ed0ce5',
+        max_length: 428.0,
         min_length: 1.0,
         options: [
-          'repellendus',
+          'censura',
         ],
-        prompt: 'Tum tamisium autus.',
-        question: 'Confero trepide.',
+        prompt: 'Taceo rem compello spectaculum mollitia arcus compello.',
+        question: 'Attonbitus reprehenderit voro depono constans vehemens.',
         required: false,
         type: Models::Shared::AtsJobQuestionType::TEXT
       ),
     ],
     skills: [
-      'suadeo',
-      'utrimque',
+      'similique',
+      'absque',
     ],
     status: Models::Shared::AtsJobStatus::ARCHIVED,
-    summary: 'Crepusculum adsuesco vere.',
-    updated_at: DateTime.iso8601('2026-03-23T14:55:40.390Z')
+    summary: 'Contra damno desolo suadeo utrimque cresco aetas turpis.',
+    updated_at: DateTime.iso8601('2026-03-28T10:23:32.893Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -610,15 +624,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchHrisJobRequest.new(
   hris_job: Models::Shared::HrisJob.new(
-    code: 'P-05547',
+    code: 'P-54753',
     created_at: DateTime.iso8601('2020-10-28T01:13:19.491Z'),
-    description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
+    description: 'Bonus vobis creator tabella callide cavus triumphus caveo abbas patria.',
     employment_type: Models::Shared::HrisJobEmploymentType::FREELANCE,
-    id: '21772e37-b8a9-46a2-b918-6eddfa09bc5e',
+    id: 'f4fa4157-ad95-4740-b3cc-f677feb5193c',
     is_active: false,
     metadata: [],
-    name: 'Internal Integration Specialist',
-    updated_at: DateTime.iso8601('2023-02-10T12:58:21.990Z')
+    name: 'Customer Security Assistant',
+    updated_at: DateTime.iso8601('2023-02-12T18:56:53.722Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -750,24 +764,24 @@ req = Models::Operations::UpdateAtsJobRequest.new(
   ats_job: Models::Shared::AtsJob.new(
     addresses: [
       Models::Shared::AtsAddress.new(
-        address1: '98097 Carlo Trail',
-        city: 'South Judd',
+        address1: '458 E 8th Street',
+        city: 'Visalia',
         country_code: 'US',
-        postal_code: '89776-0669',
-        region: 'Mississippi',
-        region_code: 'FL'
+        postal_code: '60669-0678',
+        region: 'Oregon',
+        region_code: 'DE'
       ),
     ],
     compensation: [
       Models::Shared::AtsCompensation.new(
-        currency: 'AUD',
+        currency: 'GBP',
         frequency: Models::Shared::Frequency::DAY,
         max: 174_303.0,
         min: 174_042.0,
         type: Models::Shared::AtsCompensationType::BONUS
       ),
       Models::Shared::AtsCompensation.new(
-        currency: 'MZN',
+        currency: 'KMF',
         frequency: Models::Shared::Frequency::MONTH,
         max: 171_171.0,
         min: 151_975.0,
@@ -775,11 +789,18 @@ req = Models::Operations::UpdateAtsJobRequest.new(
       ),
     ],
     created_at: DateTime.iso8601('2023-06-16T12:51:44.518Z'),
-    description: 'Global',
+    description: 'Senior',
     employment_type: Models::Shared::EmploymentType::FREELANCE,
+    fees: [
+      Models::Shared::AtsFee.new(
+        amount: 35_146.0,
+        currency: 'AFN',
+        type: Models::Shared::AtsFeeType::CONTINGENCY
+      ),
+    ],
     hiring_managers: [],
-    id: '5645e9b7-0b83-47f6-9100-225281700b47',
-    industry: 'Handcrafted Bamboo Soap',
+    id: 'efc74b55-a2f1-493e-b446-8dddcd27dbb5',
+    industry: 'Refined Ceramic Keyboard',
     language_locale: 'en',
     metadata: [
       Models::Shared::AtsMetadata.new(
@@ -787,95 +808,95 @@ req = Models::Operations::UpdateAtsJobRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '9cb3c597-a081-4a8a-8029-08ad8a6206c5',
+        id: '8f8fb25b-cf84-451a-b199-66179e59e6b0',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'desolo'
+        value: 'cursus'
       ),
     ],
     minimum_degree: 'Bachelor',
     minimum_experience_years: 3.0,
-    name: 'Forward Brand Producer',
+    name: 'Senior Interactions Developer',
     number_of_openings: 1.0,
     openings: [
       Models::Shared::AtsJobOpening.new(
-        close_reason: 'Admoveo trado textilis.',
-        opened_at: DateTime.iso8601('2026-07-04T13:46:55.191Z'),
+        close_reason: 'Tolero aequus tamquam inflammatio asporto canis vinitor utrum.',
+        opened_at: DateTime.iso8601('2026-07-09T21:00:12.896Z'),
         status: Models::Shared::AtsJobOpeningStatus::OPEN
       ),
     ],
     postings: [
       Models::Shared::AtsJobPosting.new(
         address: Models::Shared::PropertyAtsJobPostingAddress.new(
-          address1: '75008 Medhurst Road',
-          city: 'Madelynnshire',
+          address1: '295 First Street',
+          city: 'East Agustinton',
           country_code: 'US',
-          postal_code: '98754',
-          region: 'Wisconsin',
-          region_code: 'CO'
+          postal_code: '57059',
+          region: 'Utah',
+          region_code: 'NE'
         ),
-        created_at: DateTime.iso8601('2026-08-30T01:15:56.733Z'),
-        description: 'Beatus eum volutabrum balbus victus ipsa tubineus claustrum.',
-        id: '7c0c9622-568f-4d5b-b4e4-1e9496c95f29',
+        created_at: DateTime.iso8601('2026-09-04T14:56:13.585Z'),
+        description: 'Sublime.',
+        id: '360a801c-3e7d-4557-a96e-7712025c35fd',
         is_active: false,
-        location: '1725 Hessel Keys',
-        name: 'International Identity Manager',
-        posting_url: 'https://obedient-yak.com',
-        updated_at: DateTime.iso8601('2026-09-26T00:08:26.670Z')
+        location: '5699 Purdy Motorway',
+        name: 'Legacy Implementation Orchestrator',
+        posting_url: 'https://elementary-privilege.com/',
+        updated_at: DateTime.iso8601('2026-10-01T16:53:24.351Z')
       ),
     ],
     public_job_urls: [
-      'https://trustworthy-elver.info',
       'https://parched-dash.info',
+      'https://mild-midwife.org/',
     ],
     questions: [
       Models::Shared::AtsJobQuestion.new(
-        description: 'Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.',
-        id: 'aeda7d95-f7a7-470e-ba7a-1965d76f4e9c',
-        max_length: 117.0,
+        description: 'Capitulus.',
+        id: '09cb20d3-3ea5-406b-a781-b1a0cfe2c639',
+        max_length: 214.0,
         min_length: 1.0,
         options: [
-          'tactus',
-          'vehemens',
+          'aetas',
+          'vado',
         ],
-        prompt: 'Totam maxime tres tergiversatio.',
-        question: 'Doloribus mollitia.',
+        prompt: 'Agnosco tendo.',
+        question: 'Deporto tolero.',
         required: true,
         type: Models::Shared::AtsJobQuestionType::TEXT
       ),
       Models::Shared::AtsJobQuestion.new(
-        id: 'a468f4a2-878d-483c-8e3f-4d3526e0fd11',
-        max_length: 453.0,
+        id: 'd90d35d4-111b-42b6-8e19-5a91cfa96311',
+        max_length: 309.0,
         min_length: 1.0,
         options: [
-          'constans',
+          'sodalitas',
         ],
-        prompt: 'Veritatis sodalitas nemo natus attonbitus reprehenderit voro depono.',
-        question: 'Nam.',
+        prompt: 'Supra veritatis.',
+        question: 'Maxime tres tergiversatio tactus vehemens architecto ab nam defetiscor.',
         required: false,
         type: Models::Shared::AtsJobQuestionType::TEXT
       ),
       Models::Shared::AtsJobQuestion.new(
-        description: 'Taceo rem compello spectaculum mollitia arcus compello.',
-        id: '4e0959bc-85e1-45ff-a3c9-a142363652e1',
-        max_length: 66.0,
+        description: 'Confero trepide.',
+        id: '0bf31191-8d7e-49e2-a16d-590217ed0ce5',
+        max_length: 428.0,
         min_length: 1.0,
         options: [
-          'repellendus',
+          'censura',
         ],
-        prompt: 'Tum tamisium autus.',
-        question: 'Confero trepide.',
+        prompt: 'Taceo rem compello spectaculum mollitia arcus compello.',
+        question: 'Attonbitus reprehenderit voro depono constans vehemens.',
         required: false,
         type: Models::Shared::AtsJobQuestionType::TEXT
       ),
     ],
     skills: [
-      'suadeo',
-      'utrimque',
+      'similique',
+      'absque',
     ],
     status: Models::Shared::AtsJobStatus::ARCHIVED,
-    summary: 'Crepusculum adsuesco vere.',
-    updated_at: DateTime.iso8601('2026-03-23T14:55:40.390Z')
+    summary: 'Contra damno desolo suadeo utrimque cresco aetas turpis.',
+    updated_at: DateTime.iso8601('2026-03-28T10:23:32.893Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -923,15 +944,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateHrisJobRequest.new(
   hris_job: Models::Shared::HrisJob.new(
-    code: 'P-05547',
+    code: 'P-54753',
     created_at: DateTime.iso8601('2020-10-28T01:13:19.491Z'),
-    description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
+    description: 'Bonus vobis creator tabella callide cavus triumphus caveo abbas patria.',
     employment_type: Models::Shared::HrisJobEmploymentType::FREELANCE,
-    id: '21772e37-b8a9-46a2-b918-6eddfa09bc5e',
+    id: 'f4fa4157-ad95-4740-b3cc-f677feb5193c',
     is_active: false,
     metadata: [],
-    name: 'Internal Integration Specialist',
-    updated_at: DateTime.iso8601('2023-02-10T12:58:21.990Z')
+    name: 'Customer Security Assistant',
+    updated_at: DateTime.iso8601('2023-02-12T18:56:53.722Z')
   ),
   connection_id: '<id>',
   id: '<id>'

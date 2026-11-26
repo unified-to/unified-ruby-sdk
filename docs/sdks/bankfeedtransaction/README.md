@@ -29,20 +29,20 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.bankfeedtransaction.create_accounting_bankfeedtransaction(accounting_bankfeedtransaction: Models::Shared::AccountingBankfeedtransaction.new(
   amount: 60_889.0,
-  bank_category: 'Clothing',
+  bank_category: 'Beauty',
   category_ids: [],
   created_at: DateTime.iso8601('2022-03-24T23:41:08.374Z'),
   currency: 'CAD',
-  description: 'Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781.',
-  id: 'de5a60e6-8973-452b-b1f0-68e9da2d7846',
+  description: 'deposit processed at Renner - Quigley for SSP 824.35, using card ending ****1112. Account: ***7957.',
+  id: 'f5a49686-9bf6-4289-ae5c-21b5addbdadd',
   is_pending: true,
-  merchant_name: 'Buckridge - Feest',
+  merchant_name: 'McKenzie Inc',
   metadata: [],
-  posted_at: DateTime.iso8601('2025-05-04T21:06:07.624Z'),
-  reference: '79574105',
-  transaction_at: DateTime.iso8601('2022-08-01T15:02:01.570Z'),
+  posted_at: DateTime.iso8601('2025-05-08T20:41:50.455Z'),
+  reference: '09339705',
+  transaction_at: DateTime.iso8601('2022-08-02T01:56:04.077Z'),
   type: Models::Shared::AccountingBankfeedtransactionType::CREDIT,
-  updated_at: DateTime.iso8601('2022-05-26T04:03:35.434Z')
+  updated_at: DateTime.iso8601('2022-05-26T09:17:18.305Z')
 ), connection_id: '<id>')
 
 unless res.accounting_bankfeedtransaction.nil?
@@ -177,20 +177,20 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAccountingBankfeedtransactionRequest.new(
   accounting_bankfeedtransaction: Models::Shared::AccountingBankfeedtransaction.new(
     amount: 60_889.0,
-    bank_category: 'Clothing',
+    bank_category: 'Beauty',
     category_ids: [],
     created_at: DateTime.iso8601('2022-03-24T23:41:08.374Z'),
     currency: 'CAD',
-    description: 'Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781.',
-    id: '54f1f24f-cb55-4e9e-91ee-f06da97141f8',
+    description: 'deposit processed at Renner - Quigley for SSP 824.35, using card ending ****1112. Account: ***7957.',
+    id: '050d8262-db72-4403-8012-f6d95896c19a',
     is_pending: true,
-    merchant_name: 'Buckridge - Feest',
+    merchant_name: 'McKenzie Inc',
     metadata: [],
-    posted_at: DateTime.iso8601('2025-05-04T21:06:07.641Z'),
-    reference: '79574105',
-    transaction_at: DateTime.iso8601('2022-08-01T15:02:01.572Z'),
+    posted_at: DateTime.iso8601('2025-05-08T20:41:50.470Z'),
+    reference: '09339705',
+    transaction_at: DateTime.iso8601('2022-08-02T01:56:04.079Z'),
     type: Models::Shared::AccountingBankfeedtransactionType::CREDIT,
-    updated_at: DateTime.iso8601('2022-05-26T04:03:35.435Z')
+    updated_at: DateTime.iso8601('2022-05-26T09:17:18.306Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -280,20 +280,20 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAccountingBankfeedtransactionRequest.new(
   accounting_bankfeedtransaction: Models::Shared::AccountingBankfeedtransaction.new(
     amount: 60_889.0,
-    bank_category: 'Clothing',
+    bank_category: 'Beauty',
     category_ids: [],
     created_at: DateTime.iso8601('2022-03-24T23:41:08.374Z'),
     currency: 'CAD',
-    description: 'Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781.',
-    id: '54f1f24f-cb55-4e9e-91ee-f06da97141f8',
+    description: 'deposit processed at Renner - Quigley for SSP 824.35, using card ending ****1112. Account: ***7957.',
+    id: '050d8262-db72-4403-8012-f6d95896c19a',
     is_pending: true,
-    merchant_name: 'Buckridge - Feest',
+    merchant_name: 'McKenzie Inc',
     metadata: [],
-    posted_at: DateTime.iso8601('2025-05-04T21:06:07.641Z'),
-    reference: '79574105',
-    transaction_at: DateTime.iso8601('2022-08-01T15:02:01.572Z'),
+    posted_at: DateTime.iso8601('2025-05-08T20:41:50.470Z'),
+    reference: '09339705',
+    transaction_at: DateTime.iso8601('2022-08-02T01:56:04.079Z'),
     type: Models::Shared::AccountingBankfeedtransactionType::CREDIT,
-    updated_at: DateTime.iso8601('2022-05-26T04:03:35.435Z')
+    updated_at: DateTime.iso8601('2022-05-26T09:17:18.306Z')
   ),
   connection_id: '<id>',
   id: '<id>'

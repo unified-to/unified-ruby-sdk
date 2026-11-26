@@ -17,7 +17,7 @@ module UnifiedRubySDK
         # When the allergy record was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Potential severity of future reactions
-        field :criticality, Crystalline::Nilable.new(Models::Shared::Criticality), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('criticality'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::Criticality, true) } }
+        field :criticality, Crystalline::Nilable.new(Models::Shared::HealthcareAllergyCriticality), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('criticality'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::HealthcareAllergyCriticality, true) } }
         # The encounter in which the allergy was recorded
         field :encounter_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('encounter_id') } }
         # Unique identifier for the allergy/intolerance
@@ -47,7 +47,7 @@ module UnifiedRubySDK
         # When the allergy record was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(codes: T.nilable(T::Array[Models::Shared::HealthcareCode]), created_at: T.nilable(::DateTime), criticality: T.nilable(Models::Shared::Criticality), encounter_id: T.nilable(::String), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HealthcareMetadata]), name: T.nilable(::String), notes: T.nilable(::String), onset_at: T.nilable(::DateTime), patient_id: T.nilable(::String), practitioner_id: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), reactions: T.nilable(T::Array[Models::Shared::HealthcareCode]), recorded_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::HealthcareAllergyStatus), type: T.nilable(Models::Shared::HealthcareAllergyType), updated_at: T.nilable(::DateTime)).void }
+        sig { params(codes: T.nilable(T::Array[Models::Shared::HealthcareCode]), created_at: T.nilable(::DateTime), criticality: T.nilable(Models::Shared::HealthcareAllergyCriticality), encounter_id: T.nilable(::String), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HealthcareMetadata]), name: T.nilable(::String), notes: T.nilable(::String), onset_at: T.nilable(::DateTime), patient_id: T.nilable(::String), practitioner_id: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), reactions: T.nilable(T::Array[Models::Shared::HealthcareCode]), recorded_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::HealthcareAllergyStatus), type: T.nilable(Models::Shared::HealthcareAllergyType), updated_at: T.nilable(::DateTime)).void }
         def initialize(codes: nil, created_at: nil, criticality: nil, encounter_id: nil, id: nil, metadata: nil, name: nil, notes: nil, onset_at: nil, patient_id: nil, practitioner_id: nil, raw: nil, reactions: nil, recorded_at: nil, status: nil, type: nil, updated_at: nil)
           @codes = codes
           @created_at = created_at

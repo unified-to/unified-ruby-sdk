@@ -29,13 +29,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.repository.create_repo_repository(repo_repository: Models::Shared::RepoRepository.new(
   created_at: DateTime.iso8601('2023-06-12T09:42:00.080Z'),
-  description: 'Sed somnus crastinus armarium.',
-  id: '2efbf9b8-e173-465d-a4e8-5aab1951d4ef',
+  description: 'Armarium suus depono apostolus.',
+  id: '0468f044-0b64-41bb-a46e-c03b3afc83cd',
   is_private: false,
   metadata: [],
-  name: 'bah-bogus',
-  updated_at: DateTime.iso8601('2024-03-07T12:14:59.544Z'),
-  web_url: 'https://neat-birdbath.org'
+  name: 'intently-book',
+  updated_at: DateTime.iso8601('2024-03-08T18:52:49.564Z'),
+  web_url: 'https://evil-pantyhose.name'
 ), connection_id: '<id>')
 
 unless res.repo_repository.nil?
@@ -170,13 +170,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchRepoRepositoryRequest.new(
   repo_repository: Models::Shared::RepoRepository.new(
     created_at: DateTime.iso8601('2023-06-12T09:42:00.080Z'),
-    description: 'Sed somnus crastinus armarium.',
-    id: 'ce86c4a2-fc10-4ea7-8fc9-1fe3f6d956c7',
+    description: 'Armarium suus depono apostolus.',
+    id: 'c27da655-475c-457a-b6c2-3ac0b56d9d9e',
     is_private: false,
     metadata: [],
-    name: 'bah-bogus',
-    updated_at: DateTime.iso8601('2024-03-07T12:14:59.546Z'),
-    web_url: 'https://neat-birdbath.org'
+    name: 'intently-book',
+    updated_at: DateTime.iso8601('2024-03-08T18:52:49.566Z'),
+    web_url: 'https://evil-pantyhose.name'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -266,13 +266,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateRepoRepositoryRequest.new(
   repo_repository: Models::Shared::RepoRepository.new(
     created_at: DateTime.iso8601('2023-06-12T09:42:00.080Z'),
-    description: 'Sed somnus crastinus armarium.',
-    id: 'ce86c4a2-fc10-4ea7-8fc9-1fe3f6d956c7',
+    description: 'Armarium suus depono apostolus.',
+    id: 'c27da655-475c-457a-b6c2-3ac0b56d9d9e',
     is_private: false,
     metadata: [],
-    name: 'bah-bogus',
-    updated_at: DateTime.iso8601('2024-03-07T12:14:59.546Z'),
-    web_url: 'https://neat-birdbath.org'
+    name: 'intently-book',
+    updated_at: DateTime.iso8601('2024-03-08T18:52:49.566Z'),
+    web_url: 'https://evil-pantyhose.name'
   ),
   connection_id: '<id>',
   id: '<id>'

@@ -37,12 +37,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.category.create_accounting_category(accounting_category: Models::Shared::AccountingCategory.new(
   created_at: DateTime.iso8601('2023-05-30T12:29:04.257Z'),
-  description: 'Textus ab thymum labore basium.',
-  id: '7db5c926-62d6-41f9-9105-d7462403440c',
+  description: 'Labore basium corrumpo crinis ars subito pecto.',
+  id: '0727a962-7c64-497a-8ef2-c41bdffb34d1',
   is_active: false,
   metadata: [],
-  name: 'Beauty',
-  updated_at: DateTime.iso8601('2025-10-01T17:07:58.909Z')
+  name: 'Automotive',
+  updated_at: DateTime.iso8601('2025-10-05T17:29:09.391Z')
 ), connection_id: '<id>')
 
 unless res.accounting_category.nil?
@@ -88,12 +88,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.category.create_ticketing_category(ticketing_category: Models::Shared::TicketingCategory.new(
   created_at: DateTime.iso8601('2019-10-19T22:02:51.067Z'),
-  description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
-  id: '223c2efe-9c49-47d3-bac0-701f189003e2',
+  description: 'Carpo depulso torqueo coniecto curtus. Nam optio tendo utroque. Tumultus delectus arbitro amplus. Coerceo clam comprehendo vulnero triduana deprimo cruciamentum talio virtus. Substantia cogito deleo derelinquo traho.',
+  id: 'a2b68503-59f9-4614-b061-e3552c43481b',
   is_active: true,
   metadata: [],
-  name: 'amicitia',
-  updated_at: DateTime.iso8601('2026-02-09T17:38:52.326Z')
+  name: 'tempus',
+  updated_at: DateTime.iso8601('2026-02-15T01:01:18.849Z')
 ), connection_id: '<id>')
 
 unless res.ticketing_category.nil?
@@ -402,12 +402,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAccountingCategoryRequest.new(
   accounting_category: Models::Shared::AccountingCategory.new(
     created_at: DateTime.iso8601('2023-05-30T12:29:04.257Z'),
-    description: 'Textus ab thymum labore basium.',
-    id: '663c00bc-d7b2-450a-af6a-10c0b30547f1',
+    description: 'Labore basium corrumpo crinis ars subito pecto.',
+    id: 'f9978de5-7b68-4a32-ab91-9daee208101f',
     is_active: false,
     metadata: [],
-    name: 'Beauty',
-    updated_at: DateTime.iso8601('2025-10-01T17:07:58.924Z')
+    name: 'Automotive',
+    updated_at: DateTime.iso8601('2025-10-05T17:29:09.398Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -456,12 +456,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchTicketingCategoryRequest.new(
   ticketing_category: Models::Shared::TicketingCategory.new(
     created_at: DateTime.iso8601('2019-10-19T22:02:51.067Z'),
-    description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
-    id: 'c9762c57-d64b-4128-bfe8-69b7720f6851',
+    description: 'Carpo depulso torqueo coniecto curtus. Nam optio tendo utroque. Tumultus delectus arbitro amplus. Coerceo clam comprehendo vulnero triduana deprimo cruciamentum talio virtus. Substantia cogito deleo derelinquo traho.',
+    id: 'c507e291-1d74-4cee-b05c-8d1882fbf8d8',
     is_active: true,
     metadata: [],
-    name: 'amicitia',
-    updated_at: DateTime.iso8601('2026-02-09T17:38:52.334Z')
+    name: 'tempus',
+    updated_at: DateTime.iso8601('2026-02-15T01:01:18.857Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -592,12 +592,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAccountingCategoryRequest.new(
   accounting_category: Models::Shared::AccountingCategory.new(
     created_at: DateTime.iso8601('2023-05-30T12:29:04.257Z'),
-    description: 'Textus ab thymum labore basium.',
-    id: '663c00bc-d7b2-450a-af6a-10c0b30547f1',
+    description: 'Labore basium corrumpo crinis ars subito pecto.',
+    id: 'f9978de5-7b68-4a32-ab91-9daee208101f',
     is_active: false,
     metadata: [],
-    name: 'Beauty',
-    updated_at: DateTime.iso8601('2025-10-01T17:07:58.924Z')
+    name: 'Automotive',
+    updated_at: DateTime.iso8601('2025-10-05T17:29:09.398Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -646,12 +646,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateTicketingCategoryRequest.new(
   ticketing_category: Models::Shared::TicketingCategory.new(
     created_at: DateTime.iso8601('2019-10-19T22:02:51.067Z'),
-    description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
-    id: 'c9762c57-d64b-4128-bfe8-69b7720f6851',
+    description: 'Carpo depulso torqueo coniecto curtus. Nam optio tendo utroque. Tumultus delectus arbitro amplus. Coerceo clam comprehendo vulnero triduana deprimo cruciamentum talio virtus. Substantia cogito deleo derelinquo traho.',
+    id: 'c507e291-1d74-4cee-b05c-8d1882fbf8d8',
     is_active: true,
     metadata: [],
-    name: 'amicitia',
-    updated_at: DateTime.iso8601('2026-02-09T17:38:52.334Z')
+    name: 'tempus',
+    updated_at: DateTime.iso8601('2026-02-15T01:01:18.857Z')
   ),
   connection_id: '<id>',
   id: '<id>'

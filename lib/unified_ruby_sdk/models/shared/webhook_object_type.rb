@@ -257,6 +257,18 @@ module UnifiedRubySDK
           QMS_ACTION = new('qms_action')
           QMS_INSPECTION = new('qms_inspection')
           QMS_AUDIT = new('qms_audit')
+          DMS_VEHICLE = new('dms_vehicle')
+          DMS_VEHICLESALE = new('dms_vehiclesale')
+          DMS_REPAIRORDER = new('dms_repairorder')
+          DMS_APPOINTMENT = new('dms_appointment')
+          DMS_PART = new('dms_part')
+          DMS_PARTSALE = new('dms_partsale')
+          DMS_OPCODE = new('dms_opcode')
+          PRINTING_PRODUCT = new('printing_product')
+          PRINTING_TEMPLATE = new('printing_template')
+          PRINTING_FILE = new('printing_file')
+          PRINTING_QUOTE = new('printing_quote')
+          PRINTING_ORDER = new('printing_order')
         end
         open!
       end

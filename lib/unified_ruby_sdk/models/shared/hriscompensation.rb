@@ -16,22 +16,28 @@ module UnifiedRubySDK
         field :amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('amount') } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
+        # date this pay stopped (empty = still current) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :frequency, Crystalline::Nilable.new(Models::Shared::HrisCompensationFrequency), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('frequency'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::HrisCompensationFrequency, true) } }
         # (reference to HrisGroup)
         field :group_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('group_id') } }
 
         field :notes, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
+        # date this pay became effective (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :type, Crystalline::Nilable.new(Models::Shared::HrisCompensationType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::HrisCompensationType, true) } }
 
-        sig { params(amount: T.nilable(::Float), currency: T.nilable(::String), frequency: T.nilable(Models::Shared::HrisCompensationFrequency), group_id: T.nilable(::String), notes: T.nilable(::String), type: T.nilable(Models::Shared::HrisCompensationType)).void }
-        def initialize(amount: nil, currency: nil, frequency: nil, group_id: nil, notes: nil, type: nil)
+        sig { params(amount: T.nilable(::Float), currency: T.nilable(::String), end_at: T.nilable(::DateTime), frequency: T.nilable(Models::Shared::HrisCompensationFrequency), group_id: T.nilable(::String), notes: T.nilable(::String), start_at: T.nilable(::DateTime), type: T.nilable(Models::Shared::HrisCompensationType)).void }
+        def initialize(amount: nil, currency: nil, end_at: nil, frequency: nil, group_id: nil, notes: nil, start_at: nil, type: nil)
           @amount = amount
           @currency = currency
+          @end_at = end_at
           @frequency = frequency
           @group_id = group_id
           @notes = notes
+          @start_at = start_at
           @type = type
         end
 
@@ -40,9 +46,11 @@ module UnifiedRubySDK
           return false unless other.is_a? self.class
           return false unless @amount == other.amount
           return false unless @currency == other.currency
+          return false unless @end_at == other.end_at
           return false unless @frequency == other.frequency
           return false unless @group_id == other.group_id
           return false unless @notes == other.notes
+          return false unless @start_at == other.start_at
           return false unless @type == other.type
           true
         end

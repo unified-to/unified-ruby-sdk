@@ -29,18 +29,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.deployment.create_compute_deployment(compute_deployment: Models::Shared::ComputeDeployment.new(
   branch: 'develop',
-  commit_identifier: 'fadfe54eefd8fea670bea6d58b4b15d406c4b02b',
-  commit_message: 'copy primary pixel',
+  commit_identifier: 'fe54eefd8fea670bea6d58b4b15d406c4b02b7aa',
+  commit_message: 'transmit auxiliary microchip',
   created_at: DateTime.iso8601('2022-06-07T03:52:04.613Z'),
   environment: Models::Shared::Environment::PREVIEW,
-  finished_at: DateTime.iso8601('2025-09-20T18:48:47.788Z'),
-  id: 'a64e6445-bfb3-459b-8e79-ef5eb3320bc8',
+  finished_at: DateTime.iso8601('2025-09-25T04:27:29.743Z'),
+  id: '1a5e5fe3-a583-4d06-932c-fb3ced7dee5f',
   metadata: [],
-  started_at: DateTime.iso8601('2025-04-29T19:30:44.192Z'),
+  started_at: DateTime.iso8601('2025-05-03T16:29:58.363Z'),
   status: Models::Shared::ComputeDeploymentStatus::LIVE,
   trigger: Models::Shared::Trigger::API,
-  updated_at: DateTime.iso8601('2026-03-26T08:19:22.910Z'),
-  url: 'https://comfortable-petal.name'
+  updated_at: DateTime.iso8601('2026-03-31T10:22:13.323Z'),
+  url: 'https://dismal-creature.info'
 ), connection_id: '<id>')
 
 unless res.compute_deployment.nil?
@@ -175,18 +175,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchComputeDeploymentRequest.new(
   compute_deployment: Models::Shared::ComputeDeployment.new(
     branch: 'develop',
-    commit_identifier: 'fadfe54eefd8fea670bea6d58b4b15d406c4b02b',
-    commit_message: 'copy primary pixel',
+    commit_identifier: 'fe54eefd8fea670bea6d58b4b15d406c4b02b7aa',
+    commit_message: 'transmit auxiliary microchip',
     created_at: DateTime.iso8601('2022-06-07T03:52:04.613Z'),
     environment: Models::Shared::Environment::PREVIEW,
-    finished_at: DateTime.iso8601('2025-09-20T18:48:47.799Z'),
-    id: '0653e45b-5936-4a98-ab5f-d6a39981e22d',
+    finished_at: DateTime.iso8601('2025-09-25T04:27:29.755Z'),
+    id: '812d54f4-c088-499d-a39b-35cb85428b5c',
     metadata: [],
-    started_at: DateTime.iso8601('2025-04-29T19:30:44.201Z'),
+    started_at: DateTime.iso8601('2025-05-03T16:29:58.373Z'),
     status: Models::Shared::ComputeDeploymentStatus::LIVE,
     trigger: Models::Shared::Trigger::API,
-    updated_at: DateTime.iso8601('2026-03-26T08:19:22.921Z'),
-    url: 'https://comfortable-petal.name'
+    updated_at: DateTime.iso8601('2026-03-31T10:22:13.336Z'),
+    url: 'https://dismal-creature.info'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -276,18 +276,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateComputeDeploymentRequest.new(
   compute_deployment: Models::Shared::ComputeDeployment.new(
     branch: 'develop',
-    commit_identifier: 'fadfe54eefd8fea670bea6d58b4b15d406c4b02b',
-    commit_message: 'copy primary pixel',
+    commit_identifier: 'fe54eefd8fea670bea6d58b4b15d406c4b02b7aa',
+    commit_message: 'transmit auxiliary microchip',
     created_at: DateTime.iso8601('2022-06-07T03:52:04.613Z'),
     environment: Models::Shared::Environment::PREVIEW,
-    finished_at: DateTime.iso8601('2025-09-20T18:48:47.799Z'),
-    id: '0653e45b-5936-4a98-ab5f-d6a39981e22d',
+    finished_at: DateTime.iso8601('2025-09-25T04:27:29.755Z'),
+    id: '812d54f4-c088-499d-a39b-35cb85428b5c',
     metadata: [],
-    started_at: DateTime.iso8601('2025-04-29T19:30:44.201Z'),
+    started_at: DateTime.iso8601('2025-05-03T16:29:58.373Z'),
     status: Models::Shared::ComputeDeploymentStatus::LIVE,
     trigger: Models::Shared::Trigger::API,
-    updated_at: DateTime.iso8601('2026-03-26T08:19:22.921Z'),
-    url: 'https://comfortable-petal.name'
+    updated_at: DateTime.iso8601('2026-03-31T10:22:13.336Z'),
+    url: 'https://dismal-creature.info'
   ),
   connection_id: '<id>',
   id: '<id>'

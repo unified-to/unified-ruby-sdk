@@ -14,6 +14,8 @@ class UnifiedRubySDK::Models::Shared::StoragePermission
   def group_id=(str_); end
   def is_hidden(); end
   def is_hidden=(str_); end
+  def is_organization(); end
+  def is_organization=(str_); end
   def is_public(); end
   def is_public=(str_); end
   def user_id(); end

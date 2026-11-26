@@ -32,17 +32,17 @@ res = s.journal.create_accounting_journal(accounting_journal: Models::Shared::Ac
   category_ids: [],
   created_at: DateTime.iso8601('2020-02-20T15:14:55.881Z'),
   currency: 'CAD',
-  description: 'Cilicium minima calco constans adipisci.',
-  id: '5f90cca9-c27f-4d5e-ba67-c7f90f5711f2',
+  description: 'Constans adipisci.',
+  id: '8cb08287-bcb3-4da0-993a-61fa6bdabb7f',
   is_inclusive_of_tax: true,
   lineitems: [],
   metadata: [],
-  posted_at: DateTime.iso8601('2023-11-23T03:18:48.775Z'),
+  posted_at: DateTime.iso8601('2023-11-26T10:54:49.740Z'),
   reference: 'JE-78884',
   source: 'crustulum',
   status: Models::Shared::AccountingJournalStatus::VOID,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2022-01-19T07:48:36.480Z')
+  updated_at: DateTime.iso8601('2022-01-21T00:21:40.368Z')
 ), connection_id: '<id>')
 
 unless res.accounting_journal.nil?
@@ -180,17 +180,17 @@ req = Models::Operations::PatchAccountingJournalRequest.new(
     category_ids: [],
     created_at: DateTime.iso8601('2020-02-20T15:14:55.881Z'),
     currency: 'CAD',
-    description: 'Cilicium minima calco constans adipisci.',
-    id: 'f3637344-0e3a-423b-badd-fa51293db816',
+    description: 'Constans adipisci.',
+    id: 'd61d0518-1798-404f-9823-cd0bdfb15894',
     is_inclusive_of_tax: true,
     lineitems: [],
     metadata: [],
-    posted_at: DateTime.iso8601('2023-11-23T03:18:48.786Z'),
+    posted_at: DateTime.iso8601('2023-11-26T10:54:49.750Z'),
     reference: 'JE-78884',
     source: 'crustulum',
     status: Models::Shared::AccountingJournalStatus::VOID,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2022-01-19T07:48:36.486Z')
+    updated_at: DateTime.iso8601('2022-01-21T00:21:40.373Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -283,17 +283,17 @@ req = Models::Operations::UpdateAccountingJournalRequest.new(
     category_ids: [],
     created_at: DateTime.iso8601('2020-02-20T15:14:55.881Z'),
     currency: 'CAD',
-    description: 'Cilicium minima calco constans adipisci.',
-    id: 'f3637344-0e3a-423b-badd-fa51293db816',
+    description: 'Constans adipisci.',
+    id: 'd61d0518-1798-404f-9823-cd0bdfb15894',
     is_inclusive_of_tax: true,
     lineitems: [],
     metadata: [],
-    posted_at: DateTime.iso8601('2023-11-23T03:18:48.786Z'),
+    posted_at: DateTime.iso8601('2023-11-26T10:54:49.750Z'),
     reference: 'JE-78884',
     source: 'crustulum',
     status: Models::Shared::AccountingJournalStatus::VOID,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2022-01-19T07:48:36.486Z')
+    updated_at: DateTime.iso8601('2022-01-21T00:21:40.373Z')
   ),
   connection_id: '<id>',
   id: '<id>'

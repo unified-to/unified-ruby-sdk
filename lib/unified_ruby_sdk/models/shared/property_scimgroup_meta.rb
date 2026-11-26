@@ -19,11 +19,11 @@ module UnifiedRubySDK
 
         field :location, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location') } }
 
-        field :resource_type, Crystalline::Nilable.new(Models::Shared::ResourceType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('resourceType'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::ResourceType, true) } }
+        field :resource_type, Crystalline::Nilable.new(Models::Shared::PropertyScimGroupMetaResourceType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('resourceType'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PropertyScimGroupMetaResourceType, true) } }
 
         field :version, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('version') } }
 
-        sig { params(created: T.nilable(::String), last_modified: T.nilable(::String), location: T.nilable(::String), resource_type: T.nilable(Models::Shared::ResourceType), version: T.nilable(::String)).void }
+        sig { params(created: T.nilable(::String), last_modified: T.nilable(::String), location: T.nilable(::String), resource_type: T.nilable(Models::Shared::PropertyScimGroupMetaResourceType), version: T.nilable(::String)).void }
         def initialize(created: nil, last_modified: nil, location: nil, resource_type: nil, version: nil)
           @created = created
           @last_modified = last_modified

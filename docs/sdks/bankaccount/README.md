@@ -28,22 +28,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
   )
 )
 res = s.bankaccount.create_hris_bankaccount(hris_bankaccount: Models::Shared::HrisBankaccount.new(
-  account_number: '****3777',
-  account_number_last4: '3777',
+  account_number: '****7631',
+  account_number_last4: '7631',
   account_type: Models::Shared::HrisBankaccountAccountType::CHECKING,
-  bank_name: 'Huel Group',
+  bank_name: 'O\'Reilly LLC',
   country_code: 'US',
   created_at: DateTime.iso8601('2019-11-16T16:43:45.976Z'),
   currency: 'USD',
-  id: 'a47fa1f4-e148-458a-b8c7-8b1bc6d8112c',
+  id: 'e49e3f92-1557-48fe-a3ef-9a3556294911',
   is_primary: true,
   metadata: [],
-  name: 'Granville Schumm - Checking',
+  name: 'Rafaela Romaguera - Checking',
   priority: 2.0,
-  routing_number: '448650724',
+  routing_number: '021172195',
   split_amount: 98.0,
   split_type: Models::Shared::SplitType::PERCENTAGE,
-  updated_at: DateTime.iso8601('2025-07-25T14:35:36.336Z')
+  updated_at: DateTime.iso8601('2025-07-30T10:40:25.194Z')
 ), connection_id: '<id>')
 
 unless res.hris_bankaccount.nil?
@@ -177,22 +177,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchHrisBankaccountRequest.new(
   hris_bankaccount: Models::Shared::HrisBankaccount.new(
-    account_number: '****3777',
-    account_number_last4: '3777',
+    account_number: '****7631',
+    account_number_last4: '7631',
     account_type: Models::Shared::HrisBankaccountAccountType::CHECKING,
-    bank_name: 'Huel Group',
+    bank_name: 'O\'Reilly LLC',
     country_code: 'US',
     created_at: DateTime.iso8601('2019-11-16T16:43:45.976Z'),
     currency: 'USD',
-    id: '432be1e8-6787-4fb0-a123-e7424f5bc956',
+    id: '4b145dc3-e823-424e-aa48-933231def3f7',
     is_primary: true,
     metadata: [],
-    name: 'Granville Schumm - Checking',
+    name: 'Rafaela Romaguera - Checking',
     priority: 2.0,
-    routing_number: '448650724',
+    routing_number: '021172195',
     split_amount: 98.0,
     split_type: Models::Shared::SplitType::PERCENTAGE,
-    updated_at: DateTime.iso8601('2025-07-25T14:35:36.344Z')
+    updated_at: DateTime.iso8601('2025-07-30T10:40:25.210Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -281,22 +281,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateHrisBankaccountRequest.new(
   hris_bankaccount: Models::Shared::HrisBankaccount.new(
-    account_number: '****3777',
-    account_number_last4: '3777',
+    account_number: '****7631',
+    account_number_last4: '7631',
     account_type: Models::Shared::HrisBankaccountAccountType::CHECKING,
-    bank_name: 'Huel Group',
+    bank_name: 'O\'Reilly LLC',
     country_code: 'US',
     created_at: DateTime.iso8601('2019-11-16T16:43:45.976Z'),
     currency: 'USD',
-    id: '432be1e8-6787-4fb0-a123-e7424f5bc956',
+    id: '4b145dc3-e823-424e-aa48-933231def3f7',
     is_primary: true,
     metadata: [],
-    name: 'Granville Schumm - Checking',
+    name: 'Rafaela Romaguera - Checking',
     priority: 2.0,
-    routing_number: '448650724',
+    routing_number: '021172195',
     split_amount: 98.0,
     split_type: Models::Shared::SplitType::PERCENTAGE,
-    updated_at: DateTime.iso8601('2025-07-25T14:35:36.344Z')
+    updated_at: DateTime.iso8601('2025-07-30T10:40:25.210Z')
   ),
   connection_id: '<id>',
   id: '<id>'

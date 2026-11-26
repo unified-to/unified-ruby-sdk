@@ -26,72 +26,72 @@ res = s.prompt.create_genai_prompt(genai_prompt: Models::Shared::GenaiPrompt.new
   answers: [
     Models::Shared::GenaiAnswer.new(
       confidence: 0.5_384_309_098_590_165,
-      id: 'TeZpueFB',
+      id: 'DiYHdUlr',
       probabilities: [
         Models::Shared::GenaiAnswerProbability.new(
-          option: 'veniam',
+          option: 'ulterius',
           probability: 0.05_683_182_482_607_663
         ),
         Models::Shared::GenaiAnswerProbability.new(
-          option: 'comes',
+          option: 'spiculum',
           probability: 0.1_404_057_613_108_307
         ),
       ],
       score: 0.05_974_147_981_032_729,
       type: Models::Shared::GenaiAnswerType::CHOICE,
-      value: 'summisse'
+      value: 'vilicus'
     ),
   ],
   max_tokens: 0.4_677_782_787_475_735,
-  mcp_authorization_token: 'f45a6e93-7bed-49b4-a5c8-37a2ed2d58f4',
+  mcp_authorization_token: '45c837a2-ed2d-458f-b4bc-782f4a6b065b',
   mcp_deferred_tools: [],
-  mcp_url: 'https://unsung-dusk.info/',
+  mcp_url: 'https://svelte-offset.net',
   messages: [
     Models::Shared::GenaiContent.new(
-      content: 'Aegre repudiandae verecundia facere statua.',
+      content: 'Facere statua depulso speciosus xiphias soleo trepide crinis crapula balbus.',
       images: [],
       role: Models::Shared::Role::ASSISTANT
     ),
     Models::Shared::GenaiContent.new(
-      content: 'Speciosus xiphias soleo trepide crinis.',
+      content: 'Circumvenio una demitto ventito chirographum culpo vos cohibeo complectus speciosus.',
       images: [],
       role: Models::Shared::Role::SYSTEM
     ),
   ],
   questions: [
     Models::Shared::GenaiQuestion.new(
-      id: 'KtvbYiEq',
-      instructions: 'Admiratio cura contabesco subvenio venustas architecto vacuus summopere.',
+      id: '9SIZCOoV',
+      instructions: 'Supellex verbera universe.',
       options: [
-        'vulnero',
-        'quasi',
-        'tolero',
+        'dens',
+        'doloribus',
+        'degusto',
       ],
       type: Models::Shared::GenaiQuestionType::BOOLEAN
     ),
     Models::Shared::GenaiQuestion.new(
-      id: 'oV6IURtv',
-      instructions: 'Celer deleniti ventus ipsam tendo odit.',
+      id: 'gsUyLAAa',
+      instructions: 'Amplexus abundans caelestis patrocinor vulgivagus condico adduco tego apostolus.',
       options: [
-        'nulla',
-        'aspicio',
-        'tero',
+        'decretum',
+        'vesica',
+        'amet',
       ],
       type: Models::Shared::GenaiQuestionType::CHOICE
     ),
     Models::Shared::GenaiQuestion.new(
-      id: '60dBZk2K',
-      instructions: 'Decretum vesica amet repudiandae.',
+      id: 'Dwh6TeZp',
+      instructions: 'Capio somnus pauper summisse veniam comes.',
       options: [
-        'ducimus',
-        'civis',
-        'alter',
+        'depulso',
+        'deficio',
+        'sustineo',
       ],
       type: Models::Shared::GenaiQuestionType::BOOLEAN
     ),
   ],
   responses: [
-    'Balbus vobis circumvenio una.',
+    'Vereor pecco avarus derideo sumptus.',
   ],
   temperature: 0.0,
   tokens_used: 975.0

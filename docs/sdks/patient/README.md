@@ -5,7 +5,9 @@
 ### Available Operations
 
 * [create_healthcare_patient](#create_healthcare_patient) - Create a patient
+* [get_fhir_patient](#get_fhir_patient) - Read a Patient
 * [get_healthcare_patient](#get_healthcare_patient) - Retrieve a patient
+* [list_fhir_patients](#list_fhir_patients) - Search Patient resources
 * [list_healthcare_patients](#list_healthcare_patients) - List all patients
 * [patch_healthcare_patient](#patch_healthcare_patient) - Update a patient
 * [update_healthcare_patient](#update_healthcare_patient) - Update a patient
@@ -28,21 +30,21 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.patient.create_healthcare_patient(healthcare_patient: Models::Shared::HealthcarePatient.new(
   address: Models::Shared::PropertyHealthcarePatientAddress.new(
-    address1: '162 Kirlin Mall',
-    city: 'Dickinsonborough',
+    address1: '3645 Leonardo Place',
+    city: 'Estelleland',
     country: 'US',
-    postal_code: '54031',
-    region: 'Nebraska'
+    postal_code: '99263-6004',
+    region: 'New Jersey'
   ),
-  birthdate: '2025-03-14',
+  birthdate: '1941-12-25',
   contacts: [
     Models::Shared::HealthcarePatientContact.new(
       emails: [],
-      name: 'Antonia Lebsack',
+      name: 'Ambrose Welch',
       relationship: 'Spouse',
       telephones: [
         Models::Shared::HealthcareTelephone.new(
-          telephone: '(695) 328-7029 x4412',
+          telephone: '323.524.3947 x89014',
           type: Models::Shared::HealthcareTelephoneType::MOBILE
         ),
       ]
@@ -51,33 +53,33 @@ res = s.patient.create_healthcare_patient(healthcare_patient: Models::Shared::He
   created_at: DateTime.iso8601('2021-06-05T21:08:04.917Z'),
   emails: [
     Models::Shared::HealthcareEmail.new(
-      email: 'alejandrin.parker@icloud.com',
+      email: 'monroe.bauch@icloud.com',
       type: Models::Shared::HealthcareEmailType::HOME
     ),
   ],
-  first_name: 'Alejandrin',
+  first_name: 'Monroe',
   gender: Models::Shared::HealthcarePatientGender::FEMALE,
-  id: '03bcbcae-6e34-4aa0-944c-dd87a640c367',
+  id: '895932a7-f9f4-46da-a72c-c35565dfc147',
   identifiers: [
     Models::Shared::HealthcareIdentifier.new(
       type: Models::Shared::HealthcareIdentifierType::MRN,
-      value: '57992636'
+      value: '51559512'
     ),
   ],
   is_active: true,
   is_deceased: false,
   language: 'zh',
-  last_name: 'Parker',
+  last_name: 'Bauch',
   metadata: [],
-  name: 'Alejandrin Parker',
+  name: 'Monroe Bauch',
   practitioner_ids: [],
   telephones: [
     Models::Shared::HealthcareTelephone.new(
-      telephone: '1-219-555-9023 x08295',
+      telephone: '1-555-902-3082 x9590',
       type: Models::Shared::HealthcareTelephoneType::MOBILE
     ),
   ],
-  updated_at: DateTime.iso8601('2026-07-21T00:07:07.283Z')
+  updated_at: DateTime.iso8601('2026-07-26T14:23:35.644Z')
 ), connection_id: '<id>')
 
 unless res.healthcare_patient.nil?
@@ -98,6 +100,47 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::CreateHealthcarePatientResponse)](../../models/operations/createhealthcarepatientresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## get_fhir_patient
+
+Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getFhirPatient" method="get" path="/fhir/{connection_id}/Patient/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.patient.get_fhir_patient(connection_id: '<id>', id: '<id>')
+
+unless res.fhir_patient.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Patient    |
+
+### Response
+
+**[T.nilable(Models::Operations::GetFhirPatientResponse)](../../models/operations/getfhirpatientresponse.md)**
 
 ### Errors
 
@@ -141,6 +184,50 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::GetHealthcarePatientResponse)](../../models/operations/gethealthcarepatientresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## list_fhir_patients
+
+Returns a searchset Bundle; follow its next link for more pages. Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listFhirPatients" method="get" path="/fhir/{connection_id}/Patient" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+
+req = Models::Operations::ListFhirPatientsRequest.new(
+  connection_id: '<id>'
+)
+res = s.patient.list_fhir_patients(request: req)
+
+unless res.fhir_bundle.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [Models::Operations::ListFhirPatientsRequest](../../models/operations/listfhirpatientsrequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+
+### Response
+
+**[T.nilable(Models::Operations::ListFhirPatientsResponse)](../../models/operations/listfhirpatientsresponse.md)**
 
 ### Errors
 
@@ -212,21 +299,21 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchHealthcarePatientRequest.new(
   healthcare_patient: Models::Shared::HealthcarePatient.new(
     address: Models::Shared::PropertyHealthcarePatientAddress.new(
-      address1: '162 Kirlin Mall',
-      city: 'Dickinsonborough',
+      address1: '3645 Leonardo Place',
+      city: 'Estelleland',
       country: 'US',
-      postal_code: '54031',
-      region: 'Nebraska'
+      postal_code: '99263-6004',
+      region: 'New Jersey'
     ),
-    birthdate: '2025-03-14',
+    birthdate: '1941-12-25',
     contacts: [
       Models::Shared::HealthcarePatientContact.new(
         emails: [],
-        name: 'Antonia Lebsack',
+        name: 'Ambrose Welch',
         relationship: 'Spouse',
         telephones: [
           Models::Shared::HealthcareTelephone.new(
-            telephone: '(695) 328-7029 x4412',
+            telephone: '323.524.3947 x89014',
             type: Models::Shared::HealthcareTelephoneType::MOBILE
           ),
         ]
@@ -235,33 +322,33 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
     created_at: DateTime.iso8601('2021-06-05T21:08:04.917Z'),
     emails: [
       Models::Shared::HealthcareEmail.new(
-        email: 'alejandrin.parker@icloud.com',
+        email: 'monroe.bauch@icloud.com',
         type: Models::Shared::HealthcareEmailType::HOME
       ),
     ],
-    first_name: 'Alejandrin',
+    first_name: 'Monroe',
     gender: Models::Shared::HealthcarePatientGender::FEMALE,
-    id: '394b4f44-9a7a-4b72-9dc1-0150eaa57e53',
+    id: 'f4c07dcc-d23c-4fec-9c25-25d2558408cc',
     identifiers: [
       Models::Shared::HealthcareIdentifier.new(
         type: Models::Shared::HealthcareIdentifierType::MRN,
-        value: '57992636'
+        value: '51559512'
       ),
     ],
     is_active: true,
     is_deceased: false,
     language: 'zh',
-    last_name: 'Parker',
+    last_name: 'Bauch',
     metadata: [],
-    name: 'Alejandrin Parker',
+    name: 'Monroe Bauch',
     practitioner_ids: [],
     telephones: [
       Models::Shared::HealthcareTelephone.new(
-        telephone: '1-219-555-9023 x08295',
+        telephone: '1-555-902-3082 x9590',
         type: Models::Shared::HealthcareTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2026-07-21T00:07:07.314Z')
+    updated_at: DateTime.iso8601('2026-07-26T14:23:35.684Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -310,21 +397,21 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateHealthcarePatientRequest.new(
   healthcare_patient: Models::Shared::HealthcarePatient.new(
     address: Models::Shared::PropertyHealthcarePatientAddress.new(
-      address1: '162 Kirlin Mall',
-      city: 'Dickinsonborough',
+      address1: '3645 Leonardo Place',
+      city: 'Estelleland',
       country: 'US',
-      postal_code: '54031',
-      region: 'Nebraska'
+      postal_code: '99263-6004',
+      region: 'New Jersey'
     ),
-    birthdate: '2025-03-14',
+    birthdate: '1941-12-25',
     contacts: [
       Models::Shared::HealthcarePatientContact.new(
         emails: [],
-        name: 'Antonia Lebsack',
+        name: 'Ambrose Welch',
         relationship: 'Spouse',
         telephones: [
           Models::Shared::HealthcareTelephone.new(
-            telephone: '(695) 328-7029 x4412',
+            telephone: '323.524.3947 x89014',
             type: Models::Shared::HealthcareTelephoneType::MOBILE
           ),
         ]
@@ -333,33 +420,33 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
     created_at: DateTime.iso8601('2021-06-05T21:08:04.917Z'),
     emails: [
       Models::Shared::HealthcareEmail.new(
-        email: 'alejandrin.parker@icloud.com',
+        email: 'monroe.bauch@icloud.com',
         type: Models::Shared::HealthcareEmailType::HOME
       ),
     ],
-    first_name: 'Alejandrin',
+    first_name: 'Monroe',
     gender: Models::Shared::HealthcarePatientGender::FEMALE,
-    id: '394b4f44-9a7a-4b72-9dc1-0150eaa57e53',
+    id: 'f4c07dcc-d23c-4fec-9c25-25d2558408cc',
     identifiers: [
       Models::Shared::HealthcareIdentifier.new(
         type: Models::Shared::HealthcareIdentifierType::MRN,
-        value: '57992636'
+        value: '51559512'
       ),
     ],
     is_active: true,
     is_deceased: false,
     language: 'zh',
-    last_name: 'Parker',
+    last_name: 'Bauch',
     metadata: [],
-    name: 'Alejandrin Parker',
+    name: 'Monroe Bauch',
     practitioner_ids: [],
     telephones: [
       Models::Shared::HealthcareTelephone.new(
-        telephone: '1-219-555-9023 x08295',
+        telephone: '1-555-902-3082 x9590',
         type: Models::Shared::HealthcareTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2026-07-21T00:07:07.314Z')
+    updated_at: DateTime.iso8601('2026-07-26T14:23:35.684Z')
   ),
   connection_id: '<id>',
   id: '<id>'

@@ -16,6 +16,8 @@ module UnifiedRubySDK
         field :address, Crystalline::Nilable.new(Models::Shared::PropertyAtsCompanyAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
+        # The client's default placement fee agreement
+        field :fees, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AtsFee)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('fees') } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
@@ -35,10 +37,11 @@ module UnifiedRubySDK
 
         field :website_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('website_url') } }
 
-        sig { params(address: T.nilable(Models::Shared::PropertyAtsCompanyAddress), created_at: T.nilable(::DateTime), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AtsMetadata]), name: T.nilable(::String), parent_id: T.nilable(::String), phone: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), recruiter_ids: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), website_url: T.nilable(::String)).void }
-        def initialize(address: nil, created_at: nil, id: nil, metadata: nil, name: nil, parent_id: nil, phone: nil, raw: nil, recruiter_ids: nil, updated_at: nil, website_url: nil)
+        sig { params(address: T.nilable(Models::Shared::PropertyAtsCompanyAddress), created_at: T.nilable(::DateTime), fees: T.nilable(T::Array[Models::Shared::AtsFee]), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AtsMetadata]), name: T.nilable(::String), parent_id: T.nilable(::String), phone: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), recruiter_ids: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), website_url: T.nilable(::String)).void }
+        def initialize(address: nil, created_at: nil, fees: nil, id: nil, metadata: nil, name: nil, parent_id: nil, phone: nil, raw: nil, recruiter_ids: nil, updated_at: nil, website_url: nil)
           @address = address
           @created_at = created_at
+          @fees = fees
           @id = id
           @metadata = metadata
           @name = name
@@ -55,6 +58,7 @@ module UnifiedRubySDK
           return false unless other.is_a? self.class
           return false unless @address == other.address
           return false unless @created_at == other.created_at
+          return false unless @fees == other.fees
           return false unless @id == other.id
           return false unless @metadata == other.metadata
           return false unless @name == other.name

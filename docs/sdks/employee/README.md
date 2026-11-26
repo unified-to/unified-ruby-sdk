@@ -29,21 +29,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.employee.create_hris_employee(hris_employee: Models::Shared::HrisEmployee.new(
   address: Models::Shared::PropertyHrisEmployeeAddress.new(
-    address1: '7431 Hintz Parkway',
-    address2: 'Apt. 520',
-    city: 'Port Rogerview',
+    address1: '1636 Anissa Circle',
+    address2: 'Suite 844',
+    city: 'North Breanneberg',
     country_code: 'US',
-    postal_code: '01711',
-    region: 'Missouri',
-    region_code: 'TN'
+    postal_code: '18978',
+    region: 'South Dakota',
+    region_code: 'MN'
   ),
-  bio: 'fun advocate  🇱🇻',
+  bio: 'sushi devotee, singer',
   compensation: [
     Models::Shared::HrisCompensation.new(
       amount: 95_000.0,
       currency: 'USD',
       frequency: Models::Shared::HrisCompensationFrequency::YEAR,
-      notes: 'Eius.',
+      notes: 'Soleo.',
+      start_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
       type: Models::Shared::HrisCompensationType::OTHER
     ),
   ],
@@ -52,22 +53,22 @@ res = s.employee.create_hris_employee(hris_employee: Models::Shared::HrisEmploye
   date_of_birth: DateTime.iso8601('2001-04-22'),
   emails: [
     Models::Shared::HrisEmail.new(
-      email: 'zetta.prohaska@insidious-stump.net',
+      email: 'milo.padberg@known-petal.com',
       type: Models::Shared::HrisEmailType::WORK
     ),
   ],
-  employee_number: 'uCk3qaL1ei',
+  employee_number: '3qaL1eiPnL',
   employment_status: Models::Shared::EmploymentStatus::ACTIVE,
   employment_type: Models::Shared::HrisEmployeeEmploymentType::PART_TIME,
-  first_name: 'Zetta',
+  first_name: 'Milo',
   flsa_status: Models::Shared::FlsaStatus::EXEMPT,
   gender: Models::Shared::HrisEmployeeGender::MALE,
   has_mfa: true,
   hired_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
-  id: '2f9be645-d935-48ba-b2b4-021a2e5c1aa2',
-  image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg',
+  id: 'c548226d-6e8d-40d7-af34-73be58427d81',
+  image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/52.jpg',
   language_locale: 'in',
-  last_name: 'Prohaska',
+  last_name: 'Padberg',
   locations: [],
   marital_status: Models::Shared::HrisEmployeeMaritalStatus::MARRIED,
   metadata: [
@@ -76,57 +77,57 @@ res = s.employee.create_hris_employee(hris_employee: Models::Shared::HrisEmploye
         'display_name' => 'Custom Property',
       },
       format: Models::Shared::HrisMetadataFormat::TEXT,
-      id: '6f56df5f-5045-4ab7-9fee-b6d972075203',
+      id: 'ea554a47-29e3-48f4-b602-7de121930da2',
       namespace: 'custom',
       slug: 'custom_property',
-      value: 'tutis'
+      value: 'teneo'
     ),
   ],
-  name: 'Zetta Prohaska',
+  name: 'Milo Padberg',
   pay_frequency: Models::Shared::PayFrequency::WEEK,
   pronouns: 'she/her',
   relationships: [
     Models::Shared::HrisEmployeerelationship.new(
       emails: [
         Models::Shared::HrisEmail.new(
-          email: 'keith.prohaska@gmail.com'
+          email: 'amanda.padberg@gmail.com'
         ),
       ],
-      name: 'Keith Prohaska',
+      name: 'Amanda Padberg',
       type: Models::Shared::HrisEmployeerelationshipType::SIBLING
     ),
     Models::Shared::HrisEmployeerelationship.new(
       emails: [
         Models::Shared::HrisEmail.new(
-          email: 'keely.prohaska@icloud.com'
+          email: 'alex.padberg@icloud.com'
         ),
       ],
-      name: 'Keely Prohaska',
+      name: 'Alex Padberg',
       type: Models::Shared::HrisEmployeerelationshipType::OTHER
     ),
   ],
-  salutation: 'Ms.',
+  salutation: 'Miss',
   seniority_started_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
   service_started_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
-  ssn_sin: '284-82-8167',
+  ssn_sin: '755-85-7843',
   storage_quota_allocated: 3_653_713.0,
   storage_quota_available: 3_017_275.0,
   storage_quota_used: 367_449.0,
   telephones: [
     Models::Shared::HrisTelephone.new(
-      telephone: '(320) 980-1370',
+      telephone: '(980) 337-0594',
       type: Models::Shared::HrisTelephoneType::HOME
     ),
     Models::Shared::HrisTelephone.new(
-      telephone: '(694) 840-0166',
+      telephone: '(840) 216-6463',
       type: Models::Shared::HrisTelephoneType::FAX
     ),
   ],
   timeoff_days_total: 17.0,
   timeoff_days_used: 9.0,
-  timezone: 'Europe/Ljubljana',
-  title: 'District Branding Specialist',
-  updated_at: DateTime.iso8601('2020-07-22T17:22:06.534Z')
+  timezone: 'America/Nome',
+  title: 'Corporate Functionality Executive',
+  updated_at: DateTime.iso8601('2020-07-23T10:17:16.461Z')
 ), connection_id: '<id>')
 
 unless res.hris_employee.nil?
@@ -261,21 +262,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchHrisEmployeeRequest.new(
   hris_employee: Models::Shared::HrisEmployee.new(
     address: Models::Shared::PropertyHrisEmployeeAddress.new(
-      address1: '7431 Hintz Parkway',
-      address2: 'Apt. 520',
-      city: 'Port Rogerview',
+      address1: '1636 Anissa Circle',
+      address2: 'Suite 844',
+      city: 'North Breanneberg',
       country_code: 'US',
-      postal_code: '01711',
-      region: 'Missouri',
-      region_code: 'TN'
+      postal_code: '18978',
+      region: 'South Dakota',
+      region_code: 'MN'
     ),
-    bio: 'fun advocate  🇱🇻',
+    bio: 'sushi devotee, singer',
     compensation: [
       Models::Shared::HrisCompensation.new(
         amount: 95_000.0,
         currency: 'USD',
         frequency: Models::Shared::HrisCompensationFrequency::YEAR,
-        notes: 'Eius.',
+        notes: 'Soleo.',
+        start_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
         type: Models::Shared::HrisCompensationType::OTHER
       ),
     ],
@@ -284,22 +286,22 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
     date_of_birth: DateTime.iso8601('2001-04-22'),
     emails: [
       Models::Shared::HrisEmail.new(
-        email: 'zetta.prohaska@insidious-stump.net',
+        email: 'milo.padberg@known-petal.com',
         type: Models::Shared::HrisEmailType::WORK
       ),
     ],
-    employee_number: 'uCk3qaL1ei',
+    employee_number: '3qaL1eiPnL',
     employment_status: Models::Shared::EmploymentStatus::ACTIVE,
     employment_type: Models::Shared::HrisEmployeeEmploymentType::PART_TIME,
-    first_name: 'Zetta',
+    first_name: 'Milo',
     flsa_status: Models::Shared::FlsaStatus::EXEMPT,
     gender: Models::Shared::HrisEmployeeGender::MALE,
     has_mfa: true,
     hired_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
-    id: '8dd162b8-b2b0-4442-9570-a84d89a3a0ef',
-    image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg',
+    id: '16dd8a11-98c1-4db7-a9d6-8ccc253fa057',
+    image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/52.jpg',
     language_locale: 'in',
-    last_name: 'Prohaska',
+    last_name: 'Padberg',
     locations: [],
     marital_status: Models::Shared::HrisEmployeeMaritalStatus::MARRIED,
     metadata: [
@@ -308,57 +310,57 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::HrisMetadataFormat::TEXT,
-        id: '72a58622-bfb8-4683-ba65-6a0bb6a5143c',
+        id: '3e6a83ef-965e-419e-a76e-d1747324c8cc',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'tutis'
+        value: 'teneo'
       ),
     ],
-    name: 'Zetta Prohaska',
+    name: 'Milo Padberg',
     pay_frequency: Models::Shared::PayFrequency::WEEK,
     pronouns: 'she/her',
     relationships: [
       Models::Shared::HrisEmployeerelationship.new(
         emails: [
           Models::Shared::HrisEmail.new(
-            email: 'keith.prohaska@gmail.com'
+            email: 'amanda.padberg@gmail.com'
           ),
         ],
-        name: 'Keith Prohaska',
+        name: 'Amanda Padberg',
         type: Models::Shared::HrisEmployeerelationshipType::SIBLING
       ),
       Models::Shared::HrisEmployeerelationship.new(
         emails: [
           Models::Shared::HrisEmail.new(
-            email: 'keely.prohaska@icloud.com'
+            email: 'alex.padberg@icloud.com'
           ),
         ],
-        name: 'Keely Prohaska',
+        name: 'Alex Padberg',
         type: Models::Shared::HrisEmployeerelationshipType::OTHER
       ),
     ],
-    salutation: 'Ms.',
+    salutation: 'Miss',
     seniority_started_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
     service_started_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
-    ssn_sin: '284-82-8167',
+    ssn_sin: '755-85-7843',
     storage_quota_allocated: 3_653_713.0,
     storage_quota_available: 3_017_275.0,
     storage_quota_used: 367_449.0,
     telephones: [
       Models::Shared::HrisTelephone.new(
-        telephone: '(320) 980-1370',
+        telephone: '(980) 337-0594',
         type: Models::Shared::HrisTelephoneType::HOME
       ),
       Models::Shared::HrisTelephone.new(
-        telephone: '(694) 840-0166',
+        telephone: '(840) 216-6463',
         type: Models::Shared::HrisTelephoneType::FAX
       ),
     ],
     timeoff_days_total: 17.0,
     timeoff_days_used: 9.0,
-    timezone: 'Europe/Ljubljana',
-    title: 'District Branding Specialist',
-    updated_at: DateTime.iso8601('2020-07-22T17:22:06.542Z')
+    timezone: 'America/Nome',
+    title: 'Corporate Functionality Executive',
+    updated_at: DateTime.iso8601('2020-07-23T10:17:16.472Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -448,21 +450,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateHrisEmployeeRequest.new(
   hris_employee: Models::Shared::HrisEmployee.new(
     address: Models::Shared::PropertyHrisEmployeeAddress.new(
-      address1: '7431 Hintz Parkway',
-      address2: 'Apt. 520',
-      city: 'Port Rogerview',
+      address1: '1636 Anissa Circle',
+      address2: 'Suite 844',
+      city: 'North Breanneberg',
       country_code: 'US',
-      postal_code: '01711',
-      region: 'Missouri',
-      region_code: 'TN'
+      postal_code: '18978',
+      region: 'South Dakota',
+      region_code: 'MN'
     ),
-    bio: 'fun advocate  🇱🇻',
+    bio: 'sushi devotee, singer',
     compensation: [
       Models::Shared::HrisCompensation.new(
         amount: 95_000.0,
         currency: 'USD',
         frequency: Models::Shared::HrisCompensationFrequency::YEAR,
-        notes: 'Eius.',
+        notes: 'Soleo.',
+        start_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
         type: Models::Shared::HrisCompensationType::OTHER
       ),
     ],
@@ -471,22 +474,22 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
     date_of_birth: DateTime.iso8601('2001-04-22'),
     emails: [
       Models::Shared::HrisEmail.new(
-        email: 'zetta.prohaska@insidious-stump.net',
+        email: 'milo.padberg@known-petal.com',
         type: Models::Shared::HrisEmailType::WORK
       ),
     ],
-    employee_number: 'uCk3qaL1ei',
+    employee_number: '3qaL1eiPnL',
     employment_status: Models::Shared::EmploymentStatus::ACTIVE,
     employment_type: Models::Shared::HrisEmployeeEmploymentType::PART_TIME,
-    first_name: 'Zetta',
+    first_name: 'Milo',
     flsa_status: Models::Shared::FlsaStatus::EXEMPT,
     gender: Models::Shared::HrisEmployeeGender::MALE,
     has_mfa: true,
     hired_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
-    id: '8dd162b8-b2b0-4442-9570-a84d89a3a0ef',
-    image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg',
+    id: '16dd8a11-98c1-4db7-a9d6-8ccc253fa057',
+    image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/52.jpg',
     language_locale: 'in',
-    last_name: 'Prohaska',
+    last_name: 'Padberg',
     locations: [],
     marital_status: Models::Shared::HrisEmployeeMaritalStatus::MARRIED,
     metadata: [
@@ -495,57 +498,57 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::HrisMetadataFormat::TEXT,
-        id: '72a58622-bfb8-4683-ba65-6a0bb6a5143c',
+        id: '3e6a83ef-965e-419e-a76e-d1747324c8cc',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'tutis'
+        value: 'teneo'
       ),
     ],
-    name: 'Zetta Prohaska',
+    name: 'Milo Padberg',
     pay_frequency: Models::Shared::PayFrequency::WEEK,
     pronouns: 'she/her',
     relationships: [
       Models::Shared::HrisEmployeerelationship.new(
         emails: [
           Models::Shared::HrisEmail.new(
-            email: 'keith.prohaska@gmail.com'
+            email: 'amanda.padberg@gmail.com'
           ),
         ],
-        name: 'Keith Prohaska',
+        name: 'Amanda Padberg',
         type: Models::Shared::HrisEmployeerelationshipType::SIBLING
       ),
       Models::Shared::HrisEmployeerelationship.new(
         emails: [
           Models::Shared::HrisEmail.new(
-            email: 'keely.prohaska@icloud.com'
+            email: 'alex.padberg@icloud.com'
           ),
         ],
-        name: 'Keely Prohaska',
+        name: 'Alex Padberg',
         type: Models::Shared::HrisEmployeerelationshipType::OTHER
       ),
     ],
-    salutation: 'Ms.',
+    salutation: 'Miss',
     seniority_started_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
     service_started_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
-    ssn_sin: '284-82-8167',
+    ssn_sin: '755-85-7843',
     storage_quota_allocated: 3_653_713.0,
     storage_quota_available: 3_017_275.0,
     storage_quota_used: 367_449.0,
     telephones: [
       Models::Shared::HrisTelephone.new(
-        telephone: '(320) 980-1370',
+        telephone: '(980) 337-0594',
         type: Models::Shared::HrisTelephoneType::HOME
       ),
       Models::Shared::HrisTelephone.new(
-        telephone: '(694) 840-0166',
+        telephone: '(840) 216-6463',
         type: Models::Shared::HrisTelephoneType::FAX
       ),
     ],
     timeoff_days_total: 17.0,
     timeoff_days_used: 9.0,
-    timezone: 'Europe/Ljubljana',
-    title: 'District Branding Specialist',
-    updated_at: DateTime.iso8601('2020-07-22T17:22:06.542Z')
+    timezone: 'America/Nome',
+    title: 'Corporate Functionality Executive',
+    updated_at: DateTime.iso8601('2020-07-23T10:17:16.472Z')
   ),
   connection_id: '<id>',
   id: '<id>'

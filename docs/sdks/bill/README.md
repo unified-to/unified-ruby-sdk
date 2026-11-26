@@ -30,14 +30,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.bill.create_accounting_bill(accounting_bill: Models::Shared::AccountingBill.new(
   attachments: [
     Models::Shared::AccountingAttachment.new(
-      download_url: 'https://puny-foodstuffs.name',
-      id: 'bed4aef9-f717-4319-ae59-badd8a3e38b1',
+      download_url: 'https://mixed-flame.biz',
+      id: 'f5c17819-7620-49ce-b843-08f3e826bb7b',
       mime_type: 'application/pdf',
       name: 'BILL-2466.pdf'
     ),
     Models::Shared::AccountingAttachment.new(
-      download_url: 'https://grimy-characterization.net',
-      id: '947039ef-2da2-49b5-a570-766c0cfa8bdf',
+      download_url: 'https://minor-testimonial.biz',
+      id: 'd53c3116-16b3-404c-8cb7-a3e90c067157',
       mime_type: 'application/pdf',
       name: 'BILL-2466-1.pdf'
     ),
@@ -50,10 +50,10 @@ res = s.bill.create_accounting_bill(accounting_bill: Models::Shared::AccountingB
   discount_amount: 0.0,
   due_at: DateTime.iso8601('2019-09-07T23:03:14.104Z'),
   extended_notes: [],
-  id: '7c7a803f-f777-4689-8911-0185f6ba03bf',
+  id: 'd71eb48f-8820-4d99-a476-f486a7a360f4',
   lineitems: [],
   metadata: [],
-  notes: 'Admiratio deporto tutamen cilicium infit amissio ante demulceo.',
+  notes: 'Cilicium infit amissio ante demulceo annus defluo tumultus.',
   paid_amount: 0.0,
   paid_at: DateTime.iso8601('2019-08-15T17:24:28.313Z'),
   payment_collection_method: Models::Shared::PaymentCollectionMethod::CHARGE_AUTOMATICALLY,
@@ -66,8 +66,8 @@ res = s.bill.create_accounting_bill(accounting_bill: Models::Shared::AccountingB
   tax_amount: 0.0,
   term: Models::Shared::Term::NET_90,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2020-06-04T13:31:31.012Z'),
-  url: 'https://cluttered-importance.org/bills/BILL-2466'
+  updated_at: DateTime.iso8601('2020-06-05T05:21:54.161Z'),
+  url: 'https://utilized-partridge.info/bills/BILL-2466'
 ), connection_id: '<id>')
 
 unless res.accounting_bill.nil?
@@ -203,14 +203,14 @@ req = Models::Operations::PatchAccountingBillRequest.new(
   accounting_bill: Models::Shared::AccountingBill.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
-        download_url: 'https://puny-foodstuffs.name',
-        id: '8d01dc31-85c0-4e07-ab67-e0c8d931d118',
+        download_url: 'https://mixed-flame.biz',
+        id: '1d6bcc95-5822-4f22-b26d-9453b1879859',
         mime_type: 'application/pdf',
         name: 'BILL-2466.pdf'
       ),
       Models::Shared::AccountingAttachment.new(
-        download_url: 'https://grimy-characterization.net',
-        id: 'da6f5ede-6066-4298-85cb-c66ed32ef3ec',
+        download_url: 'https://minor-testimonial.biz',
+        id: '9e3221b4-9952-455a-9152-f37c3ad9fd3f',
         mime_type: 'application/pdf',
         name: 'BILL-2466-1.pdf'
       ),
@@ -223,10 +223,10 @@ req = Models::Operations::PatchAccountingBillRequest.new(
     discount_amount: 0.0,
     due_at: DateTime.iso8601('2019-09-07T23:03:14.104Z'),
     extended_notes: [],
-    id: '514d63c4-cf33-434e-b12d-fedf287c1d13',
+    id: '1f56c28a-48c8-4e0b-9f26-a0ed47664a1d',
     lineitems: [],
     metadata: [],
-    notes: 'Admiratio deporto tutamen cilicium infit amissio ante demulceo.',
+    notes: 'Cilicium infit amissio ante demulceo annus defluo tumultus.',
     paid_amount: 0.0,
     paid_at: DateTime.iso8601('2019-08-15T17:24:28.313Z'),
     payment_collection_method: Models::Shared::PaymentCollectionMethod::CHARGE_AUTOMATICALLY,
@@ -239,8 +239,8 @@ req = Models::Operations::PatchAccountingBillRequest.new(
     tax_amount: 0.0,
     term: Models::Shared::Term::NET_90,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2020-06-04T13:31:31.018Z'),
-    url: 'https://cluttered-importance.org/bills/BILL-2466'
+    updated_at: DateTime.iso8601('2020-06-05T05:21:54.167Z'),
+    url: 'https://utilized-partridge.info/bills/BILL-2466'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -331,14 +331,14 @@ req = Models::Operations::UpdateAccountingBillRequest.new(
   accounting_bill: Models::Shared::AccountingBill.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
-        download_url: 'https://puny-foodstuffs.name',
-        id: '8d01dc31-85c0-4e07-ab67-e0c8d931d118',
+        download_url: 'https://mixed-flame.biz',
+        id: '1d6bcc95-5822-4f22-b26d-9453b1879859',
         mime_type: 'application/pdf',
         name: 'BILL-2466.pdf'
       ),
       Models::Shared::AccountingAttachment.new(
-        download_url: 'https://grimy-characterization.net',
-        id: 'da6f5ede-6066-4298-85cb-c66ed32ef3ec',
+        download_url: 'https://minor-testimonial.biz',
+        id: '9e3221b4-9952-455a-9152-f37c3ad9fd3f',
         mime_type: 'application/pdf',
         name: 'BILL-2466-1.pdf'
       ),
@@ -351,10 +351,10 @@ req = Models::Operations::UpdateAccountingBillRequest.new(
     discount_amount: 0.0,
     due_at: DateTime.iso8601('2019-09-07T23:03:14.104Z'),
     extended_notes: [],
-    id: '514d63c4-cf33-434e-b12d-fedf287c1d13',
+    id: '1f56c28a-48c8-4e0b-9f26-a0ed47664a1d',
     lineitems: [],
     metadata: [],
-    notes: 'Admiratio deporto tutamen cilicium infit amissio ante demulceo.',
+    notes: 'Cilicium infit amissio ante demulceo annus defluo tumultus.',
     paid_amount: 0.0,
     paid_at: DateTime.iso8601('2019-08-15T17:24:28.313Z'),
     payment_collection_method: Models::Shared::PaymentCollectionMethod::CHARGE_AUTOMATICALLY,
@@ -367,8 +367,8 @@ req = Models::Operations::UpdateAccountingBillRequest.new(
     tax_amount: 0.0,
     term: Models::Shared::Term::NET_90,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2020-06-04T13:31:31.018Z'),
-    url: 'https://cluttered-importance.org/bills/BILL-2466'
+    updated_at: DateTime.iso8601('2020-06-05T05:21:54.167Z'),
+    url: 'https://utilized-partridge.info/bills/BILL-2466'
   ),
   connection_id: '<id>',
   id: '<id>'

@@ -1,0 +1,20 @@
+# PropertyScimGroupMetaResourceType
+
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PropertyScimGroupMetaResourceType::USER
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = PropertyScimGroupMetaResourceType.deserialize("custom_value")
+```
+
+
+## Values
+
+| Name    | Value   |
+| ------- | ------- |
+| `USER`  | User    |
+| `GROUP` | Group   |

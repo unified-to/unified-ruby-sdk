@@ -52,11 +52,13 @@ module UnifiedRubySDK
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
+        # DMS Vehicles this deal is for
+        field :vehicle_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('vehicle_ids') } }
 
         field :won_reason, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('won_reason') } }
 
-        sig { params(amount: T.nilable(::Float), closed_at: T.nilable(::DateTime), closing_at: T.nilable(::DateTime), company_ids: T.nilable(T::Array[::String]), contact_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), lost_reason: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::CrmMetadata]), name: T.nilable(::String), pipelines: T.nilable(T::Array[Models::Shared::CrmReference]), probability: T.nilable(::Float), raw: T.nilable(T::Hash[::Symbol, ::Object]), source: T.nilable(::String), stages: T.nilable(T::Array[Models::Shared::CrmReference]), tags: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), won_reason: T.nilable(::String)).void }
-        def initialize(amount: nil, closed_at: nil, closing_at: nil, company_ids: nil, contact_ids: nil, created_at: nil, currency: nil, description: nil, id: nil, lost_reason: nil, metadata: nil, name: nil, pipelines: nil, probability: nil, raw: nil, source: nil, stages: nil, tags: nil, updated_at: nil, user_id: nil, won_reason: nil)
+        sig { params(amount: T.nilable(::Float), closed_at: T.nilable(::DateTime), closing_at: T.nilable(::DateTime), company_ids: T.nilable(T::Array[::String]), contact_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), lost_reason: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::CrmMetadata]), name: T.nilable(::String), pipelines: T.nilable(T::Array[Models::Shared::CrmReference]), probability: T.nilable(::Float), raw: T.nilable(T::Hash[::Symbol, ::Object]), source: T.nilable(::String), stages: T.nilable(T::Array[Models::Shared::CrmReference]), tags: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), vehicle_ids: T.nilable(T::Array[::String]), won_reason: T.nilable(::String)).void }
+        def initialize(amount: nil, closed_at: nil, closing_at: nil, company_ids: nil, contact_ids: nil, created_at: nil, currency: nil, description: nil, id: nil, lost_reason: nil, metadata: nil, name: nil, pipelines: nil, probability: nil, raw: nil, source: nil, stages: nil, tags: nil, updated_at: nil, user_id: nil, vehicle_ids: nil, won_reason: nil)
           @amount = amount
           @closed_at = closed_at
           @closing_at = closing_at
@@ -77,6 +79,7 @@ module UnifiedRubySDK
           @tags = tags
           @updated_at = updated_at
           @user_id = user_id
+          @vehicle_ids = vehicle_ids
           @won_reason = won_reason
         end
 
@@ -103,6 +106,7 @@ module UnifiedRubySDK
           return false unless @tags == other.tags
           return false unless @updated_at == other.updated_at
           return false unless @user_id == other.user_id
+          return false unless @vehicle_ids == other.vehicle_ids
           return false unless @won_reason == other.won_reason
           true
         end

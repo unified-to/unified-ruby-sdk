@@ -1,0 +1,99 @@
+# typed: true
+# frozen_string_literal: true
+
+
+class UnifiedRubySDK::Models::Shared::DmsVehicle
+  extend ::Crystalline::MetadataFields::ClassMethods
+end
+
+
+class UnifiedRubySDK::Models::Shared::DmsVehicle
+  def body_style(); end
+  def body_style=(str_); end
+  def company_id(); end
+  def company_id=(str_); end
+  def condition(); end
+  def condition=(str_); end
+  def contact_id(); end
+  def contact_id=(str_); end
+  def cost_amount(); end
+  def cost_amount=(str_); end
+  def created_at(); end
+  def created_at=(str_); end
+  def currency(); end
+  def currency=(str_); end
+  def delivered_at(); end
+  def delivered_at=(str_); end
+  def description(); end
+  def description=(str_); end
+  def exterior_color(); end
+  def exterior_color=(str_); end
+  def fleet_number(); end
+  def fleet_number=(str_); end
+  def fuel_type(); end
+  def fuel_type=(str_); end
+  def id(); end
+  def id=(str_); end
+  def image_urls(); end
+  def image_urls=(str_); end
+  def in_service_at(); end
+  def in_service_at=(str_); end
+  def interior_color(); end
+  def interior_color=(str_); end
+  def internet_price_amount(); end
+  def internet_price_amount=(str_); end
+  def is_active(); end
+  def is_active=(str_); end
+  def is_certified(); end
+  def is_certified=(str_); end
+  def is_inventory(); end
+  def is_inventory=(str_); end
+  def is_published(); end
+  def is_published=(str_); end
+  def last_service_at(); end
+  def last_service_at=(str_); end
+  def license_plate(); end
+  def license_plate=(str_); end
+  def make(); end
+  def make=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
+  def model(); end
+  def model=(str_); end
+  def model_code(); end
+  def model_code=(str_); end
+  def msrp_amount(); end
+  def msrp_amount=(str_); end
+  def odometer(); end
+  def odometer=(str_); end
+  def odometer_unit(); end
+  def odometer_unit=(str_); end
+  def options(); end
+  def options=(str_); end
+  def price_amount(); end
+  def price_amount=(str_); end
+  def raw(); end
+  def raw=(str_); end
+  def received_at(); end
+  def received_at=(str_); end
+  def sold_at(); end
+  def sold_at=(str_); end
+  def status(); end
+  def status=(str_); end
+  def stock_number(); end
+  def stock_number=(str_); end
+  def transmission(); end
+  def transmission=(str_); end
+  def trim(); end
+  def trim=(str_); end
+  def type(); end
+  def type=(str_); end
+  def updated_at(); end
+  def updated_at=(str_); end
+  def vin(); end
+  def vin=(str_); end
+  def warranty_expires_at(); end
+  def warranty_expires_at=(str_); end
+  def year(); end
+  def year=(str_); end
+end

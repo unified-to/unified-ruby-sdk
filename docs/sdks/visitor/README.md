@@ -29,15 +29,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.visitor.create_analytics_visitor(analytics_visitor: Models::Shared::AnalyticsVisitor.new(
   created_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
-  email: 'desiree.o.hara@icloud.com',
+  email: 'madisen.jenkins@icloud.com',
   first_seen_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
-  id: 'd819c8d1-1377-403b-b5a2-b43df17a5b48',
-  last_seen_at: DateTime.iso8601('2025-02-02T03:20:40.398Z'),
+  id: '19026171-1d65-43b8-9051-d2f8bbc5959f',
+  last_seen_at: DateTime.iso8601('2025-02-06T11:25:09.655Z'),
   metadata: {
     'segment' => Models::Shared::PropertyAnalyticsVisitorMetadata.new,
   },
   total_events: 2916.0,
-  updated_at: DateTime.iso8601('2025-07-23T16:20:23.517Z')
+  updated_at: DateTime.iso8601('2025-07-28T10:36:11.341Z')
 ), connection_id: '<id>')
 
 unless res.analytics_visitor.nil?
@@ -172,15 +172,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAnalyticsVisitorRequest.new(
   analytics_visitor: Models::Shared::AnalyticsVisitor.new(
     created_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
-    email: 'desiree.o.hara@icloud.com',
+    email: 'madisen.jenkins@icloud.com',
     first_seen_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
-    id: '8619acdb-247c-4697-935f-9e672690c48b',
-    last_seen_at: DateTime.iso8601('2025-02-02T03:20:40.408Z'),
+    id: '2238c225-c2d6-4bb7-9431-9d8da1f8873c',
+    last_seen_at: DateTime.iso8601('2025-02-06T11:25:09.664Z'),
     metadata: {
       'segment' => Models::Shared::PropertyAnalyticsVisitorMetadata.new,
     },
     total_events: 2916.0,
-    updated_at: DateTime.iso8601('2025-07-23T16:20:23.527Z')
+    updated_at: DateTime.iso8601('2025-07-28T10:36:11.351Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -270,15 +270,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAnalyticsVisitorRequest.new(
   analytics_visitor: Models::Shared::AnalyticsVisitor.new(
     created_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
-    email: 'desiree.o.hara@icloud.com',
+    email: 'madisen.jenkins@icloud.com',
     first_seen_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
-    id: '8619acdb-247c-4697-935f-9e672690c48b',
-    last_seen_at: DateTime.iso8601('2025-02-02T03:20:40.408Z'),
+    id: '2238c225-c2d6-4bb7-9431-9d8da1f8873c',
+    last_seen_at: DateTime.iso8601('2025-02-06T11:25:09.664Z'),
     metadata: {
       'segment' => Models::Shared::PropertyAnalyticsVisitorMetadata.new,
     },
     total_events: 2916.0,
-    updated_at: DateTime.iso8601('2025-07-23T16:20:23.527Z')
+    updated_at: DateTime.iso8601('2025-07-28T10:36:11.351Z')
   ),
   connection_id: '<id>',
   id: '<id>'

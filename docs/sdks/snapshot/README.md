@@ -29,13 +29,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.snapshot.create_compute_snapshot(compute_snapshot: Models::Shared::ComputeSnapshot.new(
   created_at: DateTime.iso8601('2021-09-24T14:40:06.110Z'),
-  id: 'c16b9213-76ff-4429-a32a-83fb3bcdcf75',
+  id: '0830b956-92a5-4a25-84e3-e6749bb406df',
   metadata: [],
-  name: 'snap-alius',
+  name: 'snap-cito',
   size_mb: 169_984.0,
   status: Models::Shared::ComputeSnapshotStatus::DELETING,
   type: Models::Shared::ComputeSnapshotType::DISK,
-  updated_at: DateTime.iso8601('2026-04-26T13:57:25.398Z')
+  updated_at: DateTime.iso8601('2026-05-01T21:13:33.517Z')
 ), connection_id: '<id>')
 
 unless res.compute_snapshot.nil?
@@ -170,13 +170,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchComputeSnapshotRequest.new(
   compute_snapshot: Models::Shared::ComputeSnapshot.new(
     created_at: DateTime.iso8601('2021-09-24T14:40:06.110Z'),
-    id: '6d81a8b7-375c-4533-9275-60ed792b3d3c',
+    id: '02decb7d-ab3c-4cd1-8d68-2efdb2c0e743',
     metadata: [],
-    name: 'snap-alius',
+    name: 'snap-cito',
     size_mb: 169_984.0,
     status: Models::Shared::ComputeSnapshotStatus::DELETING,
     type: Models::Shared::ComputeSnapshotType::DISK,
-    updated_at: DateTime.iso8601('2026-04-26T13:57:25.404Z')
+    updated_at: DateTime.iso8601('2026-05-01T21:13:33.525Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -266,13 +266,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateComputeSnapshotRequest.new(
   compute_snapshot: Models::Shared::ComputeSnapshot.new(
     created_at: DateTime.iso8601('2021-09-24T14:40:06.110Z'),
-    id: '6d81a8b7-375c-4533-9275-60ed792b3d3c',
+    id: '02decb7d-ab3c-4cd1-8d68-2efdb2c0e743',
     metadata: [],
-    name: 'snap-alius',
+    name: 'snap-cito',
     size_mb: 169_984.0,
     status: Models::Shared::ComputeSnapshotStatus::DELETING,
     type: Models::Shared::ComputeSnapshotType::DISK,
-    updated_at: DateTime.iso8601('2026-04-26T13:57:25.404Z')
+    updated_at: DateTime.iso8601('2026-05-01T21:13:33.525Z')
   ),
   connection_id: '<id>',
   id: '<id>'

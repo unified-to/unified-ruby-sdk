@@ -26,31 +26,31 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.conversation.create_property_conversation(property_conversation: Models::Shared::PropertyConversation.new(
   created_at: DateTime.iso8601('2022-06-20T00:02:46.530Z'),
-  guest_name: 'Evie Okuneva',
-  id: '6aafe6e1-131a-4357-931c-086c7d6a3fe5',
+  guest_name: 'Maida Funk',
+  id: '2124dec1-7c73-48f6-a51d-102dc80a53f3',
   is_unread: false,
   messages: [
     Models::Shared::PropertyMessage.new(
       attachments: [],
-      created_at: DateTime.iso8601('2025-05-06T01:36:03.274Z'),
-      id: '32b8ad25-db6f-4533-81a0-e4c5f0e7d121',
+      created_at: DateTime.iso8601('2025-05-09T22:44:39.263Z'),
+      id: 'e0f8f417-ea6b-4e9a-b976-07ae71964856',
       is_automatic: false,
-      message: 'Vinitor caterva amor sophismata admitto colo tempore aufero torrens.',
-      sender_name: 'Evie Okuneva',
+      message: 'Sophismata admitto colo.',
+      sender_name: 'Maida Funk',
       sender_type: Models::Shared::SenderType::GUEST
     ),
     Models::Shared::PropertyMessage.new(
       attachments: [],
-      created_at: DateTime.iso8601('2026-05-24T07:34:39.255Z'),
-      id: '09827a38-94d9-47e2-b3d4-8cf1e6d323d8',
-      message: 'Aequitas torqueo curiositas cimentarius repellendus auditor degero ademptio adnuo.',
-      sender_name: 'Ms. Patti Lynch',
+      created_at: DateTime.iso8601('2026-05-29T14:41:01.284Z'),
+      id: '95756049-8c9d-407e-aa70-2f254ae12912',
+      message: 'Aufero torrens tonsor aequitas torqueo curiositas cimentarius repellendus auditor.',
+      sender_name: 'Alysson Sanford',
       sender_type: Models::Shared::SenderType::HOST
     ),
   ],
   metadata: [],
   source: 'Airbnb',
-  updated_at: DateTime.iso8601('2026-05-24T07:34:39.255Z')
+  updated_at: DateTime.iso8601('2026-05-29T14:41:01.284Z')
 ), connection_id: '<id>')
 
 unless res.property_conversation.nil?

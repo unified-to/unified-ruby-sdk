@@ -66,13 +66,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.healthcare.create_healthcare_appointment(healthcare_appointment: Models::Shared::HealthcareAppointment.new(
   created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
-  description: 'clarus aptus cetera',
+  description: 'cubicularis caput viriliter',
   end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-  id: 'a3722996-78db-40bf-8ee8-e983d9ff034b',
+  id: '18998882-9d55-4df5-accb-b886890257c6',
   is_virtual: true,
-  meeting_url: 'https://expensive-slipper.name/',
+  meeting_url: 'https://cautious-cannon.com/',
   metadata: [],
-  notes: 'Stabilis triduana colo casus anser ver alo beatus contabesco amiculum.',
+  notes: 'Casus anser ver alo beatus.',
   practitioner_ids: [],
   service_types: [
     Models::Shared::HealthcareCode.new(
@@ -84,7 +84,7 @@ res = s.healthcare.create_healthcare_appointment(healthcare_appointment: Models:
   slot_ids: [],
   start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
   status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-  updated_at: DateTime.iso8601('2026-10-21T13:19:31.480Z')
+  updated_at: DateTime.iso8601('2026-10-27T09:09:41.195Z')
 ), connection_id: '<id>')
 
 unless res.healthcare_appointment.nil?
@@ -138,15 +138,15 @@ res = s.healthcare.create_healthcare_document(healthcare_document: Models::Share
     ),
   ],
   created_at: DateTime.iso8601('2023-07-16T04:00:25.853Z'),
-  document_url: 'https://overcooked-yogurt.org',
-  filename: 'ugh_after.elc',
-  id: '47d9f6fd-3b39-4af6-9e68-16ab5f90f0ec',
+  document_url: 'https://noxious-abacus.biz/',
+  filename: 'quip.eot',
+  id: '2b580755-50c3-4dc1-badf-901be1782306',
   metadata: [],
   mime_type: 'application/pdf',
   name: 'History and physical',
   status: Models::Shared::HealthcareDocumentStatus::SUPERSEDED,
   type: Models::Shared::HealthcareDocumentType::CONSULTATION_NOTE,
-  updated_at: DateTime.iso8601('2025-01-09T02:07:51.519Z')
+  updated_at: DateTime.iso8601('2025-01-11T17:38:03.861Z')
 ), connection_id: '<id>')
 
 unless res.healthcare_document.nil?
@@ -223,15 +223,15 @@ res = s.healthcare.create_healthcare_observation(healthcare_observation: Models:
     ),
   ],
   created_at: DateTime.iso8601('2022-12-06T21:34:04.293Z'),
-  id: 'b563683b-e288-4b30-8662-e8d50c4d844a',
+  id: 'b91377fa-13b2-434a-add9-6a5982e6bf0e',
   interpretation: Models::Shared::Interpretation::CRITICAL_HIGH,
-  issued_at: DateTime.iso8601('2025-05-30T05:47:56.765Z'),
+  issued_at: DateTime.iso8601('2025-06-02T23:28:04.506Z'),
   metadata: [],
   name: 'Blood pressure panel',
-  observed_at: DateTime.iso8601('2025-02-05T14:40:06.236Z'),
+  observed_at: DateTime.iso8601('2025-02-08T21:04:58.075Z'),
   status: Models::Shared::HealthcareObservationStatus::CORRECTED,
   type: Models::Shared::HealthcareObservationType::VITAL_SIGNS,
-  updated_at: DateTime.iso8601('2026-04-18T19:00:22.343Z')
+  updated_at: DateTime.iso8601('2026-04-23T20:43:14.697Z')
 ), connection_id: '<id>')
 
 unless res.healthcare_observation.nil?
@@ -277,21 +277,21 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.healthcare.create_healthcare_patient(healthcare_patient: Models::Shared::HealthcarePatient.new(
   address: Models::Shared::PropertyHealthcarePatientAddress.new(
-    address1: '162 Kirlin Mall',
-    city: 'Dickinsonborough',
+    address1: '3645 Leonardo Place',
+    city: 'Estelleland',
     country: 'US',
-    postal_code: '54031',
-    region: 'Nebraska'
+    postal_code: '99263-6004',
+    region: 'New Jersey'
   ),
-  birthdate: '2025-03-14',
+  birthdate: '1941-12-25',
   contacts: [
     Models::Shared::HealthcarePatientContact.new(
       emails: [],
-      name: 'Antonia Lebsack',
+      name: 'Ambrose Welch',
       relationship: 'Spouse',
       telephones: [
         Models::Shared::HealthcareTelephone.new(
-          telephone: '(695) 328-7029 x4412',
+          telephone: '323.524.3947 x89014',
           type: Models::Shared::HealthcareTelephoneType::MOBILE
         ),
       ]
@@ -300,33 +300,33 @@ res = s.healthcare.create_healthcare_patient(healthcare_patient: Models::Shared:
   created_at: DateTime.iso8601('2021-06-05T21:08:04.917Z'),
   emails: [
     Models::Shared::HealthcareEmail.new(
-      email: 'alejandrin.parker@icloud.com',
+      email: 'monroe.bauch@icloud.com',
       type: Models::Shared::HealthcareEmailType::HOME
     ),
   ],
-  first_name: 'Alejandrin',
+  first_name: 'Monroe',
   gender: Models::Shared::HealthcarePatientGender::FEMALE,
-  id: '03bcbcae-6e34-4aa0-944c-dd87a640c367',
+  id: '895932a7-f9f4-46da-a72c-c35565dfc147',
   identifiers: [
     Models::Shared::HealthcareIdentifier.new(
       type: Models::Shared::HealthcareIdentifierType::MRN,
-      value: '57992636'
+      value: '51559512'
     ),
   ],
   is_active: true,
   is_deceased: false,
   language: 'zh',
-  last_name: 'Parker',
+  last_name: 'Bauch',
   metadata: [],
-  name: 'Alejandrin Parker',
+  name: 'Monroe Bauch',
   practitioner_ids: [],
   telephones: [
     Models::Shared::HealthcareTelephone.new(
-      telephone: '1-219-555-9023 x08295',
+      telephone: '1-555-902-3082 x9590',
       type: Models::Shared::HealthcareTelephoneType::MOBILE
     ),
   ],
-  updated_at: DateTime.iso8601('2026-07-21T00:07:07.283Z')
+  updated_at: DateTime.iso8601('2026-07-26T14:23:35.644Z')
 ), connection_id: '<id>')
 
 unless res.healthcare_patient.nil?
@@ -1853,13 +1853,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchHealthcareAppointmentRequest.new(
   healthcare_appointment: Models::Shared::HealthcareAppointment.new(
     created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
-    description: 'clarus aptus cetera',
+    description: 'cubicularis caput viriliter',
     end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-    id: '7eb67128-a649-45cd-bf81-c35b65e9d924',
+    id: '25509311-9f8d-4337-9bb5-ba2ae7f3c684',
     is_virtual: true,
-    meeting_url: 'https://expensive-slipper.name/',
+    meeting_url: 'https://cautious-cannon.com/',
     metadata: [],
-    notes: 'Stabilis triduana colo casus anser ver alo beatus contabesco amiculum.',
+    notes: 'Casus anser ver alo beatus.',
     practitioner_ids: [],
     service_types: [
       Models::Shared::HealthcareCode.new(
@@ -1871,7 +1871,7 @@ req = Models::Operations::PatchHealthcareAppointmentRequest.new(
     slot_ids: [],
     start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
     status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-    updated_at: DateTime.iso8601('2026-10-21T13:19:31.509Z')
+    updated_at: DateTime.iso8601('2026-10-27T09:09:41.215Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1920,21 +1920,21 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchHealthcarePatientRequest.new(
   healthcare_patient: Models::Shared::HealthcarePatient.new(
     address: Models::Shared::PropertyHealthcarePatientAddress.new(
-      address1: '162 Kirlin Mall',
-      city: 'Dickinsonborough',
+      address1: '3645 Leonardo Place',
+      city: 'Estelleland',
       country: 'US',
-      postal_code: '54031',
-      region: 'Nebraska'
+      postal_code: '99263-6004',
+      region: 'New Jersey'
     ),
-    birthdate: '2025-03-14',
+    birthdate: '1941-12-25',
     contacts: [
       Models::Shared::HealthcarePatientContact.new(
         emails: [],
-        name: 'Antonia Lebsack',
+        name: 'Ambrose Welch',
         relationship: 'Spouse',
         telephones: [
           Models::Shared::HealthcareTelephone.new(
-            telephone: '(695) 328-7029 x4412',
+            telephone: '323.524.3947 x89014',
             type: Models::Shared::HealthcareTelephoneType::MOBILE
           ),
         ]
@@ -1943,33 +1943,33 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
     created_at: DateTime.iso8601('2021-06-05T21:08:04.917Z'),
     emails: [
       Models::Shared::HealthcareEmail.new(
-        email: 'alejandrin.parker@icloud.com',
+        email: 'monroe.bauch@icloud.com',
         type: Models::Shared::HealthcareEmailType::HOME
       ),
     ],
-    first_name: 'Alejandrin',
+    first_name: 'Monroe',
     gender: Models::Shared::HealthcarePatientGender::FEMALE,
-    id: '394b4f44-9a7a-4b72-9dc1-0150eaa57e53',
+    id: 'f4c07dcc-d23c-4fec-9c25-25d2558408cc',
     identifiers: [
       Models::Shared::HealthcareIdentifier.new(
         type: Models::Shared::HealthcareIdentifierType::MRN,
-        value: '57992636'
+        value: '51559512'
       ),
     ],
     is_active: true,
     is_deceased: false,
     language: 'zh',
-    last_name: 'Parker',
+    last_name: 'Bauch',
     metadata: [],
-    name: 'Alejandrin Parker',
+    name: 'Monroe Bauch',
     practitioner_ids: [],
     telephones: [
       Models::Shared::HealthcareTelephone.new(
-        telephone: '1-219-555-9023 x08295',
+        telephone: '1-555-902-3082 x9590',
         type: Models::Shared::HealthcareTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2026-07-21T00:07:07.314Z')
+    updated_at: DateTime.iso8601('2026-07-26T14:23:35.684Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2059,13 +2059,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateHealthcareAppointmentRequest.new(
   healthcare_appointment: Models::Shared::HealthcareAppointment.new(
     created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
-    description: 'clarus aptus cetera',
+    description: 'cubicularis caput viriliter',
     end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-    id: '7eb67128-a649-45cd-bf81-c35b65e9d924',
+    id: '25509311-9f8d-4337-9bb5-ba2ae7f3c684',
     is_virtual: true,
-    meeting_url: 'https://expensive-slipper.name/',
+    meeting_url: 'https://cautious-cannon.com/',
     metadata: [],
-    notes: 'Stabilis triduana colo casus anser ver alo beatus contabesco amiculum.',
+    notes: 'Casus anser ver alo beatus.',
     practitioner_ids: [],
     service_types: [
       Models::Shared::HealthcareCode.new(
@@ -2077,7 +2077,7 @@ req = Models::Operations::UpdateHealthcareAppointmentRequest.new(
     slot_ids: [],
     start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
     status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-    updated_at: DateTime.iso8601('2026-10-21T13:19:31.509Z')
+    updated_at: DateTime.iso8601('2026-10-27T09:09:41.215Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2126,21 +2126,21 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateHealthcarePatientRequest.new(
   healthcare_patient: Models::Shared::HealthcarePatient.new(
     address: Models::Shared::PropertyHealthcarePatientAddress.new(
-      address1: '162 Kirlin Mall',
-      city: 'Dickinsonborough',
+      address1: '3645 Leonardo Place',
+      city: 'Estelleland',
       country: 'US',
-      postal_code: '54031',
-      region: 'Nebraska'
+      postal_code: '99263-6004',
+      region: 'New Jersey'
     ),
-    birthdate: '2025-03-14',
+    birthdate: '1941-12-25',
     contacts: [
       Models::Shared::HealthcarePatientContact.new(
         emails: [],
-        name: 'Antonia Lebsack',
+        name: 'Ambrose Welch',
         relationship: 'Spouse',
         telephones: [
           Models::Shared::HealthcareTelephone.new(
-            telephone: '(695) 328-7029 x4412',
+            telephone: '323.524.3947 x89014',
             type: Models::Shared::HealthcareTelephoneType::MOBILE
           ),
         ]
@@ -2149,33 +2149,33 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
     created_at: DateTime.iso8601('2021-06-05T21:08:04.917Z'),
     emails: [
       Models::Shared::HealthcareEmail.new(
-        email: 'alejandrin.parker@icloud.com',
+        email: 'monroe.bauch@icloud.com',
         type: Models::Shared::HealthcareEmailType::HOME
       ),
     ],
-    first_name: 'Alejandrin',
+    first_name: 'Monroe',
     gender: Models::Shared::HealthcarePatientGender::FEMALE,
-    id: '394b4f44-9a7a-4b72-9dc1-0150eaa57e53',
+    id: 'f4c07dcc-d23c-4fec-9c25-25d2558408cc',
     identifiers: [
       Models::Shared::HealthcareIdentifier.new(
         type: Models::Shared::HealthcareIdentifierType::MRN,
-        value: '57992636'
+        value: '51559512'
       ),
     ],
     is_active: true,
     is_deceased: false,
     language: 'zh',
-    last_name: 'Parker',
+    last_name: 'Bauch',
     metadata: [],
-    name: 'Alejandrin Parker',
+    name: 'Monroe Bauch',
     practitioner_ids: [],
     telephones: [
       Models::Shared::HealthcareTelephone.new(
-        telephone: '1-219-555-9023 x08295',
+        telephone: '1-555-902-3082 x9590',
         type: Models::Shared::HealthcareTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2026-07-21T00:07:07.314Z')
+    updated_at: DateTime.iso8601('2026-07-26T14:23:35.684Z')
   ),
   connection_id: '<id>',
   id: '<id>'

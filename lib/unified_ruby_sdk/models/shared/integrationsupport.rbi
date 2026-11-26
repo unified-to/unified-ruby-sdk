@@ -236,6 +236,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_user_id=(str_); end
   def list_user_mentioned_id(); end
   def list_user_mentioned_id=(str_); end
+  def list_vehicle_id(); end
+  def list_vehicle_id=(str_); end
   def list_visitor_id(); end
   def list_visitor_id=(str_); end
   def methods(); end
@@ -460,6 +462,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def virtual_webhook_user_id=(str_); end
   def virtual_webhook_user_mentioned_id(); end
   def virtual_webhook_user_mentioned_id=(str_); end
+  def virtual_webhook_vehicle_id(); end
+  def virtual_webhook_vehicle_id=(str_); end
   def virtual_webhook_visitor_id(); end
   def virtual_webhook_visitor_id=(str_); end
   def webhook_events(); end

@@ -51,6 +51,9 @@ module UnifiedRubySDK
           PROPERTY = new('property')
           PLM = new('plm')
           QMS = new('qms')
+          DMS = new('dms')
+          FHIR = new('fhir')
+          PRINTING = new('printing')
         end
       end
     end

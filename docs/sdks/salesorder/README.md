@@ -29,22 +29,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.salesorder.create_accounting_salesorder(accounting_salesorder: Models::Shared::AccountingSalesorder.new(
   billing_address: Models::Shared::PropertyAccountingSalesorderBillingAddress.new(
-    address1: '26530 Stroman Rest',
-    address2: 'Suite 801',
-    city: 'Pocatello',
+    address1: '1487 Valley Road',
+    address2: 'Apt. 287',
+    city: 'Lake Angelina',
     country_code: 'US',
-    postal_code: '05015-8546',
-    region: 'Louisiana',
-    region_code: 'MO'
+    postal_code: '85469-3199',
+    region: 'Georgia',
+    region_code: 'MT'
   ),
   category_ids: [],
-  closed_at: DateTime.iso8601('2023-04-01T23:54:07.316Z'),
+  closed_at: DateTime.iso8601('2023-04-03T11:27:22.116Z'),
   created_at: DateTime.iso8601('2022-01-17T16:11:50.310Z'),
   currency: 'USD',
   discount_amount: 0.0,
   fees: [],
   fulfillment_type: Models::Shared::FulfillmentType::OTHER,
-  id: '915b9768-e2ae-4acb-a514-7fece09810a4',
+  id: '8eca044e-0062-4b76-8e2e-40f87ec0d5fb',
   lineitems: [],
   metadata: [],
   order_number: '832663',
@@ -55,19 +55,19 @@ res = s.salesorder.create_accounting_salesorder(accounting_salesorder: Models::S
   sales_channel: 'Wholesale',
   service_charge_amount: 0.0,
   shipping_address: Models::Shared::PropertyAccountingSalesorderShippingAddress.new(
-    address1: '69878 Bradley Mill',
-    city: 'Port Matildestad',
+    address1: '781 Darrell Coves',
+    city: 'Annabelfield',
     country_code: 'US',
-    postal_code: '07989-2148',
-    region: 'Arkansas',
-    region_code: 'AK'
+    postal_code: '92148-4116',
+    region: 'Virginia',
+    region_code: 'WI'
   ),
   status: Models::Shared::AccountingSalesorderStatus::PAID,
   subtotal_amount: 0.0,
   tax_amount: 0.0,
   tip_amount: 0.0,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2023-04-01T23:54:07.316Z')
+  updated_at: DateTime.iso8601('2023-04-03T11:27:22.116Z')
 ), connection_id: '<id>')
 
 unless res.accounting_salesorder.nil?
@@ -202,22 +202,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAccountingSalesorderRequest.new(
   accounting_salesorder: Models::Shared::AccountingSalesorder.new(
     billing_address: Models::Shared::PropertyAccountingSalesorderBillingAddress.new(
-      address1: '26530 Stroman Rest',
-      address2: 'Suite 801',
-      city: 'Pocatello',
+      address1: '1487 Valley Road',
+      address2: 'Apt. 287',
+      city: 'Lake Angelina',
       country_code: 'US',
-      postal_code: '05015-8546',
-      region: 'Louisiana',
-      region_code: 'MO'
+      postal_code: '85469-3199',
+      region: 'Georgia',
+      region_code: 'MT'
     ),
     category_ids: [],
-    closed_at: DateTime.iso8601('2023-04-01T23:54:07.328Z'),
+    closed_at: DateTime.iso8601('2023-04-03T11:27:22.128Z'),
     created_at: DateTime.iso8601('2022-01-17T16:11:50.310Z'),
     currency: 'USD',
     discount_amount: 0.0,
     fees: [],
     fulfillment_type: Models::Shared::FulfillmentType::OTHER,
-    id: '5b5cad04-45cd-4ddc-ace4-3819df32b267',
+    id: 'aaa718ae-a1a1-4bf8-8548-30af50cd52f2',
     lineitems: [],
     metadata: [],
     order_number: '832663',
@@ -228,19 +228,19 @@ req = Models::Operations::PatchAccountingSalesorderRequest.new(
     sales_channel: 'Wholesale',
     service_charge_amount: 0.0,
     shipping_address: Models::Shared::PropertyAccountingSalesorderShippingAddress.new(
-      address1: '69878 Bradley Mill',
-      city: 'Port Matildestad',
+      address1: '781 Darrell Coves',
+      city: 'Annabelfield',
       country_code: 'US',
-      postal_code: '07989-2148',
-      region: 'Arkansas',
-      region_code: 'AK'
+      postal_code: '92148-4116',
+      region: 'Virginia',
+      region_code: 'WI'
     ),
     status: Models::Shared::AccountingSalesorderStatus::PAID,
     subtotal_amount: 0.0,
     tax_amount: 0.0,
     tip_amount: 0.0,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-04-01T23:54:07.328Z')
+    updated_at: DateTime.iso8601('2023-04-03T11:27:22.128Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -330,22 +330,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAccountingSalesorderRequest.new(
   accounting_salesorder: Models::Shared::AccountingSalesorder.new(
     billing_address: Models::Shared::PropertyAccountingSalesorderBillingAddress.new(
-      address1: '26530 Stroman Rest',
-      address2: 'Suite 801',
-      city: 'Pocatello',
+      address1: '1487 Valley Road',
+      address2: 'Apt. 287',
+      city: 'Lake Angelina',
       country_code: 'US',
-      postal_code: '05015-8546',
-      region: 'Louisiana',
-      region_code: 'MO'
+      postal_code: '85469-3199',
+      region: 'Georgia',
+      region_code: 'MT'
     ),
     category_ids: [],
-    closed_at: DateTime.iso8601('2023-04-01T23:54:07.328Z'),
+    closed_at: DateTime.iso8601('2023-04-03T11:27:22.128Z'),
     created_at: DateTime.iso8601('2022-01-17T16:11:50.310Z'),
     currency: 'USD',
     discount_amount: 0.0,
     fees: [],
     fulfillment_type: Models::Shared::FulfillmentType::OTHER,
-    id: '5b5cad04-45cd-4ddc-ace4-3819df32b267',
+    id: 'aaa718ae-a1a1-4bf8-8548-30af50cd52f2',
     lineitems: [],
     metadata: [],
     order_number: '832663',
@@ -356,19 +356,19 @@ req = Models::Operations::UpdateAccountingSalesorderRequest.new(
     sales_channel: 'Wholesale',
     service_charge_amount: 0.0,
     shipping_address: Models::Shared::PropertyAccountingSalesorderShippingAddress.new(
-      address1: '69878 Bradley Mill',
-      city: 'Port Matildestad',
+      address1: '781 Darrell Coves',
+      city: 'Annabelfield',
       country_code: 'US',
-      postal_code: '07989-2148',
-      region: 'Arkansas',
-      region_code: 'AK'
+      postal_code: '92148-4116',
+      region: 'Virginia',
+      region_code: 'WI'
     ),
     status: Models::Shared::AccountingSalesorderStatus::PAID,
     subtotal_amount: 0.0,
     tax_amount: 0.0,
     tip_amount: 0.0,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-04-01T23:54:07.328Z')
+    updated_at: DateTime.iso8601('2023-04-03T11:27:22.128Z')
   ),
   connection_id: '<id>',
   id: '<id>'

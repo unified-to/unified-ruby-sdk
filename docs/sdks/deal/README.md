@@ -29,33 +29,33 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.deal.create_crm_deal(crm_deal: Models::Shared::CrmDeal.new(
   amount: 98_162.0,
-  closed_at: DateTime.iso8601('2024-03-16T15:27:36.425Z'),
-  closing_at: DateTime.iso8601('2025-09-20T04:11:19.369Z'),
+  closed_at: DateTime.iso8601('2024-03-17T21:08:02.258Z'),
+  closing_at: DateTime.iso8601('2025-09-24T01:52:50.439Z'),
   created_at: DateTime.iso8601('2023-07-04T12:48:48.470Z'),
   currency: 'USD',
-  description: 'Comis tepidus sit cavus crustulum trans tubineus adfectus.',
-  id: 'ed24996c-af4d-4685-9fd8-7d078ae75228',
+  description: 'Trans tubineus adfectus cubo causa suus.',
+  id: '7e58c6db-8ded-4dce-84f3-0aa17a71feac',
   metadata: [
     Models::Shared::CrmMetadata.new(
       extra_data: {
         'display_name' => 'Custom Property',
       },
       format: Models::Shared::CrmMetadataFormat::TEXT,
-      id: '86679808-7b8f-42fc-b659-81f24452bcc5',
+      id: 'a3aae6da-e3d5-418e-b841-3adfea0af678',
       namespace: 'custom',
       slug: 'custom_property',
-      value: 'conatus'
+      value: 'tandem'
     ),
   ],
-  name: 'Stoltenberg - Funk - Luxurious Rubber Chicken',
+  name: 'Orn Inc - Refined Metal Chicken',
   probability: 42.0,
-  source: 'cubo',
+  source: 'conatus',
   tags: [
-    'causa',
-    'suus',
+    'sol',
+    'odit',
   ],
-  updated_at: DateTime.iso8601('2024-10-23T11:20:31.397Z'),
-  won_reason: 'Usque libero soleo.'
+  updated_at: DateTime.iso8601('2024-10-25T18:36:06.690Z'),
+  won_reason: 'Libero soleo cetera unus caterva.'
 ), connection_id: '<id>')
 
 unless res.crm_deal.nil?
@@ -190,33 +190,33 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchCrmDealRequest.new(
   crm_deal: Models::Shared::CrmDeal.new(
     amount: 98_162.0,
-    closed_at: DateTime.iso8601('2024-03-16T15:27:36.428Z'),
-    closing_at: DateTime.iso8601('2025-09-20T04:11:19.377Z'),
+    closed_at: DateTime.iso8601('2024-03-17T21:08:02.262Z'),
+    closing_at: DateTime.iso8601('2025-09-24T01:52:50.452Z'),
     created_at: DateTime.iso8601('2023-07-04T12:48:48.470Z'),
     currency: 'USD',
-    description: 'Comis tepidus sit cavus crustulum trans tubineus adfectus.',
-    id: 'b749f9d8-e2df-4759-95a2-4c8b6ef406a7',
+    description: 'Trans tubineus adfectus cubo causa suus.',
+    id: '2b47b353-0b19-42f2-bbfe-5c03ea620b3d',
     metadata: [
       Models::Shared::CrmMetadata.new(
         extra_data: {
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '8f8e8a79-beaf-4be9-9176-d2bb8bad6c04',
+        id: 'c0b1f4cc-9901-414a-b90b-0a3633368af5',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'conatus'
+        value: 'tandem'
       ),
     ],
-    name: 'Stoltenberg - Funk - Luxurious Rubber Chicken',
+    name: 'Orn Inc - Refined Metal Chicken',
     probability: 42.0,
-    source: 'cubo',
+    source: 'conatus',
     tags: [
-      'causa',
-      'suus',
+      'sol',
+      'odit',
     ],
-    updated_at: DateTime.iso8601('2024-10-23T11:20:31.403Z'),
-    won_reason: 'Usque libero soleo.'
+    updated_at: DateTime.iso8601('2024-10-25T18:36:06.698Z'),
+    won_reason: 'Libero soleo cetera unus caterva.'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -306,33 +306,33 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateCrmDealRequest.new(
   crm_deal: Models::Shared::CrmDeal.new(
     amount: 98_162.0,
-    closed_at: DateTime.iso8601('2024-03-16T15:27:36.428Z'),
-    closing_at: DateTime.iso8601('2025-09-20T04:11:19.377Z'),
+    closed_at: DateTime.iso8601('2024-03-17T21:08:02.262Z'),
+    closing_at: DateTime.iso8601('2025-09-24T01:52:50.452Z'),
     created_at: DateTime.iso8601('2023-07-04T12:48:48.470Z'),
     currency: 'USD',
-    description: 'Comis tepidus sit cavus crustulum trans tubineus adfectus.',
-    id: 'b749f9d8-e2df-4759-95a2-4c8b6ef406a7',
+    description: 'Trans tubineus adfectus cubo causa suus.',
+    id: '2b47b353-0b19-42f2-bbfe-5c03ea620b3d',
     metadata: [
       Models::Shared::CrmMetadata.new(
         extra_data: {
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '8f8e8a79-beaf-4be9-9176-d2bb8bad6c04',
+        id: 'c0b1f4cc-9901-414a-b90b-0a3633368af5',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'conatus'
+        value: 'tandem'
       ),
     ],
-    name: 'Stoltenberg - Funk - Luxurious Rubber Chicken',
+    name: 'Orn Inc - Refined Metal Chicken',
     probability: 42.0,
-    source: 'cubo',
+    source: 'conatus',
     tags: [
-      'causa',
-      'suus',
+      'sol',
+      'odit',
     ],
-    updated_at: DateTime.iso8601('2024-10-23T11:20:31.403Z'),
-    won_reason: 'Usque libero soleo.'
+    updated_at: DateTime.iso8601('2024-10-25T18:36:06.698Z'),
+    won_reason: 'Libero soleo cetera unus caterva.'
   ),
   connection_id: '<id>',
   id: '<id>'

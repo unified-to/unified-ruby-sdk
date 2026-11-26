@@ -54,21 +54,21 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   created_at: DateTime.iso8601('2022-07-03T17:57:07.391Z'),
   currency: 'CAD',
   customer_defined_code: '6170',
-  description: 'Voluptatibus valde spoliatio.',
-  id: 'dfdde34e-7f2d-4418-9369-013a01fe96e4',
+  description: 'Comedo vilitas harum cupiditate animus quo iste.',
+  id: '817dfe59-5f90-4cdd-9c19-bc8124a95e84',
   is_payable: false,
   metadata: [],
-  name: 'Auto Loan Account',
+  name: 'Savings Account',
   status: Models::Shared::Status::ARCHIVED,
   taxonomy: [
     Models::Shared::AccountingAccountTaxonomy.new(
-      original_type: 'vilitas',
+      original_type: 'peccatus',
       type: Models::Shared::AccountingAccountTaxonomyType::SUBGROUP,
-      value: 'comedo'
+      value: 'vesper'
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-14T12:40:17.883Z')
+  updated_at: DateTime.iso8601('2023-08-16T01:01:45.447Z')
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -104,21 +104,21 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   created_at: DateTime.iso8601('2022-07-03T17:57:07.391Z'),
   currency: 'CAD',
   customer_defined_code: '6170',
-  description: 'Voluptatibus valde spoliatio.',
-  id: 'dfdde34e-7f2d-4418-9369-013a01fe96e4',
+  description: 'Comedo vilitas harum cupiditate animus quo iste.',
+  id: '817dfe59-5f90-4cdd-9c19-bc8124a95e84',
   is_payable: false,
   metadata: [],
-  name: 'Auto Loan Account',
+  name: 'Savings Account',
   status: Models::Shared::Status::ARCHIVED,
   taxonomy: [
     Models::Shared::AccountingAccountTaxonomy.new(
-      original_type: 'vilitas',
+      original_type: 'peccatus',
       type: Models::Shared::AccountingAccountTaxonomyType::SUBGROUP,
-      value: 'comedo'
+      value: 'vesper'
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-14T12:40:17.883Z')
+  updated_at: DateTime.iso8601('2023-08-16T01:01:45.447Z')
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -400,6 +400,11 @@ end
 * [get_healthcare_allergy](docs/sdks/allergy/README.md#get_healthcare_allergy) - Retrieve an allergy
 * [list_healthcare_allergies](docs/sdks/allergy/README.md#list_healthcare_allergies) - List all allergies
 
+### [Allergyintolerance](docs/sdks/allergyintolerance/README.md)
+
+* [get_fhir_allergyintolerance](docs/sdks/allergyintolerance/README.md#get_fhir_allergyintolerance) - Read a AllergyIntolerance
+* [list_fhir_allergyintolerances](docs/sdks/allergyintolerance/README.md#list_fhir_allergyintolerances) - Search AllergyIntolerance resources
+
 ### [Analytics](docs/sdks/analytics/README.md)
 
 * [create_analytics_event](docs/sdks/analytics/README.md#create_analytics_event) - Create an event
@@ -442,11 +447,17 @@ end
 
 ### [Appointment](docs/sdks/appointment/README.md)
 
+* [create_dms_appointment](docs/sdks/appointment/README.md#create_dms_appointment) - Create an appointment
 * [create_healthcare_appointment](docs/sdks/appointment/README.md#create_healthcare_appointment) - Create an appointment
+* [get_dms_appointment](docs/sdks/appointment/README.md#get_dms_appointment) - Retrieve an appointment
 * [get_healthcare_appointment](docs/sdks/appointment/README.md#get_healthcare_appointment) - Retrieve an appointment
+* [list_dms_appointments](docs/sdks/appointment/README.md#list_dms_appointments) - List all appointments
 * [list_healthcare_appointments](docs/sdks/appointment/README.md#list_healthcare_appointments) - List all appointments
+* [patch_dms_appointment](docs/sdks/appointment/README.md#patch_dms_appointment) - Update an appointment
 * [patch_healthcare_appointment](docs/sdks/appointment/README.md#patch_healthcare_appointment) - Update an appointment
+* [remove_dms_appointment](docs/sdks/appointment/README.md#remove_dms_appointment) - Remove an appointment
 * [remove_healthcare_appointment](docs/sdks/appointment/README.md#remove_healthcare_appointment) - Remove an appointment
+* [update_dms_appointment](docs/sdks/appointment/README.md#update_dms_appointment) - Update an appointment
 * [update_healthcare_appointment](docs/sdks/appointment/README.md#update_healthcare_appointment) - Update an appointment
 
 ### [Assessment](docs/sdks/assessment/README.md)
@@ -1007,7 +1018,9 @@ end
 
 ### [Condition](docs/sdks/condition/README.md)
 
+* [get_fhir_condition](docs/sdks/condition/README.md#get_fhir_condition) - Read a Condition
 * [get_healthcare_condition](docs/sdks/condition/README.md#get_healthcare_condition) - Retrieve a condition
+* [list_fhir_conditions](docs/sdks/condition/README.md#list_fhir_conditions) - Search Condition resources
 * [list_healthcare_conditions](docs/sdks/condition/README.md#list_healthcare_conditions) - List all conditions
 
 ### [Connection](docs/sdks/connection/README.md)
@@ -1218,6 +1231,50 @@ end
 * [remove_hris_device](docs/sdks/device/README.md#remove_hris_device) - Remove a device
 * [update_hris_device](docs/sdks/device/README.md#update_hris_device) - Update a device
 
+### [Diagnosticreport](docs/sdks/diagnosticreport/README.md)
+
+* [get_fhir_diagnosticreport](docs/sdks/diagnosticreport/README.md#get_fhir_diagnosticreport) - Read a DiagnosticReport
+* [list_fhir_diagnosticreports](docs/sdks/diagnosticreport/README.md#list_fhir_diagnosticreports) - Search DiagnosticReport resources
+
+### [Dms](docs/sdks/dms/README.md)
+
+* [create_dms_appointment](docs/sdks/dms/README.md#create_dms_appointment) - Create an appointment
+* [create_dms_opcode](docs/sdks/dms/README.md#create_dms_opcode) - Create an opcode
+* [create_dms_part](docs/sdks/dms/README.md#create_dms_part) - Create a part
+* [create_dms_partsale](docs/sdks/dms/README.md#create_dms_partsale) - Create a partsale
+* [create_dms_repairorder](docs/sdks/dms/README.md#create_dms_repairorder) - Create a repairorder
+* [create_dms_vehicle](docs/sdks/dms/README.md#create_dms_vehicle) - Create a vehicle
+* [create_dms_vehiclesale](docs/sdks/dms/README.md#create_dms_vehiclesale) - Create a vehiclesale
+* [get_dms_appointment](docs/sdks/dms/README.md#get_dms_appointment) - Retrieve an appointment
+* [get_dms_opcode](docs/sdks/dms/README.md#get_dms_opcode) - Retrieve an opcode
+* [get_dms_part](docs/sdks/dms/README.md#get_dms_part) - Retrieve a part
+* [get_dms_partsale](docs/sdks/dms/README.md#get_dms_partsale) - Retrieve a partsale
+* [get_dms_repairorder](docs/sdks/dms/README.md#get_dms_repairorder) - Retrieve a repairorder
+* [get_dms_vehicle](docs/sdks/dms/README.md#get_dms_vehicle) - Retrieve a vehicle
+* [get_dms_vehiclesale](docs/sdks/dms/README.md#get_dms_vehiclesale) - Retrieve a vehiclesale
+* [list_dms_appointments](docs/sdks/dms/README.md#list_dms_appointments) - List all appointments
+* [list_dms_opcodes](docs/sdks/dms/README.md#list_dms_opcodes) - List all opcodes
+* [list_dms_parts](docs/sdks/dms/README.md#list_dms_parts) - List all parts
+* [list_dms_partsales](docs/sdks/dms/README.md#list_dms_partsales) - List all partsales
+* [list_dms_repairorders](docs/sdks/dms/README.md#list_dms_repairorders) - List all repairorders
+* [list_dms_vehicles](docs/sdks/dms/README.md#list_dms_vehicles) - List all vehicles
+* [list_dms_vehiclesales](docs/sdks/dms/README.md#list_dms_vehiclesales) - List all vehiclesales
+* [patch_dms_appointment](docs/sdks/dms/README.md#patch_dms_appointment) - Update an appointment
+* [patch_dms_opcode](docs/sdks/dms/README.md#patch_dms_opcode) - Update an opcode
+* [patch_dms_part](docs/sdks/dms/README.md#patch_dms_part) - Update a part
+* [patch_dms_partsale](docs/sdks/dms/README.md#patch_dms_partsale) - Update a partsale
+* [patch_dms_repairorder](docs/sdks/dms/README.md#patch_dms_repairorder) - Update a repairorder
+* [patch_dms_vehicle](docs/sdks/dms/README.md#patch_dms_vehicle) - Update a vehicle
+* [patch_dms_vehiclesale](docs/sdks/dms/README.md#patch_dms_vehiclesale) - Update a vehiclesale
+* [remove_dms_appointment](docs/sdks/dms/README.md#remove_dms_appointment) - Remove an appointment
+* [update_dms_appointment](docs/sdks/dms/README.md#update_dms_appointment) - Update an appointment
+* [update_dms_opcode](docs/sdks/dms/README.md#update_dms_opcode) - Update an opcode
+* [update_dms_part](docs/sdks/dms/README.md#update_dms_part) - Update a part
+* [update_dms_partsale](docs/sdks/dms/README.md#update_dms_partsale) - Update a partsale
+* [update_dms_repairorder](docs/sdks/dms/README.md#update_dms_repairorder) - Update a repairorder
+* [update_dms_vehicle](docs/sdks/dms/README.md#update_dms_vehicle) - Update a vehicle
+* [update_dms_vehiclesale](docs/sdks/dms/README.md#update_dms_vehiclesale) - Update a vehiclesale
+
 ### [Document](docs/sdks/document/README.md)
 
 * [create_ats_document](docs/sdks/document/README.md#create_ats_document) - Create a document
@@ -1280,7 +1337,9 @@ end
 
 ### [Encounter](docs/sdks/encounter/README.md)
 
+* [get_fhir_encounter](docs/sdks/encounter/README.md#get_fhir_encounter) - Read a Encounter
 * [get_healthcare_encounter](docs/sdks/encounter/README.md#get_healthcare_encounter) - Retrieve an encounter
+* [list_fhir_encounters](docs/sdks/encounter/README.md#list_fhir_encounters) - Search Encounter resources
 * [list_healthcare_encounters](docs/sdks/encounter/README.md#list_healthcare_encounters) - List all encounters
 
 ### [Enrich](docs/sdks/enrich/README.md)
@@ -1368,10 +1427,35 @@ end
 * [get_performance_feedback](docs/sdks/feedback/README.md#get_performance_feedback) - Retrieve a feedback
 * [list_performance_feedbacks](docs/sdks/feedback/README.md#list_performance_feedbacks) - List all feedbacks
 
+### [Fhir](docs/sdks/fhir/README.md)
+
+* [get_fhir_allergyintolerance](docs/sdks/fhir/README.md#get_fhir_allergyintolerance) - Read a AllergyIntolerance
+* [get_fhir_condition](docs/sdks/fhir/README.md#get_fhir_condition) - Read a Condition
+* [get_fhir_diagnosticreport](docs/sdks/fhir/README.md#get_fhir_diagnosticreport) - Read a DiagnosticReport
+* [get_fhir_encounter](docs/sdks/fhir/README.md#get_fhir_encounter) - Read a Encounter
+* [get_fhir_immunization](docs/sdks/fhir/README.md#get_fhir_immunization) - Read a Immunization
+* [get_fhir_medicationrequest](docs/sdks/fhir/README.md#get_fhir_medicationrequest) - Read a MedicationRequest
+* [get_fhir_observation](docs/sdks/fhir/README.md#get_fhir_observation) - Read a Observation
+* [get_fhir_patient](docs/sdks/fhir/README.md#get_fhir_patient) - Read a Patient
+* [get_fhir_practitioner](docs/sdks/fhir/README.md#get_fhir_practitioner) - Read a Practitioner
+* [list_fhir_allergyintolerances](docs/sdks/fhir/README.md#list_fhir_allergyintolerances) - Search AllergyIntolerance resources
+* [list_fhir_conditions](docs/sdks/fhir/README.md#list_fhir_conditions) - Search Condition resources
+* [list_fhir_diagnosticreports](docs/sdks/fhir/README.md#list_fhir_diagnosticreports) - Search DiagnosticReport resources
+* [list_fhir_encounters](docs/sdks/fhir/README.md#list_fhir_encounters) - Search Encounter resources
+* [list_fhir_immunizations](docs/sdks/fhir/README.md#list_fhir_immunizations) - Search Immunization resources
+* [list_fhir_medicationrequests](docs/sdks/fhir/README.md#list_fhir_medicationrequests) - Search MedicationRequest resources
+* [list_fhir_metadatas](docs/sdks/fhir/README.md#list_fhir_metadatas) - Get the CapabilityStatement
+* [list_fhir_observations](docs/sdks/fhir/README.md#list_fhir_observations) - Search Observation resources
+* [list_fhir_patients](docs/sdks/fhir/README.md#list_fhir_patients) - Search Patient resources
+* [list_fhir_practitioners](docs/sdks/fhir/README.md#list_fhir_practitioners) - Search Practitioner resources
+
 ### [File](docs/sdks/file/README.md)
 
+* [create_printing_file](docs/sdks/file/README.md#create_printing_file) - Create a file
 * [create_storage_file](docs/sdks/file/README.md#create_storage_file) - Create a file
+* [get_printing_file](docs/sdks/file/README.md#get_printing_file) - Retrieve a file
 * [get_storage_file](docs/sdks/file/README.md#get_storage_file) - Retrieve a file
+* [list_printing_files](docs/sdks/file/README.md#list_printing_files) - List all files
 * [list_storage_files](docs/sdks/file/README.md#list_storage_files) - List all files
 * [patch_storage_file](docs/sdks/file/README.md#patch_storage_file) - Update a file
 * [remove_storage_file](docs/sdks/file/README.md#remove_storage_file) - Remove a file
@@ -1632,7 +1716,9 @@ end
 
 ### [Immunization](docs/sdks/immunization/README.md)
 
+* [get_fhir_immunization](docs/sdks/immunization/README.md#get_fhir_immunization) - Read a Immunization
 * [get_healthcare_immunization](docs/sdks/immunization/README.md#get_healthcare_immunization) - Retrieve an immunization
+* [list_fhir_immunizations](docs/sdks/immunization/README.md#list_fhir_immunizations) - Search Immunization resources
 * [list_healthcare_immunizations](docs/sdks/immunization/README.md#list_healthcare_immunizations) - List all immunizations
 
 ### [Insertionorder](docs/sdks/insertionorder/README.md)
@@ -1976,6 +2062,11 @@ end
 * [get_healthcare_medication](docs/sdks/medication/README.md#get_healthcare_medication) - Retrieve a medication
 * [list_healthcare_medications](docs/sdks/medication/README.md#list_healthcare_medications) - List all medications
 
+### [Medicationrequest](docs/sdks/medicationrequest/README.md)
+
+* [get_fhir_medicationrequest](docs/sdks/medicationrequest/README.md#get_fhir_medicationrequest) - Read a MedicationRequest
+* [list_fhir_medicationrequests](docs/sdks/medicationrequest/README.md#list_fhir_medicationrequests) - Search MedicationRequest resources
+
 ### [Member](docs/sdks/member/README.md)
 
 * [create_martech_member](docs/sdks/member/README.md#create_martech_member) - Create a member
@@ -2026,6 +2117,7 @@ end
 
 * [create_metadata_metadata](docs/sdks/metadata/README.md#create_metadata_metadata) - Create a metadata
 * [get_metadata_metadata](docs/sdks/metadata/README.md#get_metadata_metadata) - Retrieve a metadata
+* [list_fhir_metadatas](docs/sdks/metadata/README.md#list_fhir_metadatas) - Get the CapabilityStatement
 * [list_metadata_metadatas](docs/sdks/metadata/README.md#list_metadata_metadatas) - List all metadatas
 * [patch_metadata_metadata](docs/sdks/metadata/README.md#patch_metadata_metadata) - Update a metadata
 * [remove_metadata_metadata](docs/sdks/metadata/README.md#remove_metadata_metadata) - Remove a metadata
@@ -2052,21 +2144,37 @@ end
 ### [Observation](docs/sdks/observation/README.md)
 
 * [create_healthcare_observation](docs/sdks/observation/README.md#create_healthcare_observation) - Create an observation
+* [get_fhir_observation](docs/sdks/observation/README.md#get_fhir_observation) - Read a Observation
 * [get_healthcare_observation](docs/sdks/observation/README.md#get_healthcare_observation) - Retrieve an observation
+* [list_fhir_observations](docs/sdks/observation/README.md#list_fhir_observations) - Search Observation resources
 * [list_healthcare_observations](docs/sdks/observation/README.md#list_healthcare_observations) - List all observations
+
+### [Opcode](docs/sdks/opcode/README.md)
+
+* [create_dms_opcode](docs/sdks/opcode/README.md#create_dms_opcode) - Create an opcode
+* [get_dms_opcode](docs/sdks/opcode/README.md#get_dms_opcode) - Retrieve an opcode
+* [list_dms_opcodes](docs/sdks/opcode/README.md#list_dms_opcodes) - List all opcodes
+* [patch_dms_opcode](docs/sdks/opcode/README.md#patch_dms_opcode) - Update an opcode
+* [update_dms_opcode](docs/sdks/opcode/README.md#update_dms_opcode) - Update an opcode
 
 ### [Order](docs/sdks/order/README.md)
 
 * [~~create_accounting_order~~](docs/sdks/order/README.md#create_accounting_order) - Create an order :warning: **Deprecated**
 * [create_assessment_order](docs/sdks/order/README.md#create_assessment_order) - Create an order
+* [create_printing_order](docs/sdks/order/README.md#create_printing_order) - Create an order
 * [~~get_accounting_order~~](docs/sdks/order/README.md#get_accounting_order) - Retrieve an order :warning: **Deprecated**
 * [get_assessment_order](docs/sdks/order/README.md#get_assessment_order) - Retrieve an order
+* [get_printing_order](docs/sdks/order/README.md#get_printing_order) - Retrieve an order
 * [~~list_accounting_orders~~](docs/sdks/order/README.md#list_accounting_orders) - List all orders :warning: **Deprecated**
+* [list_printing_orders](docs/sdks/order/README.md#list_printing_orders) - List all orders
 * [~~patch_accounting_order~~](docs/sdks/order/README.md#patch_accounting_order) - Update an order :warning: **Deprecated**
 * [patch_assessment_order](docs/sdks/order/README.md#patch_assessment_order) - Update an order
+* [patch_printing_order](docs/sdks/order/README.md#patch_printing_order) - Update an order
 * [~~remove_accounting_order~~](docs/sdks/order/README.md#remove_accounting_order) - Remove an order :warning: **Deprecated**
+* [remove_printing_order](docs/sdks/order/README.md#remove_printing_order) - Remove an order
 * [~~update_accounting_order~~](docs/sdks/order/README.md#update_accounting_order) - Update an order :warning: **Deprecated**
 * [update_assessment_order](docs/sdks/order/README.md#update_assessment_order) - Update an order
+* [update_printing_order](docs/sdks/order/README.md#update_printing_order) - Update an order
 
 ### [Organization](docs/sdks/organization/README.md)
 
@@ -2113,12 +2221,25 @@ end
 
 ### [Part](docs/sdks/part/README.md)
 
+* [create_dms_part](docs/sdks/part/README.md#create_dms_part) - Create a part
 * [create_plm_part](docs/sdks/part/README.md#create_plm_part) - Create a part
+* [get_dms_part](docs/sdks/part/README.md#get_dms_part) - Retrieve a part
 * [get_plm_part](docs/sdks/part/README.md#get_plm_part) - Retrieve a part
+* [list_dms_parts](docs/sdks/part/README.md#list_dms_parts) - List all parts
 * [list_plm_parts](docs/sdks/part/README.md#list_plm_parts) - List all parts
+* [patch_dms_part](docs/sdks/part/README.md#patch_dms_part) - Update a part
 * [patch_plm_part](docs/sdks/part/README.md#patch_plm_part) - Update a part
 * [remove_plm_part](docs/sdks/part/README.md#remove_plm_part) - Remove a part
+* [update_dms_part](docs/sdks/part/README.md#update_dms_part) - Update a part
 * [update_plm_part](docs/sdks/part/README.md#update_plm_part) - Update a part
+
+### [Partsale](docs/sdks/partsale/README.md)
+
+* [create_dms_partsale](docs/sdks/partsale/README.md#create_dms_partsale) - Create a partsale
+* [get_dms_partsale](docs/sdks/partsale/README.md#get_dms_partsale) - Retrieve a partsale
+* [list_dms_partsales](docs/sdks/partsale/README.md#list_dms_partsales) - List all partsales
+* [patch_dms_partsale](docs/sdks/partsale/README.md#patch_dms_partsale) - Update a partsale
+* [update_dms_partsale](docs/sdks/partsale/README.md#update_dms_partsale) - Update a partsale
 
 ### [Passthrough](docs/sdks/passthrough/README.md)
 
@@ -2134,7 +2255,9 @@ end
 ### [Patient](docs/sdks/patient/README.md)
 
 * [create_healthcare_patient](docs/sdks/patient/README.md#create_healthcare_patient) - Create a patient
+* [get_fhir_patient](docs/sdks/patient/README.md#get_fhir_patient) - Read a Patient
 * [get_healthcare_patient](docs/sdks/patient/README.md#get_healthcare_patient) - Retrieve a patient
+* [list_fhir_patients](docs/sdks/patient/README.md#list_fhir_patients) - Search Patient resources
 * [list_healthcare_patients](docs/sdks/patient/README.md#list_healthcare_patients) - List all patients
 * [patch_healthcare_patient](docs/sdks/patient/README.md#patch_healthcare_patient) - Update a patient
 * [update_healthcare_patient](docs/sdks/patient/README.md#update_healthcare_patient) - Update a patient
@@ -2269,13 +2392,37 @@ end
 
 ### [Practitioner](docs/sdks/practitioner/README.md)
 
+* [get_fhir_practitioner](docs/sdks/practitioner/README.md#get_fhir_practitioner) - Read a Practitioner
 * [get_healthcare_practitioner](docs/sdks/practitioner/README.md#get_healthcare_practitioner) - Retrieve a practitioner
+* [list_fhir_practitioners](docs/sdks/practitioner/README.md#list_fhir_practitioners) - Search Practitioner resources
 * [list_healthcare_practitioners](docs/sdks/practitioner/README.md#list_healthcare_practitioners) - List all practitioners
+
+### [Printing](docs/sdks/printing/README.md)
+
+* [create_printing_file](docs/sdks/printing/README.md#create_printing_file) - Create a file
+* [create_printing_order](docs/sdks/printing/README.md#create_printing_order) - Create an order
+* [create_printing_quote](docs/sdks/printing/README.md#create_printing_quote) - Create a quote
+* [get_printing_file](docs/sdks/printing/README.md#get_printing_file) - Retrieve a file
+* [get_printing_order](docs/sdks/printing/README.md#get_printing_order) - Retrieve an order
+* [get_printing_product](docs/sdks/printing/README.md#get_printing_product) - Retrieve a product
+* [get_printing_template](docs/sdks/printing/README.md#get_printing_template) - Retrieve a template
+* [list_printing_files](docs/sdks/printing/README.md#list_printing_files) - List all files
+* [list_printing_orders](docs/sdks/printing/README.md#list_printing_orders) - List all orders
+* [list_printing_products](docs/sdks/printing/README.md#list_printing_products) - List all products
+* [list_printing_templates](docs/sdks/printing/README.md#list_printing_templates) - List all templates
+* [patch_printing_order](docs/sdks/printing/README.md#patch_printing_order) - Update an order
+* [remove_printing_order](docs/sdks/printing/README.md#remove_printing_order) - Remove an order
+* [update_printing_order](docs/sdks/printing/README.md#update_printing_order) - Update an order
 
 ### [Procedure](docs/sdks/procedure/README.md)
 
 * [get_healthcare_procedure](docs/sdks/procedure/README.md#get_healthcare_procedure) - Retrieve a procedure
 * [list_healthcare_procedures](docs/sdks/procedure/README.md#list_healthcare_procedures) - List all procedures
+
+### [Product](docs/sdks/product/README.md)
+
+* [get_printing_product](docs/sdks/product/README.md#get_printing_product) - Retrieve a product
+* [list_printing_products](docs/sdks/product/README.md#list_printing_products) - List all products
 
 ### [Profile](docs/sdks/profile/README.md)
 
@@ -2408,6 +2555,7 @@ end
 ### [Quote](docs/sdks/quote/README.md)
 
 * [create_accounting_quote](docs/sdks/quote/README.md#create_accounting_quote) - Create a quote
+* [create_printing_quote](docs/sdks/quote/README.md#create_printing_quote) - Create a quote
 * [create_property_quote](docs/sdks/quote/README.md#create_property_quote) - Create a quote
 * [get_accounting_quote](docs/sdks/quote/README.md#get_accounting_quote) - Retrieve a quote
 * [list_accounting_quotes](docs/sdks/quote/README.md#list_accounting_quotes) - List all quotes
@@ -2448,6 +2596,14 @@ end
 
 * [get_compute_region](docs/sdks/region/README.md#get_compute_region) - Retrieve a region
 * [list_compute_regions](docs/sdks/region/README.md#list_compute_regions) - List all regions
+
+### [Repairorder](docs/sdks/repairorder/README.md)
+
+* [create_dms_repairorder](docs/sdks/repairorder/README.md#create_dms_repairorder) - Create a repairorder
+* [get_dms_repairorder](docs/sdks/repairorder/README.md#get_dms_repairorder) - Retrieve a repairorder
+* [list_dms_repairorders](docs/sdks/repairorder/README.md#list_dms_repairorders) - List all repairorders
+* [patch_dms_repairorder](docs/sdks/repairorder/README.md#patch_dms_repairorder) - Update a repairorder
+* [update_dms_repairorder](docs/sdks/repairorder/README.md#update_dms_repairorder) - Update a repairorder
 
 ### [Repo](docs/sdks/repo/README.md)
 
@@ -2869,8 +3025,10 @@ end
 
 * [create_compute_template](docs/sdks/template/README.md#create_compute_template) - Create a template
 * [get_compute_template](docs/sdks/template/README.md#get_compute_template) - Retrieve a template
+* [get_printing_template](docs/sdks/template/README.md#get_printing_template) - Retrieve a template
 * [get_signing_template](docs/sdks/template/README.md#get_signing_template) - Retrieve a template
 * [list_compute_templates](docs/sdks/template/README.md#list_compute_templates) - List all templates
+* [list_printing_templates](docs/sdks/template/README.md#list_printing_templates) - List all templates
 * [list_signing_templates](docs/sdks/template/README.md#list_signing_templates) - List all templates
 * [patch_compute_template](docs/sdks/template/README.md#patch_compute_template) - Update a template
 * [remove_compute_template](docs/sdks/template/README.md#remove_compute_template) - Remove a template
@@ -3055,6 +3213,22 @@ end
 * [remove_scim_users](docs/sdks/user/README.md#remove_scim_users) - Delete user
 * [update_scim_users](docs/sdks/user/README.md#update_scim_users) - Update user
 
+### [Vehicle](docs/sdks/vehicle/README.md)
+
+* [create_dms_vehicle](docs/sdks/vehicle/README.md#create_dms_vehicle) - Create a vehicle
+* [get_dms_vehicle](docs/sdks/vehicle/README.md#get_dms_vehicle) - Retrieve a vehicle
+* [list_dms_vehicles](docs/sdks/vehicle/README.md#list_dms_vehicles) - List all vehicles
+* [patch_dms_vehicle](docs/sdks/vehicle/README.md#patch_dms_vehicle) - Update a vehicle
+* [update_dms_vehicle](docs/sdks/vehicle/README.md#update_dms_vehicle) - Update a vehicle
+
+### [Vehiclesale](docs/sdks/vehiclesale/README.md)
+
+* [create_dms_vehiclesale](docs/sdks/vehiclesale/README.md#create_dms_vehiclesale) - Create a vehiclesale
+* [get_dms_vehiclesale](docs/sdks/vehiclesale/README.md#get_dms_vehiclesale) - Retrieve a vehiclesale
+* [list_dms_vehiclesales](docs/sdks/vehiclesale/README.md#list_dms_vehiclesales) - List all vehiclesales
+* [patch_dms_vehiclesale](docs/sdks/vehiclesale/README.md#patch_dms_vehiclesale) - Update a vehiclesale
+* [update_dms_vehiclesale](docs/sdks/vehiclesale/README.md#update_dms_vehiclesale) - Update a vehiclesale
+
 ### [Vendorcredit](docs/sdks/vendorcredit/README.md)
 
 * [create_accounting_vendorcredit](docs/sdks/vendorcredit/README.md#create_accounting_vendorcredit) - Create a vendorcredit
@@ -3165,21 +3339,21 @@ begin
       created_at: DateTime.iso8601('2022-07-03T17:57:07.391Z'),
       currency: 'CAD',
       customer_defined_code: '6170',
-      description: 'Voluptatibus valde spoliatio.',
-      id: 'dfdde34e-7f2d-4418-9369-013a01fe96e4',
+      description: 'Comedo vilitas harum cupiditate animus quo iste.',
+      id: '817dfe59-5f90-4cdd-9c19-bc8124a95e84',
       is_payable: false,
       metadata: [],
-      name: 'Auto Loan Account',
+      name: 'Savings Account',
       status: Models::Shared::Status::ARCHIVED,
       taxonomy: [
         Models::Shared::AccountingAccountTaxonomy.new(
-          original_type: 'vilitas',
+          original_type: 'peccatus',
           type: Models::Shared::AccountingAccountTaxonomyType::SUBGROUP,
-          value: 'comedo'
+          value: 'vesper'
         ),
       ],
       type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-      updated_at: DateTime.iso8601('2023-08-14T12:40:17.883Z')
+      updated_at: DateTime.iso8601('2023-08-16T01:01:45.447Z')
     ), connection_id: '<id>')
 
     unless res.accounting_account.nil?
@@ -3223,21 +3397,21 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   created_at: DateTime.iso8601('2022-07-03T17:57:07.391Z'),
   currency: 'CAD',
   customer_defined_code: '6170',
-  description: 'Voluptatibus valde spoliatio.',
-  id: 'dfdde34e-7f2d-4418-9369-013a01fe96e4',
+  description: 'Comedo vilitas harum cupiditate animus quo iste.',
+  id: '817dfe59-5f90-4cdd-9c19-bc8124a95e84',
   is_payable: false,
   metadata: [],
-  name: 'Auto Loan Account',
+  name: 'Savings Account',
   status: Models::Shared::Status::ARCHIVED,
   taxonomy: [
     Models::Shared::AccountingAccountTaxonomy.new(
-      original_type: 'vilitas',
+      original_type: 'peccatus',
       type: Models::Shared::AccountingAccountTaxonomyType::SUBGROUP,
-      value: 'comedo'
+      value: 'vesper'
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-14T12:40:17.883Z')
+  updated_at: DateTime.iso8601('2023-08-16T01:01:45.447Z')
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -3264,21 +3438,21 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   created_at: DateTime.iso8601('2022-07-03T17:57:07.391Z'),
   currency: 'CAD',
   customer_defined_code: '6170',
-  description: 'Voluptatibus valde spoliatio.',
-  id: 'dfdde34e-7f2d-4418-9369-013a01fe96e4',
+  description: 'Comedo vilitas harum cupiditate animus quo iste.',
+  id: '817dfe59-5f90-4cdd-9c19-bc8124a95e84',
   is_payable: false,
   metadata: [],
-  name: 'Auto Loan Account',
+  name: 'Savings Account',
   status: Models::Shared::Status::ARCHIVED,
   taxonomy: [
     Models::Shared::AccountingAccountTaxonomy.new(
-      original_type: 'vilitas',
+      original_type: 'peccatus',
       type: Models::Shared::AccountingAccountTaxonomyType::SUBGROUP,
-      value: 'comedo'
+      value: 'vesper'
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-14T12:40:17.883Z')
+  updated_at: DateTime.iso8601('2023-08-16T01:01:45.447Z')
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?

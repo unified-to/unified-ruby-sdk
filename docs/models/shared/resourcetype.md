@@ -1,11 +1,13 @@
 # ResourceType
 
+Always AllergyIntolerance
+
 ## Example Usage
 
 ```ruby
 require "unified_ruby_sdk"
 
-value = ResourceType::USER
+value = ResourceType::PATIENT
 
 # Open enum: use .deserialize() to create instances from custom string values
 custom = ResourceType.deserialize("custom_value")
@@ -14,7 +16,17 @@ custom = ResourceType.deserialize("custom_value")
 
 ## Values
 
-| Name    | Value   |
-| ------- | ------- |
-| `USER`  | User    |
-| `GROUP` | Group   |
+| Name                   | Value                  |
+| ---------------------- | ---------------------- |
+| `PATIENT`              | Patient                |
+| `PRACTITIONER`         | Practitioner           |
+| `ENCOUNTER`            | Encounter              |
+| `OBSERVATION`          | Observation            |
+| `CONDITION`            | Condition              |
+| `ALLERGY_INTOLERANCE`  | AllergyIntolerance     |
+| `MEDICATION_REQUEST`   | MedicationRequest      |
+| `IMMUNIZATION`         | Immunization           |
+| `BUNDLE`               | Bundle                 |
+| `OPERATION_OUTCOME`    | OperationOutcome       |
+| `CAPABILITY_STATEMENT` | CapabilityStatement    |
+| `DIAGNOSTIC_REPORT`    | DiagnosticReport       |

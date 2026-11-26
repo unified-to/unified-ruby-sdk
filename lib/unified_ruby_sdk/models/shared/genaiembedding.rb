@@ -19,7 +19,7 @@ module UnifiedRubySDK
         # JSON string based off of the format
         field :embeddings, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('embeddings') } }
 
-        field :enconding_format, Crystalline::Nilable.new(Models::Shared::EncondingFormat), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('enconding_format'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::EncondingFormat, true) } }
+        field :encoding_format, Crystalline::Nilable.new(Models::Shared::EncodingFormat), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('encoding_format'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::EncodingFormat, true) } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
@@ -33,12 +33,12 @@ module UnifiedRubySDK
         # 'SEARCH_DOC' | 'SEARCH_QUERY' | 'CLUSTERING' | 'CLASSIFICATION';
         field :type, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
 
-        sig { params(content: T.nilable(T::Array[Models::Shared::GenaiEmbeddingContent]), dimension: T.nilable(::Float), embeddings: T.nilable(::String), enconding_format: T.nilable(Models::Shared::EncondingFormat), id: T.nilable(::String), max_tokens: T.nilable(::Float), model_id: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), tokens_used: T.nilable(::Float), type: T.nilable(::String)).void }
-        def initialize(content: nil, dimension: nil, embeddings: nil, enconding_format: nil, id: nil, max_tokens: nil, model_id: nil, raw: nil, tokens_used: nil, type: nil)
+        sig { params(content: T.nilable(T::Array[Models::Shared::GenaiEmbeddingContent]), dimension: T.nilable(::Float), embeddings: T.nilable(::String), encoding_format: T.nilable(Models::Shared::EncodingFormat), id: T.nilable(::String), max_tokens: T.nilable(::Float), model_id: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), tokens_used: T.nilable(::Float), type: T.nilable(::String)).void }
+        def initialize(content: nil, dimension: nil, embeddings: nil, encoding_format: nil, id: nil, max_tokens: nil, model_id: nil, raw: nil, tokens_used: nil, type: nil)
           @content = content
           @dimension = dimension
           @embeddings = embeddings
-          @enconding_format = enconding_format
+          @encoding_format = encoding_format
           @id = id
           @max_tokens = max_tokens
           @model_id = model_id
@@ -53,7 +53,7 @@ module UnifiedRubySDK
           return false unless @content == other.content
           return false unless @dimension == other.dimension
           return false unless @embeddings == other.embeddings
-          return false unless @enconding_format == other.enconding_format
+          return false unless @encoding_format == other.encoding_format
           return false unless @id == other.id
           return false unless @max_tokens == other.max_tokens
           return false unless @model_id == other.model_id

@@ -4,12 +4,72 @@
 
 ### Available Operations
 
+* [create_printing_file](#create_printing_file) - Create a file
 * [create_storage_file](#create_storage_file) - Create a file
+* [get_printing_file](#get_printing_file) - Retrieve a file
 * [get_storage_file](#get_storage_file) - Retrieve a file
+* [list_printing_files](#list_printing_files) - List all files
 * [list_storage_files](#list_storage_files) - List all files
 * [patch_storage_file](#patch_storage_file) - Update a file
 * [remove_storage_file](#remove_storage_file) - Remove a file
 * [update_storage_file](#update_storage_file) - Update a file
+
+## create_printing_file
+
+Creates a PrintingFile. Provide the unified PrintingFile fields in the request body; they are mapped to the provider's API. Returns the created PrintingFile.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="createPrintingFile" method="post" path="/printing/{connection_id}/file" example="printing_file" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.file.create_printing_file(printing_file: Models::Shared::PrintingFile.new(
+  created_at: DateTime.iso8601('2020-10-22T04:25:39.825Z'),
+  dpi: 300.0,
+  height: 5400.0,
+  id: 'f2fed9df-bae1-4644-af02-dad06c114d0a',
+  metadata: [],
+  mime_type: 'image/jpeg',
+  name: 'blond-ecliptic.jpg',
+  preview_url: 'https://picsum.photos/seed/aATvhmNA/400/400',
+  size: 1_956_654.0,
+  status: Models::Shared::PrintingFileStatus::READY,
+  updated_at: DateTime.iso8601('2020-10-22T04:25:39.825Z'),
+  url: 'https://picsum.photos/seed/XBj97B/2783/172',
+  width: 4500.0
+), connection_id: '<id>')
+
+unless res.printing_file.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `printing_file`                                                                                                                                  | [Models::Shared::PrintingFile](../../models/shared/printingfile.md)                                                                              | :heavy_check_mark:                                                                                                                               | An artwork or print file in the print vendor file library                                                                                        |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreatePrintingFileQueryParamFields](../../models/operations/createprintingfilequeryparamfields.md)>                | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::CreatePrintingFileResponse)](../../models/operations/createprintingfileresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_storage_file
 
@@ -29,21 +89,21 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.file.create_storage_file(storage_file: Models::Shared::StorageFile.new(
   created_at: DateTime.iso8601('2021-09-12T16:48:23.774Z'),
-  description: 'Deprimo crastinus cupiditate debilito cimentarius virgo acidus.',
-  download_url: 'https://clueless-laughter.biz',
-  hash: 'd9d88dda7bc0acaa8472fdef2307f94a1fc355ce',
-  id: 'e1179942-87d2-4c59-ba51-b26c2e5353fa',
+  description: 'Debilito cimentarius virgo acidus thymbra.',
+  download_url: 'https://messy-clamp.net/',
+  hash: '9d88dda7bc0acaa8472fdef2307f94a1fc355cef',
+  id: '5e13b476-c6b0-4f78-ac2c-0e9aa73e1916',
   metadata: [],
   mime_type: 'application/pdf',
-  name: 'softly.pdf',
+  name: 'joshingly.pdf',
   size: 1_134_456.0,
   tags: [
-    'suasoria',
+    'derelinquo',
   ],
   type: Models::Shared::StorageFileType::FOLDER,
-  updated_at: DateTime.iso8601('2023-02-13T18:15:31.023Z'),
+  updated_at: DateTime.iso8601('2023-02-15T09:27:00.888Z'),
   version: '1',
-  web_url: 'https://faraway-inspection.org'
+  web_url: 'https://likable-widow.org/'
 ), connection_id: '<id>')
 
 unless res.storage_file.nil?
@@ -64,6 +124,49 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::CreateStorageFileResponse)](../../models/operations/createstoragefileresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## get_printing_file
+
+Retrieves a single PrintingFile by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getPrintingFile" method="get" path="/printing/{connection_id}/file/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.file.get_printing_file(connection_id: '<id>', id: '<id>')
+
+unless res.printing_file.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the File                                                                                                                                   |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetPrintingFileQueryParamFields](../../models/operations/getprintingfilequeryparamfields.md)>                      | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetPrintingFileResponse)](../../models/operations/getprintingfileresponse.md)**
 
 ### Errors
 
@@ -107,6 +210,50 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::GetStorageFileResponse)](../../models/operations/getstoragefileresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## list_printing_files
+
+Returns a list of PrintingFiles. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listPrintingFiles" method="get" path="/printing/{connection_id}/file" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+
+req = Models::Operations::ListPrintingFilesRequest.new(
+  connection_id: '<id>'
+)
+res = s.file.list_printing_files(request: req)
+
+unless res.printing_files.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [Models::Operations::ListPrintingFilesRequest](../../models/operations/listprintingfilesrequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+
+### Response
+
+**[T.nilable(Models::Operations::ListPrintingFilesResponse)](../../models/operations/listprintingfilesresponse.md)**
 
 ### Errors
 
@@ -178,21 +325,21 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchStorageFileRequest.new(
   storage_file: Models::Shared::StorageFile.new(
     created_at: DateTime.iso8601('2021-09-12T16:48:23.774Z'),
-    description: 'Deprimo crastinus cupiditate debilito cimentarius virgo acidus.',
-    download_url: 'https://clueless-laughter.biz',
-    hash: 'd9d88dda7bc0acaa8472fdef2307f94a1fc355ce',
-    id: '92de4971-76be-46be-aef5-4a30732ccfc3',
+    description: 'Debilito cimentarius virgo acidus thymbra.',
+    download_url: 'https://messy-clamp.net/',
+    hash: '9d88dda7bc0acaa8472fdef2307f94a1fc355cef',
+    id: '06982bc3-97e7-48f0-ae54-c361838b7c85',
     metadata: [],
     mime_type: 'application/pdf',
-    name: 'softly.pdf',
+    name: 'joshingly.pdf',
     size: 1_134_456.0,
     tags: [
-      'suasoria',
+      'derelinquo',
     ],
     type: Models::Shared::StorageFileType::FOLDER,
-    updated_at: DateTime.iso8601('2023-02-13T18:15:31.026Z'),
+    updated_at: DateTime.iso8601('2023-02-15T09:27:00.896Z'),
     version: '1',
-    web_url: 'https://faraway-inspection.org'
+    web_url: 'https://likable-widow.org/'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -282,21 +429,21 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateStorageFileRequest.new(
   storage_file: Models::Shared::StorageFile.new(
     created_at: DateTime.iso8601('2021-09-12T16:48:23.774Z'),
-    description: 'Deprimo crastinus cupiditate debilito cimentarius virgo acidus.',
-    download_url: 'https://clueless-laughter.biz',
-    hash: 'd9d88dda7bc0acaa8472fdef2307f94a1fc355ce',
-    id: '92de4971-76be-46be-aef5-4a30732ccfc3',
+    description: 'Debilito cimentarius virgo acidus thymbra.',
+    download_url: 'https://messy-clamp.net/',
+    hash: '9d88dda7bc0acaa8472fdef2307f94a1fc355cef',
+    id: '06982bc3-97e7-48f0-ae54-c361838b7c85',
     metadata: [],
     mime_type: 'application/pdf',
-    name: 'softly.pdf',
+    name: 'joshingly.pdf',
     size: 1_134_456.0,
     tags: [
-      'suasoria',
+      'derelinquo',
     ],
     type: Models::Shared::StorageFileType::FOLDER,
-    updated_at: DateTime.iso8601('2023-02-13T18:15:31.026Z'),
+    updated_at: DateTime.iso8601('2023-02-15T09:27:00.896Z'),
     version: '1',
-    web_url: 'https://faraway-inspection.org'
+    web_url: 'https://likable-widow.org/'
   ),
   connection_id: '<id>',
   id: '<id>'

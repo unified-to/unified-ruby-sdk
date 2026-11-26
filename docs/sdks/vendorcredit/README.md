@@ -32,14 +32,14 @@ res = s.vendorcredit.create_accounting_vendorcredit(accounting_vendorcredit: Mod
   balance_amount: 0.0,
   created_at: DateTime.iso8601('2023-04-15T21:14:08.197Z'),
   currency: 'USD',
-  id: 'c9c37ece-f6a9-4e11-ace9-05234e4c1f28',
+  id: '5a175945-3e0f-4c7b-af69-158814af6816',
   lineitems: [],
   metadata: [],
-  notes: 'Volup conatus cruciamentum decor avaritia.',
+  notes: 'Avaritia tantum campana comitatus atrox.',
   posted_at: DateTime.iso8601('2023-04-15T21:14:08.197Z'),
   status: Models::Shared::AccountingVendorcreditStatus::AUTHORIZED,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2023-10-07T01:06:33.972Z')
+  updated_at: DateTime.iso8601('2023-10-07T20:03:55.210Z')
 ), connection_id: '<id>')
 
 unless res.accounting_vendorcredit.nil?
@@ -177,14 +177,14 @@ req = Models::Operations::PatchAccountingVendorcreditRequest.new(
     balance_amount: 0.0,
     created_at: DateTime.iso8601('2023-04-15T21:14:08.197Z'),
     currency: 'USD',
-    id: 'acdb5be7-9780-4143-83b1-3229cf4e9eaf',
+    id: 'a5a6fb31-8c07-4aab-8d58-afb053c2fce7',
     lineitems: [],
     metadata: [],
-    notes: 'Volup conatus cruciamentum decor avaritia.',
+    notes: 'Avaritia tantum campana comitatus atrox.',
     posted_at: DateTime.iso8601('2023-04-15T21:14:08.197Z'),
     status: Models::Shared::AccountingVendorcreditStatus::AUTHORIZED,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-10-07T01:06:33.976Z')
+    updated_at: DateTime.iso8601('2023-10-07T20:03:55.214Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -277,14 +277,14 @@ req = Models::Operations::UpdateAccountingVendorcreditRequest.new(
     balance_amount: 0.0,
     created_at: DateTime.iso8601('2023-04-15T21:14:08.197Z'),
     currency: 'USD',
-    id: 'acdb5be7-9780-4143-83b1-3229cf4e9eaf',
+    id: 'a5a6fb31-8c07-4aab-8d58-afb053c2fce7',
     lineitems: [],
     metadata: [],
-    notes: 'Volup conatus cruciamentum decor avaritia.',
+    notes: 'Avaritia tantum campana comitatus atrox.',
     posted_at: DateTime.iso8601('2023-04-15T21:14:08.197Z'),
     status: Models::Shared::AccountingVendorcreditStatus::AUTHORIZED,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-10-07T01:06:33.976Z')
+    updated_at: DateTime.iso8601('2023-10-07T20:03:55.214Z')
   ),
   connection_id: '<id>',
   id: '<id>'

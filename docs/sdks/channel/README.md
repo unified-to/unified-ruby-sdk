@@ -29,16 +29,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.channel.create_messaging_channel(messaging_channel: Models::Shared::MessagingChannel.new(
   created_at: DateTime.iso8601('2023-10-05T02:09:22.795Z'),
-  description: 'Dolores tutis.',
+  description: 'Triduana tenuis.',
   has_subchannels: true,
-  id: '986026e7-d0fa-4ebc-ae31-60a6e21204f6',
+  id: '5debc037-5604-42ff-83bc-33f348909cc5',
   is_active: false,
   is_private: true,
   members: [],
   metadata: [],
-  name: 'tego',
-  updated_at: DateTime.iso8601('2026-06-16T11:05:11.424Z'),
-  web_url: 'https://svelte-rule.name/'
+  name: 'tutis',
+  updated_at: DateTime.iso8601('2026-06-21T14:30:32.906Z'),
+  web_url: 'https://blue-intent.biz'
 ), connection_id: '<id>')
 
 unless res.messaging_channel.nil?
@@ -173,16 +173,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchMessagingChannelRequest.new(
   messaging_channel: Models::Shared::MessagingChannel.new(
     created_at: DateTime.iso8601('2023-10-05T02:09:22.795Z'),
-    description: 'Dolores tutis.',
+    description: 'Triduana tenuis.',
     has_subchannels: true,
-    id: 'cc5230b6-205a-4626-92ec-5c8bf8018025',
+    id: '35eaad02-e79a-4aa3-8acb-5989349029ee',
     is_active: false,
     is_private: true,
     members: [],
     metadata: [],
-    name: 'tego',
-    updated_at: DateTime.iso8601('2026-06-16T11:05:11.438Z'),
-    web_url: 'https://svelte-rule.name/'
+    name: 'tutis',
+    updated_at: DateTime.iso8601('2026-06-21T14:30:32.919Z'),
+    web_url: 'https://blue-intent.biz'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -272,16 +272,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateMessagingChannelRequest.new(
   messaging_channel: Models::Shared::MessagingChannel.new(
     created_at: DateTime.iso8601('2023-10-05T02:09:22.795Z'),
-    description: 'Dolores tutis.',
+    description: 'Triduana tenuis.',
     has_subchannels: true,
-    id: 'cc5230b6-205a-4626-92ec-5c8bf8018025',
+    id: '35eaad02-e79a-4aa3-8acb-5989349029ee',
     is_active: false,
     is_private: true,
     members: [],
     metadata: [],
-    name: 'tego',
-    updated_at: DateTime.iso8601('2026-06-16T11:05:11.438Z'),
-    web_url: 'https://svelte-rule.name/'
+    name: 'tutis',
+    updated_at: DateTime.iso8601('2026-06-21T14:30:32.919Z'),
+    web_url: 'https://blue-intent.biz'
   ),
   connection_id: '<id>',
   id: '<id>'

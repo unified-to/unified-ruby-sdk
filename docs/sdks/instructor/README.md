@@ -32,24 +32,24 @@ res = s.instructor.create_lms_instructor(lms_instructor: Models::Shared::LmsInst
   emails: [
     Models::Shared::LmsEmail.new,
   ],
-  first_name: 'Deangelo',
-  id: '2ef10913-28d1-41ce-8f78-8320d04fe191',
-  image_url: 'https://avatars.githubusercontent.com/u/95131132',
-  last_name: 'Ritchie',
+  first_name: 'Miranda',
+  id: 'aa3029c7-e1e0-43f8-af95-9ff2509e9a00',
+  image_url: 'https://avatars.githubusercontent.com/u/96902788',
+  last_name: 'Turcotte',
   metadata: [],
-  name: 'Deangelo Ritchie',
+  name: 'Miranda Turcotte',
   telephones: [
     Models::Shared::LmsTelephone.new(
-      telephone: '(605) 752-8163',
+      telephone: '(752) 816-3330',
       type: Models::Shared::LmsTelephoneType::WORK
     ),
     Models::Shared::LmsTelephone.new(
-      telephone: '(430) 415-2451',
+      telephone: '(415) 345-1798',
       type: Models::Shared::LmsTelephoneType::HOME
     ),
   ],
-  title: 'Regional Security Agent',
-  updated_at: DateTime.iso8601('2025-08-16T00:11:52.229Z')
+  title: 'Customer Brand Planner',
+  updated_at: DateTime.iso8601('2025-08-20T11:51:35.366Z')
 ), connection_id: '<id>')
 
 unless res.lms_instructor.nil?
@@ -187,24 +187,24 @@ req = Models::Operations::PatchLmsInstructorRequest.new(
     emails: [
       Models::Shared::LmsEmail.new,
     ],
-    first_name: 'Deangelo',
-    id: 'cfde7813-e744-4039-908c-6877f52c1065',
-    image_url: 'https://avatars.githubusercontent.com/u/95131132',
-    last_name: 'Ritchie',
+    first_name: 'Miranda',
+    id: '499349db-09a6-4605-8d8b-1bdd8334516d',
+    image_url: 'https://avatars.githubusercontent.com/u/96902788',
+    last_name: 'Turcotte',
     metadata: [],
-    name: 'Deangelo Ritchie',
+    name: 'Miranda Turcotte',
     telephones: [
       Models::Shared::LmsTelephone.new(
-        telephone: '(605) 752-8163',
+        telephone: '(752) 816-3330',
         type: Models::Shared::LmsTelephoneType::WORK
       ),
       Models::Shared::LmsTelephone.new(
-        telephone: '(430) 415-2451',
+        telephone: '(415) 345-1798',
         type: Models::Shared::LmsTelephoneType::HOME
       ),
     ],
-    title: 'Regional Security Agent',
-    updated_at: DateTime.iso8601('2025-08-16T00:11:52.239Z')
+    title: 'Customer Brand Planner',
+    updated_at: DateTime.iso8601('2025-08-20T11:51:35.376Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -297,24 +297,24 @@ req = Models::Operations::UpdateLmsInstructorRequest.new(
     emails: [
       Models::Shared::LmsEmail.new,
     ],
-    first_name: 'Deangelo',
-    id: 'cfde7813-e744-4039-908c-6877f52c1065',
-    image_url: 'https://avatars.githubusercontent.com/u/95131132',
-    last_name: 'Ritchie',
+    first_name: 'Miranda',
+    id: '499349db-09a6-4605-8d8b-1bdd8334516d',
+    image_url: 'https://avatars.githubusercontent.com/u/96902788',
+    last_name: 'Turcotte',
     metadata: [],
-    name: 'Deangelo Ritchie',
+    name: 'Miranda Turcotte',
     telephones: [
       Models::Shared::LmsTelephone.new(
-        telephone: '(605) 752-8163',
+        telephone: '(752) 816-3330',
         type: Models::Shared::LmsTelephoneType::WORK
       ),
       Models::Shared::LmsTelephone.new(
-        telephone: '(430) 415-2451',
+        telephone: '(415) 345-1798',
         type: Models::Shared::LmsTelephoneType::HOME
       ),
     ],
-    title: 'Regional Security Agent',
-    updated_at: DateTime.iso8601('2025-08-16T00:11:52.239Z')
+    title: 'Customer Brand Planner',
+    updated_at: DateTime.iso8601('2025-08-20T11:51:35.376Z')
   ),
   connection_id: '<id>',
   id: '<id>'

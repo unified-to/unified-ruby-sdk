@@ -29,12 +29,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.domain.create_compute_domain(compute_domain: Models::Shared::ComputeDomain.new(
   created_at: DateTime.iso8601('2019-11-22T16:38:26.009Z'),
-  id: '3cdff451-ac27-4143-bb96-6b1329428d00',
+  id: '2d2fbeca-1933-4757-bdb2-2b68913b0de2',
   is_primary: false,
   metadata: [],
-  name: 'mysterious-republican.usable-section.info',
+  name: 'steel-hovercraft.humiliating-lender.com',
   status: Models::Shared::ComputeDomainStatus::PENDING,
-  updated_at: DateTime.iso8601('2023-11-20T18:24:07.231Z')
+  updated_at: DateTime.iso8601('2023-11-24T04:06:10.933Z')
 ), connection_id: '<id>')
 
 unless res.compute_domain.nil?
@@ -169,12 +169,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchComputeDomainRequest.new(
   compute_domain: Models::Shared::ComputeDomain.new(
     created_at: DateTime.iso8601('2019-11-22T16:38:26.009Z'),
-    id: 'a46d6cc9-1732-4233-8502-bb1f0a1648bf',
+    id: '12841307-9099-41ae-a7f1-0b8a2e8e760c',
     is_primary: false,
     metadata: [],
-    name: 'mysterious-republican.usable-section.info',
+    name: 'steel-hovercraft.humiliating-lender.com',
     status: Models::Shared::ComputeDomainStatus::PENDING,
-    updated_at: DateTime.iso8601('2023-11-20T18:24:07.234Z')
+    updated_at: DateTime.iso8601('2023-11-24T04:06:10.939Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -264,12 +264,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateComputeDomainRequest.new(
   compute_domain: Models::Shared::ComputeDomain.new(
     created_at: DateTime.iso8601('2019-11-22T16:38:26.009Z'),
-    id: 'a46d6cc9-1732-4233-8502-bb1f0a1648bf',
+    id: '12841307-9099-41ae-a7f1-0b8a2e8e760c',
     is_primary: false,
     metadata: [],
-    name: 'mysterious-republican.usable-section.info',
+    name: 'steel-hovercraft.humiliating-lender.com',
     status: Models::Shared::ComputeDomainStatus::PENDING,
-    updated_at: DateTime.iso8601('2023-11-20T18:24:07.234Z')
+    updated_at: DateTime.iso8601('2023-11-24T04:06:10.939Z')
   ),
   connection_id: '<id>',
   id: '<id>'

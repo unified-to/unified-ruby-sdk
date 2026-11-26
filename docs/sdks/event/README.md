@@ -49,13 +49,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.event.create_analytics_event(analytics_event: Models::Shared::AnalyticsEvent.new(
   created_at: DateTime.iso8601('2023-06-21T03:13:22.954Z'),
   event_type: Models::Shared::EventType::SCREEN_VIEW,
-  id: '677e2e05-e1be-429f-a365-30f231eb92cb',
+  id: '5debe4f5-7d91-4929-8e10-b7d06fb91b96',
   metadata: {
     'key' => Models::Shared::PropertyAnalyticsEventMetadata.new,
   },
   name: 'page_view',
-  page_url: 'https://golden-carboxyl.biz',
-  updated_at: DateTime.iso8601('2023-09-27T00:51:44.650Z')
+  page_url: 'https://colossal-intellect.info/',
+  updated_at: DateTime.iso8601('2023-09-27T12:05:01.864Z')
 ), connection_id: '<id>')
 
 unless res.analytics_event.nil?
@@ -103,27 +103,27 @@ res = s.event.create_calendar_event(calendar_event: Models::Shared::CalendarEven
   attachments: [],
   conference: [],
   created_at: '2019-08-04T14:33:51.814Z',
-  end_at: '2020-05-27T15:16:15.886Z',
+  end_at: '2020-05-28T07:12:57.831Z',
   has_conference: false,
-  id: '754e4968-b294-406e-8bad-ddd14e39ce15',
+  id: '48e459d3-2b16-429b-95f0-8c3754fe5233',
   is_all_day: false,
   is_free: false,
   is_private: false,
-  location: '621 Boehm Prairie',
+  location: '706 Mortimer Streets',
   metadata: [],
-  notes: 'Aegre traho.',
+  notes: 'Ratione capillus aspernatur impedit ago.',
   recurrence: [
     Models::Shared::CalendarEventRecurrence.new(
       count: 4.0,
-      end_at: DateTime.iso8601('2025-04-17T02:20:06.146Z'),
+      end_at: DateTime.iso8601('2025-04-21T18:07:34.469Z'),
       excluded_dates: [
-        '2024-02-21T11:46:13.696Z',
+        '2024-02-25T04:58:58.321Z',
       ],
       frequency: Models::Shared::CalendarEventRecurrenceFrequency::YEARLY,
       included_dates: [
-        '2023-07-23T08:53:54.823Z',
-        '2025-02-15T15:59:48.708Z',
-        '2024-04-21T08:52:31.362Z',
+        '2023-07-26T14:40:13.353Z',
+        '2025-02-20T04:32:38.583Z',
+        '2024-04-25T05:18:07.878Z',
       ],
       interval: 7.0,
       on_days: [
@@ -456,16 +456,16 @@ res = s.event.create_calendar_event(calendar_event: Models::Shared::CalendarEven
         -251.0,
         -254.0,
       ],
-      timezone: 'Asia/Ho_Chi_Minh',
+      timezone: 'Pacific/Marquesas',
       week_start: Models::Shared::WeekStart::TU
     ),
   ],
-  start_at: '2020-05-27T05:56:20.456Z',
+  start_at: '2020-05-27T21:51:47.257Z',
   status: Models::Shared::CalendarEventStatus::CONFIRMED,
-  subject: 'Sunt spargo tepidus bestia vigor credo coadunatio appello.',
-  timezone: 'Asia/Bangkok',
-  updated_at: '2020-07-03T23:44:23.779Z',
-  web_url: 'https://another-pinstripe.com'
+  subject: 'Bestia vigor credo coadunatio appello error centum aegre.',
+  timezone: 'Europe/Moscow',
+  updated_at: '2020-07-04T17:41:24.292Z',
+  web_url: 'https://good-natured-numeracy.net'
 ), connection_id: '<id>')
 
 unless res.calendar_event.nil?
@@ -554,15 +554,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.event.create_crm_event(crm_event: Models::Shared::CrmEvent.new(
   call: Models::Shared::PropertyCrmEventCall.new(
-    description: 'Arbitro aptus.',
+    description: 'Accusantium attero deludo.',
     duration: 64.0,
-    start_at: DateTime.iso8601('2025-01-01T03:13:13.797Z')
+    start_at: DateTime.iso8601('2025-01-05T07:50:17.674Z')
   ),
   created_at: DateTime.iso8601('2020-07-14T04:53:23.784Z'),
-  id: 'a1fc5d9a-be2f-41af-93fe-2f30b4771797',
+  id: 'fd4f650d-06a5-4a76-8126-3d15dcc1c4c6',
   metadata: [],
   type: Models::Shared::CrmEventType::CALL,
-  updated_at: DateTime.iso8601('2026-11-10T09:49:25.552Z')
+  updated_at: DateTime.iso8601('2026-11-16T08:15:39.625Z')
 ), connection_id: '<id>')
 
 unless res.crm_event.nil?
@@ -1047,27 +1047,27 @@ req = Models::Operations::PatchCalendarEventRequest.new(
     attachments: [],
     conference: [],
     created_at: '2019-08-04T14:33:51.814Z',
-    end_at: '2020-05-27T15:16:15.889Z',
+    end_at: '2020-05-28T07:12:57.838Z',
     has_conference: false,
-    id: 'a2319be7-0b97-4851-abba-49ce96daa71c',
+    id: '3205b605-daca-4465-925f-2b26173c5b97',
     is_all_day: false,
     is_free: false,
     is_private: false,
-    location: '621 Boehm Prairie',
+    location: '706 Mortimer Streets',
     metadata: [],
-    notes: 'Aegre traho.',
+    notes: 'Ratione capillus aspernatur impedit ago.',
     recurrence: [
       Models::Shared::CalendarEventRecurrence.new(
         count: 4.0,
-        end_at: DateTime.iso8601('2025-04-17T02:20:06.169Z'),
+        end_at: DateTime.iso8601('2025-04-21T18:07:34.512Z'),
         excluded_dates: [
-          '2024-02-21T11:46:13.714Z',
+          '2024-02-25T04:58:58.355Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::YEARLY,
         included_dates: [
-          '2023-07-23T08:53:54.839Z',
-          '2025-02-15T15:59:48.730Z',
-          '2024-04-21T08:52:31.381Z',
+          '2023-07-26T14:40:13.383Z',
+          '2025-02-20T04:32:38.624Z',
+          '2024-04-25T05:18:07.914Z',
         ],
         interval: 7.0,
         on_days: [
@@ -1400,16 +1400,16 @@ req = Models::Operations::PatchCalendarEventRequest.new(
           -251.0,
           -254.0,
         ],
-        timezone: 'Asia/Ho_Chi_Minh',
+        timezone: 'Pacific/Marquesas',
         week_start: Models::Shared::WeekStart::TU
       ),
     ],
-    start_at: '2020-05-27T05:56:20.459Z',
+    start_at: '2020-05-27T21:51:47.264Z',
     status: Models::Shared::CalendarEventStatus::CONFIRMED,
-    subject: 'Sunt spargo tepidus bestia vigor credo coadunatio appello.',
-    timezone: 'Asia/Bangkok',
-    updated_at: '2020-07-03T23:44:23.783Z',
-    web_url: 'https://another-pinstripe.com'
+    subject: 'Bestia vigor credo coadunatio appello error centum aegre.',
+    timezone: 'Europe/Moscow',
+    updated_at: '2020-07-04T17:41:24.299Z',
+    web_url: 'https://good-natured-numeracy.net'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1504,15 +1504,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchCrmEventRequest.new(
   crm_event: Models::Shared::CrmEvent.new(
     call: Models::Shared::PropertyCrmEventCall.new(
-      description: 'Arbitro aptus.',
+      description: 'Accusantium attero deludo.',
       duration: 64.0,
-      start_at: DateTime.iso8601('2025-01-01T03:13:13.824Z')
+      start_at: DateTime.iso8601('2025-01-05T07:50:17.710Z')
     ),
     created_at: DateTime.iso8601('2020-07-14T04:53:23.784Z'),
-    id: '04b29305-28d5-4607-ba19-723bd78e9b0c',
+    id: '000efb04-79de-4cf1-8c92-f6cedfa4c9f9',
     metadata: [],
     type: Models::Shared::CrmEventType::CALL,
-    updated_at: DateTime.iso8601('2026-11-10T09:49:25.590Z')
+    updated_at: DateTime.iso8601('2026-11-16T08:15:39.676Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1565,7 +1565,7 @@ req = Models::Operations::PatchMessagingEventRequest.new(
       name: ''
     ),
     created_at: DateTime.iso8601('2019-05-30T19:44:46.461Z'),
-    id: '5e8e2cd1-07b9-4cb3-99ee-0374bee25e81',
+    id: '94199874-5504-4bf9-8330-df696ba36a14',
     is_replacing_original: false,
     metadata: [],
     type: Models::Shared::MessagingEventType::BUTTON_CLICK
@@ -1742,27 +1742,27 @@ req = Models::Operations::UpdateCalendarEventRequest.new(
     attachments: [],
     conference: [],
     created_at: '2019-08-04T14:33:51.814Z',
-    end_at: '2020-05-27T15:16:15.889Z',
+    end_at: '2020-05-28T07:12:57.838Z',
     has_conference: false,
-    id: 'a2319be7-0b97-4851-abba-49ce96daa71c',
+    id: '3205b605-daca-4465-925f-2b26173c5b97',
     is_all_day: false,
     is_free: false,
     is_private: false,
-    location: '621 Boehm Prairie',
+    location: '706 Mortimer Streets',
     metadata: [],
-    notes: 'Aegre traho.',
+    notes: 'Ratione capillus aspernatur impedit ago.',
     recurrence: [
       Models::Shared::CalendarEventRecurrence.new(
         count: 4.0,
-        end_at: DateTime.iso8601('2025-04-17T02:20:06.169Z'),
+        end_at: DateTime.iso8601('2025-04-21T18:07:34.512Z'),
         excluded_dates: [
-          '2024-02-21T11:46:13.714Z',
+          '2024-02-25T04:58:58.355Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::YEARLY,
         included_dates: [
-          '2023-07-23T08:53:54.839Z',
-          '2025-02-15T15:59:48.730Z',
-          '2024-04-21T08:52:31.381Z',
+          '2023-07-26T14:40:13.383Z',
+          '2025-02-20T04:32:38.624Z',
+          '2024-04-25T05:18:07.914Z',
         ],
         interval: 7.0,
         on_days: [
@@ -2095,16 +2095,16 @@ req = Models::Operations::UpdateCalendarEventRequest.new(
           -251.0,
           -254.0,
         ],
-        timezone: 'Asia/Ho_Chi_Minh',
+        timezone: 'Pacific/Marquesas',
         week_start: Models::Shared::WeekStart::TU
       ),
     ],
-    start_at: '2020-05-27T05:56:20.459Z',
+    start_at: '2020-05-27T21:51:47.264Z',
     status: Models::Shared::CalendarEventStatus::CONFIRMED,
-    subject: 'Sunt spargo tepidus bestia vigor credo coadunatio appello.',
-    timezone: 'Asia/Bangkok',
-    updated_at: '2020-07-03T23:44:23.783Z',
-    web_url: 'https://another-pinstripe.com'
+    subject: 'Bestia vigor credo coadunatio appello error centum aegre.',
+    timezone: 'Europe/Moscow',
+    updated_at: '2020-07-04T17:41:24.299Z',
+    web_url: 'https://good-natured-numeracy.net'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2199,15 +2199,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateCrmEventRequest.new(
   crm_event: Models::Shared::CrmEvent.new(
     call: Models::Shared::PropertyCrmEventCall.new(
-      description: 'Arbitro aptus.',
+      description: 'Accusantium attero deludo.',
       duration: 64.0,
-      start_at: DateTime.iso8601('2025-01-01T03:13:13.824Z')
+      start_at: DateTime.iso8601('2025-01-05T07:50:17.710Z')
     ),
     created_at: DateTime.iso8601('2020-07-14T04:53:23.784Z'),
-    id: '04b29305-28d5-4607-ba19-723bd78e9b0c',
+    id: '000efb04-79de-4cf1-8c92-f6cedfa4c9f9',
     metadata: [],
     type: Models::Shared::CrmEventType::CALL,
-    updated_at: DateTime.iso8601('2026-11-10T09:49:25.590Z')
+    updated_at: DateTime.iso8601('2026-11-16T08:15:39.676Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2260,7 +2260,7 @@ req = Models::Operations::UpdateMessagingEventRequest.new(
       name: ''
     ),
     created_at: DateTime.iso8601('2019-05-30T19:44:46.461Z'),
-    id: '5e8e2cd1-07b9-4cb3-99ee-0374bee25e81',
+    id: '94199874-5504-4bf9-8330-df696ba36a14',
     is_replacing_original: false,
     metadata: [],
     type: Models::Shared::MessagingEventType::BUTTON_CLICK

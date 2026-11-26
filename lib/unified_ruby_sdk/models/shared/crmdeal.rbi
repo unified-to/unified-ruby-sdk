@@ -48,6 +48,8 @@ class UnifiedRubySDK::Models::Shared::CrmDeal
   def updated_at=(str_); end
   def user_id(); end
   def user_id=(str_); end
+  def vehicle_ids(); end
+  def vehicle_ids=(str_); end
   def won_reason(); end
   def won_reason=(str_); end
 end

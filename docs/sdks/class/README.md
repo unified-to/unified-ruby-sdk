@@ -29,30 +29,30 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.class_.create_lms_class(lms_class: Models::Shared::LmsClass.new(
   created_at: DateTime.iso8601('2020-02-20T14:48:51.845Z'),
-  description: 'Anser sperno decerno.',
-  id: '60620a5f-6500-4e8d-9ebd-cbedcfdb68e2',
+  description: 'Animus callide corpus.',
+  id: 'be82886d-37a3-4e56-869f-de7758833fb5',
   instructors: [],
   languages: [
     'in',
   ],
   media: [
     Models::Shared::LmsMedia.new(
-      content: 'Defetiscor aetas acies benevolentia ulterius. Creta bis beneficium canis. Bonus valeo vulgo creator arca peior ceno earum culpa. Tabesco apostolus talis. Ultra accommodo deinde sono culpo arto cruciamentum triduana.',
-      description: 'Esse confido.',
+      content: 'Ceno earum culpa adhaero tabesco apostolus talis. Ultra accommodo deinde sono culpo arto cruciamentum triduana. Solvo uter adficio.',
+      description: 'Defetiscor aetas.',
       languages: [
-        'fa',
-        'da',
+        'ko',
+        'lv',
       ],
-      name: 'illo',
-      thumbnail_url: 'https://loremflickr.com/199/1934?lock=4323325966476891',
+      name: 'suspendo',
+      thumbnail_url: 'https://picsum.photos/seed/coddeQdTZn/105/852',
       type: Models::Shared::LmsMediaType::VIDEO,
-      url: 'https://loremflickr.com/487/921?lock=5127962071241632'
+      url: 'https://picsum.photos/seed/wl3tnt/2277/2170'
     ),
   ],
   metadata: [],
-  name: 'virtus',
+  name: 'sperno',
   students: [],
-  updated_at: DateTime.iso8601('2025-08-28T10:21:04.115Z')
+  updated_at: DateTime.iso8601('2025-09-02T07:20:44.667Z')
 ), connection_id: '<id>')
 
 unless res.lms_class.nil?
@@ -187,30 +187,30 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchLmsClassRequest.new(
   lms_class: Models::Shared::LmsClass.new(
     created_at: DateTime.iso8601('2020-02-20T14:48:51.845Z'),
-    description: 'Anser sperno decerno.',
-    id: '2f9a93d8-a384-49f4-8120-096715a895de',
+    description: 'Animus callide corpus.',
+    id: 'cbb6cf4e-34a4-41cd-8bd2-f426c424ded0',
     instructors: [],
     languages: [
       'in',
     ],
     media: [
       Models::Shared::LmsMedia.new(
-        content: 'Defetiscor aetas acies benevolentia ulterius. Creta bis beneficium canis. Bonus valeo vulgo creator arca peior ceno earum culpa. Tabesco apostolus talis. Ultra accommodo deinde sono culpo arto cruciamentum triduana.',
-        description: 'Esse confido.',
+        content: 'Ceno earum culpa adhaero tabesco apostolus talis. Ultra accommodo deinde sono culpo arto cruciamentum triduana. Solvo uter adficio.',
+        description: 'Defetiscor aetas.',
         languages: [
-          'fa',
-          'da',
+          'ko',
+          'lv',
         ],
-        name: 'illo',
-        thumbnail_url: 'https://loremflickr.com/199/1934?lock=4323325966476891',
+        name: 'suspendo',
+        thumbnail_url: 'https://picsum.photos/seed/coddeQdTZn/105/852',
         type: Models::Shared::LmsMediaType::VIDEO,
-        url: 'https://loremflickr.com/487/921?lock=5127962071241632'
+        url: 'https://picsum.photos/seed/wl3tnt/2277/2170'
       ),
     ],
     metadata: [],
-    name: 'virtus',
+    name: 'sperno',
     students: [],
-    updated_at: DateTime.iso8601('2025-08-28T10:21:04.125Z')
+    updated_at: DateTime.iso8601('2025-09-02T07:20:44.681Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -300,30 +300,30 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateLmsClassRequest.new(
   lms_class: Models::Shared::LmsClass.new(
     created_at: DateTime.iso8601('2020-02-20T14:48:51.845Z'),
-    description: 'Anser sperno decerno.',
-    id: '2f9a93d8-a384-49f4-8120-096715a895de',
+    description: 'Animus callide corpus.',
+    id: 'cbb6cf4e-34a4-41cd-8bd2-f426c424ded0',
     instructors: [],
     languages: [
       'in',
     ],
     media: [
       Models::Shared::LmsMedia.new(
-        content: 'Defetiscor aetas acies benevolentia ulterius. Creta bis beneficium canis. Bonus valeo vulgo creator arca peior ceno earum culpa. Tabesco apostolus talis. Ultra accommodo deinde sono culpo arto cruciamentum triduana.',
-        description: 'Esse confido.',
+        content: 'Ceno earum culpa adhaero tabesco apostolus talis. Ultra accommodo deinde sono culpo arto cruciamentum triduana. Solvo uter adficio.',
+        description: 'Defetiscor aetas.',
         languages: [
-          'fa',
-          'da',
+          'ko',
+          'lv',
         ],
-        name: 'illo',
-        thumbnail_url: 'https://loremflickr.com/199/1934?lock=4323325966476891',
+        name: 'suspendo',
+        thumbnail_url: 'https://picsum.photos/seed/coddeQdTZn/105/852',
         type: Models::Shared::LmsMediaType::VIDEO,
-        url: 'https://loremflickr.com/487/921?lock=5127962071241632'
+        url: 'https://picsum.photos/seed/wl3tnt/2277/2170'
       ),
     ],
     metadata: [],
-    name: 'virtus',
+    name: 'sperno',
     students: [],
-    updated_at: DateTime.iso8601('2025-08-28T10:21:04.125Z')
+    updated_at: DateTime.iso8601('2025-09-02T07:20:44.681Z')
   ),
   connection_id: '<id>',
   id: '<id>'

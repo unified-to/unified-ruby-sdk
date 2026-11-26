@@ -1,0 +1,14 @@
+# DmsVehicleOption
+
+An installed vehicle option or package
+
+
+## Fields
+
+| Field                                                                                          | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `code`                                                                                         | *T.nilable(::String)*                                                                          | :heavy_minus_sign:                                                                             | Option or RPO code                                                                             |
+| `cost_amount`                                                                                  | *T.nilable(::Float)*                                                                           | :heavy_minus_sign:                                                                             | Dealer cost                                                                                    |
+| `description`                                                                                  | *T.nilable(::String)*                                                                          | :heavy_minus_sign:                                                                             | N/A                                                                                            |
+| `price_amount`                                                                                 | *T.nilable(::Float)*                                                                           | :heavy_minus_sign:                                                                             | Retail price                                                                                   |
+| `type`                                                                                         | [T.nilable(Models::Shared::DmsVehicleOptionType)](../../models/shared/dmsvehicleoptiontype.md) | :heavy_minus_sign:                                                                             | Factory-fitted or dealer-added                                                                 |

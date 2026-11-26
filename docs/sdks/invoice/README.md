@@ -30,14 +30,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.invoice.create_accounting_invoice(accounting_invoice: Models::Shared::AccountingInvoice.new(
   attachments: [
     Models::Shared::AccountingAttachment.new(
-      download_url: 'https://glossy-markup.net/',
-      id: 'a1f4cb51-9001-44f6-8af0-1b0b4d4ae952',
+      download_url: 'https://simplistic-translation.com',
+      id: '2e23b892-ccdd-4ffd-bcdd-2f55d12432d0',
       mime_type: 'application/pdf',
       name: 'INV-77705.pdf'
     ),
     Models::Shared::AccountingAttachment.new(
-      download_url: 'https://earnest-giggle.net',
-      id: '1dd8097c-6365-4ade-b0c4-f1e542d76b48',
+      download_url: 'https://squiggly-amnesty.name/',
+      id: '21381459-89fa-4312-8c3c-385198288569',
       mime_type: 'application/pdf',
       name: 'INV-77705-1.pdf'
     ),
@@ -49,12 +49,12 @@ res = s.invoice.create_accounting_invoice(accounting_invoice: Models::Shared::Ac
   discount_amount: 0.0,
   due_at: DateTime.iso8601('2022-12-07T14:17:29.587Z'),
   extended_notes: [],
-  id: '227e74cc-cefa-4648-8c3c-41d9b8f61c63',
+  id: '232d704e-8fe0-471d-8fd0-15a7df8911e9',
   invoice_number: 'INV-77705',
   is_inclusive_of_tax: false,
   lineitems: [],
   metadata: [],
-  notes: 'Adinventitias sursum temptatio auctus comburo clarus ubi deprimo.',
+  notes: 'Auctus comburo clarus ubi deprimo comburo vulgus.',
   payment_collection_method: Models::Shared::AccountingInvoicePaymentCollectionMethod::CHARGE_AUTOMATICALLY,
   payments: [],
   posted_at: DateTime.iso8601('2022-11-07T14:17:29.587Z'),
@@ -67,8 +67,8 @@ res = s.invoice.create_accounting_invoice(accounting_invoice: Models::Shared::Ac
   term: Models::Shared::AccountingInvoiceTerm::NET_25,
   total_amount: 0.0,
   type: Models::Shared::AccountingInvoiceType::INVOICE,
-  updated_at: DateTime.iso8601('2026-05-19T18:56:03.271Z'),
-  url: 'https://gifted-yarmulke.info/invoices/INV-77705'
+  updated_at: DateTime.iso8601('2026-05-25T00:04:53.312Z'),
+  url: 'https://helpful-exterior.com/invoices/INV-77705'
 ), connection_id: '<id>')
 
 unless res.accounting_invoice.nil?
@@ -204,14 +204,14 @@ req = Models::Operations::PatchAccountingInvoiceRequest.new(
   accounting_invoice: Models::Shared::AccountingInvoice.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
-        download_url: 'https://glossy-markup.net/',
-        id: '2b7d2055-c02d-472d-9c35-a182cf433ef2',
+        download_url: 'https://simplistic-translation.com',
+        id: '90c94972-c43d-466b-81c5-e1b293da42a7',
         mime_type: 'application/pdf',
         name: 'INV-77705.pdf'
       ),
       Models::Shared::AccountingAttachment.new(
-        download_url: 'https://earnest-giggle.net',
-        id: '0f3bf55e-2816-406a-a091-de7aca287b99',
+        download_url: 'https://squiggly-amnesty.name/',
+        id: '2f7b29fe-dd39-4b86-bfa8-a20f6cc507c4',
         mime_type: 'application/pdf',
         name: 'INV-77705-1.pdf'
       ),
@@ -223,12 +223,12 @@ req = Models::Operations::PatchAccountingInvoiceRequest.new(
     discount_amount: 0.0,
     due_at: DateTime.iso8601('2022-12-07T14:17:29.587Z'),
     extended_notes: [],
-    id: '79a36e3a-3b87-442a-9efe-a41f6c07c52c',
+    id: '9dbe9ba6-99b8-46f9-b05a-aa7ccb16d06b',
     invoice_number: 'INV-77705',
     is_inclusive_of_tax: false,
     lineitems: [],
     metadata: [],
-    notes: 'Adinventitias sursum temptatio auctus comburo clarus ubi deprimo.',
+    notes: 'Auctus comburo clarus ubi deprimo comburo vulgus.',
     payment_collection_method: Models::Shared::AccountingInvoicePaymentCollectionMethod::CHARGE_AUTOMATICALLY,
     payments: [],
     posted_at: DateTime.iso8601('2022-11-07T14:17:29.587Z'),
@@ -241,8 +241,8 @@ req = Models::Operations::PatchAccountingInvoiceRequest.new(
     term: Models::Shared::AccountingInvoiceTerm::NET_25,
     total_amount: 0.0,
     type: Models::Shared::AccountingInvoiceType::INVOICE,
-    updated_at: DateTime.iso8601('2026-05-19T18:56:03.313Z'),
-    url: 'https://gifted-yarmulke.info/invoices/INV-77705'
+    updated_at: DateTime.iso8601('2026-05-25T00:04:53.350Z'),
+    url: 'https://helpful-exterior.com/invoices/INV-77705'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -333,14 +333,14 @@ req = Models::Operations::UpdateAccountingInvoiceRequest.new(
   accounting_invoice: Models::Shared::AccountingInvoice.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
-        download_url: 'https://glossy-markup.net/',
-        id: '2b7d2055-c02d-472d-9c35-a182cf433ef2',
+        download_url: 'https://simplistic-translation.com',
+        id: '90c94972-c43d-466b-81c5-e1b293da42a7',
         mime_type: 'application/pdf',
         name: 'INV-77705.pdf'
       ),
       Models::Shared::AccountingAttachment.new(
-        download_url: 'https://earnest-giggle.net',
-        id: '0f3bf55e-2816-406a-a091-de7aca287b99',
+        download_url: 'https://squiggly-amnesty.name/',
+        id: '2f7b29fe-dd39-4b86-bfa8-a20f6cc507c4',
         mime_type: 'application/pdf',
         name: 'INV-77705-1.pdf'
       ),
@@ -352,12 +352,12 @@ req = Models::Operations::UpdateAccountingInvoiceRequest.new(
     discount_amount: 0.0,
     due_at: DateTime.iso8601('2022-12-07T14:17:29.587Z'),
     extended_notes: [],
-    id: '79a36e3a-3b87-442a-9efe-a41f6c07c52c',
+    id: '9dbe9ba6-99b8-46f9-b05a-aa7ccb16d06b',
     invoice_number: 'INV-77705',
     is_inclusive_of_tax: false,
     lineitems: [],
     metadata: [],
-    notes: 'Adinventitias sursum temptatio auctus comburo clarus ubi deprimo.',
+    notes: 'Auctus comburo clarus ubi deprimo comburo vulgus.',
     payment_collection_method: Models::Shared::AccountingInvoicePaymentCollectionMethod::CHARGE_AUTOMATICALLY,
     payments: [],
     posted_at: DateTime.iso8601('2022-11-07T14:17:29.587Z'),
@@ -370,8 +370,8 @@ req = Models::Operations::UpdateAccountingInvoiceRequest.new(
     term: Models::Shared::AccountingInvoiceTerm::NET_25,
     total_amount: 0.0,
     type: Models::Shared::AccountingInvoiceType::INVOICE,
-    updated_at: DateTime.iso8601('2026-05-19T18:56:03.313Z'),
-    url: 'https://gifted-yarmulke.info/invoices/INV-77705'
+    updated_at: DateTime.iso8601('2026-05-25T00:04:53.350Z'),
+    url: 'https://helpful-exterior.com/invoices/INV-77705'
   ),
   connection_id: '<id>',
   id: '<id>'

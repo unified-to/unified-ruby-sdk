@@ -22,6 +22,8 @@ module UnifiedRubySDK
         field :creator_user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('creator_user_id') } }
         # newly hired employee id (reference to HrisEmployee)
         field :employee_user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employee_user_id') } }
+        # The placement fee earned on this hire
+        field :fees, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AtsFee)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('fees') } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # date the offer was rejected (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
@@ -35,13 +37,14 @@ module UnifiedRubySDK
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(accepted_at: T.nilable(::DateTime), compensation: T.nilable(T::Array[Models::Shared::AtsCompensation]), created_at: T.nilable(::DateTime), creator_user_id: T.nilable(::String), employee_user_id: T.nilable(::String), id: T.nilable(::String), rejected_at: T.nilable(::DateTime), sent_at: T.nilable(::DateTime), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::AtsOfferStatus), updated_at: T.nilable(::DateTime)).void }
-        def initialize(accepted_at: nil, compensation: nil, created_at: nil, creator_user_id: nil, employee_user_id: nil, id: nil, rejected_at: nil, sent_at: nil, start_at: nil, status: nil, updated_at: nil)
+        sig { params(accepted_at: T.nilable(::DateTime), compensation: T.nilable(T::Array[Models::Shared::AtsCompensation]), created_at: T.nilable(::DateTime), creator_user_id: T.nilable(::String), employee_user_id: T.nilable(::String), fees: T.nilable(T::Array[Models::Shared::AtsFee]), id: T.nilable(::String), rejected_at: T.nilable(::DateTime), sent_at: T.nilable(::DateTime), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::AtsOfferStatus), updated_at: T.nilable(::DateTime)).void }
+        def initialize(accepted_at: nil, compensation: nil, created_at: nil, creator_user_id: nil, employee_user_id: nil, fees: nil, id: nil, rejected_at: nil, sent_at: nil, start_at: nil, status: nil, updated_at: nil)
           @accepted_at = accepted_at
           @compensation = compensation
           @created_at = created_at
           @creator_user_id = creator_user_id
           @employee_user_id = employee_user_id
+          @fees = fees
           @id = id
           @rejected_at = rejected_at
           @sent_at = sent_at
@@ -58,6 +61,7 @@ module UnifiedRubySDK
           return false unless @created_at == other.created_at
           return false unless @creator_user_id == other.creator_user_id
           return false unless @employee_user_id == other.employee_user_id
+          return false unless @fees == other.fees
           return false unless @id == other.id
           return false unless @rejected_at == other.rejected_at
           return false unless @sent_at == other.sent_at

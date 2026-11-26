@@ -43,62 +43,62 @@ res = s.contact.create_accounting_contact(accounting_contact: Models::Shared::Ac
   associated_contacts: [],
   balance_amount: 55_574.0,
   billing_address: Models::Shared::PropertyAccountingContactBillingAddress.new(
-    address1: '4091 Tromp Coves',
-    city: 'Lake Emmybury',
+    address1: '9171 Parisian Gateway',
+    city: 'Lake Keltonboro',
     country_code: 'US',
-    postal_code: '50764-5226',
-    region: 'Washington',
-    region_code: 'CA'
+    postal_code: '70131-2908',
+    region: 'Illinois',
+    region_code: 'CO'
   ),
-  company_name: 'Kertzmann Group',
+  company_name: 'Rice LLC',
   created_at: DateTime.iso8601('2021-08-15T14:56:50.258Z'),
   currency: 'AUD',
   emails: [
     Models::Shared::AccountingEmail.new(
-      email: 'delores.reynolds@kertzmanngroup.com',
+      email: 'michele.breitenberg@ricellc.com',
       type: Models::Shared::AccountingEmailType::WORK
     ),
     Models::Shared::AccountingEmail.new(
-      email: 'accounts@kertzmanngroup.com',
+      email: 'accounts@ricellc.com',
       type: Models::Shared::AccountingEmailType::OTHER
     ),
   ],
-  first_name: 'Delores',
-  id: '1c92ac68-45d3-485e-b897-af2d352bb6b2',
-  identification: '531850872',
+  first_name: 'Michele',
+  id: '6337ea8f-1637-4996-947c-6216c14be4d8',
+  identification: '508720595',
   is_active: true,
   is_customer: true,
-  last_name: 'Reynolds',
+  last_name: 'Breitenberg',
   metadata: [],
-  name: 'Kertzmann Group',
-  notes: 'Et videlicet pauci.',
+  name: 'Rice LLC',
+  notes: 'Tabella reprehenderit sono corrupti approbo crastinus sopor ultra.',
   payment_methods: [
     Models::Shared::AccountingContactPaymentMethod.new(
       default: true,
-      id: '03f38b6b-b06c-4b23-8439-392d964a4b72',
-      name: 'Visa 7844',
+      id: 'f9975245-6c3c-4481-8bc9-05b3df379b0f',
+      name: 'Visa 5318',
       type: Models::Shared::AccountingContactPaymentMethodType::CARD
     ),
   ],
-  portal_url: 'https://kertzmanngroup.com/billing',
+  portal_url: 'https://ricellc.com/billing',
   shipping_address: Models::Shared::PropertyAccountingContactShippingAddress.new(
-    address1: '23129 Rebekah Mews',
-    city: 'Mortimerhaven',
+    address1: '786 Dare Meadows',
+    city: 'Phoenix',
     country_code: 'US',
-    postal_code: '55878-6806',
-    region: 'Florida',
-    region_code: 'OK'
+    postal_code: '68675',
+    region: 'Tennessee',
+    region_code: 'NE'
   ),
   tax_exemption: Models::Shared::TaxExemption::FOREIGN,
-  tax_number: '867556410',
+  tax_number: '564107844',
   telephones: [
     Models::Shared::AccountingTelephone.new(
-      telephone: '(432) 760-1716',
+      telephone: '(217) 260-4409',
       type: Models::Shared::AccountingTelephoneType::FAX
     ),
   ],
-  updated_at: DateTime.iso8601('2024-01-02T10:34:38.574Z'),
-  website: 'https://kertzmanngroup.com'
+  updated_at: DateTime.iso8601('2024-01-05T03:17:37.181Z'),
+  website: 'https://ricellc.com'
 ), connection_id: '<id>')
 
 unless res.accounting_contact.nil?
@@ -144,28 +144,28 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.contact.create_crm_contact(crm_contact: Models::Shared::CrmContact.new(
   address: Models::Shared::PropertyCrmContactAddress.new(
-    address1: '65838 College Avenue',
-    address2: 'Apt. 335',
-    city: 'Fort Alexandratown',
+    address1: '489 Eula Park',
+    address2: 'Apt. 900',
+    city: 'Archfield',
     country_code: 'US',
-    postal_code: '80888-6094',
-    region: 'Montana',
-    region_code: 'NM'
+    postal_code: '60941-8210',
+    region: 'Texas',
+    region_code: 'NH'
   ),
   created_at: DateTime.iso8601('2021-01-02T00:41:38.885Z'),
-  department: 'Beauty',
+  department: 'Health',
   emails: [
     Models::Shared::CrmEmail.new(
-      email: 'mohammad.bartell@hotmail.com',
+      email: 'alexandro.kuphal@hotmail.com',
       type: Models::Shared::CrmEmailType::HOME
     ),
   ],
-  first_name: 'Mohammad',
-  id: '62bd8615-819d-45d6-9fb2-82796440a96b',
-  image_url: 'https://avatars.githubusercontent.com/u/26803724',
-  last_name: 'Bartell',
+  first_name: 'Alexandro',
+  id: 'b7a2dc2d-af86-43b6-b7bd-7f756bb2f308',
+  image_url: 'https://avatars.githubusercontent.com/u/26594214',
+  last_name: 'Kuphal',
   link_urls: [
-    'https://www.linkedin.com/in/mohammad-bartell',
+    'https://www.linkedin.com/in/alexandro-kuphal',
   ],
   metadata: [
     Models::Shared::CrmMetadata.new(
@@ -173,25 +173,25 @@ res = s.contact.create_crm_contact(crm_contact: Models::Shared::CrmContact.new(
         'display_name' => 'Custom Property',
       },
       format: Models::Shared::CrmMetadataFormat::TEXT,
-      id: '0b642d82-8e55-4142-b1dd-c7196053d673',
+      id: '5e79c62b-7cff-4d90-b096-a3c9c3fb79de',
       namespace: 'custom',
       slug: 'custom_property',
-      value: 'antiquus'
+      value: 'amplus'
     ),
   ],
-  name: 'Mohammad Bartell',
+  name: 'Alexandro Kuphal',
   telephones: [
     Models::Shared::CrmTelephone.new(
-      telephone: '(254) 404-3529',
+      telephone: '(404) 452-9269',
       type: Models::Shared::CrmTelephoneType::OTHER
     ),
     Models::Shared::CrmTelephone.new(
-      telephone: '(469) 989-7588',
+      telephone: '(989) 758-8616',
       type: Models::Shared::CrmTelephoneType::WORK
     ),
   ],
-  title: 'National Tactics Analyst',
-  updated_at: DateTime.iso8601('2021-02-24T23:11:07.637Z')
+  title: 'Direct Infrastructure Administrator',
+  updated_at: DateTime.iso8601('2021-02-25T02:46:37.235Z')
 ), connection_id: '<id>')
 
 unless res.crm_contact.nil?
@@ -236,35 +236,35 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
   )
 )
 res = s.contact.create_uc_contact(uc_contact: Models::Shared::UcContact.new(
-  company: 'Tillman Group',
+  company: 'Olson - Stanton',
   created_at: DateTime.iso8601('2019-10-28T11:06:56.460Z'),
   emails: [
     Models::Shared::UcEmail.new(
-      email: 'Luther_Rogahn32@yahoo.com',
+      email: 'Norval_Brekke@gmail.com',
       type: Models::Shared::UcEmailType::WORK
     ),
   ],
-  first_name: 'Luther',
-  id: '1a4751b2-97c4-4be5-8f6d-a2ce6add0f3b',
-  last_name: 'Rogahn',
+  first_name: 'Norval',
+  id: '9aa78d84-0283-4c17-b862-539e1557fc80',
+  last_name: 'Brekke',
   metadata: [],
-  name: 'Luther Rogahn',
+  name: 'Norval Brekke',
   telephones: [
     Models::Shared::UcTelephone.new(
-      telephone: '(809) 992-1681',
+      telephone: '(992) 368-1868',
       type: Models::Shared::UcTelephoneType::FAX
     ),
     Models::Shared::UcTelephone.new(
-      telephone: '(868) 238-2746',
+      telephone: '(238) 374-6019',
       type: Models::Shared::UcTelephoneType::HOME
     ),
     Models::Shared::UcTelephone.new(
-      telephone: '(219) 736-0357',
+      telephone: '(736) 235-7480',
       type: Models::Shared::UcTelephoneType::MOBILE
     ),
   ],
-  title: 'Chief Optimization Executive',
-  updated_at: DateTime.iso8601('2023-12-26T01:10:52.116Z')
+  title: 'Internal Creative Director',
+  updated_at: DateTime.iso8601('2023-12-29T13:26:17.330Z')
 ), connection_id: '<id>')
 
 unless res.uc_contact.nil?
@@ -575,62 +575,62 @@ req = Models::Operations::PatchAccountingContactRequest.new(
     associated_contacts: [],
     balance_amount: 55_574.0,
     billing_address: Models::Shared::PropertyAccountingContactBillingAddress.new(
-      address1: '4091 Tromp Coves',
-      city: 'Lake Emmybury',
+      address1: '9171 Parisian Gateway',
+      city: 'Lake Keltonboro',
       country_code: 'US',
-      postal_code: '50764-5226',
-      region: 'Washington',
-      region_code: 'CA'
+      postal_code: '70131-2908',
+      region: 'Illinois',
+      region_code: 'CO'
     ),
-    company_name: 'Kertzmann Group',
+    company_name: 'Rice LLC',
     created_at: DateTime.iso8601('2021-08-15T14:56:50.258Z'),
     currency: 'AUD',
     emails: [
       Models::Shared::AccountingEmail.new(
-        email: 'delores.reynolds@kertzmanngroup.com',
+        email: 'michele.breitenberg@ricellc.com',
         type: Models::Shared::AccountingEmailType::WORK
       ),
       Models::Shared::AccountingEmail.new(
-        email: 'accounts@kertzmanngroup.com',
+        email: 'accounts@ricellc.com',
         type: Models::Shared::AccountingEmailType::OTHER
       ),
     ],
-    first_name: 'Delores',
-    id: '323f5ad3-4111-4309-9ea4-28ba403d0a46',
-    identification: '531850872',
+    first_name: 'Michele',
+    id: '970058af-ca27-46cc-9d01-701c343cbf1d',
+    identification: '508720595',
     is_active: true,
     is_customer: true,
-    last_name: 'Reynolds',
+    last_name: 'Breitenberg',
     metadata: [],
-    name: 'Kertzmann Group',
-    notes: 'Et videlicet pauci.',
+    name: 'Rice LLC',
+    notes: 'Tabella reprehenderit sono corrupti approbo crastinus sopor ultra.',
     payment_methods: [
       Models::Shared::AccountingContactPaymentMethod.new(
         default: true,
-        id: 'd9d7d711-7039-4124-bb14-234327b3d625',
-        name: 'Visa 7844',
+        id: '99f33ef2-4817-4e9c-a64b-b45554c6e007',
+        name: 'Visa 5318',
         type: Models::Shared::AccountingContactPaymentMethodType::CARD
       ),
     ],
-    portal_url: 'https://kertzmanngroup.com/billing',
+    portal_url: 'https://ricellc.com/billing',
     shipping_address: Models::Shared::PropertyAccountingContactShippingAddress.new(
-      address1: '23129 Rebekah Mews',
-      city: 'Mortimerhaven',
+      address1: '786 Dare Meadows',
+      city: 'Phoenix',
       country_code: 'US',
-      postal_code: '55878-6806',
-      region: 'Florida',
-      region_code: 'OK'
+      postal_code: '68675',
+      region: 'Tennessee',
+      region_code: 'NE'
     ),
     tax_exemption: Models::Shared::TaxExemption::FOREIGN,
-    tax_number: '867556410',
+    tax_number: '564107844',
     telephones: [
       Models::Shared::AccountingTelephone.new(
-        telephone: '(432) 760-1716',
+        telephone: '(217) 260-4409',
         type: Models::Shared::AccountingTelephoneType::FAX
       ),
     ],
-    updated_at: DateTime.iso8601('2024-01-02T10:34:38.589Z'),
-    website: 'https://kertzmanngroup.com'
+    updated_at: DateTime.iso8601('2024-01-05T03:17:37.200Z'),
+    website: 'https://ricellc.com'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -679,28 +679,28 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchCrmContactRequest.new(
   crm_contact: Models::Shared::CrmContact.new(
     address: Models::Shared::PropertyCrmContactAddress.new(
-      address1: '65838 College Avenue',
-      address2: 'Apt. 335',
-      city: 'Fort Alexandratown',
+      address1: '489 Eula Park',
+      address2: 'Apt. 900',
+      city: 'Archfield',
       country_code: 'US',
-      postal_code: '80888-6094',
-      region: 'Montana',
-      region_code: 'NM'
+      postal_code: '60941-8210',
+      region: 'Texas',
+      region_code: 'NH'
     ),
     created_at: DateTime.iso8601('2021-01-02T00:41:38.885Z'),
-    department: 'Beauty',
+    department: 'Health',
     emails: [
       Models::Shared::CrmEmail.new(
-        email: 'mohammad.bartell@hotmail.com',
+        email: 'alexandro.kuphal@hotmail.com',
         type: Models::Shared::CrmEmailType::HOME
       ),
     ],
-    first_name: 'Mohammad',
-    id: '50919dfe-8c2b-4c02-97f3-d57421575884',
-    image_url: 'https://avatars.githubusercontent.com/u/26803724',
-    last_name: 'Bartell',
+    first_name: 'Alexandro',
+    id: '1a5043da-8c3c-45aa-9355-d58c91b5dcbd',
+    image_url: 'https://avatars.githubusercontent.com/u/26594214',
+    last_name: 'Kuphal',
     link_urls: [
-      'https://www.linkedin.com/in/mohammad-bartell',
+      'https://www.linkedin.com/in/alexandro-kuphal',
     ],
     metadata: [
       Models::Shared::CrmMetadata.new(
@@ -708,25 +708,25 @@ req = Models::Operations::PatchCrmContactRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: 'be7268bb-aa85-4730-a870-9df1a6118c89',
+        id: '40459f97-a1a2-4b28-b1f9-6bf6adc1f4fd',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'antiquus'
+        value: 'amplus'
       ),
     ],
-    name: 'Mohammad Bartell',
+    name: 'Alexandro Kuphal',
     telephones: [
       Models::Shared::CrmTelephone.new(
-        telephone: '(254) 404-3529',
+        telephone: '(404) 452-9269',
         type: Models::Shared::CrmTelephoneType::OTHER
       ),
       Models::Shared::CrmTelephone.new(
-        telephone: '(469) 989-7588',
+        telephone: '(989) 758-8616',
         type: Models::Shared::CrmTelephoneType::WORK
       ),
     ],
-    title: 'National Tactics Analyst',
-    updated_at: DateTime.iso8601('2021-02-24T23:11:07.638Z')
+    title: 'Direct Infrastructure Administrator',
+    updated_at: DateTime.iso8601('2021-02-25T02:46:37.235Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -774,35 +774,35 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchUcContactRequest.new(
   uc_contact: Models::Shared::UcContact.new(
-    company: 'Tillman Group',
+    company: 'Olson - Stanton',
     created_at: DateTime.iso8601('2019-10-28T11:06:56.460Z'),
     emails: [
       Models::Shared::UcEmail.new(
-        email: 'Luther_Rogahn32@yahoo.com',
+        email: 'Norval_Brekke@gmail.com',
         type: Models::Shared::UcEmailType::WORK
       ),
     ],
-    first_name: 'Luther',
-    id: 'a149aefc-0fa4-4530-8cb3-59137d28e80e',
-    last_name: 'Rogahn',
+    first_name: 'Norval',
+    id: '9558a333-79c2-4b05-9757-9356f3a11be7',
+    last_name: 'Brekke',
     metadata: [],
-    name: 'Luther Rogahn',
+    name: 'Norval Brekke',
     telephones: [
       Models::Shared::UcTelephone.new(
-        telephone: '(809) 992-1681',
+        telephone: '(992) 368-1868',
         type: Models::Shared::UcTelephoneType::FAX
       ),
       Models::Shared::UcTelephone.new(
-        telephone: '(868) 238-2746',
+        telephone: '(238) 374-6019',
         type: Models::Shared::UcTelephoneType::HOME
       ),
       Models::Shared::UcTelephone.new(
-        telephone: '(219) 736-0357',
+        telephone: '(736) 235-7480',
         type: Models::Shared::UcTelephoneType::MOBILE
       ),
     ],
-    title: 'Chief Optimization Executive',
-    updated_at: DateTime.iso8601('2023-12-26T01:10:52.125Z')
+    title: 'Internal Creative Director',
+    updated_at: DateTime.iso8601('2023-12-29T13:26:17.338Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -976,62 +976,62 @@ req = Models::Operations::UpdateAccountingContactRequest.new(
     associated_contacts: [],
     balance_amount: 55_574.0,
     billing_address: Models::Shared::PropertyAccountingContactBillingAddress.new(
-      address1: '4091 Tromp Coves',
-      city: 'Lake Emmybury',
+      address1: '9171 Parisian Gateway',
+      city: 'Lake Keltonboro',
       country_code: 'US',
-      postal_code: '50764-5226',
-      region: 'Washington',
-      region_code: 'CA'
+      postal_code: '70131-2908',
+      region: 'Illinois',
+      region_code: 'CO'
     ),
-    company_name: 'Kertzmann Group',
+    company_name: 'Rice LLC',
     created_at: DateTime.iso8601('2021-08-15T14:56:50.258Z'),
     currency: 'AUD',
     emails: [
       Models::Shared::AccountingEmail.new(
-        email: 'delores.reynolds@kertzmanngroup.com',
+        email: 'michele.breitenberg@ricellc.com',
         type: Models::Shared::AccountingEmailType::WORK
       ),
       Models::Shared::AccountingEmail.new(
-        email: 'accounts@kertzmanngroup.com',
+        email: 'accounts@ricellc.com',
         type: Models::Shared::AccountingEmailType::OTHER
       ),
     ],
-    first_name: 'Delores',
-    id: '323f5ad3-4111-4309-9ea4-28ba403d0a46',
-    identification: '531850872',
+    first_name: 'Michele',
+    id: '970058af-ca27-46cc-9d01-701c343cbf1d',
+    identification: '508720595',
     is_active: true,
     is_customer: true,
-    last_name: 'Reynolds',
+    last_name: 'Breitenberg',
     metadata: [],
-    name: 'Kertzmann Group',
-    notes: 'Et videlicet pauci.',
+    name: 'Rice LLC',
+    notes: 'Tabella reprehenderit sono corrupti approbo crastinus sopor ultra.',
     payment_methods: [
       Models::Shared::AccountingContactPaymentMethod.new(
         default: true,
-        id: 'd9d7d711-7039-4124-bb14-234327b3d625',
-        name: 'Visa 7844',
+        id: '99f33ef2-4817-4e9c-a64b-b45554c6e007',
+        name: 'Visa 5318',
         type: Models::Shared::AccountingContactPaymentMethodType::CARD
       ),
     ],
-    portal_url: 'https://kertzmanngroup.com/billing',
+    portal_url: 'https://ricellc.com/billing',
     shipping_address: Models::Shared::PropertyAccountingContactShippingAddress.new(
-      address1: '23129 Rebekah Mews',
-      city: 'Mortimerhaven',
+      address1: '786 Dare Meadows',
+      city: 'Phoenix',
       country_code: 'US',
-      postal_code: '55878-6806',
-      region: 'Florida',
-      region_code: 'OK'
+      postal_code: '68675',
+      region: 'Tennessee',
+      region_code: 'NE'
     ),
     tax_exemption: Models::Shared::TaxExemption::FOREIGN,
-    tax_number: '867556410',
+    tax_number: '564107844',
     telephones: [
       Models::Shared::AccountingTelephone.new(
-        telephone: '(432) 760-1716',
+        telephone: '(217) 260-4409',
         type: Models::Shared::AccountingTelephoneType::FAX
       ),
     ],
-    updated_at: DateTime.iso8601('2024-01-02T10:34:38.589Z'),
-    website: 'https://kertzmanngroup.com'
+    updated_at: DateTime.iso8601('2024-01-05T03:17:37.200Z'),
+    website: 'https://ricellc.com'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1080,28 +1080,28 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateCrmContactRequest.new(
   crm_contact: Models::Shared::CrmContact.new(
     address: Models::Shared::PropertyCrmContactAddress.new(
-      address1: '65838 College Avenue',
-      address2: 'Apt. 335',
-      city: 'Fort Alexandratown',
+      address1: '489 Eula Park',
+      address2: 'Apt. 900',
+      city: 'Archfield',
       country_code: 'US',
-      postal_code: '80888-6094',
-      region: 'Montana',
-      region_code: 'NM'
+      postal_code: '60941-8210',
+      region: 'Texas',
+      region_code: 'NH'
     ),
     created_at: DateTime.iso8601('2021-01-02T00:41:38.885Z'),
-    department: 'Beauty',
+    department: 'Health',
     emails: [
       Models::Shared::CrmEmail.new(
-        email: 'mohammad.bartell@hotmail.com',
+        email: 'alexandro.kuphal@hotmail.com',
         type: Models::Shared::CrmEmailType::HOME
       ),
     ],
-    first_name: 'Mohammad',
-    id: '50919dfe-8c2b-4c02-97f3-d57421575884',
-    image_url: 'https://avatars.githubusercontent.com/u/26803724',
-    last_name: 'Bartell',
+    first_name: 'Alexandro',
+    id: '1a5043da-8c3c-45aa-9355-d58c91b5dcbd',
+    image_url: 'https://avatars.githubusercontent.com/u/26594214',
+    last_name: 'Kuphal',
     link_urls: [
-      'https://www.linkedin.com/in/mohammad-bartell',
+      'https://www.linkedin.com/in/alexandro-kuphal',
     ],
     metadata: [
       Models::Shared::CrmMetadata.new(
@@ -1109,25 +1109,25 @@ req = Models::Operations::UpdateCrmContactRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: 'be7268bb-aa85-4730-a870-9df1a6118c89',
+        id: '40459f97-a1a2-4b28-b1f9-6bf6adc1f4fd',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'antiquus'
+        value: 'amplus'
       ),
     ],
-    name: 'Mohammad Bartell',
+    name: 'Alexandro Kuphal',
     telephones: [
       Models::Shared::CrmTelephone.new(
-        telephone: '(254) 404-3529',
+        telephone: '(404) 452-9269',
         type: Models::Shared::CrmTelephoneType::OTHER
       ),
       Models::Shared::CrmTelephone.new(
-        telephone: '(469) 989-7588',
+        telephone: '(989) 758-8616',
         type: Models::Shared::CrmTelephoneType::WORK
       ),
     ],
-    title: 'National Tactics Analyst',
-    updated_at: DateTime.iso8601('2021-02-24T23:11:07.638Z')
+    title: 'Direct Infrastructure Administrator',
+    updated_at: DateTime.iso8601('2021-02-25T02:46:37.235Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1175,35 +1175,35 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateUcContactRequest.new(
   uc_contact: Models::Shared::UcContact.new(
-    company: 'Tillman Group',
+    company: 'Olson - Stanton',
     created_at: DateTime.iso8601('2019-10-28T11:06:56.460Z'),
     emails: [
       Models::Shared::UcEmail.new(
-        email: 'Luther_Rogahn32@yahoo.com',
+        email: 'Norval_Brekke@gmail.com',
         type: Models::Shared::UcEmailType::WORK
       ),
     ],
-    first_name: 'Luther',
-    id: 'a149aefc-0fa4-4530-8cb3-59137d28e80e',
-    last_name: 'Rogahn',
+    first_name: 'Norval',
+    id: '9558a333-79c2-4b05-9757-9356f3a11be7',
+    last_name: 'Brekke',
     metadata: [],
-    name: 'Luther Rogahn',
+    name: 'Norval Brekke',
     telephones: [
       Models::Shared::UcTelephone.new(
-        telephone: '(809) 992-1681',
+        telephone: '(992) 368-1868',
         type: Models::Shared::UcTelephoneType::FAX
       ),
       Models::Shared::UcTelephone.new(
-        telephone: '(868) 238-2746',
+        telephone: '(238) 374-6019',
         type: Models::Shared::UcTelephoneType::HOME
       ),
       Models::Shared::UcTelephone.new(
-        telephone: '(219) 736-0357',
+        telephone: '(736) 235-7480',
         type: Models::Shared::UcTelephoneType::MOBILE
       ),
     ],
-    title: 'Chief Optimization Executive',
-    updated_at: DateTime.iso8601('2023-12-26T01:10:52.125Z')
+    title: 'Internal Creative Director',
+    updated_at: DateTime.iso8601('2023-12-29T13:26:17.338Z')
   ),
   connection_id: '<id>',
   id: '<id>'

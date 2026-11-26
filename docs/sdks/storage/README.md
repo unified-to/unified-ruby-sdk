@@ -29,21 +29,21 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.storage.create_storage_file(storage_file: Models::Shared::StorageFile.new(
   created_at: DateTime.iso8601('2021-09-12T16:48:23.774Z'),
-  description: 'Deprimo crastinus cupiditate debilito cimentarius virgo acidus.',
-  download_url: 'https://clueless-laughter.biz',
-  hash: 'd9d88dda7bc0acaa8472fdef2307f94a1fc355ce',
-  id: 'e1179942-87d2-4c59-ba51-b26c2e5353fa',
+  description: 'Debilito cimentarius virgo acidus thymbra.',
+  download_url: 'https://messy-clamp.net/',
+  hash: '9d88dda7bc0acaa8472fdef2307f94a1fc355cef',
+  id: '5e13b476-c6b0-4f78-ac2c-0e9aa73e1916',
   metadata: [],
   mime_type: 'application/pdf',
-  name: 'softly.pdf',
+  name: 'joshingly.pdf',
   size: 1_134_456.0,
   tags: [
-    'suasoria',
+    'derelinquo',
   ],
   type: Models::Shared::StorageFileType::FOLDER,
-  updated_at: DateTime.iso8601('2023-02-13T18:15:31.023Z'),
+  updated_at: DateTime.iso8601('2023-02-15T09:27:00.888Z'),
   version: '1',
-  web_url: 'https://faraway-inspection.org'
+  web_url: 'https://likable-widow.org/'
 ), connection_id: '<id>')
 
 unless res.storage_file.nil?
@@ -178,21 +178,21 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchStorageFileRequest.new(
   storage_file: Models::Shared::StorageFile.new(
     created_at: DateTime.iso8601('2021-09-12T16:48:23.774Z'),
-    description: 'Deprimo crastinus cupiditate debilito cimentarius virgo acidus.',
-    download_url: 'https://clueless-laughter.biz',
-    hash: 'd9d88dda7bc0acaa8472fdef2307f94a1fc355ce',
-    id: '92de4971-76be-46be-aef5-4a30732ccfc3',
+    description: 'Debilito cimentarius virgo acidus thymbra.',
+    download_url: 'https://messy-clamp.net/',
+    hash: '9d88dda7bc0acaa8472fdef2307f94a1fc355cef',
+    id: '06982bc3-97e7-48f0-ae54-c361838b7c85',
     metadata: [],
     mime_type: 'application/pdf',
-    name: 'softly.pdf',
+    name: 'joshingly.pdf',
     size: 1_134_456.0,
     tags: [
-      'suasoria',
+      'derelinquo',
     ],
     type: Models::Shared::StorageFileType::FOLDER,
-    updated_at: DateTime.iso8601('2023-02-13T18:15:31.026Z'),
+    updated_at: DateTime.iso8601('2023-02-15T09:27:00.896Z'),
     version: '1',
-    web_url: 'https://faraway-inspection.org'
+    web_url: 'https://likable-widow.org/'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -282,21 +282,21 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateStorageFileRequest.new(
   storage_file: Models::Shared::StorageFile.new(
     created_at: DateTime.iso8601('2021-09-12T16:48:23.774Z'),
-    description: 'Deprimo crastinus cupiditate debilito cimentarius virgo acidus.',
-    download_url: 'https://clueless-laughter.biz',
-    hash: 'd9d88dda7bc0acaa8472fdef2307f94a1fc355ce',
-    id: '92de4971-76be-46be-aef5-4a30732ccfc3',
+    description: 'Debilito cimentarius virgo acidus thymbra.',
+    download_url: 'https://messy-clamp.net/',
+    hash: '9d88dda7bc0acaa8472fdef2307f94a1fc355cef',
+    id: '06982bc3-97e7-48f0-ae54-c361838b7c85',
     metadata: [],
     mime_type: 'application/pdf',
-    name: 'softly.pdf',
+    name: 'joshingly.pdf',
     size: 1_134_456.0,
     tags: [
-      'suasoria',
+      'derelinquo',
     ],
     type: Models::Shared::StorageFileType::FOLDER,
-    updated_at: DateTime.iso8601('2023-02-13T18:15:31.026Z'),
+    updated_at: DateTime.iso8601('2023-02-15T09:27:00.896Z'),
     version: '1',
-    web_url: 'https://faraway-inspection.org'
+    web_url: 'https://likable-widow.org/'
   ),
   connection_id: '<id>',
   id: '<id>'

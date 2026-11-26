@@ -36,14 +36,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.expense.create_accounting_expense(accounting_expense: Models::Shared::AccountingExpense.new(
   attachments: [
     Models::Shared::AccountingAttachment.new(
-      download_url: 'https://rubbery-couch.biz/',
-      id: 'c1e24559-f3ec-4e2e-93a8-c9aac95070ee',
+      download_url: 'https://avaricious-larva.biz',
+      id: '0c4a1021-8e83-4849-8c1c-e0c1f944aa63',
       mime_type: 'application/pdf',
       name: 'receipt-9696.pdf'
     ),
     Models::Shared::AccountingAttachment.new(
-      download_url: 'https://appropriate-smog.biz/',
-      id: '068c32af-7453-4381-862c-416c8675678f',
+      download_url: 'https://precious-comparison.net/',
+      id: 'a00403c6-4d9f-4ba4-8519-53f6e6082f8a',
       mime_type: 'application/pdf',
       name: 'receipt-9696-1.pdf'
     ),
@@ -52,10 +52,10 @@ res = s.expense.create_accounting_expense(accounting_expense: Models::Shared::Ac
   created_at: DateTime.iso8601('2020-06-11T03:39:37.305Z'),
   currency: 'GBP',
   external_number: 'EXP-38303',
-  id: '9ce71cfa-a4b2-499f-918a-8a9b9150f475',
+  id: '89666e06-328c-457d-808e-af5ecff65169',
   lineitems: [
     Models::Shared::AccountingLineitem.new(
-      id: 'a50336a0-b0e8-430f-90a4-2434c3000d42',
+      id: '66938c30-b13c-4aa1-8fad-5909ce3a867f',
       item_name: 'Client dinner',
       tax_amount: 0.0,
       total_amount: 364.74,
@@ -63,7 +63,7 @@ res = s.expense.create_accounting_expense(accounting_expense: Models::Shared::Ac
       unit_quantity: 1.0
     ),
     Models::Shared::AccountingLineitem.new(
-      id: 'c2260f69-b2da-4206-bcd0-79e2c6291be6',
+      id: '39ba545b-afb2-4bab-a8e3-af903a6eaede',
       item_name: 'Client dinner',
       tax_amount: 0.0,
       total_amount: 258.35,
@@ -71,16 +71,16 @@ res = s.expense.create_accounting_expense(accounting_expense: Models::Shared::Ac
       unit_quantity: 1.0
     ),
     Models::Shared::AccountingLineitem.new(
-      id: 'f2b97f6c-9c2f-4d13-9065-fa93e6ca12c5',
+      id: 'e5246f5f-b8d6-4ea4-aa84-168d0d3812fd',
       item_name: 'Conference ticket',
-      notes: 'Casus umquam conicio cinis demitto sint.',
+      notes: 'Sint spiculum carcer ago charisma.',
       tax_amount: 0.0,
       total_amount: 28.14,
       unit_amount: 28.14,
       unit_quantity: 1.0
     ),
     Models::Shared::AccountingLineitem.new(
-      id: '001eee72-cacf-4957-84dd-738633afa60e',
+      id: '921ec444-3d71-413c-8f6e-3d5134eb0b31',
       item_name: 'Hotel',
       tax_amount: 0.0,
       total_amount: 157.04,
@@ -88,7 +88,7 @@ res = s.expense.create_accounting_expense(accounting_expense: Models::Shared::Ac
       unit_quantity: 1.0
     ),
     Models::Shared::AccountingLineitem.new(
-      id: 'b915915a-7498-403f-b189-d942d73f0c26',
+      id: '38a1de1f-6ef8-4934-ba4f-98aac4046f5a',
       item_name: 'Hotel',
       tax_amount: 0.0,
       total_amount: 164.02,
@@ -97,14 +97,14 @@ res = s.expense.create_accounting_expense(accounting_expense: Models::Shared::Ac
     ),
   ],
   metadata: [],
-  name: 'A payment of XPF 714.84 occurred at Bins, Barrows and Koch using a card ending in ****8422 for account ***4614.',
+  name: 'A deposit for KPW 867.85 was made at Kohler LLC via card ending ****1416 on account ***1040.',
   payment_method: 'CASH',
   posted_at: DateTime.iso8601('2020-06-11T03:39:37.305Z'),
   status: Models::Shared::AccountingExpenseStatus::SUBMITTED,
   tax_amount: 0.0,
   total_amount: 972.29,
   type: Models::Shared::AccountingExpenseType::COMPANY,
-  updated_at: DateTime.iso8601('2020-09-03T09:03:21.176Z')
+  updated_at: DateTime.iso8601('2020-09-03T14:10:33.151Z')
 ), connection_id: '<id>')
 
 unless res.accounting_expense.nil?
@@ -149,11 +149,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
   )
 )
 res = s.expense.create_legal_expense(legal_expense: Models::Shared::LegalExpense.new(
-  category: 'Kids',
+  category: 'Baby',
   created_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
-  currency: 'MVR',
-  description: 'Temporibus agnitio sui.',
-  id: '8318eea8-2eac-40a3-88fd-d3528c04a5af',
+  currency: 'GBP',
+  description: 'Nihil sono villa voluptate cohibeo quas volo succurro.',
+  id: '987f347e-bd3b-4cda-8ee9-38555f6d4622',
   incurred_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
   is_billed: false,
   metadata: [],
@@ -161,7 +161,7 @@ res = s.expense.create_legal_expense(legal_expense: Models::Shared::LegalExpense
   quantity: 3.0,
   total_amount: 300.0,
   type: Models::Shared::LegalExpenseType::OTHER,
-  updated_at: DateTime.iso8601('2024-04-17T01:47:42.037Z')
+  updated_at: DateTime.iso8601('2024-04-20T11:20:39.786Z')
 ), connection_id: '<id>')
 
 unless res.legal_expense.nil?
@@ -384,14 +384,14 @@ req = Models::Operations::PatchAccountingExpenseRequest.new(
   accounting_expense: Models::Shared::AccountingExpense.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
-        download_url: 'https://rubbery-couch.biz/',
-        id: '31d5bf95-1c4c-4b17-83f8-7a3f836737c1',
+        download_url: 'https://avaricious-larva.biz',
+        id: 'e16cfa70-24af-46ac-9a85-21aedc8cdbd4',
         mime_type: 'application/pdf',
         name: 'receipt-9696.pdf'
       ),
       Models::Shared::AccountingAttachment.new(
-        download_url: 'https://appropriate-smog.biz/',
-        id: '251edfcd-6310-4403-9460-ce4ae8d020d4',
+        download_url: 'https://precious-comparison.net/',
+        id: '4da16b1c-7bb2-42a0-a030-6d509e5d9ed8',
         mime_type: 'application/pdf',
         name: 'receipt-9696-1.pdf'
       ),
@@ -400,10 +400,10 @@ req = Models::Operations::PatchAccountingExpenseRequest.new(
     created_at: DateTime.iso8601('2020-06-11T03:39:37.305Z'),
     currency: 'GBP',
     external_number: 'EXP-38303',
-    id: 'd24b362e-e498-4298-a893-a973faa02400',
+    id: '8ef3047d-59e9-4359-8a3f-77226d385de3',
     lineitems: [
       Models::Shared::AccountingLineitem.new(
-        id: 'c1618869-5b77-4498-bd9b-d725b6894b47',
+        id: 'a3c44466-0811-4431-9ec8-72523914dc10',
         item_name: 'Client dinner',
         tax_amount: 0.0,
         total_amount: 364.74,
@@ -411,7 +411,7 @@ req = Models::Operations::PatchAccountingExpenseRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'd695f34d-6124-4ecc-a980-31d5ad3823a6',
+        id: 'dc4dbc89-f09c-44a3-9c08-10fca4286afb',
         item_name: 'Client dinner',
         tax_amount: 0.0,
         total_amount: 258.35,
@@ -419,16 +419,16 @@ req = Models::Operations::PatchAccountingExpenseRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '9c9da696-1c0a-466e-a815-da10dc1519cb',
+        id: 'ab268748-ce50-4e51-9d19-b05df780cbae',
         item_name: 'Conference ticket',
-        notes: 'Casus umquam conicio cinis demitto sint.',
+        notes: 'Sint spiculum carcer ago charisma.',
         tax_amount: 0.0,
         total_amount: 28.14,
         unit_amount: 28.14,
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'c4eb2c92-6008-4c81-9bd7-7c185031cfe4',
+        id: '601c3a64-67c0-4ce0-90b1-4915f0b7118b',
         item_name: 'Hotel',
         tax_amount: 0.0,
         total_amount: 157.04,
@@ -436,7 +436,7 @@ req = Models::Operations::PatchAccountingExpenseRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '6936ae1a-6df3-4af2-93bf-9ffffd345dc3',
+        id: 'f46a55a0-dc47-4ab7-a2b6-a48712db1cbc',
         item_name: 'Hotel',
         tax_amount: 0.0,
         total_amount: 164.02,
@@ -445,14 +445,14 @@ req = Models::Operations::PatchAccountingExpenseRequest.new(
       ),
     ],
     metadata: [],
-    name: 'A payment of XPF 714.84 occurred at Bins, Barrows and Koch using a card ending in ****8422 for account ***4614.',
+    name: 'A deposit for KPW 867.85 was made at Kohler LLC via card ending ****1416 on account ***1040.',
     payment_method: 'CASH',
     posted_at: DateTime.iso8601('2020-06-11T03:39:37.305Z'),
     status: Models::Shared::AccountingExpenseStatus::SUBMITTED,
     tax_amount: 0.0,
     total_amount: 972.29,
     type: Models::Shared::AccountingExpenseType::COMPANY,
-    updated_at: DateTime.iso8601('2020-09-03T09:03:21.178Z')
+    updated_at: DateTime.iso8601('2020-09-03T14:10:33.152Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -500,11 +500,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchLegalExpenseRequest.new(
   legal_expense: Models::Shared::LegalExpense.new(
-    category: 'Kids',
+    category: 'Baby',
     created_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
-    currency: 'MVR',
-    description: 'Temporibus agnitio sui.',
-    id: '8f4bf489-9833-471c-988f-668539ba5af3',
+    currency: 'GBP',
+    description: 'Nihil sono villa voluptate cohibeo quas volo succurro.',
+    id: '3d81c602-50e9-4be1-88ae-40dee9a48966',
     incurred_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
     is_billed: false,
     metadata: [],
@@ -512,7 +512,7 @@ req = Models::Operations::PatchLegalExpenseRequest.new(
     quantity: 3.0,
     total_amount: 300.0,
     type: Models::Shared::LegalExpenseType::OTHER,
-    updated_at: DateTime.iso8601('2024-04-17T01:47:42.046Z')
+    updated_at: DateTime.iso8601('2024-04-20T11:20:39.794Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -644,14 +644,14 @@ req = Models::Operations::UpdateAccountingExpenseRequest.new(
   accounting_expense: Models::Shared::AccountingExpense.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
-        download_url: 'https://rubbery-couch.biz/',
-        id: '31d5bf95-1c4c-4b17-83f8-7a3f836737c1',
+        download_url: 'https://avaricious-larva.biz',
+        id: 'e16cfa70-24af-46ac-9a85-21aedc8cdbd4',
         mime_type: 'application/pdf',
         name: 'receipt-9696.pdf'
       ),
       Models::Shared::AccountingAttachment.new(
-        download_url: 'https://appropriate-smog.biz/',
-        id: '251edfcd-6310-4403-9460-ce4ae8d020d4',
+        download_url: 'https://precious-comparison.net/',
+        id: '4da16b1c-7bb2-42a0-a030-6d509e5d9ed8',
         mime_type: 'application/pdf',
         name: 'receipt-9696-1.pdf'
       ),
@@ -660,10 +660,10 @@ req = Models::Operations::UpdateAccountingExpenseRequest.new(
     created_at: DateTime.iso8601('2020-06-11T03:39:37.305Z'),
     currency: 'GBP',
     external_number: 'EXP-38303',
-    id: 'd24b362e-e498-4298-a893-a973faa02400',
+    id: '8ef3047d-59e9-4359-8a3f-77226d385de3',
     lineitems: [
       Models::Shared::AccountingLineitem.new(
-        id: 'c1618869-5b77-4498-bd9b-d725b6894b47',
+        id: 'a3c44466-0811-4431-9ec8-72523914dc10',
         item_name: 'Client dinner',
         tax_amount: 0.0,
         total_amount: 364.74,
@@ -671,7 +671,7 @@ req = Models::Operations::UpdateAccountingExpenseRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'd695f34d-6124-4ecc-a980-31d5ad3823a6',
+        id: 'dc4dbc89-f09c-44a3-9c08-10fca4286afb',
         item_name: 'Client dinner',
         tax_amount: 0.0,
         total_amount: 258.35,
@@ -679,16 +679,16 @@ req = Models::Operations::UpdateAccountingExpenseRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '9c9da696-1c0a-466e-a815-da10dc1519cb',
+        id: 'ab268748-ce50-4e51-9d19-b05df780cbae',
         item_name: 'Conference ticket',
-        notes: 'Casus umquam conicio cinis demitto sint.',
+        notes: 'Sint spiculum carcer ago charisma.',
         tax_amount: 0.0,
         total_amount: 28.14,
         unit_amount: 28.14,
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'c4eb2c92-6008-4c81-9bd7-7c185031cfe4',
+        id: '601c3a64-67c0-4ce0-90b1-4915f0b7118b',
         item_name: 'Hotel',
         tax_amount: 0.0,
         total_amount: 157.04,
@@ -696,7 +696,7 @@ req = Models::Operations::UpdateAccountingExpenseRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '6936ae1a-6df3-4af2-93bf-9ffffd345dc3',
+        id: 'f46a55a0-dc47-4ab7-a2b6-a48712db1cbc',
         item_name: 'Hotel',
         tax_amount: 0.0,
         total_amount: 164.02,
@@ -705,14 +705,14 @@ req = Models::Operations::UpdateAccountingExpenseRequest.new(
       ),
     ],
     metadata: [],
-    name: 'A payment of XPF 714.84 occurred at Bins, Barrows and Koch using a card ending in ****8422 for account ***4614.',
+    name: 'A deposit for KPW 867.85 was made at Kohler LLC via card ending ****1416 on account ***1040.',
     payment_method: 'CASH',
     posted_at: DateTime.iso8601('2020-06-11T03:39:37.305Z'),
     status: Models::Shared::AccountingExpenseStatus::SUBMITTED,
     tax_amount: 0.0,
     total_amount: 972.29,
     type: Models::Shared::AccountingExpenseType::COMPANY,
-    updated_at: DateTime.iso8601('2020-09-03T09:03:21.178Z')
+    updated_at: DateTime.iso8601('2020-09-03T14:10:33.152Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -760,11 +760,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateLegalExpenseRequest.new(
   legal_expense: Models::Shared::LegalExpense.new(
-    category: 'Kids',
+    category: 'Baby',
     created_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
-    currency: 'MVR',
-    description: 'Temporibus agnitio sui.',
-    id: '8f4bf489-9833-471c-988f-668539ba5af3',
+    currency: 'GBP',
+    description: 'Nihil sono villa voluptate cohibeo quas volo succurro.',
+    id: '3d81c602-50e9-4be1-88ae-40dee9a48966',
     incurred_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
     is_billed: false,
     metadata: [],
@@ -772,7 +772,7 @@ req = Models::Operations::UpdateLegalExpenseRequest.new(
     quantity: 3.0,
     total_amount: 300.0,
     type: Models::Shared::LegalExpenseType::OTHER,
-    updated_at: DateTime.iso8601('2024-04-17T01:47:42.046Z')
+    updated_at: DateTime.iso8601('2024-04-20T11:20:39.794Z')
   ),
   connection_id: '<id>',
   id: '<id>'

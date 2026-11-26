@@ -28,30 +28,30 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
   )
 )
 res = s.timeoff.create_hris_timeoff(hris_timeoff: Models::Shared::HrisTimeoff.new(
-  approved_at: DateTime.iso8601('2022-02-25T15:45:53.765Z'),
+  approved_at: DateTime.iso8601('2022-02-26T02:37:02.505Z'),
   attachments: [
     Models::Shared::HrisAttachment.new(
       content_type: 'application/pdf',
       download_url: '',
-      filename: 'nemo.pdf',
-      id: '3f3418c2-fdad-4738-b630-4cb0d2f3fb16',
+      filename: 'venia.pdf',
+      id: '3418c2fd-ad73-4863-b04c-b0d2f3fb16e9',
       size: 709_170.0
     ),
   ],
-  comments: 'Blandior ventus curiositas amplitudo.',
+  comments: 'Amplitudo aureus voluptas.',
   created_at: DateTime.iso8601('2021-10-06T18:00:20.615Z'),
   duration: 4.0,
   duration_type: Models::Shared::DurationType::DAY,
-  end_at: DateTime.iso8601('2025-01-16T22:29:43.121Z'),
-  id: '6624f0be-0bbf-4de5-89d2-ff296ec35131',
+  end_at: DateTime.iso8601('2025-01-20T18:07:39.589Z'),
+  id: '4c3b68fb-f8be-4b19-87d1-e8876fc46330',
   is_paid: true,
   metadata: [],
-  original_type: 'acerbitas ut',
-  reason: 'verto',
-  start_at: DateTime.iso8601('2023-09-16T04:28:22.707Z'),
+  original_type: 'blandior ventus',
+  reason: 'tam',
+  start_at: DateTime.iso8601('2023-09-18T10:43:39.693Z'),
   status: Models::Shared::HrisTimeoffStatus::DENIED,
   type: Models::Shared::HrisTimeoffType::IN_LIEU,
-  updated_at: DateTime.iso8601('2022-07-17T08:52:01.659Z'),
+  updated_at: DateTime.iso8601('2022-07-18T06:33:25.717Z'),
   user_id: '<id>'
 ), connection_id: '<id>')
 
@@ -186,30 +186,30 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchHrisTimeoffRequest.new(
   hris_timeoff: Models::Shared::HrisTimeoff.new(
-    approved_at: DateTime.iso8601('2022-02-25T15:45:53.766Z'),
+    approved_at: DateTime.iso8601('2022-02-26T02:37:02.507Z'),
     attachments: [
       Models::Shared::HrisAttachment.new(
         content_type: 'application/pdf',
         download_url: '',
-        filename: 'nemo.pdf',
-        id: '3f3418c2-fdad-4738-b630-4cb0d2f3fb16',
+        filename: 'venia.pdf',
+        id: '3418c2fd-ad73-4863-b04c-b0d2f3fb16e9',
         size: 709_170.0
       ),
     ],
-    comments: 'Blandior ventus curiositas amplitudo.',
+    comments: 'Amplitudo aureus voluptas.',
     created_at: DateTime.iso8601('2021-10-06T18:00:20.615Z'),
     duration: 4.0,
     duration_type: Models::Shared::DurationType::DAY,
-    end_at: DateTime.iso8601('2025-01-16T22:29:43.127Z'),
-    id: '3f649cb9-1f1e-40da-9eff-6cede70fb19f',
+    end_at: DateTime.iso8601('2025-01-20T18:07:39.606Z'),
+    id: '8ee35c50-618b-4991-b1b0-a2d6e3e6afe5',
     is_paid: true,
     metadata: [],
-    original_type: 'acerbitas ut',
-    reason: 'verto',
-    start_at: DateTime.iso8601('2023-09-16T04:28:22.711Z'),
+    original_type: 'blandior ventus',
+    reason: 'tam',
+    start_at: DateTime.iso8601('2023-09-18T10:43:39.703Z'),
     status: Models::Shared::HrisTimeoffStatus::DENIED,
     type: Models::Shared::HrisTimeoffType::IN_LIEU,
-    updated_at: DateTime.iso8601('2022-07-17T08:52:01.661Z'),
+    updated_at: DateTime.iso8601('2022-07-18T06:33:25.721Z'),
     user_id: '<id>'
   ),
   connection_id: '<id>',
@@ -299,30 +299,30 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateHrisTimeoffRequest.new(
   hris_timeoff: Models::Shared::HrisTimeoff.new(
-    approved_at: DateTime.iso8601('2022-02-25T15:45:53.766Z'),
+    approved_at: DateTime.iso8601('2022-02-26T02:37:02.507Z'),
     attachments: [
       Models::Shared::HrisAttachment.new(
         content_type: 'application/pdf',
         download_url: '',
-        filename: 'nemo.pdf',
-        id: '3f3418c2-fdad-4738-b630-4cb0d2f3fb16',
+        filename: 'venia.pdf',
+        id: '3418c2fd-ad73-4863-b04c-b0d2f3fb16e9',
         size: 709_170.0
       ),
     ],
-    comments: 'Blandior ventus curiositas amplitudo.',
+    comments: 'Amplitudo aureus voluptas.',
     created_at: DateTime.iso8601('2021-10-06T18:00:20.615Z'),
     duration: 4.0,
     duration_type: Models::Shared::DurationType::DAY,
-    end_at: DateTime.iso8601('2025-01-16T22:29:43.127Z'),
-    id: '3f649cb9-1f1e-40da-9eff-6cede70fb19f',
+    end_at: DateTime.iso8601('2025-01-20T18:07:39.606Z'),
+    id: '8ee35c50-618b-4991-b1b0-a2d6e3e6afe5',
     is_paid: true,
     metadata: [],
-    original_type: 'acerbitas ut',
-    reason: 'verto',
-    start_at: DateTime.iso8601('2023-09-16T04:28:22.711Z'),
+    original_type: 'blandior ventus',
+    reason: 'tam',
+    start_at: DateTime.iso8601('2023-09-18T10:43:39.703Z'),
     status: Models::Shared::HrisTimeoffStatus::DENIED,
     type: Models::Shared::HrisTimeoffType::IN_LIEU,
-    updated_at: DateTime.iso8601('2022-07-17T08:52:01.661Z'),
+    updated_at: DateTime.iso8601('2022-07-18T06:33:25.721Z'),
     user_id: '<id>'
   ),
   connection_id: '<id>',

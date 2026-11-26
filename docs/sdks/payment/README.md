@@ -45,18 +45,21 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.payment.create_payment_link(payment_link: Models::Shared::PaymentLink.new(
   amount: 17_001.68,
+  contact_email: 'Clovis8@yahoo.com',
+  contact_name: 'Lilliana Dibbert',
+  contact_phone: '963-764-0961',
   created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
   currency: 'CAD',
-  description: 'Savor the tender essence in our Ball, designed for dim culinary adventures',
-  id: '3c007901-8aa5-483b-a1a8-ea3a92c3b7dc',
+  description: 'The Daron Sausages is the latest in a series of informal products from Dach, Beatty and Moen',
+  id: 'b852986f-21a1-432a-a63d-ba1fc6023fe3',
   is_active: true,
   is_chargeable_now: true,
   lineitems: [
     Models::Shared::PaymentLineitem.new(
       created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-      id: 'a25f1ef5-4d65-4a43-adca-2642de4fcf4c',
-      item_description: 'Discover the worst new Computer with an exciting mix of Steel ingredients',
-      item_name: 'Soft Marble Cheese',
+      id: '2dde74f4-92eb-491e-acd3-5b357281c1e7',
+      item_description: 'Introducing the Syrian Arab Republic-inspired Chips, blending neat style with local craftsmanship',
+      item_name: 'Electronic Metal Tuna',
       tax_amount: 0.0,
       total_amount: 9342.0,
       unit_amount: 519.0,
@@ -66,10 +69,10 @@ res = s.payment.create_payment_link(payment_link: Models::Shared::PaymentLink.ne
     Models::Shared::PaymentLineitem.new(
       created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
       discount_amount: 424.32,
-      id: '35fa0d68-cc88-4cf2-b8ea-eed660f0c7a1',
-      item_description: 'Innovative Shoes featuring utilized technology and Cotton construction',
-      item_name: 'Sleek Aluminum Shoes',
-      notes: 'Cervus decretum viridis doloremque.',
+      id: '54958e50-4e68-4398-90f3-c2f03b982613',
+      item_description: 'Soft Computer designed with Bronze for junior performance',
+      item_name: 'Rustic Concrete Shoes',
+      notes: 'Doloremque appositus cito cursim bellicus rerum ubi voluptatibus.',
       tax_amount: 0.0,
       total_amount: 6647.68,
       unit_amount: 884.0,
@@ -78,10 +81,10 @@ res = s.payment.create_payment_link(payment_link: Models::Shared::PaymentLink.ne
     ),
     Models::Shared::PaymentLineitem.new(
       created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-      id: '7400e14c-1867-4b92-934f-7d9c2037bad2',
-      item_description: 'Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance',
-      item_name: 'Elegant Concrete Gloves',
-      notes: 'Desipio usque vacuus currus cetera testimonium.',
+      id: '3d966e35-b272-484d-b702-85a876eba2e7',
+      item_description: 'The Donnie Shirt is the latest in a series of tinted products from Nitzsche and Sons',
+      item_name: 'Intelligent Marble Keyboard',
+      notes: 'Damnatio aut bene.',
       tax_amount: 0.0,
       total_amount: 1012.0,
       unit_amount: 506.0,
@@ -90,9 +93,9 @@ res = s.payment.create_payment_link(payment_link: Models::Shared::PaymentLink.ne
     ),
   ],
   metadata: [],
-  success_url: 'https://tinted-jet.info',
-  updated_at: DateTime.iso8601('2024-04-21T00:29:25.227Z'),
-  url: 'https://pay.example.com/3c007901-8aa5-483b-a1a8-ea3a92c3b7dc'
+  success_url: 'https://finished-retention.com',
+  updated_at: DateTime.iso8601('2024-04-22T12:50:35.928Z'),
+  url: 'https://pay.example.com/b852986f-21a1-432a-a63d-ba1fc6023fe3'
 ), connection_id: '<id>')
 
 unless res.payment_link.nil?
@@ -139,15 +142,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.payment.create_payment_payment(payment_payment: Models::Shared::PaymentPayment.new(
   allocations: [],
   card_brand: 'MASTERCARD',
-  card_last4: '1529',
+  card_last4: '8048',
   category_ids: [],
   created_at: DateTime.iso8601('2022-03-10T00:19:42.086Z'),
   currency: 'EUR',
   fee_amount: 2055.82,
-  id: '2440fc43-71b7-466e-ada3-56ee5332da7f',
+  id: 'dac305d2-4e64-4785-852e-73fad7b02cb0',
   metadata: [],
   net_amount: 68_824.18,
-  notes: 'Bibo tactus vilicus.',
+  notes: 'Auctus patruus causa vulnus decet thymum curvo eligendi.',
   paid_at: DateTime.iso8601('2022-03-10T00:19:42.086Z'),
   payment_method: 'CASH',
   reference: 'PMT-119080',
@@ -156,7 +159,7 @@ res = s.payment.create_payment_payment(payment_payment: Models::Shared::PaymentP
   tip_amount: 0.0,
   total_amount: 70_880.0,
   type: Models::Shared::PaymentPaymentType::INVOICE,
-  updated_at: DateTime.iso8601('2025-10-31T07:04:51.183Z')
+  updated_at: DateTime.iso8601('2025-11-04T22:02:40.226Z')
 ), connection_id: '<id>')
 
 unless res.payment_payment.nil?
@@ -206,8 +209,8 @@ res = s.payment.create_payment_subscription(payment_subscription: Models::Shared
   current_period_end_at: DateTime.iso8601('2024-02-08T10:05:22.912Z'),
   current_period_start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
   day_of_month: 8.0,
-  description: 'Innovative Mouse featuring important technology and Bamboo construction',
-  id: '8d5bedb0-3dab-4498-89a8-80e7750b797c',
+  description: 'New Bike model with 94 GB RAM, 813 GB storage, and narrow features',
+  id: '8959891f-e861-4cbb-9a36-c3f19c3e6368',
   interval: 1.0,
   interval_unit: Models::Shared::IntervalUnit::YEAR,
   lineitems: [],
@@ -216,7 +219,7 @@ res = s.payment.create_payment_subscription(payment_subscription: Models::Shared
   start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
   status: Models::Shared::PaymentSubscriptionStatus::ACTIVE,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2023-10-08T01:58:01.387Z')
+  updated_at: DateTime.iso8601('2023-10-08T18:52:20.743Z')
 ), connection_id: '<id>')
 
 unless res.payment_subscription.nil?
@@ -699,18 +702,21 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchPaymentLinkRequest.new(
   payment_link: Models::Shared::PaymentLink.new(
     amount: 17_001.68,
+    contact_email: 'Clovis8@yahoo.com',
+    contact_name: 'Lilliana Dibbert',
+    contact_phone: '963-764-0961',
     created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
     currency: 'CAD',
-    description: 'Savor the tender essence in our Ball, designed for dim culinary adventures',
-    id: 'a57a78d3-bd55-4edd-9933-0f8d4dba3044',
+    description: 'The Daron Sausages is the latest in a series of informal products from Dach, Beatty and Moen',
+    id: 'c5dd8dbf-2b8f-413c-940d-f052562c5dc6',
     is_active: true,
     is_chargeable_now: true,
     lineitems: [
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-        id: '30e229dc-7695-46eb-aa35-936a48ee9f33',
-        item_description: 'Discover the worst new Computer with an exciting mix of Steel ingredients',
-        item_name: 'Soft Marble Cheese',
+        id: 'bd59c50d-0c08-490c-baa7-2579f0e9eb8c',
+        item_description: 'Introducing the Syrian Arab Republic-inspired Chips, blending neat style with local craftsmanship',
+        item_name: 'Electronic Metal Tuna',
         tax_amount: 0.0,
         total_amount: 9342.0,
         unit_amount: 519.0,
@@ -720,10 +726,10 @@ req = Models::Operations::PatchPaymentLinkRequest.new(
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
         discount_amount: 424.32,
-        id: 'a86e9134-0a8f-4895-9514-05c0ba9bde19',
-        item_description: 'Innovative Shoes featuring utilized technology and Cotton construction',
-        item_name: 'Sleek Aluminum Shoes',
-        notes: 'Cervus decretum viridis doloremque.',
+        id: 'd05491bb-3ac9-464d-818b-cf5630ff0346',
+        item_description: 'Soft Computer designed with Bronze for junior performance',
+        item_name: 'Rustic Concrete Shoes',
+        notes: 'Doloremque appositus cito cursim bellicus rerum ubi voluptatibus.',
         tax_amount: 0.0,
         total_amount: 6647.68,
         unit_amount: 884.0,
@@ -732,10 +738,10 @@ req = Models::Operations::PatchPaymentLinkRequest.new(
       ),
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-        id: '8c4e2ca0-fc76-4190-a170-cea83443323a',
-        item_description: 'Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance',
-        item_name: 'Elegant Concrete Gloves',
-        notes: 'Desipio usque vacuus currus cetera testimonium.',
+        id: '77d79b19-3af8-4732-860f-b418e91596f5',
+        item_description: 'The Donnie Shirt is the latest in a series of tinted products from Nitzsche and Sons',
+        item_name: 'Intelligent Marble Keyboard',
+        notes: 'Damnatio aut bene.',
         tax_amount: 0.0,
         total_amount: 1012.0,
         unit_amount: 506.0,
@@ -744,9 +750,9 @@ req = Models::Operations::PatchPaymentLinkRequest.new(
       ),
     ],
     metadata: [],
-    success_url: 'https://tinted-jet.info',
-    updated_at: DateTime.iso8601('2024-04-21T00:29:25.231Z'),
-    url: 'https://pay.example.com/a57a78d3-bd55-4edd-9933-0f8d4dba3044'
+    success_url: 'https://finished-retention.com',
+    updated_at: DateTime.iso8601('2024-04-22T12:50:35.934Z'),
+    url: 'https://pay.example.com/c5dd8dbf-2b8f-413c-940d-f052562c5dc6'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -796,15 +802,15 @@ req = Models::Operations::PatchPaymentPaymentRequest.new(
   payment_payment: Models::Shared::PaymentPayment.new(
     allocations: [],
     card_brand: 'MASTERCARD',
-    card_last4: '1529',
+    card_last4: '8048',
     category_ids: [],
     created_at: DateTime.iso8601('2022-03-10T00:19:42.086Z'),
     currency: 'EUR',
     fee_amount: 2055.82,
-    id: 'fcdf96eb-d023-4a37-a2cf-1f3317e0e354',
+    id: 'cdd12cfb-06af-44fe-88c8-789929deb95f',
     metadata: [],
     net_amount: 68_824.18,
-    notes: 'Bibo tactus vilicus.',
+    notes: 'Auctus patruus causa vulnus decet thymum curvo eligendi.',
     paid_at: DateTime.iso8601('2022-03-10T00:19:42.086Z'),
     payment_method: 'CASH',
     reference: 'PMT-119080',
@@ -813,7 +819,7 @@ req = Models::Operations::PatchPaymentPaymentRequest.new(
     tip_amount: 0.0,
     total_amount: 70_880.0,
     type: Models::Shared::PaymentPaymentType::INVOICE,
-    updated_at: DateTime.iso8601('2025-10-31T07:04:51.203Z')
+    updated_at: DateTime.iso8601('2025-11-04T22:02:40.245Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -866,8 +872,8 @@ req = Models::Operations::PatchPaymentSubscriptionRequest.new(
     current_period_end_at: DateTime.iso8601('2024-02-08T10:05:22.912Z'),
     current_period_start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     day_of_month: 8.0,
-    description: 'Innovative Mouse featuring important technology and Bamboo construction',
-    id: '656c31cc-f06d-4c7c-9157-8c8fabcf5523',
+    description: 'New Bike model with 94 GB RAM, 813 GB storage, and narrow features',
+    id: 'd81217f1-6019-4ad1-a743-cfde982e27d1',
     interval: 1.0,
     interval_unit: Models::Shared::IntervalUnit::YEAR,
     lineitems: [],
@@ -876,7 +882,7 @@ req = Models::Operations::PatchPaymentSubscriptionRequest.new(
     start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     status: Models::Shared::PaymentSubscriptionStatus::ACTIVE,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-10-08T01:58:01.391Z')
+    updated_at: DateTime.iso8601('2023-10-08T18:52:20.746Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1048,18 +1054,21 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdatePaymentLinkRequest.new(
   payment_link: Models::Shared::PaymentLink.new(
     amount: 17_001.68,
+    contact_email: 'Clovis8@yahoo.com',
+    contact_name: 'Lilliana Dibbert',
+    contact_phone: '963-764-0961',
     created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
     currency: 'CAD',
-    description: 'Savor the tender essence in our Ball, designed for dim culinary adventures',
-    id: 'a57a78d3-bd55-4edd-9933-0f8d4dba3044',
+    description: 'The Daron Sausages is the latest in a series of informal products from Dach, Beatty and Moen',
+    id: 'c5dd8dbf-2b8f-413c-940d-f052562c5dc6',
     is_active: true,
     is_chargeable_now: true,
     lineitems: [
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-        id: '30e229dc-7695-46eb-aa35-936a48ee9f33',
-        item_description: 'Discover the worst new Computer with an exciting mix of Steel ingredients',
-        item_name: 'Soft Marble Cheese',
+        id: 'bd59c50d-0c08-490c-baa7-2579f0e9eb8c',
+        item_description: 'Introducing the Syrian Arab Republic-inspired Chips, blending neat style with local craftsmanship',
+        item_name: 'Electronic Metal Tuna',
         tax_amount: 0.0,
         total_amount: 9342.0,
         unit_amount: 519.0,
@@ -1069,10 +1078,10 @@ req = Models::Operations::UpdatePaymentLinkRequest.new(
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
         discount_amount: 424.32,
-        id: 'a86e9134-0a8f-4895-9514-05c0ba9bde19',
-        item_description: 'Innovative Shoes featuring utilized technology and Cotton construction',
-        item_name: 'Sleek Aluminum Shoes',
-        notes: 'Cervus decretum viridis doloremque.',
+        id: 'd05491bb-3ac9-464d-818b-cf5630ff0346',
+        item_description: 'Soft Computer designed with Bronze for junior performance',
+        item_name: 'Rustic Concrete Shoes',
+        notes: 'Doloremque appositus cito cursim bellicus rerum ubi voluptatibus.',
         tax_amount: 0.0,
         total_amount: 6647.68,
         unit_amount: 884.0,
@@ -1081,10 +1090,10 @@ req = Models::Operations::UpdatePaymentLinkRequest.new(
       ),
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-        id: '8c4e2ca0-fc76-4190-a170-cea83443323a',
-        item_description: 'Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance',
-        item_name: 'Elegant Concrete Gloves',
-        notes: 'Desipio usque vacuus currus cetera testimonium.',
+        id: '77d79b19-3af8-4732-860f-b418e91596f5',
+        item_description: 'The Donnie Shirt is the latest in a series of tinted products from Nitzsche and Sons',
+        item_name: 'Intelligent Marble Keyboard',
+        notes: 'Damnatio aut bene.',
         tax_amount: 0.0,
         total_amount: 1012.0,
         unit_amount: 506.0,
@@ -1093,9 +1102,9 @@ req = Models::Operations::UpdatePaymentLinkRequest.new(
       ),
     ],
     metadata: [],
-    success_url: 'https://tinted-jet.info',
-    updated_at: DateTime.iso8601('2024-04-21T00:29:25.231Z'),
-    url: 'https://pay.example.com/a57a78d3-bd55-4edd-9933-0f8d4dba3044'
+    success_url: 'https://finished-retention.com',
+    updated_at: DateTime.iso8601('2024-04-22T12:50:35.934Z'),
+    url: 'https://pay.example.com/c5dd8dbf-2b8f-413c-940d-f052562c5dc6'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1145,15 +1154,15 @@ req = Models::Operations::UpdatePaymentPaymentRequest.new(
   payment_payment: Models::Shared::PaymentPayment.new(
     allocations: [],
     card_brand: 'MASTERCARD',
-    card_last4: '1529',
+    card_last4: '8048',
     category_ids: [],
     created_at: DateTime.iso8601('2022-03-10T00:19:42.086Z'),
     currency: 'EUR',
     fee_amount: 2055.82,
-    id: 'fcdf96eb-d023-4a37-a2cf-1f3317e0e354',
+    id: 'cdd12cfb-06af-44fe-88c8-789929deb95f',
     metadata: [],
     net_amount: 68_824.18,
-    notes: 'Bibo tactus vilicus.',
+    notes: 'Auctus patruus causa vulnus decet thymum curvo eligendi.',
     paid_at: DateTime.iso8601('2022-03-10T00:19:42.086Z'),
     payment_method: 'CASH',
     reference: 'PMT-119080',
@@ -1162,7 +1171,7 @@ req = Models::Operations::UpdatePaymentPaymentRequest.new(
     tip_amount: 0.0,
     total_amount: 70_880.0,
     type: Models::Shared::PaymentPaymentType::INVOICE,
-    updated_at: DateTime.iso8601('2025-10-31T07:04:51.203Z')
+    updated_at: DateTime.iso8601('2025-11-04T22:02:40.245Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1215,8 +1224,8 @@ req = Models::Operations::UpdatePaymentSubscriptionRequest.new(
     current_period_end_at: DateTime.iso8601('2024-02-08T10:05:22.912Z'),
     current_period_start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     day_of_month: 8.0,
-    description: 'Innovative Mouse featuring important technology and Bamboo construction',
-    id: '656c31cc-f06d-4c7c-9157-8c8fabcf5523',
+    description: 'New Bike model with 94 GB RAM, 813 GB storage, and narrow features',
+    id: 'd81217f1-6019-4ad1-a743-cfde982e27d1',
     interval: 1.0,
     interval_unit: Models::Shared::IntervalUnit::YEAR,
     lineitems: [],
@@ -1225,7 +1234,7 @@ req = Models::Operations::UpdatePaymentSubscriptionRequest.new(
     start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     status: Models::Shared::PaymentSubscriptionStatus::ACTIVE,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-10-08T01:58:01.391Z')
+    updated_at: DateTime.iso8601('2023-10-08T18:52:20.746Z')
   ),
   connection_id: '<id>',
   id: '<id>'

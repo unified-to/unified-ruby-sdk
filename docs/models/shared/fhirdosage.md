@@ -1,0 +1,10 @@
+# FhirDosage
+
+
+## Fields
+
+| Field                                                                                                | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `dose_and_rate`                                                                                      | T::Array<[Models::Shared::FhirDoseAndRate](../../models/shared/fhirdoseandrate.md)>                  | :heavy_minus_sign:                                                                                   | Amount of medication administered                                                                    |
+| `route`                                                                                              | [T.nilable(Models::Shared::PropertyFhirDosageRoute)](../../models/shared/propertyfhirdosageroute.md) | :heavy_minus_sign:                                                                                   | How drug should enter body                                                                           |
+| `text`                                                                                               | *T.nilable(::String)*                                                                                | :heavy_minus_sign:                                                                                   | Free text dosage instructions e.g. SIG                                                               |

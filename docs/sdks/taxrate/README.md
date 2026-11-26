@@ -39,16 +39,16 @@ res = s.taxrate.create_accounting_taxrate(accounting_taxrate: Models::Shared::Ac
   created_at: DateTime.iso8601('2020-01-04T10:37:56.894Z'),
   description: 'Exempt (0%)',
   effective_rate: 0.0,
-  id: 'f9d9a4f8-360f-4fa2-a105-0e4cfcaedde0',
+  id: '159002f0-2d60-4394-8b45-db90f2c63304',
   is_active: false,
   is_compound: false,
   metadata: [],
   name: 'Exempt',
   rate: 0.0,
-  region: 'KS',
+  region: 'FL',
   total_rate: 0.0,
   type: Models::Shared::AccountingTaxrateType::SALES,
-  updated_at: DateTime.iso8601('2020-02-13T16:42:05.818Z')
+  updated_at: DateTime.iso8601('2020-02-13T18:59:38.199Z')
 ), connection_id: '<id>')
 
 unless res.accounting_taxrate.nil?
@@ -193,16 +193,16 @@ req = Models::Operations::PatchAccountingTaxrateRequest.new(
     created_at: DateTime.iso8601('2020-01-04T10:37:56.894Z'),
     description: 'Exempt (0%)',
     effective_rate: 0.0,
-    id: '5fa5933f-7734-47ec-b010-cb8bc69ac810',
+    id: 'a60e2787-20d9-41e0-9818-13c0d05560d6',
     is_active: false,
     is_compound: false,
     metadata: [],
     name: 'Exempt',
     rate: 0.0,
-    region: 'KS',
+    region: 'FL',
     total_rate: 0.0,
     type: Models::Shared::AccountingTaxrateType::SALES,
-    updated_at: DateTime.iso8601('2020-02-13T16:42:05.818Z')
+    updated_at: DateTime.iso8601('2020-02-13T18:59:38.200Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -302,16 +302,16 @@ req = Models::Operations::UpdateAccountingTaxrateRequest.new(
     created_at: DateTime.iso8601('2020-01-04T10:37:56.894Z'),
     description: 'Exempt (0%)',
     effective_rate: 0.0,
-    id: '5fa5933f-7734-47ec-b010-cb8bc69ac810',
+    id: 'a60e2787-20d9-41e0-9818-13c0d05560d6',
     is_active: false,
     is_compound: false,
     metadata: [],
     name: 'Exempt',
     rate: 0.0,
-    region: 'KS',
+    region: 'FL',
     total_rate: 0.0,
     type: Models::Shared::AccountingTaxrateType::SALES,
-    updated_at: DateTime.iso8601('2020-02-13T16:42:05.818Z')
+    updated_at: DateTime.iso8601('2020-02-13T18:59:38.200Z')
   ),
   connection_id: '<id>',
   id: '<id>'

@@ -36,17 +36,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.reservation.create_commerce_reservation(commerce_reservation: Models::Shared::CommerceReservation.new(
   created_at: DateTime.iso8601('2021-12-14T19:50:31.151Z'),
   end_at: DateTime.iso8601('2022-01-01T22:00:17.868Z'),
-  guest_email: 'julien.bartoletti@icloud.com',
-  guest_name: 'Julien Bartoletti',
-  guest_phone: '(728) 596-2620',
-  id: '27741023-523a-4682-a6bd-34b147391c1d',
+  guest_email: 'alford.schiller@icloud.com',
+  guest_name: 'Alford Schiller',
+  guest_phone: '(849) 626-2062',
+  id: '2090d9dc-87c6-4a9c-ad4f-edabee7a0fd3',
   metadata: [],
-  notes: 'Adsum textilis ipsum despecto.',
+  notes: 'Despecto stultus calculus.',
   size: 10.0,
   start_at: DateTime.iso8601('2021-12-18T00:40:25.125Z'),
   status: Models::Shared::CommerceReservationStatus::PENDING,
-  updated_at: DateTime.iso8601('2023-01-10T09:54:06.326Z'),
-  url: 'https://expensive-gift.org'
+  updated_at: DateTime.iso8601('2023-01-11T16:59:49.681Z'),
+  url: 'https://wee-tuba.biz/'
 ), connection_id: '<id>')
 
 unless res.commerce_reservation.nil?
@@ -94,15 +94,15 @@ res = s.reservation.create_property_reservation(property_reservation: Models::Sh
   adults: 4.0,
   balance_amount: 2181.6,
   children: 2.0,
-  confirmation_code: 'GNLTDDQ88Z',
+  confirmation_code: 'TDDQ88ZYCY',
   created_at: DateTime.iso8601('2022-06-03T01:40:03.655Z'),
   currency: 'USD',
   end_at: DateTime.iso8601('2022-10-06T17:17:08.838Z'),
   estimated_departure_time: '10:00',
-  guest_email: 'anya.parisian@hotmail.com',
-  guest_name: 'Anya Parisian',
+  guest_email: 'mariam.metz@hotmail.com',
+  guest_name: 'Mariam Metz',
   guests: 6.0,
-  id: '7330e4fe-d577-4162-853d-bc70d950d965',
+  id: '279503e0-b467-4c1e-b68b-0f6800f75ad2',
   line_items: [
     Models::Shared::PropertyLineitem.new(
       amount: 1980.0,
@@ -132,15 +132,15 @@ res = s.reservation.create_property_reservation(property_reservation: Models::Sh
   ],
   metadata: [],
   nights: 11.0,
-  notes: 'Conculco volaticus vis volva quas trepide vae earum temptatio tertius.',
+  notes: 'Volva quas trepide vae earum temptatio tertius dedico adfectus veniam.',
   paid_amount: 0.0,
   pets: 1.0,
   source: 'Vrbo',
   start_at: DateTime.iso8601('2022-09-25T17:17:08.838Z'),
   status: Models::Shared::PropertyReservationStatus::PENDING,
   total_amount: 2181.6,
-  updated_at: DateTime.iso8601('2022-11-18T14:48:02.438Z'),
-  web_url: 'https://antique-tennis.biz/'
+  updated_at: DateTime.iso8601('2022-11-19T05:34:54.964Z'),
+  web_url: 'https://winged-lox.name/'
 ), connection_id: '<id>')
 
 unless res.property_reservation.nil?
@@ -363,17 +363,17 @@ req = Models::Operations::PatchCommerceReservationRequest.new(
   commerce_reservation: Models::Shared::CommerceReservation.new(
     created_at: DateTime.iso8601('2021-12-14T19:50:31.151Z'),
     end_at: DateTime.iso8601('2022-01-01T22:00:17.868Z'),
-    guest_email: 'julien.bartoletti@icloud.com',
-    guest_name: 'Julien Bartoletti',
-    guest_phone: '(728) 596-2620',
-    id: '67e1a38e-640d-4ad0-b209-c1b16a77f378',
+    guest_email: 'alford.schiller@icloud.com',
+    guest_name: 'Alford Schiller',
+    guest_phone: '(849) 626-2062',
+    id: 'd9360aa8-14c0-428b-9186-6ff40c07d58a',
     metadata: [],
-    notes: 'Adsum textilis ipsum despecto.',
+    notes: 'Despecto stultus calculus.',
     size: 10.0,
     start_at: DateTime.iso8601('2021-12-18T00:40:25.125Z'),
     status: Models::Shared::CommerceReservationStatus::PENDING,
-    updated_at: DateTime.iso8601('2023-01-10T09:54:06.328Z'),
-    url: 'https://expensive-gift.org'
+    updated_at: DateTime.iso8601('2023-01-11T16:59:49.685Z'),
+    url: 'https://wee-tuba.biz/'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -424,15 +424,15 @@ req = Models::Operations::PatchPropertyReservationRequest.new(
     adults: 4.0,
     balance_amount: 2181.6,
     children: 2.0,
-    confirmation_code: 'GNLTDDQ88Z',
+    confirmation_code: 'TDDQ88ZYCY',
     created_at: DateTime.iso8601('2022-06-03T01:40:03.655Z'),
     currency: 'USD',
     end_at: DateTime.iso8601('2022-10-06T17:17:08.838Z'),
     estimated_departure_time: '10:00',
-    guest_email: 'anya.parisian@hotmail.com',
-    guest_name: 'Anya Parisian',
+    guest_email: 'mariam.metz@hotmail.com',
+    guest_name: 'Mariam Metz',
     guests: 6.0,
-    id: '2b8f40c0-5ac6-4580-b600-d3394c9fcae1',
+    id: '378d0509-e5f1-4291-9a05-930d4239999e',
     line_items: [
       Models::Shared::PropertyLineitem.new(
         amount: 1980.0,
@@ -462,15 +462,15 @@ req = Models::Operations::PatchPropertyReservationRequest.new(
     ],
     metadata: [],
     nights: 11.0,
-    notes: 'Conculco volaticus vis volva quas trepide vae earum temptatio tertius.',
+    notes: 'Volva quas trepide vae earum temptatio tertius dedico adfectus veniam.',
     paid_amount: 0.0,
     pets: 1.0,
     source: 'Vrbo',
     start_at: DateTime.iso8601('2022-09-25T17:17:08.838Z'),
     status: Models::Shared::PropertyReservationStatus::PENDING,
     total_amount: 2181.6,
-    updated_at: DateTime.iso8601('2022-11-18T14:48:02.441Z'),
-    web_url: 'https://antique-tennis.biz/'
+    updated_at: DateTime.iso8601('2022-11-19T05:34:54.966Z'),
+    web_url: 'https://winged-lox.name/'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -602,17 +602,17 @@ req = Models::Operations::UpdateCommerceReservationRequest.new(
   commerce_reservation: Models::Shared::CommerceReservation.new(
     created_at: DateTime.iso8601('2021-12-14T19:50:31.151Z'),
     end_at: DateTime.iso8601('2022-01-01T22:00:17.868Z'),
-    guest_email: 'julien.bartoletti@icloud.com',
-    guest_name: 'Julien Bartoletti',
-    guest_phone: '(728) 596-2620',
-    id: '67e1a38e-640d-4ad0-b209-c1b16a77f378',
+    guest_email: 'alford.schiller@icloud.com',
+    guest_name: 'Alford Schiller',
+    guest_phone: '(849) 626-2062',
+    id: 'd9360aa8-14c0-428b-9186-6ff40c07d58a',
     metadata: [],
-    notes: 'Adsum textilis ipsum despecto.',
+    notes: 'Despecto stultus calculus.',
     size: 10.0,
     start_at: DateTime.iso8601('2021-12-18T00:40:25.125Z'),
     status: Models::Shared::CommerceReservationStatus::PENDING,
-    updated_at: DateTime.iso8601('2023-01-10T09:54:06.328Z'),
-    url: 'https://expensive-gift.org'
+    updated_at: DateTime.iso8601('2023-01-11T16:59:49.685Z'),
+    url: 'https://wee-tuba.biz/'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -663,15 +663,15 @@ req = Models::Operations::UpdatePropertyReservationRequest.new(
     adults: 4.0,
     balance_amount: 2181.6,
     children: 2.0,
-    confirmation_code: 'GNLTDDQ88Z',
+    confirmation_code: 'TDDQ88ZYCY',
     created_at: DateTime.iso8601('2022-06-03T01:40:03.655Z'),
     currency: 'USD',
     end_at: DateTime.iso8601('2022-10-06T17:17:08.838Z'),
     estimated_departure_time: '10:00',
-    guest_email: 'anya.parisian@hotmail.com',
-    guest_name: 'Anya Parisian',
+    guest_email: 'mariam.metz@hotmail.com',
+    guest_name: 'Mariam Metz',
     guests: 6.0,
-    id: '2b8f40c0-5ac6-4580-b600-d3394c9fcae1',
+    id: '378d0509-e5f1-4291-9a05-930d4239999e',
     line_items: [
       Models::Shared::PropertyLineitem.new(
         amount: 1980.0,
@@ -701,15 +701,15 @@ req = Models::Operations::UpdatePropertyReservationRequest.new(
     ],
     metadata: [],
     nights: 11.0,
-    notes: 'Conculco volaticus vis volva quas trepide vae earum temptatio tertius.',
+    notes: 'Volva quas trepide vae earum temptatio tertius dedico adfectus veniam.',
     paid_amount: 0.0,
     pets: 1.0,
     source: 'Vrbo',
     start_at: DateTime.iso8601('2022-09-25T17:17:08.838Z'),
     status: Models::Shared::PropertyReservationStatus::PENDING,
     total_amount: 2181.6,
-    updated_at: DateTime.iso8601('2022-11-18T14:48:02.441Z'),
-    web_url: 'https://antique-tennis.biz/'
+    updated_at: DateTime.iso8601('2022-11-19T05:34:54.966Z'),
+    web_url: 'https://winged-lox.name/'
   ),
   connection_id: '<id>',
   id: '<id>'

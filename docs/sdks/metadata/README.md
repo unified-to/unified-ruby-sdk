@@ -6,6 +6,7 @@
 
 * [create_metadata_metadata](#create_metadata_metadata) - Create a metadata
 * [get_metadata_metadata](#get_metadata_metadata) - Retrieve a metadata
+* [list_fhir_metadatas](#list_fhir_metadatas) - Get the CapabilityStatement
 * [list_metadata_metadatas](#list_metadata_metadatas) - List all metadatas
 * [patch_metadata_metadata](#patch_metadata_metadata) - Update a metadata
 * [remove_metadata_metadata](#remove_metadata_metadata) - Remove a metadata
@@ -30,17 +31,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.metadata.create_metadata_metadata(metadata_metadata: Models::Shared::MetadataMetadata.new(
   created_at: DateTime.iso8601('2021-03-25T03:02:17.656Z'),
   format: Models::Shared::MetadataMetadataFormat::PRICE,
-  id: '036ffc0a-a5c0-4277-9e47-84740d79b4d9',
+  id: '75d05759-bb57-4c19-9603-9cfe71c12b66',
   is_required: false,
-  name: 'autem',
-  object_type: 'healthcare_patient',
+  name: 'tollo',
+  object_type: 'healthcare_document',
   objects: {
 
   },
   options: [],
-  original_format: 'advoco',
-  slug: 'arbustum',
-  updated_at: DateTime.iso8601('2025-04-12T10:40:29.282Z')
+  original_format: 'deputo',
+  slug: 'acidus',
+  updated_at: DateTime.iso8601('2025-04-16T17:05:38.978Z')
 ), connection_id: '<id>')
 
 unless res.metadata_metadata.nil?
@@ -104,6 +105,46 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::GetMetadataMetadataResponse)](../../models/operations/getmetadatametadataresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## list_fhir_metadatas
+
+The resources, interactions and search parameters this connection's integration supports. Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listFhirMetadatas" method="get" path="/fhir/{connection_id}/metadata" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.metadata.list_fhir_metadatas(connection_id: '<id>')
+
+unless res.fhir_capability_statement.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+
+### Response
+
+**[T.nilable(Models::Operations::ListFhirMetadatasResponse)](../../models/operations/listfhirmetadatasresponse.md)**
 
 ### Errors
 
@@ -176,17 +217,17 @@ req = Models::Operations::PatchMetadataMetadataRequest.new(
   metadata_metadata: Models::Shared::MetadataMetadata.new(
     created_at: DateTime.iso8601('2021-03-25T03:02:17.656Z'),
     format: Models::Shared::MetadataMetadataFormat::PRICE,
-    id: '7e4d4863-17a7-4540-b803-1752a0b797b7',
+    id: '25d29e5e-44e8-4bf0-b398-a10353c6eeb1',
     is_required: false,
-    name: 'autem',
-    object_type: 'healthcare_patient',
+    name: 'tollo',
+    object_type: 'healthcare_document',
     objects: {
 
     },
     options: [],
-    original_format: 'advoco',
-    slug: 'arbustum',
-    updated_at: DateTime.iso8601('2025-04-12T10:40:29.286Z')
+    original_format: 'deputo',
+    slug: 'acidus',
+    updated_at: DateTime.iso8601('2025-04-16T17:05:38.985Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -277,17 +318,17 @@ req = Models::Operations::UpdateMetadataMetadataRequest.new(
   metadata_metadata: Models::Shared::MetadataMetadata.new(
     created_at: DateTime.iso8601('2021-03-25T03:02:17.656Z'),
     format: Models::Shared::MetadataMetadataFormat::PRICE,
-    id: '7e4d4863-17a7-4540-b803-1752a0b797b7',
+    id: '25d29e5e-44e8-4bf0-b398-a10353c6eeb1',
     is_required: false,
-    name: 'autem',
-    object_type: 'healthcare_patient',
+    name: 'tollo',
+    object_type: 'healthcare_document',
     objects: {
 
     },
     options: [],
-    original_format: 'advoco',
-    slug: 'arbustum',
-    updated_at: DateTime.iso8601('2025-04-12T10:40:29.286Z')
+    original_format: 'deputo',
+    slug: 'acidus',
+    updated_at: DateTime.iso8601('2025-04-16T17:05:38.985Z')
   ),
   connection_id: '<id>',
   id: '<id>'

@@ -29,31 +29,31 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.application.create_ats_application(ats_application: Models::Shared::AtsApplication.new(
   answers: [],
-  applied_at: DateTime.iso8601('2025-10-19T05:44:39.640Z'),
+  applied_at: DateTime.iso8601('2025-10-23T02:32:26.167Z'),
   created_at: DateTime.iso8601('2023-10-17T07:19:48.787Z'),
-  hired_at: DateTime.iso8601('2026-06-07T08:50:28.064Z'),
-  id: 'd5a3222c-c44c-4d6c-ae8d-6764f7f6dd5b',
+  hired_at: DateTime.iso8601('2026-06-12T10:54:01.706Z'),
+  id: '338052c3-dfac-4676-800d-35bebc3e2dbb',
   metadata: [
     Models::Shared::AtsMetadata.new(
       extra_data: {
 
       },
       format: Models::Shared::AtsMetadataFormat::TEXT,
-      id: '949afeed-bc2e-4ab9-b79e-30849e422455',
+      id: '558d2f6c-c713-46be-8e58-01edae6c0010',
       namespace: 'application',
-      slug: 'stella',
-      value: 'Caput.'
+      slug: 'arguo',
+      value: 'Defessus occaecati adflicto caecus claustrum annus addo.'
     ),
   ],
   offers: [],
-  original_status: 'vomica',
-  original_substatus: 'allatus',
-  rejected_at: DateTime.iso8601('2026-11-10T06:48:12.789Z'),
-  rejected_reason: 'Cometes amplitudo videlicet talio.',
-  source: 'credo',
+  original_status: 'caput',
+  original_substatus: 'admiratio',
+  rejected_at: DateTime.iso8601('2026-11-16T04:36:11.522Z'),
+  rejected_reason: 'Talio credo vomica allatus stella.',
+  source: 'alii',
   status: Models::Shared::AtsApplicationStatus::REVIEWING,
-  summary: 'Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.',
-  updated_at: DateTime.iso8601('2026-11-17T07:31:15.933Z')
+  summary: 'Crebro nostrum alias sponte turbo sopor vergo surculus nam copiose. Enim casso cursus aestus deprecator. Despecto tabella argentum decretum cultellus aveho distinctio verecundia stella.',
+  updated_at: DateTime.iso8601('2026-11-23T06:12:38.848Z')
 ), connection_id: '<id>')
 
 unless res.ats_application.nil?
@@ -188,31 +188,31 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAtsApplicationRequest.new(
   ats_application: Models::Shared::AtsApplication.new(
     answers: [],
-    applied_at: DateTime.iso8601('2025-10-19T05:44:39.653Z'),
+    applied_at: DateTime.iso8601('2025-10-23T02:32:26.184Z'),
     created_at: DateTime.iso8601('2023-10-17T07:19:48.787Z'),
-    hired_at: DateTime.iso8601('2026-06-07T08:50:28.082Z'),
-    id: 'e8a3f929-f996-4ff3-81b3-3f5f7bc4526f',
+    hired_at: DateTime.iso8601('2026-06-12T10:54:01.727Z'),
+    id: '4c0117db-51c7-4b88-a33b-10a26b733cc1',
     metadata: [
       Models::Shared::AtsMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '24a2fd2c-eff7-4ec1-b82c-4fc1e75d52c3',
+        id: 'c09cd9ee-59b5-4c9b-9acb-40c3eee46731',
         namespace: 'application',
-        slug: 'stella',
-        value: 'Caput.'
+        slug: 'arguo',
+        value: 'Defessus occaecati adflicto caecus claustrum annus addo.'
       ),
     ],
     offers: [],
-    original_status: 'vomica',
-    original_substatus: 'allatus',
-    rejected_at: DateTime.iso8601('2026-11-10T06:48:12.810Z'),
-    rejected_reason: 'Cometes amplitudo videlicet talio.',
-    source: 'credo',
+    original_status: 'caput',
+    original_substatus: 'admiratio',
+    rejected_at: DateTime.iso8601('2026-11-16T04:36:11.548Z'),
+    rejected_reason: 'Talio credo vomica allatus stella.',
+    source: 'alii',
     status: Models::Shared::AtsApplicationStatus::REVIEWING,
-    summary: 'Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.',
-    updated_at: DateTime.iso8601('2026-11-17T07:31:15.954Z')
+    summary: 'Crebro nostrum alias sponte turbo sopor vergo surculus nam copiose. Enim casso cursus aestus deprecator. Despecto tabella argentum decretum cultellus aveho distinctio verecundia stella.',
+    updated_at: DateTime.iso8601('2026-11-23T06:12:38.874Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -302,31 +302,31 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAtsApplicationRequest.new(
   ats_application: Models::Shared::AtsApplication.new(
     answers: [],
-    applied_at: DateTime.iso8601('2025-10-19T05:44:39.653Z'),
+    applied_at: DateTime.iso8601('2025-10-23T02:32:26.184Z'),
     created_at: DateTime.iso8601('2023-10-17T07:19:48.787Z'),
-    hired_at: DateTime.iso8601('2026-06-07T08:50:28.082Z'),
-    id: 'e8a3f929-f996-4ff3-81b3-3f5f7bc4526f',
+    hired_at: DateTime.iso8601('2026-06-12T10:54:01.727Z'),
+    id: '4c0117db-51c7-4b88-a33b-10a26b733cc1',
     metadata: [
       Models::Shared::AtsMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '24a2fd2c-eff7-4ec1-b82c-4fc1e75d52c3',
+        id: 'c09cd9ee-59b5-4c9b-9acb-40c3eee46731',
         namespace: 'application',
-        slug: 'stella',
-        value: 'Caput.'
+        slug: 'arguo',
+        value: 'Defessus occaecati adflicto caecus claustrum annus addo.'
       ),
     ],
     offers: [],
-    original_status: 'vomica',
-    original_substatus: 'allatus',
-    rejected_at: DateTime.iso8601('2026-11-10T06:48:12.810Z'),
-    rejected_reason: 'Cometes amplitudo videlicet talio.',
-    source: 'credo',
+    original_status: 'caput',
+    original_substatus: 'admiratio',
+    rejected_at: DateTime.iso8601('2026-11-16T04:36:11.548Z'),
+    rejected_reason: 'Talio credo vomica allatus stella.',
+    source: 'alii',
     status: Models::Shared::AtsApplicationStatus::REVIEWING,
-    summary: 'Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.',
-    updated_at: DateTime.iso8601('2026-11-17T07:31:15.954Z')
+    summary: 'Crebro nostrum alias sponte turbo sopor vergo surculus nam copiose. Enim casso cursus aestus deprecator. Despecto tabella argentum decretum cultellus aveho distinctio verecundia stella.',
+    updated_at: DateTime.iso8601('2026-11-23T06:12:38.874Z')
   ),
   connection_id: '<id>',
   id: '<id>'

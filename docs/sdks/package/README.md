@@ -31,28 +31,28 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.package.create_assessment_package(assessment_package: Models::Shared::AssessmentPackage.new(
   aliases: [
-    'quia',
+    'ancilla',
   ],
   created_at: DateTime.iso8601('2022-11-18T19:48:39.433Z'),
-  description: 'Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.',
+  description: 'Urbs tergiversatio admitto summa accusator.',
   has_redirect_url: true,
   has_target_url: false,
-  id: '389a611f-0dc0-4dd6-8852-6a71e328eddd',
-  info_url: 'https://ugly-instance.biz/',
+  id: '613d108d-116d-4c35-8652-27bcc8abc015',
+  info_url: 'https://unkempt-habit.net',
   integration_types: [
-    'viridis',
+    'tabesco',
   ],
   max_score: 22.0,
   metadata: [],
-  name: 'Carus sed vox doloremque vigor surgo tabella cupiditas abduco clarus.',
+  name: 'Doloremque vigor surgo tabella cupiditas abduco clarus clamo consectetur averto.',
   needs_ip_address: true,
   parameters: [],
   regions: [],
   tags: [
-    'clamo',
+    'eos',
   ],
   type: Models::Shared::AssessmentPackageType::VIDEO_INTERVIEW,
-  updated_at: DateTime.iso8601('2023-10-01T21:20:35.358Z')
+  updated_at: DateTime.iso8601('2023-10-03T04:21:29.506Z')
 ), connection_id: '<id>')
 
 unless res.assessment_package.nil?
@@ -266,28 +266,28 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.package.patch_assessment_package(assessment_package: Models::Shared::AssessmentPackage.new(
   aliases: [
-    'quia',
+    'ancilla',
   ],
   created_at: DateTime.iso8601('2022-11-18T19:48:39.433Z'),
-  description: 'Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.',
+  description: 'Urbs tergiversatio admitto summa accusator.',
   has_redirect_url: true,
   has_target_url: false,
-  id: 'f0cb4d04-76d3-4f7c-9c0c-4a8a628c2747',
-  info_url: 'https://ugly-instance.biz/',
+  id: '77a86535-129f-464d-a379-cf9ba34dc0f7',
+  info_url: 'https://unkempt-habit.net',
   integration_types: [
-    'viridis',
+    'tabesco',
   ],
   max_score: 22.0,
   metadata: [],
-  name: 'Carus sed vox doloremque vigor surgo tabella cupiditas abduco clarus.',
+  name: 'Doloremque vigor surgo tabella cupiditas abduco clarus clamo consectetur averto.',
   needs_ip_address: true,
   parameters: [],
   regions: [],
   tags: [
-    'clamo',
+    'eos',
   ],
   type: Models::Shared::AssessmentPackageType::VIDEO_INTERVIEW,
-  updated_at: DateTime.iso8601('2023-10-01T21:20:35.362Z')
+  updated_at: DateTime.iso8601('2023-10-03T04:21:29.510Z')
 ), connection_id: '<id>', id: '<id>')
 
 unless res.assessment_package.nil?
@@ -373,28 +373,28 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.package.update_assessment_package(assessment_package: Models::Shared::AssessmentPackage.new(
   aliases: [
-    'quia',
+    'ancilla',
   ],
   created_at: DateTime.iso8601('2022-11-18T19:48:39.433Z'),
-  description: 'Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.',
+  description: 'Urbs tergiversatio admitto summa accusator.',
   has_redirect_url: true,
   has_target_url: false,
-  id: 'f0cb4d04-76d3-4f7c-9c0c-4a8a628c2747',
-  info_url: 'https://ugly-instance.biz/',
+  id: '77a86535-129f-464d-a379-cf9ba34dc0f7',
+  info_url: 'https://unkempt-habit.net',
   integration_types: [
-    'viridis',
+    'tabesco',
   ],
   max_score: 22.0,
   metadata: [],
-  name: 'Carus sed vox doloremque vigor surgo tabella cupiditas abduco clarus.',
+  name: 'Doloremque vigor surgo tabella cupiditas abduco clarus clamo consectetur averto.',
   needs_ip_address: true,
   parameters: [],
   regions: [],
   tags: [
-    'clamo',
+    'eos',
   ],
   type: Models::Shared::AssessmentPackageType::VIDEO_INTERVIEW,
-  updated_at: DateTime.iso8601('2023-10-01T21:20:35.362Z')
+  updated_at: DateTime.iso8601('2023-10-03T04:21:29.510Z')
 ), connection_id: '<id>', id: '<id>')
 
 unless res.assessment_package.nil?

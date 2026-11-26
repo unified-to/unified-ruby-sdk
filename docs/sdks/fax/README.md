@@ -26,18 +26,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
   )
 )
 res = s.fax.create_uc_fax(uc_fax: Models::Shared::UcFax.new(
-  cost_amount: 1.2207,
+  cost_amount: 1.8536,
   created_at: DateTime.iso8601('2022-10-25T13:37:51.431Z'),
   currency: 'USD',
-  from_telephone: '+13605107540',
-  id: '68400756-11f7-415a-a1f9-150d32a1650f',
-  media_url: 'https://doting-jump.biz',
+  from_telephone: '+15108540908',
+  id: 'fdb6e3b3-1897-4ae6-89fe-a71d44ea98ad',
+  media_url: 'https://pitiful-stranger.net/',
   metadata: [],
-  pages: 20.0,
+  pages: 10.0,
   status: Models::Shared::UcFaxStatus::DELIVERED,
-  to_telephone: '+19083998866',
+  to_telephone: '+13999866972',
   type: Models::Shared::UcFaxType::INBOUND,
-  updated_at: DateTime.iso8601('2023-04-17T07:11:03.359Z')
+  updated_at: DateTime.iso8601('2023-04-17T23:54:04.525Z')
 ), connection_id: '<id>')
 
 unless res.uc_fax.nil?

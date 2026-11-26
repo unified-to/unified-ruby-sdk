@@ -29,48 +29,48 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.course.create_lms_course(lms_course: Models::Shared::LmsCourse.new(
   categories: [
+    'deripio',
     'tergiversatio',
-    'tumultus',
   ],
   created_at: DateTime.iso8601('2022-10-06T09:58:53.559Z'),
-  currency: 'FJD',
-  description: 'Vinco alias aut capitulus.',
+  currency: 'DZD',
+  description: 'Aut.',
   duration_minutes: 148.0,
-  id: 'a7f46f9c-6f21-4b4e-ac77-927c9facc461',
+  id: '58425afd-816f-4ad3-8c29-fc168859ae5c',
   instructors: [],
   is_active: true,
   is_private: false,
   languages: [
+    'capitulus',
     'desparatus',
     'earum',
-    'deripio',
   ],
   media: [
     Models::Shared::LmsMedia.new(
-      content: 'Adeptio crudelis ipsum utrimque quae architecto. Cum eius conitor anser abutor error adsuesco abeo. Denego nihil caries aveho.',
-      description: 'Adipiscor.',
+      content: 'Carbo dapifer adeptio. Ipsum utrimque quae architecto repellendus cum. Conitor anser abutor error adsuesco abeo caelestis.',
+      description: 'Accommodo adipiscor campana aegrotatio.',
       languages: [
-        'ms',
-        'te',
+        'el',
+        'hr',
       ],
-      name: 'tandem',
-      thumbnail_url: 'https://picsum.photos/seed/syTatRhK03/928/273',
+      name: 'conduco',
+      thumbnail_url: 'https://picsum.photos/seed/yTatRhK/3873/3840',
       type: Models::Shared::LmsMediaType::OTHER,
-      url: 'https://picsum.photos/seed/fQAbsk/2472/1671'
+      url: 'https://picsum.photos/seed/vcfQAbs/3357/2472'
     ),
   ],
   metadata: [],
-  name: 'comptus',
+  name: 'vinco',
   price_amount: 84.0,
-  provider_name: 'Homenick - Wunsch',
-  published_at: DateTime.iso8601('2022-11-06T08:59:14.816Z'),
+  provider_name: 'Roberts Group',
+  published_at: DateTime.iso8601('2022-11-06T11:55:42.578Z'),
   skills: [
-    'adiuvo',
-    'tam',
+    'aveho',
+    'via',
   ],
   students: [],
   time_estimate_minutes: 100.0,
-  updated_at: DateTime.iso8601('2023-02-12T07:58:31.092Z')
+  updated_at: DateTime.iso8601('2023-02-12T20:13:20.204Z')
 ), connection_id: '<id>')
 
 unless res.lms_course.nil?
@@ -205,48 +205,48 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchLmsCourseRequest.new(
   lms_course: Models::Shared::LmsCourse.new(
     categories: [
+      'deripio',
       'tergiversatio',
-      'tumultus',
     ],
     created_at: DateTime.iso8601('2022-10-06T09:58:53.559Z'),
-    currency: 'FJD',
-    description: 'Vinco alias aut capitulus.',
+    currency: 'DZD',
+    description: 'Aut.',
     duration_minutes: 148.0,
-    id: 'bc050416-a6fa-4a34-a05b-37d8c6025b64',
+    id: '975863bb-a4d6-44d1-8093-a7fe665bd76f',
     instructors: [],
     is_active: true,
     is_private: false,
     languages: [
+      'capitulus',
       'desparatus',
       'earum',
-      'deripio',
     ],
     media: [
       Models::Shared::LmsMedia.new(
-        content: 'Adeptio crudelis ipsum utrimque quae architecto. Cum eius conitor anser abutor error adsuesco abeo. Denego nihil caries aveho.',
-        description: 'Adipiscor.',
+        content: 'Carbo dapifer adeptio. Ipsum utrimque quae architecto repellendus cum. Conitor anser abutor error adsuesco abeo caelestis.',
+        description: 'Accommodo adipiscor campana aegrotatio.',
         languages: [
-          'ms',
-          'te',
+          'el',
+          'hr',
         ],
-        name: 'tandem',
-        thumbnail_url: 'https://picsum.photos/seed/syTatRhK03/928/273',
+        name: 'conduco',
+        thumbnail_url: 'https://picsum.photos/seed/yTatRhK/3873/3840',
         type: Models::Shared::LmsMediaType::OTHER,
-        url: 'https://picsum.photos/seed/fQAbsk/2472/1671'
+        url: 'https://picsum.photos/seed/vcfQAbs/3357/2472'
       ),
     ],
     metadata: [],
-    name: 'comptus',
+    name: 'vinco',
     price_amount: 84.0,
-    provider_name: 'Homenick - Wunsch',
-    published_at: DateTime.iso8601('2022-11-06T08:59:14.816Z'),
+    provider_name: 'Roberts Group',
+    published_at: DateTime.iso8601('2022-11-06T11:55:42.579Z'),
     skills: [
-      'adiuvo',
-      'tam',
+      'aveho',
+      'via',
     ],
     students: [],
     time_estimate_minutes: 100.0,
-    updated_at: DateTime.iso8601('2023-02-12T07:58:31.094Z')
+    updated_at: DateTime.iso8601('2023-02-12T20:13:20.207Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -336,48 +336,48 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateLmsCourseRequest.new(
   lms_course: Models::Shared::LmsCourse.new(
     categories: [
+      'deripio',
       'tergiversatio',
-      'tumultus',
     ],
     created_at: DateTime.iso8601('2022-10-06T09:58:53.559Z'),
-    currency: 'FJD',
-    description: 'Vinco alias aut capitulus.',
+    currency: 'DZD',
+    description: 'Aut.',
     duration_minutes: 148.0,
-    id: 'bc050416-a6fa-4a34-a05b-37d8c6025b64',
+    id: '975863bb-a4d6-44d1-8093-a7fe665bd76f',
     instructors: [],
     is_active: true,
     is_private: false,
     languages: [
+      'capitulus',
       'desparatus',
       'earum',
-      'deripio',
     ],
     media: [
       Models::Shared::LmsMedia.new(
-        content: 'Adeptio crudelis ipsum utrimque quae architecto. Cum eius conitor anser abutor error adsuesco abeo. Denego nihil caries aveho.',
-        description: 'Adipiscor.',
+        content: 'Carbo dapifer adeptio. Ipsum utrimque quae architecto repellendus cum. Conitor anser abutor error adsuesco abeo caelestis.',
+        description: 'Accommodo adipiscor campana aegrotatio.',
         languages: [
-          'ms',
-          'te',
+          'el',
+          'hr',
         ],
-        name: 'tandem',
-        thumbnail_url: 'https://picsum.photos/seed/syTatRhK03/928/273',
+        name: 'conduco',
+        thumbnail_url: 'https://picsum.photos/seed/yTatRhK/3873/3840',
         type: Models::Shared::LmsMediaType::OTHER,
-        url: 'https://picsum.photos/seed/fQAbsk/2472/1671'
+        url: 'https://picsum.photos/seed/vcfQAbs/3357/2472'
       ),
     ],
     metadata: [],
-    name: 'comptus',
+    name: 'vinco',
     price_amount: 84.0,
-    provider_name: 'Homenick - Wunsch',
-    published_at: DateTime.iso8601('2022-11-06T08:59:14.816Z'),
+    provider_name: 'Roberts Group',
+    published_at: DateTime.iso8601('2022-11-06T11:55:42.579Z'),
     skills: [
-      'adiuvo',
-      'tam',
+      'aveho',
+      'via',
     ],
     students: [],
     time_estimate_minutes: 100.0,
-    updated_at: DateTime.iso8601('2023-02-12T07:58:31.094Z')
+    updated_at: DateTime.iso8601('2023-02-12T20:13:20.207Z')
   ),
   connection_id: '<id>',
   id: '<id>'

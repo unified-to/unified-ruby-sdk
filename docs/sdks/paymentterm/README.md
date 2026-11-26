@@ -31,18 +31,18 @@ res = s.paymentterm.create_accounting_paymentterm(accounting_paymentterm: Models
   category: Models::Shared::Category::STANDARD,
   created_at: DateTime.iso8601('2021-08-22T22:42:42.265Z'),
   day_of_month_due: 4.0,
-  description: 'Cogito pecco eos cultura.',
+  description: 'Cultura cena claustrum.',
   discount_day_of_month: 13.0,
   discount_days: 4.0,
   discount_percent: 5.0,
   due_days: 57.0,
   due_next_month_days: 9.0,
-  id: 'ef29dfaa-08e2-42a0-89b3-379266191ab6',
+  id: '6cc8c2a0-9c6a-4e17-bce8-0e21bf4d01d2',
   is_active: false,
   metadata: [],
   name: 'Net 30',
   type: Models::Shared::AccountingPaymenttermType::NET_15,
-  updated_at: DateTime.iso8601('2026-02-02T22:02:32.722Z')
+  updated_at: DateTime.iso8601('2026-02-07T23:24:22.093Z')
 ), connection_id: '<id>')
 
 unless res.accounting_paymentterm.nil?
@@ -179,18 +179,18 @@ req = Models::Operations::PatchAccountingPaymenttermRequest.new(
     category: Models::Shared::Category::STANDARD,
     created_at: DateTime.iso8601('2021-08-22T22:42:42.265Z'),
     day_of_month_due: 4.0,
-    description: 'Cogito pecco eos cultura.',
+    description: 'Cultura cena claustrum.',
     discount_day_of_month: 13.0,
     discount_days: 4.0,
     discount_percent: 5.0,
     due_days: 57.0,
     due_next_month_days: 9.0,
-    id: 'a333aa1e-cfda-4834-bd88-8ccfff3166d7',
+    id: 'd5ced635-0260-46c6-baa3-2b8926d66702',
     is_active: false,
     metadata: [],
     name: 'Net 30',
     type: Models::Shared::AccountingPaymenttermType::NET_15,
-    updated_at: DateTime.iso8601('2026-02-02T22:02:32.733Z')
+    updated_at: DateTime.iso8601('2026-02-07T23:24:22.105Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -282,18 +282,18 @@ req = Models::Operations::UpdateAccountingPaymenttermRequest.new(
     category: Models::Shared::Category::STANDARD,
     created_at: DateTime.iso8601('2021-08-22T22:42:42.265Z'),
     day_of_month_due: 4.0,
-    description: 'Cogito pecco eos cultura.',
+    description: 'Cultura cena claustrum.',
     discount_day_of_month: 13.0,
     discount_days: 4.0,
     discount_percent: 5.0,
     due_days: 57.0,
     due_next_month_days: 9.0,
-    id: 'a333aa1e-cfda-4834-bd88-8ccfff3166d7',
+    id: 'd5ced635-0260-46c6-baa3-2b8926d66702',
     is_active: false,
     metadata: [],
     name: 'Net 30',
     type: Models::Shared::AccountingPaymenttermType::NET_15,
-    updated_at: DateTime.iso8601('2026-02-02T22:02:32.733Z')
+    updated_at: DateTime.iso8601('2026-02-07T23:24:22.105Z')
   ),
   connection_id: '<id>',
   id: '<id>'

@@ -30,28 +30,28 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.itemvariant.create_commerce_itemvariant(commerce_itemvariant: Models::Shared::CommerceItemvariant.new(
   available_at: DateTime.iso8601('2022-02-06T18:14:41.644Z'),
   created_at: DateTime.iso8601('2022-01-20T13:49:12.968Z'),
-  description: 'Stylish Salad designed to make you stand out with little looks',
+  description: 'Our dog-friendly Bacon ensures pessimistic comfort for your pets',
   height: 54.0,
-  id: '7708d8bd-bd70-44a5-9ee3-7bfa632fbc6c',
+  id: 'c83b1505-8a7c-47ee-b53e-227d2712e3a2',
   is_active: true,
   is_featured: false,
   is_visible: false,
   length: 92.0,
   media: [
     Models::Shared::CommerceItemMedia.new(
-      alt: 'Hic desipio thorax.',
+      alt: 'Calcar delibero cursim summisse.',
       height: 961.0,
-      id: '44c9b53f-aa7f-44da-9364-0ceb93246a47',
+      id: 'f2420a46-285b-4f86-b9e7-15326a360d9a',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: '7ecd9e69-0018-4cb2-9257-235b6d777c39',
-          slug: 'ubi',
-          value: 'textus'
+          id: 'b5d40ba6-b8e5-4bd7-a855-f92b8544aa30',
+          slug: 'illo',
+          value: 'quia'
         ),
       ],
       position: 72.0,
       type: Models::Shared::CommerceItemMediaType::IMAGE,
-      url: 'https://loremflickr.com/2126/721?lock=8820088623807162',
+      url: 'https://picsum.photos/seed/u0YdHqlRu/3208/3394',
       width: 35.0
     ),
   ],
@@ -61,24 +61,24 @@ res = s.itemvariant.create_commerce_itemvariant(commerce_itemvariant: Models::Sh
         'display_name' => 'Custom Property',
       },
       format: Models::Shared::CommerceMetadataFormat::TEXT,
-      id: '4e667e94-314e-419c-95be-aa0ddbbe6412',
+      id: '2e4bf905-b10c-48b4-ba00-04ec44cd9d91',
       namespace: 'custom',
       slug: 'custom_property',
-      value: 'absens'
+      value: 'colligo'
     ),
   ],
-  name: 'Chair',
+  name: 'Table',
   options: [
     Models::Shared::CommerceItemOption.new(
-      id: 'af8de41f-ef6b-4a07-811b-0b07b27675e9',
+      id: '1b5cdbd8-2b5b-425a-959e-cf76d07cc488',
       name: 'Color',
       position: 1.0,
       values: [
-        'olive',
+        'purple',
       ]
     ),
     Models::Shared::CommerceItemOption.new(
-      id: 'fc724b31-6c84-4577-b87c-3c3b103b7db6',
+      id: 'c99c4087-a41b-4e38-a63f-a51933d80b1f',
       name: 'Size',
       position: 2.0,
       values: [
@@ -92,16 +92,16 @@ res = s.itemvariant.create_commerce_itemvariant(commerce_itemvariant: Models::Sh
       price: 382.23
     ),
   ],
-  public_description: 'Stylish Cheese designed to make you stand out with grave looks',
-  public_name: 'Chair',
+  public_description: 'New teal Gloves with ergonomic design for favorite comfort',
+  public_name: 'Table',
   requires_shipping: false,
   size_unit: Models::Shared::SizeUnit::CM,
-  sku: '978-1-368-44270-1',
+  sku: '978-1-05-109555-9',
   tags: [
-    'deserunt',
+    'labore',
   ],
   total_stock: 436.0,
-  updated_at: DateTime.iso8601('2026-04-04T18:41:50.656Z'),
+  updated_at: DateTime.iso8601('2026-04-09T23:08:42.846Z'),
   weight: 46.0,
   weight_unit: Models::Shared::CommerceItemvariantWeightUnit::OZ,
   width: 40.0
@@ -240,28 +240,28 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
   commerce_itemvariant: Models::Shared::CommerceItemvariant.new(
     available_at: DateTime.iso8601('2022-02-06T18:14:41.644Z'),
     created_at: DateTime.iso8601('2022-01-20T13:49:12.968Z'),
-    description: 'Stylish Salad designed to make you stand out with little looks',
+    description: 'Our dog-friendly Bacon ensures pessimistic comfort for your pets',
     height: 54.0,
-    id: '91698f4a-8830-49a5-9ea9-80419fbe190f',
+    id: '9b69706e-dfec-40d6-8afc-4c5253fba234',
     is_active: true,
     is_featured: false,
     is_visible: false,
     length: 92.0,
     media: [
       Models::Shared::CommerceItemMedia.new(
-        alt: 'Hic desipio thorax.',
+        alt: 'Calcar delibero cursim summisse.',
         height: 961.0,
-        id: '48809e87-0669-4b7c-b879-31917957ed1c',
+        id: '7f5253aa-1210-4ef5-8c3e-b3e7bcfd3c04',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'bcc89a72-09e4-4bab-8fe4-c96f70878079',
-            slug: 'ubi',
-            value: 'textus'
+            id: '4f79dd94-8310-474e-ab0f-7eadbac75248',
+            slug: 'illo',
+            value: 'quia'
           ),
         ],
         position: 72.0,
         type: Models::Shared::CommerceItemMediaType::IMAGE,
-        url: 'https://loremflickr.com/2126/721?lock=8820088623807162',
+        url: 'https://picsum.photos/seed/u0YdHqlRu/3208/3394',
         width: 35.0
       ),
     ],
@@ -271,24 +271,24 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CommerceMetadataFormat::TEXT,
-        id: '870978ff-7f11-43f3-a5a6-1733cf2b50b0',
+        id: 'fc882206-6b78-48b6-b257-574f6e71dc2d',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'absens'
+        value: 'colligo'
       ),
     ],
-    name: 'Chair',
+    name: 'Table',
     options: [
       Models::Shared::CommerceItemOption.new(
-        id: '78088861-439b-4ffd-be57-278d6eba04cc',
+        id: '77063bbd-7574-4b93-a438-8e7ccbeca9e6',
         name: 'Color',
         position: 1.0,
         values: [
-          'olive',
+          'purple',
         ]
       ),
       Models::Shared::CommerceItemOption.new(
-        id: '37333bdf-f395-4e2f-bdfb-a96201a98919',
+        id: '8dd237e9-846c-42c6-91f3-c2e625a2e166',
         name: 'Size',
         position: 2.0,
         values: [
@@ -302,16 +302,16 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
         price: 382.23
       ),
     ],
-    public_description: 'Stylish Cheese designed to make you stand out with grave looks',
-    public_name: 'Chair',
+    public_description: 'New teal Gloves with ergonomic design for favorite comfort',
+    public_name: 'Table',
     requires_shipping: false,
     size_unit: Models::Shared::SizeUnit::CM,
-    sku: '978-1-368-44270-1',
+    sku: '978-1-05-109555-9',
     tags: [
-      'deserunt',
+      'labore',
     ],
     total_stock: 436.0,
-    updated_at: DateTime.iso8601('2026-04-04T18:41:50.688Z'),
+    updated_at: DateTime.iso8601('2026-04-09T23:08:42.878Z'),
     weight: 46.0,
     weight_unit: Models::Shared::CommerceItemvariantWeightUnit::OZ,
     width: 40.0
@@ -405,28 +405,28 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
   commerce_itemvariant: Models::Shared::CommerceItemvariant.new(
     available_at: DateTime.iso8601('2022-02-06T18:14:41.644Z'),
     created_at: DateTime.iso8601('2022-01-20T13:49:12.968Z'),
-    description: 'Stylish Salad designed to make you stand out with little looks',
+    description: 'Our dog-friendly Bacon ensures pessimistic comfort for your pets',
     height: 54.0,
-    id: '91698f4a-8830-49a5-9ea9-80419fbe190f',
+    id: '9b69706e-dfec-40d6-8afc-4c5253fba234',
     is_active: true,
     is_featured: false,
     is_visible: false,
     length: 92.0,
     media: [
       Models::Shared::CommerceItemMedia.new(
-        alt: 'Hic desipio thorax.',
+        alt: 'Calcar delibero cursim summisse.',
         height: 961.0,
-        id: '48809e87-0669-4b7c-b879-31917957ed1c',
+        id: '7f5253aa-1210-4ef5-8c3e-b3e7bcfd3c04',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'bcc89a72-09e4-4bab-8fe4-c96f70878079',
-            slug: 'ubi',
-            value: 'textus'
+            id: '4f79dd94-8310-474e-ab0f-7eadbac75248',
+            slug: 'illo',
+            value: 'quia'
           ),
         ],
         position: 72.0,
         type: Models::Shared::CommerceItemMediaType::IMAGE,
-        url: 'https://loremflickr.com/2126/721?lock=8820088623807162',
+        url: 'https://picsum.photos/seed/u0YdHqlRu/3208/3394',
         width: 35.0
       ),
     ],
@@ -436,24 +436,24 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CommerceMetadataFormat::TEXT,
-        id: '870978ff-7f11-43f3-a5a6-1733cf2b50b0',
+        id: 'fc882206-6b78-48b6-b257-574f6e71dc2d',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'absens'
+        value: 'colligo'
       ),
     ],
-    name: 'Chair',
+    name: 'Table',
     options: [
       Models::Shared::CommerceItemOption.new(
-        id: '78088861-439b-4ffd-be57-278d6eba04cc',
+        id: '77063bbd-7574-4b93-a438-8e7ccbeca9e6',
         name: 'Color',
         position: 1.0,
         values: [
-          'olive',
+          'purple',
         ]
       ),
       Models::Shared::CommerceItemOption.new(
-        id: '37333bdf-f395-4e2f-bdfb-a96201a98919',
+        id: '8dd237e9-846c-42c6-91f3-c2e625a2e166',
         name: 'Size',
         position: 2.0,
         values: [
@@ -467,16 +467,16 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
         price: 382.23
       ),
     ],
-    public_description: 'Stylish Cheese designed to make you stand out with grave looks',
-    public_name: 'Chair',
+    public_description: 'New teal Gloves with ergonomic design for favorite comfort',
+    public_name: 'Table',
     requires_shipping: false,
     size_unit: Models::Shared::SizeUnit::CM,
-    sku: '978-1-368-44270-1',
+    sku: '978-1-05-109555-9',
     tags: [
-      'deserunt',
+      'labore',
     ],
     total_stock: 436.0,
-    updated_at: DateTime.iso8601('2026-04-04T18:41:50.688Z'),
+    updated_at: DateTime.iso8601('2026-04-09T23:08:42.878Z'),
     weight: 46.0,
     weight_unit: Models::Shared::CommerceItemvariantWeightUnit::OZ,
     width: 40.0

@@ -30,20 +30,20 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.taxonomy.create_hris_taxonomy(hris_taxonomy: Models::Shared::HrisTaxonomy.new(
   alternative_names: [
-    'Facilitator',
-    'National',
+    'Supervisor',
+    'Customer',
   ],
   created_at: DateTime.iso8601('2022-06-23T02:10:00.789Z'),
-  description: 'Uterque vespillo adnuo ea commodo turbo suscipio condico.',
-  domain: 'Health',
-  id: 'c5f1fefd-6acd-4cc4-baad-c1d763ee9308',
+  description: 'Ea commodo turbo.',
+  domain: 'Music',
+  id: '8681977a-7b06-428f-8390-3521b4886ea5',
   is_active: false,
   metadata: [],
-  name: 'International Functionality Architect',
-  subcategory: 'Marble',
+  name: 'Chief Accountability Representative',
+  subcategory: 'Granite',
   type: Models::Shared::HrisTaxonomyType::KNOWLEDGE,
-  updated_at: DateTime.iso8601('2023-06-04T18:20:13.315Z'),
-  url: 'https://fixed-membership.biz/'
+  updated_at: DateTime.iso8601('2023-06-06T01:07:02.799Z'),
+  url: 'https://happy-go-lucky-devastation.com'
 ), connection_id: '<id>')
 
 unless res.hris_taxonomy.nil?
@@ -222,20 +222,20 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchHrisTaxonomyRequest.new(
   hris_taxonomy: Models::Shared::HrisTaxonomy.new(
     alternative_names: [
-      'Facilitator',
-      'National',
+      'Supervisor',
+      'Customer',
     ],
     created_at: DateTime.iso8601('2022-06-23T02:10:00.789Z'),
-    description: 'Uterque vespillo adnuo ea commodo turbo suscipio condico.',
-    domain: 'Health',
-    id: '70705b0f-1bad-4a78-b55e-2bfc7a36c800',
+    description: 'Ea commodo turbo.',
+    domain: 'Music',
+    id: '93e169db-30ce-4875-91e1-a9601a238fc6',
     is_active: false,
     metadata: [],
-    name: 'International Functionality Architect',
-    subcategory: 'Marble',
+    name: 'Chief Accountability Representative',
+    subcategory: 'Granite',
     type: Models::Shared::HrisTaxonomyType::KNOWLEDGE,
-    updated_at: DateTime.iso8601('2023-06-04T18:20:13.319Z'),
-    url: 'https://fixed-membership.biz/'
+    updated_at: DateTime.iso8601('2023-06-06T01:07:02.802Z'),
+    url: 'https://happy-go-lucky-devastation.com'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -325,20 +325,20 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateHrisTaxonomyRequest.new(
   hris_taxonomy: Models::Shared::HrisTaxonomy.new(
     alternative_names: [
-      'Facilitator',
-      'National',
+      'Supervisor',
+      'Customer',
     ],
     created_at: DateTime.iso8601('2022-06-23T02:10:00.789Z'),
-    description: 'Uterque vespillo adnuo ea commodo turbo suscipio condico.',
-    domain: 'Health',
-    id: '70705b0f-1bad-4a78-b55e-2bfc7a36c800',
+    description: 'Ea commodo turbo.',
+    domain: 'Music',
+    id: '93e169db-30ce-4875-91e1-a9601a238fc6',
     is_active: false,
     metadata: [],
-    name: 'International Functionality Architect',
-    subcategory: 'Marble',
+    name: 'Chief Accountability Representative',
+    subcategory: 'Granite',
     type: Models::Shared::HrisTaxonomyType::KNOWLEDGE,
-    updated_at: DateTime.iso8601('2023-06-04T18:20:13.319Z'),
-    url: 'https://fixed-membership.biz/'
+    updated_at: DateTime.iso8601('2023-06-06T01:07:02.802Z'),
+    url: 'https://happy-go-lucky-devastation.com'
   ),
   connection_id: '<id>',
   id: '<id>'

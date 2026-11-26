@@ -28,18 +28,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
   )
 )
 res = s.ad.create_ads_ad(ads_ad: Models::Shared::AdsAd.new(
-  ad_copy: 'Ascisco tolero caute sapiente. Valens unde comedo cursus crinis nobis thema. Cohaero nisi ullam tum unde ultio vilicus auditor capio.',
+  ad_copy: 'Unde ultio vilicus auditor capio reiciendis adsum paulatim admoveo. Collum accommodo adficio capto sed accedo vespillo carpo dolor decet. Comptus tenuis torqueo cum tergeo comedo colo adeo.',
   ad_type: Models::Shared::AdType::SOCIAL,
-  advertiser_name: 'Robel, Nader and Rau',
+  advertiser_name: 'Johnson, Dach and Gerlach',
   created_at: DateTime.iso8601('2022-11-08T03:38:20.978Z'),
-  creative_asset_url: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
-  description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
-  final_url: 'https://improbable-sanity.com',
-  id: '7cdacde3-f16e-48d1-9204-47b170b08240',
+  creative_asset_url: 'https://picsum.photos/seed/RjqoANMizQ/2569/2440',
+  description: 'Adulescens cursim clam vorago fugiat amitto tardus bibo.',
+  final_url: 'https://tight-horde.biz',
+  id: '3b59d5ab-3068-46aa-9ed0-2c43460b09f0',
   metadata: [],
-  name: 'Hermiston Group',
+  name: 'Rau, Runolfsson and Leannon',
   status: Models::Shared::AdsAdStatus::ARCHIVED,
-  updated_at: DateTime.iso8601('2024-06-30T19:14:09.090Z')
+  updated_at: DateTime.iso8601('2024-07-03T05:33:55.725Z')
 ), connection_id: '<id>')
 
 unless res.ads_ad.nil?
@@ -173,18 +173,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchAdsAdRequest.new(
   ads_ad: Models::Shared::AdsAd.new(
-    ad_copy: 'Ascisco tolero caute sapiente. Valens unde comedo cursus crinis nobis thema. Cohaero nisi ullam tum unde ultio vilicus auditor capio.',
+    ad_copy: 'Unde ultio vilicus auditor capio reiciendis adsum paulatim admoveo. Collum accommodo adficio capto sed accedo vespillo carpo dolor decet. Comptus tenuis torqueo cum tergeo comedo colo adeo.',
     ad_type: Models::Shared::AdType::SOCIAL,
-    advertiser_name: 'Robel, Nader and Rau',
+    advertiser_name: 'Johnson, Dach and Gerlach',
     created_at: DateTime.iso8601('2022-11-08T03:38:20.978Z'),
-    creative_asset_url: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
-    description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
-    final_url: 'https://improbable-sanity.com',
-    id: 'b34ef6fe-b3c7-4798-bd5e-4b16e69a75db',
+    creative_asset_url: 'https://picsum.photos/seed/RjqoANMizQ/2569/2440',
+    description: 'Adulescens cursim clam vorago fugiat amitto tardus bibo.',
+    final_url: 'https://tight-horde.biz',
+    id: '85f84d71-f430-4677-a0a2-db583fdcaaf3',
     metadata: [],
-    name: 'Hermiston Group',
+    name: 'Rau, Runolfsson and Leannon',
     status: Models::Shared::AdsAdStatus::ARCHIVED,
-    updated_at: DateTime.iso8601('2024-06-30T19:14:09.097Z')
+    updated_at: DateTime.iso8601('2024-07-03T05:33:55.735Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -273,18 +273,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateAdsAdRequest.new(
   ads_ad: Models::Shared::AdsAd.new(
-    ad_copy: 'Ascisco tolero caute sapiente. Valens unde comedo cursus crinis nobis thema. Cohaero nisi ullam tum unde ultio vilicus auditor capio.',
+    ad_copy: 'Unde ultio vilicus auditor capio reiciendis adsum paulatim admoveo. Collum accommodo adficio capto sed accedo vespillo carpo dolor decet. Comptus tenuis torqueo cum tergeo comedo colo adeo.',
     ad_type: Models::Shared::AdType::SOCIAL,
-    advertiser_name: 'Robel, Nader and Rau',
+    advertiser_name: 'Johnson, Dach and Gerlach',
     created_at: DateTime.iso8601('2022-11-08T03:38:20.978Z'),
-    creative_asset_url: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
-    description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
-    final_url: 'https://improbable-sanity.com',
-    id: 'b34ef6fe-b3c7-4798-bd5e-4b16e69a75db',
+    creative_asset_url: 'https://picsum.photos/seed/RjqoANMizQ/2569/2440',
+    description: 'Adulescens cursim clam vorago fugiat amitto tardus bibo.',
+    final_url: 'https://tight-horde.biz',
+    id: '85f84d71-f430-4677-a0a2-db583fdcaaf3',
     metadata: [],
-    name: 'Hermiston Group',
+    name: 'Rau, Runolfsson and Leannon',
     status: Models::Shared::AdsAdStatus::ARCHIVED,
-    updated_at: DateTime.iso8601('2024-06-30T19:14:09.097Z')
+    updated_at: DateTime.iso8601('2024-07-03T05:33:55.735Z')
   ),
   connection_id: '<id>',
   id: '<id>'

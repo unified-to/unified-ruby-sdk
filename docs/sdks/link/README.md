@@ -35,16 +35,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.link.create_calendar_link(calendar_link: Models::Shared::CalendarLink.new(
   created_at: '2023-03-07T13:34:11.959Z',
-  description: 'Vitium clibanus laboriosam uxor denuncio.',
+  description: 'Vito confero utilis.',
   duration: 74.0,
-  id: 'f15a59f3-5646-4537-8166-2df77ee9f000',
+  id: '9d2edab4-9a39-4641-bd0b-4941b82caf8c',
   is_active: true,
   metadata: [],
-  name: 'Sopor sopor ancilla animus anser dignissimos vito confero utilis.',
+  name: 'Animus anser.',
   price_amount: 44.0,
   price_currency: 'USD',
-  updated_at: '2024-03-24T00:27:17.558Z',
-  url: 'https://annual-apricot.info/'
+  updated_at: '2024-03-25T16:52:19.881Z',
+  url: 'https://whirlwind-entry.name'
 ), connection_id: '<id>')
 
 unless res.calendar_link.nil?
@@ -90,18 +90,21 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.link.create_payment_link(payment_link: Models::Shared::PaymentLink.new(
   amount: 17_001.68,
+  contact_email: 'Clovis8@yahoo.com',
+  contact_name: 'Lilliana Dibbert',
+  contact_phone: '963-764-0961',
   created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
   currency: 'CAD',
-  description: 'Savor the tender essence in our Ball, designed for dim culinary adventures',
-  id: '3c007901-8aa5-483b-a1a8-ea3a92c3b7dc',
+  description: 'The Daron Sausages is the latest in a series of informal products from Dach, Beatty and Moen',
+  id: 'b852986f-21a1-432a-a63d-ba1fc6023fe3',
   is_active: true,
   is_chargeable_now: true,
   lineitems: [
     Models::Shared::PaymentLineitem.new(
       created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-      id: 'a25f1ef5-4d65-4a43-adca-2642de4fcf4c',
-      item_description: 'Discover the worst new Computer with an exciting mix of Steel ingredients',
-      item_name: 'Soft Marble Cheese',
+      id: '2dde74f4-92eb-491e-acd3-5b357281c1e7',
+      item_description: 'Introducing the Syrian Arab Republic-inspired Chips, blending neat style with local craftsmanship',
+      item_name: 'Electronic Metal Tuna',
       tax_amount: 0.0,
       total_amount: 9342.0,
       unit_amount: 519.0,
@@ -111,10 +114,10 @@ res = s.link.create_payment_link(payment_link: Models::Shared::PaymentLink.new(
     Models::Shared::PaymentLineitem.new(
       created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
       discount_amount: 424.32,
-      id: '35fa0d68-cc88-4cf2-b8ea-eed660f0c7a1',
-      item_description: 'Innovative Shoes featuring utilized technology and Cotton construction',
-      item_name: 'Sleek Aluminum Shoes',
-      notes: 'Cervus decretum viridis doloremque.',
+      id: '54958e50-4e68-4398-90f3-c2f03b982613',
+      item_description: 'Soft Computer designed with Bronze for junior performance',
+      item_name: 'Rustic Concrete Shoes',
+      notes: 'Doloremque appositus cito cursim bellicus rerum ubi voluptatibus.',
       tax_amount: 0.0,
       total_amount: 6647.68,
       unit_amount: 884.0,
@@ -123,10 +126,10 @@ res = s.link.create_payment_link(payment_link: Models::Shared::PaymentLink.new(
     ),
     Models::Shared::PaymentLineitem.new(
       created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-      id: '7400e14c-1867-4b92-934f-7d9c2037bad2',
-      item_description: 'Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance',
-      item_name: 'Elegant Concrete Gloves',
-      notes: 'Desipio usque vacuus currus cetera testimonium.',
+      id: '3d966e35-b272-484d-b702-85a876eba2e7',
+      item_description: 'The Donnie Shirt is the latest in a series of tinted products from Nitzsche and Sons',
+      item_name: 'Intelligent Marble Keyboard',
+      notes: 'Damnatio aut bene.',
       tax_amount: 0.0,
       total_amount: 1012.0,
       unit_amount: 506.0,
@@ -135,9 +138,9 @@ res = s.link.create_payment_link(payment_link: Models::Shared::PaymentLink.new(
     ),
   ],
   metadata: [],
-  success_url: 'https://tinted-jet.info',
-  updated_at: DateTime.iso8601('2024-04-21T00:29:25.227Z'),
-  url: 'https://pay.example.com/3c007901-8aa5-483b-a1a8-ea3a92c3b7dc'
+  success_url: 'https://finished-retention.com',
+  updated_at: DateTime.iso8601('2024-04-22T12:50:35.928Z'),
+  url: 'https://pay.example.com/b852986f-21a1-432a-a63d-ba1fc6023fe3'
 ), connection_id: '<id>')
 
 unless res.payment_link.nil?
@@ -359,16 +362,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchCalendarLinkRequest.new(
   calendar_link: Models::Shared::CalendarLink.new(
     created_at: '2023-03-07T13:34:11.959Z',
-    description: 'Vitium clibanus laboriosam uxor denuncio.',
+    description: 'Vito confero utilis.',
     duration: 74.0,
-    id: '95cbc692-3d74-4386-b61a-1217672d9198',
+    id: '16966cf2-cd3b-4869-8256-90ab6ee96f62',
     is_active: true,
     metadata: [],
-    name: 'Sopor sopor ancilla animus anser dignissimos vito confero utilis.',
+    name: 'Animus anser.',
     price_amount: 44.0,
     price_currency: 'USD',
-    updated_at: '2024-03-24T00:27:17.561Z',
-    url: 'https://annual-apricot.info/'
+    updated_at: '2024-03-25T16:52:19.884Z',
+    url: 'https://whirlwind-entry.name'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -417,18 +420,21 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchPaymentLinkRequest.new(
   payment_link: Models::Shared::PaymentLink.new(
     amount: 17_001.68,
+    contact_email: 'Clovis8@yahoo.com',
+    contact_name: 'Lilliana Dibbert',
+    contact_phone: '963-764-0961',
     created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
     currency: 'CAD',
-    description: 'Savor the tender essence in our Ball, designed for dim culinary adventures',
-    id: 'a57a78d3-bd55-4edd-9933-0f8d4dba3044',
+    description: 'The Daron Sausages is the latest in a series of informal products from Dach, Beatty and Moen',
+    id: 'c5dd8dbf-2b8f-413c-940d-f052562c5dc6',
     is_active: true,
     is_chargeable_now: true,
     lineitems: [
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-        id: '30e229dc-7695-46eb-aa35-936a48ee9f33',
-        item_description: 'Discover the worst new Computer with an exciting mix of Steel ingredients',
-        item_name: 'Soft Marble Cheese',
+        id: 'bd59c50d-0c08-490c-baa7-2579f0e9eb8c',
+        item_description: 'Introducing the Syrian Arab Republic-inspired Chips, blending neat style with local craftsmanship',
+        item_name: 'Electronic Metal Tuna',
         tax_amount: 0.0,
         total_amount: 9342.0,
         unit_amount: 519.0,
@@ -438,10 +444,10 @@ req = Models::Operations::PatchPaymentLinkRequest.new(
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
         discount_amount: 424.32,
-        id: 'a86e9134-0a8f-4895-9514-05c0ba9bde19',
-        item_description: 'Innovative Shoes featuring utilized technology and Cotton construction',
-        item_name: 'Sleek Aluminum Shoes',
-        notes: 'Cervus decretum viridis doloremque.',
+        id: 'd05491bb-3ac9-464d-818b-cf5630ff0346',
+        item_description: 'Soft Computer designed with Bronze for junior performance',
+        item_name: 'Rustic Concrete Shoes',
+        notes: 'Doloremque appositus cito cursim bellicus rerum ubi voluptatibus.',
         tax_amount: 0.0,
         total_amount: 6647.68,
         unit_amount: 884.0,
@@ -450,10 +456,10 @@ req = Models::Operations::PatchPaymentLinkRequest.new(
       ),
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-        id: '8c4e2ca0-fc76-4190-a170-cea83443323a',
-        item_description: 'Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance',
-        item_name: 'Elegant Concrete Gloves',
-        notes: 'Desipio usque vacuus currus cetera testimonium.',
+        id: '77d79b19-3af8-4732-860f-b418e91596f5',
+        item_description: 'The Donnie Shirt is the latest in a series of tinted products from Nitzsche and Sons',
+        item_name: 'Intelligent Marble Keyboard',
+        notes: 'Damnatio aut bene.',
         tax_amount: 0.0,
         total_amount: 1012.0,
         unit_amount: 506.0,
@@ -462,9 +468,9 @@ req = Models::Operations::PatchPaymentLinkRequest.new(
       ),
     ],
     metadata: [],
-    success_url: 'https://tinted-jet.info',
-    updated_at: DateTime.iso8601('2024-04-21T00:29:25.231Z'),
-    url: 'https://pay.example.com/a57a78d3-bd55-4edd-9933-0f8d4dba3044'
+    success_url: 'https://finished-retention.com',
+    updated_at: DateTime.iso8601('2024-04-22T12:50:35.934Z'),
+    url: 'https://pay.example.com/c5dd8dbf-2b8f-413c-940d-f052562c5dc6'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -595,16 +601,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateCalendarLinkRequest.new(
   calendar_link: Models::Shared::CalendarLink.new(
     created_at: '2023-03-07T13:34:11.959Z',
-    description: 'Vitium clibanus laboriosam uxor denuncio.',
+    description: 'Vito confero utilis.',
     duration: 74.0,
-    id: '95cbc692-3d74-4386-b61a-1217672d9198',
+    id: '16966cf2-cd3b-4869-8256-90ab6ee96f62',
     is_active: true,
     metadata: [],
-    name: 'Sopor sopor ancilla animus anser dignissimos vito confero utilis.',
+    name: 'Animus anser.',
     price_amount: 44.0,
     price_currency: 'USD',
-    updated_at: '2024-03-24T00:27:17.561Z',
-    url: 'https://annual-apricot.info/'
+    updated_at: '2024-03-25T16:52:19.884Z',
+    url: 'https://whirlwind-entry.name'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -653,18 +659,21 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdatePaymentLinkRequest.new(
   payment_link: Models::Shared::PaymentLink.new(
     amount: 17_001.68,
+    contact_email: 'Clovis8@yahoo.com',
+    contact_name: 'Lilliana Dibbert',
+    contact_phone: '963-764-0961',
     created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
     currency: 'CAD',
-    description: 'Savor the tender essence in our Ball, designed for dim culinary adventures',
-    id: 'a57a78d3-bd55-4edd-9933-0f8d4dba3044',
+    description: 'The Daron Sausages is the latest in a series of informal products from Dach, Beatty and Moen',
+    id: 'c5dd8dbf-2b8f-413c-940d-f052562c5dc6',
     is_active: true,
     is_chargeable_now: true,
     lineitems: [
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-        id: '30e229dc-7695-46eb-aa35-936a48ee9f33',
-        item_description: 'Discover the worst new Computer with an exciting mix of Steel ingredients',
-        item_name: 'Soft Marble Cheese',
+        id: 'bd59c50d-0c08-490c-baa7-2579f0e9eb8c',
+        item_description: 'Introducing the Syrian Arab Republic-inspired Chips, blending neat style with local craftsmanship',
+        item_name: 'Electronic Metal Tuna',
         tax_amount: 0.0,
         total_amount: 9342.0,
         unit_amount: 519.0,
@@ -674,10 +683,10 @@ req = Models::Operations::UpdatePaymentLinkRequest.new(
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
         discount_amount: 424.32,
-        id: 'a86e9134-0a8f-4895-9514-05c0ba9bde19',
-        item_description: 'Innovative Shoes featuring utilized technology and Cotton construction',
-        item_name: 'Sleek Aluminum Shoes',
-        notes: 'Cervus decretum viridis doloremque.',
+        id: 'd05491bb-3ac9-464d-818b-cf5630ff0346',
+        item_description: 'Soft Computer designed with Bronze for junior performance',
+        item_name: 'Rustic Concrete Shoes',
+        notes: 'Doloremque appositus cito cursim bellicus rerum ubi voluptatibus.',
         tax_amount: 0.0,
         total_amount: 6647.68,
         unit_amount: 884.0,
@@ -686,10 +695,10 @@ req = Models::Operations::UpdatePaymentLinkRequest.new(
       ),
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-        id: '8c4e2ca0-fc76-4190-a170-cea83443323a',
-        item_description: 'Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance',
-        item_name: 'Elegant Concrete Gloves',
-        notes: 'Desipio usque vacuus currus cetera testimonium.',
+        id: '77d79b19-3af8-4732-860f-b418e91596f5',
+        item_description: 'The Donnie Shirt is the latest in a series of tinted products from Nitzsche and Sons',
+        item_name: 'Intelligent Marble Keyboard',
+        notes: 'Damnatio aut bene.',
         tax_amount: 0.0,
         total_amount: 1012.0,
         unit_amount: 506.0,
@@ -698,9 +707,9 @@ req = Models::Operations::UpdatePaymentLinkRequest.new(
       ),
     ],
     metadata: [],
-    success_url: 'https://tinted-jet.info',
-    updated_at: DateTime.iso8601('2024-04-21T00:29:25.231Z'),
-    url: 'https://pay.example.com/a57a78d3-bd55-4edd-9933-0f8d4dba3044'
+    success_url: 'https://finished-retention.com',
+    updated_at: DateTime.iso8601('2024-04-22T12:50:35.934Z'),
+    url: 'https://pay.example.com/c5dd8dbf-2b8f-413c-940d-f052562c5dc6'
   ),
   connection_id: '<id>',
   id: '<id>'

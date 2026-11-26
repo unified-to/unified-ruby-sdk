@@ -40,18 +40,18 @@ res = s.campaign.create_ads_campaign(ads_campaign: Models::Shared::AdsCampaign.n
   created_at: DateTime.iso8601('2022-05-21T08:51:41.868Z'),
   currency: 'USD',
   effective_status: Models::Shared::EffectiveStatus::NOT_ELIGIBLE,
-  end_at: DateTime.iso8601('2025-06-21T13:11:09.108Z'),
-  id: '54384b0e-30e6-4536-94d3-2b49f5c76938',
+  end_at: DateTime.iso8601('2025-06-25T15:16:24.466Z'),
+  id: '34e12592-81ee-4f59-bd9f-4e155cb73802',
   labels: [
-    'comedo',
+    'adsuesco',
   ],
   metadata: [],
-  name: 'Emard Inc',
-  start_at: DateTime.iso8601('2022-07-22T14:05:21.300Z'),
+  name: 'Davis-Ziemann - Gerhold',
+  start_at: DateTime.iso8601('2022-07-22T19:30:12.476Z'),
   status: Models::Shared::AdsCampaignStatus::PROCESSING_FAILED,
   targeting: Models::Shared::PropertyAdsCampaignTargeting.new,
   total_spend_amount: 2349.8_642_875_347_286,
-  updated_at: DateTime.iso8601('2026-01-26T03:33:03.664Z')
+  updated_at: DateTime.iso8601('2026-01-31T00:39:40.093Z')
 ), connection_id: '<id>')
 
 unless res.ads_campaign.nil?
@@ -97,18 +97,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.campaign.create_martech_campaign(marketing_campaign: Models::Shared::MarketingCampaign.new(
   created_at: DateTime.iso8601('2019-05-19T11:18:15.589Z'),
-  from_email: 'graham.mertz@gmail.com',
-  from_name: 'Graham Mertz',
-  id: 'e985785f-aefc-47bf-86d1-0ce50ee63763',
+  from_email: 'liana.dare@gmail.com',
+  from_name: 'Liana Dare',
+  id: 'b9999750-5479-41b4-9a47-e5fc91112480',
   metadata: [],
-  name: 'Consequatur atqui sustineo.',
-  preview_text: 'Auctus votum ver umbra corroboro turpis spoliatio tamen strues auxilium benigne tempus error eaque suasoria.',
-  reply_to_email: 'graham.mertz@icloud.com',
+  name: 'Sumo trepide utpote conculco tibi solio supplanto.',
+  preview_text: 'Spoliatio tamen strues auxilium benigne tempus error eaque suasoria soleo tergeo contra solutio vilitas.',
+  reply_to_email: 'liana.dare@icloud.com',
   send_at: DateTime.iso8601('2024-01-23T21:19:26.708Z'),
   status: Models::Shared::MarketingCampaignStatus::SCHEDULED,
-  subject_line: 'Trepide utpote conculco tibi solio supplanto peior tibi.',
+  subject_line: 'Tibi volo auctus votum ver umbra corroboro.',
   type: 'absplit',
-  updated_at: DateTime.iso8601('2022-07-04T14:44:36.592Z')
+  updated_at: DateTime.iso8601('2022-07-07T02:19:49.042Z')
 ), connection_id: '<id>')
 
 unless res.marketing_campaign.nil?
@@ -335,18 +335,18 @@ req = Models::Operations::PatchAdsCampaignRequest.new(
     created_at: DateTime.iso8601('2022-05-21T08:51:41.868Z'),
     currency: 'USD',
     effective_status: Models::Shared::EffectiveStatus::NOT_ELIGIBLE,
-    end_at: DateTime.iso8601('2025-06-21T13:11:09.180Z'),
-    id: '00b99146-3461-47d2-88f6-decf653de0f0',
+    end_at: DateTime.iso8601('2025-06-25T15:16:24.591Z'),
+    id: 'dd0825e0-d040-4eb9-890c-bda96687c45b',
     labels: [
-      'comedo',
+      'adsuesco',
     ],
     metadata: [],
-    name: 'Emard Inc',
-    start_at: DateTime.iso8601('2022-07-22T14:05:21.304Z'),
+    name: 'Davis-Ziemann - Gerhold',
+    start_at: DateTime.iso8601('2022-07-22T19:30:12.483Z'),
     status: Models::Shared::AdsCampaignStatus::PROCESSING_FAILED,
     targeting: Models::Shared::PropertyAdsCampaignTargeting.new,
     total_spend_amount: 2349.8_642_875_347_286,
-    updated_at: DateTime.iso8601('2026-01-26T03:33:03.750Z')
+    updated_at: DateTime.iso8601('2026-01-31T00:39:40.242Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -395,18 +395,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchMartechCampaignRequest.new(
   marketing_campaign: Models::Shared::MarketingCampaign.new(
     created_at: DateTime.iso8601('2019-05-19T11:18:15.589Z'),
-    from_email: 'graham.mertz@gmail.com',
-    from_name: 'Graham Mertz',
-    id: 'b11f0d5c-ca62-4436-8286-3f6ab1c0a06d',
+    from_email: 'liana.dare@gmail.com',
+    from_name: 'Liana Dare',
+    id: '49346fe2-fe26-4673-941d-d0e4c62837af',
     metadata: [],
-    name: 'Consequatur atqui sustineo.',
-    preview_text: 'Auctus votum ver umbra corroboro turpis spoliatio tamen strues auxilium benigne tempus error eaque suasoria.',
-    reply_to_email: 'graham.mertz@icloud.com',
+    name: 'Sumo trepide utpote conculco tibi solio supplanto.',
+    preview_text: 'Spoliatio tamen strues auxilium benigne tempus error eaque suasoria soleo tergeo contra solutio vilitas.',
+    reply_to_email: 'liana.dare@icloud.com',
     send_at: DateTime.iso8601('2024-01-23T21:19:26.708Z'),
     status: Models::Shared::MarketingCampaignStatus::SCHEDULED,
-    subject_line: 'Trepide utpote conculco tibi solio supplanto peior tibi.',
+    subject_line: 'Tibi volo auctus votum ver umbra corroboro.',
     type: 'absplit',
-    updated_at: DateTime.iso8601('2022-07-04T14:44:36.597Z')
+    updated_at: DateTime.iso8601('2022-07-07T02:19:49.047Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -542,18 +542,18 @@ req = Models::Operations::UpdateAdsCampaignRequest.new(
     created_at: DateTime.iso8601('2022-05-21T08:51:41.868Z'),
     currency: 'USD',
     effective_status: Models::Shared::EffectiveStatus::NOT_ELIGIBLE,
-    end_at: DateTime.iso8601('2025-06-21T13:11:09.180Z'),
-    id: '00b99146-3461-47d2-88f6-decf653de0f0',
+    end_at: DateTime.iso8601('2025-06-25T15:16:24.591Z'),
+    id: 'dd0825e0-d040-4eb9-890c-bda96687c45b',
     labels: [
-      'comedo',
+      'adsuesco',
     ],
     metadata: [],
-    name: 'Emard Inc',
-    start_at: DateTime.iso8601('2022-07-22T14:05:21.304Z'),
+    name: 'Davis-Ziemann - Gerhold',
+    start_at: DateTime.iso8601('2022-07-22T19:30:12.483Z'),
     status: Models::Shared::AdsCampaignStatus::PROCESSING_FAILED,
     targeting: Models::Shared::PropertyAdsCampaignTargeting.new,
     total_spend_amount: 2349.8_642_875_347_286,
-    updated_at: DateTime.iso8601('2026-01-26T03:33:03.750Z')
+    updated_at: DateTime.iso8601('2026-01-31T00:39:40.242Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -602,18 +602,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateMartechCampaignRequest.new(
   marketing_campaign: Models::Shared::MarketingCampaign.new(
     created_at: DateTime.iso8601('2019-05-19T11:18:15.589Z'),
-    from_email: 'graham.mertz@gmail.com',
-    from_name: 'Graham Mertz',
-    id: 'b11f0d5c-ca62-4436-8286-3f6ab1c0a06d',
+    from_email: 'liana.dare@gmail.com',
+    from_name: 'Liana Dare',
+    id: '49346fe2-fe26-4673-941d-d0e4c62837af',
     metadata: [],
-    name: 'Consequatur atqui sustineo.',
-    preview_text: 'Auctus votum ver umbra corroboro turpis spoliatio tamen strues auxilium benigne tempus error eaque suasoria.',
-    reply_to_email: 'graham.mertz@icloud.com',
+    name: 'Sumo trepide utpote conculco tibi solio supplanto.',
+    preview_text: 'Spoliatio tamen strues auxilium benigne tempus error eaque suasoria soleo tergeo contra solutio vilitas.',
+    reply_to_email: 'liana.dare@icloud.com',
     send_at: DateTime.iso8601('2024-01-23T21:19:26.708Z'),
     status: Models::Shared::MarketingCampaignStatus::SCHEDULED,
-    subject_line: 'Trepide utpote conculco tibi solio supplanto peior tibi.',
+    subject_line: 'Tibi volo auctus votum ver umbra corroboro.',
     type: 'absplit',
-    updated_at: DateTime.iso8601('2022-07-04T14:44:36.597Z')
+    updated_at: DateTime.iso8601('2022-07-07T02:19:49.047Z')
   ),
   connection_id: '<id>',
   id: '<id>'

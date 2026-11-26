@@ -50,4 +50,6 @@ class UnifiedRubySDK::Models::Shared::CrmLead
   def updated_at=(str_); end
   def user_id(); end
   def user_id=(str_); end
+  def vehicle_ids(); end
+  def vehicle_ids=(str_); end
 end

@@ -29,14 +29,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.commit.create_repo_commit(repo_commit: Models::Shared::RepoCommit.new(
   created_at: DateTime.iso8601('2020-07-12T16:20:42.520Z'),
-  id: 'b725db03-8e04-4414-a0f3-727ecceb94fc',
+  id: '633ed6c0-ee9a-4f01-8144-6d0b5dfaef58',
   lines_added: 313.0,
   lines_changed: 659.0,
   lines_deleted: 482.0,
-  message: 'quantify bluetooth bandwidth',
+  message: 'input bluetooth circuit',
   metadata: [],
   repo_id: '<id>',
-  updated_at: DateTime.iso8601('2023-06-14T01:33:24.691Z')
+  updated_at: DateTime.iso8601('2023-06-16T19:15:44.884Z')
 ), connection_id: '<id>')
 
 unless res.repo_commit.nil?
@@ -171,14 +171,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchRepoCommitRequest.new(
   repo_commit: Models::Shared::RepoCommit.new(
     created_at: DateTime.iso8601('2020-07-12T16:20:42.520Z'),
-    id: '6ef346e6-aeb1-4614-878a-f11e066b6571',
+    id: '9af9c528-f7f6-49cc-a869-1e1b8fe9caca',
     lines_added: 313.0,
     lines_changed: 659.0,
     lines_deleted: 482.0,
-    message: 'quantify bluetooth bandwidth',
+    message: 'input bluetooth circuit',
     metadata: [],
     repo_id: '<id>',
-    updated_at: DateTime.iso8601('2023-06-14T01:33:24.698Z')
+    updated_at: DateTime.iso8601('2023-06-16T19:15:44.892Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -268,14 +268,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateRepoCommitRequest.new(
   repo_commit: Models::Shared::RepoCommit.new(
     created_at: DateTime.iso8601('2020-07-12T16:20:42.520Z'),
-    id: '6ef346e6-aeb1-4614-878a-f11e066b6571',
+    id: '9af9c528-f7f6-49cc-a869-1e1b8fe9caca',
     lines_added: 313.0,
     lines_changed: 659.0,
     lines_deleted: 482.0,
-    message: 'quantify bluetooth bandwidth',
+    message: 'input bluetooth circuit',
     metadata: [],
     repo_id: '<id>',
-    updated_at: DateTime.iso8601('2023-06-14T01:33:24.698Z')
+    updated_at: DateTime.iso8601('2023-06-16T19:15:44.892Z')
   ),
   connection_id: '<id>',
   id: '<id>'

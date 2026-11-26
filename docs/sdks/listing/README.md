@@ -29,13 +29,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.listing.create_property_listing(property_listing: Models::Shared::PropertyListing.new(
   address: Models::Shared::PropertyPropertyListingAddress.new(
-    address1: '9262 Bramley Close',
-    city: 'New Andrewshire',
+    address1: '7424 1st Avenue',
+    city: 'Porterville',
     country: 'United States',
     country_code: 'US',
-    postal_code: '53615-4664',
-    region: 'Nebraska',
-    region_code: 'IL'
+    postal_code: '95594-3059',
+    region: 'Louisiana',
+    region_code: 'ID'
   ),
   amenities: [
     'Wifi',
@@ -48,7 +48,7 @@ res = s.listing.create_property_listing(property_listing: Models::Shared::Proper
   channels: [
     Models::Shared::PropertyChannel.new(
       name: 'Booking.com',
-      web_url: 'https://frightened-hyphenation.net/'
+      web_url: 'https://gentle-flat.name'
     ),
   ],
   check_in_end_time: '22:00',
@@ -57,27 +57,27 @@ res = s.listing.create_property_listing(property_listing: Models::Shared::Proper
   cleaning_fee_amount: 134.0,
   created_at: DateTime.iso8601('2021-01-08T09:27:35.485Z'),
   currency: 'USD',
-  description: 'Cuius deputo cruentus demoror censura caveo sponte statim vespillo cursim. Arbitro barba summopere. Curto vulticulus comparo surgo vociferor carmen deputo defluo.',
+  description: 'Cruentus demoror censura caveo sponte statim. Cursim angulus arbitro barba summopere subnecto curto vulticulus comparo surgo. Carmen deputo defluo abscido conatus arbustum sequi abbas complectus demum.',
   house_rules: 'No smoking. No parties or events.',
-  id: '80a581fd-dfd7-4c4c-954b-6a81710e4e66',
+  id: '62921985-1342-4f8c-b9cf-aaa59276696e',
   image_urls: [
-    'https://loremflickr.com/23/1328?lock=5798241296161663',
-    'https://loremflickr.com/12/1312?lock=6354590363728966',
+    'https://picsum.photos/seed/cCdY57x3Vw/2822/2061',
+    'https://picsum.photos/seed/nH6zsBCr/1004/2259',
   ],
-  latitude: -5.4327,
-  longitude: 98.9045,
+  latitude: -73.4369,
+  longitude: 97.314,
   max_nights: 15.0,
   max_occupancy: 5.0,
   metadata: [],
   min_nights: 1.0,
-  name: 'accurate Loft',
+  name: 'ironclad Loft',
   rating: 4.9,
   review_count: 343.0,
   start_price_amount: 470.0,
   timezone: 'America/Los_Angeles',
   type: Models::Shared::PropertyListingType::ROOM,
-  updated_at: DateTime.iso8601('2026-09-27T07:59:48.037Z'),
-  web_url: 'https://tight-pronoun.info/'
+  updated_at: DateTime.iso8601('2026-10-03T03:26:29.316Z'),
+  web_url: 'https://oval-junior.info'
 ), connection_id: '<id>')
 
 unless res.property_listing.nil?
@@ -212,13 +212,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchPropertyListingRequest.new(
   property_listing: Models::Shared::PropertyListing.new(
     address: Models::Shared::PropertyPropertyListingAddress.new(
-      address1: '9262 Bramley Close',
-      city: 'New Andrewshire',
+      address1: '7424 1st Avenue',
+      city: 'Porterville',
       country: 'United States',
       country_code: 'US',
-      postal_code: '53615-4664',
-      region: 'Nebraska',
-      region_code: 'IL'
+      postal_code: '95594-3059',
+      region: 'Louisiana',
+      region_code: 'ID'
     ),
     amenities: [
       'Wifi',
@@ -231,7 +231,7 @@ req = Models::Operations::PatchPropertyListingRequest.new(
     channels: [
       Models::Shared::PropertyChannel.new(
         name: 'Booking.com',
-        web_url: 'https://frightened-hyphenation.net/'
+        web_url: 'https://gentle-flat.name'
       ),
     ],
     check_in_end_time: '22:00',
@@ -240,27 +240,27 @@ req = Models::Operations::PatchPropertyListingRequest.new(
     cleaning_fee_amount: 134.0,
     created_at: DateTime.iso8601('2021-01-08T09:27:35.485Z'),
     currency: 'USD',
-    description: 'Cuius deputo cruentus demoror censura caveo sponte statim vespillo cursim. Arbitro barba summopere. Curto vulticulus comparo surgo vociferor carmen deputo defluo.',
+    description: 'Cruentus demoror censura caveo sponte statim. Cursim angulus arbitro barba summopere subnecto curto vulticulus comparo surgo. Carmen deputo defluo abscido conatus arbustum sequi abbas complectus demum.',
     house_rules: 'No smoking. No parties or events.',
-    id: 'c838a632-2334-4e93-9f3a-d39145490c4a',
+    id: 'd5e5d9f4-639e-469a-b7df-480105ade4f6',
     image_urls: [
-      'https://loremflickr.com/23/1328?lock=5798241296161663',
-      'https://loremflickr.com/12/1312?lock=6354590363728966',
+      'https://picsum.photos/seed/cCdY57x3Vw/2822/2061',
+      'https://picsum.photos/seed/nH6zsBCr/1004/2259',
     ],
-    latitude: -5.4327,
-    longitude: 98.9045,
+    latitude: -73.4369,
+    longitude: 97.314,
     max_nights: 15.0,
     max_occupancy: 5.0,
     metadata: [],
     min_nights: 1.0,
-    name: 'accurate Loft',
+    name: 'ironclad Loft',
     rating: 4.9,
     review_count: 343.0,
     start_price_amount: 470.0,
     timezone: 'America/Los_Angeles',
     type: Models::Shared::PropertyListingType::ROOM,
-    updated_at: DateTime.iso8601('2026-09-27T07:59:48.074Z'),
-    web_url: 'https://tight-pronoun.info/'
+    updated_at: DateTime.iso8601('2026-10-03T03:26:29.335Z'),
+    web_url: 'https://oval-junior.info'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -350,13 +350,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdatePropertyListingRequest.new(
   property_listing: Models::Shared::PropertyListing.new(
     address: Models::Shared::PropertyPropertyListingAddress.new(
-      address1: '9262 Bramley Close',
-      city: 'New Andrewshire',
+      address1: '7424 1st Avenue',
+      city: 'Porterville',
       country: 'United States',
       country_code: 'US',
-      postal_code: '53615-4664',
-      region: 'Nebraska',
-      region_code: 'IL'
+      postal_code: '95594-3059',
+      region: 'Louisiana',
+      region_code: 'ID'
     ),
     amenities: [
       'Wifi',
@@ -369,7 +369,7 @@ req = Models::Operations::UpdatePropertyListingRequest.new(
     channels: [
       Models::Shared::PropertyChannel.new(
         name: 'Booking.com',
-        web_url: 'https://frightened-hyphenation.net/'
+        web_url: 'https://gentle-flat.name'
       ),
     ],
     check_in_end_time: '22:00',
@@ -378,27 +378,27 @@ req = Models::Operations::UpdatePropertyListingRequest.new(
     cleaning_fee_amount: 134.0,
     created_at: DateTime.iso8601('2021-01-08T09:27:35.485Z'),
     currency: 'USD',
-    description: 'Cuius deputo cruentus demoror censura caveo sponte statim vespillo cursim. Arbitro barba summopere. Curto vulticulus comparo surgo vociferor carmen deputo defluo.',
+    description: 'Cruentus demoror censura caveo sponte statim. Cursim angulus arbitro barba summopere subnecto curto vulticulus comparo surgo. Carmen deputo defluo abscido conatus arbustum sequi abbas complectus demum.',
     house_rules: 'No smoking. No parties or events.',
-    id: 'c838a632-2334-4e93-9f3a-d39145490c4a',
+    id: 'd5e5d9f4-639e-469a-b7df-480105ade4f6',
     image_urls: [
-      'https://loremflickr.com/23/1328?lock=5798241296161663',
-      'https://loremflickr.com/12/1312?lock=6354590363728966',
+      'https://picsum.photos/seed/cCdY57x3Vw/2822/2061',
+      'https://picsum.photos/seed/nH6zsBCr/1004/2259',
     ],
-    latitude: -5.4327,
-    longitude: 98.9045,
+    latitude: -73.4369,
+    longitude: 97.314,
     max_nights: 15.0,
     max_occupancy: 5.0,
     metadata: [],
     min_nights: 1.0,
-    name: 'accurate Loft',
+    name: 'ironclad Loft',
     rating: 4.9,
     review_count: 343.0,
     start_price_amount: 470.0,
     timezone: 'America/Los_Angeles',
     type: Models::Shared::PropertyListingType::ROOM,
-    updated_at: DateTime.iso8601('2026-09-27T07:59:48.074Z'),
-    web_url: 'https://tight-pronoun.info/'
+    updated_at: DateTime.iso8601('2026-10-03T03:26:29.335Z'),
+    web_url: 'https://oval-junior.info'
   ),
   connection_id: '<id>',
   id: '<id>'

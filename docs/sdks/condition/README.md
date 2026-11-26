@@ -4,8 +4,51 @@
 
 ### Available Operations
 
+* [get_fhir_condition](#get_fhir_condition) - Read a Condition
 * [get_healthcare_condition](#get_healthcare_condition) - Retrieve a condition
+* [list_fhir_conditions](#list_fhir_conditions) - Search Condition resources
 * [list_healthcare_conditions](#list_healthcare_conditions) - List all conditions
+
+## get_fhir_condition
+
+Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getFhirCondition" method="get" path="/fhir/{connection_id}/Condition/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.condition.get_fhir_condition(connection_id: '<id>', id: '<id>')
+
+unless res.fhir_condition.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Condition  |
+
+### Response
+
+**[T.nilable(Models::Operations::GetFhirConditionResponse)](../../models/operations/getfhirconditionresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## get_healthcare_condition
 
@@ -43,6 +86,50 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::GetHealthcareConditionResponse)](../../models/operations/gethealthcareconditionresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## list_fhir_conditions
+
+Returns a searchset Bundle; follow its next link for more pages. Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listFhirConditions" method="get" path="/fhir/{connection_id}/Condition" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+
+req = Models::Operations::ListFhirConditionsRequest.new(
+  connection_id: '<id>'
+)
+res = s.condition.list_fhir_conditions(request: req)
+
+unless res.fhir_bundle.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `request`                                                                                             | [Models::Operations::ListFhirConditionsRequest](../../models/operations/listfhirconditionsrequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+
+### Response
+
+**[T.nilable(Models::Operations::ListFhirConditionsResponse)](../../models/operations/listfhirconditionsresponse.md)**
 
 ### Errors
 

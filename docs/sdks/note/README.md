@@ -29,10 +29,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.note.create_ticketing_note(ticketing_note: Models::Shared::TicketingNote.new(
   created_at: DateTime.iso8601('2019-07-23T15:05:03.241Z'),
-  description: 'Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.',
-  id: '189f3d4e-ec1e-46df-a9f4-47575d30a3c4',
+  description: 'Vitiosus recusandae tristis.',
+  id: '1dec0b23-0503-40d1-9c51-47b5a4216a78',
   metadata: [],
-  updated_at: DateTime.iso8601('2024-10-20T18:06:26.426Z')
+  updated_at: DateTime.iso8601('2024-10-25T00:30:26.454Z')
 ), connection_id: '<id>')
 
 unless res.ticketing_note.nil?
@@ -167,10 +167,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchTicketingNoteRequest.new(
   ticketing_note: Models::Shared::TicketingNote.new(
     created_at: DateTime.iso8601('2019-07-23T15:05:03.241Z'),
-    description: 'Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.',
-    id: '358290c3-775e-458a-b0d0-6b8acb342bd3',
+    description: 'Vitiosus recusandae tristis.',
+    id: 'f0aebc2d-b683-4899-9831-4a498b795b5d',
     metadata: [],
-    updated_at: DateTime.iso8601('2024-10-20T18:06:26.432Z')
+    updated_at: DateTime.iso8601('2024-10-25T00:30:26.463Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -260,10 +260,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateTicketingNoteRequest.new(
   ticketing_note: Models::Shared::TicketingNote.new(
     created_at: DateTime.iso8601('2019-07-23T15:05:03.241Z'),
-    description: 'Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.',
-    id: '358290c3-775e-458a-b0d0-6b8acb342bd3',
+    description: 'Vitiosus recusandae tristis.',
+    id: 'f0aebc2d-b683-4899-9831-4a498b795b5d',
     metadata: [],
-    updated_at: DateTime.iso8601('2024-10-20T18:06:26.432Z')
+    updated_at: DateTime.iso8601('2024-10-25T00:30:26.463Z')
   ),
   connection_id: '<id>',
   id: '<id>'

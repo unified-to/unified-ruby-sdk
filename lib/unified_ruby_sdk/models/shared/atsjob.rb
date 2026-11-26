@@ -26,6 +26,8 @@ module UnifiedRubySDK
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
         field :employment_type, Crystalline::Nilable.new(Models::Shared::EmploymentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employment_type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::EmploymentType, true) } }
+        # The placement fee agreed with the client for this job
+        field :fees, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AtsFee)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('fees') } }
         # The departments/divisions/teams that this job belongs to
         field :groups, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AtsGroup)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('groups') } }
 
@@ -73,8 +75,8 @@ module UnifiedRubySDK
         # User id of the job owner in the ATS (references an HRIS employee) (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(addresses: T.nilable(T::Array[Models::Shared::AtsAddress]), closed_at: T.nilable(::DateTime), company_id: T.nilable(::String), compensation: T.nilable(T::Array[Models::Shared::AtsCompensation]), created_at: T.nilable(::DateTime), description: T.nilable(::String), employment_type: T.nilable(Models::Shared::EmploymentType), groups: T.nilable(T::Array[Models::Shared::AtsGroup]), hiring_manager_ids: T.nilable(T::Array[::String]), hiring_managers: T.nilable(T::Array[Models::Shared::AtsReference]), id: T.nilable(::String), industry: T.nilable(::String), language_locale: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AtsMetadata]), minimum_degree: T.nilable(::String), minimum_experience_years: T.nilable(::Float), name: T.nilable(::String), number_of_openings: T.nilable(::Float), openings: T.nilable(T::Array[Models::Shared::AtsJobOpening]), postings: T.nilable(T::Array[Models::Shared::AtsJobPosting]), public_job_urls: T.nilable(T::Array[::String]), questions: T.nilable(T::Array[Models::Shared::AtsJobQuestion]), raw: T.nilable(T::Hash[::Symbol, ::Object]), recruiter_ids: T.nilable(T::Array[::String]), remote: T.nilable(T::Boolean), skills: T.nilable(T::Array[::String]), status: T.nilable(Models::Shared::AtsJobStatus), summary: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-        def initialize(addresses: nil, closed_at: nil, company_id: nil, compensation: nil, created_at: nil, description: nil, employment_type: nil, groups: nil, hiring_manager_ids: nil, hiring_managers: nil, id: nil, industry: nil, language_locale: nil, metadata: nil, minimum_degree: nil, minimum_experience_years: nil, name: nil, number_of_openings: nil, openings: nil, postings: nil, public_job_urls: nil, questions: nil, raw: nil, recruiter_ids: nil, remote: nil, skills: nil, status: nil, summary: nil, updated_at: nil, user_id: nil)
+        sig { params(addresses: T.nilable(T::Array[Models::Shared::AtsAddress]), closed_at: T.nilable(::DateTime), company_id: T.nilable(::String), compensation: T.nilable(T::Array[Models::Shared::AtsCompensation]), created_at: T.nilable(::DateTime), description: T.nilable(::String), employment_type: T.nilable(Models::Shared::EmploymentType), fees: T.nilable(T::Array[Models::Shared::AtsFee]), groups: T.nilable(T::Array[Models::Shared::AtsGroup]), hiring_manager_ids: T.nilable(T::Array[::String]), hiring_managers: T.nilable(T::Array[Models::Shared::AtsReference]), id: T.nilable(::String), industry: T.nilable(::String), language_locale: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AtsMetadata]), minimum_degree: T.nilable(::String), minimum_experience_years: T.nilable(::Float), name: T.nilable(::String), number_of_openings: T.nilable(::Float), openings: T.nilable(T::Array[Models::Shared::AtsJobOpening]), postings: T.nilable(T::Array[Models::Shared::AtsJobPosting]), public_job_urls: T.nilable(T::Array[::String]), questions: T.nilable(T::Array[Models::Shared::AtsJobQuestion]), raw: T.nilable(T::Hash[::Symbol, ::Object]), recruiter_ids: T.nilable(T::Array[::String]), remote: T.nilable(T::Boolean), skills: T.nilable(T::Array[::String]), status: T.nilable(Models::Shared::AtsJobStatus), summary: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        def initialize(addresses: nil, closed_at: nil, company_id: nil, compensation: nil, created_at: nil, description: nil, employment_type: nil, fees: nil, groups: nil, hiring_manager_ids: nil, hiring_managers: nil, id: nil, industry: nil, language_locale: nil, metadata: nil, minimum_degree: nil, minimum_experience_years: nil, name: nil, number_of_openings: nil, openings: nil, postings: nil, public_job_urls: nil, questions: nil, raw: nil, recruiter_ids: nil, remote: nil, skills: nil, status: nil, summary: nil, updated_at: nil, user_id: nil)
           @addresses = addresses
           @closed_at = closed_at
           @company_id = company_id
@@ -82,6 +84,7 @@ module UnifiedRubySDK
           @created_at = created_at
           @description = description
           @employment_type = employment_type
+          @fees = fees
           @groups = groups
           @hiring_manager_ids = hiring_manager_ids
           @hiring_managers = hiring_managers
@@ -117,6 +120,7 @@ module UnifiedRubySDK
           return false unless @created_at == other.created_at
           return false unless @description == other.description
           return false unless @employment_type == other.employment_type
+          return false unless @fees == other.fees
           return false unless @groups == other.groups
           return false unless @hiring_manager_ids == other.hiring_manager_ids
           return false unless @hiring_managers == other.hiring_managers

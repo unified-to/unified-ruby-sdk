@@ -25,6 +25,9 @@ module UnifiedRubySDK
           SUCCESS_URL = new('success_url')
           METADATA = new('metadata')
           RAW = new('raw')
+          CONTACT_NAME = new('contact_name')
+          CONTACT_EMAIL = new('contact_email')
+          CONTACT_PHONE = new('contact_phone')
         end
       end
     end

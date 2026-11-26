@@ -35,15 +35,15 @@ res = s.deduction.create_hris_deduction(hris_deduction: Models::Shared::HrisDedu
   employer_type: Models::Shared::EmployerType::PERCENTAGE,
   frequency: Models::Shared::HrisDeductionFrequency::ONE_TIME,
   garnishment_type: Models::Shared::GarnishmentType::CHILD_SUPPORT,
-  id: 'cca84a71-990d-41c4-9931-e32dc4abcb23',
+  id: 'ac795e88-e0f8-4ed1-b861-1f89726cf7b9',
   is_active: true,
-  loan_identifier: 'DRB9M6VM',
+  loan_identifier: '9M6VMN15',
   max_amount: 21_794.0,
   metadata: [],
-  notes: 'Carmen desidero.',
-  start_at: DateTime.iso8601('2025-04-07T03:45:00.870Z'),
+  notes: 'Tepidus colligo.',
+  start_at: DateTime.iso8601('2025-04-11T16:38:40.198Z'),
   type: Models::Shared::HrisDeductionType::FIXED,
-  updated_at: DateTime.iso8601('2024-04-09T17:51:44.548Z')
+  updated_at: DateTime.iso8601('2024-04-13T09:51:16.887Z')
 ), connection_id: '<id>')
 
 unless res.hris_deduction.nil?
@@ -184,15 +184,15 @@ req = Models::Operations::PatchHrisDeductionRequest.new(
     employer_type: Models::Shared::EmployerType::PERCENTAGE,
     frequency: Models::Shared::HrisDeductionFrequency::ONE_TIME,
     garnishment_type: Models::Shared::GarnishmentType::CHILD_SUPPORT,
-    id: '4f2a3831-00a1-43c7-b18b-2886b177b985',
+    id: 'e9edf933-8a74-4abb-9546-d4cba363d999',
     is_active: true,
-    loan_identifier: 'DRB9M6VM',
+    loan_identifier: '9M6VMN15',
     max_amount: 21_794.0,
     metadata: [],
-    notes: 'Carmen desidero.',
-    start_at: DateTime.iso8601('2025-04-07T03:45:00.880Z'),
+    notes: 'Tepidus colligo.',
+    start_at: DateTime.iso8601('2025-04-11T16:38:40.213Z'),
     type: Models::Shared::HrisDeductionType::FIXED,
-    updated_at: DateTime.iso8601('2024-04-09T17:51:44.556Z')
+    updated_at: DateTime.iso8601('2024-04-13T09:51:16.899Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -288,15 +288,15 @@ req = Models::Operations::UpdateHrisDeductionRequest.new(
     employer_type: Models::Shared::EmployerType::PERCENTAGE,
     frequency: Models::Shared::HrisDeductionFrequency::ONE_TIME,
     garnishment_type: Models::Shared::GarnishmentType::CHILD_SUPPORT,
-    id: '4f2a3831-00a1-43c7-b18b-2886b177b985',
+    id: 'e9edf933-8a74-4abb-9546-d4cba363d999',
     is_active: true,
-    loan_identifier: 'DRB9M6VM',
+    loan_identifier: '9M6VMN15',
     max_amount: 21_794.0,
     metadata: [],
-    notes: 'Carmen desidero.',
-    start_at: DateTime.iso8601('2025-04-07T03:45:00.880Z'),
+    notes: 'Tepidus colligo.',
+    start_at: DateTime.iso8601('2025-04-11T16:38:40.213Z'),
     type: Models::Shared::HrisDeductionType::FIXED,
-    updated_at: DateTime.iso8601('2024-04-09T17:51:44.556Z')
+    updated_at: DateTime.iso8601('2024-04-13T09:51:16.899Z')
   ),
   connection_id: '<id>',
   id: '<id>'

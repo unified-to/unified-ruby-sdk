@@ -58,8 +58,8 @@ res = s.inspection.create_qms_inspection(qms_inspection: Models::Shared::QmsInsp
   ],
   created_at: DateTime.iso8601('2020-04-18T21:23:54.000Z'),
   file_ids: [],
-  id: '572e96aa-3eee-4d75-9435-8a0aafa57326',
-  inspected_at: DateTime.iso8601('2021-02-08T02:39:02.743Z'),
+  id: 'd56cf5d6-cc72-4d74-aec6-32215171c330',
+  inspected_at: DateTime.iso8601('2021-02-08T20:11:59.139Z'),
   issue_ids: [],
   lifecycle_state: 'Complete',
   metadata: [],
@@ -72,10 +72,10 @@ res = s.inspection.create_qms_inspection(qms_inspection: Models::Shared::QmsInsp
   result: Models::Shared::QmsInspectionResult::PASS,
   revision: 'A',
   status: Models::Shared::QmsInspectionStatus::CLOSED,
-  supplier_name: 'Gerlach LLC',
+  supplier_name: 'Lehner Inc',
   type: Models::Shared::QmsInspectionType::SOURCE,
-  updated_at: DateTime.iso8601('2026-05-14T04:25:04.587Z'),
-  url: 'https://purple-newsprint.name/'
+  updated_at: DateTime.iso8601('2026-05-19T16:09:47.894Z'),
+  url: 'https://willing-petal.name/'
 ), connection_id: '<id>')
 
 unless res.qms_inspection.nil?
@@ -240,8 +240,8 @@ req = Models::Operations::PatchQmsInspectionRequest.new(
     ],
     created_at: DateTime.iso8601('2020-04-18T21:23:54.000Z'),
     file_ids: [],
-    id: '263f7e2e-9077-40c2-83ec-9d8655e3c159',
-    inspected_at: DateTime.iso8601('2021-02-08T02:39:02.747Z'),
+    id: '2dac37e2-adba-415a-8ca8-9427c3db294b',
+    inspected_at: DateTime.iso8601('2021-02-08T20:11:59.143Z'),
     issue_ids: [],
     lifecycle_state: 'Complete',
     metadata: [],
@@ -254,10 +254,10 @@ req = Models::Operations::PatchQmsInspectionRequest.new(
     result: Models::Shared::QmsInspectionResult::PASS,
     revision: 'A',
     status: Models::Shared::QmsInspectionStatus::CLOSED,
-    supplier_name: 'Gerlach LLC',
+    supplier_name: 'Lehner Inc',
     type: Models::Shared::QmsInspectionType::SOURCE,
-    updated_at: DateTime.iso8601('2026-05-14T04:25:04.621Z'),
-    url: 'https://purple-newsprint.name/'
+    updated_at: DateTime.iso8601('2026-05-19T16:09:47.919Z'),
+    url: 'https://willing-petal.name/'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -336,8 +336,8 @@ req = Models::Operations::UpdateQmsInspectionRequest.new(
     ],
     created_at: DateTime.iso8601('2020-04-18T21:23:54.000Z'),
     file_ids: [],
-    id: '263f7e2e-9077-40c2-83ec-9d8655e3c159',
-    inspected_at: DateTime.iso8601('2021-02-08T02:39:02.747Z'),
+    id: '2dac37e2-adba-415a-8ca8-9427c3db294b',
+    inspected_at: DateTime.iso8601('2021-02-08T20:11:59.143Z'),
     issue_ids: [],
     lifecycle_state: 'Complete',
     metadata: [],
@@ -350,10 +350,10 @@ req = Models::Operations::UpdateQmsInspectionRequest.new(
     result: Models::Shared::QmsInspectionResult::PASS,
     revision: 'A',
     status: Models::Shared::QmsInspectionStatus::CLOSED,
-    supplier_name: 'Gerlach LLC',
+    supplier_name: 'Lehner Inc',
     type: Models::Shared::QmsInspectionType::SOURCE,
-    updated_at: DateTime.iso8601('2026-05-14T04:25:04.621Z'),
-    url: 'https://purple-newsprint.name/'
+    updated_at: DateTime.iso8601('2026-05-19T16:09:47.919Z'),
+    url: 'https://willing-petal.name/'
   ),
   connection_id: '<id>',
   id: '<id>'

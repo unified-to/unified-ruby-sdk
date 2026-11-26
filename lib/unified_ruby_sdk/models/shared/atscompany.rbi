@@ -12,6 +12,8 @@ class UnifiedRubySDK::Models::Shared::AtsCompany
   def address=(str_); end
   def created_at(); end
   def created_at=(str_); end
+  def fees(); end
+  def fees=(str_); end
   def id(); end
   def id=(str_); end
   def metadata(); end

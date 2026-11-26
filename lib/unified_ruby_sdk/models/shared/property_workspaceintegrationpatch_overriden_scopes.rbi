@@ -414,6 +414,34 @@ class UnifiedRubySDK::Models::Shared::PropertyWorkspaceIntegrationPatchOverriden
   def datastore_table_read=(str_); end
   def datastore_table_write(); end
   def datastore_table_write=(str_); end
+  def dms_appointment_read(); end
+  def dms_appointment_read=(str_); end
+  def dms_appointment_write(); end
+  def dms_appointment_write=(str_); end
+  def dms_opcode_read(); end
+  def dms_opcode_read=(str_); end
+  def dms_opcode_write(); end
+  def dms_opcode_write=(str_); end
+  def dms_part_read(); end
+  def dms_part_read=(str_); end
+  def dms_part_write(); end
+  def dms_part_write=(str_); end
+  def dms_partsale_read(); end
+  def dms_partsale_read=(str_); end
+  def dms_partsale_write(); end
+  def dms_partsale_write=(str_); end
+  def dms_repairorder_read(); end
+  def dms_repairorder_read=(str_); end
+  def dms_repairorder_write(); end
+  def dms_repairorder_write=(str_); end
+  def dms_vehicle_read(); end
+  def dms_vehicle_read=(str_); end
+  def dms_vehicle_write(); end
+  def dms_vehicle_write=(str_); end
+  def dms_vehiclesale_read(); end
+  def dms_vehiclesale_read=(str_); end
+  def dms_vehiclesale_write(); end
+  def dms_vehiclesale_write=(str_); end
   def enrich_company_read(); end
   def enrich_company_read=(str_); end
   def enrich_person_read(); end
@@ -738,6 +766,26 @@ class UnifiedRubySDK::Models::Shared::PropertyWorkspaceIntegrationPatchOverriden
   def plm_part_read=(str_); end
   def plm_part_write(); end
   def plm_part_write=(str_); end
+  def printing_file_read(); end
+  def printing_file_read=(str_); end
+  def printing_file_write(); end
+  def printing_file_write=(str_); end
+  def printing_order_read(); end
+  def printing_order_read=(str_); end
+  def printing_order_write(); end
+  def printing_order_write=(str_); end
+  def printing_product_read(); end
+  def printing_product_read=(str_); end
+  def printing_product_write(); end
+  def printing_product_write=(str_); end
+  def printing_quote_read(); end
+  def printing_quote_read=(str_); end
+  def printing_quote_write(); end
+  def printing_quote_write=(str_); end
+  def printing_template_read(); end
+  def printing_template_read=(str_); end
+  def printing_template_write(); end
+  def printing_template_write=(str_); end
   def property_availability_read(); end
   def property_availability_read=(str_); end
   def property_conversation_read(); end

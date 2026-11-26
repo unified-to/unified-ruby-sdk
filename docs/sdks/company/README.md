@@ -42,11 +42,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.company.create_ats_company(ats_company: Models::Shared::AtsCompany.new(
   created_at: DateTime.iso8601('2019-04-22T03:50:02.920Z'),
-  id: '2e82ed77-9d40-4261-a30e-9609a7eb8a12',
-  name: 'Gulgowski, Dibbert and Wilderman',
-  phone: '1-882-360-2010',
-  updated_at: DateTime.iso8601('2020-10-06T22:59:18.712Z'),
-  website_url: 'https://www.gulgowskidibbert.com'
+  fees: [
+    Models::Shared::AtsFee.new(
+      percentage: 23.0,
+      type: Models::Shared::AtsFeeType::CONTINGENCY
+    ),
+  ],
+  id: '441b00d4-8567-4f9f-b741-cfcbd0c9e486',
+  name: 'Streich, Mohr and Barton',
+  phone: '245-586-5728 x0090',
+  updated_at: DateTime.iso8601('2020-10-08T02:33:45.476Z'),
+  website_url: 'https://www.streichmohr.com'
 ), connection_id: '<id>')
 
 unless res.ats_company.nil?
@@ -92,39 +98,39 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.company.create_crm_company(crm_company: Models::Shared::CrmCompany.new(
   address: Models::Shared::PropertyCrmCompanyAddress.new(
-    address1: '3328 Wunsch Flat',
-    address2: 'Suite 905',
-    city: 'New Ryderfort',
+    address1: '9269 Kian Terrace',
+    address2: 'Suite 220',
+    city: 'Horaceboro',
     country_code: 'US',
-    postal_code: '04674',
-    region: 'Delaware',
-    region_code: 'NY'
+    postal_code: '89395-7968',
+    region: 'Alabama',
+    region_code: 'SD'
   ),
   created_at: DateTime.iso8601('2020-05-11T18:26:32.925Z'),
-  description: 'Venustas cruentus votum patruus terebro.',
+  description: 'Quis autem.',
   domains: [
-    'goodwinsons.com',
+    'muellergroup.com',
   ],
   emails: [
     Models::Shared::CrmEmail.new(
-      email: 'info@goodwinsons.com',
+      email: 'info@muellergroup.com',
       type: Models::Shared::CrmEmailType::WORK
     ),
     Models::Shared::CrmEmail.new(
-      email: 'sales@goodwinsons.com',
+      email: 'sales@muellergroup.com',
       type: Models::Shared::CrmEmailType::WORK
     ),
     Models::Shared::CrmEmail.new(
-      email: 'support@goodwinsons.com',
+      email: 'support@muellergroup.com',
       type: Models::Shared::CrmEmailType::WORK
     ),
   ],
   employees: 4177.0,
-  id: '70cad878-6835-401c-9644-427a71bd5496',
-  industry: 'Metrics',
+  id: '0ce2afb0-dd01-450f-bf16-6e6195bff54f',
+  industry: 'Accounts',
   is_active: true,
   link_urls: [
-    'https://www.linkedin.com/company/goodwin-and-sons',
+    'https://www.linkedin.com/company/mueller-group',
   ],
   metadata: [
     Models::Shared::CrmMetadata.new(
@@ -132,28 +138,28 @@ res = s.company.create_crm_company(crm_company: Models::Shared::CrmCompany.new(
         'display_name' => 'Custom Property',
       },
       format: Models::Shared::CrmMetadataFormat::TEXT,
-      id: 'd3734db1-fe85-4d52-86c5-590a647f58c3',
+      id: '29f5c30e-63d4-459b-88a2-11184710d72c',
       namespace: 'custom',
       slug: 'custom_property',
-      value: 'unde'
+      value: 'crur'
     ),
   ],
-  name: 'Goodwin and Sons',
+  name: 'Mueller Group',
   tags: [
-    'censura',
-    'abstergo',
-    'ipsam',
+    'capitulus',
+    'consequuntur',
+    'spoliatio',
   ],
   telephones: [
     Models::Shared::CrmTelephone.new(
-      telephone: '(667) 607-5872',
+      telephone: '(858) 826-5232',
       type: Models::Shared::CrmTelephoneType::HOME
     ),
   ],
-  timezone: 'Atlantic/Azores',
-  updated_at: DateTime.iso8601('2025-03-25T13:01:51.274Z'),
+  timezone: 'Australia/Hobart',
+  updated_at: DateTime.iso8601('2025-03-29T23:46:59.628Z'),
   websites: [
-    'https://www.goodwinsons.com',
+    'https://www.muellergroup.com',
   ]
 ), connection_id: '<id>')
 
@@ -200,19 +206,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.company.create_hris_company(hris_company: Models::Shared::HrisCompany.new(
   address: Models::Shared::PropertyHrisCompanyAddress.new(
-    address1: '675 Lavinia Lights',
-    city: 'Rocky Mount',
+    address1: '5991 Emmett Avenue',
+    city: 'Rosellafort',
     country_code: 'US',
-    postal_code: '67325',
-    region: 'Kentucky',
-    region_code: 'MO'
+    postal_code: '89875',
+    region: 'Oklahoma',
+    region_code: 'DE'
   ),
   created_at: DateTime.iso8601('2021-05-02T22:27:38.970Z'),
-  id: '88383c4a-598e-4a19-a36d-f1d7394d2ca0',
-  legal_name: 'Gottlieb Group LLC',
+  id: '78bce8c9-9d77-45a4-903e-587e0e58185b',
+  legal_name: 'Robel LLC LLC',
   metadata: [],
-  name: 'Gottlieb Group',
-  updated_at: DateTime.iso8601('2026-11-07T11:48:42.687Z')
+  name: 'Robel LLC',
+  updated_at: DateTime.iso8601('2026-11-13T09:57:29.091Z')
 ), connection_id: '<id>')
 
 unless res.hris_company.nil?
@@ -563,11 +569,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAtsCompanyRequest.new(
   ats_company: Models::Shared::AtsCompany.new(
     created_at: DateTime.iso8601('2019-04-22T03:50:02.920Z'),
-    id: 'b87976de-21be-4589-baa1-59f4bdb0540c',
-    name: 'Gulgowski, Dibbert and Wilderman',
-    phone: '1-882-360-2010',
-    updated_at: DateTime.iso8601('2020-10-06T22:59:18.714Z'),
-    website_url: 'https://www.gulgowskidibbert.com'
+    fees: [
+      Models::Shared::AtsFee.new(
+        percentage: 23.0,
+        type: Models::Shared::AtsFeeType::CONTINGENCY
+      ),
+    ],
+    id: '26db4e97-a157-4aa7-966c-3f6b44ad92d5',
+    name: 'Streich, Mohr and Barton',
+    phone: '245-586-5728 x0090',
+    updated_at: DateTime.iso8601('2020-10-08T02:33:45.480Z'),
+    website_url: 'https://www.streichmohr.com'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -616,39 +628,39 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchCrmCompanyRequest.new(
   crm_company: Models::Shared::CrmCompany.new(
     address: Models::Shared::PropertyCrmCompanyAddress.new(
-      address1: '3328 Wunsch Flat',
-      address2: 'Suite 905',
-      city: 'New Ryderfort',
+      address1: '9269 Kian Terrace',
+      address2: 'Suite 220',
+      city: 'Horaceboro',
       country_code: 'US',
-      postal_code: '04674',
-      region: 'Delaware',
-      region_code: 'NY'
+      postal_code: '89395-7968',
+      region: 'Alabama',
+      region_code: 'SD'
     ),
     created_at: DateTime.iso8601('2020-05-11T18:26:32.925Z'),
-    description: 'Venustas cruentus votum patruus terebro.',
+    description: 'Quis autem.',
     domains: [
-      'goodwinsons.com',
+      'muellergroup.com',
     ],
     emails: [
       Models::Shared::CrmEmail.new(
-        email: 'info@goodwinsons.com',
+        email: 'info@muellergroup.com',
         type: Models::Shared::CrmEmailType::WORK
       ),
       Models::Shared::CrmEmail.new(
-        email: 'sales@goodwinsons.com',
+        email: 'sales@muellergroup.com',
         type: Models::Shared::CrmEmailType::WORK
       ),
       Models::Shared::CrmEmail.new(
-        email: 'support@goodwinsons.com',
+        email: 'support@muellergroup.com',
         type: Models::Shared::CrmEmailType::WORK
       ),
     ],
     employees: 4177.0,
-    id: '44e29027-0315-42b2-b12a-6d84cb6f70a3',
-    industry: 'Metrics',
+    id: '95121da1-75ea-4c57-8c7a-4986b9a3451f',
+    industry: 'Accounts',
     is_active: true,
     link_urls: [
-      'https://www.linkedin.com/company/goodwin-and-sons',
+      'https://www.linkedin.com/company/mueller-group',
     ],
     metadata: [
       Models::Shared::CrmMetadata.new(
@@ -656,28 +668,28 @@ req = Models::Operations::PatchCrmCompanyRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '2ff929e7-ff80-4fb8-832b-29f56cfa6f81',
+        id: 'd441cdb5-8f81-4af2-b347-b9a0b1cf31c3',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'unde'
+        value: 'crur'
       ),
     ],
-    name: 'Goodwin and Sons',
+    name: 'Mueller Group',
     tags: [
-      'censura',
-      'abstergo',
-      'ipsam',
+      'capitulus',
+      'consequuntur',
+      'spoliatio',
     ],
     telephones: [
       Models::Shared::CrmTelephone.new(
-        telephone: '(667) 607-5872',
+        telephone: '(858) 826-5232',
         type: Models::Shared::CrmTelephoneType::HOME
       ),
     ],
-    timezone: 'Atlantic/Azores',
-    updated_at: DateTime.iso8601('2025-03-25T13:01:51.291Z'),
+    timezone: 'Australia/Hobart',
+    updated_at: DateTime.iso8601('2025-03-29T23:46:59.647Z'),
     websites: [
-      'https://www.goodwinsons.com',
+      'https://www.muellergroup.com',
     ]
   ),
   connection_id: '<id>',
@@ -727,19 +739,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchHrisCompanyRequest.new(
   hris_company: Models::Shared::HrisCompany.new(
     address: Models::Shared::PropertyHrisCompanyAddress.new(
-      address1: '675 Lavinia Lights',
-      city: 'Rocky Mount',
+      address1: '5991 Emmett Avenue',
+      city: 'Rosellafort',
       country_code: 'US',
-      postal_code: '67325',
-      region: 'Kentucky',
-      region_code: 'MO'
+      postal_code: '89875',
+      region: 'Oklahoma',
+      region_code: 'DE'
     ),
     created_at: DateTime.iso8601('2021-05-02T22:27:38.970Z'),
-    id: '0c43908a-2123-4deb-a649-6dcb801741fc',
-    legal_name: 'Gottlieb Group LLC',
+    id: '02b3120c-1438-43ac-a569-ffd35ec65dba',
+    legal_name: 'Robel LLC LLC',
     metadata: [],
-    name: 'Gottlieb Group',
-    updated_at: DateTime.iso8601('2026-11-07T11:48:42.705Z')
+    name: 'Robel LLC',
+    updated_at: DateTime.iso8601('2026-11-13T09:57:29.124Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -911,11 +923,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAtsCompanyRequest.new(
   ats_company: Models::Shared::AtsCompany.new(
     created_at: DateTime.iso8601('2019-04-22T03:50:02.920Z'),
-    id: 'b87976de-21be-4589-baa1-59f4bdb0540c',
-    name: 'Gulgowski, Dibbert and Wilderman',
-    phone: '1-882-360-2010',
-    updated_at: DateTime.iso8601('2020-10-06T22:59:18.714Z'),
-    website_url: 'https://www.gulgowskidibbert.com'
+    fees: [
+      Models::Shared::AtsFee.new(
+        percentage: 23.0,
+        type: Models::Shared::AtsFeeType::CONTINGENCY
+      ),
+    ],
+    id: '26db4e97-a157-4aa7-966c-3f6b44ad92d5',
+    name: 'Streich, Mohr and Barton',
+    phone: '245-586-5728 x0090',
+    updated_at: DateTime.iso8601('2020-10-08T02:33:45.480Z'),
+    website_url: 'https://www.streichmohr.com'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -964,39 +982,39 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateCrmCompanyRequest.new(
   crm_company: Models::Shared::CrmCompany.new(
     address: Models::Shared::PropertyCrmCompanyAddress.new(
-      address1: '3328 Wunsch Flat',
-      address2: 'Suite 905',
-      city: 'New Ryderfort',
+      address1: '9269 Kian Terrace',
+      address2: 'Suite 220',
+      city: 'Horaceboro',
       country_code: 'US',
-      postal_code: '04674',
-      region: 'Delaware',
-      region_code: 'NY'
+      postal_code: '89395-7968',
+      region: 'Alabama',
+      region_code: 'SD'
     ),
     created_at: DateTime.iso8601('2020-05-11T18:26:32.925Z'),
-    description: 'Venustas cruentus votum patruus terebro.',
+    description: 'Quis autem.',
     domains: [
-      'goodwinsons.com',
+      'muellergroup.com',
     ],
     emails: [
       Models::Shared::CrmEmail.new(
-        email: 'info@goodwinsons.com',
+        email: 'info@muellergroup.com',
         type: Models::Shared::CrmEmailType::WORK
       ),
       Models::Shared::CrmEmail.new(
-        email: 'sales@goodwinsons.com',
+        email: 'sales@muellergroup.com',
         type: Models::Shared::CrmEmailType::WORK
       ),
       Models::Shared::CrmEmail.new(
-        email: 'support@goodwinsons.com',
+        email: 'support@muellergroup.com',
         type: Models::Shared::CrmEmailType::WORK
       ),
     ],
     employees: 4177.0,
-    id: '44e29027-0315-42b2-b12a-6d84cb6f70a3',
-    industry: 'Metrics',
+    id: '95121da1-75ea-4c57-8c7a-4986b9a3451f',
+    industry: 'Accounts',
     is_active: true,
     link_urls: [
-      'https://www.linkedin.com/company/goodwin-and-sons',
+      'https://www.linkedin.com/company/mueller-group',
     ],
     metadata: [
       Models::Shared::CrmMetadata.new(
@@ -1004,28 +1022,28 @@ req = Models::Operations::UpdateCrmCompanyRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '2ff929e7-ff80-4fb8-832b-29f56cfa6f81',
+        id: 'd441cdb5-8f81-4af2-b347-b9a0b1cf31c3',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'unde'
+        value: 'crur'
       ),
     ],
-    name: 'Goodwin and Sons',
+    name: 'Mueller Group',
     tags: [
-      'censura',
-      'abstergo',
-      'ipsam',
+      'capitulus',
+      'consequuntur',
+      'spoliatio',
     ],
     telephones: [
       Models::Shared::CrmTelephone.new(
-        telephone: '(667) 607-5872',
+        telephone: '(858) 826-5232',
         type: Models::Shared::CrmTelephoneType::HOME
       ),
     ],
-    timezone: 'Atlantic/Azores',
-    updated_at: DateTime.iso8601('2025-03-25T13:01:51.291Z'),
+    timezone: 'Australia/Hobart',
+    updated_at: DateTime.iso8601('2025-03-29T23:46:59.647Z'),
     websites: [
-      'https://www.goodwinsons.com',
+      'https://www.muellergroup.com',
     ]
   ),
   connection_id: '<id>',
@@ -1075,19 +1093,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateHrisCompanyRequest.new(
   hris_company: Models::Shared::HrisCompany.new(
     address: Models::Shared::PropertyHrisCompanyAddress.new(
-      address1: '675 Lavinia Lights',
-      city: 'Rocky Mount',
+      address1: '5991 Emmett Avenue',
+      city: 'Rosellafort',
       country_code: 'US',
-      postal_code: '67325',
-      region: 'Kentucky',
-      region_code: 'MO'
+      postal_code: '89875',
+      region: 'Oklahoma',
+      region_code: 'DE'
     ),
     created_at: DateTime.iso8601('2021-05-02T22:27:38.970Z'),
-    id: '0c43908a-2123-4deb-a649-6dcb801741fc',
-    legal_name: 'Gottlieb Group LLC',
+    id: '02b3120c-1438-43ac-a569-ffd35ec65dba',
+    legal_name: 'Robel LLC LLC',
     metadata: [],
-    name: 'Gottlieb Group',
-    updated_at: DateTime.iso8601('2026-11-07T11:48:42.705Z')
+    name: 'Robel LLC',
+    updated_at: DateTime.iso8601('2026-11-13T09:57:29.124Z')
   ),
   connection_id: '<id>',
   id: '<id>'

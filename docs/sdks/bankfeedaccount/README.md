@@ -28,20 +28,20 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
   )
 )
 res = s.bankfeedaccount.create_accounting_bankfeedaccount(accounting_bankfeedaccount: Models::Shared::AccountingBankfeedaccount.new(
-  account_number: '30369722',
-  account_number_last4: '9722',
+  account_number: '69722811',
+  account_number_last4: '2811',
   account_type: Models::Shared::AccountType::LOAN,
   balance: 49_437.0,
   bank_name: 'Wells Fargo',
   created_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
   currency: 'AUD',
   feed_start_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
-  id: '70614a60-ac2c-436b-8c64-19078332d59d',
+  id: '6ed979fa-b74e-443f-b802-fbe1f320f8fc',
   metadata: [],
-  name: 'Corwin, Donnelly and Connelly Checking',
-  routing_number: '694667752',
+  name: 'Kirlin - Rowe Checking',
+  routing_number: '104153154',
   status: Models::Shared::AccountingBankfeedaccountStatus::ACTIVE,
-  updated_at: DateTime.iso8601('2024-05-05T00:02:24.745Z')
+  updated_at: DateTime.iso8601('2024-05-07T05:18:29.723Z')
 ), connection_id: '<id>')
 
 unless res.accounting_bankfeedaccount.nil?
@@ -175,20 +175,20 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchAccountingBankfeedaccountRequest.new(
   accounting_bankfeedaccount: Models::Shared::AccountingBankfeedaccount.new(
-    account_number: '30369722',
-    account_number_last4: '9722',
+    account_number: '69722811',
+    account_number_last4: '2811',
     account_type: Models::Shared::AccountType::LOAN,
     balance: 49_437.0,
     bank_name: 'Wells Fargo',
     created_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
     currency: 'AUD',
     feed_start_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
-    id: '373e047a-ba2a-4c39-abd1-ae70d8a2c75d',
+    id: 'c22ec33e-0c5b-4f50-821c-ac57cd98e65d',
     metadata: [],
-    name: 'Corwin, Donnelly and Connelly Checking',
-    routing_number: '694667752',
+    name: 'Kirlin - Rowe Checking',
+    routing_number: '104153154',
     status: Models::Shared::AccountingBankfeedaccountStatus::ACTIVE,
-    updated_at: DateTime.iso8601('2024-05-05T00:02:24.749Z')
+    updated_at: DateTime.iso8601('2024-05-07T05:18:29.728Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -277,20 +277,20 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateAccountingBankfeedaccountRequest.new(
   accounting_bankfeedaccount: Models::Shared::AccountingBankfeedaccount.new(
-    account_number: '30369722',
-    account_number_last4: '9722',
+    account_number: '69722811',
+    account_number_last4: '2811',
     account_type: Models::Shared::AccountType::LOAN,
     balance: 49_437.0,
     bank_name: 'Wells Fargo',
     created_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
     currency: 'AUD',
     feed_start_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
-    id: '373e047a-ba2a-4c39-abd1-ae70d8a2c75d',
+    id: 'c22ec33e-0c5b-4f50-821c-ac57cd98e65d',
     metadata: [],
-    name: 'Corwin, Donnelly and Connelly Checking',
-    routing_number: '694667752',
+    name: 'Kirlin - Rowe Checking',
+    routing_number: '104153154',
     status: Models::Shared::AccountingBankfeedaccountStatus::ACTIVE,
-    updated_at: DateTime.iso8601('2024-05-05T00:02:24.749Z')
+    updated_at: DateTime.iso8601('2024-05-07T05:18:29.728Z')
   ),
   connection_id: '<id>',
   id: '<id>'

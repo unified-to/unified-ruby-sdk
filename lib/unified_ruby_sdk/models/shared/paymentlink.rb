@@ -14,8 +14,14 @@ module UnifiedRubySDK
 
 
         field :amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('amount') } }
+        # payer's email
+        field :contact_email, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_email') } }
         # ID of the AccountingContact (reference to AccountingContact)
         field :contact_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_id') } }
+        # payer's name, for providers that take payer details on the link rather than a contact_id
+        field :contact_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_name') } }
+        # payer's phone
+        field :contact_phone, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_phone') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
@@ -43,10 +49,13 @@ module UnifiedRubySDK
         # the payment link
         field :url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
 
-        sig { params(amount: T.nilable(::Float), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_chargeable_now: T.nilable(T::Boolean), lineitems: T.nilable(T::Array[Models::Shared::PaymentLineitem]), metadata: T.nilable(T::Array[Models::Shared::PaymentMetadata]), payment_id: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), success_url: T.nilable(::String), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
-        def initialize(amount: nil, contact_id: nil, created_at: nil, currency: nil, description: nil, id: nil, is_active: nil, is_chargeable_now: nil, lineitems: nil, metadata: nil, payment_id: nil, raw: nil, success_url: nil, updated_at: nil, url: nil)
+        sig { params(amount: T.nilable(::Float), contact_email: T.nilable(::String), contact_id: T.nilable(::String), contact_name: T.nilable(::String), contact_phone: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_chargeable_now: T.nilable(T::Boolean), lineitems: T.nilable(T::Array[Models::Shared::PaymentLineitem]), metadata: T.nilable(T::Array[Models::Shared::PaymentMetadata]), payment_id: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), success_url: T.nilable(::String), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
+        def initialize(amount: nil, contact_email: nil, contact_id: nil, contact_name: nil, contact_phone: nil, created_at: nil, currency: nil, description: nil, id: nil, is_active: nil, is_chargeable_now: nil, lineitems: nil, metadata: nil, payment_id: nil, raw: nil, success_url: nil, updated_at: nil, url: nil)
           @amount = amount
+          @contact_email = contact_email
           @contact_id = contact_id
+          @contact_name = contact_name
+          @contact_phone = contact_phone
           @created_at = created_at
           @currency = currency
           @description = description
@@ -66,7 +75,10 @@ module UnifiedRubySDK
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @amount == other.amount
+          return false unless @contact_email == other.contact_email
           return false unless @contact_id == other.contact_id
+          return false unless @contact_name == other.contact_name
+          return false unless @contact_phone == other.contact_phone
           return false unless @created_at == other.created_at
           return false unless @currency == other.currency
           return false unless @description == other.description

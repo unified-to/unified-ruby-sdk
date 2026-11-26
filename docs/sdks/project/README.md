@@ -78,34 +78,34 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.project.create_task_project(task_project: Models::Shared::TaskProject.new(
   created_at: DateTime.iso8601('2023-06-23T16:39:40.446Z'),
-  description: 'Valetudo aggredior accommodo curiositas vox.',
+  description: 'Curiositas.',
   has_children: false,
   has_tasks: false,
-  id: 'a01656db-6d6a-41d5-b333-c0aba1edf0c3',
+  id: 'd8919adf-d949-4c8b-8a9e-4c50201d6f77',
   metadata: [
     Models::Shared::TaskMetadata.new(
       extra_data: {
 
       },
       format: Models::Shared::TaskMetadataFormat::TEXT,
-      id: 'df8d8195-bba9-4105-bb23-5fc70b1dc852',
+      id: '632a393e-a54f-48a7-b8bf-c1438d1b6dda',
       namespace: 'custom',
-      slug: 'decens',
-      value: 'uterque'
+      slug: 'vox',
+      value: 'decens'
     ),
     Models::Shared::TaskMetadata.new(
       extra_data: {
 
       },
       format: Models::Shared::TaskMetadataFormat::TEXT,
-      id: 'ef6484e7-db10-457f-8f2d-30df59ce65b1',
+      id: 'ce123b09-066b-4669-80b8-3b64e28132b9',
       namespace: 'custom',
-      slug: 'benevolentia',
-      value: 'pariatur'
+      slug: 'uterque',
+      value: 'benevolentia'
     ),
   ],
-  name: 'Garden',
-  updated_at: DateTime.iso8601('2023-10-14T07:36:48.051Z')
+  name: 'Baby',
+  updated_at: DateTime.iso8601('2023-10-14T20:32:55.251Z')
 ), connection_id: '<id>')
 
 unless res.task_project.nil?
@@ -373,34 +373,34 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchTaskProjectRequest.new(
   task_project: Models::Shared::TaskProject.new(
     created_at: DateTime.iso8601('2023-06-23T16:39:40.446Z'),
-    description: 'Valetudo aggredior accommodo curiositas vox.',
+    description: 'Curiositas.',
     has_children: false,
     has_tasks: false,
-    id: '9e1700c1-0f82-48c4-99d4-5796530be584',
+    id: '540a8ed4-f32c-4b71-8cb7-6764fc570039',
     metadata: [
       Models::Shared::TaskMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: '3611e10d-a5e4-45a5-ac9c-2fa73d041f1a',
+        id: 'eed2164a-85d2-4fed-9143-da03e6651852',
         namespace: 'custom',
-        slug: 'decens',
-        value: 'uterque'
+        slug: 'vox',
+        value: 'decens'
       ),
       Models::Shared::TaskMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: '857c2a15-c770-45ca-b81c-d0130717fa95',
+        id: 'f486d87c-8413-4b76-9d37-c227663ee2e4',
         namespace: 'custom',
-        slug: 'benevolentia',
-        value: 'pariatur'
+        slug: 'uterque',
+        value: 'benevolentia'
       ),
     ],
-    name: 'Garden',
-    updated_at: DateTime.iso8601('2023-10-14T07:36:48.052Z')
+    name: 'Baby',
+    updated_at: DateTime.iso8601('2023-10-14T20:32:55.252Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -577,34 +577,34 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateTaskProjectRequest.new(
   task_project: Models::Shared::TaskProject.new(
     created_at: DateTime.iso8601('2023-06-23T16:39:40.446Z'),
-    description: 'Valetudo aggredior accommodo curiositas vox.',
+    description: 'Curiositas.',
     has_children: false,
     has_tasks: false,
-    id: '9e1700c1-0f82-48c4-99d4-5796530be584',
+    id: '540a8ed4-f32c-4b71-8cb7-6764fc570039',
     metadata: [
       Models::Shared::TaskMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: '3611e10d-a5e4-45a5-ac9c-2fa73d041f1a',
+        id: 'eed2164a-85d2-4fed-9143-da03e6651852',
         namespace: 'custom',
-        slug: 'decens',
-        value: 'uterque'
+        slug: 'vox',
+        value: 'decens'
       ),
       Models::Shared::TaskMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: '857c2a15-c770-45ca-b81c-d0130717fa95',
+        id: 'f486d87c-8413-4b76-9d37-c227663ee2e4',
         namespace: 'custom',
-        slug: 'benevolentia',
-        value: 'pariatur'
+        slug: 'uterque',
+        value: 'benevolentia'
       ),
     ],
-    name: 'Garden',
-    updated_at: DateTime.iso8601('2023-10-14T07:36:48.052Z')
+    name: 'Baby',
+    updated_at: DateTime.iso8601('2023-10-14T20:32:55.252Z')
   ),
   connection_id: '<id>',
   id: '<id>'

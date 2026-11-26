@@ -29,24 +29,24 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.transaction.create_accounting_transaction(accounting_transaction: Models::Shared::AccountingTransaction.new(
   created_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-  id: 'e156c7e2-008f-4721-b846-ded7a1ae4c1e',
+  id: 'b6e6f247-7783-4f8b-ba8f-cbfbd90666a5',
   lineitems: [
     Models::Shared::AccountingTransactionLineItem.new(
       category_ids: [],
-      description: 'The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability',
-      id: 'f5d031c2-047b-4b01-9114-23a22a032c28',
-      name: 'Shirt',
+      description: 'The Wilma Car is the latest in a series of beneficial products from Fritsch Group',
+      id: '4d6317ad-e55d-4133-87ae-50d5b3fae594',
+      name: 'Table',
       total_amount: 10_184.0,
       unit_amount: 536.0,
       unit_quantity: 19.0
     ),
   ],
-  memo: 'deposit of ISK 792.81 at Fritsch - Dooley charged to account ending in 7879 using card ending in ****3230.',
+  memo: 'withdrawal confirmed at Doyle, White and Conroy for FJD 391.94, card ending in ****0497 associated with account ***6676.',
   status: Models::Shared::AccountingTransactionStatus::PENDING,
   tax_amount: 0.0,
   total_amount: 10_184.0,
   transaction_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-  updated_at: DateTime.iso8601('2019-10-14T11:22:24.204Z')
+  updated_at: DateTime.iso8601('2019-10-14T12:24:46.426Z')
 ), connection_id: '<id>')
 
 unless res.accounting_transaction.nil?
@@ -181,24 +181,24 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAccountingTransactionRequest.new(
   accounting_transaction: Models::Shared::AccountingTransaction.new(
     created_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-    id: 'ff7d6ff6-abd0-41d0-ab1b-666d12ffc7ec',
+    id: '1e0e5d90-cc97-435f-9a73-45a61937a33c',
     lineitems: [
       Models::Shared::AccountingTransactionLineItem.new(
         category_ids: [],
-        description: 'The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability',
-        id: '6bea2abc-f560-4bb3-993a-9cc7c2433166',
-        name: 'Shirt',
+        description: 'The Wilma Car is the latest in a series of beneficial products from Fritsch Group',
+        id: '4379f323-f896-4482-b175-2ea9582459fa',
+        name: 'Table',
         total_amount: 10_184.0,
         unit_amount: 536.0,
         unit_quantity: 19.0
       ),
     ],
-    memo: 'deposit of ISK 792.81 at Fritsch - Dooley charged to account ending in 7879 using card ending in ****3230.',
+    memo: 'withdrawal confirmed at Doyle, White and Conroy for FJD 391.94, card ending in ****0497 associated with account ***6676.',
     status: Models::Shared::AccountingTransactionStatus::PENDING,
     tax_amount: 0.0,
     total_amount: 10_184.0,
     transaction_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-    updated_at: DateTime.iso8601('2019-10-14T11:22:24.205Z')
+    updated_at: DateTime.iso8601('2019-10-14T12:24:46.426Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -288,24 +288,24 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAccountingTransactionRequest.new(
   accounting_transaction: Models::Shared::AccountingTransaction.new(
     created_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-    id: 'ff7d6ff6-abd0-41d0-ab1b-666d12ffc7ec',
+    id: '1e0e5d90-cc97-435f-9a73-45a61937a33c',
     lineitems: [
       Models::Shared::AccountingTransactionLineItem.new(
         category_ids: [],
-        description: 'The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability',
-        id: '6bea2abc-f560-4bb3-993a-9cc7c2433166',
-        name: 'Shirt',
+        description: 'The Wilma Car is the latest in a series of beneficial products from Fritsch Group',
+        id: '4379f323-f896-4482-b175-2ea9582459fa',
+        name: 'Table',
         total_amount: 10_184.0,
         unit_amount: 536.0,
         unit_quantity: 19.0
       ),
     ],
-    memo: 'deposit of ISK 792.81 at Fritsch - Dooley charged to account ending in 7879 using card ending in ****3230.',
+    memo: 'withdrawal confirmed at Doyle, White and Conroy for FJD 391.94, card ending in ****0497 associated with account ***6676.',
     status: Models::Shared::AccountingTransactionStatus::PENDING,
     tax_amount: 0.0,
     total_amount: 10_184.0,
     transaction_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-    updated_at: DateTime.iso8601('2019-10-14T11:22:24.205Z')
+    updated_at: DateTime.iso8601('2019-10-14T12:24:46.426Z')
   ),
   connection_id: '<id>',
   id: '<id>'

@@ -14,8 +14,8 @@ class UnifiedRubySDK::Models::Shared::GenaiEmbedding
   def dimension=(str_); end
   def embeddings(); end
   def embeddings=(str_); end
-  def enconding_format(); end
-  def enconding_format=(str_); end
+  def encoding_format(); end
+  def encoding_format=(str_); end
   def id(); end
   def id=(str_); end
   def max_tokens(); end

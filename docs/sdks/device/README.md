@@ -29,23 +29,23 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.device.create_hris_device(hris_device: Models::Shared::HrisDevice.new(
   admin_user_ids: [],
-  asset_tag: 'fJNacaaoWi',
+  asset_tag: 'acaaoWiyjn',
   created_at: DateTime.iso8601('2019-04-04T17:11:40.322Z'),
   has_antivirus: true,
   has_firewall: true,
   has_hd_encrypted: true,
   has_password_manager: true,
   has_screenlock: false,
-  id: 'e8e027a2-3dc0-47a2-8400-47647d73a955',
+  id: 'cfba40e9-f20e-434b-b6c1-f1a72930b73f',
   is_missing: false,
-  manufacturer: 'Hackett Inc',
+  manufacturer: 'Erdman - Huels',
   metadata: [],
-  model: 'Fantastic',
-  name: 'august-laptop',
-  os: 'transmitter',
-  os_version: '8.4.8',
-  updated_at: DateTime.iso8601('2023-06-24T21:47:34.614Z'),
-  version: '4.15.7'
+  model: 'Ergonomic',
+  name: 'nedra-laptop',
+  os: 'program',
+  os_version: '4.14.16',
+  updated_at: DateTime.iso8601('2023-06-28T04:57:30.042Z'),
+  version: '2.15.16'
 ), connection_id: '<id>')
 
 unless res.hris_device.nil?
@@ -180,23 +180,23 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchHrisDeviceRequest.new(
   hris_device: Models::Shared::HrisDevice.new(
     admin_user_ids: [],
-    asset_tag: 'fJNacaaoWi',
+    asset_tag: 'acaaoWiyjn',
     created_at: DateTime.iso8601('2019-04-04T17:11:40.322Z'),
     has_antivirus: true,
     has_firewall: true,
     has_hd_encrypted: true,
     has_password_manager: true,
     has_screenlock: false,
-    id: 'b3f96ba5-f647-46b1-8522-f1c1f54798bd',
+    id: '1ad6f4f4-643b-4068-86c1-b2757fc5f125',
     is_missing: false,
-    manufacturer: 'Hackett Inc',
+    manufacturer: 'Erdman - Huels',
     metadata: [],
-    model: 'Fantastic',
-    name: 'august-laptop',
-    os: 'transmitter',
-    os_version: '8.4.8',
-    updated_at: DateTime.iso8601('2023-06-24T21:47:34.620Z'),
-    version: '4.15.7'
+    model: 'Ergonomic',
+    name: 'nedra-laptop',
+    os: 'program',
+    os_version: '4.14.16',
+    updated_at: DateTime.iso8601('2023-06-28T04:57:30.047Z'),
+    version: '2.15.16'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -286,23 +286,23 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateHrisDeviceRequest.new(
   hris_device: Models::Shared::HrisDevice.new(
     admin_user_ids: [],
-    asset_tag: 'fJNacaaoWi',
+    asset_tag: 'acaaoWiyjn',
     created_at: DateTime.iso8601('2019-04-04T17:11:40.322Z'),
     has_antivirus: true,
     has_firewall: true,
     has_hd_encrypted: true,
     has_password_manager: true,
     has_screenlock: false,
-    id: 'b3f96ba5-f647-46b1-8522-f1c1f54798bd',
+    id: '1ad6f4f4-643b-4068-86c1-b2757fc5f125',
     is_missing: false,
-    manufacturer: 'Hackett Inc',
+    manufacturer: 'Erdman - Huels',
     metadata: [],
-    model: 'Fantastic',
-    name: 'august-laptop',
-    os: 'transmitter',
-    os_version: '8.4.8',
-    updated_at: DateTime.iso8601('2023-06-24T21:47:34.620Z'),
-    version: '4.15.7'
+    model: 'Ergonomic',
+    name: 'nedra-laptop',
+    os: 'program',
+    os_version: '4.14.16',
+    updated_at: DateTime.iso8601('2023-06-28T04:57:30.047Z'),
+    version: '2.15.16'
   ),
   connection_id: '<id>',
   id: '<id>'

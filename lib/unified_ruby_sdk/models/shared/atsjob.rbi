@@ -22,6 +22,8 @@ class UnifiedRubySDK::Models::Shared::AtsJob
   def description=(str_); end
   def employment_type(); end
   def employment_type=(str_); end
+  def fees(); end
+  def fees=(str_); end
   def groups(); end
   def groups=(str_); end
   def hiring_manager_ids(); end

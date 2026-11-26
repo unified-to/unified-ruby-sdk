@@ -48,15 +48,15 @@ res = s.group.create_ads_group(ads_group: Models::Shared::AdsGroup.new(
   created_at: DateTime.iso8601('2019-08-29T17:59:41.045Z'),
   currency: 'USD',
   effective_status: Models::Shared::AdsGroupEffectiveStatus::PAUSED,
-  end_at: DateTime.iso8601('2026-07-23T16:54:44.513Z'),
-  id: 'a19bfc5a-c6a9-4153-9034-bc5bad0ada52',
+  end_at: DateTime.iso8601('2026-07-29T09:28:34.019Z'),
+  id: '91f9b13c-9851-47ad-8276-0edfb6022483',
   language_locale: 'fr-FR',
   metadata: [],
-  name: 'Stark - Baumbach',
-  start_at: DateTime.iso8601('2026-02-05T00:08:15.106Z'),
+  name: 'Shanahan, Schumm and Emard',
+  start_at: DateTime.iso8601('2026-02-10T07:33:32.363Z'),
   status: Models::Shared::AdsGroupStatus::PROCESSING,
   targeting: Models::Shared::PropertyAdsGroupTargeting.new,
-  updated_at: DateTime.iso8601('2022-01-23T15:41:11.880Z')
+  updated_at: DateTime.iso8601('2022-01-25T15:15:46.146Z')
 ), connection_id: '<id>')
 
 unless res.ads_group.nil?
@@ -102,13 +102,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.group.create_hris_group(hris_group: Models::Shared::HrisGroup.new(
   created_at: DateTime.iso8601('2023-11-01T13:13:40.714Z'),
-  description: 'Absorbeo casso.',
-  id: 'f22e7e9a-b41a-4071-b386-2d71b4424999',
+  description: 'Umbra comptus temporibus.',
+  id: '64aa96bd-5a82-454d-8716-c2b4f4214d8c',
   is_active: false,
   metadata: [],
-  name: 'Games',
+  name: 'Computers',
   type: Models::Shared::HrisGroupType::BRANCH,
-  updated_at: DateTime.iso8601('2026-06-16T18:25:14.120Z')
+  updated_at: DateTime.iso8601('2026-06-21T21:23:57.834Z')
 ), connection_id: '<id>')
 
 unless res.hris_group.nil?
@@ -550,15 +550,15 @@ req = Models::Operations::PatchAdsGroupRequest.new(
     created_at: DateTime.iso8601('2019-08-29T17:59:41.045Z'),
     currency: 'USD',
     effective_status: Models::Shared::AdsGroupEffectiveStatus::PAUSED,
-    end_at: DateTime.iso8601('2026-07-23T16:54:44.639Z'),
-    id: '0368630e-2689-4959-a0a1-b5ebee3c8245',
+    end_at: DateTime.iso8601('2026-07-29T09:28:34.184Z'),
+    id: 'f1d9c76a-099e-43c4-a449-cffea84c814f',
     language_locale: 'fr-FR',
     metadata: [],
-    name: 'Stark - Baumbach',
-    start_at: DateTime.iso8601('2026-02-05T00:08:15.223Z'),
+    name: 'Shanahan, Schumm and Emard',
+    start_at: DateTime.iso8601('2026-02-10T07:33:32.517Z'),
     status: Models::Shared::AdsGroupStatus::PROCESSING,
     targeting: Models::Shared::PropertyAdsGroupTargeting.new,
-    updated_at: DateTime.iso8601('2022-01-23T15:41:11.924Z')
+    updated_at: DateTime.iso8601('2022-01-25T15:15:46.204Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -607,13 +607,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchHrisGroupRequest.new(
   hris_group: Models::Shared::HrisGroup.new(
     created_at: DateTime.iso8601('2023-11-01T13:13:40.714Z'),
-    description: 'Absorbeo casso.',
-    id: 'b59ab78c-06e5-427b-984b-4967cb78a286',
+    description: 'Umbra comptus temporibus.',
+    id: '10010a73-af7b-459f-bf4e-f4bd71b35eba',
     is_active: false,
     metadata: [],
-    name: 'Games',
+    name: 'Computers',
     type: Models::Shared::HrisGroupType::BRANCH,
-    updated_at: DateTime.iso8601('2026-06-16T18:25:14.131Z')
+    updated_at: DateTime.iso8601('2026-06-21T21:23:57.851Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -834,15 +834,15 @@ req = Models::Operations::UpdateAdsGroupRequest.new(
     created_at: DateTime.iso8601('2019-08-29T17:59:41.045Z'),
     currency: 'USD',
     effective_status: Models::Shared::AdsGroupEffectiveStatus::PAUSED,
-    end_at: DateTime.iso8601('2026-07-23T16:54:44.639Z'),
-    id: '0368630e-2689-4959-a0a1-b5ebee3c8245',
+    end_at: DateTime.iso8601('2026-07-29T09:28:34.184Z'),
+    id: 'f1d9c76a-099e-43c4-a449-cffea84c814f',
     language_locale: 'fr-FR',
     metadata: [],
-    name: 'Stark - Baumbach',
-    start_at: DateTime.iso8601('2026-02-05T00:08:15.223Z'),
+    name: 'Shanahan, Schumm and Emard',
+    start_at: DateTime.iso8601('2026-02-10T07:33:32.517Z'),
     status: Models::Shared::AdsGroupStatus::PROCESSING,
     targeting: Models::Shared::PropertyAdsGroupTargeting.new,
-    updated_at: DateTime.iso8601('2022-01-23T15:41:11.924Z')
+    updated_at: DateTime.iso8601('2022-01-25T15:15:46.204Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -891,13 +891,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateHrisGroupRequest.new(
   hris_group: Models::Shared::HrisGroup.new(
     created_at: DateTime.iso8601('2023-11-01T13:13:40.714Z'),
-    description: 'Absorbeo casso.',
-    id: 'b59ab78c-06e5-427b-984b-4967cb78a286',
+    description: 'Umbra comptus temporibus.',
+    id: '10010a73-af7b-459f-bf4e-f4bd71b35eba',
     is_active: false,
     metadata: [],
-    name: 'Games',
+    name: 'Computers',
     type: Models::Shared::HrisGroupType::BRANCH,
-    updated_at: DateTime.iso8601('2026-06-16T18:25:14.131Z')
+    updated_at: DateTime.iso8601('2026-06-21T21:23:57.851Z')
   ),
   connection_id: '<id>',
   id: '<id>'

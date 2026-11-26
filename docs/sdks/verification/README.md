@@ -31,7 +31,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.verification.create_verification_request(verification_request: Models::Shared::VerificationRequest.new(
   created_at: DateTime.iso8601('2023-11-20T08:17:29.950Z'),
-  id: '55572db3-a4d8-4272-8353-f35b574dd1a4',
+  id: '264c1ff9-d861-4834-9b46-00df65d323a6',
   metadata: [],
   parameters: [],
   profile_addresses: [],
@@ -39,9 +39,9 @@ res = s.verification.create_verification_request(verification_request: Models::S
   profile_telephones: [],
   response_details: [],
   response_download_urls: [],
-  response_source: 'Implemented regional protocol',
+  response_source: 'Centralized value-added infrastructure',
   response_status: Models::Shared::VerificationRequestResponseStatus::PENDING,
-  updated_at: DateTime.iso8601('2023-12-28T07:58:38.867Z')
+  updated_at: DateTime.iso8601('2023-12-28T12:56:10.994Z')
 ), connection_id: '<id>')
 
 unless res.verification_request.nil?
@@ -263,7 +263,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchVerificationRequestRequest.new(
   verification_request: Models::Shared::VerificationRequest.new(
     created_at: DateTime.iso8601('2023-11-20T08:17:29.950Z'),
-    id: '8dffe3a9-d5ab-4798-9f8f-0ee7aba819c5',
+    id: '5855c78a-7052-4cc1-9c9c-43f8eabab115',
     metadata: [],
     parameters: [],
     profile_addresses: [],
@@ -271,9 +271,9 @@ req = Models::Operations::PatchVerificationRequestRequest.new(
     profile_telephones: [],
     response_details: [],
     response_download_urls: [],
-    response_source: 'Implemented regional protocol',
+    response_source: 'Centralized value-added infrastructure',
     response_status: Models::Shared::VerificationRequestResponseStatus::PENDING,
-    updated_at: DateTime.iso8601('2023-12-28T07:58:38.868Z')
+    updated_at: DateTime.iso8601('2023-12-28T12:56:10.994Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -363,7 +363,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateVerificationRequestRequest.new(
   verification_request: Models::Shared::VerificationRequest.new(
     created_at: DateTime.iso8601('2023-11-20T08:17:29.950Z'),
-    id: '8dffe3a9-d5ab-4798-9f8f-0ee7aba819c5',
+    id: '5855c78a-7052-4cc1-9c9c-43f8eabab115',
     metadata: [],
     parameters: [],
     profile_addresses: [],
@@ -371,9 +371,9 @@ req = Models::Operations::UpdateVerificationRequestRequest.new(
     profile_telephones: [],
     response_details: [],
     response_download_urls: [],
-    response_source: 'Implemented regional protocol',
+    response_source: 'Centralized value-added infrastructure',
     response_status: Models::Shared::VerificationRequestResponseStatus::PENDING,
-    updated_at: DateTime.iso8601('2023-12-28T07:58:38.868Z')
+    updated_at: DateTime.iso8601('2023-12-28T12:56:10.994Z')
   ),
   connection_id: '<id>',
   id: '<id>'

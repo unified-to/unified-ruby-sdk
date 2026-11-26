@@ -6,8 +6,10 @@
 
 * [create_compute_template](#create_compute_template) - Create a template
 * [get_compute_template](#get_compute_template) - Retrieve a template
+* [get_printing_template](#get_printing_template) - Retrieve a template
 * [get_signing_template](#get_signing_template) - Retrieve a template
 * [list_compute_templates](#list_compute_templates) - List all templates
+* [list_printing_templates](#list_printing_templates) - List all templates
 * [list_signing_templates](#list_signing_templates) - List all templates
 * [patch_compute_template](#patch_compute_template) - Update a template
 * [remove_compute_template](#remove_compute_template) - Remove a template
@@ -36,18 +38,18 @@ res = s.template.create_compute_template(compute_template: Models::Shared::Compu
   dockerfile: "FROM ubuntu:24.04\nRUN apt-get update",
   gpu_count: 2.0,
   gpu_model: Models::Shared::ComputeTemplateGpuModel::NVIDIA_GH200,
-  id: 'e7c2e3a2-6309-4ca6-abde-88a7908ddfe6',
-  image: 'perfumed-molasses/cohibeo:5.2',
+  id: '9936879d-8033-42c3-b036-25a916b9e38b',
+  image: 'jaunty-tarragon/demum:5.2',
   is_public: false,
-  last_used_at: DateTime.iso8601('2026-04-18T02:32:30.779Z'),
+  last_used_at: DateTime.iso8601('2026-04-23T02:57:48.891Z'),
   memory_mb: 8192.0,
   metadata: [],
-  name: 'multi-byte-card',
+  name: 'online-matrix',
   ports: [
     8080.0,
   ],
   status: Models::Shared::ComputeTemplateStatus::OTHER,
-  updated_at: DateTime.iso8601('2025-02-28T22:59:06.215Z')
+  updated_at: DateTime.iso8601('2025-03-04T04:08:33.599Z')
 ), connection_id: '<id>')
 
 unless res.compute_template.nil?
@@ -111,6 +113,49 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::GetComputeTemplateResponse)](../../models/operations/getcomputetemplateresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## get_printing_template
+
+Retrieves a single PrintingTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getPrintingTemplate" method="get" path="/printing/{connection_id}/template/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.template.get_printing_template(connection_id: '<id>', id: '<id>')
+
+unless res.printing_template.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Template                                                                                                                               |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetPrintingTemplateQueryParamFields](../../models/operations/getprintingtemplatequeryparamfields.md)>              | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetPrintingTemplateResponse)](../../models/operations/getprintingtemplateresponse.md)**
 
 ### Errors
 
@@ -205,6 +250,50 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## list_printing_templates
+
+Returns a list of PrintingTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listPrintingTemplates" method="get" path="/printing/{connection_id}/template" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+
+req = Models::Operations::ListPrintingTemplatesRequest.new(
+  connection_id: '<id>'
+)
+res = s.template.list_printing_templates(request: req)
+
+unless res.printing_templates.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                   | [Models::Operations::ListPrintingTemplatesRequest](../../models/operations/listprintingtemplatesrequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+
+### Response
+
+**[T.nilable(Models::Operations::ListPrintingTemplatesResponse)](../../models/operations/listprintingtemplatesresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## list_signing_templates
 
 Returns a list of SigningTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -274,18 +363,18 @@ req = Models::Operations::PatchComputeTemplateRequest.new(
     dockerfile: "FROM ubuntu:24.04\nRUN apt-get update",
     gpu_count: 2.0,
     gpu_model: Models::Shared::ComputeTemplateGpuModel::NVIDIA_GH200,
-    id: '24ef6e71-2d25-4a46-baa8-fc1d5d1f34f9',
-    image: 'perfumed-molasses/cohibeo:5.2',
+    id: '49b29db7-e626-4cf0-9f20-e9412f241973',
+    image: 'jaunty-tarragon/demum:5.2',
     is_public: false,
-    last_used_at: DateTime.iso8601('2026-04-18T02:32:30.790Z'),
+    last_used_at: DateTime.iso8601('2026-04-23T02:57:48.906Z'),
     memory_mb: 8192.0,
     metadata: [],
-    name: 'multi-byte-card',
+    name: 'online-matrix',
     ports: [
       8080.0,
     ],
     status: Models::Shared::ComputeTemplateStatus::OTHER,
-    updated_at: DateTime.iso8601('2025-02-28T22:59:06.222Z')
+    updated_at: DateTime.iso8601('2025-03-04T04:08:33.609Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -380,18 +469,18 @@ req = Models::Operations::UpdateComputeTemplateRequest.new(
     dockerfile: "FROM ubuntu:24.04\nRUN apt-get update",
     gpu_count: 2.0,
     gpu_model: Models::Shared::ComputeTemplateGpuModel::NVIDIA_GH200,
-    id: '24ef6e71-2d25-4a46-baa8-fc1d5d1f34f9',
-    image: 'perfumed-molasses/cohibeo:5.2',
+    id: '49b29db7-e626-4cf0-9f20-e9412f241973',
+    image: 'jaunty-tarragon/demum:5.2',
     is_public: false,
-    last_used_at: DateTime.iso8601('2026-04-18T02:32:30.790Z'),
+    last_used_at: DateTime.iso8601('2026-04-23T02:57:48.906Z'),
     memory_mb: 8192.0,
     metadata: [],
-    name: 'multi-byte-card',
+    name: 'online-matrix',
     ports: [
       8080.0,
     ],
     status: Models::Shared::ComputeTemplateStatus::OTHER,
-    updated_at: DateTime.iso8601('2025-02-28T22:59:06.222Z')
+    updated_at: DateTime.iso8601('2025-03-04T04:08:33.609Z')
   ),
   connection_id: '<id>',
   id: '<id>'

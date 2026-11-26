@@ -30,32 +30,32 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.purchaseorder.create_accounting_purchaseorder(accounting_purchaseorder: Models::Shared::AccountingPurchaseorder.new(
   attachments: [],
   billing_address: Models::Shared::PropertyAccountingPurchaseorderBillingAddress.new(
-    address1: '72142 Willow Street',
-    address2: 'Apt. 967',
-    city: 'South Annabelleton',
+    address1: '37214 Golden Via',
+    address2: 'Suite 713',
+    city: 'North Eltontown',
     country_code: 'US',
-    postal_code: '30337',
-    region: 'Nevada',
-    region_code: 'FL'
+    postal_code: '75366',
+    region: 'Kentucky',
+    region_code: 'MA'
   ),
   category_ids: [],
   created_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
   currency: 'EUR',
-  id: '727f3a63-a60c-4be7-882f-a3760e8350ce',
+  id: 'd0e48e5a-1f50-41bf-b39d-ccc087ac43cf',
   lineitems: [],
   metadata: [],
   posted_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
   shipping_address: Models::Shared::PropertyAccountingPurchaseorderShippingAddress.new(
-    address1: '76494 Medhurst Club',
-    city: 'Kshlerinfurt',
+    address1: '9455 Brad Forks',
+    city: 'Washington',
     country_code: 'US',
-    postal_code: '92116-5474',
-    region: 'Oregon',
-    region_code: 'WY'
+    postal_code: '16547',
+    region: 'Idaho',
+    region_code: 'NY'
   ),
   status: Models::Shared::AccountingPurchaseorderStatus::SUBMITTED,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2021-08-14T15:26:38.182Z')
+  updated_at: DateTime.iso8601('2021-08-15T07:37:28.009Z')
 ), connection_id: '<id>')
 
 unless res.accounting_purchaseorder.nil?
@@ -191,32 +191,32 @@ req = Models::Operations::PatchAccountingPurchaseorderRequest.new(
   accounting_purchaseorder: Models::Shared::AccountingPurchaseorder.new(
     attachments: [],
     billing_address: Models::Shared::PropertyAccountingPurchaseorderBillingAddress.new(
-      address1: '72142 Willow Street',
-      address2: 'Apt. 967',
-      city: 'South Annabelleton',
+      address1: '37214 Golden Via',
+      address2: 'Suite 713',
+      city: 'North Eltontown',
       country_code: 'US',
-      postal_code: '30337',
-      region: 'Nevada',
-      region_code: 'FL'
+      postal_code: '75366',
+      region: 'Kentucky',
+      region_code: 'MA'
     ),
     category_ids: [],
     created_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
     currency: 'EUR',
-    id: 'd907a8d9-b76f-4eb6-96b7-f12385c81c45',
+    id: 'd3499c8a-c51e-4eab-b0dd-11f649f24708',
     lineitems: [],
     metadata: [],
     posted_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
     shipping_address: Models::Shared::PropertyAccountingPurchaseorderShippingAddress.new(
-      address1: '76494 Medhurst Club',
-      city: 'Kshlerinfurt',
+      address1: '9455 Brad Forks',
+      city: 'Washington',
       country_code: 'US',
-      postal_code: '92116-5474',
-      region: 'Oregon',
-      region_code: 'WY'
+      postal_code: '16547',
+      region: 'Idaho',
+      region_code: 'NY'
     ),
     status: Models::Shared::AccountingPurchaseorderStatus::SUBMITTED,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2021-08-14T15:26:38.185Z')
+    updated_at: DateTime.iso8601('2021-08-15T07:37:28.014Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -307,32 +307,32 @@ req = Models::Operations::UpdateAccountingPurchaseorderRequest.new(
   accounting_purchaseorder: Models::Shared::AccountingPurchaseorder.new(
     attachments: [],
     billing_address: Models::Shared::PropertyAccountingPurchaseorderBillingAddress.new(
-      address1: '72142 Willow Street',
-      address2: 'Apt. 967',
-      city: 'South Annabelleton',
+      address1: '37214 Golden Via',
+      address2: 'Suite 713',
+      city: 'North Eltontown',
       country_code: 'US',
-      postal_code: '30337',
-      region: 'Nevada',
-      region_code: 'FL'
+      postal_code: '75366',
+      region: 'Kentucky',
+      region_code: 'MA'
     ),
     category_ids: [],
     created_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
     currency: 'EUR',
-    id: 'd907a8d9-b76f-4eb6-96b7-f12385c81c45',
+    id: 'd3499c8a-c51e-4eab-b0dd-11f649f24708',
     lineitems: [],
     metadata: [],
     posted_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
     shipping_address: Models::Shared::PropertyAccountingPurchaseorderShippingAddress.new(
-      address1: '76494 Medhurst Club',
-      city: 'Kshlerinfurt',
+      address1: '9455 Brad Forks',
+      city: 'Washington',
       country_code: 'US',
-      postal_code: '92116-5474',
-      region: 'Oregon',
-      region_code: 'WY'
+      postal_code: '16547',
+      region: 'Idaho',
+      region_code: 'NY'
     ),
     status: Models::Shared::AccountingPurchaseorderStatus::SUBMITTED,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2021-08-14T15:26:38.185Z')
+    updated_at: DateTime.iso8601('2021-08-15T07:37:28.014Z')
   ),
   connection_id: '<id>',
   id: '<id>'

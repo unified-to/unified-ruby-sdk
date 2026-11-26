@@ -29,13 +29,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.signatory.create_signing_signatory(signing_signatory: Models::Shared::SigningSignatory.new(
   created_at: DateTime.iso8601('2022-04-16T19:25:01.966Z'),
-  email: 'anais.lakin@icloud.com',
-  id: '9bc08525-2df9-458e-b4af-6fe7bbfed03b',
+  email: 'karli.fisher@icloud.com',
+  id: '33cfecce-410e-4226-9a00-94cb4a23a9dc',
   metadata: [],
-  name: 'Anais Lakin',
+  name: 'Karli Fisher',
   role: Models::Shared::SigningSignatoryRole::SIGNER,
   status: Models::Shared::SigningSignatoryStatus::ERROR,
-  updated_at: DateTime.iso8601('2024-05-31T16:47:15.708Z')
+  updated_at: DateTime.iso8601('2024-06-03T10:54:55.813Z')
 ), connection_id: '<id>')
 
 unless res.signing_signatory.nil?
@@ -170,13 +170,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchSigningSignatoryRequest.new(
   signing_signatory: Models::Shared::SigningSignatory.new(
     created_at: DateTime.iso8601('2022-04-16T19:25:01.966Z'),
-    email: 'anais.lakin@icloud.com',
-    id: '5e7e8be9-60c6-4a8a-9d91-b3a72900186d',
+    email: 'karli.fisher@icloud.com',
+    id: '0fa22286-ad3d-422c-bd43-b1434a50639d',
     metadata: [],
-    name: 'Anais Lakin',
+    name: 'Karli Fisher',
     role: Models::Shared::SigningSignatoryRole::SIGNER,
     status: Models::Shared::SigningSignatoryStatus::ERROR,
-    updated_at: DateTime.iso8601('2024-05-31T16:47:15.715Z')
+    updated_at: DateTime.iso8601('2024-06-03T10:54:55.818Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -266,13 +266,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateSigningSignatoryRequest.new(
   signing_signatory: Models::Shared::SigningSignatory.new(
     created_at: DateTime.iso8601('2022-04-16T19:25:01.966Z'),
-    email: 'anais.lakin@icloud.com',
-    id: '5e7e8be9-60c6-4a8a-9d91-b3a72900186d',
+    email: 'karli.fisher@icloud.com',
+    id: '0fa22286-ad3d-422c-bd43-b1434a50639d',
     metadata: [],
-    name: 'Anais Lakin',
+    name: 'Karli Fisher',
     role: Models::Shared::SigningSignatoryRole::SIGNER,
     status: Models::Shared::SigningSignatoryStatus::ERROR,
-    updated_at: DateTime.iso8601('2024-05-31T16:47:15.715Z')
+    updated_at: DateTime.iso8601('2024-06-03T10:54:55.818Z')
   ),
   connection_id: '<id>',
   id: '<id>'

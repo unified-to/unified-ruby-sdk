@@ -28,25 +28,25 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
   )
 )
 res = s.memory.create_genai_memory(genai_memory: Models::Shared::GenaiMemory.new(
-  content: 'Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.',
+  content: 'Spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis.',
   created_at: DateTime.iso8601('2021-10-22T04:14:41.668Z'),
-  id: '7f03467d-ed3c-4b66-9c80-ea0f2a23eb74',
+  id: '417c7f2b-7ee7-4327-8442-005e68b29902',
   metadata: [
     Models::Shared::GenaiMetadata.new(
       extra_data: {
 
       },
       format: Models::Shared::GenaiMetadataFormat::TEXT,
-      id: '7a8ad62d-ba0e-4ce3-8330-56a2647b5b3e',
+      id: '6d1774f7-a8ad-462d-9ba0-ece333056a26',
       namespace: 'memory',
-      slug: 'cribro',
-      value: 'aiunt'
+      slug: 'defleo',
+      value: 'suffragium'
     ),
   ],
-  name: 'sponte.md',
+  name: 'tabella.md',
   type: Models::Shared::GenaiMemoryType::MEMORY,
-  updated_at: DateTime.iso8601('2023-05-04T22:44:02.522Z'),
-  user_identifier: '9d170613-4338-447d-bdb6-8ea96a2d7513'
+  updated_at: DateTime.iso8601('2023-05-06T17:53:56.492Z'),
+  user_identifier: '70613433-847d-4db6-a8ea-96a2d7513dad'
 ), connection_id: '<id>')
 
 unless res.genai_memory.nil?
@@ -180,25 +180,25 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchGenaiMemoryRequest.new(
   genai_memory: Models::Shared::GenaiMemory.new(
-    content: 'Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.',
+    content: 'Spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis.',
     created_at: DateTime.iso8601('2021-10-22T04:14:41.668Z'),
-    id: 'ba6fd52a-43ef-4339-81de-e6e17a7755f8',
+    id: '139e8b24-f341-4c76-92e4-1ec3aad304d9',
     metadata: [
       Models::Shared::GenaiMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::GenaiMetadataFormat::TEXT,
-        id: '7a8ad62d-ba0e-4ce3-8330-56a2647b5b3e',
+        id: '6d1774f7-a8ad-462d-9ba0-ece333056a26',
         namespace: 'memory',
-        slug: 'cribro',
-        value: 'aiunt'
+        slug: 'defleo',
+        value: 'suffragium'
       ),
     ],
-    name: 'sponte.md',
+    name: 'tabella.md',
     type: Models::Shared::GenaiMemoryType::MEMORY,
-    updated_at: DateTime.iso8601('2023-05-04T22:44:02.525Z'),
-    user_identifier: '9d170613-4338-447d-bdb6-8ea96a2d7513'
+    updated_at: DateTime.iso8601('2023-05-06T17:53:56.495Z'),
+    user_identifier: '70613433-847d-4db6-a8ea-96a2d7513dad'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -287,25 +287,25 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateGenaiMemoryRequest.new(
   genai_memory: Models::Shared::GenaiMemory.new(
-    content: 'Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.',
+    content: 'Spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis.',
     created_at: DateTime.iso8601('2021-10-22T04:14:41.668Z'),
-    id: 'ba6fd52a-43ef-4339-81de-e6e17a7755f8',
+    id: '139e8b24-f341-4c76-92e4-1ec3aad304d9',
     metadata: [
       Models::Shared::GenaiMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::GenaiMetadataFormat::TEXT,
-        id: '7a8ad62d-ba0e-4ce3-8330-56a2647b5b3e',
+        id: '6d1774f7-a8ad-462d-9ba0-ece333056a26',
         namespace: 'memory',
-        slug: 'cribro',
-        value: 'aiunt'
+        slug: 'defleo',
+        value: 'suffragium'
       ),
     ],
-    name: 'sponte.md',
+    name: 'tabella.md',
     type: Models::Shared::GenaiMemoryType::MEMORY,
-    updated_at: DateTime.iso8601('2023-05-04T22:44:02.525Z'),
-    user_identifier: '9d170613-4338-447d-bdb6-8ea96a2d7513'
+    updated_at: DateTime.iso8601('2023-05-06T17:53:56.495Z'),
+    user_identifier: '70613433-847d-4db6-a8ea-96a2d7513dad'
   ),
   connection_id: '<id>',
   id: '<id>'

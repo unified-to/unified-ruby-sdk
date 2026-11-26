@@ -35,15 +35,15 @@ res = s.taxwithholding.create_hris_taxwithholding(hris_taxwithholding: Models::S
   extra_withholding_amount: 10.0,
   filing_status: Models::Shared::FilingStatus::QUALIFYING_SURVIVOR,
   form: Models::Shared::Form::STATE_FORM,
-  id: '2014b5dc-61aa-4c10-97e6-f39ae9d374a2',
+  id: '2a3b4057-2917-424b-848c-a2ca19297259',
   is_exempt: false,
   is_resident: true,
-  jurisdiction: 'OH',
+  jurisdiction: 'MI',
   jurisdiction_type: Models::Shared::JurisdictionType::STATE,
   metadata: [],
   override_amount: 19.0,
   override_type: Models::Shared::OverrideType::FIXED_AMOUNT,
-  updated_at: DateTime.iso8601('2026-10-01T06:14:20.748Z')
+  updated_at: DateTime.iso8601('2026-10-07T00:42:15.356Z')
 ), connection_id: '<id>')
 
 unless res.hris_taxwithholding.nil?
@@ -184,15 +184,15 @@ req = Models::Operations::PatchHrisTaxwithholdingRequest.new(
     extra_withholding_amount: 10.0,
     filing_status: Models::Shared::FilingStatus::QUALIFYING_SURVIVOR,
     form: Models::Shared::Form::STATE_FORM,
-    id: '08c0e5ec-4464-46dd-8993-d911d36d8280',
+    id: 'd3d2e99e-cb2c-41ff-997a-5df6776a1ba9',
     is_exempt: false,
     is_resident: true,
-    jurisdiction: 'OH',
+    jurisdiction: 'MI',
     jurisdiction_type: Models::Shared::JurisdictionType::STATE,
     metadata: [],
     override_amount: 19.0,
     override_type: Models::Shared::OverrideType::FIXED_AMOUNT,
-    updated_at: DateTime.iso8601('2026-10-01T06:14:20.769Z')
+    updated_at: DateTime.iso8601('2026-10-07T00:42:15.376Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -288,15 +288,15 @@ req = Models::Operations::UpdateHrisTaxwithholdingRequest.new(
     extra_withholding_amount: 10.0,
     filing_status: Models::Shared::FilingStatus::QUALIFYING_SURVIVOR,
     form: Models::Shared::Form::STATE_FORM,
-    id: '08c0e5ec-4464-46dd-8993-d911d36d8280',
+    id: 'd3d2e99e-cb2c-41ff-997a-5df6776a1ba9',
     is_exempt: false,
     is_resident: true,
-    jurisdiction: 'OH',
+    jurisdiction: 'MI',
     jurisdiction_type: Models::Shared::JurisdictionType::STATE,
     metadata: [],
     override_amount: 19.0,
     override_type: Models::Shared::OverrideType::FIXED_AMOUNT,
-    updated_at: DateTime.iso8601('2026-10-01T06:14:20.769Z')
+    updated_at: DateTime.iso8601('2026-10-07T00:42:15.376Z')
   ),
   connection_id: '<id>',
   id: '<id>'

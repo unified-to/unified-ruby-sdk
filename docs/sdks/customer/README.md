@@ -31,32 +31,32 @@ res = s.customer.create_ticketing_customer(ticketing_customer: Models::Shared::T
   created_at: DateTime.iso8601('2021-03-15T12:33:14.875Z'),
   emails: [
     Models::Shared::TicketingEmail.new(
-      email: 'christian.windler@gmail.com',
+      email: 'veronica.waters@gmail.com',
       type: Models::Shared::TicketingEmailType::HOME
     ),
   ],
-  id: 'a1208206-a42b-4d8d-b656-fb507f69d11d',
+  id: '06d8d2dc-d501-48b0-b5cc-673a22f4d664',
   metadata: [],
-  name: 'Christian Windler',
+  name: 'Veronica Waters',
   tags: [
-    'quidem',
-    'una',
+    'sublime',
+    'casso',
   ],
   telephones: [
     Models::Shared::TicketingTelephone.new(
-      telephone: '(299) 843-2042',
+      telephone: '(843) 304-2048',
       type: Models::Shared::TicketingTelephoneType::OTHER
     ),
     Models::Shared::TicketingTelephone.new(
-      telephone: '(248) 482-6083',
+      telephone: '(482) 608-3743',
       type: Models::Shared::TicketingTelephoneType::MOBILE
     ),
     Models::Shared::TicketingTelephone.new(
-      telephone: '(743) 328-3214',
+      telephone: '(328) 421-4682',
       type: Models::Shared::TicketingTelephoneType::MOBILE
     ),
   ],
-  updated_at: DateTime.iso8601('2026-07-02T00:55:02.989Z')
+  updated_at: DateTime.iso8601('2026-07-07T14:13:55.278Z')
 ), connection_id: '<id>')
 
 unless res.ticketing_customer.nil?
@@ -193,32 +193,32 @@ req = Models::Operations::PatchTicketingCustomerRequest.new(
     created_at: DateTime.iso8601('2021-03-15T12:33:14.875Z'),
     emails: [
       Models::Shared::TicketingEmail.new(
-        email: 'christian.windler@gmail.com',
+        email: 'veronica.waters@gmail.com',
         type: Models::Shared::TicketingEmailType::HOME
       ),
     ],
-    id: 'a5df548f-3466-43bf-9642-c69313597d66',
+    id: '3150cfb9-0626-4770-a927-9a6ed362522f',
     metadata: [],
-    name: 'Christian Windler',
+    name: 'Veronica Waters',
     tags: [
-      'quidem',
-      'una',
+      'sublime',
+      'casso',
     ],
     telephones: [
       Models::Shared::TicketingTelephone.new(
-        telephone: '(299) 843-2042',
+        telephone: '(843) 304-2048',
         type: Models::Shared::TicketingTelephoneType::OTHER
       ),
       Models::Shared::TicketingTelephone.new(
-        telephone: '(248) 482-6083',
+        telephone: '(482) 608-3743',
         type: Models::Shared::TicketingTelephoneType::MOBILE
       ),
       Models::Shared::TicketingTelephone.new(
-        telephone: '(743) 328-3214',
+        telephone: '(328) 421-4682',
         type: Models::Shared::TicketingTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2026-07-02T00:55:02.997Z')
+    updated_at: DateTime.iso8601('2026-07-07T14:13:55.287Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -310,32 +310,32 @@ req = Models::Operations::UpdateTicketingCustomerRequest.new(
     created_at: DateTime.iso8601('2021-03-15T12:33:14.875Z'),
     emails: [
       Models::Shared::TicketingEmail.new(
-        email: 'christian.windler@gmail.com',
+        email: 'veronica.waters@gmail.com',
         type: Models::Shared::TicketingEmailType::HOME
       ),
     ],
-    id: 'a5df548f-3466-43bf-9642-c69313597d66',
+    id: '3150cfb9-0626-4770-a927-9a6ed362522f',
     metadata: [],
-    name: 'Christian Windler',
+    name: 'Veronica Waters',
     tags: [
-      'quidem',
-      'una',
+      'sublime',
+      'casso',
     ],
     telephones: [
       Models::Shared::TicketingTelephone.new(
-        telephone: '(299) 843-2042',
+        telephone: '(843) 304-2048',
         type: Models::Shared::TicketingTelephoneType::OTHER
       ),
       Models::Shared::TicketingTelephone.new(
-        telephone: '(248) 482-6083',
+        telephone: '(482) 608-3743',
         type: Models::Shared::TicketingTelephoneType::MOBILE
       ),
       Models::Shared::TicketingTelephone.new(
-        telephone: '(743) 328-3214',
+        telephone: '(328) 421-4682',
         type: Models::Shared::TicketingTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2026-07-02T00:55:02.997Z')
+    updated_at: DateTime.iso8601('2026-07-07T14:13:55.287Z')
   ),
   connection_id: '<id>',
   id: '<id>'

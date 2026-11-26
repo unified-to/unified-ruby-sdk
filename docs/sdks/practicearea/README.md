@@ -28,13 +28,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
   )
 )
 res = s.practicearea.create_legal_practicearea(legal_practicearea: Models::Shared::LegalPracticearea.new(
-  code: 'QCA',
+  code: 'TLV',
   created_at: DateTime.iso8601('2023-01-28T21:00:26.264Z'),
-  id: 'c3573e53-3f8c-43ed-9b30-63eb2af33d93',
+  id: 'e519a60c-9632-483d-b4a3-591832f31e89',
   metadata: [],
-  name: 'witty Law',
+  name: 'advanced Law',
   type: Models::Shared::LegalPracticeareaType::EDUCATION,
-  updated_at: DateTime.iso8601('2025-09-17T11:15:54.864Z')
+  updated_at: DateTime.iso8601('2025-09-21T14:14:06.639Z')
 ), connection_id: '<id>')
 
 unless res.legal_practicearea.nil?
@@ -168,13 +168,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchLegalPracticeareaRequest.new(
   legal_practicearea: Models::Shared::LegalPracticearea.new(
-    code: 'QCA',
+    code: 'TLV',
     created_at: DateTime.iso8601('2023-01-28T21:00:26.264Z'),
-    id: '3ec06762-473f-4abd-b5fb-1c180387d415',
+    id: '1a040106-dba4-4d82-b1f7-65a639910b00',
     metadata: [],
-    name: 'witty Law',
+    name: 'advanced Law',
     type: Models::Shared::LegalPracticeareaType::EDUCATION,
-    updated_at: DateTime.iso8601('2025-09-17T11:15:54.873Z')
+    updated_at: DateTime.iso8601('2025-09-21T14:14:06.647Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -263,13 +263,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateLegalPracticeareaRequest.new(
   legal_practicearea: Models::Shared::LegalPracticearea.new(
-    code: 'QCA',
+    code: 'TLV',
     created_at: DateTime.iso8601('2023-01-28T21:00:26.264Z'),
-    id: '3ec06762-473f-4abd-b5fb-1c180387d415',
+    id: '1a040106-dba4-4d82-b1f7-65a639910b00',
     metadata: [],
-    name: 'witty Law',
+    name: 'advanced Law',
     type: Models::Shared::LegalPracticeareaType::EDUCATION,
-    updated_at: DateTime.iso8601('2025-09-17T11:15:54.873Z')
+    updated_at: DateTime.iso8601('2025-09-21T14:14:06.647Z')
   ),
   connection_id: '<id>',
   id: '<id>'

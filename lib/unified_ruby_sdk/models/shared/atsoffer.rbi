@@ -18,6 +18,8 @@ class UnifiedRubySDK::Models::Shared::AtsOffer
   def creator_user_id=(str_); end
   def employee_user_id(); end
   def employee_user_id=(str_); end
+  def fees(); end
+  def fees=(str_); end
   def id(); end
   def id=(str_); end
   def rejected_at(); end

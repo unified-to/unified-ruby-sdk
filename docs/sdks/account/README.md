@@ -32,21 +32,21 @@ res = s.account.create_accounting_account(accounting_account: Models::Shared::Ac
   created_at: DateTime.iso8601('2022-07-03T17:57:07.391Z'),
   currency: 'CAD',
   customer_defined_code: '6170',
-  description: 'Voluptatibus valde spoliatio.',
-  id: 'dfdde34e-7f2d-4418-9369-013a01fe96e4',
+  description: 'Comedo vilitas harum cupiditate animus quo iste.',
+  id: '817dfe59-5f90-4cdd-9c19-bc8124a95e84',
   is_payable: false,
   metadata: [],
-  name: 'Auto Loan Account',
+  name: 'Savings Account',
   status: Models::Shared::Status::ARCHIVED,
   taxonomy: [
     Models::Shared::AccountingAccountTaxonomy.new(
-      original_type: 'vilitas',
+      original_type: 'peccatus',
       type: Models::Shared::AccountingAccountTaxonomyType::SUBGROUP,
-      value: 'comedo'
+      value: 'vesper'
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-14T12:40:17.883Z')
+  updated_at: DateTime.iso8601('2023-08-16T01:01:45.447Z')
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -184,21 +184,21 @@ req = Models::Operations::PatchAccountingAccountRequest.new(
     created_at: DateTime.iso8601('2022-07-03T17:57:07.391Z'),
     currency: 'CAD',
     customer_defined_code: '6170',
-    description: 'Voluptatibus valde spoliatio.',
-    id: '0113437d-ada9-4334-ac7e-0e7c7c019df8',
+    description: 'Comedo vilitas harum cupiditate animus quo iste.',
+    id: '281f303f-531a-4056-8993-821e3db2167c',
     is_payable: false,
     metadata: [],
-    name: 'Auto Loan Account',
+    name: 'Savings Account',
     status: Models::Shared::Status::ARCHIVED,
     taxonomy: [
       Models::Shared::AccountingAccountTaxonomy.new(
-        original_type: 'vilitas',
+        original_type: 'peccatus',
         type: Models::Shared::AccountingAccountTaxonomyType::SUBGROUP,
-        value: 'comedo'
+        value: 'vesper'
       ),
     ],
     type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-    updated_at: DateTime.iso8601('2023-08-14T12:40:17.887Z')
+    updated_at: DateTime.iso8601('2023-08-16T01:01:45.450Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -291,21 +291,21 @@ req = Models::Operations::UpdateAccountingAccountRequest.new(
     created_at: DateTime.iso8601('2022-07-03T17:57:07.391Z'),
     currency: 'CAD',
     customer_defined_code: '6170',
-    description: 'Voluptatibus valde spoliatio.',
-    id: '0113437d-ada9-4334-ac7e-0e7c7c019df8',
+    description: 'Comedo vilitas harum cupiditate animus quo iste.',
+    id: '281f303f-531a-4056-8993-821e3db2167c',
     is_payable: false,
     metadata: [],
-    name: 'Auto Loan Account',
+    name: 'Savings Account',
     status: Models::Shared::Status::ARCHIVED,
     taxonomy: [
       Models::Shared::AccountingAccountTaxonomy.new(
-        original_type: 'vilitas',
+        original_type: 'peccatus',
         type: Models::Shared::AccountingAccountTaxonomyType::SUBGROUP,
-        value: 'comedo'
+        value: 'vesper'
       ),
     ],
     type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-    updated_at: DateTime.iso8601('2023-08-14T12:40:17.887Z')
+    updated_at: DateTime.iso8601('2023-08-16T01:01:45.450Z')
   ),
   connection_id: '<id>',
   id: '<id>'

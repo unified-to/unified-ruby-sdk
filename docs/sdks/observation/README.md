@@ -5,7 +5,9 @@
 ### Available Operations
 
 * [create_healthcare_observation](#create_healthcare_observation) - Create an observation
+* [get_fhir_observation](#get_fhir_observation) - Read a Observation
 * [get_healthcare_observation](#get_healthcare_observation) - Retrieve an observation
+* [list_fhir_observations](#list_fhir_observations) - Search Observation resources
 * [list_healthcare_observations](#list_healthcare_observations) - List all observations
 
 ## create_healthcare_observation
@@ -57,15 +59,15 @@ res = s.observation.create_healthcare_observation(healthcare_observation: Models
     ),
   ],
   created_at: DateTime.iso8601('2022-12-06T21:34:04.293Z'),
-  id: 'b563683b-e288-4b30-8662-e8d50c4d844a',
+  id: 'b91377fa-13b2-434a-add9-6a5982e6bf0e',
   interpretation: Models::Shared::Interpretation::CRITICAL_HIGH,
-  issued_at: DateTime.iso8601('2025-05-30T05:47:56.765Z'),
+  issued_at: DateTime.iso8601('2025-06-02T23:28:04.506Z'),
   metadata: [],
   name: 'Blood pressure panel',
-  observed_at: DateTime.iso8601('2025-02-05T14:40:06.236Z'),
+  observed_at: DateTime.iso8601('2025-02-08T21:04:58.075Z'),
   status: Models::Shared::HealthcareObservationStatus::CORRECTED,
   type: Models::Shared::HealthcareObservationType::VITAL_SIGNS,
-  updated_at: DateTime.iso8601('2026-04-18T19:00:22.343Z')
+  updated_at: DateTime.iso8601('2026-04-23T20:43:14.697Z')
 ), connection_id: '<id>')
 
 unless res.healthcare_observation.nil?
@@ -86,6 +88,47 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::CreateHealthcareObservationResponse)](../../models/operations/createhealthcareobservationresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## get_fhir_observation
+
+Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getFhirObservation" method="get" path="/fhir/{connection_id}/Observation/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.observation.get_fhir_observation(connection_id: '<id>', id: '<id>')
+
+unless res.fhir_observation.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter             | Type                  | Required              | Description           |
+| --------------------- | --------------------- | --------------------- | --------------------- |
+| `connection_id`       | *::String*            | :heavy_check_mark:    | ID of the connection  |
+| `id`                  | *::String*            | :heavy_check_mark:    | ID of the Observation |
+
+### Response
+
+**[T.nilable(Models::Operations::GetFhirObservationResponse)](../../models/operations/getfhirobservationresponse.md)**
 
 ### Errors
 
@@ -129,6 +172,50 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::GetHealthcareObservationResponse)](../../models/operations/gethealthcareobservationresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## list_fhir_observations
+
+Returns a searchset Bundle; follow its next link for more pages. Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listFhirObservations" method="get" path="/fhir/{connection_id}/Observation" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+
+req = Models::Operations::ListFhirObservationsRequest.new(
+  connection_id: '<id>'
+)
+res = s.observation.list_fhir_observations(request: req)
+
+unless res.fhir_bundle.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                 | [Models::Operations::ListFhirObservationsRequest](../../models/operations/listfhirobservationsrequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+
+### Response
+
+**[T.nilable(Models::Operations::ListFhirObservationsResponse)](../../models/operations/listfhirobservationsresponse.md)**
 
 ### Errors
 

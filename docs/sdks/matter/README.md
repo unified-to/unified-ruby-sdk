@@ -29,27 +29,27 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.matter.create_legal_matter(legal_matter: Models::Shared::LegalMatter.new(
   billing_method: Models::Shared::BillingMethod::OTHER,
-  client_reference: 'qSrjIBAD',
+  client_reference: '7eNvWdA5',
   company_ids: [],
   contact_ids: [],
   created_at: DateTime.iso8601('2023-05-28T04:10:42.375Z'),
-  currency: 'BOB',
-  description: 'Speciosus cresco aut cotidie temeritas arma.',
-  id: 'd68d1e96-a93f-428f-b25a-902edd8c3f94',
+  currency: 'CRC',
+  description: 'Arma currus curiositas utilis decor color summa peior occaecati.',
+  id: 'a09ac8cc-9dd9-4a87-87fc-413688861c8b',
   metadata: [],
-  name: 'Walter v. Franecki - Spinka',
+  name: 'Spinka v. Dickinson Inc',
   number: '2023-3062',
-  opened_at: DateTime.iso8601('2023-07-06T04:23:30.541Z'),
+  opened_at: DateTime.iso8601('2023-07-06T08:46:43.561Z'),
   parties: [
     Models::Shared::LegalParty.new(
-      description: 'Urban Walter',
+      description: 'Tremayne Spinka',
       role: Models::Shared::LegalPartyRole::EXPERT
     ),
   ],
-  stage: 'currus',
+  stage: 'recusandae',
   status: Models::Shared::LegalMatterStatus::OPEN,
-  statute_of_limitations_at: DateTime.iso8601('2027-07-28T21:03:57.694Z'),
-  updated_at: DateTime.iso8601('2023-07-18T15:13:02.258Z')
+  statute_of_limitations_at: DateTime.iso8601('2029-09-15T06:20:51.417Z'),
+  updated_at: DateTime.iso8601('2023-07-18T21:00:16.176Z')
 ), connection_id: '<id>')
 
 unless res.legal_matter.nil?
@@ -184,27 +184,27 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchLegalMatterRequest.new(
   legal_matter: Models::Shared::LegalMatter.new(
     billing_method: Models::Shared::BillingMethod::OTHER,
-    client_reference: 'qSrjIBAD',
+    client_reference: '7eNvWdA5',
     company_ids: [],
     contact_ids: [],
     created_at: DateTime.iso8601('2023-05-28T04:10:42.375Z'),
-    currency: 'BOB',
-    description: 'Speciosus cresco aut cotidie temeritas arma.',
-    id: 'b13d5571-653d-4827-8688-e6cc34263ba5',
+    currency: 'CRC',
+    description: 'Arma currus curiositas utilis decor color summa peior occaecati.',
+    id: '463e30a3-464b-44ec-b51e-bdbb3cab66ad',
     metadata: [],
-    name: 'Walter v. Franecki - Spinka',
+    name: 'Spinka v. Dickinson Inc',
     number: '2023-3062',
-    opened_at: DateTime.iso8601('2023-07-06T04:23:30.541Z'),
+    opened_at: DateTime.iso8601('2023-07-06T08:46:43.561Z'),
     parties: [
       Models::Shared::LegalParty.new(
-        description: 'Urban Walter',
+        description: 'Tremayne Spinka',
         role: Models::Shared::LegalPartyRole::EXPERT
       ),
     ],
-    stage: 'currus',
+    stage: 'recusandae',
     status: Models::Shared::LegalMatterStatus::OPEN,
-    statute_of_limitations_at: DateTime.iso8601('2027-07-28T21:03:57.709Z'),
-    updated_at: DateTime.iso8601('2023-07-18T15:13:02.258Z')
+    statute_of_limitations_at: DateTime.iso8601('2029-09-15T06:20:51.432Z'),
+    updated_at: DateTime.iso8601('2023-07-18T21:00:16.176Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -294,27 +294,27 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateLegalMatterRequest.new(
   legal_matter: Models::Shared::LegalMatter.new(
     billing_method: Models::Shared::BillingMethod::OTHER,
-    client_reference: 'qSrjIBAD',
+    client_reference: '7eNvWdA5',
     company_ids: [],
     contact_ids: [],
     created_at: DateTime.iso8601('2023-05-28T04:10:42.375Z'),
-    currency: 'BOB',
-    description: 'Speciosus cresco aut cotidie temeritas arma.',
-    id: 'b13d5571-653d-4827-8688-e6cc34263ba5',
+    currency: 'CRC',
+    description: 'Arma currus curiositas utilis decor color summa peior occaecati.',
+    id: '463e30a3-464b-44ec-b51e-bdbb3cab66ad',
     metadata: [],
-    name: 'Walter v. Franecki - Spinka',
+    name: 'Spinka v. Dickinson Inc',
     number: '2023-3062',
-    opened_at: DateTime.iso8601('2023-07-06T04:23:30.541Z'),
+    opened_at: DateTime.iso8601('2023-07-06T08:46:43.561Z'),
     parties: [
       Models::Shared::LegalParty.new(
-        description: 'Urban Walter',
+        description: 'Tremayne Spinka',
         role: Models::Shared::LegalPartyRole::EXPERT
       ),
     ],
-    stage: 'currus',
+    stage: 'recusandae',
     status: Models::Shared::LegalMatterStatus::OPEN,
-    statute_of_limitations_at: DateTime.iso8601('2027-07-28T21:03:57.709Z'),
-    updated_at: DateTime.iso8601('2023-07-18T15:13:02.258Z')
+    statute_of_limitations_at: DateTime.iso8601('2029-09-15T06:20:51.432Z'),
+    updated_at: DateTime.iso8601('2023-07-18T21:00:16.176Z')
   ),
   connection_id: '<id>',
   id: '<id>'

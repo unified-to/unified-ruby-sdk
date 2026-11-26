@@ -41,59 +41,59 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.location.create_commerce_location(commerce_location: Models::Shared::CommerceLocation.new(
   address: Models::Shared::PropertyCommerceLocationAddress.new(
-    address1: '29896 The Limes',
-    city: 'New Kenny',
+    address1: '688 Kristen Groves',
+    city: 'South Addisontown',
     country_code: 'US',
-    postal_code: '14490-0609',
-    region: 'Virginia',
-    region_code: 'MS'
+    postal_code: '92019',
+    region: 'Ohio',
+    region_code: 'UT'
   ),
   categories: [],
   created_at: DateTime.iso8601('2022-12-29T04:15:21.195Z'),
-  currency: 'XCD',
-  description: 'Adsidue audentia.',
-  id: 'cd274256-6c8a-4154-9405-8a56ec0f3b2f',
-  image_url: 'https://picsum.photos/seed/hjFt1/1036/2220',
+  currency: 'WST',
+  description: 'Vulgaris cruciamentum hic numquam tutamen.',
+  id: 'c3568bd4-f5c8-4800-80a4-1c7faf1ab2bf',
+  image_url: 'https://picsum.photos/seed/3ZlSMHUYq/1895/67',
   is_active: false,
-  language_locale: 'vulgaris',
+  language_locale: 'cibus',
   latitude: 0.0,
   location_type: Models::Shared::LocationType::RESTAURANT,
   longitude: 0.0,
   media: [
     Models::Shared::CommerceItemMedia.new(
-      alt: 'Addo.',
+      alt: 'Amoveo cinis demulceo tutamen.',
       height: 283.0,
-      id: '3271f045-d7d9-44ec-af7c-885c54277fb2',
+      id: '202c10b4-fa45-4490-a2a9-90affd403838',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: 'f6c91584-acc4-44cc-878b-18118f91352e',
-          slug: 'abutor',
-          value: 'damno'
+          id: '67af1db9-cf91-4dc4-bb6e-9a43db4cbb94',
+          slug: 'taedium',
+          value: 'censura'
         ),
       ],
       position: 40.0,
       type: Models::Shared::CommerceItemMediaType::IMAGE,
-      url: 'https://picsum.photos/seed/QVh7ViTV/3964/1567',
+      url: 'https://picsum.photos/seed/TV610q/478/3686',
       width: 1.0
     ),
   ],
   metadata: [],
-  name: 'Olson - Mraz',
+  name: 'Christiansen and Sons',
   price_level: '',
   rating: 0.0,
   review_count: 0.0,
   telephones: [
     Models::Shared::CommerceTelephone.new(
-      telephone: '(872) 522-3201',
+      telephone: '(301) 236-0742',
       type: Models::Shared::CommerceTelephoneType::OTHER
     ),
     Models::Shared::CommerceTelephone.new(
-      telephone: '(236) 274-2445',
+      telephone: '(545) 455-1236',
       type: Models::Shared::CommerceTelephoneType::MOBILE
     ),
   ],
-  updated_at: DateTime.iso8601('2024-05-01T01:28:16.407Z'),
-  web_url: 'https://chilly-edge.info'
+  updated_at: DateTime.iso8601('2024-05-03T02:39:03.345Z'),
+  web_url: 'https://formal-declaration.info/'
 ), connection_id: '<id>')
 
 unless res.commerce_location.nil?
@@ -139,39 +139,39 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.location.create_hris_location(hris_location: Models::Shared::HrisLocation.new(
   address: Models::Shared::PropertyHrisLocationAddress.new(
-    address1: '4418 Daniella Mall',
-    address2: 'Apt. 997',
-    city: 'Burke',
+    address1: '35099 W 14th Street',
+    address2: 'Apt. 715',
+    city: 'Taliastad',
     country_code: 'US',
-    postal_code: '54109',
-    region: 'Ohio',
-    region_code: 'OR'
+    postal_code: '30271',
+    region: 'New Hampshire',
+    region_code: 'TX'
   ),
   created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
-  currency: 'MNT',
-  description: 'Commemoro acervus.',
-  id: 'f17bb25f-5a07-471b-b4d6-306f80ffd704',
+  currency: 'ALL',
+  description: 'Accendo sophismata verus.',
+  id: '5bc602e5-f3a4-4ef7-95a3-5b57abafb220',
   is_active: false,
   is_hq: true,
   language_locale: 'it',
   metadata: [],
-  name: 'North Kimberlyland Office',
+  name: 'Lake Joannaville Office',
   telephones: [
     Models::Shared::HrisTelephone.new(
-      telephone: '(371) 245-0699',
+      telephone: '(970) 284-5585',
       type: Models::Shared::HrisTelephoneType::FAX
     ),
     Models::Shared::HrisTelephone.new(
-      telephone: '(700) 845-5854',
+      telephone: '(526) 323-7354',
       type: Models::Shared::HrisTelephoneType::FAX
     ),
     Models::Shared::HrisTelephone.new(
-      telephone: '(461) 437-3548',
+      telephone: '(927) 858-7370',
       type: Models::Shared::HrisTelephoneType::HOME
     ),
   ],
-  timezone: 'Asia/Jerusalem',
-  updated_at: DateTime.iso8601('2023-07-02T01:50:02.104Z')
+  timezone: 'America/Toronto',
+  updated_at: DateTime.iso8601('2023-07-04T06:09:46.180Z')
 ), connection_id: '<id>')
 
 unless res.hris_location.nil?
@@ -654,59 +654,59 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchCommerceLocationRequest.new(
   commerce_location: Models::Shared::CommerceLocation.new(
     address: Models::Shared::PropertyCommerceLocationAddress.new(
-      address1: '29896 The Limes',
-      city: 'New Kenny',
+      address1: '688 Kristen Groves',
+      city: 'South Addisontown',
       country_code: 'US',
-      postal_code: '14490-0609',
-      region: 'Virginia',
-      region_code: 'MS'
+      postal_code: '92019',
+      region: 'Ohio',
+      region_code: 'UT'
     ),
     categories: [],
     created_at: DateTime.iso8601('2022-12-29T04:15:21.195Z'),
-    currency: 'XCD',
-    description: 'Adsidue audentia.',
-    id: '3b3c71bf-c8fa-46a7-b81b-bed0e932d5b1',
-    image_url: 'https://picsum.photos/seed/hjFt1/1036/2220',
+    currency: 'WST',
+    description: 'Vulgaris cruciamentum hic numquam tutamen.',
+    id: '23c21f13-b990-47f0-b19e-e80df06ef5e3',
+    image_url: 'https://picsum.photos/seed/3ZlSMHUYq/1895/67',
     is_active: false,
-    language_locale: 'vulgaris',
+    language_locale: 'cibus',
     latitude: 0.0,
     location_type: Models::Shared::LocationType::RESTAURANT,
     longitude: 0.0,
     media: [
       Models::Shared::CommerceItemMedia.new(
-        alt: 'Addo.',
+        alt: 'Amoveo cinis demulceo tutamen.',
         height: 283.0,
-        id: '42a4955c-4c90-4336-9482-57b76bceee9f',
+        id: 'd83abc5e-bd79-4487-940e-558b22c040b8',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'ce896fe3-2d7d-4712-bd98-215ad18bd25f',
-            slug: 'abutor',
-            value: 'damno'
+            id: '7cf6a38d-16e8-4d54-9993-17821df264f9',
+            slug: 'taedium',
+            value: 'censura'
           ),
         ],
         position: 40.0,
         type: Models::Shared::CommerceItemMediaType::IMAGE,
-        url: 'https://picsum.photos/seed/QVh7ViTV/3964/1567',
+        url: 'https://picsum.photos/seed/TV610q/478/3686',
         width: 1.0
       ),
     ],
     metadata: [],
-    name: 'Olson - Mraz',
+    name: 'Christiansen and Sons',
     price_level: '',
     rating: 0.0,
     review_count: 0.0,
     telephones: [
       Models::Shared::CommerceTelephone.new(
-        telephone: '(872) 522-3201',
+        telephone: '(301) 236-0742',
         type: Models::Shared::CommerceTelephoneType::OTHER
       ),
       Models::Shared::CommerceTelephone.new(
-        telephone: '(236) 274-2445',
+        telephone: '(545) 455-1236',
         type: Models::Shared::CommerceTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2024-05-01T01:28:16.416Z'),
-    web_url: 'https://chilly-edge.info'
+    updated_at: DateTime.iso8601('2024-05-03T02:39:03.356Z'),
+    web_url: 'https://formal-declaration.info/'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -755,39 +755,39 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchHrisLocationRequest.new(
   hris_location: Models::Shared::HrisLocation.new(
     address: Models::Shared::PropertyHrisLocationAddress.new(
-      address1: '4418 Daniella Mall',
-      address2: 'Apt. 997',
-      city: 'Burke',
+      address1: '35099 W 14th Street',
+      address2: 'Apt. 715',
+      city: 'Taliastad',
       country_code: 'US',
-      postal_code: '54109',
-      region: 'Ohio',
-      region_code: 'OR'
+      postal_code: '30271',
+      region: 'New Hampshire',
+      region_code: 'TX'
     ),
     created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
-    currency: 'MNT',
-    description: 'Commemoro acervus.',
-    id: '79cd05f3-37ac-4016-9351-0f1bcb164c49',
+    currency: 'ALL',
+    description: 'Accendo sophismata verus.',
+    id: '50de5710-323d-494c-a3ba-de15f4f9c2bd',
     is_active: false,
     is_hq: true,
     language_locale: 'it',
     metadata: [],
-    name: 'North Kimberlyland Office',
+    name: 'Lake Joannaville Office',
     telephones: [
       Models::Shared::HrisTelephone.new(
-        telephone: '(371) 245-0699',
+        telephone: '(970) 284-5585',
         type: Models::Shared::HrisTelephoneType::FAX
       ),
       Models::Shared::HrisTelephone.new(
-        telephone: '(700) 845-5854',
+        telephone: '(526) 323-7354',
         type: Models::Shared::HrisTelephoneType::FAX
       ),
       Models::Shared::HrisTelephone.new(
-        telephone: '(461) 437-3548',
+        telephone: '(927) 858-7370',
         type: Models::Shared::HrisTelephoneType::HOME
       ),
     ],
-    timezone: 'Asia/Jerusalem',
-    updated_at: DateTime.iso8601('2023-07-02T01:50:02.113Z')
+    timezone: 'America/Toronto',
+    updated_at: DateTime.iso8601('2023-07-04T06:09:46.187Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -918,59 +918,59 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateCommerceLocationRequest.new(
   commerce_location: Models::Shared::CommerceLocation.new(
     address: Models::Shared::PropertyCommerceLocationAddress.new(
-      address1: '29896 The Limes',
-      city: 'New Kenny',
+      address1: '688 Kristen Groves',
+      city: 'South Addisontown',
       country_code: 'US',
-      postal_code: '14490-0609',
-      region: 'Virginia',
-      region_code: 'MS'
+      postal_code: '92019',
+      region: 'Ohio',
+      region_code: 'UT'
     ),
     categories: [],
     created_at: DateTime.iso8601('2022-12-29T04:15:21.195Z'),
-    currency: 'XCD',
-    description: 'Adsidue audentia.',
-    id: '3b3c71bf-c8fa-46a7-b81b-bed0e932d5b1',
-    image_url: 'https://picsum.photos/seed/hjFt1/1036/2220',
+    currency: 'WST',
+    description: 'Vulgaris cruciamentum hic numquam tutamen.',
+    id: '23c21f13-b990-47f0-b19e-e80df06ef5e3',
+    image_url: 'https://picsum.photos/seed/3ZlSMHUYq/1895/67',
     is_active: false,
-    language_locale: 'vulgaris',
+    language_locale: 'cibus',
     latitude: 0.0,
     location_type: Models::Shared::LocationType::RESTAURANT,
     longitude: 0.0,
     media: [
       Models::Shared::CommerceItemMedia.new(
-        alt: 'Addo.',
+        alt: 'Amoveo cinis demulceo tutamen.',
         height: 283.0,
-        id: '42a4955c-4c90-4336-9482-57b76bceee9f',
+        id: 'd83abc5e-bd79-4487-940e-558b22c040b8',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'ce896fe3-2d7d-4712-bd98-215ad18bd25f',
-            slug: 'abutor',
-            value: 'damno'
+            id: '7cf6a38d-16e8-4d54-9993-17821df264f9',
+            slug: 'taedium',
+            value: 'censura'
           ),
         ],
         position: 40.0,
         type: Models::Shared::CommerceItemMediaType::IMAGE,
-        url: 'https://picsum.photos/seed/QVh7ViTV/3964/1567',
+        url: 'https://picsum.photos/seed/TV610q/478/3686',
         width: 1.0
       ),
     ],
     metadata: [],
-    name: 'Olson - Mraz',
+    name: 'Christiansen and Sons',
     price_level: '',
     rating: 0.0,
     review_count: 0.0,
     telephones: [
       Models::Shared::CommerceTelephone.new(
-        telephone: '(872) 522-3201',
+        telephone: '(301) 236-0742',
         type: Models::Shared::CommerceTelephoneType::OTHER
       ),
       Models::Shared::CommerceTelephone.new(
-        telephone: '(236) 274-2445',
+        telephone: '(545) 455-1236',
         type: Models::Shared::CommerceTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2024-05-01T01:28:16.416Z'),
-    web_url: 'https://chilly-edge.info'
+    updated_at: DateTime.iso8601('2024-05-03T02:39:03.356Z'),
+    web_url: 'https://formal-declaration.info/'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1019,39 +1019,39 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateHrisLocationRequest.new(
   hris_location: Models::Shared::HrisLocation.new(
     address: Models::Shared::PropertyHrisLocationAddress.new(
-      address1: '4418 Daniella Mall',
-      address2: 'Apt. 997',
-      city: 'Burke',
+      address1: '35099 W 14th Street',
+      address2: 'Apt. 715',
+      city: 'Taliastad',
       country_code: 'US',
-      postal_code: '54109',
-      region: 'Ohio',
-      region_code: 'OR'
+      postal_code: '30271',
+      region: 'New Hampshire',
+      region_code: 'TX'
     ),
     created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
-    currency: 'MNT',
-    description: 'Commemoro acervus.',
-    id: '79cd05f3-37ac-4016-9351-0f1bcb164c49',
+    currency: 'ALL',
+    description: 'Accendo sophismata verus.',
+    id: '50de5710-323d-494c-a3ba-de15f4f9c2bd',
     is_active: false,
     is_hq: true,
     language_locale: 'it',
     metadata: [],
-    name: 'North Kimberlyland Office',
+    name: 'Lake Joannaville Office',
     telephones: [
       Models::Shared::HrisTelephone.new(
-        telephone: '(371) 245-0699',
+        telephone: '(970) 284-5585',
         type: Models::Shared::HrisTelephoneType::FAX
       ),
       Models::Shared::HrisTelephone.new(
-        telephone: '(700) 845-5854',
+        telephone: '(526) 323-7354',
         type: Models::Shared::HrisTelephoneType::FAX
       ),
       Models::Shared::HrisTelephone.new(
-        telephone: '(461) 437-3548',
+        telephone: '(927) 858-7370',
         type: Models::Shared::HrisTelephoneType::HOME
       ),
     ],
-    timezone: 'Asia/Jerusalem',
-    updated_at: DateTime.iso8601('2023-07-02T01:50:02.113Z')
+    timezone: 'America/Toronto',
+    updated_at: DateTime.iso8601('2023-07-04T06:09:46.187Z')
   ),
   connection_id: '<id>',
   id: '<id>'
