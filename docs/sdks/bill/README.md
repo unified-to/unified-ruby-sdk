@@ -31,13 +31,13 @@ res = s.bill.create_accounting_bill(accounting_bill: Models::Shared::AccountingB
   attachments: [
     Models::Shared::AccountingAttachment.new(
       download_url: 'https://mixed-flame.biz',
-      id: 'f5c17819-7620-49ce-b843-08f3e826bb7b',
+      id: '32e4a09b-3d8f-4ce2-afeb-8158c70de6ae',
       mime_type: 'application/pdf',
       name: 'BILL-2466.pdf'
     ),
     Models::Shared::AccountingAttachment.new(
       download_url: 'https://minor-testimonial.biz',
-      id: 'd53c3116-16b3-404c-8cb7-a3e90c067157',
+      id: 'c6bb38c8-a169-4234-a1af-4140b1c7206e',
       mime_type: 'application/pdf',
       name: 'BILL-2466-1.pdf'
     ),
@@ -50,7 +50,7 @@ res = s.bill.create_accounting_bill(accounting_bill: Models::Shared::AccountingB
   discount_amount: 0.0,
   due_at: DateTime.iso8601('2019-09-07T23:03:14.104Z'),
   extended_notes: [],
-  id: 'd71eb48f-8820-4d99-a476-f486a7a360f4',
+  id: '0eacba27-ea7b-41fd-8777-d5d4173635ad',
   lineitems: [],
   metadata: [],
   notes: 'Cilicium infit amissio ante demulceo annus defluo tumultus.',
@@ -66,7 +66,7 @@ res = s.bill.create_accounting_bill(accounting_bill: Models::Shared::AccountingB
   tax_amount: 0.0,
   term: Models::Shared::Term::NET_90,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2020-06-05T05:21:54.161Z'),
+  updated_at: DateTime.iso8601('2020-06-05T08:11:42.264Z'),
   url: 'https://utilized-partridge.info/bills/BILL-2466'
 ), connection_id: '<id>')
 
@@ -204,13 +204,13 @@ req = Models::Operations::PatchAccountingBillRequest.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://mixed-flame.biz',
-        id: '1d6bcc95-5822-4f22-b26d-9453b1879859',
+        id: '3ffc1efe-63b9-4b17-98b5-35f35bac72f6',
         mime_type: 'application/pdf',
         name: 'BILL-2466.pdf'
       ),
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://minor-testimonial.biz',
-        id: '9e3221b4-9952-455a-9152-f37c3ad9fd3f',
+        id: '3305613c-736c-49af-8720-3a84cc97e02d',
         mime_type: 'application/pdf',
         name: 'BILL-2466-1.pdf'
       ),
@@ -223,7 +223,7 @@ req = Models::Operations::PatchAccountingBillRequest.new(
     discount_amount: 0.0,
     due_at: DateTime.iso8601('2019-09-07T23:03:14.104Z'),
     extended_notes: [],
-    id: '1f56c28a-48c8-4e0b-9f26-a0ed47664a1d',
+    id: '106fca9e-b5f1-4d85-89a4-f1f9042ee111',
     lineitems: [],
     metadata: [],
     notes: 'Cilicium infit amissio ante demulceo annus defluo tumultus.',
@@ -239,7 +239,7 @@ req = Models::Operations::PatchAccountingBillRequest.new(
     tax_amount: 0.0,
     term: Models::Shared::Term::NET_90,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2020-06-05T05:21:54.167Z'),
+    updated_at: DateTime.iso8601('2020-06-05T08:11:42.270Z'),
     url: 'https://utilized-partridge.info/bills/BILL-2466'
   ),
   connection_id: '<id>',
@@ -332,13 +332,13 @@ req = Models::Operations::UpdateAccountingBillRequest.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://mixed-flame.biz',
-        id: '1d6bcc95-5822-4f22-b26d-9453b1879859',
+        id: '3ffc1efe-63b9-4b17-98b5-35f35bac72f6',
         mime_type: 'application/pdf',
         name: 'BILL-2466.pdf'
       ),
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://minor-testimonial.biz',
-        id: '9e3221b4-9952-455a-9152-f37c3ad9fd3f',
+        id: '3305613c-736c-49af-8720-3a84cc97e02d',
         mime_type: 'application/pdf',
         name: 'BILL-2466-1.pdf'
       ),
@@ -351,7 +351,7 @@ req = Models::Operations::UpdateAccountingBillRequest.new(
     discount_amount: 0.0,
     due_at: DateTime.iso8601('2019-09-07T23:03:14.104Z'),
     extended_notes: [],
-    id: '1f56c28a-48c8-4e0b-9f26-a0ed47664a1d',
+    id: '106fca9e-b5f1-4d85-89a4-f1f9042ee111',
     lineitems: [],
     metadata: [],
     notes: 'Cilicium infit amissio ante demulceo annus defluo tumultus.',
@@ -367,7 +367,7 @@ req = Models::Operations::UpdateAccountingBillRequest.new(
     tax_amount: 0.0,
     term: Models::Shared::Term::NET_90,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2020-06-05T05:21:54.167Z'),
+    updated_at: DateTime.iso8601('2020-06-05T08:11:42.270Z'),
     url: 'https://utilized-partridge.info/bills/BILL-2466'
   ),
   connection_id: '<id>',

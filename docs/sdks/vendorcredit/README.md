@@ -32,14 +32,14 @@ res = s.vendorcredit.create_accounting_vendorcredit(accounting_vendorcredit: Mod
   balance_amount: 0.0,
   created_at: DateTime.iso8601('2023-04-15T21:14:08.197Z'),
   currency: 'USD',
-  id: '5a175945-3e0f-4c7b-af69-158814af6816',
+  id: '029291b1-6e46-4015-bcee-30a7469c64b0',
   lineitems: [],
   metadata: [],
   notes: 'Avaritia tantum campana comitatus atrox.',
   posted_at: DateTime.iso8601('2023-04-15T21:14:08.197Z'),
   status: Models::Shared::AccountingVendorcreditStatus::AUTHORIZED,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2023-10-07T20:03:55.210Z')
+  updated_at: DateTime.iso8601('2023-10-07T23:27:07.600Z')
 ), connection_id: '<id>')
 
 unless res.accounting_vendorcredit.nil?
@@ -177,14 +177,14 @@ req = Models::Operations::PatchAccountingVendorcreditRequest.new(
     balance_amount: 0.0,
     created_at: DateTime.iso8601('2023-04-15T21:14:08.197Z'),
     currency: 'USD',
-    id: 'a5a6fb31-8c07-4aab-8d58-afb053c2fce7',
+    id: 'e4b251e5-06fa-4ae0-9336-2b3ab3d8e0f8',
     lineitems: [],
     metadata: [],
     notes: 'Avaritia tantum campana comitatus atrox.',
     posted_at: DateTime.iso8601('2023-04-15T21:14:08.197Z'),
     status: Models::Shared::AccountingVendorcreditStatus::AUTHORIZED,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-10-07T20:03:55.214Z')
+    updated_at: DateTime.iso8601('2023-10-07T23:27:07.603Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -277,14 +277,14 @@ req = Models::Operations::UpdateAccountingVendorcreditRequest.new(
     balance_amount: 0.0,
     created_at: DateTime.iso8601('2023-04-15T21:14:08.197Z'),
     currency: 'USD',
-    id: 'a5a6fb31-8c07-4aab-8d58-afb053c2fce7',
+    id: 'e4b251e5-06fa-4ae0-9336-2b3ab3d8e0f8',
     lineitems: [],
     metadata: [],
     notes: 'Avaritia tantum campana comitatus atrox.',
     posted_at: DateTime.iso8601('2023-04-15T21:14:08.197Z'),
     status: Models::Shared::AccountingVendorcreditStatus::AUTHORIZED,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-10-07T20:03:55.214Z')
+    updated_at: DateTime.iso8601('2023-10-07T23:27:07.603Z')
   ),
   connection_id: '<id>',
   id: '<id>'

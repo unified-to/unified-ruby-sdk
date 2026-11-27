@@ -29,14 +29,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.commit.create_repo_commit(repo_commit: Models::Shared::RepoCommit.new(
   created_at: DateTime.iso8601('2020-07-12T16:20:42.520Z'),
-  id: '633ed6c0-ee9a-4f01-8144-6d0b5dfaef58',
+  id: '8bce2c1f-9784-43a1-825c-7e1ee7125e2f',
   lines_added: 313.0,
   lines_changed: 659.0,
   lines_deleted: 482.0,
   message: 'input bluetooth circuit',
   metadata: [],
   repo_id: '<id>',
-  updated_at: DateTime.iso8601('2023-06-16T19:15:44.884Z')
+  updated_at: DateTime.iso8601('2023-06-17T07:00:06.419Z')
 ), connection_id: '<id>')
 
 unless res.repo_commit.nil?
@@ -171,14 +171,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchRepoCommitRequest.new(
   repo_commit: Models::Shared::RepoCommit.new(
     created_at: DateTime.iso8601('2020-07-12T16:20:42.520Z'),
-    id: '9af9c528-f7f6-49cc-a869-1e1b8fe9caca',
+    id: 'a1c3a4d9-e250-4c41-949a-2a778dab7bda',
     lines_added: 313.0,
     lines_changed: 659.0,
     lines_deleted: 482.0,
     message: 'input bluetooth circuit',
     metadata: [],
     repo_id: '<id>',
-    updated_at: DateTime.iso8601('2023-06-16T19:15:44.892Z')
+    updated_at: DateTime.iso8601('2023-06-17T07:00:06.425Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -268,14 +268,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateRepoCommitRequest.new(
   repo_commit: Models::Shared::RepoCommit.new(
     created_at: DateTime.iso8601('2020-07-12T16:20:42.520Z'),
-    id: '9af9c528-f7f6-49cc-a869-1e1b8fe9caca',
+    id: 'a1c3a4d9-e250-4c41-949a-2a778dab7bda',
     lines_added: 313.0,
     lines_changed: 659.0,
     lines_deleted: 482.0,
     message: 'input bluetooth circuit',
     metadata: [],
     repo_id: '<id>',
-    updated_at: DateTime.iso8601('2023-06-16T19:15:44.892Z')
+    updated_at: DateTime.iso8601('2023-06-17T07:00:06.425Z')
   ),
   connection_id: '<id>',
   id: '<id>'

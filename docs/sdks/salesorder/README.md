@@ -28,6 +28,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
   )
 )
 res = s.salesorder.create_accounting_salesorder(accounting_salesorder: Models::Shared::AccountingSalesorder.new(
+  balance_amount: 0.0,
   billing_address: Models::Shared::PropertyAccountingSalesorderBillingAddress.new(
     address1: '1487 Valley Road',
     address2: 'Apt. 287',
@@ -38,13 +39,13 @@ res = s.salesorder.create_accounting_salesorder(accounting_salesorder: Models::S
     region_code: 'MT'
   ),
   category_ids: [],
-  closed_at: DateTime.iso8601('2023-04-03T11:27:22.116Z'),
+  closed_at: DateTime.iso8601('2023-04-03T17:48:30.427Z'),
   created_at: DateTime.iso8601('2022-01-17T16:11:50.310Z'),
   currency: 'USD',
   discount_amount: 0.0,
   fees: [],
   fulfillment_type: Models::Shared::FulfillmentType::OTHER,
-  id: '8eca044e-0062-4b76-8e2e-40f87ec0d5fb',
+  id: '5e5fb1e7-6204-4331-835e-5de729ce841e',
   lineitems: [],
   metadata: [],
   order_number: '832663',
@@ -67,7 +68,7 @@ res = s.salesorder.create_accounting_salesorder(accounting_salesorder: Models::S
   tax_amount: 0.0,
   tip_amount: 0.0,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2023-04-03T11:27:22.116Z')
+  updated_at: DateTime.iso8601('2023-04-03T17:48:30.427Z')
 ), connection_id: '<id>')
 
 unless res.accounting_salesorder.nil?
@@ -201,6 +202,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchAccountingSalesorderRequest.new(
   accounting_salesorder: Models::Shared::AccountingSalesorder.new(
+    balance_amount: 0.0,
     billing_address: Models::Shared::PropertyAccountingSalesorderBillingAddress.new(
       address1: '1487 Valley Road',
       address2: 'Apt. 287',
@@ -211,13 +213,13 @@ req = Models::Operations::PatchAccountingSalesorderRequest.new(
       region_code: 'MT'
     ),
     category_ids: [],
-    closed_at: DateTime.iso8601('2023-04-03T11:27:22.128Z'),
+    closed_at: DateTime.iso8601('2023-04-03T17:48:30.439Z'),
     created_at: DateTime.iso8601('2022-01-17T16:11:50.310Z'),
     currency: 'USD',
     discount_amount: 0.0,
     fees: [],
     fulfillment_type: Models::Shared::FulfillmentType::OTHER,
-    id: 'aaa718ae-a1a1-4bf8-8548-30af50cd52f2',
+    id: '42656c71-7de8-4b97-9032-20c37e073d9c',
     lineitems: [],
     metadata: [],
     order_number: '832663',
@@ -240,7 +242,7 @@ req = Models::Operations::PatchAccountingSalesorderRequest.new(
     tax_amount: 0.0,
     tip_amount: 0.0,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-04-03T11:27:22.128Z')
+    updated_at: DateTime.iso8601('2023-04-03T17:48:30.439Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -329,6 +331,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateAccountingSalesorderRequest.new(
   accounting_salesorder: Models::Shared::AccountingSalesorder.new(
+    balance_amount: 0.0,
     billing_address: Models::Shared::PropertyAccountingSalesorderBillingAddress.new(
       address1: '1487 Valley Road',
       address2: 'Apt. 287',
@@ -339,13 +342,13 @@ req = Models::Operations::UpdateAccountingSalesorderRequest.new(
       region_code: 'MT'
     ),
     category_ids: [],
-    closed_at: DateTime.iso8601('2023-04-03T11:27:22.128Z'),
+    closed_at: DateTime.iso8601('2023-04-03T17:48:30.439Z'),
     created_at: DateTime.iso8601('2022-01-17T16:11:50.310Z'),
     currency: 'USD',
     discount_amount: 0.0,
     fees: [],
     fulfillment_type: Models::Shared::FulfillmentType::OTHER,
-    id: 'aaa718ae-a1a1-4bf8-8548-30af50cd52f2',
+    id: '42656c71-7de8-4b97-9032-20c37e073d9c',
     lineitems: [],
     metadata: [],
     order_number: '832663',
@@ -368,7 +371,7 @@ req = Models::Operations::UpdateAccountingSalesorderRequest.new(
     tax_amount: 0.0,
     tip_amount: 0.0,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-04-03T11:27:22.128Z')
+    updated_at: DateTime.iso8601('2023-04-03T17:48:30.439Z')
   ),
   connection_id: '<id>',
   id: '<id>'

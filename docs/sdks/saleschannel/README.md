@@ -31,11 +31,11 @@ res = s.saleschannel.create_commerce_saleschannel(commerce_saleschannel: Models:
   collections: [],
   created_at: DateTime.iso8601('2021-12-12T06:19:55.421Z'),
   description: 'Solus speciosus caveo aegrus.',
-  id: 'cf33bd5f-a891-43c2-8828-19e5f102cbc8',
+  id: 'b2344f2f-5cad-469b-aab1-018791a3193e',
   is_active: false,
   metadata: [],
   slug: 'dapifer-utroque-denuncio',
-  updated_at: DateTime.iso8601('2025-02-20T03:57:29.263Z')
+  updated_at: DateTime.iso8601('2025-02-20T20:25:17.765Z')
 ), connection_id: '<id>')
 
 unless res.commerce_saleschannel.nil?
@@ -172,11 +172,11 @@ req = Models::Operations::PatchCommerceSaleschannelRequest.new(
     collections: [],
     created_at: DateTime.iso8601('2021-12-12T06:19:55.421Z'),
     description: 'Solus speciosus caveo aegrus.',
-    id: 'fb79ccbb-38fe-41dc-8ff9-f52e5509eab4',
+    id: '762f3038-7aa3-4907-9510-ad947ae69362',
     is_active: false,
     metadata: [],
     slug: 'dapifer-utroque-denuncio',
-    updated_at: DateTime.iso8601('2025-02-20T03:57:29.272Z')
+    updated_at: DateTime.iso8601('2025-02-20T20:25:17.773Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -268,11 +268,11 @@ req = Models::Operations::UpdateCommerceSaleschannelRequest.new(
     collections: [],
     created_at: DateTime.iso8601('2021-12-12T06:19:55.421Z'),
     description: 'Solus speciosus caveo aegrus.',
-    id: 'fb79ccbb-38fe-41dc-8ff9-f52e5509eab4',
+    id: '762f3038-7aa3-4907-9510-ad947ae69362',
     is_active: false,
     metadata: [],
     slug: 'dapifer-utroque-denuncio',
-    updated_at: DateTime.iso8601('2025-02-20T03:57:29.272Z')
+    updated_at: DateTime.iso8601('2025-02-20T20:25:17.773Z')
   ),
   connection_id: '<id>',
   id: '<id>'

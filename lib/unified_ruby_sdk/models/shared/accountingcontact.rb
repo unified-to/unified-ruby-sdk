@@ -12,6 +12,8 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
+        # Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields
+        field :unified_person_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('__unified_person_ids') } }
 
         field :associated_contacts, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingAssociatedContact)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('associated_contacts') } }
         # Outstanding AR/AP balance for this contact
@@ -71,8 +73,9 @@ module UnifiedRubySDK
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
-        sig { params(associated_contacts: T.nilable(T::Array[Models::Shared::AccountingAssociatedContact]), balance_amount: T.nilable(::Float), billing_address: T.nilable(Models::Shared::PropertyAccountingContactBillingAddress), company_name: T.nilable(::String), created_at: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::AccountingEmail]), first_name: T.nilable(::String), id: T.nilable(::String), identification: T.nilable(::String), is_active: T.nilable(T::Boolean), is_customer: T.nilable(T::Boolean), is_supplier: T.nilable(T::Boolean), last_name: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), name: T.nilable(::String), notes: T.nilable(::String), organization_id: T.nilable(::String), payment_methods: T.nilable(T::Array[Models::Shared::AccountingContactPaymentMethod]), payment_terms: T.nilable(Models::Shared::AccountingContactPaymentTerms), paymentterm_id: T.nilable(::String), portal_url: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), shipping_address: T.nilable(Models::Shared::PropertyAccountingContactShippingAddress), tax_exemption: T.nilable(Models::Shared::TaxExemption), tax_number: T.nilable(::String), telephones: T.nilable(T::Array[Models::Shared::AccountingTelephone]), updated_at: T.nilable(::DateTime), website: T.nilable(::String), currency: T.nilable(::String)).void }
-        def initialize(associated_contacts: nil, balance_amount: nil, billing_address: nil, company_name: nil, created_at: nil, emails: nil, first_name: nil, id: nil, identification: nil, is_active: nil, is_customer: nil, is_supplier: nil, last_name: nil, metadata: nil, name: nil, notes: nil, organization_id: nil, payment_methods: nil, payment_terms: nil, paymentterm_id: nil, portal_url: nil, raw: nil, shipping_address: nil, tax_exemption: nil, tax_number: nil, telephones: nil, updated_at: nil, website: nil, currency: 'USD')
+        sig { params(unified_person_ids: T.nilable(T::Array[::String]), associated_contacts: T.nilable(T::Array[Models::Shared::AccountingAssociatedContact]), balance_amount: T.nilable(::Float), billing_address: T.nilable(Models::Shared::PropertyAccountingContactBillingAddress), company_name: T.nilable(::String), created_at: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::AccountingEmail]), first_name: T.nilable(::String), id: T.nilable(::String), identification: T.nilable(::String), is_active: T.nilable(T::Boolean), is_customer: T.nilable(T::Boolean), is_supplier: T.nilable(T::Boolean), last_name: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), name: T.nilable(::String), notes: T.nilable(::String), organization_id: T.nilable(::String), payment_methods: T.nilable(T::Array[Models::Shared::AccountingContactPaymentMethod]), payment_terms: T.nilable(Models::Shared::AccountingContactPaymentTerms), paymentterm_id: T.nilable(::String), portal_url: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), shipping_address: T.nilable(Models::Shared::PropertyAccountingContactShippingAddress), tax_exemption: T.nilable(Models::Shared::TaxExemption), tax_number: T.nilable(::String), telephones: T.nilable(T::Array[Models::Shared::AccountingTelephone]), updated_at: T.nilable(::DateTime), website: T.nilable(::String), currency: T.nilable(::String)).void }
+        def initialize(unified_person_ids: nil, associated_contacts: nil, balance_amount: nil, billing_address: nil, company_name: nil, created_at: nil, emails: nil, first_name: nil, id: nil, identification: nil, is_active: nil, is_customer: nil, is_supplier: nil, last_name: nil, metadata: nil, name: nil, notes: nil, organization_id: nil, payment_methods: nil, payment_terms: nil, paymentterm_id: nil, portal_url: nil, raw: nil, shipping_address: nil, tax_exemption: nil, tax_number: nil, telephones: nil, updated_at: nil, website: nil, currency: 'USD')
+          @unified_person_ids = unified_person_ids
           @associated_contacts = associated_contacts
           @balance_amount = balance_amount
           @billing_address = billing_address
@@ -107,6 +110,7 @@ module UnifiedRubySDK
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
+          return false unless @unified_person_ids == other.unified_person_ids
           return false unless @associated_contacts == other.associated_contacts
           return false unless @balance_amount == other.balance_amount
           return false unless @billing_address == other.billing_address

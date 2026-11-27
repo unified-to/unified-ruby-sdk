@@ -31,7 +31,7 @@ res = s.embedding.create_genai_embedding(genai_embedding: Models::Shared::GenaiE
   dimension: 423.0,
   embeddings: 'Venia tutis cernuus viscus officiis utilis porro utique.',
   encoding_format: Models::Shared::EncodingFormat::FLOAT,
-  id: '07e9cc1b-3b33-474d-95dd-eab4382a4391',
+  id: '46010533-689a-403e-bed0-7921bace9ef5',
   max_tokens: 223.0,
   tokens_used: 836.0,
   type: 'classification'

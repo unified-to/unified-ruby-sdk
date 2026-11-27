@@ -8,6 +8,8 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::AccountingContact
+  def unified_person_ids(); end
+  def unified_person_ids=(str_); end
   def associated_contacts(); end
   def associated_contacts=(str_); end
   def balance_amount(); end

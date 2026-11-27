@@ -8,6 +8,8 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::LmsInstructor
+  def unified_person_ids(); end
+  def unified_person_ids=(str_); end
   def created_at(); end
   def created_at=(str_); end
   def emails(); end

@@ -34,7 +34,7 @@ res = s.opcode.create_dms_opcode(dms_opcode: Models::Shared::DmsOpcode.new(
   description: 'Oil and filter change',
   estimated_hours: 3.2,
   flat_rate_hours: 3.5,
-  id: '8ffd83d6-5ff2-41f7-ba0b-3b6d0191d1b2',
+  id: '9e975701-e465-47eb-9dae-2f610033be4f',
   is_active: true,
   labor_rate_amount: 216.0,
   metadata: [],
@@ -43,7 +43,7 @@ res = s.opcode.create_dms_opcode(dms_opcode: Models::Shared::DmsOpcode.new(
   pay_type: Models::Shared::DmsOpcodePayType::CUSTOMER,
   skill_code: 'A',
   type: Models::Shared::DmsOpcodeType::LABOR,
-  updated_at: DateTime.iso8601('2021-11-03T12:18:29.264Z')
+  updated_at: DateTime.iso8601('2021-11-03T15:49:20.090Z')
 ), connection_id: '<id>')
 
 unless res.dms_opcode.nil?
@@ -184,7 +184,7 @@ req = Models::Operations::PatchDmsOpcodeRequest.new(
     description: 'Oil and filter change',
     estimated_hours: 3.2,
     flat_rate_hours: 3.5,
-    id: '8be080be-f73f-4787-b374-17ef102d53ed',
+    id: '02963f4e-2712-4766-aacf-ea6459458bb1',
     is_active: true,
     labor_rate_amount: 216.0,
     metadata: [],
@@ -193,7 +193,7 @@ req = Models::Operations::PatchDmsOpcodeRequest.new(
     pay_type: Models::Shared::DmsOpcodePayType::CUSTOMER,
     skill_code: 'A',
     type: Models::Shared::DmsOpcodeType::LABOR,
-    updated_at: DateTime.iso8601('2021-11-03T12:18:29.266Z')
+    updated_at: DateTime.iso8601('2021-11-03T15:49:20.093Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -248,7 +248,7 @@ req = Models::Operations::UpdateDmsOpcodeRequest.new(
     description: 'Oil and filter change',
     estimated_hours: 3.2,
     flat_rate_hours: 3.5,
-    id: '8be080be-f73f-4787-b374-17ef102d53ed',
+    id: '02963f4e-2712-4766-aacf-ea6459458bb1',
     is_active: true,
     labor_rate_amount: 216.0,
     metadata: [],
@@ -257,7 +257,7 @@ req = Models::Operations::UpdateDmsOpcodeRequest.new(
     pay_type: Models::Shared::DmsOpcodePayType::CUSTOMER,
     skill_code: 'A',
     type: Models::Shared::DmsOpcodeType::LABOR,
-    updated_at: DateTime.iso8601('2021-11-03T12:18:29.266Z')
+    updated_at: DateTime.iso8601('2021-11-03T15:49:20.093Z')
   ),
   connection_id: '<id>',
   id: '<id>'

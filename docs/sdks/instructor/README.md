@@ -33,7 +33,7 @@ res = s.instructor.create_lms_instructor(lms_instructor: Models::Shared::LmsInst
     Models::Shared::LmsEmail.new,
   ],
   first_name: 'Miranda',
-  id: 'aa3029c7-e1e0-43f8-af95-9ff2509e9a00',
+  id: '58a79b6e-7fad-4b3e-aed7-aeb359ecf6f3',
   image_url: 'https://avatars.githubusercontent.com/u/96902788',
   last_name: 'Turcotte',
   metadata: [],
@@ -49,7 +49,7 @@ res = s.instructor.create_lms_instructor(lms_instructor: Models::Shared::LmsInst
     ),
   ],
   title: 'Customer Brand Planner',
-  updated_at: DateTime.iso8601('2025-08-20T11:51:35.366Z')
+  updated_at: DateTime.iso8601('2025-08-21T07:05:43.050Z')
 ), connection_id: '<id>')
 
 unless res.lms_instructor.nil?
@@ -188,7 +188,7 @@ req = Models::Operations::PatchLmsInstructorRequest.new(
       Models::Shared::LmsEmail.new,
     ],
     first_name: 'Miranda',
-    id: '499349db-09a6-4605-8d8b-1bdd8334516d',
+    id: '5fccb015-519c-4f70-a1bd-1694805fbb66',
     image_url: 'https://avatars.githubusercontent.com/u/96902788',
     last_name: 'Turcotte',
     metadata: [],
@@ -204,7 +204,7 @@ req = Models::Operations::PatchLmsInstructorRequest.new(
       ),
     ],
     title: 'Customer Brand Planner',
-    updated_at: DateTime.iso8601('2025-08-20T11:51:35.376Z')
+    updated_at: DateTime.iso8601('2025-08-21T07:05:43.058Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -298,7 +298,7 @@ req = Models::Operations::UpdateLmsInstructorRequest.new(
       Models::Shared::LmsEmail.new,
     ],
     first_name: 'Miranda',
-    id: '499349db-09a6-4605-8d8b-1bdd8334516d',
+    id: '5fccb015-519c-4f70-a1bd-1694805fbb66',
     image_url: 'https://avatars.githubusercontent.com/u/96902788',
     last_name: 'Turcotte',
     metadata: [],
@@ -314,7 +314,7 @@ req = Models::Operations::UpdateLmsInstructorRequest.new(
       ),
     ],
     title: 'Customer Brand Planner',
-    updated_at: DateTime.iso8601('2025-08-20T11:51:35.376Z')
+    updated_at: DateTime.iso8601('2025-08-21T07:05:43.058Z')
   ),
   connection_id: '<id>',
   id: '<id>'

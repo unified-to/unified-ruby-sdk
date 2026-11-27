@@ -31,7 +31,7 @@ res = s.service.create_compute_service(compute_service: Models::Shared::ComputeS
   branch: 'main',
   build_command: 'npm run build',
   created_at: DateTime.iso8601('2023-10-04T02:06:29.391Z'),
-  id: '8754960f-5aaa-4a50-be9c-26a5f85af891',
+  id: 'e1004c82-a488-462b-9e2e-9fe7903d2fc1',
   instance_count: 6.0,
   max_instance_count: 6.0,
   metadata: [],
@@ -42,7 +42,7 @@ res = s.service.create_compute_service(compute_service: Models::Shared::ComputeS
   runtime: 'python',
   status: Models::Shared::ComputeServiceStatus::SUSPENDED,
   type: Models::Shared::ComputeServiceType::OTHER,
-  updated_at: DateTime.iso8601('2025-04-22T09:52:03.176Z'),
+  updated_at: DateTime.iso8601('2025-04-22T22:27:51.642Z'),
   url: 'https://infatuated-operating.warlike-publication.name'
 ), connection_id: '<id>')
 
@@ -180,7 +180,7 @@ req = Models::Operations::PatchComputeServiceRequest.new(
     branch: 'main',
     build_command: 'npm run build',
     created_at: DateTime.iso8601('2023-10-04T02:06:29.391Z'),
-    id: '08fa3b06-7dd6-4942-93c0-31c19cbc42cf',
+    id: 'eab25168-3883-4680-9378-a20de95924ff',
     instance_count: 6.0,
     max_instance_count: 6.0,
     metadata: [],
@@ -191,7 +191,7 @@ req = Models::Operations::PatchComputeServiceRequest.new(
     runtime: 'python',
     status: Models::Shared::ComputeServiceStatus::SUSPENDED,
     type: Models::Shared::ComputeServiceType::OTHER,
-    updated_at: DateTime.iso8601('2025-04-22T09:52:03.186Z'),
+    updated_at: DateTime.iso8601('2025-04-22T22:27:51.651Z'),
     url: 'https://infatuated-operating.warlike-publication.name'
   ),
   connection_id: '<id>',
@@ -284,7 +284,7 @@ req = Models::Operations::UpdateComputeServiceRequest.new(
     branch: 'main',
     build_command: 'npm run build',
     created_at: DateTime.iso8601('2023-10-04T02:06:29.391Z'),
-    id: '08fa3b06-7dd6-4942-93c0-31c19cbc42cf',
+    id: 'eab25168-3883-4680-9378-a20de95924ff',
     instance_count: 6.0,
     max_instance_count: 6.0,
     metadata: [],
@@ -295,7 +295,7 @@ req = Models::Operations::UpdateComputeServiceRequest.new(
     runtime: 'python',
     status: Models::Shared::ComputeServiceStatus::SUSPENDED,
     type: Models::Shared::ComputeServiceType::OTHER,
-    updated_at: DateTime.iso8601('2025-04-22T09:52:03.186Z'),
+    updated_at: DateTime.iso8601('2025-04-22T22:27:51.651Z'),
     url: 'https://infatuated-operating.warlike-publication.name'
   ),
   connection_id: '<id>',

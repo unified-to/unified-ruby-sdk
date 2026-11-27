@@ -29,6 +29,7 @@ module UnifiedRubySDK
           DEPARTMENT = new('department')
           IMAGE_URL = new('image_url')
           RAW = new('raw')
+          UNIFIED_PERSON_IDS = new('__unified_person_ids')
         end
       end
     end

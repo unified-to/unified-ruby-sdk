@@ -35,11 +35,11 @@ res = s.ad.create_ads_ad(ads_ad: Models::Shared::AdsAd.new(
   creative_asset_url: 'https://picsum.photos/seed/RjqoANMizQ/2569/2440',
   description: 'Adulescens cursim clam vorago fugiat amitto tardus bibo.',
   final_url: 'https://tight-horde.biz',
-  id: '3b59d5ab-3068-46aa-9ed0-2c43460b09f0',
+  id: 'e51ee4ed-05ea-4aa3-86a0-1ee3a17422c9',
   metadata: [],
   name: 'Rau, Runolfsson and Leannon',
   status: Models::Shared::AdsAdStatus::ARCHIVED,
-  updated_at: DateTime.iso8601('2024-07-03T05:33:55.725Z')
+  updated_at: DateTime.iso8601('2024-07-03T15:59:13.035Z')
 ), connection_id: '<id>')
 
 unless res.ads_ad.nil?
@@ -180,11 +180,11 @@ req = Models::Operations::PatchAdsAdRequest.new(
     creative_asset_url: 'https://picsum.photos/seed/RjqoANMizQ/2569/2440',
     description: 'Adulescens cursim clam vorago fugiat amitto tardus bibo.',
     final_url: 'https://tight-horde.biz',
-    id: '85f84d71-f430-4677-a0a2-db583fdcaaf3',
+    id: '7a04bd7f-0881-4091-82b7-98ceb1811ec1',
     metadata: [],
     name: 'Rau, Runolfsson and Leannon',
     status: Models::Shared::AdsAdStatus::ARCHIVED,
-    updated_at: DateTime.iso8601('2024-07-03T05:33:55.735Z')
+    updated_at: DateTime.iso8601('2024-07-03T15:59:13.048Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -280,11 +280,11 @@ req = Models::Operations::UpdateAdsAdRequest.new(
     creative_asset_url: 'https://picsum.photos/seed/RjqoANMizQ/2569/2440',
     description: 'Adulescens cursim clam vorago fugiat amitto tardus bibo.',
     final_url: 'https://tight-horde.biz',
-    id: '85f84d71-f430-4677-a0a2-db583fdcaaf3',
+    id: '7a04bd7f-0881-4091-82b7-98ceb1811ec1',
     metadata: [],
     name: 'Rau, Runolfsson and Leannon',
     status: Models::Shared::AdsAdStatus::ARCHIVED,
-    updated_at: DateTime.iso8601('2024-07-03T05:33:55.735Z')
+    updated_at: DateTime.iso8601('2024-07-03T15:59:13.048Z')
   ),
   connection_id: '<id>',
   id: '<id>'

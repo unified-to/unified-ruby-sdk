@@ -10,6 +10,10 @@ end
 class UnifiedRubySDK::Models::Shared::GenaiPrompt
   def answers(); end
   def answers=(str_); end
+  def has_thread(); end
+  def has_thread=(str_); end
+  def id(); end
+  def id=(str_); end
   def max_tokens(); end
   def max_tokens=(str_); end
   def mcp_authorization_token(); end
@@ -22,6 +26,8 @@ class UnifiedRubySDK::Models::Shared::GenaiPrompt
   def messages=(str_); end
   def model_id(); end
   def model_id=(str_); end
+  def parent_id(); end
+  def parent_id=(str_); end
   def questions(); end
   def questions=(str_); end
   def raw(); end

@@ -36,3 +36,4 @@ custom = Event.deserialize("custom_value")
 | `WEBHOOK_UNHEALTHY`          | WEBHOOK_UNHEALTHY            |
 | `WEBHOOK_PAUSED`             | WEBHOOK_PAUSED               |
 | `WEBHOOK_UNPAUSED`           | WEBHOOK_UNPAUSED             |
+| `UNIFIED_PERSON_MERGED`      | UNIFIED_PERSON_MERGED        |

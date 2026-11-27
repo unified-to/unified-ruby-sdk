@@ -41,8 +41,8 @@ res = s.part.create_dms_part(dms_part: Models::Shared::DmsPart.new(
   created_at: DateTime.iso8601('2020-07-02T08:18:03.858Z'),
   currency: 'USD',
   description: 'Cabin filter',
-  id: '71ebd59e-370e-4801-8282-1ddd3d94b5dc',
-  last_sold_at: DateTime.iso8601('2020-11-23T02:59:04.976Z'),
+  id: '74d63020-9f96-4197-b37d-8698d2aafb22',
+  last_sold_at: DateTime.iso8601('2020-11-23T04:33:23.296Z'),
   list_price_amount: 39.61,
   manufacturer_code: 'TOY',
   max_stock_quantity: 21.0,
@@ -55,7 +55,7 @@ res = s.part.create_dms_part(dms_part: Models::Shared::DmsPart.new(
   quantity_on_order: 14.0,
   source_code: '30',
   trade_price_amount: 29.05,
-  updated_at: DateTime.iso8601('2023-11-22T17:35:05.088Z')
+  updated_at: DateTime.iso8601('2023-11-23T07:07:21.098Z')
 ), connection_id: '<id>')
 
 unless res.dms_part.nil?
@@ -104,10 +104,10 @@ res = s.part.create_plm_part(plm_part: Models::Shared::PlmPart.new(
   description: 'Aestivus talis tero ullam cruciamentum voluptatibus cumque degusto cui.',
   document_ids: [],
   file_ids: [],
-  id: 'c05c81ab-163b-4523-9817-f0b6d5cb9440',
+  id: '635c371d-e21e-48ff-8f74-45d87a0a4377',
   is_assembly: false,
   lifecycle_state: 'Design',
-  master_identifier: '98b42cc2-4484-4de4-b708-7cdea0020433',
+  master_identifier: '53497781-ad27-42f0-97b5-6b4d27f149b3',
   metadata: [],
   name: 'speedy PCB',
   number: 'PRT-009154',
@@ -117,7 +117,7 @@ res = s.part.create_plm_part(plm_part: Models::Shared::PlmPart.new(
   status: Models::Shared::PlmPartStatus::IN_WORK,
   type: Models::Shared::PlmPartType::SOFTWARE,
   unit_of_measure: 'EA',
-  updated_at: DateTime.iso8601('2021-04-15T13:49:29.360Z'),
+  updated_at: DateTime.iso8601('2021-04-15T20:33:23.707Z'),
   url: 'https://digital-pop.com'
 ), connection_id: '<id>')
 
@@ -347,8 +347,8 @@ req = Models::Operations::PatchDmsPartRequest.new(
     created_at: DateTime.iso8601('2020-07-02T08:18:03.858Z'),
     currency: 'USD',
     description: 'Cabin filter',
-    id: '1b5f463a-787a-4bb8-858b-6afccc0587f2',
-    last_sold_at: DateTime.iso8601('2020-11-23T02:59:04.977Z'),
+    id: '97295eb5-60e5-43fb-92e3-c5b73a2000cd',
+    last_sold_at: DateTime.iso8601('2020-11-23T04:33:23.297Z'),
     list_price_amount: 39.61,
     manufacturer_code: 'TOY',
     max_stock_quantity: 21.0,
@@ -361,7 +361,7 @@ req = Models::Operations::PatchDmsPartRequest.new(
     quantity_on_order: 14.0,
     source_code: '30',
     trade_price_amount: 29.05,
-    updated_at: DateTime.iso8601('2023-11-22T17:35:05.097Z')
+    updated_at: DateTime.iso8601('2023-11-23T07:07:21.106Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -413,10 +413,10 @@ req = Models::Operations::PatchPlmPartRequest.new(
     description: 'Aestivus talis tero ullam cruciamentum voluptatibus cumque degusto cui.',
     document_ids: [],
     file_ids: [],
-    id: 'f4f33bb0-c812-4744-b905-7c030034124e',
+    id: 'a13fa67f-b464-4fa9-885f-8fdce7e82d8e',
     is_assembly: false,
     lifecycle_state: 'Design',
-    master_identifier: 'e05d0b69-1a1c-4c56-8bd4-7312d7052928',
+    master_identifier: '2e9a7c24-921d-43e7-ab3d-e01659f736de',
     metadata: [],
     name: 'speedy PCB',
     number: 'PRT-009154',
@@ -426,7 +426,7 @@ req = Models::Operations::PatchPlmPartRequest.new(
     status: Models::Shared::PlmPartStatus::IN_WORK,
     type: Models::Shared::PlmPartType::SOFTWARE,
     unit_of_measure: 'EA',
-    updated_at: DateTime.iso8601('2021-04-15T13:49:29.363Z'),
+    updated_at: DateTime.iso8601('2021-04-15T20:33:23.712Z'),
     url: 'https://digital-pop.com'
   ),
   connection_id: '<id>',
@@ -524,8 +524,8 @@ req = Models::Operations::UpdateDmsPartRequest.new(
     created_at: DateTime.iso8601('2020-07-02T08:18:03.858Z'),
     currency: 'USD',
     description: 'Cabin filter',
-    id: '1b5f463a-787a-4bb8-858b-6afccc0587f2',
-    last_sold_at: DateTime.iso8601('2020-11-23T02:59:04.977Z'),
+    id: '97295eb5-60e5-43fb-92e3-c5b73a2000cd',
+    last_sold_at: DateTime.iso8601('2020-11-23T04:33:23.297Z'),
     list_price_amount: 39.61,
     manufacturer_code: 'TOY',
     max_stock_quantity: 21.0,
@@ -538,7 +538,7 @@ req = Models::Operations::UpdateDmsPartRequest.new(
     quantity_on_order: 14.0,
     source_code: '30',
     trade_price_amount: 29.05,
-    updated_at: DateTime.iso8601('2023-11-22T17:35:05.097Z')
+    updated_at: DateTime.iso8601('2023-11-23T07:07:21.106Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -590,10 +590,10 @@ req = Models::Operations::UpdatePlmPartRequest.new(
     description: 'Aestivus talis tero ullam cruciamentum voluptatibus cumque degusto cui.',
     document_ids: [],
     file_ids: [],
-    id: 'f4f33bb0-c812-4744-b905-7c030034124e',
+    id: 'a13fa67f-b464-4fa9-885f-8fdce7e82d8e',
     is_assembly: false,
     lifecycle_state: 'Design',
-    master_identifier: 'e05d0b69-1a1c-4c56-8bd4-7312d7052928',
+    master_identifier: '2e9a7c24-921d-43e7-ab3d-e01659f736de',
     metadata: [],
     name: 'speedy PCB',
     number: 'PRT-009154',
@@ -603,7 +603,7 @@ req = Models::Operations::UpdatePlmPartRequest.new(
     status: Models::Shared::PlmPartStatus::IN_WORK,
     type: Models::Shared::PlmPartType::SOFTWARE,
     unit_of_measure: 'EA',
-    updated_at: DateTime.iso8601('2021-04-15T13:49:29.363Z'),
+    updated_at: DateTime.iso8601('2021-04-15T20:33:23.712Z'),
     url: 'https://digital-pop.com'
   ),
   connection_id: '<id>',

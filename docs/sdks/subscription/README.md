@@ -34,7 +34,7 @@ res = s.subscription.create_payment_subscription(payment_subscription: Models::S
   current_period_start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
   day_of_month: 8.0,
   description: 'New Bike model with 94 GB RAM, 813 GB storage, and narrow features',
-  id: '8959891f-e861-4cbb-9a36-c3f19c3e6368',
+  id: 'a99d53e8-1d13-416e-9667-a3ef52ef5c76',
   interval: 1.0,
   interval_unit: Models::Shared::IntervalUnit::YEAR,
   lineitems: [],
@@ -43,7 +43,7 @@ res = s.subscription.create_payment_subscription(payment_subscription: Models::S
   start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
   status: Models::Shared::PaymentSubscriptionStatus::ACTIVE,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2023-10-08T18:52:20.743Z')
+  updated_at: DateTime.iso8601('2023-10-08T21:53:34.213Z')
 ), connection_id: '<id>')
 
 unless res.payment_subscription.nil?
@@ -183,7 +183,7 @@ req = Models::Operations::PatchPaymentSubscriptionRequest.new(
     current_period_start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     day_of_month: 8.0,
     description: 'New Bike model with 94 GB RAM, 813 GB storage, and narrow features',
-    id: 'd81217f1-6019-4ad1-a743-cfde982e27d1',
+    id: '141ed47d-e6a4-4285-8596-3172cbc77e7c',
     interval: 1.0,
     interval_unit: Models::Shared::IntervalUnit::YEAR,
     lineitems: [],
@@ -192,7 +192,7 @@ req = Models::Operations::PatchPaymentSubscriptionRequest.new(
     start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     status: Models::Shared::PaymentSubscriptionStatus::ACTIVE,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-10-08T18:52:20.746Z')
+    updated_at: DateTime.iso8601('2023-10-08T21:53:34.216Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -287,7 +287,7 @@ req = Models::Operations::UpdatePaymentSubscriptionRequest.new(
     current_period_start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     day_of_month: 8.0,
     description: 'New Bike model with 94 GB RAM, 813 GB storage, and narrow features',
-    id: 'd81217f1-6019-4ad1-a743-cfde982e27d1',
+    id: '141ed47d-e6a4-4285-8596-3172cbc77e7c',
     interval: 1.0,
     interval_unit: Models::Shared::IntervalUnit::YEAR,
     lineitems: [],
@@ -296,7 +296,7 @@ req = Models::Operations::UpdatePaymentSubscriptionRequest.new(
     start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     status: Models::Shared::PaymentSubscriptionStatus::ACTIVE,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-10-08T18:52:20.746Z')
+    updated_at: DateTime.iso8601('2023-10-08T21:53:34.216Z')
   ),
   connection_id: '<id>',
   id: '<id>'

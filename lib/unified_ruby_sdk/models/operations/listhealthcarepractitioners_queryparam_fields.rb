@@ -30,6 +30,7 @@ module UnifiedRubySDK
           IS_ACTIVE = new('is_active')
           METADATA = new('metadata')
           RAW = new('raw')
+          UNIFIED_PERSON_IDS = new('__unified_person_ids')
         end
       end
     end

@@ -27,15 +27,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
   )
 )
 res = s.call.create_uc_call(uc_call: Models::Shared::UcCall.new(
-  answer_at: DateTime.iso8601('2025-06-03T19:18:11.523Z'),
+  answer_at: DateTime.iso8601('2025-06-04T10:20:46.505Z'),
   contacts: [],
-  conversation_identifier: '3e53c0a5-56c7-4404-9e8e-bad3f411cb71',
+  conversation_identifier: '970e464f-37b2-4059-acbe-6c0e80fff956',
   cost_amount: 2.7016,
   created_at: DateTime.iso8601('2023-04-22T19:05:34.882Z'),
   currency: 'USD',
   duration_seconds: 2132.0,
-  end_at: DateTime.iso8601('2024-06-10T10:02:18.246Z'),
-  id: '3e53c0a5-56c7-4404-9e8e-bad3f411cb71',
+  end_at: DateTime.iso8601('2024-06-10T18:06:25.635Z'),
+  id: '970e464f-37b2-4059-acbe-6c0e80fff956',
   is_private: false,
   metadata: [
     Models::Shared::UcMetadata.new(
@@ -43,20 +43,20 @@ res = s.call.create_uc_call(uc_call: Models::Shared::UcCall.new(
 
       },
       format: Models::Shared::UcMetadataFormat::PRICE,
-      id: '91719017-d4b6-4827-9467-ee6a8722bc8a',
+      id: '4a1ba0c9-703b-40ee-bba2-99800c9af04f',
       namespace: 'custom',
       slug: 'custom_field',
       value: 'voluptatem'
     ),
   ],
-  start_at: DateTime.iso8601('2023-12-24T03:14:33.197Z'),
+  start_at: DateTime.iso8601('2023-12-24T08:01:01.048Z'),
   status: Models::Shared::UcCallStatus::IN_PROGRESS,
   telephone: Models::Shared::PropertyUcCallTelephone.new(
     telephone: '(507) 787-3877',
     type: Models::Shared::PropertyUcCallTelephoneType::MOBILE
   ),
   type: Models::Shared::UcCallType::INBOUND,
-  updated_at: DateTime.iso8601('2023-08-06T05:52:11.684Z'),
+  updated_at: DateTime.iso8601('2023-08-06T07:55:19.169Z'),
   user_phone: '1-894-431-7163 x39343'
 ), connection_id: '<id>')
 
@@ -191,15 +191,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchUcCallRequest.new(
   uc_call: Models::Shared::UcCall.new(
-    answer_at: DateTime.iso8601('2025-06-03T19:18:11.539Z'),
+    answer_at: DateTime.iso8601('2025-06-04T10:20:46.521Z'),
     contacts: [],
-    conversation_identifier: '581888d5-33c6-49c6-b1b3-26511a86898c',
+    conversation_identifier: 'e912b489-a524-4224-b4d8-3a9231e138df',
     cost_amount: 2.7016,
     created_at: DateTime.iso8601('2023-04-22T19:05:34.882Z'),
     currency: 'USD',
     duration_seconds: 2132.0,
-    end_at: DateTime.iso8601('2024-06-10T10:02:18.255Z'),
-    id: '581888d5-33c6-49c6-b1b3-26511a86898c',
+    end_at: DateTime.iso8601('2024-06-10T18:06:25.644Z'),
+    id: 'e912b489-a524-4224-b4d8-3a9231e138df',
     is_private: false,
     metadata: [
       Models::Shared::UcMetadata.new(
@@ -207,20 +207,20 @@ req = Models::Operations::PatchUcCallRequest.new(
 
         },
         format: Models::Shared::UcMetadataFormat::PRICE,
-        id: '9d4dbb8d-2818-4a86-9c68-088424362855',
+        id: '6841cd9f-912d-4e37-9aab-6bd840e2e951',
         namespace: 'custom',
         slug: 'custom_field',
         value: 'voluptatem'
       ),
     ],
-    start_at: DateTime.iso8601('2023-12-24T03:14:33.202Z'),
+    start_at: DateTime.iso8601('2023-12-24T08:01:01.054Z'),
     status: Models::Shared::UcCallStatus::IN_PROGRESS,
     telephone: Models::Shared::PropertyUcCallTelephone.new(
       telephone: '(507) 787-3877',
       type: Models::Shared::PropertyUcCallTelephoneType::MOBILE
     ),
     type: Models::Shared::UcCallType::INBOUND,
-    updated_at: DateTime.iso8601('2023-08-06T05:52:11.687Z'),
+    updated_at: DateTime.iso8601('2023-08-06T07:55:19.172Z'),
     user_phone: '1-894-431-7163 x39343'
   ),
   connection_id: '<id>',
@@ -269,15 +269,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateUcCallRequest.new(
   uc_call: Models::Shared::UcCall.new(
-    answer_at: DateTime.iso8601('2025-06-03T19:18:11.539Z'),
+    answer_at: DateTime.iso8601('2025-06-04T10:20:46.521Z'),
     contacts: [],
-    conversation_identifier: '581888d5-33c6-49c6-b1b3-26511a86898c',
+    conversation_identifier: 'e912b489-a524-4224-b4d8-3a9231e138df',
     cost_amount: 2.7016,
     created_at: DateTime.iso8601('2023-04-22T19:05:34.882Z'),
     currency: 'USD',
     duration_seconds: 2132.0,
-    end_at: DateTime.iso8601('2024-06-10T10:02:18.255Z'),
-    id: '581888d5-33c6-49c6-b1b3-26511a86898c',
+    end_at: DateTime.iso8601('2024-06-10T18:06:25.644Z'),
+    id: 'e912b489-a524-4224-b4d8-3a9231e138df',
     is_private: false,
     metadata: [
       Models::Shared::UcMetadata.new(
@@ -285,20 +285,20 @@ req = Models::Operations::UpdateUcCallRequest.new(
 
         },
         format: Models::Shared::UcMetadataFormat::PRICE,
-        id: '9d4dbb8d-2818-4a86-9c68-088424362855',
+        id: '6841cd9f-912d-4e37-9aab-6bd840e2e951',
         namespace: 'custom',
         slug: 'custom_field',
         value: 'voluptatem'
       ),
     ],
-    start_at: DateTime.iso8601('2023-12-24T03:14:33.202Z'),
+    start_at: DateTime.iso8601('2023-12-24T08:01:01.054Z'),
     status: Models::Shared::UcCallStatus::IN_PROGRESS,
     telephone: Models::Shared::PropertyUcCallTelephone.new(
       telephone: '(507) 787-3877',
       type: Models::Shared::PropertyUcCallTelephoneType::MOBILE
     ),
     type: Models::Shared::UcCallType::INBOUND,
-    updated_at: DateTime.iso8601('2023-08-06T05:52:11.687Z'),
+    updated_at: DateTime.iso8601('2023-08-06T07:55:19.172Z'),
     user_phone: '1-894-431-7163 x39343'
   ),
   connection_id: '<id>',

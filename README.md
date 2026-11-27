@@ -55,7 +55,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Comedo vilitas harum cupiditate animus quo iste.',
-  id: '817dfe59-5f90-4cdd-9c19-bc8124a95e84',
+  id: '6f1c380e-9b29-4fb5-b49c-2a7ce0ee5fe1',
   is_payable: false,
   metadata: [],
   name: 'Savings Account',
@@ -68,7 +68,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-16T01:01:45.447Z')
+  updated_at: DateTime.iso8601('2023-08-16T07:31:30.623Z')
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -105,7 +105,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Comedo vilitas harum cupiditate animus quo iste.',
-  id: '817dfe59-5f90-4cdd-9c19-bc8124a95e84',
+  id: '6f1c380e-9b29-4fb5-b49c-2a7ce0ee5fe1',
   is_payable: false,
   metadata: [],
   name: 'Savings Account',
@@ -118,7 +118,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-16T01:01:45.447Z')
+  updated_at: DateTime.iso8601('2023-08-16T07:31:30.623Z')
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -2334,7 +2334,10 @@ end
 
 ### [Person](docs/sdks/person/README.md)
 
+* [get_unified_person](docs/sdks/person/README.md#get_unified_person) - Retrieve a person by ID
 * [list_enrich_people](docs/sdks/person/README.md#list_enrich_people) - Retrieve enrichment information for a person
+* [list_unified_people](docs/sdks/person/README.md#list_unified_people) - Search for persons by email addresses
+* [remove_unified_person](docs/sdks/person/README.md#remove_unified_person) - Erase email addresses from the unified persons
 
 ### [Pipeline](docs/sdks/pipeline/README.md)
 
@@ -3162,6 +3165,7 @@ end
 * [get_unified_connection](docs/sdks/unified/README.md#get_unified_connection) - Retrieve connection
 * [get_unified_integration_auth](docs/sdks/unified/README.md#get_unified_integration_auth) - Authorize or re-authorize a connection
 * [get_unified_issue](docs/sdks/unified/README.md#get_unified_issue) - Retrieve support issue
+* [get_unified_person](docs/sdks/unified/README.md#get_unified_person) - Retrieve a person by ID
 * [get_unified_secretsmanager](docs/sdks/unified/README.md#get_unified_secretsmanager) - Retrieve secrets manager
 * [get_unified_webhook](docs/sdks/unified/README.md#get_unified_webhook) - Retrieve webhook by its ID
 * [get_unified_workspaceintegration](docs/sdks/unified/README.md#get_unified_workspaceintegration) - Retrieve workspace integration
@@ -3172,6 +3176,7 @@ end
 * [list_unified_integrations](docs/sdks/unified/README.md#list_unified_integrations) - Returns all integrations
 * [list_unified_issues](docs/sdks/unified/README.md#list_unified_issues) - List support issues
 * [list_unified_notifications](docs/sdks/unified/README.md#list_unified_notifications) - List event notifications
+* [list_unified_people](docs/sdks/unified/README.md#list_unified_people) - Search for persons by email addresses
 * [list_unified_secretsmanager_instructions](docs/sdks/unified/README.md#list_unified_secretsmanager_instructions) - List secrets manager setup instructions
 * [list_unified_secretsmanager_secrets](docs/sdks/unified/README.md#list_unified_secretsmanager_secrets) - List secrets in a secrets manager
 * [list_unified_secretsmanagers](docs/sdks/unified/README.md#list_unified_secretsmanagers) - List secrets managers
@@ -3185,6 +3190,7 @@ end
 * [patch_unified_workspaceintegration](docs/sdks/unified/README.md#patch_unified_workspaceintegration) - Update workspace integration
 * [remove_unified_connection](docs/sdks/unified/README.md#remove_unified_connection) - Remove connection
 * [remove_unified_environment](docs/sdks/unified/README.md#remove_unified_environment) - Remove an environment
+* [remove_unified_person](docs/sdks/unified/README.md#remove_unified_person) - Erase email addresses from the unified persons
 * [remove_unified_secretsmanager](docs/sdks/unified/README.md#remove_unified_secretsmanager) - Remove secrets manager
 * [remove_unified_webhook](docs/sdks/unified/README.md#remove_unified_webhook) - Remove webhook subscription
 * [remove_unified_workspaceintegration](docs/sdks/unified/README.md#remove_unified_workspaceintegration) - Remove workspace integration
@@ -3340,7 +3346,7 @@ begin
       currency: 'CAD',
       customer_defined_code: '6170',
       description: 'Comedo vilitas harum cupiditate animus quo iste.',
-      id: '817dfe59-5f90-4cdd-9c19-bc8124a95e84',
+      id: '6f1c380e-9b29-4fb5-b49c-2a7ce0ee5fe1',
       is_payable: false,
       metadata: [],
       name: 'Savings Account',
@@ -3353,7 +3359,7 @@ begin
         ),
       ],
       type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-      updated_at: DateTime.iso8601('2023-08-16T01:01:45.447Z')
+      updated_at: DateTime.iso8601('2023-08-16T07:31:30.623Z')
     ), connection_id: '<id>')
 
     unless res.accounting_account.nil?
@@ -3398,7 +3404,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Comedo vilitas harum cupiditate animus quo iste.',
-  id: '817dfe59-5f90-4cdd-9c19-bc8124a95e84',
+  id: '6f1c380e-9b29-4fb5-b49c-2a7ce0ee5fe1',
   is_payable: false,
   metadata: [],
   name: 'Savings Account',
@@ -3411,7 +3417,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-16T01:01:45.447Z')
+  updated_at: DateTime.iso8601('2023-08-16T07:31:30.623Z')
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -3439,7 +3445,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Comedo vilitas harum cupiditate animus quo iste.',
-  id: '817dfe59-5f90-4cdd-9c19-bc8124a95e84',
+  id: '6f1c380e-9b29-4fb5-b49c-2a7ce0ee5fe1',
   is_payable: false,
   metadata: [],
   name: 'Savings Account',
@@ -3452,7 +3458,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-16T01:01:45.447Z')
+  updated_at: DateTime.iso8601('2023-08-16T07:31:30.623Z')
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?

@@ -12,6 +12,8 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
+        # Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields
+        field :unified_person_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('__unified_person_ids') } }
         # Work address of the practitioner
         field :address, Crystalline::Nilable.new(Models::Shared::PropertyHealthcarePractitionerAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address') } }
         # When the practitioner record was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
@@ -53,8 +55,9 @@ module UnifiedRubySDK
         # When the practitioner record was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(address: T.nilable(Models::Shared::PropertyHealthcarePractitionerAddress), created_at: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::HealthcareEmail]), first_name: T.nilable(::String), gender: T.nilable(Models::Shared::HealthcarePractitionerGender), id: T.nilable(::String), identifiers: T.nilable(T::Array[Models::Shared::HealthcareIdentifier]), image_url: T.nilable(::String), is_active: T.nilable(T::Boolean), languages: T.nilable(T::Array[::String]), last_name: T.nilable(::String), location_ids: T.nilable(T::Array[::String]), metadata: T.nilable(T::Array[Models::Shared::HealthcareMetadata]), name: T.nilable(::String), qualifications: T.nilable(T::Array[Models::Shared::HealthcareCode]), raw: T.nilable(T::Hash[::Symbol, ::Object]), specialties: T.nilable(T::Array[Models::Shared::HealthcareCode]), telephones: T.nilable(T::Array[Models::Shared::HealthcareTelephone]), title: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-        def initialize(address: nil, created_at: nil, emails: nil, first_name: nil, gender: nil, id: nil, identifiers: nil, image_url: nil, is_active: nil, languages: nil, last_name: nil, location_ids: nil, metadata: nil, name: nil, qualifications: nil, raw: nil, specialties: nil, telephones: nil, title: nil, updated_at: nil)
+        sig { params(unified_person_ids: T.nilable(T::Array[::String]), address: T.nilable(Models::Shared::PropertyHealthcarePractitionerAddress), created_at: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::HealthcareEmail]), first_name: T.nilable(::String), gender: T.nilable(Models::Shared::HealthcarePractitionerGender), id: T.nilable(::String), identifiers: T.nilable(T::Array[Models::Shared::HealthcareIdentifier]), image_url: T.nilable(::String), is_active: T.nilable(T::Boolean), languages: T.nilable(T::Array[::String]), last_name: T.nilable(::String), location_ids: T.nilable(T::Array[::String]), metadata: T.nilable(T::Array[Models::Shared::HealthcareMetadata]), name: T.nilable(::String), qualifications: T.nilable(T::Array[Models::Shared::HealthcareCode]), raw: T.nilable(T::Hash[::Symbol, ::Object]), specialties: T.nilable(T::Array[Models::Shared::HealthcareCode]), telephones: T.nilable(T::Array[Models::Shared::HealthcareTelephone]), title: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        def initialize(unified_person_ids: nil, address: nil, created_at: nil, emails: nil, first_name: nil, gender: nil, id: nil, identifiers: nil, image_url: nil, is_active: nil, languages: nil, last_name: nil, location_ids: nil, metadata: nil, name: nil, qualifications: nil, raw: nil, specialties: nil, telephones: nil, title: nil, updated_at: nil)
+          @unified_person_ids = unified_person_ids
           @address = address
           @created_at = created_at
           @emails = emails
@@ -80,6 +83,7 @@ module UnifiedRubySDK
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
+          return false unless @unified_person_ids == other.unified_person_ids
           return false unless @address == other.address
           return false unless @created_at == other.created_at
           return false unless @emails == other.emails

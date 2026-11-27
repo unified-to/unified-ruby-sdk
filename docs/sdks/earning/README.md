@@ -32,12 +32,12 @@ res = s.earning.create_hris_earning(hris_earning: Models::Shared::HrisEarning.ne
   created_at: DateTime.iso8601('2019-01-26T12:44:52.326Z'),
   currency: 'USD',
   frequency: Models::Shared::HrisEarningFrequency::SEMIMONTHLY,
-  id: '5d87c200-d1d0-40de-94b7-45ebbdc5e714',
+  id: '77df4003-9fe4-47a6-b5d4-9da214440c76',
   metadata: [],
   notes: 'Beatae degusto decipio volo sum.',
-  start_at: DateTime.iso8601('2022-08-10T17:37:44.384Z'),
+  start_at: DateTime.iso8601('2022-08-11T05:10:23.620Z'),
   status: Models::Shared::HrisEarningStatus::ENDED,
-  updated_at: DateTime.iso8601('2020-02-13T16:07:44.260Z')
+  updated_at: DateTime.iso8601('2020-02-13T19:33:06.657Z')
 ), connection_id: '<id>')
 
 unless res.hris_earning.nil?
@@ -175,12 +175,12 @@ req = Models::Operations::PatchHrisEarningRequest.new(
     created_at: DateTime.iso8601('2019-01-26T12:44:52.326Z'),
     currency: 'USD',
     frequency: Models::Shared::HrisEarningFrequency::SEMIMONTHLY,
-    id: '659ee199-acab-45f9-85b6-475212303b65',
+    id: '7e3ff576-eb02-4eac-8250-4ee6e6f03789',
     metadata: [],
     notes: 'Beatae degusto decipio volo sum.',
-    start_at: DateTime.iso8601('2022-08-10T17:37:44.391Z'),
+    start_at: DateTime.iso8601('2022-08-11T05:10:23.625Z'),
     status: Models::Shared::HrisEarningStatus::ENDED,
-    updated_at: DateTime.iso8601('2020-02-13T16:07:44.262Z')
+    updated_at: DateTime.iso8601('2020-02-13T19:33:06.658Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -273,12 +273,12 @@ req = Models::Operations::UpdateHrisEarningRequest.new(
     created_at: DateTime.iso8601('2019-01-26T12:44:52.326Z'),
     currency: 'USD',
     frequency: Models::Shared::HrisEarningFrequency::SEMIMONTHLY,
-    id: '659ee199-acab-45f9-85b6-475212303b65',
+    id: '7e3ff576-eb02-4eac-8250-4ee6e6f03789',
     metadata: [],
     notes: 'Beatae degusto decipio volo sum.',
-    start_at: DateTime.iso8601('2022-08-10T17:37:44.391Z'),
+    start_at: DateTime.iso8601('2022-08-11T05:10:23.625Z'),
     status: Models::Shared::HrisEarningStatus::ENDED,
-    updated_at: DateTime.iso8601('2020-02-13T16:07:44.262Z')
+    updated_at: DateTime.iso8601('2020-02-13T19:33:06.658Z')
   ),
   connection_id: '<id>',
   id: '<id>'

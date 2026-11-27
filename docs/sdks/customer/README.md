@@ -35,7 +35,7 @@ res = s.customer.create_ticketing_customer(ticketing_customer: Models::Shared::T
       type: Models::Shared::TicketingEmailType::HOME
     ),
   ],
-  id: '06d8d2dc-d501-48b0-b5cc-673a22f4d664',
+  id: 'fb7d7c88-c523-458b-80dc-22f96b5dcf47',
   metadata: [],
   name: 'Veronica Waters',
   tags: [
@@ -56,7 +56,7 @@ res = s.customer.create_ticketing_customer(ticketing_customer: Models::Shared::T
       type: Models::Shared::TicketingTelephoneType::MOBILE
     ),
   ],
-  updated_at: DateTime.iso8601('2026-07-07T14:13:55.278Z')
+  updated_at: DateTime.iso8601('2026-07-08T14:03:03.458Z')
 ), connection_id: '<id>')
 
 unless res.ticketing_customer.nil?
@@ -197,7 +197,7 @@ req = Models::Operations::PatchTicketingCustomerRequest.new(
         type: Models::Shared::TicketingEmailType::HOME
       ),
     ],
-    id: '3150cfb9-0626-4770-a927-9a6ed362522f',
+    id: '81497a26-253c-40b5-a6e7-defda828c172',
     metadata: [],
     name: 'Veronica Waters',
     tags: [
@@ -218,7 +218,7 @@ req = Models::Operations::PatchTicketingCustomerRequest.new(
         type: Models::Shared::TicketingTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2026-07-07T14:13:55.287Z')
+    updated_at: DateTime.iso8601('2026-07-08T14:03:03.469Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -314,7 +314,7 @@ req = Models::Operations::UpdateTicketingCustomerRequest.new(
         type: Models::Shared::TicketingEmailType::HOME
       ),
     ],
-    id: '3150cfb9-0626-4770-a927-9a6ed362522f',
+    id: '81497a26-253c-40b5-a6e7-defda828c172',
     metadata: [],
     name: 'Veronica Waters',
     tags: [
@@ -335,7 +335,7 @@ req = Models::Operations::UpdateTicketingCustomerRequest.new(
         type: Models::Shared::TicketingTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2026-07-07T14:13:55.287Z')
+    updated_at: DateTime.iso8601('2026-07-08T14:03:03.469Z')
   ),
   connection_id: '<id>',
   id: '<id>'

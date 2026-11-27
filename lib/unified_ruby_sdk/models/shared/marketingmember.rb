@@ -12,6 +12,8 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
+        # Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields
+        field :unified_person_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('__unified_person_ids') } }
         # The name of the company/organization the member belongs to
         field :company, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company') } }
         # The date that this member object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
@@ -39,8 +41,9 @@ module UnifiedRubySDK
         # The last date that this member object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(company: T.nilable(::String), created_at: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::MarketingEmail]), first_name: T.nilable(::String), id: T.nilable(::String), last_name: T.nilable(::String), list_ids: T.nilable(T::Array[::String]), metadata: T.nilable(T::Array[Models::Shared::MarketingMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), status: T.nilable(Models::Shared::MarketingMemberStatus), tags: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime)).void }
-        def initialize(company: nil, created_at: nil, emails: nil, first_name: nil, id: nil, last_name: nil, list_ids: nil, metadata: nil, name: nil, raw: nil, status: nil, tags: nil, updated_at: nil)
+        sig { params(unified_person_ids: T.nilable(T::Array[::String]), company: T.nilable(::String), created_at: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::MarketingEmail]), first_name: T.nilable(::String), id: T.nilable(::String), last_name: T.nilable(::String), list_ids: T.nilable(T::Array[::String]), metadata: T.nilable(T::Array[Models::Shared::MarketingMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), status: T.nilable(Models::Shared::MarketingMemberStatus), tags: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime)).void }
+        def initialize(unified_person_ids: nil, company: nil, created_at: nil, emails: nil, first_name: nil, id: nil, last_name: nil, list_ids: nil, metadata: nil, name: nil, raw: nil, status: nil, tags: nil, updated_at: nil)
+          @unified_person_ids = unified_person_ids
           @company = company
           @created_at = created_at
           @emails = emails
@@ -59,6 +62,7 @@ module UnifiedRubySDK
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
+          return false unless @unified_person_ids == other.unified_person_ids
           return false unless @company == other.company
           return false unless @created_at == other.created_at
           return false unless @emails == other.emails

@@ -30,13 +30,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.database.create_datastore_database(datastore_database: Models::Shared::DatastoreDatabase.new(
   created_at: DateTime.iso8601('2019-03-05T14:31:00.223Z'),
   description: 'Coerceo amet vito vorago subseco natus tonsor eius.',
-  id: 'b966f767-53a0-4b0c-9f31-5a85d3fb7489',
+  id: '5f8a3d53-523b-430e-afba-da27dd3ce223',
   is_active: true,
   metadata: [],
   name: 'Aufderhar - Wiza',
   password: 'hYwOHm0NLDvI_ch',
   region: 'Greece',
-  updated_at: DateTime.iso8601('2023-07-21T04:33:32.076Z'),
+  updated_at: DateTime.iso8601('2023-07-21T19:01:58.353Z'),
   web_url: 'https://dependable-government.org/'
 ), connection_id: '<id>')
 
@@ -173,13 +173,13 @@ req = Models::Operations::PatchDatastoreDatabaseRequest.new(
   datastore_database: Models::Shared::DatastoreDatabase.new(
     created_at: DateTime.iso8601('2019-03-05T14:31:00.223Z'),
     description: 'Coerceo amet vito vorago subseco natus tonsor eius.',
-    id: 'd3d3039b-5b50-4506-92cc-58762686c963',
+    id: '45eecdcd-f0a9-44fb-a8bf-87940ad0394a',
     is_active: true,
     metadata: [],
     name: 'Aufderhar - Wiza',
     password: 'hYwOHm0NLDvI_ch',
     region: 'Greece',
-    updated_at: DateTime.iso8601('2023-07-21T04:33:32.084Z'),
+    updated_at: DateTime.iso8601('2023-07-21T19:01:58.357Z'),
     web_url: 'https://dependable-government.org/'
   ),
   connection_id: '<id>',
@@ -271,13 +271,13 @@ req = Models::Operations::UpdateDatastoreDatabaseRequest.new(
   datastore_database: Models::Shared::DatastoreDatabase.new(
     created_at: DateTime.iso8601('2019-03-05T14:31:00.223Z'),
     description: 'Coerceo amet vito vorago subseco natus tonsor eius.',
-    id: 'd3d3039b-5b50-4506-92cc-58762686c963',
+    id: '45eecdcd-f0a9-44fb-a8bf-87940ad0394a',
     is_active: true,
     metadata: [],
     name: 'Aufderhar - Wiza',
     password: 'hYwOHm0NLDvI_ch',
     region: 'Greece',
-    updated_at: DateTime.iso8601('2023-07-21T04:33:32.084Z'),
+    updated_at: DateTime.iso8601('2023-07-21T19:01:58.357Z'),
     web_url: 'https://dependable-government.org/'
   ),
   connection_id: '<id>',

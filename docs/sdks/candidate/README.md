@@ -80,7 +80,7 @@ res = s.candidate.create_ats_candidate(ats_candidate: Models::Shared::AtsCandida
   ],
   first_name: 'Alyce',
   has_do_not_contact: false,
-  id: 'da7cd799-43b4-4433-8461-8443dbe08ec5',
+  id: '50542aed-bb3b-4ff5-b08a-8c456aa79c00',
   image_url: 'https://avatars.githubusercontent.com/u/99913246',
   is_private: true,
   job_ids: [],
@@ -94,7 +94,7 @@ res = s.candidate.create_ats_candidate(ats_candidate: Models::Shared::AtsCandida
 
       },
       format: Models::Shared::AtsMetadataFormat::TEXT,
-      id: '87f97464-da5e-4fea-86b8-65a15cd3cb73',
+      id: '085a0529-b5ff-40e4-870e-ede1495f7e38',
       namespace: 'custom',
       slug: 'custom_field',
       value: 'chirographum'
@@ -121,7 +121,7 @@ res = s.candidate.create_ats_candidate(ats_candidate: Models::Shared::AtsCandida
     ),
   ],
   title: 'Internal Paradigm Consultant',
-  updated_at: DateTime.iso8601('2024-05-05T03:03:00.256Z'),
+  updated_at: DateTime.iso8601('2024-05-05T07:35:19.515Z'),
   web_url: 'https://light-meander.com/'
 ), connection_id: '<id>')
 
@@ -308,7 +308,7 @@ req = Models::Operations::PatchAtsCandidateRequest.new(
     ],
     first_name: 'Alyce',
     has_do_not_contact: false,
-    id: 'fc5e22cc-a0e8-4785-ba1c-6d1dac33ea00',
+    id: '6fb92c38-538f-40b7-8ad2-7af722ba37fb',
     image_url: 'https://avatars.githubusercontent.com/u/99913246',
     is_private: true,
     job_ids: [],
@@ -322,7 +322,7 @@ req = Models::Operations::PatchAtsCandidateRequest.new(
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '5c1b16a9-e350-41ca-a39f-1d7c8161d386',
+        id: '00427e8b-9d6a-4825-b839-68c7283b3789',
         namespace: 'custom',
         slug: 'custom_field',
         value: 'chirographum'
@@ -349,7 +349,7 @@ req = Models::Operations::PatchAtsCandidateRequest.new(
       ),
     ],
     title: 'Internal Paradigm Consultant',
-    updated_at: DateTime.iso8601('2024-05-05T03:03:00.262Z'),
+    updated_at: DateTime.iso8601('2024-05-05T07:35:19.519Z'),
     web_url: 'https://light-meander.com/'
   ),
   connection_id: '<id>',
@@ -491,7 +491,7 @@ req = Models::Operations::UpdateAtsCandidateRequest.new(
     ],
     first_name: 'Alyce',
     has_do_not_contact: false,
-    id: 'fc5e22cc-a0e8-4785-ba1c-6d1dac33ea00',
+    id: '6fb92c38-538f-40b7-8ad2-7af722ba37fb',
     image_url: 'https://avatars.githubusercontent.com/u/99913246',
     is_private: true,
     job_ids: [],
@@ -505,7 +505,7 @@ req = Models::Operations::UpdateAtsCandidateRequest.new(
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '5c1b16a9-e350-41ca-a39f-1d7c8161d386',
+        id: '00427e8b-9d6a-4825-b839-68c7283b3789',
         namespace: 'custom',
         slug: 'custom_field',
         value: 'chirographum'
@@ -532,7 +532,7 @@ req = Models::Operations::UpdateAtsCandidateRequest.new(
       ),
     ],
     title: 'Internal Paradigm Consultant',
-    updated_at: DateTime.iso8601('2024-05-05T03:03:00.262Z'),
+    updated_at: DateTime.iso8601('2024-05-05T07:35:19.519Z'),
     web_url: 'https://light-meander.com/'
   ),
   connection_id: '<id>',

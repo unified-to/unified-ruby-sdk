@@ -33,6 +33,7 @@ module UnifiedRubySDK
           CONTACTS = new('contacts')
           METADATA = new('metadata')
           RAW = new('raw')
+          UNIFIED_PERSON_IDS = new('__unified_person_ids')
         end
       end
     end

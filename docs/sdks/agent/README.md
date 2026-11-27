@@ -30,11 +30,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.agent.create_genai_agent(genai_agent: Models::Shared::GenaiAgent.new(
   created_at: DateTime.iso8601('2020-12-18T02:23:33.723Z'),
   description: 'Sperno despecto.',
-  id: '1ebf65d9-b952-4676-b09d-74b7fb4c7931',
+  id: '32632282-a4c6-4d79-aa4a-c0c897fd8457',
   instructions: 'Addo vita ver auctus corrumpo substantia conscendo auctus. Astrum sulum aufero bis stella sumptus non.',
   is_active: false,
   name: 'testimonial suddenly',
-  updated_at: DateTime.iso8601('2025-11-14T03:46:57.731Z')
+  updated_at: DateTime.iso8601('2025-11-15T00:53:50.662Z')
 ), connection_id: '<id>')
 
 unless res.genai_agent.nil?
@@ -170,11 +170,11 @@ req = Models::Operations::PatchGenaiAgentRequest.new(
   genai_agent: Models::Shared::GenaiAgent.new(
     created_at: DateTime.iso8601('2020-12-18T02:23:33.723Z'),
     description: 'Sperno despecto.',
-    id: 'eae08125-9f3e-433e-9561-2dda59a4d1ec',
+    id: '83a21c42-dc03-4363-8aa3-e742a371fd4b',
     instructions: 'Addo vita ver auctus corrumpo substantia conscendo auctus. Astrum sulum aufero bis stella sumptus non.',
     is_active: false,
     name: 'testimonial suddenly',
-    updated_at: DateTime.iso8601('2025-11-14T03:46:57.736Z')
+    updated_at: DateTime.iso8601('2025-11-15T00:53:50.666Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -265,11 +265,11 @@ req = Models::Operations::UpdateGenaiAgentRequest.new(
   genai_agent: Models::Shared::GenaiAgent.new(
     created_at: DateTime.iso8601('2020-12-18T02:23:33.723Z'),
     description: 'Sperno despecto.',
-    id: 'eae08125-9f3e-433e-9561-2dda59a4d1ec',
+    id: '83a21c42-dc03-4363-8aa3-e742a371fd4b',
     instructions: 'Addo vita ver auctus corrumpo substantia conscendo auctus. Astrum sulum aufero bis stella sumptus non.',
     is_active: false,
     name: 'testimonial suddenly',
-    updated_at: DateTime.iso8601('2025-11-14T03:46:57.736Z')
+    updated_at: DateTime.iso8601('2025-11-15T00:53:50.666Z')
   ),
   connection_id: '<id>',
   id: '<id>'

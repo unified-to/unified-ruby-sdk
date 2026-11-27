@@ -39,7 +39,7 @@ res = s.printing.create_printing_file(printing_file: Models::Shared::PrintingFil
   created_at: DateTime.iso8601('2020-10-22T04:25:39.825Z'),
   dpi: 300.0,
   height: 5400.0,
-  id: 'f2fed9df-bae1-4644-af02-dad06c114d0a',
+  id: '4513d0e8-9c8f-498b-bbb3-061d8e0561f8',
   metadata: [],
   mime_type: 'image/jpeg',
   name: 'blond-ecliptic.jpg',
@@ -96,7 +96,7 @@ res = s.printing.create_printing_order(printing_order: Models::Shared::PrintingO
   created_at: DateTime.iso8601('2022-03-14T11:16:15.147Z'),
   currency: 'USD',
   discount_amount: 0.0,
-  id: '791742ab-c5f0-4fc5-b23e-1841d0e8f6f7',
+  id: '062ea5f3-9b65-4ef4-ad12-c5457fc968e9',
   lineitems: [
     Models::Shared::PrintingLineitem.new(
       files: [
@@ -146,7 +146,7 @@ res = s.printing.create_printing_order(printing_order: Models::Shared::PrintingO
   subtotal_amount: 62.78,
   tax_amount: 5.02,
   total_amount: 72.49,
-  updated_at: DateTime.iso8601('2025-01-23T00:26:35.370Z')
+  updated_at: DateTime.iso8601('2025-01-23T15:59:59.207Z')
 ), connection_id: '<id>')
 
 unless res.printing_order.nil?
@@ -194,7 +194,7 @@ res = s.printing.create_printing_quote(printing_quote: Models::Shared::PrintingQ
   created_at: DateTime.iso8601('2019-01-02T03:42:06.944Z'),
   currency: 'USD',
   discount_amount: 0.0,
-  id: '7bd11fb6-1cb4-4421-8ded-507f3564a83b',
+  id: '328f9a75-1063-4cd6-a751-79e8a748867c',
   lineitems: [
     Models::Shared::PrintingLineitem.new(
       files: [
@@ -660,7 +660,7 @@ req = Models::Operations::PatchPrintingOrderRequest.new(
     created_at: DateTime.iso8601('2022-03-14T11:16:15.147Z'),
     currency: 'USD',
     discount_amount: 0.0,
-    id: '069d9cff-7d37-4844-8777-2e16f9d89433',
+    id: '26effdf1-6b9f-4fb4-95a6-79f958598334',
     lineitems: [
       Models::Shared::PrintingLineitem.new(
         files: [
@@ -710,7 +710,7 @@ req = Models::Operations::PatchPrintingOrderRequest.new(
     subtotal_amount: 62.78,
     tax_amount: 5.02,
     total_amount: 72.49,
-    updated_at: DateTime.iso8601('2025-01-23T00:26:35.389Z')
+    updated_at: DateTime.iso8601('2025-01-23T15:59:59.226Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -802,7 +802,7 @@ req = Models::Operations::UpdatePrintingOrderRequest.new(
     created_at: DateTime.iso8601('2022-03-14T11:16:15.147Z'),
     currency: 'USD',
     discount_amount: 0.0,
-    id: '069d9cff-7d37-4844-8777-2e16f9d89433',
+    id: '26effdf1-6b9f-4fb4-95a6-79f958598334',
     lineitems: [
       Models::Shared::PrintingLineitem.new(
         files: [
@@ -852,7 +852,7 @@ req = Models::Operations::UpdatePrintingOrderRequest.new(
     subtotal_amount: 62.78,
     tax_amount: 5.02,
     total_amount: 72.49,
-    updated_at: DateTime.iso8601('2025-01-23T00:26:35.389Z')
+    updated_at: DateTime.iso8601('2025-01-23T15:59:59.226Z')
   ),
   connection_id: '<id>',
   id: '<id>'

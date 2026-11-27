@@ -32,7 +32,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.scorecard.create_ats_scorecard(ats_scorecard: Models::Shared::AtsScorecard.new(
   comment: 'Aliquam.',
   created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
-  id: 'cd3413cc-47a7-4d28-8633-f4cbbfe20baa',
+  id: '45beb2ca-96ee-4f0e-b6c4-0fbdcfdfa9d2',
   metadata: [],
   questions: [
     Models::Shared::AtsScorecardQuestion.new(
@@ -46,7 +46,7 @@ res = s.scorecard.create_ats_scorecard(ats_scorecard: Models::Shared::AtsScoreca
     ),
   ],
   recommendation: Models::Shared::Recommendation::STRONG_YES,
-  updated_at: DateTime.iso8601('2023-06-15T11:42:00.755Z')
+  updated_at: DateTime.iso8601('2023-06-15T18:44:58.069Z')
 ), connection_id: '<id>')
 
 unless res.ats_scorecard.nil?
@@ -269,7 +269,7 @@ req = Models::Operations::PatchAtsScorecardRequest.new(
   ats_scorecard: Models::Shared::AtsScorecard.new(
     comment: 'Aliquam.',
     created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
-    id: 'b2414b1a-38f0-4936-ade4-440138ad0bcf',
+    id: 'fa0ef963-9e25-481c-948d-00f5d5940efb',
     metadata: [],
     questions: [
       Models::Shared::AtsScorecardQuestion.new(
@@ -283,7 +283,7 @@ req = Models::Operations::PatchAtsScorecardRequest.new(
       ),
     ],
     recommendation: Models::Shared::Recommendation::STRONG_YES,
-    updated_at: DateTime.iso8601('2023-06-15T11:42:00.759Z')
+    updated_at: DateTime.iso8601('2023-06-15T18:44:58.071Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -374,7 +374,7 @@ req = Models::Operations::UpdateAtsScorecardRequest.new(
   ats_scorecard: Models::Shared::AtsScorecard.new(
     comment: 'Aliquam.',
     created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
-    id: 'b2414b1a-38f0-4936-ade4-440138ad0bcf',
+    id: 'fa0ef963-9e25-481c-948d-00f5d5940efb',
     metadata: [],
     questions: [
       Models::Shared::AtsScorecardQuestion.new(
@@ -388,7 +388,7 @@ req = Models::Operations::UpdateAtsScorecardRequest.new(
       ),
     ],
     recommendation: Models::Shared::Recommendation::STRONG_YES,
-    updated_at: DateTime.iso8601('2023-06-15T11:42:00.759Z')
+    updated_at: DateTime.iso8601('2023-06-15T18:44:58.071Z')
   ),
   connection_id: '<id>',
   id: '<id>'

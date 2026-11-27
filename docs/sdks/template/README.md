@@ -38,10 +38,10 @@ res = s.template.create_compute_template(compute_template: Models::Shared::Compu
   dockerfile: "FROM ubuntu:24.04\nRUN apt-get update",
   gpu_count: 2.0,
   gpu_model: Models::Shared::ComputeTemplateGpuModel::NVIDIA_GH200,
-  id: '9936879d-8033-42c3-b036-25a916b9e38b',
+  id: '21a38d96-493f-49fc-96f4-e12a608029ed',
   image: 'jaunty-tarragon/demum:5.2',
   is_public: false,
-  last_used_at: DateTime.iso8601('2026-04-23T02:57:48.891Z'),
+  last_used_at: DateTime.iso8601('2026-04-24T00:28:43.449Z'),
   memory_mb: 8192.0,
   metadata: [],
   name: 'online-matrix',
@@ -49,7 +49,7 @@ res = s.template.create_compute_template(compute_template: Models::Shared::Compu
     8080.0,
   ],
   status: Models::Shared::ComputeTemplateStatus::OTHER,
-  updated_at: DateTime.iso8601('2025-03-04T04:08:33.599Z')
+  updated_at: DateTime.iso8601('2025-03-04T17:55:40.937Z')
 ), connection_id: '<id>')
 
 unless res.compute_template.nil?
@@ -363,10 +363,10 @@ req = Models::Operations::PatchComputeTemplateRequest.new(
     dockerfile: "FROM ubuntu:24.04\nRUN apt-get update",
     gpu_count: 2.0,
     gpu_model: Models::Shared::ComputeTemplateGpuModel::NVIDIA_GH200,
-    id: '49b29db7-e626-4cf0-9f20-e9412f241973',
+    id: 'b7a42953-e265-45e7-a7cb-eaa757fb88b1',
     image: 'jaunty-tarragon/demum:5.2',
     is_public: false,
-    last_used_at: DateTime.iso8601('2026-04-23T02:57:48.906Z'),
+    last_used_at: DateTime.iso8601('2026-04-24T00:28:43.465Z'),
     memory_mb: 8192.0,
     metadata: [],
     name: 'online-matrix',
@@ -374,7 +374,7 @@ req = Models::Operations::PatchComputeTemplateRequest.new(
       8080.0,
     ],
     status: Models::Shared::ComputeTemplateStatus::OTHER,
-    updated_at: DateTime.iso8601('2025-03-04T04:08:33.609Z')
+    updated_at: DateTime.iso8601('2025-03-04T17:55:40.948Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -469,10 +469,10 @@ req = Models::Operations::UpdateComputeTemplateRequest.new(
     dockerfile: "FROM ubuntu:24.04\nRUN apt-get update",
     gpu_count: 2.0,
     gpu_model: Models::Shared::ComputeTemplateGpuModel::NVIDIA_GH200,
-    id: '49b29db7-e626-4cf0-9f20-e9412f241973',
+    id: 'b7a42953-e265-45e7-a7cb-eaa757fb88b1',
     image: 'jaunty-tarragon/demum:5.2',
     is_public: false,
-    last_used_at: DateTime.iso8601('2026-04-23T02:57:48.906Z'),
+    last_used_at: DateTime.iso8601('2026-04-24T00:28:43.465Z'),
     memory_mb: 8192.0,
     metadata: [],
     name: 'online-matrix',
@@ -480,7 +480,7 @@ req = Models::Operations::UpdateComputeTemplateRequest.new(
       8080.0,
     ],
     status: Models::Shared::ComputeTemplateStatus::OTHER,
-    updated_at: DateTime.iso8601('2025-03-04T04:08:33.609Z')
+    updated_at: DateTime.iso8601('2025-03-04T17:55:40.948Z')
   ),
   connection_id: '<id>',
   id: '<id>'

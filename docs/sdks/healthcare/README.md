@@ -68,7 +68,7 @@ res = s.healthcare.create_healthcare_appointment(healthcare_appointment: Models:
   created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
   description: 'cubicularis caput viriliter',
   end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-  id: '18998882-9d55-4df5-accb-b886890257c6',
+  id: '8810f7ef-4b63-4324-a05b-785bd379a3f2',
   is_virtual: true,
   meeting_url: 'https://cautious-cannon.com/',
   metadata: [],
@@ -84,7 +84,7 @@ res = s.healthcare.create_healthcare_appointment(healthcare_appointment: Models:
   slot_ids: [],
   start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
   status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-  updated_at: DateTime.iso8601('2026-10-27T09:09:41.195Z')
+  updated_at: DateTime.iso8601('2026-10-28T10:08:42.936Z')
 ), connection_id: '<id>')
 
 unless res.healthcare_appointment.nil?
@@ -140,13 +140,13 @@ res = s.healthcare.create_healthcare_document(healthcare_document: Models::Share
   created_at: DateTime.iso8601('2023-07-16T04:00:25.853Z'),
   document_url: 'https://noxious-abacus.biz/',
   filename: 'quip.eot',
-  id: '2b580755-50c3-4dc1-badf-901be1782306',
+  id: '14eebc14-d866-41a9-939d-c965df8d4b95',
   metadata: [],
   mime_type: 'application/pdf',
   name: 'History and physical',
   status: Models::Shared::HealthcareDocumentStatus::SUPERSEDED,
   type: Models::Shared::HealthcareDocumentType::CONSULTATION_NOTE,
-  updated_at: DateTime.iso8601('2025-01-11T17:38:03.861Z')
+  updated_at: DateTime.iso8601('2025-01-12T04:58:48.913Z')
 ), connection_id: '<id>')
 
 unless res.healthcare_document.nil?
@@ -223,15 +223,15 @@ res = s.healthcare.create_healthcare_observation(healthcare_observation: Models:
     ),
   ],
   created_at: DateTime.iso8601('2022-12-06T21:34:04.293Z'),
-  id: 'b91377fa-13b2-434a-add9-6a5982e6bf0e',
+  id: '3b573ea1-c5c2-43a3-a9da-e21334c0feab',
   interpretation: Models::Shared::Interpretation::CRITICAL_HIGH,
-  issued_at: DateTime.iso8601('2025-06-02T23:28:04.506Z'),
+  issued_at: DateTime.iso8601('2025-06-03T15:29:18.985Z'),
   metadata: [],
   name: 'Blood pressure panel',
-  observed_at: DateTime.iso8601('2025-02-08T21:04:58.075Z'),
+  observed_at: DateTime.iso8601('2025-02-09T11:05:33.776Z'),
   status: Models::Shared::HealthcareObservationStatus::CORRECTED,
   type: Models::Shared::HealthcareObservationType::VITAL_SIGNS,
-  updated_at: DateTime.iso8601('2026-04-23T20:43:14.697Z')
+  updated_at: DateTime.iso8601('2026-04-24T18:28:00.806Z')
 ), connection_id: '<id>')
 
 unless res.healthcare_observation.nil?
@@ -283,7 +283,7 @@ res = s.healthcare.create_healthcare_patient(healthcare_patient: Models::Shared:
     postal_code: '99263-6004',
     region: 'New Jersey'
   ),
-  birthdate: '1941-12-25',
+  birthdate: '1941-12-26',
   contacts: [
     Models::Shared::HealthcarePatientContact.new(
       emails: [],
@@ -306,7 +306,7 @@ res = s.healthcare.create_healthcare_patient(healthcare_patient: Models::Shared:
   ],
   first_name: 'Monroe',
   gender: Models::Shared::HealthcarePatientGender::FEMALE,
-  id: '895932a7-f9f4-46da-a72c-c35565dfc147',
+  id: '7480d151-1940-480a-b239-7e586ba3ebef',
   identifiers: [
     Models::Shared::HealthcareIdentifier.new(
       type: Models::Shared::HealthcareIdentifierType::MRN,
@@ -326,7 +326,7 @@ res = s.healthcare.create_healthcare_patient(healthcare_patient: Models::Shared:
       type: Models::Shared::HealthcareTelephoneType::MOBILE
     ),
   ],
-  updated_at: DateTime.iso8601('2026-07-26T14:23:35.644Z')
+  updated_at: DateTime.iso8601('2026-07-27T14:23:00.268Z')
 ), connection_id: '<id>')
 
 unless res.healthcare_patient.nil?
@@ -1855,7 +1855,7 @@ req = Models::Operations::PatchHealthcareAppointmentRequest.new(
     created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
     description: 'cubicularis caput viriliter',
     end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-    id: '25509311-9f8d-4337-9bb5-ba2ae7f3c684',
+    id: 'b376e48d-428f-4466-845b-769dea92b342',
     is_virtual: true,
     meeting_url: 'https://cautious-cannon.com/',
     metadata: [],
@@ -1871,7 +1871,7 @@ req = Models::Operations::PatchHealthcareAppointmentRequest.new(
     slot_ids: [],
     start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
     status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-    updated_at: DateTime.iso8601('2026-10-27T09:09:41.215Z')
+    updated_at: DateTime.iso8601('2026-10-28T10:08:42.959Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1926,7 +1926,7 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
       postal_code: '99263-6004',
       region: 'New Jersey'
     ),
-    birthdate: '1941-12-25',
+    birthdate: '1941-12-26',
     contacts: [
       Models::Shared::HealthcarePatientContact.new(
         emails: [],
@@ -1949,7 +1949,7 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
     ],
     first_name: 'Monroe',
     gender: Models::Shared::HealthcarePatientGender::FEMALE,
-    id: 'f4c07dcc-d23c-4fec-9c25-25d2558408cc',
+    id: 'bd04b0be-e6f4-4802-bdc0-6f406f2f9a90',
     identifiers: [
       Models::Shared::HealthcareIdentifier.new(
         type: Models::Shared::HealthcareIdentifierType::MRN,
@@ -1969,7 +1969,7 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
         type: Models::Shared::HealthcareTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2026-07-26T14:23:35.684Z')
+    updated_at: DateTime.iso8601('2026-07-27T14:23:00.310Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2061,7 +2061,7 @@ req = Models::Operations::UpdateHealthcareAppointmentRequest.new(
     created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
     description: 'cubicularis caput viriliter',
     end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-    id: '25509311-9f8d-4337-9bb5-ba2ae7f3c684',
+    id: 'b376e48d-428f-4466-845b-769dea92b342',
     is_virtual: true,
     meeting_url: 'https://cautious-cannon.com/',
     metadata: [],
@@ -2077,7 +2077,7 @@ req = Models::Operations::UpdateHealthcareAppointmentRequest.new(
     slot_ids: [],
     start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
     status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-    updated_at: DateTime.iso8601('2026-10-27T09:09:41.215Z')
+    updated_at: DateTime.iso8601('2026-10-28T10:08:42.959Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2132,7 +2132,7 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
       postal_code: '99263-6004',
       region: 'New Jersey'
     ),
-    birthdate: '1941-12-25',
+    birthdate: '1941-12-26',
     contacts: [
       Models::Shared::HealthcarePatientContact.new(
         emails: [],
@@ -2155,7 +2155,7 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
     ],
     first_name: 'Monroe',
     gender: Models::Shared::HealthcarePatientGender::FEMALE,
-    id: 'f4c07dcc-d23c-4fec-9c25-25d2558408cc',
+    id: 'bd04b0be-e6f4-4802-bdc0-6f406f2f9a90',
     identifiers: [
       Models::Shared::HealthcareIdentifier.new(
         type: Models::Shared::HealthcareIdentifierType::MRN,
@@ -2175,7 +2175,7 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
         type: Models::Shared::HealthcareTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2026-07-26T14:23:35.684Z')
+    updated_at: DateTime.iso8601('2026-07-27T14:23:00.310Z')
   ),
   connection_id: '<id>',
   id: '<id>'

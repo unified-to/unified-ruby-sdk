@@ -52,7 +52,7 @@ res = s.location.create_commerce_location(commerce_location: Models::Shared::Com
   created_at: DateTime.iso8601('2022-12-29T04:15:21.195Z'),
   currency: 'WST',
   description: 'Vulgaris cruciamentum hic numquam tutamen.',
-  id: 'c3568bd4-f5c8-4800-80a4-1c7faf1ab2bf',
+  id: '65347fcb-af9d-4de1-a198-fa5f45cee153',
   image_url: 'https://picsum.photos/seed/3ZlSMHUYq/1895/67',
   is_active: false,
   language_locale: 'cibus',
@@ -63,10 +63,10 @@ res = s.location.create_commerce_location(commerce_location: Models::Shared::Com
     Models::Shared::CommerceItemMedia.new(
       alt: 'Amoveo cinis demulceo tutamen.',
       height: 283.0,
-      id: '202c10b4-fa45-4490-a2a9-90affd403838',
+      id: '847747a2-8528-4c56-ba0b-e95d83935903',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: '67af1db9-cf91-4dc4-bb6e-9a43db4cbb94',
+          id: '21a6f1bf-3f52-4246-9419-f1edb8fd879b',
           slug: 'taedium',
           value: 'censura'
         ),
@@ -92,7 +92,7 @@ res = s.location.create_commerce_location(commerce_location: Models::Shared::Com
       type: Models::Shared::CommerceTelephoneType::MOBILE
     ),
   ],
-  updated_at: DateTime.iso8601('2024-05-03T02:39:03.345Z'),
+  updated_at: DateTime.iso8601('2024-05-03T11:26:15.560Z'),
   web_url: 'https://formal-declaration.info/'
 ), connection_id: '<id>')
 
@@ -150,7 +150,7 @@ res = s.location.create_hris_location(hris_location: Models::Shared::HrisLocatio
   created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
   currency: 'ALL',
   description: 'Accendo sophismata verus.',
-  id: '5bc602e5-f3a4-4ef7-95a3-5b57abafb220',
+  id: '54581acd-f9d8-496c-81e2-8ea02de428d8',
   is_active: false,
   is_hq: true,
   language_locale: 'it',
@@ -171,7 +171,7 @@ res = s.location.create_hris_location(hris_location: Models::Shared::HrisLocatio
     ),
   ],
   timezone: 'America/Toronto',
-  updated_at: DateTime.iso8601('2023-07-04T06:09:46.180Z')
+  updated_at: DateTime.iso8601('2023-07-04T15:30:44.163Z')
 ), connection_id: '<id>')
 
 unless res.hris_location.nil?
@@ -665,7 +665,7 @@ req = Models::Operations::PatchCommerceLocationRequest.new(
     created_at: DateTime.iso8601('2022-12-29T04:15:21.195Z'),
     currency: 'WST',
     description: 'Vulgaris cruciamentum hic numquam tutamen.',
-    id: '23c21f13-b990-47f0-b19e-e80df06ef5e3',
+    id: 'cdf5a2a6-6ced-4f44-a361-b6ce77647448',
     image_url: 'https://picsum.photos/seed/3ZlSMHUYq/1895/67',
     is_active: false,
     language_locale: 'cibus',
@@ -676,10 +676,10 @@ req = Models::Operations::PatchCommerceLocationRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Amoveo cinis demulceo tutamen.',
         height: 283.0,
-        id: 'd83abc5e-bd79-4487-940e-558b22c040b8',
+        id: 'b3d7585c-6e51-487c-8e53-0c1faa7e26cf',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '7cf6a38d-16e8-4d54-9993-17821df264f9',
+            id: 'ee1187a1-75c6-410c-a0c0-589343c55d22',
             slug: 'taedium',
             value: 'censura'
           ),
@@ -705,7 +705,7 @@ req = Models::Operations::PatchCommerceLocationRequest.new(
         type: Models::Shared::CommerceTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2024-05-03T02:39:03.356Z'),
+    updated_at: DateTime.iso8601('2024-05-03T11:26:15.574Z'),
     web_url: 'https://formal-declaration.info/'
   ),
   connection_id: '<id>',
@@ -766,7 +766,7 @@ req = Models::Operations::PatchHrisLocationRequest.new(
     created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
     currency: 'ALL',
     description: 'Accendo sophismata verus.',
-    id: '50de5710-323d-494c-a3ba-de15f4f9c2bd',
+    id: '76a24900-ef9b-4dc8-9b5d-31034c93bec0',
     is_active: false,
     is_hq: true,
     language_locale: 'it',
@@ -787,7 +787,7 @@ req = Models::Operations::PatchHrisLocationRequest.new(
       ),
     ],
     timezone: 'America/Toronto',
-    updated_at: DateTime.iso8601('2023-07-04T06:09:46.187Z')
+    updated_at: DateTime.iso8601('2023-07-04T15:30:44.168Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -929,7 +929,7 @@ req = Models::Operations::UpdateCommerceLocationRequest.new(
     created_at: DateTime.iso8601('2022-12-29T04:15:21.195Z'),
     currency: 'WST',
     description: 'Vulgaris cruciamentum hic numquam tutamen.',
-    id: '23c21f13-b990-47f0-b19e-e80df06ef5e3',
+    id: 'cdf5a2a6-6ced-4f44-a361-b6ce77647448',
     image_url: 'https://picsum.photos/seed/3ZlSMHUYq/1895/67',
     is_active: false,
     language_locale: 'cibus',
@@ -940,10 +940,10 @@ req = Models::Operations::UpdateCommerceLocationRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Amoveo cinis demulceo tutamen.',
         height: 283.0,
-        id: 'd83abc5e-bd79-4487-940e-558b22c040b8',
+        id: 'b3d7585c-6e51-487c-8e53-0c1faa7e26cf',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '7cf6a38d-16e8-4d54-9993-17821df264f9',
+            id: 'ee1187a1-75c6-410c-a0c0-589343c55d22',
             slug: 'taedium',
             value: 'censura'
           ),
@@ -969,7 +969,7 @@ req = Models::Operations::UpdateCommerceLocationRequest.new(
         type: Models::Shared::CommerceTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2024-05-03T02:39:03.356Z'),
+    updated_at: DateTime.iso8601('2024-05-03T11:26:15.574Z'),
     web_url: 'https://formal-declaration.info/'
   ),
   connection_id: '<id>',
@@ -1030,7 +1030,7 @@ req = Models::Operations::UpdateHrisLocationRequest.new(
     created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
     currency: 'ALL',
     description: 'Accendo sophismata verus.',
-    id: '50de5710-323d-494c-a3ba-de15f4f9c2bd',
+    id: '76a24900-ef9b-4dc8-9b5d-31034c93bec0',
     is_active: false,
     is_hq: true,
     language_locale: 'it',
@@ -1051,7 +1051,7 @@ req = Models::Operations::UpdateHrisLocationRequest.new(
       ),
     ],
     timezone: 'America/Toronto',
-    updated_at: DateTime.iso8601('2023-07-04T06:09:46.187Z')
+    updated_at: DateTime.iso8601('2023-07-04T15:30:44.168Z')
   ),
   connection_id: '<id>',
   id: '<id>'

@@ -31,6 +31,7 @@ module UnifiedRubySDK
           WEBHOOK_UNHEALTHY = new('WEBHOOK_UNHEALTHY')
           WEBHOOK_PAUSED = new('WEBHOOK_PAUSED')
           WEBHOOK_UNPAUSED = new('WEBHOOK_UNPAUSED')
+          UNIFIED_PERSON_MERGED = new('UNIFIED_PERSON_MERGED')
         end
         open!
       end

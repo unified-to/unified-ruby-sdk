@@ -35,37 +35,37 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.appointment.create_dms_appointment(dms_appointment: Models::Shared::DmsAppointment.new(
   created_at: DateTime.iso8601('2023-10-16T02:56:45.127Z'),
-  end_at: DateTime.iso8601('2026-05-07T05:42:25.865Z'),
-  id: 'da9b7ddb-6ac6-4532-b16c-1391aedf3755',
+  end_at: DateTime.iso8601('2026-05-08T02:41:53.672Z'),
+  id: 'd6c8819f-7706-4575-8f69-fbf6c7f367a1',
   metadata: [],
   notes: 'Soluta conitor timidus confero.',
   number: 'A541909',
   services: [
     Models::Shared::DmsAppointmentService.new(
-      id: '734dd613-f123-4344-a362-a99bdd9fefb0',
+      id: '2eca6ee0-3d95-414d-83d1-5a5cdb27360b',
       name: 'Customer concern',
       pay_type: Models::Shared::PayType::WARRANTY,
       technician_user_ids: []
     ),
     Models::Shared::DmsAppointmentService.new(
       complaint: 'Check engine light on',
-      id: '2e119126-0c0d-4708-b17b-cfe46b38bb80',
+      id: 'b432d998-e455-4472-973b-7e860f3677e5',
       name: 'Customer concern',
       pay_type: Models::Shared::PayType::CUSTOMER,
       technician_user_ids: []
     ),
     Models::Shared::DmsAppointmentService.new(
       complaint: 'Due for service',
-      id: 'b9606887-f2d2-4e75-877a-f02abbd2043a',
+      id: 'a02296da-58c1-494d-b5bc-caddc43906f2',
       name: 'Customer concern',
       pay_type: Models::Shared::PayType::CUSTOMER,
       technician_user_ids: []
     ),
   ],
-  start_at: DateTime.iso8601('2026-05-06T22:42:25.865Z'),
+  start_at: DateTime.iso8601('2026-05-07T19:41:53.672Z'),
   status: Models::Shared::DmsAppointmentStatus::CANCELLED,
   transport_type: Models::Shared::TransportType::LOANER,
-  updated_at: DateTime.iso8601('2025-04-06T04:25:49.300Z')
+  updated_at: DateTime.iso8601('2025-04-06T16:31:30.890Z')
 ), connection_id: '<id>')
 
 unless res.dms_appointment.nil?
@@ -113,7 +113,7 @@ res = s.appointment.create_healthcare_appointment(healthcare_appointment: Models
   created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
   description: 'cubicularis caput viriliter',
   end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-  id: '18998882-9d55-4df5-accb-b886890257c6',
+  id: '8810f7ef-4b63-4324-a05b-785bd379a3f2',
   is_virtual: true,
   meeting_url: 'https://cautious-cannon.com/',
   metadata: [],
@@ -129,7 +129,7 @@ res = s.appointment.create_healthcare_appointment(healthcare_appointment: Models
   slot_ids: [],
   start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
   status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-  updated_at: DateTime.iso8601('2026-10-27T09:09:41.195Z')
+  updated_at: DateTime.iso8601('2026-10-28T10:08:42.936Z')
 ), connection_id: '<id>')
 
 unless res.healthcare_appointment.nil?
@@ -351,37 +351,37 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchDmsAppointmentRequest.new(
   dms_appointment: Models::Shared::DmsAppointment.new(
     created_at: DateTime.iso8601('2023-10-16T02:56:45.127Z'),
-    end_at: DateTime.iso8601('2026-05-07T05:42:25.879Z'),
-    id: '2fd10c59-8bc7-444e-985e-d627d3a00ae9',
+    end_at: DateTime.iso8601('2026-05-08T02:41:53.686Z'),
+    id: '5a47c683-e8a4-4933-9119-d7ad05bcf24b',
     metadata: [],
     notes: 'Soluta conitor timidus confero.',
     number: 'A541909',
     services: [
       Models::Shared::DmsAppointmentService.new(
-        id: '6b97caa4-b781-45c5-9eae-699b4ddbe77f',
+        id: 'bcc95f56-1ce6-486f-a905-540527e4e254',
         name: 'Customer concern',
         pay_type: Models::Shared::PayType::WARRANTY,
         technician_user_ids: []
       ),
       Models::Shared::DmsAppointmentService.new(
         complaint: 'Check engine light on',
-        id: 'e6419ad6-5e14-4a43-b03d-1f8c597ed877',
+        id: '2d1d40f9-a6c0-40ae-b104-7717687702fa',
         name: 'Customer concern',
         pay_type: Models::Shared::PayType::CUSTOMER,
         technician_user_ids: []
       ),
       Models::Shared::DmsAppointmentService.new(
         complaint: 'Due for service',
-        id: 'fd82da75-179b-497f-ba8c-5a788c096f80',
+        id: 'aa78fbfc-88be-4cd3-9cfb-4ec090bd3711',
         name: 'Customer concern',
         pay_type: Models::Shared::PayType::CUSTOMER,
         technician_user_ids: []
       ),
     ],
-    start_at: DateTime.iso8601('2026-05-06T22:42:25.879Z'),
+    start_at: DateTime.iso8601('2026-05-07T19:41:53.686Z'),
     status: Models::Shared::DmsAppointmentStatus::CANCELLED,
     transport_type: Models::Shared::TransportType::LOANER,
-    updated_at: DateTime.iso8601('2025-04-06T04:25:49.308Z')
+    updated_at: DateTime.iso8601('2025-04-06T16:31:30.897Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -432,7 +432,7 @@ req = Models::Operations::PatchHealthcareAppointmentRequest.new(
     created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
     description: 'cubicularis caput viriliter',
     end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-    id: '25509311-9f8d-4337-9bb5-ba2ae7f3c684',
+    id: 'b376e48d-428f-4466-845b-769dea92b342',
     is_virtual: true,
     meeting_url: 'https://cautious-cannon.com/',
     metadata: [],
@@ -448,7 +448,7 @@ req = Models::Operations::PatchHealthcareAppointmentRequest.new(
     slot_ids: [],
     start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
     status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-    updated_at: DateTime.iso8601('2026-10-27T09:09:41.215Z')
+    updated_at: DateTime.iso8601('2026-10-28T10:08:42.959Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -579,37 +579,37 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateDmsAppointmentRequest.new(
   dms_appointment: Models::Shared::DmsAppointment.new(
     created_at: DateTime.iso8601('2023-10-16T02:56:45.127Z'),
-    end_at: DateTime.iso8601('2026-05-07T05:42:25.879Z'),
-    id: '2fd10c59-8bc7-444e-985e-d627d3a00ae9',
+    end_at: DateTime.iso8601('2026-05-08T02:41:53.686Z'),
+    id: '5a47c683-e8a4-4933-9119-d7ad05bcf24b',
     metadata: [],
     notes: 'Soluta conitor timidus confero.',
     number: 'A541909',
     services: [
       Models::Shared::DmsAppointmentService.new(
-        id: '6b97caa4-b781-45c5-9eae-699b4ddbe77f',
+        id: 'bcc95f56-1ce6-486f-a905-540527e4e254',
         name: 'Customer concern',
         pay_type: Models::Shared::PayType::WARRANTY,
         technician_user_ids: []
       ),
       Models::Shared::DmsAppointmentService.new(
         complaint: 'Check engine light on',
-        id: 'e6419ad6-5e14-4a43-b03d-1f8c597ed877',
+        id: '2d1d40f9-a6c0-40ae-b104-7717687702fa',
         name: 'Customer concern',
         pay_type: Models::Shared::PayType::CUSTOMER,
         technician_user_ids: []
       ),
       Models::Shared::DmsAppointmentService.new(
         complaint: 'Due for service',
-        id: 'fd82da75-179b-497f-ba8c-5a788c096f80',
+        id: 'aa78fbfc-88be-4cd3-9cfb-4ec090bd3711',
         name: 'Customer concern',
         pay_type: Models::Shared::PayType::CUSTOMER,
         technician_user_ids: []
       ),
     ],
-    start_at: DateTime.iso8601('2026-05-06T22:42:25.879Z'),
+    start_at: DateTime.iso8601('2026-05-07T19:41:53.686Z'),
     status: Models::Shared::DmsAppointmentStatus::CANCELLED,
     transport_type: Models::Shared::TransportType::LOANER,
-    updated_at: DateTime.iso8601('2025-04-06T04:25:49.308Z')
+    updated_at: DateTime.iso8601('2025-04-06T16:31:30.897Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -660,7 +660,7 @@ req = Models::Operations::UpdateHealthcareAppointmentRequest.new(
     created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
     description: 'cubicularis caput viriliter',
     end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-    id: '25509311-9f8d-4337-9bb5-ba2ae7f3c684',
+    id: 'b376e48d-428f-4466-845b-769dea92b342',
     is_virtual: true,
     meeting_url: 'https://cautious-cannon.com/',
     metadata: [],
@@ -676,7 +676,7 @@ req = Models::Operations::UpdateHealthcareAppointmentRequest.new(
     slot_ids: [],
     start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
     status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-    updated_at: DateTime.iso8601('2026-10-27T09:09:41.215Z')
+    updated_at: DateTime.iso8601('2026-10-28T10:08:42.959Z')
   ),
   connection_id: '<id>',
   id: '<id>'

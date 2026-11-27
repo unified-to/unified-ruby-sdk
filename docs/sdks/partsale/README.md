@@ -32,10 +32,10 @@ res = s.partsale.create_dms_partsale(dms_partsale: Models::Shared::DmsPartsale.n
   currency: 'USD',
   discount_amount: 0.0,
   freight_amount: 0.0,
-  id: '1b9610b3-deed-4060-96a4-7f44746da920',
+  id: '834b62b6-5736-47a2-836f-7da1eb8a1d63',
   lines: [
     Models::Shared::DmsPartline.new(
-      id: '166c2510-9944-412e-8347-d6c6859b5951',
+      id: 'c5820579-bc3b-4c71-8f7a-774de46ee7d2',
       pay_type: Models::Shared::DmsPartlinePayType::CUSTOMER,
       quantity: 5.0,
       quantity_ordered: 5.0,
@@ -43,7 +43,7 @@ res = s.partsale.create_dms_partsale(dms_partsale: Models::Shared::DmsPartsale.n
       unit_price_amount: 98.29
     ),
     Models::Shared::DmsPartline.new(
-      id: '2147bfc9-6317-4935-aa33-550a76c1139b',
+      id: '05239adc-66e9-493d-b9ae-58b432492e41',
       pay_type: Models::Shared::DmsPartlinePayType::CUSTOMER,
       quantity: 2.0,
       quantity_ordered: 2.0,
@@ -51,7 +51,7 @@ res = s.partsale.create_dms_partsale(dms_partsale: Models::Shared::DmsPartsale.n
       unit_price_amount: 120.45
     ),
     Models::Shared::DmsPartline.new(
-      id: '2727b822-076a-4c4b-8ff8-1b33b4fcbf06',
+      id: 'ad6e4077-e25b-477a-8a0c-b7be3c6f6c3c',
       pay_type: Models::Shared::DmsPartlinePayType::CUSTOMER,
       quantity: 3.0,
       quantity_ordered: 3.0,
@@ -67,7 +67,7 @@ res = s.partsale.create_dms_partsale(dms_partsale: Models::Shared::DmsPartsale.n
   tax_amount: 68.73,
   total_amount: 1050.62,
   type: Models::Shared::DmsPartsaleType::SALE,
-  updated_at: DateTime.iso8601('2026-04-17T16:10:56.508Z')
+  updated_at: DateTime.iso8601('2026-04-18T13:18:43.891Z')
 ), connection_id: '<id>')
 
 unless res.dms_partsale.nil?
@@ -206,10 +206,10 @@ req = Models::Operations::PatchDmsPartsaleRequest.new(
     currency: 'USD',
     discount_amount: 0.0,
     freight_amount: 0.0,
-    id: '799fe995-df92-4b60-ae0a-b32bd09c049c',
+    id: '73461ce7-3e75-4a6c-b8a9-ca20a45e2f8f',
     lines: [
       Models::Shared::DmsPartline.new(
-        id: '1113b7f2-5123-4d13-b369-60fbc4d79685',
+        id: '64206528-da75-40d9-b936-5acc30f317b0',
         pay_type: Models::Shared::DmsPartlinePayType::CUSTOMER,
         quantity: 5.0,
         quantity_ordered: 5.0,
@@ -217,7 +217,7 @@ req = Models::Operations::PatchDmsPartsaleRequest.new(
         unit_price_amount: 98.29
       ),
       Models::Shared::DmsPartline.new(
-        id: '997a36a9-ef4f-4faa-a452-446e18b1c1ae',
+        id: '2128fe82-f689-4acf-a553-23b2ff8b4bf3',
         pay_type: Models::Shared::DmsPartlinePayType::CUSTOMER,
         quantity: 2.0,
         quantity_ordered: 2.0,
@@ -225,7 +225,7 @@ req = Models::Operations::PatchDmsPartsaleRequest.new(
         unit_price_amount: 120.45
       ),
       Models::Shared::DmsPartline.new(
-        id: 'dde3361b-f0bf-459e-a3ea-f0ed47841bc0',
+        id: '42a50637-ffaa-44f5-973e-4066f6505ff7',
         pay_type: Models::Shared::DmsPartlinePayType::CUSTOMER,
         quantity: 3.0,
         quantity_ordered: 3.0,
@@ -241,7 +241,7 @@ req = Models::Operations::PatchDmsPartsaleRequest.new(
     tax_amount: 68.73,
     total_amount: 1050.62,
     type: Models::Shared::DmsPartsaleType::SALE,
-    updated_at: DateTime.iso8601('2026-04-17T16:10:56.531Z')
+    updated_at: DateTime.iso8601('2026-04-18T13:18:43.913Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -294,10 +294,10 @@ req = Models::Operations::UpdateDmsPartsaleRequest.new(
     currency: 'USD',
     discount_amount: 0.0,
     freight_amount: 0.0,
-    id: '799fe995-df92-4b60-ae0a-b32bd09c049c',
+    id: '73461ce7-3e75-4a6c-b8a9-ca20a45e2f8f',
     lines: [
       Models::Shared::DmsPartline.new(
-        id: '1113b7f2-5123-4d13-b369-60fbc4d79685',
+        id: '64206528-da75-40d9-b936-5acc30f317b0',
         pay_type: Models::Shared::DmsPartlinePayType::CUSTOMER,
         quantity: 5.0,
         quantity_ordered: 5.0,
@@ -305,7 +305,7 @@ req = Models::Operations::UpdateDmsPartsaleRequest.new(
         unit_price_amount: 98.29
       ),
       Models::Shared::DmsPartline.new(
-        id: '997a36a9-ef4f-4faa-a452-446e18b1c1ae',
+        id: '2128fe82-f689-4acf-a553-23b2ff8b4bf3',
         pay_type: Models::Shared::DmsPartlinePayType::CUSTOMER,
         quantity: 2.0,
         quantity_ordered: 2.0,
@@ -313,7 +313,7 @@ req = Models::Operations::UpdateDmsPartsaleRequest.new(
         unit_price_amount: 120.45
       ),
       Models::Shared::DmsPartline.new(
-        id: 'dde3361b-f0bf-459e-a3ea-f0ed47841bc0',
+        id: '42a50637-ffaa-44f5-973e-4066f6505ff7',
         pay_type: Models::Shared::DmsPartlinePayType::CUSTOMER,
         quantity: 3.0,
         quantity_ordered: 3.0,
@@ -329,7 +329,7 @@ req = Models::Operations::UpdateDmsPartsaleRequest.new(
     tax_amount: 68.73,
     total_amount: 1050.62,
     type: Models::Shared::DmsPartsaleType::SALE,
-    updated_at: DateTime.iso8601('2026-04-17T16:10:56.531Z')
+    updated_at: DateTime.iso8601('2026-04-18T13:18:43.913Z')
   ),
   connection_id: '<id>',
   id: '<id>'

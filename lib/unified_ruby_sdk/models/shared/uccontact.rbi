@@ -8,6 +8,8 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::UcContact
+  def unified_person_ids(); end
+  def unified_person_ids=(str_); end
   def company(); end
   def company=(str_); end
   def created_at(); end

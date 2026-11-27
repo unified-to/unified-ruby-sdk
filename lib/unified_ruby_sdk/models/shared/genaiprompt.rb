@@ -14,6 +14,10 @@ module UnifiedRubySDK
 
         # One answer per question, matched by id.
         field :answers, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::GenaiAnswer)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('answers') } }
+        # Ask the LLM API to keep this conversation so that a later prompt can continue it with parent_id (eg. Anthropic message threads, which are kept for about 5 minutes).
+        field :has_thread, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('has_thread') } }
+        # The id of this prompt, returned by the LLM API. Send it as parent_id on the next prompt to continue the conversation.
+        field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # a float between 0-1
         field :max_tokens, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('max_tokens') } }
         # OAuth Bearer token for MCP servers that require authentication.
@@ -26,6 +30,8 @@ module UnifiedRubySDK
         field :messages, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::GenaiContent)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('messages') } }
         # The ID of the model to use (a GenaiModel ID)
         field :model_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('model_id') } }
+        # The id of the previous prompt (genai_prompt) that this prompt continues. When set, messages holds only the new messages; the LLM API keeps the earlier ones (eg. Anthropic message threads, OpenAI previous_response_id). If the LLM API no longer has that prompt, send the full conversation again without parent_id.
+        field :parent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
         # Typed questions to evaluate against the messages (for decision models such as TypeSafe Jev).
         field :questions, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::GenaiQuestion)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('questions') } }
 
@@ -39,15 +45,18 @@ module UnifiedRubySDK
 
         field :tokens_used, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tokens_used') } }
 
-        sig { params(answers: T.nilable(T::Array[Models::Shared::GenaiAnswer]), max_tokens: T.nilable(::Float), mcp_authorization_token: T.nilable(::String), mcp_deferred_tools: T.nilable(T::Array[::String]), mcp_url: T.nilable(::String), messages: T.nilable(T::Array[Models::Shared::GenaiContent]), model_id: T.nilable(::String), questions: T.nilable(T::Array[Models::Shared::GenaiQuestion]), raw: T.nilable(T::Hash[::Symbol, ::Object]), responses: T.nilable(T::Array[::String]), skill_ids: T.nilable(T::Array[::String]), temperature: T.nilable(::Float), tokens_used: T.nilable(::Float)).void }
-        def initialize(answers: nil, max_tokens: nil, mcp_authorization_token: nil, mcp_deferred_tools: nil, mcp_url: nil, messages: nil, model_id: nil, questions: nil, raw: nil, responses: nil, skill_ids: nil, temperature: nil, tokens_used: nil)
+        sig { params(answers: T.nilable(T::Array[Models::Shared::GenaiAnswer]), has_thread: T.nilable(T::Boolean), id: T.nilable(::String), max_tokens: T.nilable(::Float), mcp_authorization_token: T.nilable(::String), mcp_deferred_tools: T.nilable(T::Array[::String]), mcp_url: T.nilable(::String), messages: T.nilable(T::Array[Models::Shared::GenaiContent]), model_id: T.nilable(::String), parent_id: T.nilable(::String), questions: T.nilable(T::Array[Models::Shared::GenaiQuestion]), raw: T.nilable(T::Hash[::Symbol, ::Object]), responses: T.nilable(T::Array[::String]), skill_ids: T.nilable(T::Array[::String]), temperature: T.nilable(::Float), tokens_used: T.nilable(::Float)).void }
+        def initialize(answers: nil, has_thread: nil, id: nil, max_tokens: nil, mcp_authorization_token: nil, mcp_deferred_tools: nil, mcp_url: nil, messages: nil, model_id: nil, parent_id: nil, questions: nil, raw: nil, responses: nil, skill_ids: nil, temperature: nil, tokens_used: nil)
           @answers = answers
+          @has_thread = has_thread
+          @id = id
           @max_tokens = max_tokens
           @mcp_authorization_token = mcp_authorization_token
           @mcp_deferred_tools = mcp_deferred_tools
           @mcp_url = mcp_url
           @messages = messages
           @model_id = model_id
+          @parent_id = parent_id
           @questions = questions
           @raw = raw
           @responses = responses
@@ -60,12 +69,15 @@ module UnifiedRubySDK
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @answers == other.answers
+          return false unless @has_thread == other.has_thread
+          return false unless @id == other.id
           return false unless @max_tokens == other.max_tokens
           return false unless @mcp_authorization_token == other.mcp_authorization_token
           return false unless @mcp_deferred_tools == other.mcp_deferred_tools
           return false unless @mcp_url == other.mcp_url
           return false unless @messages == other.messages
           return false unless @model_id == other.model_id
+          return false unless @parent_id == other.parent_id
           return false unless @questions == other.questions
           return false unless @raw == other.raw
           return false unless @responses == other.responses

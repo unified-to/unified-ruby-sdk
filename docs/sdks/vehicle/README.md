@@ -35,7 +35,7 @@ res = s.vehicle.create_dms_vehicle(dms_vehicle: Models::Shared::DmsVehicle.new(
   description: '2023 Citroën Silverado',
   exterior_color: 'lavender',
   fuel_type: Models::Shared::FuelType::ELECTRIC,
-  id: '3bc45ace-aec1-4da8-aeb9-e14709b1565b',
+  id: 'ae2d5da5-6181-4b92-9d93-7be429ece665',
   image_urls: [
     'https://picsum.photos/seed/tOUr5K/1358/1877',
   ],
@@ -75,7 +75,7 @@ res = s.vehicle.create_dms_vehicle(dms_vehicle: Models::Shared::DmsVehicle.new(
   transmission: 'Manual',
   trim: 'Base',
   type: Models::Shared::DmsVehicleType::SUV,
-  updated_at: DateTime.iso8601('2023-11-03T01:47:05.704Z'),
+  updated_at: DateTime.iso8601('2023-11-03T13:51:45.381Z'),
   vin: 'C29ZDU474DDR70955',
   warranty_expires_at: DateTime.iso8601('2022-03-28T09:10:09.889Z'),
   year: 2023.0
@@ -220,7 +220,7 @@ req = Models::Operations::PatchDmsVehicleRequest.new(
     description: '2023 Citroën Silverado',
     exterior_color: 'lavender',
     fuel_type: Models::Shared::FuelType::ELECTRIC,
-    id: '99df44b6-a445-44fe-8e55-f0e889ae1713',
+    id: 'efdfb740-0c86-4c38-aa92-d8d17f8d20b4',
     image_urls: [
       'https://picsum.photos/seed/tOUr5K/1358/1877',
     ],
@@ -260,7 +260,7 @@ req = Models::Operations::PatchDmsVehicleRequest.new(
     transmission: 'Manual',
     trim: 'Base',
     type: Models::Shared::DmsVehicleType::SUV,
-    updated_at: DateTime.iso8601('2023-11-03T01:47:05.718Z'),
+    updated_at: DateTime.iso8601('2023-11-03T13:51:45.393Z'),
     vin: 'C29ZDU474DDR70955',
     warranty_expires_at: DateTime.iso8601('2022-03-28T09:10:09.889Z'),
     year: 2023.0
@@ -319,7 +319,7 @@ req = Models::Operations::UpdateDmsVehicleRequest.new(
     description: '2023 Citroën Silverado',
     exterior_color: 'lavender',
     fuel_type: Models::Shared::FuelType::ELECTRIC,
-    id: '99df44b6-a445-44fe-8e55-f0e889ae1713',
+    id: 'efdfb740-0c86-4c38-aa92-d8d17f8d20b4',
     image_urls: [
       'https://picsum.photos/seed/tOUr5K/1358/1877',
     ],
@@ -359,7 +359,7 @@ req = Models::Operations::UpdateDmsVehicleRequest.new(
     transmission: 'Manual',
     trim: 'Base',
     type: Models::Shared::DmsVehicleType::SUV,
-    updated_at: DateTime.iso8601('2023-11-03T01:47:05.718Z'),
+    updated_at: DateTime.iso8601('2023-11-03T13:51:45.393Z'),
     vin: 'C29ZDU474DDR70955',
     warranty_expires_at: DateTime.iso8601('2022-03-28T09:10:09.889Z'),
     year: 2023.0

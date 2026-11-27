@@ -61,6 +61,7 @@ module UnifiedRubySDK
           LEAVE_END_AT = new('leave_end_at')
           EMPLOYMENT_STATUS_REASON = new('employment_status_reason')
           RAW = new('raw')
+          UNIFIED_PERSON_IDS = new('__unified_person_ids')
         end
       end
     end

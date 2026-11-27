@@ -8,6 +8,8 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::CrmLead
+  def unified_person_ids(); end
+  def unified_person_ids=(str_); end
   def address(); end
   def address=(str_); end
   def company_id(); end

@@ -28,9 +28,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
   )
 )
 res = s.pullrequest.create_repo_pullrequest(repo_pullrequest: Models::Shared::RepoPullrequest.new(
-  closed_at: DateTime.iso8601('2025-05-23T00:31:27.098Z'),
+  closed_at: DateTime.iso8601('2025-05-23T15:45:54.132Z'),
   created_at: DateTime.iso8601('2023-02-27T09:37:13.663Z'),
-  id: '892c61e1-dd93-440e-a565-bc333129ce18',
+  id: 'cef371cf-cddc-4d37-996f-01cc38f7a590',
   labels: [
     'crudelis',
     'uxor',
@@ -39,7 +39,7 @@ res = s.pullrequest.create_repo_pullrequest(repo_pullrequest: Models::Shared::Re
   notes: 'Amet asporto defero coadunatio. Curtus ceno consuasor aggero veritatis suggero adeo creptio tutamen. Aqua delicate adopto derelinquo caritas bibo maiores vulgivagus succurro temporibus.',
   status: Models::Shared::RepoPullrequestStatus::APPROVED,
   title: 'compress redundant application',
-  updated_at: DateTime.iso8601('2026-02-14T18:41:33.912Z')
+  updated_at: DateTime.iso8601('2026-02-15T14:56:13.032Z')
 ), connection_id: '<id>')
 
 unless res.repo_pullrequest.nil?
@@ -173,9 +173,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchRepoPullrequestRequest.new(
   repo_pullrequest: Models::Shared::RepoPullrequest.new(
-    closed_at: DateTime.iso8601('2025-05-23T00:31:27.106Z'),
+    closed_at: DateTime.iso8601('2025-05-23T15:45:54.143Z'),
     created_at: DateTime.iso8601('2023-02-27T09:37:13.663Z'),
-    id: '5d0a35a7-d5e9-4758-8ba9-4e08f7f419bd',
+    id: '1e19444d-7950-49c3-a99a-a49c9aa39494',
     labels: [
       'crudelis',
       'uxor',
@@ -184,7 +184,7 @@ req = Models::Operations::PatchRepoPullrequestRequest.new(
     notes: 'Amet asporto defero coadunatio. Curtus ceno consuasor aggero veritatis suggero adeo creptio tutamen. Aqua delicate adopto derelinquo caritas bibo maiores vulgivagus succurro temporibus.',
     status: Models::Shared::RepoPullrequestStatus::APPROVED,
     title: 'compress redundant application',
-    updated_at: DateTime.iso8601('2026-02-14T18:41:33.924Z')
+    updated_at: DateTime.iso8601('2026-02-15T14:56:13.046Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -273,9 +273,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateRepoPullrequestRequest.new(
   repo_pullrequest: Models::Shared::RepoPullrequest.new(
-    closed_at: DateTime.iso8601('2025-05-23T00:31:27.106Z'),
+    closed_at: DateTime.iso8601('2025-05-23T15:45:54.143Z'),
     created_at: DateTime.iso8601('2023-02-27T09:37:13.663Z'),
-    id: '5d0a35a7-d5e9-4758-8ba9-4e08f7f419bd',
+    id: '1e19444d-7950-49c3-a99a-a49c9aa39494',
     labels: [
       'crudelis',
       'uxor',
@@ -284,7 +284,7 @@ req = Models::Operations::UpdateRepoPullrequestRequest.new(
     notes: 'Amet asporto defero coadunatio. Curtus ceno consuasor aggero veritatis suggero adeo creptio tutamen. Aqua delicate adopto derelinquo caritas bibo maiores vulgivagus succurro temporibus.',
     status: Models::Shared::RepoPullrequestStatus::APPROVED,
     title: 'compress redundant application',
-    updated_at: DateTime.iso8601('2026-02-14T18:41:33.924Z')
+    updated_at: DateTime.iso8601('2026-02-15T14:56:13.046Z')
   ),
   connection_id: '<id>',
   id: '<id>'

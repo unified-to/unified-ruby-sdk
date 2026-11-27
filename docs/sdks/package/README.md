@@ -37,7 +37,7 @@ res = s.package.create_assessment_package(assessment_package: Models::Shared::As
   description: 'Urbs tergiversatio admitto summa accusator.',
   has_redirect_url: true,
   has_target_url: false,
-  id: '613d108d-116d-4c35-8652-27bcc8abc015',
+  id: '5167e406-469e-4322-9476-35919be17a59',
   info_url: 'https://unkempt-habit.net',
   integration_types: [
     'tabesco',
@@ -52,7 +52,7 @@ res = s.package.create_assessment_package(assessment_package: Models::Shared::As
     'eos',
   ],
   type: Models::Shared::AssessmentPackageType::VIDEO_INTERVIEW,
-  updated_at: DateTime.iso8601('2023-10-03T04:21:29.506Z')
+  updated_at: DateTime.iso8601('2023-10-03T09:53:58.476Z')
 ), connection_id: '<id>')
 
 unless res.assessment_package.nil?
@@ -272,7 +272,7 @@ res = s.package.patch_assessment_package(assessment_package: Models::Shared::Ass
   description: 'Urbs tergiversatio admitto summa accusator.',
   has_redirect_url: true,
   has_target_url: false,
-  id: '77a86535-129f-464d-a379-cf9ba34dc0f7',
+  id: '533ba276-8d4d-4ea5-bef8-dac377b0ff75',
   info_url: 'https://unkempt-habit.net',
   integration_types: [
     'tabesco',
@@ -287,7 +287,7 @@ res = s.package.patch_assessment_package(assessment_package: Models::Shared::Ass
     'eos',
   ],
   type: Models::Shared::AssessmentPackageType::VIDEO_INTERVIEW,
-  updated_at: DateTime.iso8601('2023-10-03T04:21:29.510Z')
+  updated_at: DateTime.iso8601('2023-10-03T09:53:58.480Z')
 ), connection_id: '<id>', id: '<id>')
 
 unless res.assessment_package.nil?
@@ -379,7 +379,7 @@ res = s.package.update_assessment_package(assessment_package: Models::Shared::As
   description: 'Urbs tergiversatio admitto summa accusator.',
   has_redirect_url: true,
   has_target_url: false,
-  id: '77a86535-129f-464d-a379-cf9ba34dc0f7',
+  id: '533ba276-8d4d-4ea5-bef8-dac377b0ff75',
   info_url: 'https://unkempt-habit.net',
   integration_types: [
     'tabesco',
@@ -394,7 +394,7 @@ res = s.package.update_assessment_package(assessment_package: Models::Shared::As
     'eos',
   ],
   type: Models::Shared::AssessmentPackageType::VIDEO_INTERVIEW,
-  updated_at: DateTime.iso8601('2023-10-03T04:21:29.510Z')
+  updated_at: DateTime.iso8601('2023-10-03T09:53:58.480Z')
 ), connection_id: '<id>', id: '<id>')
 
 unless res.assessment_package.nil?

@@ -1,0 +1,12 @@
+# Person
+
+
+## Fields
+
+| Field                                                                        | Type                                                                         | Required                                                                     | Description                                                                  |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `created_at`                                                                 | [DateTime](https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/DateTime.html) | :heavy_minus_sign:                                                           | (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)                                     |
+| `id`                                                                         | *T.nilable(::String)*                                                        | :heavy_minus_sign:                                                           | N/A                                                                          |
+| `new_id`                                                                     | *T.nilable(::String)*                                                        | :heavy_minus_sign:                                                           | N/A                                                                          |
+| `previous_ids`                                                               | T::Array<*::String*>                                                         | :heavy_minus_sign:                                                           | N/A                                                                          |
+| `updated_at`                                                                 | [DateTime](https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/DateTime.html) | :heavy_minus_sign:                                                           | (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)                                     |

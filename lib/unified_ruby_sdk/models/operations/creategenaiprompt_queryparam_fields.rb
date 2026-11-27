@@ -22,6 +22,9 @@ module UnifiedRubySDK
           QUESTIONS = new('questions')
           ANSWERS = new('answers')
           SKILL_IDS = new('skill_ids')
+          ID = new('id')
+          PARENT_ID = new('parent_id')
+          HAS_THREAD = new('has_thread')
           RAW = new('raw')
         end
       end

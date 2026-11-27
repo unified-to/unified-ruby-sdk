@@ -14,6 +14,7 @@
 * [get_unified_connection](#get_unified_connection) - Retrieve connection
 * [get_unified_integration_auth](#get_unified_integration_auth) - Authorize or re-authorize a connection
 * [get_unified_issue](#get_unified_issue) - Retrieve support issue
+* [get_unified_person](#get_unified_person) - Retrieve a person by ID
 * [get_unified_secretsmanager](#get_unified_secretsmanager) - Retrieve secrets manager
 * [get_unified_webhook](#get_unified_webhook) - Retrieve webhook by its ID
 * [get_unified_workspaceintegration](#get_unified_workspaceintegration) - Retrieve workspace integration
@@ -24,6 +25,7 @@
 * [list_unified_integrations](#list_unified_integrations) - Returns all integrations
 * [list_unified_issues](#list_unified_issues) - List support issues
 * [list_unified_notifications](#list_unified_notifications) - List event notifications
+* [list_unified_people](#list_unified_people) - Search for persons by email addresses
 * [list_unified_secretsmanager_instructions](#list_unified_secretsmanager_instructions) - List secrets manager setup instructions
 * [list_unified_secretsmanager_secrets](#list_unified_secretsmanager_secrets) - List secrets in a secrets manager
 * [list_unified_secretsmanagers](#list_unified_secretsmanagers) - List secrets managers
@@ -37,6 +39,7 @@
 * [patch_unified_workspaceintegration](#patch_unified_workspaceintegration) - Update workspace integration
 * [remove_unified_connection](#remove_unified_connection) - Remove connection
 * [remove_unified_environment](#remove_unified_environment) - Remove an environment
+* [remove_unified_person](#remove_unified_person) - Erase email addresses from the unified persons
 * [remove_unified_secretsmanager](#remove_unified_secretsmanager) - Remove secrets manager
 * [remove_unified_webhook](#remove_unified_webhook) - Remove webhook subscription
 * [remove_unified_workspaceintegration](#remove_unified_workspaceintegration) - Remove workspace integration
@@ -480,6 +483,46 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## get_unified_person
+
+Retrieve a person by ID
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getUnifiedPerson" method="get" path="/unified/person/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.unified.get_unified_person(id: '<id>')
+
+unless res.person.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter          | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `id`               | *::String*         | :heavy_check_mark: | ID of the Person   |
+
+### Response
+
+**[T.nilable(Models::Operations::GetUnifiedPersonResponse)](../../models/operations/getunifiedpersonresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## get_unified_secretsmanager
 
 Retrieve secrets manager
@@ -881,6 +924,46 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::ListUnifiedNotificationsResponse)](../../models/operations/listunifiednotificationsresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## list_unified_people
+
+Search for persons by email addresses
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listUnifiedPeople" method="get" path="/unified/person" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.unified.list_unified_people(query: '<value>')
+
+unless res.people.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `query`                                                                                        | *::String*                                                                                     | :heavy_check_mark:                                                                             | Comma-delimited email addresses to search for (at most 100); returns each matching person once |
+
+### Response
+
+**[T.nilable(Models::Operations::ListUnifiedPeopleResponse)](../../models/operations/listunifiedpeopleresponse.md)**
 
 ### Errors
 
@@ -1423,6 +1506,46 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::RemoveUnifiedEnvironmentResponse)](../../models/operations/removeunifiedenvironmentresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## remove_unified_person
+
+Erase email addresses from the unified persons
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="removeUnifiedPerson" method="delete" path="/unified/person" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.unified.remove_unified_person(query: '<value>')
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                             | Type                                                                                                                                  | Required                                                                                                                              | Description                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `query`                                                                                                                               | *::String*                                                                                                                            | :heavy_check_mark:                                                                                                                    | Comma-delimited email addresses to erase from this workspace's unified persons (at most 100); a person left without emails is deleted |
+
+### Response
+
+**[T.nilable(Models::Operations::RemoveUnifiedPersonResponse)](../../models/operations/removeunifiedpersonresponse.md)**
 
 ### Errors
 

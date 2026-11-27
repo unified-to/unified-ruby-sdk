@@ -27,13 +27,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.conversation.create_property_conversation(property_conversation: Models::Shared::PropertyConversation.new(
   created_at: DateTime.iso8601('2022-06-20T00:02:46.530Z'),
   guest_name: 'Maida Funk',
-  id: '2124dec1-7c73-48f6-a51d-102dc80a53f3',
+  id: '8ca6517e-92fa-45f9-bea2-d4a79a56b710',
   is_unread: false,
   messages: [
     Models::Shared::PropertyMessage.new(
       attachments: [],
-      created_at: DateTime.iso8601('2025-05-09T22:44:39.263Z'),
-      id: 'e0f8f417-ea6b-4e9a-b976-07ae71964856',
+      created_at: DateTime.iso8601('2025-05-10T15:23:08.606Z'),
+      id: '34e8f378-64b2-411f-a2b7-a66959c66fb1',
       is_automatic: false,
       message: 'Sophismata admitto colo.',
       sender_name: 'Maida Funk',
@@ -41,8 +41,8 @@ res = s.conversation.create_property_conversation(property_conversation: Models:
     ),
     Models::Shared::PropertyMessage.new(
       attachments: [],
-      created_at: DateTime.iso8601('2026-05-29T14:41:01.284Z'),
-      id: '95756049-8c9d-407e-aa70-2f254ae12912',
+      created_at: DateTime.iso8601('2026-05-30T13:23:35.329Z'),
+      id: 'b6552885-6012-46b0-a767-f8108092bcfe',
       message: 'Aufero torrens tonsor aequitas torqueo curiositas cimentarius repellendus auditor.',
       sender_name: 'Alysson Sanford',
       sender_type: Models::Shared::SenderType::HOST
@@ -50,7 +50,7 @@ res = s.conversation.create_property_conversation(property_conversation: Models:
   ],
   metadata: [],
   source: 'Airbnb',
-  updated_at: DateTime.iso8601('2026-05-29T14:41:01.284Z')
+  updated_at: DateTime.iso8601('2026-05-30T13:23:35.329Z')
 ), connection_id: '<id>')
 
 unless res.property_conversation.nil?

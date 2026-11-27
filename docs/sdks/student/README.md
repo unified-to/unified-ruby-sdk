@@ -41,7 +41,7 @@ res = s.student.create_lms_student(lms_student: Models::Shared::LmsStudent.new(
     Models::Shared::LmsEmail.new,
   ],
   first_name: 'Lazaro',
-  id: '023ec190-473d-418b-8dab-cf3d151679cf',
+  id: 'e1c19016-f0e8-4d37-833f-1ba6e8be75b9',
   image_url: 'https://avatars.githubusercontent.com/u/3245424',
   last_name: 'Zulauf-Schowalter',
   metadata: [],
@@ -60,7 +60,7 @@ res = s.student.create_lms_student(lms_student: Models::Shared::LmsStudent.new(
       type: Models::Shared::LmsTelephoneType::FAX
     ),
   ],
-  updated_at: DateTime.iso8601('2022-07-13T09:24:57.222Z')
+  updated_at: DateTime.iso8601('2022-07-13T18:14:24.347Z')
 ), connection_id: '<id>')
 
 unless res.lms_student.nil?
@@ -207,7 +207,7 @@ req = Models::Operations::PatchLmsStudentRequest.new(
       Models::Shared::LmsEmail.new,
     ],
     first_name: 'Lazaro',
-    id: '75c0ef46-3f4e-46d4-be26-d64892281432',
+    id: '887c5d83-6580-4ba9-a2a2-5246fdc76460',
     image_url: 'https://avatars.githubusercontent.com/u/3245424',
     last_name: 'Zulauf-Schowalter',
     metadata: [],
@@ -226,7 +226,7 @@ req = Models::Operations::PatchLmsStudentRequest.new(
         type: Models::Shared::LmsTelephoneType::FAX
       ),
     ],
-    updated_at: DateTime.iso8601('2022-07-13T09:24:57.228Z')
+    updated_at: DateTime.iso8601('2022-07-13T18:14:24.354Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -328,7 +328,7 @@ req = Models::Operations::UpdateLmsStudentRequest.new(
       Models::Shared::LmsEmail.new,
     ],
     first_name: 'Lazaro',
-    id: '75c0ef46-3f4e-46d4-be26-d64892281432',
+    id: '887c5d83-6580-4ba9-a2a2-5246fdc76460',
     image_url: 'https://avatars.githubusercontent.com/u/3245424',
     last_name: 'Zulauf-Schowalter',
     metadata: [],
@@ -347,7 +347,7 @@ req = Models::Operations::UpdateLmsStudentRequest.new(
         type: Models::Shared::LmsTelephoneType::FAX
       ),
     ],
-    updated_at: DateTime.iso8601('2022-07-13T09:24:57.228Z')
+    updated_at: DateTime.iso8601('2022-07-13T18:14:24.354Z')
   ),
   connection_id: '<id>',
   id: '<id>'

@@ -31,13 +31,13 @@ res = s.invoice.create_accounting_invoice(accounting_invoice: Models::Shared::Ac
   attachments: [
     Models::Shared::AccountingAttachment.new(
       download_url: 'https://simplistic-translation.com',
-      id: '2e23b892-ccdd-4ffd-bcdd-2f55d12432d0',
+      id: 'bc68f8fc-5646-41ce-ac04-681226104257',
       mime_type: 'application/pdf',
       name: 'INV-77705.pdf'
     ),
     Models::Shared::AccountingAttachment.new(
       download_url: 'https://squiggly-amnesty.name/',
-      id: '21381459-89fa-4312-8c3c-385198288569',
+      id: '9d569332-8ffb-44a8-ae6f-83cb3aad6c2b',
       mime_type: 'application/pdf',
       name: 'INV-77705-1.pdf'
     ),
@@ -49,7 +49,7 @@ res = s.invoice.create_accounting_invoice(accounting_invoice: Models::Shared::Ac
   discount_amount: 0.0,
   due_at: DateTime.iso8601('2022-12-07T14:17:29.587Z'),
   extended_notes: [],
-  id: '232d704e-8fe0-471d-8fd0-15a7df8911e9',
+  id: '9fa5ae7a-022a-473a-9d23-5e68c532b95e',
   invoice_number: 'INV-77705',
   is_inclusive_of_tax: false,
   lineitems: [],
@@ -67,7 +67,7 @@ res = s.invoice.create_accounting_invoice(accounting_invoice: Models::Shared::Ac
   term: Models::Shared::AccountingInvoiceTerm::NET_25,
   total_amount: 0.0,
   type: Models::Shared::AccountingInvoiceType::INVOICE,
-  updated_at: DateTime.iso8601('2026-05-25T00:04:53.312Z'),
+  updated_at: DateTime.iso8601('2026-05-25T22:26:27.750Z'),
   url: 'https://helpful-exterior.com/invoices/INV-77705'
 ), connection_id: '<id>')
 
@@ -205,13 +205,13 @@ req = Models::Operations::PatchAccountingInvoiceRequest.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://simplistic-translation.com',
-        id: '90c94972-c43d-466b-81c5-e1b293da42a7',
+        id: '4eb8e151-323c-4774-bb7b-0b41717fc54f',
         mime_type: 'application/pdf',
         name: 'INV-77705.pdf'
       ),
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://squiggly-amnesty.name/',
-        id: '2f7b29fe-dd39-4b86-bfa8-a20f6cc507c4',
+        id: 'f6cc4a58-cf2f-4473-8695-fcdddbae90dd',
         mime_type: 'application/pdf',
         name: 'INV-77705-1.pdf'
       ),
@@ -223,7 +223,7 @@ req = Models::Operations::PatchAccountingInvoiceRequest.new(
     discount_amount: 0.0,
     due_at: DateTime.iso8601('2022-12-07T14:17:29.587Z'),
     extended_notes: [],
-    id: '9dbe9ba6-99b8-46f9-b05a-aa7ccb16d06b',
+    id: '1cffa58d-5565-413a-9de6-5bd82a92fd57',
     invoice_number: 'INV-77705',
     is_inclusive_of_tax: false,
     lineitems: [],
@@ -241,7 +241,7 @@ req = Models::Operations::PatchAccountingInvoiceRequest.new(
     term: Models::Shared::AccountingInvoiceTerm::NET_25,
     total_amount: 0.0,
     type: Models::Shared::AccountingInvoiceType::INVOICE,
-    updated_at: DateTime.iso8601('2026-05-25T00:04:53.350Z'),
+    updated_at: DateTime.iso8601('2026-05-25T22:26:27.799Z'),
     url: 'https://helpful-exterior.com/invoices/INV-77705'
   ),
   connection_id: '<id>',
@@ -334,13 +334,13 @@ req = Models::Operations::UpdateAccountingInvoiceRequest.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://simplistic-translation.com',
-        id: '90c94972-c43d-466b-81c5-e1b293da42a7',
+        id: '4eb8e151-323c-4774-bb7b-0b41717fc54f',
         mime_type: 'application/pdf',
         name: 'INV-77705.pdf'
       ),
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://squiggly-amnesty.name/',
-        id: '2f7b29fe-dd39-4b86-bfa8-a20f6cc507c4',
+        id: 'f6cc4a58-cf2f-4473-8695-fcdddbae90dd',
         mime_type: 'application/pdf',
         name: 'INV-77705-1.pdf'
       ),
@@ -352,7 +352,7 @@ req = Models::Operations::UpdateAccountingInvoiceRequest.new(
     discount_amount: 0.0,
     due_at: DateTime.iso8601('2022-12-07T14:17:29.587Z'),
     extended_notes: [],
-    id: '9dbe9ba6-99b8-46f9-b05a-aa7ccb16d06b',
+    id: '1cffa58d-5565-413a-9de6-5bd82a92fd57',
     invoice_number: 'INV-77705',
     is_inclusive_of_tax: false,
     lineitems: [],
@@ -370,7 +370,7 @@ req = Models::Operations::UpdateAccountingInvoiceRequest.new(
     term: Models::Shared::AccountingInvoiceTerm::NET_25,
     total_amount: 0.0,
     type: Models::Shared::AccountingInvoiceType::INVOICE,
-    updated_at: DateTime.iso8601('2026-05-25T00:04:53.350Z'),
+    updated_at: DateTime.iso8601('2026-05-25T22:26:27.799Z'),
     url: 'https://helpful-exterior.com/invoices/INV-77705'
   ),
   connection_id: '<id>',

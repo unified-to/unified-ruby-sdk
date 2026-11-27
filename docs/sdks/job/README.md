@@ -71,7 +71,7 @@ res = s.job.create_ats_job(ats_job: Models::Shared::AtsJob.new(
     ),
   ],
   hiring_managers: [],
-  id: 'b949f9da-ca21-4d9c-8117-d531606379e7',
+  id: '37559966-6796-43d0-a8a5-5cb3a1a08afa',
   industry: 'Refined Ceramic Keyboard',
   language_locale: 'en',
   metadata: [
@@ -80,7 +80,7 @@ res = s.job.create_ats_job(ats_job: Models::Shared::AtsJob.new(
         'display_name' => 'Custom Property',
       },
       format: Models::Shared::AtsMetadataFormat::TEXT,
-      id: '7ccc59aa-bac4-4d3e-89db-58561bdc206c',
+      id: 'ad773332-89f4-41c2-9f44-7f5f8aa705fa',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'cursus'
@@ -93,7 +93,7 @@ res = s.job.create_ats_job(ats_job: Models::Shared::AtsJob.new(
   openings: [
     Models::Shared::AtsJobOpening.new(
       close_reason: 'Tolero aequus tamquam inflammatio asporto canis vinitor utrum.',
-      opened_at: DateTime.iso8601('2026-07-09T21:00:12.848Z'),
+      opened_at: DateTime.iso8601('2026-07-10T19:44:01.973Z'),
       status: Models::Shared::AtsJobOpeningStatus::OPEN
     ),
   ],
@@ -107,14 +107,14 @@ res = s.job.create_ats_job(ats_job: Models::Shared::AtsJob.new(
         region: 'Utah',
         region_code: 'NE'
       ),
-      created_at: DateTime.iso8601('2026-09-04T14:56:13.534Z'),
+      created_at: DateTime.iso8601('2026-09-05T14:49:11.156Z'),
       description: 'Sublime.',
-      id: '858bf9ab-d73a-48d6-857f-50b61589449b',
+      id: '2e67e354-2a2f-4dc9-af0c-da4f86cb15c7',
       is_active: false,
       location: '5699 Purdy Motorway',
       name: 'Legacy Implementation Orchestrator',
       posting_url: 'https://elementary-privilege.com/',
-      updated_at: DateTime.iso8601('2026-10-01T16:53:24.299Z')
+      updated_at: DateTime.iso8601('2026-10-02T17:19:21.702Z')
     ),
   ],
   public_job_urls: [
@@ -124,7 +124,7 @@ res = s.job.create_ats_job(ats_job: Models::Shared::AtsJob.new(
   questions: [
     Models::Shared::AtsJobQuestion.new(
       description: 'Capitulus.',
-      id: '59a5b77a-593c-4f75-94c0-8437f7e9cb53',
+      id: '45ec1cb9-f4ed-4f3d-bd3e-05fdc57acd40',
       max_length: 214.0,
       min_length: 1.0,
       options: [
@@ -137,7 +137,7 @@ res = s.job.create_ats_job(ats_job: Models::Shared::AtsJob.new(
       type: Models::Shared::AtsJobQuestionType::TEXT
     ),
     Models::Shared::AtsJobQuestion.new(
-      id: '1d1c6e0f-88c8-40eb-8273-976482a05f6e',
+      id: '7e6c439e-012b-4d66-921b-518ffb900fba',
       max_length: 309.0,
       min_length: 1.0,
       options: [
@@ -150,7 +150,7 @@ res = s.job.create_ats_job(ats_job: Models::Shared::AtsJob.new(
     ),
     Models::Shared::AtsJobQuestion.new(
       description: 'Confero trepide.',
-      id: 'bf858dcb-5592-4737-9b33-af223dc5ceb1',
+      id: 'c7ab950a-e88e-43fd-b951-c9213cc11138',
       max_length: 428.0,
       min_length: 1.0,
       options: [
@@ -168,7 +168,7 @@ res = s.job.create_ats_job(ats_job: Models::Shared::AtsJob.new(
   ],
   status: Models::Shared::AtsJobStatus::ARCHIVED,
   summary: 'Contra damno desolo suadeo utrimque cresco aetas turpis.',
-  updated_at: DateTime.iso8601('2026-03-28T10:23:32.850Z')
+  updated_at: DateTime.iso8601('2026-03-29T07:01:19.853Z')
 ), connection_id: '<id>')
 
 unless res.ats_job.nil?
@@ -217,11 +217,11 @@ res = s.job.create_hris_job(hris_job: Models::Shared::HrisJob.new(
   created_at: DateTime.iso8601('2020-10-28T01:13:19.491Z'),
   description: 'Bonus vobis creator tabella callide cavus triumphus caveo abbas patria.',
   employment_type: Models::Shared::HrisJobEmploymentType::FREELANCE,
-  id: 'f1722d67-0c2e-42bd-bf52-5643fcbbd55a',
+  id: 'be4428f4-bd5c-4c1f-897e-72bb554c666f',
   is_active: false,
   metadata: [],
   name: 'Customer Security Assistant',
-  updated_at: DateTime.iso8601('2023-02-12T18:56:53.670Z')
+  updated_at: DateTime.iso8601('2023-02-13T04:35:30.712Z')
 ), connection_id: '<id>')
 
 unless res.hris_job.nil?
@@ -479,7 +479,7 @@ req = Models::Operations::PatchAtsJobRequest.new(
       ),
     ],
     hiring_managers: [],
-    id: 'efc74b55-a2f1-493e-b446-8dddcd27dbb5',
+    id: 'd6e9481c-d05e-4d0b-96e5-df459af7b917',
     industry: 'Refined Ceramic Keyboard',
     language_locale: 'en',
     metadata: [
@@ -488,7 +488,7 @@ req = Models::Operations::PatchAtsJobRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '8f8fb25b-cf84-451a-b199-66179e59e6b0',
+        id: '38ce8b13-6dbf-4d9a-89cd-ab32e5615ffd',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'cursus'
@@ -501,7 +501,7 @@ req = Models::Operations::PatchAtsJobRequest.new(
     openings: [
       Models::Shared::AtsJobOpening.new(
         close_reason: 'Tolero aequus tamquam inflammatio asporto canis vinitor utrum.',
-        opened_at: DateTime.iso8601('2026-07-09T21:00:12.896Z'),
+        opened_at: DateTime.iso8601('2026-07-10T19:44:02.010Z'),
         status: Models::Shared::AtsJobOpeningStatus::OPEN
       ),
     ],
@@ -515,14 +515,14 @@ req = Models::Operations::PatchAtsJobRequest.new(
           region: 'Utah',
           region_code: 'NE'
         ),
-        created_at: DateTime.iso8601('2026-09-04T14:56:13.585Z'),
+        created_at: DateTime.iso8601('2026-09-05T14:49:11.196Z'),
         description: 'Sublime.',
-        id: '360a801c-3e7d-4557-a96e-7712025c35fd',
+        id: 'a36161a7-9e79-4178-abde-92822ceb84c8',
         is_active: false,
         location: '5699 Purdy Motorway',
         name: 'Legacy Implementation Orchestrator',
         posting_url: 'https://elementary-privilege.com/',
-        updated_at: DateTime.iso8601('2026-10-01T16:53:24.351Z')
+        updated_at: DateTime.iso8601('2026-10-02T17:19:21.742Z')
       ),
     ],
     public_job_urls: [
@@ -532,7 +532,7 @@ req = Models::Operations::PatchAtsJobRequest.new(
     questions: [
       Models::Shared::AtsJobQuestion.new(
         description: 'Capitulus.',
-        id: '09cb20d3-3ea5-406b-a781-b1a0cfe2c639',
+        id: 'e51791ca-8c3f-4203-a822-d6702a802e48',
         max_length: 214.0,
         min_length: 1.0,
         options: [
@@ -545,7 +545,7 @@ req = Models::Operations::PatchAtsJobRequest.new(
         type: Models::Shared::AtsJobQuestionType::TEXT
       ),
       Models::Shared::AtsJobQuestion.new(
-        id: 'd90d35d4-111b-42b6-8e19-5a91cfa96311',
+        id: '4072a8a2-e5ff-4a0c-a638-4d125bc486c3',
         max_length: 309.0,
         min_length: 1.0,
         options: [
@@ -558,7 +558,7 @@ req = Models::Operations::PatchAtsJobRequest.new(
       ),
       Models::Shared::AtsJobQuestion.new(
         description: 'Confero trepide.',
-        id: '0bf31191-8d7e-49e2-a16d-590217ed0ce5',
+        id: '556a44bc-9b15-4a2a-b512-4583533fc506',
         max_length: 428.0,
         min_length: 1.0,
         options: [
@@ -576,7 +576,7 @@ req = Models::Operations::PatchAtsJobRequest.new(
     ],
     status: Models::Shared::AtsJobStatus::ARCHIVED,
     summary: 'Contra damno desolo suadeo utrimque cresco aetas turpis.',
-    updated_at: DateTime.iso8601('2026-03-28T10:23:32.893Z')
+    updated_at: DateTime.iso8601('2026-03-29T07:01:19.887Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -628,11 +628,11 @@ req = Models::Operations::PatchHrisJobRequest.new(
     created_at: DateTime.iso8601('2020-10-28T01:13:19.491Z'),
     description: 'Bonus vobis creator tabella callide cavus triumphus caveo abbas patria.',
     employment_type: Models::Shared::HrisJobEmploymentType::FREELANCE,
-    id: 'f4fa4157-ad95-4740-b3cc-f677feb5193c',
+    id: 'acc8a3f8-b0cc-4c53-9c2e-8660ecea53b3',
     is_active: false,
     metadata: [],
     name: 'Customer Security Assistant',
-    updated_at: DateTime.iso8601('2023-02-12T18:56:53.722Z')
+    updated_at: DateTime.iso8601('2023-02-13T04:35:30.745Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -799,7 +799,7 @@ req = Models::Operations::UpdateAtsJobRequest.new(
       ),
     ],
     hiring_managers: [],
-    id: 'efc74b55-a2f1-493e-b446-8dddcd27dbb5',
+    id: 'd6e9481c-d05e-4d0b-96e5-df459af7b917',
     industry: 'Refined Ceramic Keyboard',
     language_locale: 'en',
     metadata: [
@@ -808,7 +808,7 @@ req = Models::Operations::UpdateAtsJobRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '8f8fb25b-cf84-451a-b199-66179e59e6b0',
+        id: '38ce8b13-6dbf-4d9a-89cd-ab32e5615ffd',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'cursus'
@@ -821,7 +821,7 @@ req = Models::Operations::UpdateAtsJobRequest.new(
     openings: [
       Models::Shared::AtsJobOpening.new(
         close_reason: 'Tolero aequus tamquam inflammatio asporto canis vinitor utrum.',
-        opened_at: DateTime.iso8601('2026-07-09T21:00:12.896Z'),
+        opened_at: DateTime.iso8601('2026-07-10T19:44:02.010Z'),
         status: Models::Shared::AtsJobOpeningStatus::OPEN
       ),
     ],
@@ -835,14 +835,14 @@ req = Models::Operations::UpdateAtsJobRequest.new(
           region: 'Utah',
           region_code: 'NE'
         ),
-        created_at: DateTime.iso8601('2026-09-04T14:56:13.585Z'),
+        created_at: DateTime.iso8601('2026-09-05T14:49:11.196Z'),
         description: 'Sublime.',
-        id: '360a801c-3e7d-4557-a96e-7712025c35fd',
+        id: 'a36161a7-9e79-4178-abde-92822ceb84c8',
         is_active: false,
         location: '5699 Purdy Motorway',
         name: 'Legacy Implementation Orchestrator',
         posting_url: 'https://elementary-privilege.com/',
-        updated_at: DateTime.iso8601('2026-10-01T16:53:24.351Z')
+        updated_at: DateTime.iso8601('2026-10-02T17:19:21.742Z')
       ),
     ],
     public_job_urls: [
@@ -852,7 +852,7 @@ req = Models::Operations::UpdateAtsJobRequest.new(
     questions: [
       Models::Shared::AtsJobQuestion.new(
         description: 'Capitulus.',
-        id: '09cb20d3-3ea5-406b-a781-b1a0cfe2c639',
+        id: 'e51791ca-8c3f-4203-a822-d6702a802e48',
         max_length: 214.0,
         min_length: 1.0,
         options: [
@@ -865,7 +865,7 @@ req = Models::Operations::UpdateAtsJobRequest.new(
         type: Models::Shared::AtsJobQuestionType::TEXT
       ),
       Models::Shared::AtsJobQuestion.new(
-        id: 'd90d35d4-111b-42b6-8e19-5a91cfa96311',
+        id: '4072a8a2-e5ff-4a0c-a638-4d125bc486c3',
         max_length: 309.0,
         min_length: 1.0,
         options: [
@@ -878,7 +878,7 @@ req = Models::Operations::UpdateAtsJobRequest.new(
       ),
       Models::Shared::AtsJobQuestion.new(
         description: 'Confero trepide.',
-        id: '0bf31191-8d7e-49e2-a16d-590217ed0ce5',
+        id: '556a44bc-9b15-4a2a-b512-4583533fc506',
         max_length: 428.0,
         min_length: 1.0,
         options: [
@@ -896,7 +896,7 @@ req = Models::Operations::UpdateAtsJobRequest.new(
     ],
     status: Models::Shared::AtsJobStatus::ARCHIVED,
     summary: 'Contra damno desolo suadeo utrimque cresco aetas turpis.',
-    updated_at: DateTime.iso8601('2026-03-28T10:23:32.893Z')
+    updated_at: DateTime.iso8601('2026-03-29T07:01:19.887Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -948,11 +948,11 @@ req = Models::Operations::UpdateHrisJobRequest.new(
     created_at: DateTime.iso8601('2020-10-28T01:13:19.491Z'),
     description: 'Bonus vobis creator tabella callide cavus triumphus caveo abbas patria.',
     employment_type: Models::Shared::HrisJobEmploymentType::FREELANCE,
-    id: 'f4fa4157-ad95-4740-b3cc-f677feb5193c',
+    id: 'acc8a3f8-b0cc-4c53-9c2e-8660ecea53b3',
     is_active: false,
     metadata: [],
     name: 'Customer Security Assistant',
-    updated_at: DateTime.iso8601('2023-02-12T18:56:53.722Z')
+    updated_at: DateTime.iso8601('2023-02-13T04:35:30.745Z')
   ),
   connection_id: '<id>',
   id: '<id>'

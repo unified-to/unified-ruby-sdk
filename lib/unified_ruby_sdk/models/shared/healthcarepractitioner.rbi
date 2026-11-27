@@ -8,6 +8,8 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::HealthcarePractitioner
+  def unified_person_ids(); end
+  def unified_person_ids=(str_); end
   def address(); end
   def address=(str_); end
   def created_at(); end

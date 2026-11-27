@@ -32,7 +32,7 @@ res = s.ticket.create_ticketing_ticket(ticketing_ticket: Models::Shared::Ticketi
   created_at: DateTime.iso8601('2021-06-25T19:19:31.279Z'),
   description: 'Aut clibanus vulgaris patrocinor confugo laborum acies. Antepono coniuratio conculco correptius curiositas sono. Coma socius bestia suus tot.',
   due_at: DateTime.iso8601('2021-07-07T17:39:49.813Z'),
-  id: '8c9b78cd-5567-4764-9c8a-4e480854ff18',
+  id: '78ef7bb2-c0a3-476e-a8f3-b6921b391a08',
   metadata: [],
   priority: 'MEDIUM',
   source: 'email',
@@ -41,7 +41,7 @@ res = s.ticket.create_ticketing_ticket(ticketing_ticket: Models::Shared::Ticketi
   tags: [
     'cotidie',
   ],
-  updated_at: DateTime.iso8601('2021-07-03T22:01:09.585Z'),
+  updated_at: DateTime.iso8601('2021-07-03T22:07:26.664Z'),
   url: 'https://royal-flu.com'
 ), connection_id: '<id>')
 
@@ -180,7 +180,7 @@ req = Models::Operations::PatchTicketingTicketRequest.new(
     created_at: DateTime.iso8601('2021-06-25T19:19:31.279Z'),
     description: 'Aut clibanus vulgaris patrocinor confugo laborum acies. Antepono coniuratio conculco correptius curiositas sono. Coma socius bestia suus tot.',
     due_at: DateTime.iso8601('2021-07-07T17:39:49.813Z'),
-    id: 'b8854898-d469-4e14-b900-f232f318a472',
+    id: 'a57e1b27-67c9-474c-8768-65315f3b4c05',
     metadata: [],
     priority: 'MEDIUM',
     source: 'email',
@@ -189,7 +189,7 @@ req = Models::Operations::PatchTicketingTicketRequest.new(
     tags: [
       'cotidie',
     ],
-    updated_at: DateTime.iso8601('2021-07-03T22:01:09.585Z'),
+    updated_at: DateTime.iso8601('2021-07-03T22:07:26.664Z'),
     url: 'https://royal-flu.com'
   ),
   connection_id: '<id>',
@@ -283,7 +283,7 @@ req = Models::Operations::UpdateTicketingTicketRequest.new(
     created_at: DateTime.iso8601('2021-06-25T19:19:31.279Z'),
     description: 'Aut clibanus vulgaris patrocinor confugo laborum acies. Antepono coniuratio conculco correptius curiositas sono. Coma socius bestia suus tot.',
     due_at: DateTime.iso8601('2021-07-07T17:39:49.813Z'),
-    id: 'b8854898-d469-4e14-b900-f232f318a472',
+    id: 'a57e1b27-67c9-474c-8768-65315f3b4c05',
     metadata: [],
     priority: 'MEDIUM',
     source: 'email',
@@ -292,7 +292,7 @@ req = Models::Operations::UpdateTicketingTicketRequest.new(
     tags: [
       'cotidie',
     ],
-    updated_at: DateTime.iso8601('2021-07-03T22:01:09.585Z'),
+    updated_at: DateTime.iso8601('2021-07-03T22:07:26.664Z'),
     url: 'https://royal-flu.com'
   ),
   connection_id: '<id>',

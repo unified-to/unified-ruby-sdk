@@ -29,11 +29,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.key.create_compute_key(compute_key: Models::Shared::ComputeKey.new(
   created_at: DateTime.iso8601('2023-08-19T14:31:46.492Z'),
-  id: '13e465b5-d1f9-4bea-9cdc-b512f421c210',
+  id: '8b5c8954-b4f3-4fa5-8bde-8c4998081dd0',
   metadata: [],
   name: 'huels-secret',
   type: Models::Shared::ComputeKeyType::SECRET,
-  updated_at: DateTime.iso8601('2024-10-19T20:00:46.314Z')
+  updated_at: DateTime.iso8601('2024-10-20T05:09:13.935Z')
 ), connection_id: '<id>')
 
 unless res.compute_key.nil?
@@ -168,11 +168,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchComputeKeyRequest.new(
   compute_key: Models::Shared::ComputeKey.new(
     created_at: DateTime.iso8601('2023-08-19T14:31:46.492Z'),
-    id: '1bc0c82a-c6bf-4454-a405-25f1da644c42',
+    id: 'b0c607f4-6b1f-45f6-bac4-7a2b5e13b207',
     metadata: [],
     name: 'huels-secret',
     type: Models::Shared::ComputeKeyType::SECRET,
-    updated_at: DateTime.iso8601('2024-10-19T20:00:46.319Z')
+    updated_at: DateTime.iso8601('2024-10-20T05:09:13.939Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -262,11 +262,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateComputeKeyRequest.new(
   compute_key: Models::Shared::ComputeKey.new(
     created_at: DateTime.iso8601('2023-08-19T14:31:46.492Z'),
-    id: '1bc0c82a-c6bf-4454-a405-25f1da644c42',
+    id: 'b0c607f4-6b1f-45f6-bac4-7a2b5e13b207',
     metadata: [],
     name: 'huels-secret',
     type: Models::Shared::ComputeKeyType::SECRET,
-    updated_at: DateTime.iso8601('2024-10-19T20:00:46.319Z')
+    updated_at: DateTime.iso8601('2024-10-20T05:09:13.939Z')
   ),
   connection_id: '<id>',
   id: '<id>'

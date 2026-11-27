@@ -64,7 +64,7 @@ res = s.contact.create_accounting_contact(accounting_contact: Models::Shared::Ac
     ),
   ],
   first_name: 'Michele',
-  id: '6337ea8f-1637-4996-947c-6216c14be4d8',
+  id: 'dc51b1a1-e26d-4f54-9cc8-4e7005a3d5b6',
   identification: '508720595',
   is_active: true,
   is_customer: true,
@@ -75,7 +75,7 @@ res = s.contact.create_accounting_contact(accounting_contact: Models::Shared::Ac
   payment_methods: [
     Models::Shared::AccountingContactPaymentMethod.new(
       default: true,
-      id: 'f9975245-6c3c-4481-8bc9-05b3df379b0f',
+      id: '490f6c00-4fb2-4520-a79a-a81ffb6d6e28',
       name: 'Visa 5318',
       type: Models::Shared::AccountingContactPaymentMethodType::CARD
     ),
@@ -97,7 +97,7 @@ res = s.contact.create_accounting_contact(accounting_contact: Models::Shared::Ac
       type: Models::Shared::AccountingTelephoneType::FAX
     ),
   ],
-  updated_at: DateTime.iso8601('2024-01-05T03:17:37.181Z'),
+  updated_at: DateTime.iso8601('2024-01-05T14:51:22.561Z'),
   website: 'https://ricellc.com'
 ), connection_id: '<id>')
 
@@ -161,7 +161,7 @@ res = s.contact.create_crm_contact(crm_contact: Models::Shared::CrmContact.new(
     ),
   ],
   first_name: 'Alexandro',
-  id: 'b7a2dc2d-af86-43b6-b7bd-7f756bb2f308',
+  id: 'e20c3119-6cc5-445b-997b-a5b329d9b18b',
   image_url: 'https://avatars.githubusercontent.com/u/26594214',
   last_name: 'Kuphal',
   link_urls: [
@@ -173,7 +173,7 @@ res = s.contact.create_crm_contact(crm_contact: Models::Shared::CrmContact.new(
         'display_name' => 'Custom Property',
       },
       format: Models::Shared::CrmMetadataFormat::TEXT,
-      id: '5e79c62b-7cff-4d90-b096-a3c9c3fb79de',
+      id: 'f8d7cced-3993-4b2d-bfa5-468bc8d176d1',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'amplus'
@@ -191,7 +191,7 @@ res = s.contact.create_crm_contact(crm_contact: Models::Shared::CrmContact.new(
     ),
   ],
   title: 'Direct Infrastructure Administrator',
-  updated_at: DateTime.iso8601('2021-02-25T02:46:37.235Z')
+  updated_at: DateTime.iso8601('2021-02-25T03:25:07.334Z')
 ), connection_id: '<id>')
 
 unless res.crm_contact.nil?
@@ -245,7 +245,7 @@ res = s.contact.create_uc_contact(uc_contact: Models::Shared::UcContact.new(
     ),
   ],
   first_name: 'Norval',
-  id: '9aa78d84-0283-4c17-b862-539e1557fc80',
+  id: 'c57016b5-a500-441c-927b-612df388ccb5',
   last_name: 'Brekke',
   metadata: [],
   name: 'Norval Brekke',
@@ -264,7 +264,7 @@ res = s.contact.create_uc_contact(uc_contact: Models::Shared::UcContact.new(
     ),
   ],
   title: 'Internal Creative Director',
-  updated_at: DateTime.iso8601('2023-12-29T13:26:17.330Z')
+  updated_at: DateTime.iso8601('2023-12-30T04:29:31.595Z')
 ), connection_id: '<id>')
 
 unless res.uc_contact.nil?
@@ -596,7 +596,7 @@ req = Models::Operations::PatchAccountingContactRequest.new(
       ),
     ],
     first_name: 'Michele',
-    id: '970058af-ca27-46cc-9d01-701c343cbf1d',
+    id: '10e5cbeb-5212-47b6-b30c-088e9534730a',
     identification: '508720595',
     is_active: true,
     is_customer: true,
@@ -607,7 +607,7 @@ req = Models::Operations::PatchAccountingContactRequest.new(
     payment_methods: [
       Models::Shared::AccountingContactPaymentMethod.new(
         default: true,
-        id: '99f33ef2-4817-4e9c-a64b-b45554c6e007',
+        id: '596de7cb-9874-4d30-adba-5c0e0240c423',
         name: 'Visa 5318',
         type: Models::Shared::AccountingContactPaymentMethodType::CARD
       ),
@@ -629,7 +629,7 @@ req = Models::Operations::PatchAccountingContactRequest.new(
         type: Models::Shared::AccountingTelephoneType::FAX
       ),
     ],
-    updated_at: DateTime.iso8601('2024-01-05T03:17:37.200Z'),
+    updated_at: DateTime.iso8601('2024-01-05T14:51:22.578Z'),
     website: 'https://ricellc.com'
   ),
   connection_id: '<id>',
@@ -696,7 +696,7 @@ req = Models::Operations::PatchCrmContactRequest.new(
       ),
     ],
     first_name: 'Alexandro',
-    id: '1a5043da-8c3c-45aa-9355-d58c91b5dcbd',
+    id: '3e0653fc-1198-4e31-bfd2-cde24e5bac8d',
     image_url: 'https://avatars.githubusercontent.com/u/26594214',
     last_name: 'Kuphal',
     link_urls: [
@@ -708,7 +708,7 @@ req = Models::Operations::PatchCrmContactRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '40459f97-a1a2-4b28-b1f9-6bf6adc1f4fd',
+        id: '1f0cf654-0587-46ff-a50d-cdef1cd3c61e',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'amplus'
@@ -726,7 +726,7 @@ req = Models::Operations::PatchCrmContactRequest.new(
       ),
     ],
     title: 'Direct Infrastructure Administrator',
-    updated_at: DateTime.iso8601('2021-02-25T02:46:37.235Z')
+    updated_at: DateTime.iso8601('2021-02-25T03:25:07.334Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -783,7 +783,7 @@ req = Models::Operations::PatchUcContactRequest.new(
       ),
     ],
     first_name: 'Norval',
-    id: '9558a333-79c2-4b05-9757-9356f3a11be7',
+    id: 'd39f3bbb-85fd-401a-9222-26bb78f3ea50',
     last_name: 'Brekke',
     metadata: [],
     name: 'Norval Brekke',
@@ -802,7 +802,7 @@ req = Models::Operations::PatchUcContactRequest.new(
       ),
     ],
     title: 'Internal Creative Director',
-    updated_at: DateTime.iso8601('2023-12-29T13:26:17.338Z')
+    updated_at: DateTime.iso8601('2023-12-30T04:29:31.604Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -997,7 +997,7 @@ req = Models::Operations::UpdateAccountingContactRequest.new(
       ),
     ],
     first_name: 'Michele',
-    id: '970058af-ca27-46cc-9d01-701c343cbf1d',
+    id: '10e5cbeb-5212-47b6-b30c-088e9534730a',
     identification: '508720595',
     is_active: true,
     is_customer: true,
@@ -1008,7 +1008,7 @@ req = Models::Operations::UpdateAccountingContactRequest.new(
     payment_methods: [
       Models::Shared::AccountingContactPaymentMethod.new(
         default: true,
-        id: '99f33ef2-4817-4e9c-a64b-b45554c6e007',
+        id: '596de7cb-9874-4d30-adba-5c0e0240c423',
         name: 'Visa 5318',
         type: Models::Shared::AccountingContactPaymentMethodType::CARD
       ),
@@ -1030,7 +1030,7 @@ req = Models::Operations::UpdateAccountingContactRequest.new(
         type: Models::Shared::AccountingTelephoneType::FAX
       ),
     ],
-    updated_at: DateTime.iso8601('2024-01-05T03:17:37.200Z'),
+    updated_at: DateTime.iso8601('2024-01-05T14:51:22.578Z'),
     website: 'https://ricellc.com'
   ),
   connection_id: '<id>',
@@ -1097,7 +1097,7 @@ req = Models::Operations::UpdateCrmContactRequest.new(
       ),
     ],
     first_name: 'Alexandro',
-    id: '1a5043da-8c3c-45aa-9355-d58c91b5dcbd',
+    id: '3e0653fc-1198-4e31-bfd2-cde24e5bac8d',
     image_url: 'https://avatars.githubusercontent.com/u/26594214',
     last_name: 'Kuphal',
     link_urls: [
@@ -1109,7 +1109,7 @@ req = Models::Operations::UpdateCrmContactRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '40459f97-a1a2-4b28-b1f9-6bf6adc1f4fd',
+        id: '1f0cf654-0587-46ff-a50d-cdef1cd3c61e',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'amplus'
@@ -1127,7 +1127,7 @@ req = Models::Operations::UpdateCrmContactRequest.new(
       ),
     ],
     title: 'Direct Infrastructure Administrator',
-    updated_at: DateTime.iso8601('2021-02-25T02:46:37.235Z')
+    updated_at: DateTime.iso8601('2021-02-25T03:25:07.334Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1184,7 +1184,7 @@ req = Models::Operations::UpdateUcContactRequest.new(
       ),
     ],
     first_name: 'Norval',
-    id: '9558a333-79c2-4b05-9757-9356f3a11be7',
+    id: 'd39f3bbb-85fd-401a-9222-26bb78f3ea50',
     last_name: 'Brekke',
     metadata: [],
     name: 'Norval Brekke',
@@ -1203,7 +1203,7 @@ req = Models::Operations::UpdateUcContactRequest.new(
       ),
     ],
     title: 'Internal Creative Director',
-    updated_at: DateTime.iso8601('2023-12-29T13:26:17.338Z')
+    updated_at: DateTime.iso8601('2023-12-30T04:29:31.604Z')
   ),
   connection_id: '<id>',
   id: '<id>'

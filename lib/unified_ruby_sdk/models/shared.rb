@@ -865,6 +865,7 @@ module UnifiedRubySDK
       autoload :PerformanceReviewQuestionType, 'unified_ruby_sdk/models/shared/performancereviewquestion_type.rb'
       autoload :PerformanceReviewStatus, 'unified_ruby_sdk/models/shared/performancereview_status.rb'
       autoload :PerformanceReviewType, 'unified_ruby_sdk/models/shared/performancereview_type.rb'
+      autoload :Person, 'unified_ruby_sdk/models/shared/person.rb'
       autoload :PlmAffectedItem, 'unified_ruby_sdk/models/shared/plmaffecteditem.rb'
       autoload :PlmBomline, 'unified_ruby_sdk/models/shared/plmbomline.rb'
       autoload :PlmCategory, 'unified_ruby_sdk/models/shared/plmcategory.rb'

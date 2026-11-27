@@ -38,7 +38,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.activity.create_ats_activity(ats_activity: Models::Shared::AtsActivity.new(
   created_at: DateTime.iso8601('2022-08-07T03:16:43.865Z'),
   description: 'Reprehenderit.',
-  id: 'a260acdc-32eb-4b6d-b06e-e7e5604c1da6',
+  id: 'c79da7a0-b0fc-41d3-9e6c-94b8bdb7a9ac',
   is_private: false,
   metadata: [
     Models::Shared::AtsMetadata.new(
@@ -46,7 +46,7 @@ res = s.activity.create_ats_activity(ats_activity: Models::Shared::AtsActivity.n
 
       },
       format: Models::Shared::AtsMetadataFormat::TEXT,
-      id: 'b1ca4127-b395-49f7-b810-05458db01ded',
+      id: '2d87c4b8-4f70-4f64-b3a2-191988dac249',
       namespace: 'activity',
       slug: 'verto',
       value: 'Sint varietas officia aequus stillicidium vereor victus tricesimus vester.'
@@ -55,7 +55,7 @@ res = s.activity.create_ats_activity(ats_activity: Models::Shared::AtsActivity.n
   sub_type: 'TASK',
   title: 'Amplus sapiente cimentarius.',
   type: Models::Shared::AtsActivityType::TASK,
-  updated_at: DateTime.iso8601('2026-05-05T13:19:33.505Z')
+  updated_at: DateTime.iso8601('2026-05-06T11:33:26.615Z')
 ), connection_id: '<id>')
 
 unless res.ats_activity.nil?
@@ -101,15 +101,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.activity.create_lms_activity(lms_activity: Models::Shared::LmsActivity.new(
   assigned_grade: 'deserunt',
-  completed_at: DateTime.iso8601('2023-12-24T17:47:00.441Z'),
+  completed_at: DateTime.iso8601('2023-12-25T07:06:47.120Z'),
   created_at: DateTime.iso8601('2020-10-17T01:25:21.745Z'),
   duration_minutes: 55.0,
-  id: '8cdfa53a-e0a9-4ab3-b7bc-d46f62aef3aa',
+  id: 'b2b88109-961c-4e65-89e3-42c3c6c59f59',
   is_completed: true,
   metadata: [],
   progress_percentage: 100.0,
-  started_at: DateTime.iso8601('2021-04-28T07:08:08.957Z'),
-  updated_at: DateTime.iso8601('2022-02-07T16:49:30.603Z')
+  started_at: DateTime.iso8601('2021-04-28T09:20:57.504Z'),
+  updated_at: DateTime.iso8601('2022-02-07T22:18:28.328Z')
 ), connection_id: '<id>')
 
 unless res.lms_activity.nil?
@@ -419,7 +419,7 @@ req = Models::Operations::PatchAtsActivityRequest.new(
   ats_activity: Models::Shared::AtsActivity.new(
     created_at: DateTime.iso8601('2022-08-07T03:16:43.865Z'),
     description: 'Reprehenderit.',
-    id: '77c57eda-97a0-48b9-a910-7c5529240f36',
+    id: '012233b9-92c1-4d55-8438-b7d55dd4fc7f',
     is_private: false,
     metadata: [
       Models::Shared::AtsMetadata.new(
@@ -427,7 +427,7 @@ req = Models::Operations::PatchAtsActivityRequest.new(
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: 'dfe0014f-56cc-4089-9792-211dced2dee5',
+        id: 'ded5cbc9-d3a0-4c24-b775-f40cba6d8d35',
         namespace: 'activity',
         slug: 'verto',
         value: 'Sint varietas officia aequus stillicidium vereor victus tricesimus vester.'
@@ -436,7 +436,7 @@ req = Models::Operations::PatchAtsActivityRequest.new(
     sub_type: 'TASK',
     title: 'Amplus sapiente cimentarius.',
     type: Models::Shared::AtsActivityType::TASK,
-    updated_at: DateTime.iso8601('2026-05-05T13:19:33.517Z')
+    updated_at: DateTime.iso8601('2026-05-06T11:33:26.630Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -485,15 +485,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchLmsActivityRequest.new(
   lms_activity: Models::Shared::LmsActivity.new(
     assigned_grade: 'deserunt',
-    completed_at: DateTime.iso8601('2023-12-24T17:47:00.448Z'),
+    completed_at: DateTime.iso8601('2023-12-25T07:06:47.125Z'),
     created_at: DateTime.iso8601('2020-10-17T01:25:21.745Z'),
     duration_minutes: 55.0,
-    id: '7e3bee51-cdb8-4ae3-afa1-251cb8b6bc3e',
+    id: 'e96ef5ea-1e95-473b-8fae-b8cc2d9b6729',
     is_completed: true,
     metadata: [],
     progress_percentage: 100.0,
-    started_at: DateTime.iso8601('2021-04-28T07:08:08.958Z'),
-    updated_at: DateTime.iso8601('2022-02-07T16:49:30.606Z')
+    started_at: DateTime.iso8601('2021-04-28T09:20:57.505Z'),
+    updated_at: DateTime.iso8601('2022-02-07T22:18:28.330Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -625,7 +625,7 @@ req = Models::Operations::UpdateAtsActivityRequest.new(
   ats_activity: Models::Shared::AtsActivity.new(
     created_at: DateTime.iso8601('2022-08-07T03:16:43.865Z'),
     description: 'Reprehenderit.',
-    id: '77c57eda-97a0-48b9-a910-7c5529240f36',
+    id: '012233b9-92c1-4d55-8438-b7d55dd4fc7f',
     is_private: false,
     metadata: [
       Models::Shared::AtsMetadata.new(
@@ -633,7 +633,7 @@ req = Models::Operations::UpdateAtsActivityRequest.new(
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: 'dfe0014f-56cc-4089-9792-211dced2dee5',
+        id: 'ded5cbc9-d3a0-4c24-b775-f40cba6d8d35',
         namespace: 'activity',
         slug: 'verto',
         value: 'Sint varietas officia aequus stillicidium vereor victus tricesimus vester.'
@@ -642,7 +642,7 @@ req = Models::Operations::UpdateAtsActivityRequest.new(
     sub_type: 'TASK',
     title: 'Amplus sapiente cimentarius.',
     type: Models::Shared::AtsActivityType::TASK,
-    updated_at: DateTime.iso8601('2026-05-05T13:19:33.517Z')
+    updated_at: DateTime.iso8601('2026-05-06T11:33:26.630Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -691,15 +691,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateLmsActivityRequest.new(
   lms_activity: Models::Shared::LmsActivity.new(
     assigned_grade: 'deserunt',
-    completed_at: DateTime.iso8601('2023-12-24T17:47:00.448Z'),
+    completed_at: DateTime.iso8601('2023-12-25T07:06:47.125Z'),
     created_at: DateTime.iso8601('2020-10-17T01:25:21.745Z'),
     duration_minutes: 55.0,
-    id: '7e3bee51-cdb8-4ae3-afa1-251cb8b6bc3e',
+    id: 'e96ef5ea-1e95-473b-8fae-b8cc2d9b6729',
     is_completed: true,
     metadata: [],
     progress_percentage: 100.0,
-    started_at: DateTime.iso8601('2021-04-28T07:08:08.958Z'),
-    updated_at: DateTime.iso8601('2022-02-07T16:49:30.606Z')
+    started_at: DateTime.iso8601('2021-04-28T09:20:57.505Z'),
+    updated_at: DateTime.iso8601('2022-02-07T22:18:28.330Z')
   ),
   connection_id: '<id>',
   id: '<id>'

@@ -74,7 +74,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.ats.create_ats_activity(ats_activity: Models::Shared::AtsActivity.new(
   created_at: DateTime.iso8601('2022-08-07T03:16:43.865Z'),
   description: 'Reprehenderit.',
-  id: 'a260acdc-32eb-4b6d-b06e-e7e5604c1da6',
+  id: 'c79da7a0-b0fc-41d3-9e6c-94b8bdb7a9ac',
   is_private: false,
   metadata: [
     Models::Shared::AtsMetadata.new(
@@ -82,7 +82,7 @@ res = s.ats.create_ats_activity(ats_activity: Models::Shared::AtsActivity.new(
 
       },
       format: Models::Shared::AtsMetadataFormat::TEXT,
-      id: 'b1ca4127-b395-49f7-b810-05458db01ded',
+      id: '2d87c4b8-4f70-4f64-b3a2-191988dac249',
       namespace: 'activity',
       slug: 'verto',
       value: 'Sint varietas officia aequus stillicidium vereor victus tricesimus vester.'
@@ -91,7 +91,7 @@ res = s.ats.create_ats_activity(ats_activity: Models::Shared::AtsActivity.new(
   sub_type: 'TASK',
   title: 'Amplus sapiente cimentarius.',
   type: Models::Shared::AtsActivityType::TASK,
-  updated_at: DateTime.iso8601('2026-05-05T13:19:33.505Z')
+  updated_at: DateTime.iso8601('2026-05-06T11:33:26.615Z')
 ), connection_id: '<id>')
 
 unless res.ats_activity.nil?
@@ -137,17 +137,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.ats.create_ats_application(ats_application: Models::Shared::AtsApplication.new(
   answers: [],
-  applied_at: DateTime.iso8601('2025-10-23T02:32:26.167Z'),
+  applied_at: DateTime.iso8601('2025-10-23T19:07:12.847Z'),
   created_at: DateTime.iso8601('2023-10-17T07:19:48.787Z'),
-  hired_at: DateTime.iso8601('2026-06-12T10:54:01.706Z'),
-  id: '338052c3-dfac-4676-800d-35bebc3e2dbb',
+  hired_at: DateTime.iso8601('2026-06-13T08:42:30.443Z'),
+  id: 'f560bd48-cf7a-48bb-b169-5b08f8ece3d8',
   metadata: [
     Models::Shared::AtsMetadata.new(
       extra_data: {
 
       },
       format: Models::Shared::AtsMetadataFormat::TEXT,
-      id: '558d2f6c-c713-46be-8e58-01edae6c0010',
+      id: 'db123a63-dc6d-44be-b46a-2e2e5a45dfe3',
       namespace: 'application',
       slug: 'arguo',
       value: 'Defessus occaecati adflicto caecus claustrum annus addo.'
@@ -156,12 +156,12 @@ res = s.ats.create_ats_application(ats_application: Models::Shared::AtsApplicati
   offers: [],
   original_status: 'caput',
   original_substatus: 'admiratio',
-  rejected_at: DateTime.iso8601('2026-11-16T04:36:11.522Z'),
+  rejected_at: DateTime.iso8601('2026-11-17T05:56:17.250Z'),
   rejected_reason: 'Talio credo vomica allatus stella.',
   source: 'alii',
   status: Models::Shared::AtsApplicationStatus::REVIEWING,
   summary: 'Crebro nostrum alias sponte turbo sopor vergo surculus nam copiose. Enim casso cursus aestus deprecator. Despecto tabella argentum decretum cultellus aveho distinctio verecundia stella.',
-  updated_at: DateTime.iso8601('2026-11-23T06:12:38.848Z')
+  updated_at: DateTime.iso8601('2026-11-24T07:42:17.057Z')
 ), connection_id: '<id>')
 
 unless res.ats_application.nil?
@@ -258,7 +258,7 @@ res = s.ats.create_ats_candidate(ats_candidate: Models::Shared::AtsCandidate.new
   ],
   first_name: 'Alyce',
   has_do_not_contact: false,
-  id: 'da7cd799-43b4-4433-8461-8443dbe08ec5',
+  id: '50542aed-bb3b-4ff5-b08a-8c456aa79c00',
   image_url: 'https://avatars.githubusercontent.com/u/99913246',
   is_private: true,
   job_ids: [],
@@ -272,7 +272,7 @@ res = s.ats.create_ats_candidate(ats_candidate: Models::Shared::AtsCandidate.new
 
       },
       format: Models::Shared::AtsMetadataFormat::TEXT,
-      id: '87f97464-da5e-4fea-86b8-65a15cd3cb73',
+      id: '085a0529-b5ff-40e4-870e-ede1495f7e38',
       namespace: 'custom',
       slug: 'custom_field',
       value: 'chirographum'
@@ -299,7 +299,7 @@ res = s.ats.create_ats_candidate(ats_candidate: Models::Shared::AtsCandidate.new
     ),
   ],
   title: 'Internal Paradigm Consultant',
-  updated_at: DateTime.iso8601('2024-05-05T03:03:00.256Z'),
+  updated_at: DateTime.iso8601('2024-05-05T07:35:19.515Z'),
   web_url: 'https://light-meander.com/'
 ), connection_id: '<id>')
 
@@ -352,10 +352,10 @@ res = s.ats.create_ats_company(ats_company: Models::Shared::AtsCompany.new(
       type: Models::Shared::AtsFeeType::CONTINGENCY
     ),
   ],
-  id: '441b00d4-8567-4f9f-b741-cfcbd0c9e486',
+  id: '4b695497-a4d7-4ec9-a1f7-81bfb2d35db9',
   name: 'Streich, Mohr and Barton',
   phone: '245-586-5728 x0090',
-  updated_at: DateTime.iso8601('2020-10-08T02:33:45.476Z'),
+  updated_at: DateTime.iso8601('2020-10-08T07:29:21.173Z'),
   website_url: 'https://www.streichmohr.com'
 ), connection_id: '<id>')
 
@@ -404,10 +404,10 @@ res = s.ats.create_ats_document(ats_document: Models::Shared::AtsDocument.new(
   created_at: DateTime.iso8601('2021-08-20T08:00:27.437Z'),
   document_url: 'https://thin-video.org/',
   filename: 'reggie_langosh_resume.pdf',
-  id: 'd41db7b3-5ec7-4689-b893-bca8fa8a9abc',
+  id: 'db1e9f57-f7ae-4bab-8220-1c671a8025d2',
   metadata: [],
   type: Models::Shared::AtsDocumentType::COVER_LETTER,
-  updated_at: DateTime.iso8601('2022-12-16T05:37:05.822Z')
+  updated_at: DateTime.iso8601('2022-12-16T12:02:00.269Z')
 ), connection_id: '<id>')
 
 unless res.ats_document.nil?
@@ -454,13 +454,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.ats.create_ats_interview(ats_interview: Models::Shared::AtsInterview.new(
   created_at: DateTime.iso8601('2021-11-28T03:14:47.774Z'),
   end_at: DateTime.iso8601('2021-12-08T06:33:19.583Z'),
-  id: '64f55598-b259-4dda-b0ae-15d100166b6c',
+  id: '160680fb-0b23-4dfb-88da-d9afe26394f6',
   location: '9604 S Pine Street',
   meeting_url: 'https://gummy-battle.name/',
   metadata: [],
   start_at: DateTime.iso8601('2021-12-08T06:03:19.583Z'),
   status: Models::Shared::AtsInterviewStatus::SCHEDULED,
-  updated_at: DateTime.iso8601('2023-10-07T01:23:49.769Z')
+  updated_at: DateTime.iso8601('2023-10-07T10:53:45.207Z')
 ), connection_id: '<id>')
 
 unless res.ats_interview.nil?
@@ -542,7 +542,7 @@ res = s.ats.create_ats_job(ats_job: Models::Shared::AtsJob.new(
     ),
   ],
   hiring_managers: [],
-  id: 'b949f9da-ca21-4d9c-8117-d531606379e7',
+  id: '37559966-6796-43d0-a8a5-5cb3a1a08afa',
   industry: 'Refined Ceramic Keyboard',
   language_locale: 'en',
   metadata: [
@@ -551,7 +551,7 @@ res = s.ats.create_ats_job(ats_job: Models::Shared::AtsJob.new(
         'display_name' => 'Custom Property',
       },
       format: Models::Shared::AtsMetadataFormat::TEXT,
-      id: '7ccc59aa-bac4-4d3e-89db-58561bdc206c',
+      id: 'ad773332-89f4-41c2-9f44-7f5f8aa705fa',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'cursus'
@@ -564,7 +564,7 @@ res = s.ats.create_ats_job(ats_job: Models::Shared::AtsJob.new(
   openings: [
     Models::Shared::AtsJobOpening.new(
       close_reason: 'Tolero aequus tamquam inflammatio asporto canis vinitor utrum.',
-      opened_at: DateTime.iso8601('2026-07-09T21:00:12.848Z'),
+      opened_at: DateTime.iso8601('2026-07-10T19:44:01.973Z'),
       status: Models::Shared::AtsJobOpeningStatus::OPEN
     ),
   ],
@@ -578,14 +578,14 @@ res = s.ats.create_ats_job(ats_job: Models::Shared::AtsJob.new(
         region: 'Utah',
         region_code: 'NE'
       ),
-      created_at: DateTime.iso8601('2026-09-04T14:56:13.534Z'),
+      created_at: DateTime.iso8601('2026-09-05T14:49:11.156Z'),
       description: 'Sublime.',
-      id: '858bf9ab-d73a-48d6-857f-50b61589449b',
+      id: '2e67e354-2a2f-4dc9-af0c-da4f86cb15c7',
       is_active: false,
       location: '5699 Purdy Motorway',
       name: 'Legacy Implementation Orchestrator',
       posting_url: 'https://elementary-privilege.com/',
-      updated_at: DateTime.iso8601('2026-10-01T16:53:24.299Z')
+      updated_at: DateTime.iso8601('2026-10-02T17:19:21.702Z')
     ),
   ],
   public_job_urls: [
@@ -595,7 +595,7 @@ res = s.ats.create_ats_job(ats_job: Models::Shared::AtsJob.new(
   questions: [
     Models::Shared::AtsJobQuestion.new(
       description: 'Capitulus.',
-      id: '59a5b77a-593c-4f75-94c0-8437f7e9cb53',
+      id: '45ec1cb9-f4ed-4f3d-bd3e-05fdc57acd40',
       max_length: 214.0,
       min_length: 1.0,
       options: [
@@ -608,7 +608,7 @@ res = s.ats.create_ats_job(ats_job: Models::Shared::AtsJob.new(
       type: Models::Shared::AtsJobQuestionType::TEXT
     ),
     Models::Shared::AtsJobQuestion.new(
-      id: '1d1c6e0f-88c8-40eb-8273-976482a05f6e',
+      id: '7e6c439e-012b-4d66-921b-518ffb900fba',
       max_length: 309.0,
       min_length: 1.0,
       options: [
@@ -621,7 +621,7 @@ res = s.ats.create_ats_job(ats_job: Models::Shared::AtsJob.new(
     ),
     Models::Shared::AtsJobQuestion.new(
       description: 'Confero trepide.',
-      id: 'bf858dcb-5592-4737-9b33-af223dc5ceb1',
+      id: 'c7ab950a-e88e-43fd-b951-c9213cc11138',
       max_length: 428.0,
       min_length: 1.0,
       options: [
@@ -639,7 +639,7 @@ res = s.ats.create_ats_job(ats_job: Models::Shared::AtsJob.new(
   ],
   status: Models::Shared::AtsJobStatus::ARCHIVED,
   summary: 'Contra damno desolo suadeo utrimque cresco aetas turpis.',
-  updated_at: DateTime.iso8601('2026-03-28T10:23:32.850Z')
+  updated_at: DateTime.iso8601('2026-03-29T07:01:19.853Z')
 ), connection_id: '<id>')
 
 unless res.ats_job.nil?
@@ -686,7 +686,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.ats.create_ats_scorecard(ats_scorecard: Models::Shared::AtsScorecard.new(
   comment: 'Aliquam.',
   created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
-  id: 'cd3413cc-47a7-4d28-8633-f4cbbfe20baa',
+  id: '45beb2ca-96ee-4f0e-b6c4-0fbdcfdfa9d2',
   metadata: [],
   questions: [
     Models::Shared::AtsScorecardQuestion.new(
@@ -700,7 +700,7 @@ res = s.ats.create_ats_scorecard(ats_scorecard: Models::Shared::AtsScorecard.new
     ),
   ],
   recommendation: Models::Shared::Recommendation::STRONG_YES,
-  updated_at: DateTime.iso8601('2023-06-15T11:42:00.755Z')
+  updated_at: DateTime.iso8601('2023-06-15T18:44:58.069Z')
 ), connection_id: '<id>')
 
 unless res.ats_scorecard.nil?
@@ -1532,7 +1532,7 @@ req = Models::Operations::PatchAtsActivityRequest.new(
   ats_activity: Models::Shared::AtsActivity.new(
     created_at: DateTime.iso8601('2022-08-07T03:16:43.865Z'),
     description: 'Reprehenderit.',
-    id: '77c57eda-97a0-48b9-a910-7c5529240f36',
+    id: '012233b9-92c1-4d55-8438-b7d55dd4fc7f',
     is_private: false,
     metadata: [
       Models::Shared::AtsMetadata.new(
@@ -1540,7 +1540,7 @@ req = Models::Operations::PatchAtsActivityRequest.new(
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: 'dfe0014f-56cc-4089-9792-211dced2dee5',
+        id: 'ded5cbc9-d3a0-4c24-b775-f40cba6d8d35',
         namespace: 'activity',
         slug: 'verto',
         value: 'Sint varietas officia aequus stillicidium vereor victus tricesimus vester.'
@@ -1549,7 +1549,7 @@ req = Models::Operations::PatchAtsActivityRequest.new(
     sub_type: 'TASK',
     title: 'Amplus sapiente cimentarius.',
     type: Models::Shared::AtsActivityType::TASK,
-    updated_at: DateTime.iso8601('2026-05-05T13:19:33.517Z')
+    updated_at: DateTime.iso8601('2026-05-06T11:33:26.630Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1598,17 +1598,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAtsApplicationRequest.new(
   ats_application: Models::Shared::AtsApplication.new(
     answers: [],
-    applied_at: DateTime.iso8601('2025-10-23T02:32:26.184Z'),
+    applied_at: DateTime.iso8601('2025-10-23T19:07:12.860Z'),
     created_at: DateTime.iso8601('2023-10-17T07:19:48.787Z'),
-    hired_at: DateTime.iso8601('2026-06-12T10:54:01.727Z'),
-    id: '4c0117db-51c7-4b88-a33b-10a26b733cc1',
+    hired_at: DateTime.iso8601('2026-06-13T08:42:30.460Z'),
+    id: 'c16d7158-809e-444e-8a8c-5bc508759c7f',
     metadata: [
       Models::Shared::AtsMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: 'c09cd9ee-59b5-4c9b-9acb-40c3eee46731',
+        id: '2a28fead-11ce-40bc-a8b2-851c1bbd0904',
         namespace: 'application',
         slug: 'arguo',
         value: 'Defessus occaecati adflicto caecus claustrum annus addo.'
@@ -1617,12 +1617,12 @@ req = Models::Operations::PatchAtsApplicationRequest.new(
     offers: [],
     original_status: 'caput',
     original_substatus: 'admiratio',
-    rejected_at: DateTime.iso8601('2026-11-16T04:36:11.548Z'),
+    rejected_at: DateTime.iso8601('2026-11-17T05:56:17.269Z'),
     rejected_reason: 'Talio credo vomica allatus stella.',
     source: 'alii',
     status: Models::Shared::AtsApplicationStatus::REVIEWING,
     summary: 'Crebro nostrum alias sponte turbo sopor vergo surculus nam copiose. Enim casso cursus aestus deprecator. Despecto tabella argentum decretum cultellus aveho distinctio verecundia stella.',
-    updated_at: DateTime.iso8601('2026-11-23T06:12:38.874Z')
+    updated_at: DateTime.iso8601('2026-11-24T07:42:17.076Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1722,7 +1722,7 @@ req = Models::Operations::PatchAtsCandidateRequest.new(
     ],
     first_name: 'Alyce',
     has_do_not_contact: false,
-    id: 'fc5e22cc-a0e8-4785-ba1c-6d1dac33ea00',
+    id: '6fb92c38-538f-40b7-8ad2-7af722ba37fb',
     image_url: 'https://avatars.githubusercontent.com/u/99913246',
     is_private: true,
     job_ids: [],
@@ -1736,7 +1736,7 @@ req = Models::Operations::PatchAtsCandidateRequest.new(
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '5c1b16a9-e350-41ca-a39f-1d7c8161d386',
+        id: '00427e8b-9d6a-4825-b839-68c7283b3789',
         namespace: 'custom',
         slug: 'custom_field',
         value: 'chirographum'
@@ -1763,7 +1763,7 @@ req = Models::Operations::PatchAtsCandidateRequest.new(
       ),
     ],
     title: 'Internal Paradigm Consultant',
-    updated_at: DateTime.iso8601('2024-05-05T03:03:00.262Z'),
+    updated_at: DateTime.iso8601('2024-05-05T07:35:19.519Z'),
     web_url: 'https://light-meander.com/'
   ),
   connection_id: '<id>',
@@ -1819,10 +1819,10 @@ req = Models::Operations::PatchAtsCompanyRequest.new(
         type: Models::Shared::AtsFeeType::CONTINGENCY
       ),
     ],
-    id: '26db4e97-a157-4aa7-966c-3f6b44ad92d5',
+    id: '069bec3c-072c-4809-b557-543e12a8c350',
     name: 'Streich, Mohr and Barton',
     phone: '245-586-5728 x0090',
-    updated_at: DateTime.iso8601('2020-10-08T02:33:45.480Z'),
+    updated_at: DateTime.iso8601('2020-10-08T07:29:21.175Z'),
     website_url: 'https://www.streichmohr.com'
   ),
   connection_id: '<id>',
@@ -1874,10 +1874,10 @@ req = Models::Operations::PatchAtsDocumentRequest.new(
     created_at: DateTime.iso8601('2021-08-20T08:00:27.437Z'),
     document_url: 'https://thin-video.org/',
     filename: 'reggie_langosh_resume.pdf',
-    id: '511d2041-d940-4daa-a15e-2a9d4f975554',
+    id: '31c134cc-3adf-4358-9d2a-5ee11424fbc0',
     metadata: [],
     type: Models::Shared::AtsDocumentType::COVER_LETTER,
-    updated_at: DateTime.iso8601('2022-12-16T05:37:05.825Z')
+    updated_at: DateTime.iso8601('2022-12-16T12:02:00.272Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1927,13 +1927,13 @@ req = Models::Operations::PatchAtsInterviewRequest.new(
   ats_interview: Models::Shared::AtsInterview.new(
     created_at: DateTime.iso8601('2021-11-28T03:14:47.774Z'),
     end_at: DateTime.iso8601('2021-12-08T06:33:19.583Z'),
-    id: '61ccb62d-b390-4804-860f-bb0dc4824199',
+    id: '3d6cbc54-5347-47ee-9e95-485aedbc10a7',
     location: '9604 S Pine Street',
     meeting_url: 'https://gummy-battle.name/',
     metadata: [],
     start_at: DateTime.iso8601('2021-12-08T06:03:19.583Z'),
     status: Models::Shared::AtsInterviewStatus::SCHEDULED,
-    updated_at: DateTime.iso8601('2023-10-07T01:23:49.772Z')
+    updated_at: DateTime.iso8601('2023-10-07T10:53:45.211Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2018,7 +2018,7 @@ req = Models::Operations::PatchAtsJobRequest.new(
       ),
     ],
     hiring_managers: [],
-    id: 'efc74b55-a2f1-493e-b446-8dddcd27dbb5',
+    id: 'd6e9481c-d05e-4d0b-96e5-df459af7b917',
     industry: 'Refined Ceramic Keyboard',
     language_locale: 'en',
     metadata: [
@@ -2027,7 +2027,7 @@ req = Models::Operations::PatchAtsJobRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '8f8fb25b-cf84-451a-b199-66179e59e6b0',
+        id: '38ce8b13-6dbf-4d9a-89cd-ab32e5615ffd',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'cursus'
@@ -2040,7 +2040,7 @@ req = Models::Operations::PatchAtsJobRequest.new(
     openings: [
       Models::Shared::AtsJobOpening.new(
         close_reason: 'Tolero aequus tamquam inflammatio asporto canis vinitor utrum.',
-        opened_at: DateTime.iso8601('2026-07-09T21:00:12.896Z'),
+        opened_at: DateTime.iso8601('2026-07-10T19:44:02.010Z'),
         status: Models::Shared::AtsJobOpeningStatus::OPEN
       ),
     ],
@@ -2054,14 +2054,14 @@ req = Models::Operations::PatchAtsJobRequest.new(
           region: 'Utah',
           region_code: 'NE'
         ),
-        created_at: DateTime.iso8601('2026-09-04T14:56:13.585Z'),
+        created_at: DateTime.iso8601('2026-09-05T14:49:11.196Z'),
         description: 'Sublime.',
-        id: '360a801c-3e7d-4557-a96e-7712025c35fd',
+        id: 'a36161a7-9e79-4178-abde-92822ceb84c8',
         is_active: false,
         location: '5699 Purdy Motorway',
         name: 'Legacy Implementation Orchestrator',
         posting_url: 'https://elementary-privilege.com/',
-        updated_at: DateTime.iso8601('2026-10-01T16:53:24.351Z')
+        updated_at: DateTime.iso8601('2026-10-02T17:19:21.742Z')
       ),
     ],
     public_job_urls: [
@@ -2071,7 +2071,7 @@ req = Models::Operations::PatchAtsJobRequest.new(
     questions: [
       Models::Shared::AtsJobQuestion.new(
         description: 'Capitulus.',
-        id: '09cb20d3-3ea5-406b-a781-b1a0cfe2c639',
+        id: 'e51791ca-8c3f-4203-a822-d6702a802e48',
         max_length: 214.0,
         min_length: 1.0,
         options: [
@@ -2084,7 +2084,7 @@ req = Models::Operations::PatchAtsJobRequest.new(
         type: Models::Shared::AtsJobQuestionType::TEXT
       ),
       Models::Shared::AtsJobQuestion.new(
-        id: 'd90d35d4-111b-42b6-8e19-5a91cfa96311',
+        id: '4072a8a2-e5ff-4a0c-a638-4d125bc486c3',
         max_length: 309.0,
         min_length: 1.0,
         options: [
@@ -2097,7 +2097,7 @@ req = Models::Operations::PatchAtsJobRequest.new(
       ),
       Models::Shared::AtsJobQuestion.new(
         description: 'Confero trepide.',
-        id: '0bf31191-8d7e-49e2-a16d-590217ed0ce5',
+        id: '556a44bc-9b15-4a2a-b512-4583533fc506',
         max_length: 428.0,
         min_length: 1.0,
         options: [
@@ -2115,7 +2115,7 @@ req = Models::Operations::PatchAtsJobRequest.new(
     ],
     status: Models::Shared::AtsJobStatus::ARCHIVED,
     summary: 'Contra damno desolo suadeo utrimque cresco aetas turpis.',
-    updated_at: DateTime.iso8601('2026-03-28T10:23:32.893Z')
+    updated_at: DateTime.iso8601('2026-03-29T07:01:19.887Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2165,7 +2165,7 @@ req = Models::Operations::PatchAtsScorecardRequest.new(
   ats_scorecard: Models::Shared::AtsScorecard.new(
     comment: 'Aliquam.',
     created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
-    id: 'b2414b1a-38f0-4936-ade4-440138ad0bcf',
+    id: 'fa0ef963-9e25-481c-948d-00f5d5940efb',
     metadata: [],
     questions: [
       Models::Shared::AtsScorecardQuestion.new(
@@ -2179,7 +2179,7 @@ req = Models::Operations::PatchAtsScorecardRequest.new(
       ),
     ],
     recommendation: Models::Shared::Recommendation::STRONG_YES,
-    updated_at: DateTime.iso8601('2023-06-15T11:42:00.759Z')
+    updated_at: DateTime.iso8601('2023-06-15T18:44:58.071Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2557,7 +2557,7 @@ req = Models::Operations::UpdateAtsActivityRequest.new(
   ats_activity: Models::Shared::AtsActivity.new(
     created_at: DateTime.iso8601('2022-08-07T03:16:43.865Z'),
     description: 'Reprehenderit.',
-    id: '77c57eda-97a0-48b9-a910-7c5529240f36',
+    id: '012233b9-92c1-4d55-8438-b7d55dd4fc7f',
     is_private: false,
     metadata: [
       Models::Shared::AtsMetadata.new(
@@ -2565,7 +2565,7 @@ req = Models::Operations::UpdateAtsActivityRequest.new(
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: 'dfe0014f-56cc-4089-9792-211dced2dee5',
+        id: 'ded5cbc9-d3a0-4c24-b775-f40cba6d8d35',
         namespace: 'activity',
         slug: 'verto',
         value: 'Sint varietas officia aequus stillicidium vereor victus tricesimus vester.'
@@ -2574,7 +2574,7 @@ req = Models::Operations::UpdateAtsActivityRequest.new(
     sub_type: 'TASK',
     title: 'Amplus sapiente cimentarius.',
     type: Models::Shared::AtsActivityType::TASK,
-    updated_at: DateTime.iso8601('2026-05-05T13:19:33.517Z')
+    updated_at: DateTime.iso8601('2026-05-06T11:33:26.630Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2623,17 +2623,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAtsApplicationRequest.new(
   ats_application: Models::Shared::AtsApplication.new(
     answers: [],
-    applied_at: DateTime.iso8601('2025-10-23T02:32:26.184Z'),
+    applied_at: DateTime.iso8601('2025-10-23T19:07:12.860Z'),
     created_at: DateTime.iso8601('2023-10-17T07:19:48.787Z'),
-    hired_at: DateTime.iso8601('2026-06-12T10:54:01.727Z'),
-    id: '4c0117db-51c7-4b88-a33b-10a26b733cc1',
+    hired_at: DateTime.iso8601('2026-06-13T08:42:30.460Z'),
+    id: 'c16d7158-809e-444e-8a8c-5bc508759c7f',
     metadata: [
       Models::Shared::AtsMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: 'c09cd9ee-59b5-4c9b-9acb-40c3eee46731',
+        id: '2a28fead-11ce-40bc-a8b2-851c1bbd0904',
         namespace: 'application',
         slug: 'arguo',
         value: 'Defessus occaecati adflicto caecus claustrum annus addo.'
@@ -2642,12 +2642,12 @@ req = Models::Operations::UpdateAtsApplicationRequest.new(
     offers: [],
     original_status: 'caput',
     original_substatus: 'admiratio',
-    rejected_at: DateTime.iso8601('2026-11-16T04:36:11.548Z'),
+    rejected_at: DateTime.iso8601('2026-11-17T05:56:17.269Z'),
     rejected_reason: 'Talio credo vomica allatus stella.',
     source: 'alii',
     status: Models::Shared::AtsApplicationStatus::REVIEWING,
     summary: 'Crebro nostrum alias sponte turbo sopor vergo surculus nam copiose. Enim casso cursus aestus deprecator. Despecto tabella argentum decretum cultellus aveho distinctio verecundia stella.',
-    updated_at: DateTime.iso8601('2026-11-23T06:12:38.874Z')
+    updated_at: DateTime.iso8601('2026-11-24T07:42:17.076Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2747,7 +2747,7 @@ req = Models::Operations::UpdateAtsCandidateRequest.new(
     ],
     first_name: 'Alyce',
     has_do_not_contact: false,
-    id: 'fc5e22cc-a0e8-4785-ba1c-6d1dac33ea00',
+    id: '6fb92c38-538f-40b7-8ad2-7af722ba37fb',
     image_url: 'https://avatars.githubusercontent.com/u/99913246',
     is_private: true,
     job_ids: [],
@@ -2761,7 +2761,7 @@ req = Models::Operations::UpdateAtsCandidateRequest.new(
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '5c1b16a9-e350-41ca-a39f-1d7c8161d386',
+        id: '00427e8b-9d6a-4825-b839-68c7283b3789',
         namespace: 'custom',
         slug: 'custom_field',
         value: 'chirographum'
@@ -2788,7 +2788,7 @@ req = Models::Operations::UpdateAtsCandidateRequest.new(
       ),
     ],
     title: 'Internal Paradigm Consultant',
-    updated_at: DateTime.iso8601('2024-05-05T03:03:00.262Z'),
+    updated_at: DateTime.iso8601('2024-05-05T07:35:19.519Z'),
     web_url: 'https://light-meander.com/'
   ),
   connection_id: '<id>',
@@ -2844,10 +2844,10 @@ req = Models::Operations::UpdateAtsCompanyRequest.new(
         type: Models::Shared::AtsFeeType::CONTINGENCY
       ),
     ],
-    id: '26db4e97-a157-4aa7-966c-3f6b44ad92d5',
+    id: '069bec3c-072c-4809-b557-543e12a8c350',
     name: 'Streich, Mohr and Barton',
     phone: '245-586-5728 x0090',
-    updated_at: DateTime.iso8601('2020-10-08T02:33:45.480Z'),
+    updated_at: DateTime.iso8601('2020-10-08T07:29:21.175Z'),
     website_url: 'https://www.streichmohr.com'
   ),
   connection_id: '<id>',
@@ -2899,10 +2899,10 @@ req = Models::Operations::UpdateAtsDocumentRequest.new(
     created_at: DateTime.iso8601('2021-08-20T08:00:27.437Z'),
     document_url: 'https://thin-video.org/',
     filename: 'reggie_langosh_resume.pdf',
-    id: '511d2041-d940-4daa-a15e-2a9d4f975554',
+    id: '31c134cc-3adf-4358-9d2a-5ee11424fbc0',
     metadata: [],
     type: Models::Shared::AtsDocumentType::COVER_LETTER,
-    updated_at: DateTime.iso8601('2022-12-16T05:37:05.825Z')
+    updated_at: DateTime.iso8601('2022-12-16T12:02:00.272Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2952,13 +2952,13 @@ req = Models::Operations::UpdateAtsInterviewRequest.new(
   ats_interview: Models::Shared::AtsInterview.new(
     created_at: DateTime.iso8601('2021-11-28T03:14:47.774Z'),
     end_at: DateTime.iso8601('2021-12-08T06:33:19.583Z'),
-    id: '61ccb62d-b390-4804-860f-bb0dc4824199',
+    id: '3d6cbc54-5347-47ee-9e95-485aedbc10a7',
     location: '9604 S Pine Street',
     meeting_url: 'https://gummy-battle.name/',
     metadata: [],
     start_at: DateTime.iso8601('2021-12-08T06:03:19.583Z'),
     status: Models::Shared::AtsInterviewStatus::SCHEDULED,
-    updated_at: DateTime.iso8601('2023-10-07T01:23:49.772Z')
+    updated_at: DateTime.iso8601('2023-10-07T10:53:45.211Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -3043,7 +3043,7 @@ req = Models::Operations::UpdateAtsJobRequest.new(
       ),
     ],
     hiring_managers: [],
-    id: 'efc74b55-a2f1-493e-b446-8dddcd27dbb5',
+    id: 'd6e9481c-d05e-4d0b-96e5-df459af7b917',
     industry: 'Refined Ceramic Keyboard',
     language_locale: 'en',
     metadata: [
@@ -3052,7 +3052,7 @@ req = Models::Operations::UpdateAtsJobRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '8f8fb25b-cf84-451a-b199-66179e59e6b0',
+        id: '38ce8b13-6dbf-4d9a-89cd-ab32e5615ffd',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'cursus'
@@ -3065,7 +3065,7 @@ req = Models::Operations::UpdateAtsJobRequest.new(
     openings: [
       Models::Shared::AtsJobOpening.new(
         close_reason: 'Tolero aequus tamquam inflammatio asporto canis vinitor utrum.',
-        opened_at: DateTime.iso8601('2026-07-09T21:00:12.896Z'),
+        opened_at: DateTime.iso8601('2026-07-10T19:44:02.010Z'),
         status: Models::Shared::AtsJobOpeningStatus::OPEN
       ),
     ],
@@ -3079,14 +3079,14 @@ req = Models::Operations::UpdateAtsJobRequest.new(
           region: 'Utah',
           region_code: 'NE'
         ),
-        created_at: DateTime.iso8601('2026-09-04T14:56:13.585Z'),
+        created_at: DateTime.iso8601('2026-09-05T14:49:11.196Z'),
         description: 'Sublime.',
-        id: '360a801c-3e7d-4557-a96e-7712025c35fd',
+        id: 'a36161a7-9e79-4178-abde-92822ceb84c8',
         is_active: false,
         location: '5699 Purdy Motorway',
         name: 'Legacy Implementation Orchestrator',
         posting_url: 'https://elementary-privilege.com/',
-        updated_at: DateTime.iso8601('2026-10-01T16:53:24.351Z')
+        updated_at: DateTime.iso8601('2026-10-02T17:19:21.742Z')
       ),
     ],
     public_job_urls: [
@@ -3096,7 +3096,7 @@ req = Models::Operations::UpdateAtsJobRequest.new(
     questions: [
       Models::Shared::AtsJobQuestion.new(
         description: 'Capitulus.',
-        id: '09cb20d3-3ea5-406b-a781-b1a0cfe2c639',
+        id: 'e51791ca-8c3f-4203-a822-d6702a802e48',
         max_length: 214.0,
         min_length: 1.0,
         options: [
@@ -3109,7 +3109,7 @@ req = Models::Operations::UpdateAtsJobRequest.new(
         type: Models::Shared::AtsJobQuestionType::TEXT
       ),
       Models::Shared::AtsJobQuestion.new(
-        id: 'd90d35d4-111b-42b6-8e19-5a91cfa96311',
+        id: '4072a8a2-e5ff-4a0c-a638-4d125bc486c3',
         max_length: 309.0,
         min_length: 1.0,
         options: [
@@ -3122,7 +3122,7 @@ req = Models::Operations::UpdateAtsJobRequest.new(
       ),
       Models::Shared::AtsJobQuestion.new(
         description: 'Confero trepide.',
-        id: '0bf31191-8d7e-49e2-a16d-590217ed0ce5',
+        id: '556a44bc-9b15-4a2a-b512-4583533fc506',
         max_length: 428.0,
         min_length: 1.0,
         options: [
@@ -3140,7 +3140,7 @@ req = Models::Operations::UpdateAtsJobRequest.new(
     ],
     status: Models::Shared::AtsJobStatus::ARCHIVED,
     summary: 'Contra damno desolo suadeo utrimque cresco aetas turpis.',
-    updated_at: DateTime.iso8601('2026-03-28T10:23:32.893Z')
+    updated_at: DateTime.iso8601('2026-03-29T07:01:19.887Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -3190,7 +3190,7 @@ req = Models::Operations::UpdateAtsScorecardRequest.new(
   ats_scorecard: Models::Shared::AtsScorecard.new(
     comment: 'Aliquam.',
     created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
-    id: 'b2414b1a-38f0-4936-ade4-440138ad0bcf',
+    id: 'fa0ef963-9e25-481c-948d-00f5d5940efb',
     metadata: [],
     questions: [
       Models::Shared::AtsScorecardQuestion.new(
@@ -3204,7 +3204,7 @@ req = Models::Operations::UpdateAtsScorecardRequest.new(
       ),
     ],
     recommendation: Models::Shared::Recommendation::STRONG_YES,
-    updated_at: DateTime.iso8601('2023-06-15T11:42:00.759Z')
+    updated_at: DateTime.iso8601('2023-06-15T18:44:58.071Z')
   ),
   connection_id: '<id>',
   id: '<id>'

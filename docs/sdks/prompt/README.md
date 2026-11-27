@@ -42,6 +42,8 @@ res = s.prompt.create_genai_prompt(genai_prompt: Models::Shared::GenaiPrompt.new
       value: 'vilicus'
     ),
   ],
+  has_thread: false,
+  id: 'lGiOgAB6MLc1sMVUZnBJtXQG',
   max_tokens: 0.4_677_782_787_475_735,
   mcp_authorization_token: '45c837a2-ed2d-458f-b4bc-782f4a6b065b',
   mcp_deferred_tools: [],

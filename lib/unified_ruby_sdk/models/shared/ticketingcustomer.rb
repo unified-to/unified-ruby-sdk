@@ -12,6 +12,8 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
+        # Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields
+        field :unified_person_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('__unified_person_ids') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
@@ -31,8 +33,9 @@ module UnifiedRubySDK
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(created_at: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::TicketingEmail]), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::TicketingMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), tags: T.nilable(T::Array[::String]), telephones: T.nilable(T::Array[Models::Shared::TicketingTelephone]), updated_at: T.nilable(::DateTime)).void }
-        def initialize(created_at: nil, emails: nil, id: nil, metadata: nil, name: nil, raw: nil, tags: nil, telephones: nil, updated_at: nil)
+        sig { params(unified_person_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::TicketingEmail]), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::TicketingMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), tags: T.nilable(T::Array[::String]), telephones: T.nilable(T::Array[Models::Shared::TicketingTelephone]), updated_at: T.nilable(::DateTime)).void }
+        def initialize(unified_person_ids: nil, created_at: nil, emails: nil, id: nil, metadata: nil, name: nil, raw: nil, tags: nil, telephones: nil, updated_at: nil)
+          @unified_person_ids = unified_person_ids
           @created_at = created_at
           @emails = emails
           @id = id
@@ -47,6 +50,7 @@ module UnifiedRubySDK
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
+          return false unless @unified_person_ids == other.unified_person_ids
           return false unless @created_at == other.created_at
           return false unless @emails == other.emails
           return false unless @id == other.id

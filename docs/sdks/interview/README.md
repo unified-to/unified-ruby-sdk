@@ -30,13 +30,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.interview.create_ats_interview(ats_interview: Models::Shared::AtsInterview.new(
   created_at: DateTime.iso8601('2021-11-28T03:14:47.774Z'),
   end_at: DateTime.iso8601('2021-12-08T06:33:19.583Z'),
-  id: '64f55598-b259-4dda-b0ae-15d100166b6c',
+  id: '160680fb-0b23-4dfb-88da-d9afe26394f6',
   location: '9604 S Pine Street',
   meeting_url: 'https://gummy-battle.name/',
   metadata: [],
   start_at: DateTime.iso8601('2021-12-08T06:03:19.583Z'),
   status: Models::Shared::AtsInterviewStatus::SCHEDULED,
-  updated_at: DateTime.iso8601('2023-10-07T01:23:49.769Z')
+  updated_at: DateTime.iso8601('2023-10-07T10:53:45.207Z')
 ), connection_id: '<id>')
 
 unless res.ats_interview.nil?
@@ -172,13 +172,13 @@ req = Models::Operations::PatchAtsInterviewRequest.new(
   ats_interview: Models::Shared::AtsInterview.new(
     created_at: DateTime.iso8601('2021-11-28T03:14:47.774Z'),
     end_at: DateTime.iso8601('2021-12-08T06:33:19.583Z'),
-    id: '61ccb62d-b390-4804-860f-bb0dc4824199',
+    id: '3d6cbc54-5347-47ee-9e95-485aedbc10a7',
     location: '9604 S Pine Street',
     meeting_url: 'https://gummy-battle.name/',
     metadata: [],
     start_at: DateTime.iso8601('2021-12-08T06:03:19.583Z'),
     status: Models::Shared::AtsInterviewStatus::SCHEDULED,
-    updated_at: DateTime.iso8601('2023-10-07T01:23:49.772Z')
+    updated_at: DateTime.iso8601('2023-10-07T10:53:45.211Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -269,13 +269,13 @@ req = Models::Operations::UpdateAtsInterviewRequest.new(
   ats_interview: Models::Shared::AtsInterview.new(
     created_at: DateTime.iso8601('2021-11-28T03:14:47.774Z'),
     end_at: DateTime.iso8601('2021-12-08T06:33:19.583Z'),
-    id: '61ccb62d-b390-4804-860f-bb0dc4824199',
+    id: '3d6cbc54-5347-47ee-9e95-485aedbc10a7',
     location: '9604 S Pine Street',
     meeting_url: 'https://gummy-battle.name/',
     metadata: [],
     start_at: DateTime.iso8601('2021-12-08T06:03:19.583Z'),
     status: Models::Shared::AtsInterviewStatus::SCHEDULED,
-    updated_at: DateTime.iso8601('2023-10-07T01:23:49.772Z')
+    updated_at: DateTime.iso8601('2023-10-07T10:53:45.211Z')
   ),
   connection_id: '<id>',
   id: '<id>'

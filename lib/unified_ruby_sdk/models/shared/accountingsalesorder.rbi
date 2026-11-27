@@ -10,6 +10,8 @@ end
 class UnifiedRubySDK::Models::Shared::AccountingSalesorder
   def account_id(); end
   def account_id=(str_); end
+  def balance_amount(); end
+  def balance_amount=(str_); end
   def billing_address(); end
   def billing_address=(str_); end
   def category_ids(); end

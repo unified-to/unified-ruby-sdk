@@ -51,13 +51,13 @@ res = s.payment.create_payment_link(payment_link: Models::Shared::PaymentLink.ne
   created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
   currency: 'CAD',
   description: 'The Daron Sausages is the latest in a series of informal products from Dach, Beatty and Moen',
-  id: 'b852986f-21a1-432a-a63d-ba1fc6023fe3',
+  id: '5adc4447-2142-422a-b234-e95c8742f17a',
   is_active: true,
   is_chargeable_now: true,
   lineitems: [
     Models::Shared::PaymentLineitem.new(
       created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-      id: '2dde74f4-92eb-491e-acd3-5b357281c1e7',
+      id: '9d085a0b-fc98-4e70-9131-a8fc5752cad3',
       item_description: 'Introducing the Syrian Arab Republic-inspired Chips, blending neat style with local craftsmanship',
       item_name: 'Electronic Metal Tuna',
       tax_amount: 0.0,
@@ -69,7 +69,7 @@ res = s.payment.create_payment_link(payment_link: Models::Shared::PaymentLink.ne
     Models::Shared::PaymentLineitem.new(
       created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
       discount_amount: 424.32,
-      id: '54958e50-4e68-4398-90f3-c2f03b982613',
+      id: '0c2c7f93-8539-4f2f-bbae-a7325624dc9c',
       item_description: 'Soft Computer designed with Bronze for junior performance',
       item_name: 'Rustic Concrete Shoes',
       notes: 'Doloremque appositus cito cursim bellicus rerum ubi voluptatibus.',
@@ -81,7 +81,7 @@ res = s.payment.create_payment_link(payment_link: Models::Shared::PaymentLink.ne
     ),
     Models::Shared::PaymentLineitem.new(
       created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-      id: '3d966e35-b272-484d-b702-85a876eba2e7',
+      id: '24e7439d-7f18-4dc6-a4a5-25c351bfa312',
       item_description: 'The Donnie Shirt is the latest in a series of tinted products from Nitzsche and Sons',
       item_name: 'Intelligent Marble Keyboard',
       notes: 'Damnatio aut bene.',
@@ -94,8 +94,8 @@ res = s.payment.create_payment_link(payment_link: Models::Shared::PaymentLink.ne
   ],
   metadata: [],
   success_url: 'https://finished-retention.com',
-  updated_at: DateTime.iso8601('2024-04-22T12:50:35.928Z'),
-  url: 'https://pay.example.com/b852986f-21a1-432a-a63d-ba1fc6023fe3'
+  updated_at: DateTime.iso8601('2024-04-22T19:20:18.016Z'),
+  url: 'https://pay.example.com/5adc4447-2142-422a-b234-e95c8742f17a'
 ), connection_id: '<id>')
 
 unless res.payment_link.nil?
@@ -147,7 +147,7 @@ res = s.payment.create_payment_payment(payment_payment: Models::Shared::PaymentP
   created_at: DateTime.iso8601('2022-03-10T00:19:42.086Z'),
   currency: 'EUR',
   fee_amount: 2055.82,
-  id: 'dac305d2-4e64-4785-852e-73fad7b02cb0',
+  id: '85e02d18-50ba-491d-91ba-4418d43ce2a9',
   metadata: [],
   net_amount: 68_824.18,
   notes: 'Auctus patruus causa vulnus decet thymum curvo eligendi.',
@@ -159,7 +159,7 @@ res = s.payment.create_payment_payment(payment_payment: Models::Shared::PaymentP
   tip_amount: 0.0,
   total_amount: 70_880.0,
   type: Models::Shared::PaymentPaymentType::INVOICE,
-  updated_at: DateTime.iso8601('2025-11-04T22:02:40.226Z')
+  updated_at: DateTime.iso8601('2025-11-05T17:52:11.582Z')
 ), connection_id: '<id>')
 
 unless res.payment_payment.nil?
@@ -210,7 +210,7 @@ res = s.payment.create_payment_subscription(payment_subscription: Models::Shared
   current_period_start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
   day_of_month: 8.0,
   description: 'New Bike model with 94 GB RAM, 813 GB storage, and narrow features',
-  id: '8959891f-e861-4cbb-9a36-c3f19c3e6368',
+  id: 'a99d53e8-1d13-416e-9667-a3ef52ef5c76',
   interval: 1.0,
   interval_unit: Models::Shared::IntervalUnit::YEAR,
   lineitems: [],
@@ -219,7 +219,7 @@ res = s.payment.create_payment_subscription(payment_subscription: Models::Shared
   start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
   status: Models::Shared::PaymentSubscriptionStatus::ACTIVE,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2023-10-08T18:52:20.743Z')
+  updated_at: DateTime.iso8601('2023-10-08T21:53:34.213Z')
 ), connection_id: '<id>')
 
 unless res.payment_subscription.nil?
@@ -708,13 +708,13 @@ req = Models::Operations::PatchPaymentLinkRequest.new(
     created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
     currency: 'CAD',
     description: 'The Daron Sausages is the latest in a series of informal products from Dach, Beatty and Moen',
-    id: 'c5dd8dbf-2b8f-413c-940d-f052562c5dc6',
+    id: 'fdb6a5fa-655e-4e4e-b293-8265bda67d19',
     is_active: true,
     is_chargeable_now: true,
     lineitems: [
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-        id: 'bd59c50d-0c08-490c-baa7-2579f0e9eb8c',
+        id: 'bea3e5ef-1dbb-4f29-928b-ac1ba187bccb',
         item_description: 'Introducing the Syrian Arab Republic-inspired Chips, blending neat style with local craftsmanship',
         item_name: 'Electronic Metal Tuna',
         tax_amount: 0.0,
@@ -726,7 +726,7 @@ req = Models::Operations::PatchPaymentLinkRequest.new(
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
         discount_amount: 424.32,
-        id: 'd05491bb-3ac9-464d-818b-cf5630ff0346',
+        id: 'e1ce0197-beba-482b-b35d-c4b13aa8262a',
         item_description: 'Soft Computer designed with Bronze for junior performance',
         item_name: 'Rustic Concrete Shoes',
         notes: 'Doloremque appositus cito cursim bellicus rerum ubi voluptatibus.',
@@ -738,7 +738,7 @@ req = Models::Operations::PatchPaymentLinkRequest.new(
       ),
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-        id: '77d79b19-3af8-4732-860f-b418e91596f5',
+        id: '977ef57a-5ffc-4271-b20f-b87204a057a1',
         item_description: 'The Donnie Shirt is the latest in a series of tinted products from Nitzsche and Sons',
         item_name: 'Intelligent Marble Keyboard',
         notes: 'Damnatio aut bene.',
@@ -751,8 +751,8 @@ req = Models::Operations::PatchPaymentLinkRequest.new(
     ],
     metadata: [],
     success_url: 'https://finished-retention.com',
-    updated_at: DateTime.iso8601('2024-04-22T12:50:35.934Z'),
-    url: 'https://pay.example.com/c5dd8dbf-2b8f-413c-940d-f052562c5dc6'
+    updated_at: DateTime.iso8601('2024-04-22T19:20:18.021Z'),
+    url: 'https://pay.example.com/fdb6a5fa-655e-4e4e-b293-8265bda67d19'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -807,7 +807,7 @@ req = Models::Operations::PatchPaymentPaymentRequest.new(
     created_at: DateTime.iso8601('2022-03-10T00:19:42.086Z'),
     currency: 'EUR',
     fee_amount: 2055.82,
-    id: 'cdd12cfb-06af-44fe-88c8-789929deb95f',
+    id: '4d6f9de4-9b09-47f5-b24c-6d265eb64855',
     metadata: [],
     net_amount: 68_824.18,
     notes: 'Auctus patruus causa vulnus decet thymum curvo eligendi.',
@@ -819,7 +819,7 @@ req = Models::Operations::PatchPaymentPaymentRequest.new(
     tip_amount: 0.0,
     total_amount: 70_880.0,
     type: Models::Shared::PaymentPaymentType::INVOICE,
-    updated_at: DateTime.iso8601('2025-11-04T22:02:40.245Z')
+    updated_at: DateTime.iso8601('2025-11-05T17:52:11.605Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -873,7 +873,7 @@ req = Models::Operations::PatchPaymentSubscriptionRequest.new(
     current_period_start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     day_of_month: 8.0,
     description: 'New Bike model with 94 GB RAM, 813 GB storage, and narrow features',
-    id: 'd81217f1-6019-4ad1-a743-cfde982e27d1',
+    id: '141ed47d-e6a4-4285-8596-3172cbc77e7c',
     interval: 1.0,
     interval_unit: Models::Shared::IntervalUnit::YEAR,
     lineitems: [],
@@ -882,7 +882,7 @@ req = Models::Operations::PatchPaymentSubscriptionRequest.new(
     start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     status: Models::Shared::PaymentSubscriptionStatus::ACTIVE,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-10-08T18:52:20.746Z')
+    updated_at: DateTime.iso8601('2023-10-08T21:53:34.216Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1060,13 +1060,13 @@ req = Models::Operations::UpdatePaymentLinkRequest.new(
     created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
     currency: 'CAD',
     description: 'The Daron Sausages is the latest in a series of informal products from Dach, Beatty and Moen',
-    id: 'c5dd8dbf-2b8f-413c-940d-f052562c5dc6',
+    id: 'fdb6a5fa-655e-4e4e-b293-8265bda67d19',
     is_active: true,
     is_chargeable_now: true,
     lineitems: [
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-        id: 'bd59c50d-0c08-490c-baa7-2579f0e9eb8c',
+        id: 'bea3e5ef-1dbb-4f29-928b-ac1ba187bccb',
         item_description: 'Introducing the Syrian Arab Republic-inspired Chips, blending neat style with local craftsmanship',
         item_name: 'Electronic Metal Tuna',
         tax_amount: 0.0,
@@ -1078,7 +1078,7 @@ req = Models::Operations::UpdatePaymentLinkRequest.new(
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
         discount_amount: 424.32,
-        id: 'd05491bb-3ac9-464d-818b-cf5630ff0346',
+        id: 'e1ce0197-beba-482b-b35d-c4b13aa8262a',
         item_description: 'Soft Computer designed with Bronze for junior performance',
         item_name: 'Rustic Concrete Shoes',
         notes: 'Doloremque appositus cito cursim bellicus rerum ubi voluptatibus.',
@@ -1090,7 +1090,7 @@ req = Models::Operations::UpdatePaymentLinkRequest.new(
       ),
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-        id: '77d79b19-3af8-4732-860f-b418e91596f5',
+        id: '977ef57a-5ffc-4271-b20f-b87204a057a1',
         item_description: 'The Donnie Shirt is the latest in a series of tinted products from Nitzsche and Sons',
         item_name: 'Intelligent Marble Keyboard',
         notes: 'Damnatio aut bene.',
@@ -1103,8 +1103,8 @@ req = Models::Operations::UpdatePaymentLinkRequest.new(
     ],
     metadata: [],
     success_url: 'https://finished-retention.com',
-    updated_at: DateTime.iso8601('2024-04-22T12:50:35.934Z'),
-    url: 'https://pay.example.com/c5dd8dbf-2b8f-413c-940d-f052562c5dc6'
+    updated_at: DateTime.iso8601('2024-04-22T19:20:18.021Z'),
+    url: 'https://pay.example.com/fdb6a5fa-655e-4e4e-b293-8265bda67d19'
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1159,7 +1159,7 @@ req = Models::Operations::UpdatePaymentPaymentRequest.new(
     created_at: DateTime.iso8601('2022-03-10T00:19:42.086Z'),
     currency: 'EUR',
     fee_amount: 2055.82,
-    id: 'cdd12cfb-06af-44fe-88c8-789929deb95f',
+    id: '4d6f9de4-9b09-47f5-b24c-6d265eb64855',
     metadata: [],
     net_amount: 68_824.18,
     notes: 'Auctus patruus causa vulnus decet thymum curvo eligendi.',
@@ -1171,7 +1171,7 @@ req = Models::Operations::UpdatePaymentPaymentRequest.new(
     tip_amount: 0.0,
     total_amount: 70_880.0,
     type: Models::Shared::PaymentPaymentType::INVOICE,
-    updated_at: DateTime.iso8601('2025-11-04T22:02:40.245Z')
+    updated_at: DateTime.iso8601('2025-11-05T17:52:11.605Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1225,7 +1225,7 @@ req = Models::Operations::UpdatePaymentSubscriptionRequest.new(
     current_period_start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     day_of_month: 8.0,
     description: 'New Bike model with 94 GB RAM, 813 GB storage, and narrow features',
-    id: 'd81217f1-6019-4ad1-a743-cfde982e27d1',
+    id: '141ed47d-e6a4-4285-8596-3172cbc77e7c',
     interval: 1.0,
     interval_unit: Models::Shared::IntervalUnit::YEAR,
     lineitems: [],
@@ -1234,7 +1234,7 @@ req = Models::Operations::UpdatePaymentSubscriptionRequest.new(
     start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     status: Models::Shared::PaymentSubscriptionStatus::ACTIVE,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-10-08T18:52:20.746Z')
+    updated_at: DateTime.iso8601('2023-10-08T21:53:34.216Z')
   ),
   connection_id: '<id>',
   id: '<id>'

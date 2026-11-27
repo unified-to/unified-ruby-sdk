@@ -12,6 +12,8 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
+        # Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields
+        field :unified_person_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('__unified_person_ids') } }
 
         field :address, Crystalline::Nilable.new(Models::Shared::PropertyCrmContactAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address') } }
         # The company/organization name  of the contact
@@ -51,8 +53,9 @@ module UnifiedRubySDK
         # (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(address: T.nilable(Models::Shared::PropertyCrmContactAddress), company: T.nilable(::String), company_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), deal_ids: T.nilable(T::Array[::String]), department: T.nilable(::String), emails: T.nilable(T::Array[Models::Shared::CrmEmail]), first_name: T.nilable(::String), id: T.nilable(::String), image_url: T.nilable(::String), last_name: T.nilable(::String), link_urls: T.nilable(T::Array[::String]), metadata: T.nilable(T::Array[Models::Shared::CrmMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), telephones: T.nilable(T::Array[Models::Shared::CrmTelephone]), title: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-        def initialize(address: nil, company: nil, company_ids: nil, created_at: nil, deal_ids: nil, department: nil, emails: nil, first_name: nil, id: nil, image_url: nil, last_name: nil, link_urls: nil, metadata: nil, name: nil, raw: nil, telephones: nil, title: nil, updated_at: nil, user_id: nil)
+        sig { params(unified_person_ids: T.nilable(T::Array[::String]), address: T.nilable(Models::Shared::PropertyCrmContactAddress), company: T.nilable(::String), company_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), deal_ids: T.nilable(T::Array[::String]), department: T.nilable(::String), emails: T.nilable(T::Array[Models::Shared::CrmEmail]), first_name: T.nilable(::String), id: T.nilable(::String), image_url: T.nilable(::String), last_name: T.nilable(::String), link_urls: T.nilable(T::Array[::String]), metadata: T.nilable(T::Array[Models::Shared::CrmMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), telephones: T.nilable(T::Array[Models::Shared::CrmTelephone]), title: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        def initialize(unified_person_ids: nil, address: nil, company: nil, company_ids: nil, created_at: nil, deal_ids: nil, department: nil, emails: nil, first_name: nil, id: nil, image_url: nil, last_name: nil, link_urls: nil, metadata: nil, name: nil, raw: nil, telephones: nil, title: nil, updated_at: nil, user_id: nil)
+          @unified_person_ids = unified_person_ids
           @address = address
           @company = company
           @company_ids = company_ids
@@ -77,6 +80,7 @@ module UnifiedRubySDK
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
+          return false unless @unified_person_ids == other.unified_person_ids
           return false unless @address == other.address
           return false unless @company == other.company
           return false unless @company_ids == other.company_ids

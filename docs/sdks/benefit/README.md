@@ -37,13 +37,13 @@ res = s.benefit.create_hris_benefit(hris_benefit: Models::Shared::HrisBenefit.ne
   employer_contribution_max_amount: 179_093.0,
   employer_contribution_type: Models::Shared::EmployerContributionType::PERCENTAGE,
   frequency: Models::Shared::HrisBenefitFrequency::MONTH,
-  id: '6a7ec10d-a2a1-4615-982d-bcd2c0cd4907',
+  id: 'b46207c9-8810-496c-b71c-6cddc63f067f',
   is_active: false,
   metadata: [],
   name: 'Unbranded Wooden Keyboard',
   tax: Models::Shared::Tax::PRE_TAX,
   type: Models::Shared::HrisBenefitType::EMPLOYER_TAX_CONTRIBUTION,
-  updated_at: DateTime.iso8601('2025-07-23T01:17:46.331Z')
+  updated_at: DateTime.iso8601('2025-07-23T21:31:57.141Z')
 ), connection_id: '<id>')
 
 unless res.hris_benefit.nil?
@@ -186,13 +186,13 @@ req = Models::Operations::PatchHrisBenefitRequest.new(
     employer_contribution_max_amount: 179_093.0,
     employer_contribution_type: Models::Shared::EmployerContributionType::PERCENTAGE,
     frequency: Models::Shared::HrisBenefitFrequency::MONTH,
-    id: '66211c31-17af-43e8-9f10-dfeaa07e38ee',
+    id: '30cfd2c6-ed22-4d06-b6ae-ce689dac53cb',
     is_active: false,
     metadata: [],
     name: 'Unbranded Wooden Keyboard',
     tax: Models::Shared::Tax::PRE_TAX,
     type: Models::Shared::HrisBenefitType::EMPLOYER_TAX_CONTRIBUTION,
-    updated_at: DateTime.iso8601('2025-07-23T01:17:46.353Z')
+    updated_at: DateTime.iso8601('2025-07-23T21:31:57.150Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -290,13 +290,13 @@ req = Models::Operations::UpdateHrisBenefitRequest.new(
     employer_contribution_max_amount: 179_093.0,
     employer_contribution_type: Models::Shared::EmployerContributionType::PERCENTAGE,
     frequency: Models::Shared::HrisBenefitFrequency::MONTH,
-    id: '66211c31-17af-43e8-9f10-dfeaa07e38ee',
+    id: '30cfd2c6-ed22-4d06-b6ae-ce689dac53cb',
     is_active: false,
     metadata: [],
     name: 'Unbranded Wooden Keyboard',
     tax: Models::Shared::Tax::PRE_TAX,
     type: Models::Shared::HrisBenefitType::EMPLOYER_TAX_CONTRIBUTION,
-    updated_at: DateTime.iso8601('2025-07-23T01:17:46.353Z')
+    updated_at: DateTime.iso8601('2025-07-23T21:31:57.150Z')
   ),
   connection_id: '<id>',
   id: '<id>'

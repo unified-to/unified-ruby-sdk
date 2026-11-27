@@ -59,7 +59,7 @@ res = s.listing.create_property_listing(property_listing: Models::Shared::Proper
   currency: 'USD',
   description: 'Cruentus demoror censura caveo sponte statim. Cursim angulus arbitro barba summopere subnecto curto vulticulus comparo surgo. Carmen deputo defluo abscido conatus arbustum sequi abbas complectus demum.',
   house_rules: 'No smoking. No parties or events.',
-  id: '62921985-1342-4f8c-b9cf-aaa59276696e',
+  id: 'f8481bb6-6400-448c-a1b8-7ddb2d280b14',
   image_urls: [
     'https://picsum.photos/seed/cCdY57x3Vw/2822/2061',
     'https://picsum.photos/seed/nH6zsBCr/1004/2259',
@@ -76,7 +76,7 @@ res = s.listing.create_property_listing(property_listing: Models::Shared::Proper
   start_price_amount: 470.0,
   timezone: 'America/Los_Angeles',
   type: Models::Shared::PropertyListingType::ROOM,
-  updated_at: DateTime.iso8601('2026-10-03T03:26:29.316Z'),
+  updated_at: DateTime.iso8601('2026-10-04T04:21:19.467Z'),
   web_url: 'https://oval-junior.info'
 ), connection_id: '<id>')
 
@@ -242,7 +242,7 @@ req = Models::Operations::PatchPropertyListingRequest.new(
     currency: 'USD',
     description: 'Cruentus demoror censura caveo sponte statim. Cursim angulus arbitro barba summopere subnecto curto vulticulus comparo surgo. Carmen deputo defluo abscido conatus arbustum sequi abbas complectus demum.',
     house_rules: 'No smoking. No parties or events.',
-    id: 'd5e5d9f4-639e-469a-b7df-480105ade4f6',
+    id: 'e63ac854-f175-4812-9620-acf5c2feffbe',
     image_urls: [
       'https://picsum.photos/seed/cCdY57x3Vw/2822/2061',
       'https://picsum.photos/seed/nH6zsBCr/1004/2259',
@@ -259,7 +259,7 @@ req = Models::Operations::PatchPropertyListingRequest.new(
     start_price_amount: 470.0,
     timezone: 'America/Los_Angeles',
     type: Models::Shared::PropertyListingType::ROOM,
-    updated_at: DateTime.iso8601('2026-10-03T03:26:29.335Z'),
+    updated_at: DateTime.iso8601('2026-10-04T04:21:19.498Z'),
     web_url: 'https://oval-junior.info'
   ),
   connection_id: '<id>',
@@ -380,7 +380,7 @@ req = Models::Operations::UpdatePropertyListingRequest.new(
     currency: 'USD',
     description: 'Cruentus demoror censura caveo sponte statim. Cursim angulus arbitro barba summopere subnecto curto vulticulus comparo surgo. Carmen deputo defluo abscido conatus arbustum sequi abbas complectus demum.',
     house_rules: 'No smoking. No parties or events.',
-    id: 'd5e5d9f4-639e-469a-b7df-480105ade4f6',
+    id: 'e63ac854-f175-4812-9620-acf5c2feffbe',
     image_urls: [
       'https://picsum.photos/seed/cCdY57x3Vw/2822/2061',
       'https://picsum.photos/seed/nH6zsBCr/1004/2259',
@@ -397,7 +397,7 @@ req = Models::Operations::UpdatePropertyListingRequest.new(
     start_price_amount: 470.0,
     timezone: 'America/Los_Angeles',
     type: Models::Shared::PropertyListingType::ROOM,
-    updated_at: DateTime.iso8601('2026-10-03T03:26:29.335Z'),
+    updated_at: DateTime.iso8601('2026-10-04T04:21:19.498Z'),
     web_url: 'https://oval-junior.info'
   ),
   connection_id: '<id>',

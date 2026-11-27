@@ -44,6 +44,7 @@ module UnifiedRubySDK
           PAYMENTS = new('payments')
           TABLE_ID = new('table_id')
           PAID_AMOUNT = new('paid_amount')
+          BALANCE_AMOUNT = new('balance_amount')
           RAW = new('raw')
         end
       end

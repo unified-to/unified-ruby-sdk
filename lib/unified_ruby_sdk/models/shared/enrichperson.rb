@@ -12,6 +12,8 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
+        # Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields
+        field :unified_person_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('__unified_person_ids') } }
         # The address of the person
         field :address, Crystalline::Nilable.new(Models::Shared::PropertyEnrichPersonAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address') } }
         # The biography description of the person
@@ -65,8 +67,9 @@ module UnifiedRubySDK
 
         field :work_histories, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::EnrichPersonWorkHistory)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('work_histories') } }
 
-        sig { params(address: T.nilable(Models::Shared::PropertyEnrichPersonAddress), bio: T.nilable(::String), birthdate: T.nilable(::String), company: T.nilable(::String), company_domain: T.nilable(::String), created_at: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::EnrichEmail]), facebook_url: T.nilable(::String), first_name: T.nilable(::String), gender: T.nilable(Models::Shared::EnrichPersonGender), github_url: T.nilable(::String), github_username: T.nilable(::String), id: T.nilable(::String), image_url: T.nilable(::String), last_name: T.nilable(::String), linkedin_url: T.nilable(::String), name: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), telephones: T.nilable(T::Array[Models::Shared::EnrichTelephone]), timezone: T.nilable(::String), title: T.nilable(::String), twitter_handle: T.nilable(::String), twitter_url: T.nilable(::String), updated_at: T.nilable(::DateTime), utc_offset: T.nilable(::Float), work_histories: T.nilable(T::Array[Models::Shared::EnrichPersonWorkHistory])).void }
-        def initialize(address: nil, bio: nil, birthdate: nil, company: nil, company_domain: nil, created_at: nil, emails: nil, facebook_url: nil, first_name: nil, gender: nil, github_url: nil, github_username: nil, id: nil, image_url: nil, last_name: nil, linkedin_url: nil, name: nil, raw: nil, telephones: nil, timezone: nil, title: nil, twitter_handle: nil, twitter_url: nil, updated_at: nil, utc_offset: nil, work_histories: nil)
+        sig { params(unified_person_ids: T.nilable(T::Array[::String]), address: T.nilable(Models::Shared::PropertyEnrichPersonAddress), bio: T.nilable(::String), birthdate: T.nilable(::String), company: T.nilable(::String), company_domain: T.nilable(::String), created_at: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::EnrichEmail]), facebook_url: T.nilable(::String), first_name: T.nilable(::String), gender: T.nilable(Models::Shared::EnrichPersonGender), github_url: T.nilable(::String), github_username: T.nilable(::String), id: T.nilable(::String), image_url: T.nilable(::String), last_name: T.nilable(::String), linkedin_url: T.nilable(::String), name: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), telephones: T.nilable(T::Array[Models::Shared::EnrichTelephone]), timezone: T.nilable(::String), title: T.nilable(::String), twitter_handle: T.nilable(::String), twitter_url: T.nilable(::String), updated_at: T.nilable(::DateTime), utc_offset: T.nilable(::Float), work_histories: T.nilable(T::Array[Models::Shared::EnrichPersonWorkHistory])).void }
+        def initialize(unified_person_ids: nil, address: nil, bio: nil, birthdate: nil, company: nil, company_domain: nil, created_at: nil, emails: nil, facebook_url: nil, first_name: nil, gender: nil, github_url: nil, github_username: nil, id: nil, image_url: nil, last_name: nil, linkedin_url: nil, name: nil, raw: nil, telephones: nil, timezone: nil, title: nil, twitter_handle: nil, twitter_url: nil, updated_at: nil, utc_offset: nil, work_histories: nil)
+          @unified_person_ids = unified_person_ids
           @address = address
           @bio = bio
           @birthdate = birthdate
@@ -98,6 +101,7 @@ module UnifiedRubySDK
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
+          return false unless @unified_person_ids == other.unified_person_ids
           return false unless @address == other.address
           return false unless @bio == other.bio
           return false unless @birthdate == other.birthdate

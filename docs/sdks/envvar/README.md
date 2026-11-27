@@ -32,11 +32,11 @@ res = s.envvar.create_compute_envvar(compute_envvar: Models::Shared::ComputeEnvv
   environments: [
     Models::Shared::PropertyComputeEnvvarEnvironments::PREVIEW,
   ],
-  id: '29f6916a-3d86-4aa0-b721-3da16ccabb77',
+  id: 'eeb0bfee-7303-4c90-8b9c-37d07126b254',
   is_secret: true,
   metadata: [],
   name: 'CLAMO_TOLLO',
-  updated_at: DateTime.iso8601('2025-07-30T12:51:56.491Z')
+  updated_at: DateTime.iso8601('2025-07-31T08:00:40.806Z')
 ), connection_id: '<id>')
 
 unless res.compute_envvar.nil?
@@ -174,11 +174,11 @@ req = Models::Operations::PatchComputeEnvvarRequest.new(
     environments: [
       Models::Shared::PropertyComputeEnvvarEnvironments::PREVIEW,
     ],
-    id: 'e5b6a98c-8697-445c-ac42-e8f138641d8f',
+    id: 'e623f97b-39d9-4918-b5ba-38b0602810ea',
     is_secret: true,
     metadata: [],
     name: 'CLAMO_TOLLO',
-    updated_at: DateTime.iso8601('2025-07-30T12:51:56.500Z')
+    updated_at: DateTime.iso8601('2025-07-31T08:00:40.814Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -271,11 +271,11 @@ req = Models::Operations::UpdateComputeEnvvarRequest.new(
     environments: [
       Models::Shared::PropertyComputeEnvvarEnvironments::PREVIEW,
     ],
-    id: 'e5b6a98c-8697-445c-ac42-e8f138641d8f',
+    id: 'e623f97b-39d9-4918-b5ba-38b0602810ea',
     is_secret: true,
     metadata: [],
     name: 'CLAMO_TOLLO',
-    updated_at: DateTime.iso8601('2025-07-30T12:51:56.500Z')
+    updated_at: DateTime.iso8601('2025-07-31T08:00:40.814Z')
   ),
   connection_id: '<id>',
   id: '<id>'

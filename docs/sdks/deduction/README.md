@@ -35,15 +35,15 @@ res = s.deduction.create_hris_deduction(hris_deduction: Models::Shared::HrisDedu
   employer_type: Models::Shared::EmployerType::PERCENTAGE,
   frequency: Models::Shared::HrisDeductionFrequency::ONE_TIME,
   garnishment_type: Models::Shared::GarnishmentType::CHILD_SUPPORT,
-  id: 'ac795e88-e0f8-4ed1-b861-1f89726cf7b9',
+  id: '81d6ef94-c026-4d5f-b673-0be276b539ec',
   is_active: true,
   loan_identifier: '9M6VMN15',
   max_amount: 21_794.0,
   metadata: [],
   notes: 'Tepidus colligo.',
-  start_at: DateTime.iso8601('2025-04-11T16:38:40.198Z'),
+  start_at: DateTime.iso8601('2025-04-12T12:06:00.853Z'),
   type: Models::Shared::HrisDeductionType::FIXED,
-  updated_at: DateTime.iso8601('2024-04-13T09:51:16.887Z')
+  updated_at: DateTime.iso8601('2024-04-14T01:34:33.439Z')
 ), connection_id: '<id>')
 
 unless res.hris_deduction.nil?
@@ -184,15 +184,15 @@ req = Models::Operations::PatchHrisDeductionRequest.new(
     employer_type: Models::Shared::EmployerType::PERCENTAGE,
     frequency: Models::Shared::HrisDeductionFrequency::ONE_TIME,
     garnishment_type: Models::Shared::GarnishmentType::CHILD_SUPPORT,
-    id: 'e9edf933-8a74-4abb-9546-d4cba363d999',
+    id: '19fd8aec-5643-42ae-8a0a-1578644171a0',
     is_active: true,
     loan_identifier: '9M6VMN15',
     max_amount: 21_794.0,
     metadata: [],
     notes: 'Tepidus colligo.',
-    start_at: DateTime.iso8601('2025-04-11T16:38:40.213Z'),
+    start_at: DateTime.iso8601('2025-04-12T12:06:00.862Z'),
     type: Models::Shared::HrisDeductionType::FIXED,
-    updated_at: DateTime.iso8601('2024-04-13T09:51:16.899Z')
+    updated_at: DateTime.iso8601('2024-04-14T01:34:33.446Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -288,15 +288,15 @@ req = Models::Operations::UpdateHrisDeductionRequest.new(
     employer_type: Models::Shared::EmployerType::PERCENTAGE,
     frequency: Models::Shared::HrisDeductionFrequency::ONE_TIME,
     garnishment_type: Models::Shared::GarnishmentType::CHILD_SUPPORT,
-    id: 'e9edf933-8a74-4abb-9546-d4cba363d999',
+    id: '19fd8aec-5643-42ae-8a0a-1578644171a0',
     is_active: true,
     loan_identifier: '9M6VMN15',
     max_amount: 21_794.0,
     metadata: [],
     notes: 'Tepidus colligo.',
-    start_at: DateTime.iso8601('2025-04-11T16:38:40.213Z'),
+    start_at: DateTime.iso8601('2025-04-12T12:06:00.862Z'),
     type: Models::Shared::HrisDeductionType::FIXED,
-    updated_at: DateTime.iso8601('2024-04-13T09:51:16.899Z')
+    updated_at: DateTime.iso8601('2024-04-14T01:34:33.446Z')
   ),
   connection_id: '<id>',
   id: '<id>'

@@ -48,10 +48,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
   )
 )
 res = s.task.create_genai_task(genai_task: Models::Shared::GenaiTask.new(
-  completed_at: DateTime.iso8601('2025-10-30T21:42:58.502Z'),
+  completed_at: DateTime.iso8601('2025-10-31T18:46:24.365Z'),
   created_at: DateTime.iso8601('2020-10-25T20:19:33.247Z'),
   files_changed: 19.0,
-  id: '827fd605-c784-446b-a0a7-1a7ea9ca50a4',
+  id: '0f5fbe51-344a-403a-af20-1a8f14e354d6',
   instructions: 'Angustus cubo cupio abundans admoveo sumptus.',
   lines_added: 244.0,
   lines_deleted: 118.0,
@@ -66,12 +66,12 @@ res = s.task.create_genai_task(genai_task: Models::Shared::GenaiTask.new(
   pullrequest_url: 'https://github.com/felicity.rowe61/eek-save/pull/383',
   repo_url: 'https://github.com/felicity.rowe61/eek-save',
   source_branch_identifier: 'main',
-  started_at: DateTime.iso8601('2024-06-11T21:02:21.948Z'),
+  started_at: DateTime.iso8601('2024-06-12T12:16:38.226Z'),
   status: Models::Shared::GenaiTaskStatus::BLOCKED,
   summary: 'Tenus via tamisium denego teres adsidue cura crur. Coma defungo magnam delicate confero amaritudo varius.',
   target_branch_identifier: 'agent/eek-save',
   tokens_used: 2165.0,
-  updated_at: DateTime.iso8601('2023-03-12T08:07:15.266Z'),
+  updated_at: DateTime.iso8601('2023-03-12T18:05:49.443Z'),
   web_url: 'https://monstrous-honesty.net'
 ), connection_id: '<id>')
 
@@ -119,10 +119,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.task.create_task_comment(task_comment: Models::Shared::TaskComment.new(
   created_at: DateTime.iso8601('2019-10-12T20:33:37.879Z'),
   has_children: false,
-  id: '22ffaf92-ea19-4d61-898b-49bcf45b10bf',
+  id: '400030b6-0dfe-4895-bb42-ef8941b746b0',
   metadata: [],
   text: 'Tabernus circumvenio demens placeat.',
-  updated_at: DateTime.iso8601('2021-10-13T10:41:34.455Z')
+  updated_at: DateTime.iso8601('2021-10-13T17:52:49.182Z')
 ), connection_id: '<id>')
 
 unless res.task_comment.nil?
@@ -171,14 +171,14 @@ res = s.task.create_task_project(task_project: Models::Shared::TaskProject.new(
   description: 'Curiositas.',
   has_children: false,
   has_tasks: false,
-  id: 'd8919adf-d949-4c8b-8a9e-4c50201d6f77',
+  id: '025cf93b-9c26-4159-a392-6269615196f2',
   metadata: [
     Models::Shared::TaskMetadata.new(
       extra_data: {
 
       },
       format: Models::Shared::TaskMetadataFormat::TEXT,
-      id: '632a393e-a54f-48a7-b8bf-c1438d1b6dda',
+      id: '191b4831-5250-435c-bd64-b935f19dc541',
       namespace: 'custom',
       slug: 'vox',
       value: 'decens'
@@ -188,14 +188,14 @@ res = s.task.create_task_project(task_project: Models::Shared::TaskProject.new(
 
       },
       format: Models::Shared::TaskMetadataFormat::TEXT,
-      id: 'ce123b09-066b-4669-80b8-3b64e28132b9',
+      id: '117a8689-58a2-4738-ba05-32bad14d7f80',
       namespace: 'custom',
       slug: 'uterque',
       value: 'benevolentia'
     ),
   ],
   name: 'Baby',
-  updated_at: DateTime.iso8601('2023-10-14T20:32:55.251Z')
+  updated_at: DateTime.iso8601('2023-10-14T22:51:35.203Z')
 ), connection_id: '<id>')
 
 unless res.task_project.nil?
@@ -242,15 +242,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.task.create_task_task(task_task: Models::Shared::TaskTask.new(
   attachment_ids: [],
   created_at: DateTime.iso8601('2019-01-31T08:34:55.626Z'),
-  due_at: DateTime.iso8601('2025-10-12T04:37:14.437Z'),
+  due_at: DateTime.iso8601('2025-10-13T02:15:13.569Z'),
   has_children: true,
-  id: '957288d4-3ff8-4a5a-b4a4-75a7f481e55f',
+  id: 'adf3847e-6c49-4dd8-8e4b-073055937256',
   metadata: [],
   name: 'We need to connect the bluetooth IP sensor!',
   notes: 'Neque thymbra titulus absconditus peccatus crustulum tollo cometes. Vacuus eos cedo spero somnus utpote coadunatio denuncio adopto autus. Atrocitas vulnero concido rerum cura aveho torqueo tempore. Vomer tempore suscipit tutis clibanus valetudo vulnero pauper caput.',
   priority: 'MEDIUM',
   progress: 33.0,
-  start_at: DateTime.iso8601('2025-09-13T18:45:45.475Z'),
+  start_at: DateTime.iso8601('2025-09-14T16:23:44.607Z'),
   status: Models::Shared::TaskTaskStatus::OPENED,
   story_points: 0.0,
   tags: [
@@ -260,7 +260,7 @@ res = s.task.create_task_task(task_task: Models::Shared::TaskTask.new(
   time_spent: 5359.0,
   time_spent_unit: 'SECONDS',
   type: 'antiquus',
-  updated_at: DateTime.iso8601('2022-04-21T21:43:31.816Z'),
+  updated_at: DateTime.iso8601('2022-04-22T08:15:15.181Z'),
   url: 'https://knotty-heroine.info'
 ), connection_id: '<id>')
 
@@ -743,10 +743,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchGenaiTaskRequest.new(
   genai_task: Models::Shared::GenaiTask.new(
-    completed_at: DateTime.iso8601('2025-10-30T21:42:58.515Z'),
+    completed_at: DateTime.iso8601('2025-10-31T18:46:24.388Z'),
     created_at: DateTime.iso8601('2020-10-25T20:19:33.247Z'),
     files_changed: 19.0,
-    id: 'c1e8d2b1-28fe-450c-90d0-77a68cf53366',
+    id: '35bcc717-6827-428d-ae50-ca48f9066d1a',
     instructions: 'Angustus cubo cupio abundans admoveo sumptus.',
     lines_added: 244.0,
     lines_deleted: 118.0,
@@ -761,12 +761,12 @@ req = Models::Operations::PatchGenaiTaskRequest.new(
     pullrequest_url: 'https://github.com/felicity.rowe61/eek-save/pull/383',
     repo_url: 'https://github.com/felicity.rowe61/eek-save',
     source_branch_identifier: 'main',
-    started_at: DateTime.iso8601('2024-06-11T21:02:21.958Z'),
+    started_at: DateTime.iso8601('2024-06-12T12:16:38.242Z'),
     status: Models::Shared::GenaiTaskStatus::BLOCKED,
     summary: 'Tenus via tamisium denego teres adsidue cura crur. Coma defungo magnam delicate confero amaritudo varius.',
     target_branch_identifier: 'agent/eek-save',
     tokens_used: 2165.0,
-    updated_at: DateTime.iso8601('2023-03-12T08:07:15.272Z'),
+    updated_at: DateTime.iso8601('2023-03-12T18:05:49.454Z'),
     web_url: 'https://monstrous-honesty.net'
   ),
   connection_id: '<id>',
@@ -817,10 +817,10 @@ req = Models::Operations::PatchTaskCommentRequest.new(
   task_comment: Models::Shared::TaskComment.new(
     created_at: DateTime.iso8601('2019-10-12T20:33:37.879Z'),
     has_children: false,
-    id: 'd5e8e487-dcd2-49c2-9c63-82ae2d79fe29',
+    id: 'e08a699a-73ab-4835-a52d-67fd7bc2637e',
     metadata: [],
     text: 'Tabernus circumvenio demens placeat.',
-    updated_at: DateTime.iso8601('2021-10-13T10:41:34.458Z')
+    updated_at: DateTime.iso8601('2021-10-13T17:52:49.185Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -872,14 +872,14 @@ req = Models::Operations::PatchTaskProjectRequest.new(
     description: 'Curiositas.',
     has_children: false,
     has_tasks: false,
-    id: '540a8ed4-f32c-4b71-8cb7-6764fc570039',
+    id: '3c017455-03c7-4bd8-97d3-9457f055e2e6',
     metadata: [
       Models::Shared::TaskMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: 'eed2164a-85d2-4fed-9143-da03e6651852',
+        id: '1daf09ad-80c9-43e6-8caf-3e7a4e9cb6e6',
         namespace: 'custom',
         slug: 'vox',
         value: 'decens'
@@ -889,14 +889,14 @@ req = Models::Operations::PatchTaskProjectRequest.new(
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: 'f486d87c-8413-4b76-9d37-c227663ee2e4',
+        id: '13d9f15a-ae96-46b9-9394-9086e571cfc2',
         namespace: 'custom',
         slug: 'uterque',
         value: 'benevolentia'
       ),
     ],
     name: 'Baby',
-    updated_at: DateTime.iso8601('2023-10-14T20:32:55.252Z')
+    updated_at: DateTime.iso8601('2023-10-14T22:51:35.204Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -946,15 +946,15 @@ req = Models::Operations::PatchTaskTaskRequest.new(
   task_task: Models::Shared::TaskTask.new(
     attachment_ids: [],
     created_at: DateTime.iso8601('2019-01-31T08:34:55.626Z'),
-    due_at: DateTime.iso8601('2025-10-12T04:37:14.453Z'),
+    due_at: DateTime.iso8601('2025-10-13T02:15:13.591Z'),
     has_children: true,
-    id: 'e2f18afa-3fe5-4640-87a9-3b63bb52c531',
+    id: '1cdf7456-aee7-4436-8374-854f0d54446e',
     metadata: [],
     name: 'We need to connect the bluetooth IP sensor!',
     notes: 'Neque thymbra titulus absconditus peccatus crustulum tollo cometes. Vacuus eos cedo spero somnus utpote coadunatio denuncio adopto autus. Atrocitas vulnero concido rerum cura aveho torqueo tempore. Vomer tempore suscipit tutis clibanus valetudo vulnero pauper caput.',
     priority: 'MEDIUM',
     progress: 33.0,
-    start_at: DateTime.iso8601('2025-09-13T18:45:45.491Z'),
+    start_at: DateTime.iso8601('2025-09-14T16:23:44.629Z'),
     status: Models::Shared::TaskTaskStatus::OPENED,
     story_points: 0.0,
     tags: [
@@ -964,7 +964,7 @@ req = Models::Operations::PatchTaskTaskRequest.new(
     time_spent: 5359.0,
     time_spent_unit: 'SECONDS',
     type: 'antiquus',
-    updated_at: DateTime.iso8601('2022-04-21T21:43:31.824Z'),
+    updated_at: DateTime.iso8601('2022-04-22T08:15:15.191Z'),
     url: 'https://knotty-heroine.info'
   ),
   connection_id: '<id>',
@@ -1177,10 +1177,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateGenaiTaskRequest.new(
   genai_task: Models::Shared::GenaiTask.new(
-    completed_at: DateTime.iso8601('2025-10-30T21:42:58.515Z'),
+    completed_at: DateTime.iso8601('2025-10-31T18:46:24.388Z'),
     created_at: DateTime.iso8601('2020-10-25T20:19:33.247Z'),
     files_changed: 19.0,
-    id: 'c1e8d2b1-28fe-450c-90d0-77a68cf53366',
+    id: '35bcc717-6827-428d-ae50-ca48f9066d1a',
     instructions: 'Angustus cubo cupio abundans admoveo sumptus.',
     lines_added: 244.0,
     lines_deleted: 118.0,
@@ -1195,12 +1195,12 @@ req = Models::Operations::UpdateGenaiTaskRequest.new(
     pullrequest_url: 'https://github.com/felicity.rowe61/eek-save/pull/383',
     repo_url: 'https://github.com/felicity.rowe61/eek-save',
     source_branch_identifier: 'main',
-    started_at: DateTime.iso8601('2024-06-11T21:02:21.958Z'),
+    started_at: DateTime.iso8601('2024-06-12T12:16:38.242Z'),
     status: Models::Shared::GenaiTaskStatus::BLOCKED,
     summary: 'Tenus via tamisium denego teres adsidue cura crur. Coma defungo magnam delicate confero amaritudo varius.',
     target_branch_identifier: 'agent/eek-save',
     tokens_used: 2165.0,
-    updated_at: DateTime.iso8601('2023-03-12T08:07:15.272Z'),
+    updated_at: DateTime.iso8601('2023-03-12T18:05:49.454Z'),
     web_url: 'https://monstrous-honesty.net'
   ),
   connection_id: '<id>',
@@ -1251,10 +1251,10 @@ req = Models::Operations::UpdateTaskCommentRequest.new(
   task_comment: Models::Shared::TaskComment.new(
     created_at: DateTime.iso8601('2019-10-12T20:33:37.879Z'),
     has_children: false,
-    id: 'd5e8e487-dcd2-49c2-9c63-82ae2d79fe29',
+    id: 'e08a699a-73ab-4835-a52d-67fd7bc2637e',
     metadata: [],
     text: 'Tabernus circumvenio demens placeat.',
-    updated_at: DateTime.iso8601('2021-10-13T10:41:34.458Z')
+    updated_at: DateTime.iso8601('2021-10-13T17:52:49.185Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1306,14 +1306,14 @@ req = Models::Operations::UpdateTaskProjectRequest.new(
     description: 'Curiositas.',
     has_children: false,
     has_tasks: false,
-    id: '540a8ed4-f32c-4b71-8cb7-6764fc570039',
+    id: '3c017455-03c7-4bd8-97d3-9457f055e2e6',
     metadata: [
       Models::Shared::TaskMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: 'eed2164a-85d2-4fed-9143-da03e6651852',
+        id: '1daf09ad-80c9-43e6-8caf-3e7a4e9cb6e6',
         namespace: 'custom',
         slug: 'vox',
         value: 'decens'
@@ -1323,14 +1323,14 @@ req = Models::Operations::UpdateTaskProjectRequest.new(
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: 'f486d87c-8413-4b76-9d37-c227663ee2e4',
+        id: '13d9f15a-ae96-46b9-9394-9086e571cfc2',
         namespace: 'custom',
         slug: 'uterque',
         value: 'benevolentia'
       ),
     ],
     name: 'Baby',
-    updated_at: DateTime.iso8601('2023-10-14T20:32:55.252Z')
+    updated_at: DateTime.iso8601('2023-10-14T22:51:35.204Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1380,15 +1380,15 @@ req = Models::Operations::UpdateTaskTaskRequest.new(
   task_task: Models::Shared::TaskTask.new(
     attachment_ids: [],
     created_at: DateTime.iso8601('2019-01-31T08:34:55.626Z'),
-    due_at: DateTime.iso8601('2025-10-12T04:37:14.453Z'),
+    due_at: DateTime.iso8601('2025-10-13T02:15:13.591Z'),
     has_children: true,
-    id: 'e2f18afa-3fe5-4640-87a9-3b63bb52c531',
+    id: '1cdf7456-aee7-4436-8374-854f0d54446e',
     metadata: [],
     name: 'We need to connect the bluetooth IP sensor!',
     notes: 'Neque thymbra titulus absconditus peccatus crustulum tollo cometes. Vacuus eos cedo spero somnus utpote coadunatio denuncio adopto autus. Atrocitas vulnero concido rerum cura aveho torqueo tempore. Vomer tempore suscipit tutis clibanus valetudo vulnero pauper caput.',
     priority: 'MEDIUM',
     progress: 33.0,
-    start_at: DateTime.iso8601('2025-09-13T18:45:45.491Z'),
+    start_at: DateTime.iso8601('2025-09-14T16:23:44.629Z'),
     status: Models::Shared::TaskTaskStatus::OPENED,
     story_points: 0.0,
     tags: [
@@ -1398,7 +1398,7 @@ req = Models::Operations::UpdateTaskTaskRequest.new(
     time_spent: 5359.0,
     time_spent_unit: 'SECONDS',
     type: 'antiquus',
-    updated_at: DateTime.iso8601('2022-04-21T21:43:31.824Z'),
+    updated_at: DateTime.iso8601('2022-04-22T08:15:15.191Z'),
     url: 'https://knotty-heroine.info'
   ),
   connection_id: '<id>',

@@ -31,9 +31,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.inventory.create_commerce_inventory(commerce_inventory: Models::Shared::CommerceInventory.new(
   available: 337.0,
-  id: 'a52f4478-09e2-44f3-a500-24f25d2c4222',
+  id: '693e6f53-fc61-4d8a-9960-4755d80263c5',
   metadata: [],
-  updated_at: DateTime.iso8601('2025-12-19T09:04:37.018Z')
+  updated_at: DateTime.iso8601('2025-12-20T05:40:00.876Z')
 ), connection_id: '<id>')
 
 unless res.commerce_inventory.nil?
@@ -255,9 +255,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchCommerceInventoryRequest.new(
   commerce_inventory: Models::Shared::CommerceInventory.new(
     available: 337.0,
-    id: 'b508fccd-1dcd-49e8-a406-6ad14aa3aa3b',
+    id: '73c9a27d-2ee7-4f09-9479-2e48a6e5d84a',
     metadata: [],
-    updated_at: DateTime.iso8601('2025-12-19T09:04:37.032Z')
+    updated_at: DateTime.iso8601('2025-12-20T05:40:00.885Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -347,9 +347,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateCommerceInventoryRequest.new(
   commerce_inventory: Models::Shared::CommerceInventory.new(
     available: 337.0,
-    id: 'b508fccd-1dcd-49e8-a406-6ad14aa3aa3b',
+    id: '73c9a27d-2ee7-4f09-9479-2e48a6e5d84a',
     metadata: [],
-    updated_at: DateTime.iso8601('2025-12-19T09:04:37.032Z')
+    updated_at: DateTime.iso8601('2025-12-20T05:40:00.885Z')
   ),
   connection_id: '<id>',
   id: '<id>'

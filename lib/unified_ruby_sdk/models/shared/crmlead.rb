@@ -12,6 +12,8 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
+        # Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields
+        field :unified_person_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('__unified_person_ids') } }
 
         field :address, Crystalline::Nilable.new(Models::Shared::PropertyCrmLeadAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address') } }
         # (reference to CrmCompany)
@@ -57,8 +59,9 @@ module UnifiedRubySDK
         # DMS Vehicles the lead is interested in
         field :vehicle_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('vehicle_ids') } }
 
-        sig { params(address: T.nilable(Models::Shared::PropertyCrmLeadAddress), company_id: T.nilable(::String), company_name: T.nilable(::String), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), creator_user_id: T.nilable(::String), emails: T.nilable(T::Array[Models::Shared::CrmEmail]), first_name: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), last_name: T.nilable(::String), link_urls: T.nilable(T::Array[::String]), metadata: T.nilable(T::Array[Models::Shared::CrmMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), source: T.nilable(::String), status: T.nilable(::String), telephones: T.nilable(T::Array[Models::Shared::CrmTelephone]), title: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), vehicle_ids: T.nilable(T::Array[::String])).void }
-        def initialize(address: nil, company_id: nil, company_name: nil, contact_id: nil, created_at: nil, creator_user_id: nil, emails: nil, first_name: nil, id: nil, is_active: nil, last_name: nil, link_urls: nil, metadata: nil, name: nil, raw: nil, source: nil, status: nil, telephones: nil, title: nil, updated_at: nil, user_id: nil, vehicle_ids: nil)
+        sig { params(unified_person_ids: T.nilable(T::Array[::String]), address: T.nilable(Models::Shared::PropertyCrmLeadAddress), company_id: T.nilable(::String), company_name: T.nilable(::String), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), creator_user_id: T.nilable(::String), emails: T.nilable(T::Array[Models::Shared::CrmEmail]), first_name: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), last_name: T.nilable(::String), link_urls: T.nilable(T::Array[::String]), metadata: T.nilable(T::Array[Models::Shared::CrmMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), source: T.nilable(::String), status: T.nilable(::String), telephones: T.nilable(T::Array[Models::Shared::CrmTelephone]), title: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), vehicle_ids: T.nilable(T::Array[::String])).void }
+        def initialize(unified_person_ids: nil, address: nil, company_id: nil, company_name: nil, contact_id: nil, created_at: nil, creator_user_id: nil, emails: nil, first_name: nil, id: nil, is_active: nil, last_name: nil, link_urls: nil, metadata: nil, name: nil, raw: nil, source: nil, status: nil, telephones: nil, title: nil, updated_at: nil, user_id: nil, vehicle_ids: nil)
+          @unified_person_ids = unified_person_ids
           @address = address
           @company_id = company_id
           @company_name = company_name
@@ -86,6 +89,7 @@ module UnifiedRubySDK
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
+          return false unless @unified_person_ids == other.unified_person_ids
           return false unless @address == other.address
           return false unless @company_id == other.company_id
           return false unless @company_name == other.company_name

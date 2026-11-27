@@ -34,15 +34,15 @@ res = s.bankfeedtransaction.create_accounting_bankfeedtransaction(accounting_ban
   created_at: DateTime.iso8601('2022-03-24T23:41:08.374Z'),
   currency: 'CAD',
   description: 'deposit processed at Renner - Quigley for SSP 824.35, using card ending ****1112. Account: ***7957.',
-  id: 'f5a49686-9bf6-4289-ae5c-21b5addbdadd',
+  id: 'bcacafd9-d1eb-4d3a-968d-6cacf06354ad',
   is_pending: true,
   merchant_name: 'McKenzie Inc',
   metadata: [],
-  posted_at: DateTime.iso8601('2025-05-08T20:41:50.455Z'),
+  posted_at: DateTime.iso8601('2025-05-09T13:46:37.016Z'),
   reference: '09339705',
-  transaction_at: DateTime.iso8601('2022-08-02T01:56:04.077Z'),
+  transaction_at: DateTime.iso8601('2022-08-02T03:52:55.372Z'),
   type: Models::Shared::AccountingBankfeedtransactionType::CREDIT,
-  updated_at: DateTime.iso8601('2022-05-26T09:17:18.305Z')
+  updated_at: DateTime.iso8601('2022-05-26T10:13:21.309Z')
 ), connection_id: '<id>')
 
 unless res.accounting_bankfeedtransaction.nil?
@@ -182,15 +182,15 @@ req = Models::Operations::PatchAccountingBankfeedtransactionRequest.new(
     created_at: DateTime.iso8601('2022-03-24T23:41:08.374Z'),
     currency: 'CAD',
     description: 'deposit processed at Renner - Quigley for SSP 824.35, using card ending ****1112. Account: ***7957.',
-    id: '050d8262-db72-4403-8012-f6d95896c19a',
+    id: '13d1965d-bcaf-4e0d-ac86-f73e2c75e353',
     is_pending: true,
     merchant_name: 'McKenzie Inc',
     metadata: [],
-    posted_at: DateTime.iso8601('2025-05-08T20:41:50.470Z'),
+    posted_at: DateTime.iso8601('2025-05-09T13:46:37.028Z'),
     reference: '09339705',
-    transaction_at: DateTime.iso8601('2022-08-02T01:56:04.079Z'),
+    transaction_at: DateTime.iso8601('2022-08-02T03:52:55.373Z'),
     type: Models::Shared::AccountingBankfeedtransactionType::CREDIT,
-    updated_at: DateTime.iso8601('2022-05-26T09:17:18.306Z')
+    updated_at: DateTime.iso8601('2022-05-26T10:13:21.309Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -285,15 +285,15 @@ req = Models::Operations::UpdateAccountingBankfeedtransactionRequest.new(
     created_at: DateTime.iso8601('2022-03-24T23:41:08.374Z'),
     currency: 'CAD',
     description: 'deposit processed at Renner - Quigley for SSP 824.35, using card ending ****1112. Account: ***7957.',
-    id: '050d8262-db72-4403-8012-f6d95896c19a',
+    id: '13d1965d-bcaf-4e0d-ac86-f73e2c75e353',
     is_pending: true,
     merchant_name: 'McKenzie Inc',
     metadata: [],
-    posted_at: DateTime.iso8601('2025-05-08T20:41:50.470Z'),
+    posted_at: DateTime.iso8601('2025-05-09T13:46:37.028Z'),
     reference: '09339705',
-    transaction_at: DateTime.iso8601('2022-08-02T01:56:04.079Z'),
+    transaction_at: DateTime.iso8601('2022-08-02T03:52:55.373Z'),
     type: Models::Shared::AccountingBankfeedtransactionType::CREDIT,
-    updated_at: DateTime.iso8601('2022-05-26T09:17:18.306Z')
+    updated_at: DateTime.iso8601('2022-05-26T10:13:21.309Z')
   ),
   connection_id: '<id>',
   id: '<id>'

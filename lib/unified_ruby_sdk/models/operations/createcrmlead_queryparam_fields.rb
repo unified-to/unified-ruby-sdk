@@ -32,6 +32,7 @@ module UnifiedRubySDK
           METADATA = new('metadata')
           VEHICLE_IDS = new('vehicle_ids')
           RAW = new('raw')
+          UNIFIED_PERSON_IDS = new('__unified_person_ids')
         end
       end
     end

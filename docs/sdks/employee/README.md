@@ -65,7 +65,7 @@ res = s.employee.create_hris_employee(hris_employee: Models::Shared::HrisEmploye
   gender: Models::Shared::HrisEmployeeGender::MALE,
   has_mfa: true,
   hired_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
-  id: 'c548226d-6e8d-40d7-af34-73be58427d81',
+  id: '6d338785-806a-4f40-bd1e-321c9a74ac39',
   image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/52.jpg',
   language_locale: 'in',
   last_name: 'Padberg',
@@ -77,7 +77,7 @@ res = s.employee.create_hris_employee(hris_employee: Models::Shared::HrisEmploye
         'display_name' => 'Custom Property',
       },
       format: Models::Shared::HrisMetadataFormat::TEXT,
-      id: 'ea554a47-29e3-48f4-b602-7de121930da2',
+      id: '922654aa-c4d8-4979-871f-4eeb422a24d5',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'teneo'
@@ -127,7 +127,7 @@ res = s.employee.create_hris_employee(hris_employee: Models::Shared::HrisEmploye
   timeoff_days_used: 9.0,
   timezone: 'America/Nome',
   title: 'Corporate Functionality Executive',
-  updated_at: DateTime.iso8601('2020-07-23T10:17:16.461Z')
+  updated_at: DateTime.iso8601('2020-07-23T13:18:39.053Z')
 ), connection_id: '<id>')
 
 unless res.hris_employee.nil?
@@ -298,7 +298,7 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
     gender: Models::Shared::HrisEmployeeGender::MALE,
     has_mfa: true,
     hired_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
-    id: '16dd8a11-98c1-4db7-a9d6-8ccc253fa057',
+    id: 'e57f3469-651d-4e52-9faf-afe475d16bf3',
     image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/52.jpg',
     language_locale: 'in',
     last_name: 'Padberg',
@@ -310,7 +310,7 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::HrisMetadataFormat::TEXT,
-        id: '3e6a83ef-965e-419e-a76e-d1747324c8cc',
+        id: '7c3cadad-68ea-42ce-8fa6-eb0f7108a25e',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'teneo'
@@ -360,7 +360,7 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
     timeoff_days_used: 9.0,
     timezone: 'America/Nome',
     title: 'Corporate Functionality Executive',
-    updated_at: DateTime.iso8601('2020-07-23T10:17:16.472Z')
+    updated_at: DateTime.iso8601('2020-07-23T13:18:39.061Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -486,7 +486,7 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
     gender: Models::Shared::HrisEmployeeGender::MALE,
     has_mfa: true,
     hired_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
-    id: '16dd8a11-98c1-4db7-a9d6-8ccc253fa057',
+    id: 'e57f3469-651d-4e52-9faf-afe475d16bf3',
     image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/52.jpg',
     language_locale: 'in',
     last_name: 'Padberg',
@@ -498,7 +498,7 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::HrisMetadataFormat::TEXT,
-        id: '3e6a83ef-965e-419e-a76e-d1747324c8cc',
+        id: '7c3cadad-68ea-42ce-8fa6-eb0f7108a25e',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'teneo'
@@ -548,7 +548,7 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
     timeoff_days_used: 9.0,
     timezone: 'America/Nome',
     title: 'Corporate Functionality Executive',
-    updated_at: DateTime.iso8601('2020-07-23T10:17:16.472Z')
+    updated_at: DateTime.iso8601('2020-07-23T13:18:39.061Z')
   ),
   connection_id: '<id>',
   id: '<id>'

@@ -3647,3 +3647,11 @@ Based on:
 - Speakeasy CLI 1.812.0 (2.968.1) https://github.com/speakeasy-api/speakeasy
 ### Generated
 - [ruby v0.69.11] .
+
+## 2026-11-27 00:18:12
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.812.1 (2.968.17) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [ruby v0.69.12] .

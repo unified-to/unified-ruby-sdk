@@ -30,17 +30,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.message.create_messaging_message(messaging_message: Models::Shared::MessagingMessage.new(
   attachments: [
     Models::Shared::MessagingAttachment.new(
-      content_identifier: '94e28d82-48dd-4cf2-b8c7-02c6073e0cef',
+      content_identifier: '5a4d4100-57fd-4f23-9f0e-c8c76f18ed23',
       content_type: 'coaegresco',
       download_url: 'https://rotating-advertisement.org',
       filename: 'super',
-      message_id: '3b335ccc-48fe-41a2-8adf-e99eabaeaa66',
+      message_id: '2d803c97-c81e-452a-95a1-2b74512fa09f',
       size: 327.0
     ),
   ],
   buttons: [
     Models::Shared::MessagingButton.new(
-      id: '0208af36-426a-439e-b166-b40cc0e5b333',
+      id: '8583f1d2-a8d4-4b44-a970-af3c47a44aa1',
       text: 'comparo'
     ),
   ],
@@ -48,7 +48,7 @@ res = s.message.create_messaging_message(messaging_message: Models::Shared::Mess
   destination_members: [],
   has_children: true,
   hidden_members: [],
-  id: '3b335ccc-48fe-41a2-8adf-e99eabaeaa66',
+  id: '2d803c97-c81e-452a-95a1-2b74512fa09f',
   is_unread: false,
   mentioned_members: [],
   message: 'Sum utique aliquid.',
@@ -57,7 +57,7 @@ res = s.message.create_messaging_message(messaging_message: Models::Shared::Mess
   metadata: [],
   reactions: [],
   subject: 'Summisse in.',
-  updated_at: DateTime.iso8601('2023-07-29T12:19:56.507Z'),
+  updated_at: DateTime.iso8601('2023-07-29T20:52:22.601Z'),
   web_url: 'https://grumpy-kit.net'
 ), connection_id: '<id>')
 
@@ -194,17 +194,17 @@ req = Models::Operations::PatchMessagingMessageRequest.new(
   messaging_message: Models::Shared::MessagingMessage.new(
     attachments: [
       Models::Shared::MessagingAttachment.new(
-        content_identifier: 'd3c1b8bf-12d1-40bb-96fe-7d540a81f2c2',
+        content_identifier: 'f7708e43-d821-429e-8c6e-db622075af9b',
         content_type: 'coaegresco',
         download_url: 'https://rotating-advertisement.org',
         filename: 'super',
-        message_id: '3995a972-c06b-48f5-bdc2-2999904f212d',
+        message_id: '7cabc2c3-01e9-4a59-93ee-cf5aee884c7b',
         size: 327.0
       ),
     ],
     buttons: [
       Models::Shared::MessagingButton.new(
-        id: '12790ac0-9926-4271-bcd2-d02dd57e54ec',
+        id: '12f3036c-e827-4ae6-8f3b-3129c0c98b5d',
         text: 'comparo'
       ),
     ],
@@ -212,7 +212,7 @@ req = Models::Operations::PatchMessagingMessageRequest.new(
     destination_members: [],
     has_children: true,
     hidden_members: [],
-    id: '3995a972-c06b-48f5-bdc2-2999904f212d',
+    id: '7cabc2c3-01e9-4a59-93ee-cf5aee884c7b',
     is_unread: false,
     mentioned_members: [],
     message: 'Sum utique aliquid.',
@@ -221,7 +221,7 @@ req = Models::Operations::PatchMessagingMessageRequest.new(
     metadata: [],
     reactions: [],
     subject: 'Summisse in.',
-    updated_at: DateTime.iso8601('2023-07-29T12:19:56.519Z'),
+    updated_at: DateTime.iso8601('2023-07-29T20:52:22.613Z'),
     web_url: 'https://grumpy-kit.net'
   ),
   connection_id: '<id>',
@@ -313,17 +313,17 @@ req = Models::Operations::UpdateMessagingMessageRequest.new(
   messaging_message: Models::Shared::MessagingMessage.new(
     attachments: [
       Models::Shared::MessagingAttachment.new(
-        content_identifier: 'd3c1b8bf-12d1-40bb-96fe-7d540a81f2c2',
+        content_identifier: 'f7708e43-d821-429e-8c6e-db622075af9b',
         content_type: 'coaegresco',
         download_url: 'https://rotating-advertisement.org',
         filename: 'super',
-        message_id: '3995a972-c06b-48f5-bdc2-2999904f212d',
+        message_id: '7cabc2c3-01e9-4a59-93ee-cf5aee884c7b',
         size: 327.0
       ),
     ],
     buttons: [
       Models::Shared::MessagingButton.new(
-        id: '12790ac0-9926-4271-bcd2-d02dd57e54ec',
+        id: '12f3036c-e827-4ae6-8f3b-3129c0c98b5d',
         text: 'comparo'
       ),
     ],
@@ -331,7 +331,7 @@ req = Models::Operations::UpdateMessagingMessageRequest.new(
     destination_members: [],
     has_children: true,
     hidden_members: [],
-    id: '3995a972-c06b-48f5-bdc2-2999904f212d',
+    id: '7cabc2c3-01e9-4a59-93ee-cf5aee884c7b',
     is_unread: false,
     mentioned_members: [],
     message: 'Sum utique aliquid.',
@@ -340,7 +340,7 @@ req = Models::Operations::UpdateMessagingMessageRequest.new(
     metadata: [],
     reactions: [],
     subject: 'Summisse in.',
-    updated_at: DateTime.iso8601('2023-07-29T12:19:56.519Z'),
+    updated_at: DateTime.iso8601('2023-07-29T20:52:22.613Z'),
     web_url: 'https://grumpy-kit.net'
   ),
   connection_id: '<id>',
