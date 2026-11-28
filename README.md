@@ -55,7 +55,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Comedo vilitas harum cupiditate animus quo iste.',
-  id: '6f1c380e-9b29-4fb5-b49c-2a7ce0ee5fe1',
+  id: 'ad23778a-fb2a-4ecf-b08e-c8888ea4bcf9',
   is_payable: false,
   metadata: [],
   name: 'Savings Account',
@@ -68,7 +68,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-16T07:31:30.623Z')
+  updated_at: DateTime.iso8601('2023-08-16T13:36:52.715Z')
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -105,7 +105,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Comedo vilitas harum cupiditate animus quo iste.',
-  id: '6f1c380e-9b29-4fb5-b49c-2a7ce0ee5fe1',
+  id: 'ad23778a-fb2a-4ecf-b08e-c8888ea4bcf9',
   is_payable: false,
   metadata: [],
   name: 'Savings Account',
@@ -118,7 +118,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-16T07:31:30.623Z')
+  updated_at: DateTime.iso8601('2023-08-16T13:36:52.715Z')
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -3346,7 +3346,7 @@ begin
       currency: 'CAD',
       customer_defined_code: '6170',
       description: 'Comedo vilitas harum cupiditate animus quo iste.',
-      id: '6f1c380e-9b29-4fb5-b49c-2a7ce0ee5fe1',
+      id: 'ad23778a-fb2a-4ecf-b08e-c8888ea4bcf9',
       is_payable: false,
       metadata: [],
       name: 'Savings Account',
@@ -3359,7 +3359,7 @@ begin
         ),
       ],
       type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-      updated_at: DateTime.iso8601('2023-08-16T07:31:30.623Z')
+      updated_at: DateTime.iso8601('2023-08-16T13:36:52.715Z')
     ), connection_id: '<id>')
 
     unless res.accounting_account.nil?
@@ -3404,7 +3404,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Comedo vilitas harum cupiditate animus quo iste.',
-  id: '6f1c380e-9b29-4fb5-b49c-2a7ce0ee5fe1',
+  id: 'ad23778a-fb2a-4ecf-b08e-c8888ea4bcf9',
   is_payable: false,
   metadata: [],
   name: 'Savings Account',
@@ -3417,7 +3417,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-16T07:31:30.623Z')
+  updated_at: DateTime.iso8601('2023-08-16T13:36:52.715Z')
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -3445,7 +3445,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Comedo vilitas harum cupiditate animus quo iste.',
-  id: '6f1c380e-9b29-4fb5-b49c-2a7ce0ee5fe1',
+  id: 'ad23778a-fb2a-4ecf-b08e-c8888ea4bcf9',
   is_payable: false,
   metadata: [],
   name: 'Savings Account',
@@ -3458,7 +3458,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-16T07:31:30.623Z')
+  updated_at: DateTime.iso8601('2023-08-16T13:36:52.715Z')
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?

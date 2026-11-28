@@ -59,37 +59,37 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.dms.create_dms_appointment(dms_appointment: Models::Shared::DmsAppointment.new(
   created_at: DateTime.iso8601('2023-10-16T02:56:45.127Z'),
-  end_at: DateTime.iso8601('2026-05-08T02:41:53.672Z'),
-  id: 'd6c8819f-7706-4575-8f69-fbf6c7f367a1',
+  end_at: DateTime.iso8601('2026-05-08T22:22:34.004Z'),
+  id: '9b4e8134-b493-497b-8918-dd53d8edabcb',
   metadata: [],
   notes: 'Soluta conitor timidus confero.',
   number: 'A541909',
   services: [
     Models::Shared::DmsAppointmentService.new(
-      id: '2eca6ee0-3d95-414d-83d1-5a5cdb27360b',
+      id: 'bcb8405f-0ce5-46d3-97fe-1e3695df9412',
       name: 'Customer concern',
       pay_type: Models::Shared::PayType::WARRANTY,
       technician_user_ids: []
     ),
     Models::Shared::DmsAppointmentService.new(
       complaint: 'Check engine light on',
-      id: 'b432d998-e455-4472-973b-7e860f3677e5',
+      id: 'e95d44f5-12e4-4716-b6d8-ed180ff0289e',
       name: 'Customer concern',
       pay_type: Models::Shared::PayType::CUSTOMER,
       technician_user_ids: []
     ),
     Models::Shared::DmsAppointmentService.new(
       complaint: 'Due for service',
-      id: 'a02296da-58c1-494d-b5bc-caddc43906f2',
+      id: '017adc1b-0c70-476a-9d33-84a29233e1b9',
       name: 'Customer concern',
       pay_type: Models::Shared::PayType::CUSTOMER,
       technician_user_ids: []
     ),
   ],
-  start_at: DateTime.iso8601('2026-05-07T19:41:53.672Z'),
+  start_at: DateTime.iso8601('2026-05-08T15:22:34.004Z'),
   status: Models::Shared::DmsAppointmentStatus::CANCELLED,
   transport_type: Models::Shared::TransportType::LOANER,
-  updated_at: DateTime.iso8601('2025-04-06T16:31:30.890Z')
+  updated_at: DateTime.iso8601('2025-04-07T03:51:48.544Z')
 ), connection_id: '<id>')
 
 unless res.dms_appointment.nil?
@@ -141,7 +141,7 @@ res = s.dms.create_dms_opcode(dms_opcode: Models::Shared::DmsOpcode.new(
   description: 'Oil and filter change',
   estimated_hours: 3.2,
   flat_rate_hours: 3.5,
-  id: '9e975701-e465-47eb-9dae-2f610033be4f',
+  id: '66a89375-6c78-43ed-8ed1-47a9cba36b0e',
   is_active: true,
   labor_rate_amount: 216.0,
   metadata: [],
@@ -150,7 +150,7 @@ res = s.dms.create_dms_opcode(dms_opcode: Models::Shared::DmsOpcode.new(
   pay_type: Models::Shared::DmsOpcodePayType::CUSTOMER,
   skill_code: 'A',
   type: Models::Shared::DmsOpcodeType::LABOR,
-  updated_at: DateTime.iso8601('2021-11-03T15:49:20.090Z')
+  updated_at: DateTime.iso8601('2021-11-03T19:06:59.496Z')
 ), connection_id: '<id>')
 
 unless res.dms_opcode.nil?
@@ -203,8 +203,8 @@ res = s.dms.create_dms_part(dms_part: Models::Shared::DmsPart.new(
   created_at: DateTime.iso8601('2020-07-02T08:18:03.858Z'),
   currency: 'USD',
   description: 'Cabin filter',
-  id: '74d63020-9f96-4197-b37d-8698d2aafb22',
-  last_sold_at: DateTime.iso8601('2020-11-23T04:33:23.296Z'),
+  id: '631df860-8f82-4a04-9f8b-0a46977d78a4',
+  last_sold_at: DateTime.iso8601('2020-11-23T06:01:47.636Z'),
   list_price_amount: 39.61,
   manufacturer_code: 'TOY',
   max_stock_quantity: 21.0,
@@ -217,7 +217,7 @@ res = s.dms.create_dms_part(dms_part: Models::Shared::DmsPart.new(
   quantity_on_order: 14.0,
   source_code: '30',
   trade_price_amount: 29.05,
-  updated_at: DateTime.iso8601('2023-11-23T07:07:21.098Z')
+  updated_at: DateTime.iso8601('2023-11-23T19:48:48.216Z')
 ), connection_id: '<id>')
 
 unless res.dms_part.nil?
@@ -267,10 +267,10 @@ res = s.dms.create_dms_partsale(dms_partsale: Models::Shared::DmsPartsale.new(
   currency: 'USD',
   discount_amount: 0.0,
   freight_amount: 0.0,
-  id: '834b62b6-5736-47a2-836f-7da1eb8a1d63',
+  id: 'bca252e9-9f6b-45b2-bce4-c350cbb06dd5',
   lines: [
     Models::Shared::DmsPartline.new(
-      id: 'c5820579-bc3b-4c71-8f7a-774de46ee7d2',
+      id: '1d5d8ae5-239e-43f1-8bea-b208d21944d5',
       pay_type: Models::Shared::DmsPartlinePayType::CUSTOMER,
       quantity: 5.0,
       quantity_ordered: 5.0,
@@ -278,7 +278,7 @@ res = s.dms.create_dms_partsale(dms_partsale: Models::Shared::DmsPartsale.new(
       unit_price_amount: 98.29
     ),
     Models::Shared::DmsPartline.new(
-      id: '05239adc-66e9-493d-b9ae-58b432492e41',
+      id: 'a9b62a56-a99d-4b31-b47a-298136e7ffca',
       pay_type: Models::Shared::DmsPartlinePayType::CUSTOMER,
       quantity: 2.0,
       quantity_ordered: 2.0,
@@ -286,7 +286,7 @@ res = s.dms.create_dms_partsale(dms_partsale: Models::Shared::DmsPartsale.new(
       unit_price_amount: 120.45
     ),
     Models::Shared::DmsPartline.new(
-      id: 'ad6e4077-e25b-477a-8a0c-b7be3c6f6c3c',
+      id: 'd6150f89-c6bb-4d41-8c84-c512b6ae1c20',
       pay_type: Models::Shared::DmsPartlinePayType::CUSTOMER,
       quantity: 3.0,
       quantity_ordered: 3.0,
@@ -302,7 +302,7 @@ res = s.dms.create_dms_partsale(dms_partsale: Models::Shared::DmsPartsale.new(
   tax_amount: 68.73,
   total_amount: 1050.62,
   type: Models::Shared::DmsPartsaleType::SALE,
-  updated_at: DateTime.iso8601('2026-04-18T13:18:43.891Z')
+  updated_at: DateTime.iso8601('2026-04-19T09:07:12.570Z')
 ), connection_id: '<id>')
 
 unless res.dms_partsale.nil?
@@ -348,23 +348,23 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.dms.create_dms_repairorder(dms_repairorder: Models::Shared::DmsRepairorder.new(
   balance_amount: 3193.86,
-  completed_at: DateTime.iso8601('2026-11-13T20:46:36.899Z'),
+  completed_at: DateTime.iso8601('2026-11-14T20:31:17.647Z'),
   created_at: DateTime.iso8601('2022-10-25T15:50:48.007Z'),
   currency: 'USD',
   discount_amount: 0.0,
   estimate_amount: 3264.0,
-  id: '2dbd3442-652f-4c8e-bedb-7c046f53f8e6',
+  id: 'ca22ea94-d52c-42b9-908b-bd1d49bb3384',
   jobs: [
     Models::Shared::DmsRepairorderJob.new(
       actual_hours: 3.6,
       cause: 'Scheduled maintenance',
       complaint: 'Due for service',
       correction: 'Aufero cumque vicinus aptus assumenda quis aptus.',
-      id: '04e44476-af06-4e06-90bf-2004ed987bf9',
+      id: 'e6e34191-b603-4579-8d0e-b0c703c50913',
       labor_amount: 681.6,
       labors: [
         Models::Shared::DmsRepairorderLabor.new(
-          id: '4c5b7595-a23b-4135-8892-ec08cdd170e4',
+          id: '12f8fff0-e687-41bc-8973-9cc56a8227e2',
           pay_type: Models::Shared::DmsRepairorderLaborPayType::WARRANTY,
           rate_amount: 213.0,
           sold_hours: 3.2,
@@ -387,11 +387,11 @@ res = s.dms.create_dms_repairorder(dms_repairorder: Models::Shared::DmsRepairord
       cause: 'Worn brake pads',
       complaint: 'Vibration at highway speed',
       correction: 'Somnus avaritia utroque vulnero ullam ancilla.',
-      id: '2ab88935-7740-4fe1-82e3-a03b03e948b9',
+      id: '659a2ea4-e51d-45f4-9e07-6973a1986ed1',
       labor_amount: 446.4,
       labors: [
         Models::Shared::DmsRepairorderLabor.new(
-          id: '90f1d435-d9c9-4870-95ba-af0618cb9f2d',
+          id: 'de0390c5-df31-4fa2-a2c7-d2231368f3af',
           pay_type: Models::Shared::DmsRepairorderLaborPayType::WARRANTY,
           rate_amount: 144.0,
           sold_hours: 3.1,
@@ -403,7 +403,7 @@ res = s.dms.create_dms_repairorder(dms_repairorder: Models::Shared::DmsRepairord
       number: 'B',
       parts: [
         Models::Shared::DmsPartline.new(
-          id: '2b52094a-f63d-4423-8fb2-c272e7165827',
+          id: '83286632-8a86-4a27-91b4-46066e9ccb62',
           pay_type: Models::Shared::DmsPartlinePayType::WARRANTY,
           quantity: 4.0,
           quantity_ordered: 4.0,
@@ -411,7 +411,7 @@ res = s.dms.create_dms_repairorder(dms_repairorder: Models::Shared::DmsRepairord
           unit_price_amount: 222.61
         ),
         Models::Shared::DmsPartline.new(
-          id: '62a02a04-d631-49d8-bc75-66024bd8d069',
+          id: 'fd9b437e-7971-4ea4-8bdf-b6015e261b1a',
           pay_type: Models::Shared::DmsPartlinePayType::WARRANTY,
           quantity: 2.0,
           quantity_ordered: 2.0,
@@ -431,11 +431,11 @@ res = s.dms.create_dms_repairorder(dms_repairorder: Models::Shared::DmsRepairord
       cause: 'Scheduled maintenance',
       complaint: 'Noise when braking',
       correction: 'Degero theca natus.',
-      id: 'a7ab4336-9b66-4f5c-915d-dcb687a08ebf',
+      id: '499ac9ef-56b8-4ed7-9fb7-7fc1ac665bae',
       labor_amount: 232.4,
       labors: [
         Models::Shared::DmsRepairorderLabor.new(
-          id: '253cac94-f6c7-4415-a3d7-37f93e93fd70',
+          id: 'a4732ded-1dce-4df4-9f00-911437eac059',
           pay_type: Models::Shared::DmsRepairorderLaborPayType::CUSTOMER,
           rate_amount: 166.0,
           sold_hours: 1.4,
@@ -447,7 +447,7 @@ res = s.dms.create_dms_repairorder(dms_repairorder: Models::Shared::DmsRepairord
       number: 'C',
       parts: [
         Models::Shared::DmsPartline.new(
-          id: '572cdff0-aa4c-4312-9ef7-957738982d0c',
+          id: 'fc4e60cc-ed7b-41ef-bc90-1b9ebc550a71',
           pay_type: Models::Shared::DmsPartlinePayType::CUSTOMER,
           quantity: 1.0,
           quantity_ordered: 1.0,
@@ -455,7 +455,7 @@ res = s.dms.create_dms_repairorder(dms_repairorder: Models::Shared::DmsRepairord
           unit_price_amount: 216.02
         ),
         Models::Shared::DmsPartline.new(
-          id: 'de1323ce-e8c3-4835-b72b-3d12fa4265bb',
+          id: '533a5c08-f8f9-49d0-95e9-c0b9a5acf8b3',
           pay_type: Models::Shared::DmsPartlinePayType::CUSTOMER,
           quantity: 2.0,
           quantity_ordered: 2.0,
@@ -478,10 +478,10 @@ res = s.dms.create_dms_repairorder(dms_repairorder: Models::Shared::DmsRepairord
   odometer_in: 7776.0,
   odometer_out: 7776.0,
   odometer_unit: Models::Shared::DmsRepairorderOdometerUnit::MILES,
-  opened_at: DateTime.iso8601('2025-02-08T09:37:32.720Z'),
+  opened_at: DateTime.iso8601('2025-02-08T23:02:53.871Z'),
   parts_amount: 1680.8_000_000_000_002,
   pay_type: Models::Shared::DmsRepairorderPayType::WARRANTY,
-  promised_at: DateTime.iso8601('2025-02-09T17:37:32.720Z'),
+  promised_at: DateTime.iso8601('2025-02-10T07:02:53.871Z'),
   purchase_order_number: '182743',
   status: Models::Shared::DmsRepairorderStatus::COMPLETED,
   sublet_amount: 0.0,
@@ -508,7 +508,7 @@ res = s.dms.create_dms_repairorder(dms_repairorder: Models::Shared::DmsRepairord
     ),
   ],
   transport_type: Models::Shared::DmsRepairorderTransportType::LOANER,
-  updated_at: DateTime.iso8601('2025-11-28T17:32:57.070Z')
+  updated_at: DateTime.iso8601('2025-11-29T11:40:37.815Z')
 ), connection_id: '<id>')
 
 unless res.dms_repairorder.nil?
@@ -561,7 +561,7 @@ res = s.dms.create_dms_vehicle(dms_vehicle: Models::Shared::DmsVehicle.new(
   description: '2023 Citroën Silverado',
   exterior_color: 'lavender',
   fuel_type: Models::Shared::FuelType::ELECTRIC,
-  id: 'ae2d5da5-6181-4b92-9d93-7be429ece665',
+  id: 'a4fc8aff-a106-476c-8601-fa1c48d6e04e',
   image_urls: [
     'https://picsum.photos/seed/tOUr5K/1358/1877',
   ],
@@ -601,7 +601,7 @@ res = s.dms.create_dms_vehicle(dms_vehicle: Models::Shared::DmsVehicle.new(
   transmission: 'Manual',
   trim: 'Base',
   type: Models::Shared::DmsVehicleType::SUV,
-  updated_at: DateTime.iso8601('2023-11-03T13:51:45.381Z'),
+  updated_at: DateTime.iso8601('2023-11-04T01:11:04.963Z'),
   vin: 'C29ZDU474DDR70955',
   warranty_expires_at: DateTime.iso8601('2022-03-28T09:10:09.889Z'),
   year: 2023.0
@@ -668,7 +668,7 @@ res = s.dms.create_dms_vehiclesale(dms_vehiclesale: Models::Shared::DmsVehiclesa
   ],
   finance: Models::Shared::PropertyDmsVehiclesaleFinance.new(
     financed_amount: 0.0,
-    first_payment_at: DateTime.iso8601('2022-08-16T11:37:29.878Z'),
+    first_payment_at: DateTime.iso8601('2022-08-16T20:08:55.009Z'),
     interest_rate: 6.68,
     lender_name: 'Mueller, Yundt and Murray Financial',
     payment_amount: 339.0,
@@ -676,7 +676,7 @@ res = s.dms.create_dms_vehiclesale(dms_vehiclesale: Models::Shared::DmsVehiclesa
     term_months: 72.0
   ),
   finance_type: Models::Shared::FinanceType::FINANCE,
-  id: 'b91e3f9c-0180-42c5-9d38-83e2362d9c50',
+  id: '463f3491-b40d-4e85-8594-285725553d79',
   metadata: [],
   number: 'D84591',
   products: [
@@ -701,7 +701,7 @@ res = s.dms.create_dms_vehiclesale(dms_vehiclesale: Models::Shared::DmsVehiclesa
     ),
   ],
   rebate_amount: 500.0,
-  sold_at: DateTime.iso8601('2022-08-14T20:21:55.591Z'),
+  sold_at: DateTime.iso8601('2022-08-15T04:53:20.722Z'),
   source: 'Website',
   status: Models::Shared::DmsVehiclesaleStatus::SOLD,
   tax_amount: 0.0,
@@ -715,7 +715,7 @@ res = s.dms.create_dms_vehiclesale(dms_vehiclesale: Models::Shared::DmsVehiclesa
   total_amount: 7891.0,
   trade_ins: [],
   type: Models::Shared::DmsVehiclesaleType::RETAIL,
-  updated_at: DateTime.iso8601('2025-04-16T21:53:33.456Z'),
+  updated_at: DateTime.iso8601('2025-04-17T16:02:23.436Z'),
   vehicles: []
 ), connection_id: '<id>')
 
@@ -1373,37 +1373,37 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchDmsAppointmentRequest.new(
   dms_appointment: Models::Shared::DmsAppointment.new(
     created_at: DateTime.iso8601('2023-10-16T02:56:45.127Z'),
-    end_at: DateTime.iso8601('2026-05-08T02:41:53.686Z'),
-    id: '5a47c683-e8a4-4933-9119-d7ad05bcf24b',
+    end_at: DateTime.iso8601('2026-05-08T22:22:34.022Z'),
+    id: '37f2bc4f-e216-4e87-af75-28b191349fa4',
     metadata: [],
     notes: 'Soluta conitor timidus confero.',
     number: 'A541909',
     services: [
       Models::Shared::DmsAppointmentService.new(
-        id: 'bcc95f56-1ce6-486f-a905-540527e4e254',
+        id: '077a6ee3-159c-4b9c-9e17-422c9b4fc33d',
         name: 'Customer concern',
         pay_type: Models::Shared::PayType::WARRANTY,
         technician_user_ids: []
       ),
       Models::Shared::DmsAppointmentService.new(
         complaint: 'Check engine light on',
-        id: '2d1d40f9-a6c0-40ae-b104-7717687702fa',
+        id: '307d9e0f-7f83-4f0c-b508-64417bc0d704',
         name: 'Customer concern',
         pay_type: Models::Shared::PayType::CUSTOMER,
         technician_user_ids: []
       ),
       Models::Shared::DmsAppointmentService.new(
         complaint: 'Due for service',
-        id: 'aa78fbfc-88be-4cd3-9cfb-4ec090bd3711',
+        id: 'c8eec44c-eaae-4a04-971d-4448bc6c0fe4',
         name: 'Customer concern',
         pay_type: Models::Shared::PayType::CUSTOMER,
         technician_user_ids: []
       ),
     ],
-    start_at: DateTime.iso8601('2026-05-07T19:41:53.686Z'),
+    start_at: DateTime.iso8601('2026-05-08T15:22:34.022Z'),
     status: Models::Shared::DmsAppointmentStatus::CANCELLED,
     transport_type: Models::Shared::TransportType::LOANER,
-    updated_at: DateTime.iso8601('2025-04-06T16:31:30.897Z')
+    updated_at: DateTime.iso8601('2025-04-07T03:51:48.554Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1458,7 +1458,7 @@ req = Models::Operations::PatchDmsOpcodeRequest.new(
     description: 'Oil and filter change',
     estimated_hours: 3.2,
     flat_rate_hours: 3.5,
-    id: '02963f4e-2712-4766-aacf-ea6459458bb1',
+    id: 'a00a0c51-3231-4a93-974f-5f1dcae5d599',
     is_active: true,
     labor_rate_amount: 216.0,
     metadata: [],
@@ -1467,7 +1467,7 @@ req = Models::Operations::PatchDmsOpcodeRequest.new(
     pay_type: Models::Shared::DmsOpcodePayType::CUSTOMER,
     skill_code: 'A',
     type: Models::Shared::DmsOpcodeType::LABOR,
-    updated_at: DateTime.iso8601('2021-11-03T15:49:20.093Z')
+    updated_at: DateTime.iso8601('2021-11-03T19:06:59.500Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1523,8 +1523,8 @@ req = Models::Operations::PatchDmsPartRequest.new(
     created_at: DateTime.iso8601('2020-07-02T08:18:03.858Z'),
     currency: 'USD',
     description: 'Cabin filter',
-    id: '97295eb5-60e5-43fb-92e3-c5b73a2000cd',
-    last_sold_at: DateTime.iso8601('2020-11-23T04:33:23.297Z'),
+    id: '65d32cfa-532a-4bf5-93c7-d84f150934da',
+    last_sold_at: DateTime.iso8601('2020-11-23T06:01:47.637Z'),
     list_price_amount: 39.61,
     manufacturer_code: 'TOY',
     max_stock_quantity: 21.0,
@@ -1537,7 +1537,7 @@ req = Models::Operations::PatchDmsPartRequest.new(
     quantity_on_order: 14.0,
     source_code: '30',
     trade_price_amount: 29.05,
-    updated_at: DateTime.iso8601('2023-11-23T07:07:21.106Z')
+    updated_at: DateTime.iso8601('2023-11-23T19:48:48.226Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1590,10 +1590,10 @@ req = Models::Operations::PatchDmsPartsaleRequest.new(
     currency: 'USD',
     discount_amount: 0.0,
     freight_amount: 0.0,
-    id: '73461ce7-3e75-4a6c-b8a9-ca20a45e2f8f',
+    id: '5802d267-3c50-4214-a7e4-05b55c6fbea0',
     lines: [
       Models::Shared::DmsPartline.new(
-        id: '64206528-da75-40d9-b936-5acc30f317b0',
+        id: '63d042ef-f665-4790-b12b-8e37a4dacec7',
         pay_type: Models::Shared::DmsPartlinePayType::CUSTOMER,
         quantity: 5.0,
         quantity_ordered: 5.0,
@@ -1601,7 +1601,7 @@ req = Models::Operations::PatchDmsPartsaleRequest.new(
         unit_price_amount: 98.29
       ),
       Models::Shared::DmsPartline.new(
-        id: '2128fe82-f689-4acf-a553-23b2ff8b4bf3',
+        id: '93c525db-8b79-4fb4-a430-c72cf46a3a7d',
         pay_type: Models::Shared::DmsPartlinePayType::CUSTOMER,
         quantity: 2.0,
         quantity_ordered: 2.0,
@@ -1609,7 +1609,7 @@ req = Models::Operations::PatchDmsPartsaleRequest.new(
         unit_price_amount: 120.45
       ),
       Models::Shared::DmsPartline.new(
-        id: '42a50637-ffaa-44f5-973e-4066f6505ff7',
+        id: '6fa447aa-d204-48e8-b568-b7c5aaf04a5c',
         pay_type: Models::Shared::DmsPartlinePayType::CUSTOMER,
         quantity: 3.0,
         quantity_ordered: 3.0,
@@ -1625,7 +1625,7 @@ req = Models::Operations::PatchDmsPartsaleRequest.new(
     tax_amount: 68.73,
     total_amount: 1050.62,
     type: Models::Shared::DmsPartsaleType::SALE,
-    updated_at: DateTime.iso8601('2026-04-18T13:18:43.913Z')
+    updated_at: DateTime.iso8601('2026-04-19T09:07:12.597Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1674,23 +1674,23 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchDmsRepairorderRequest.new(
   dms_repairorder: Models::Shared::DmsRepairorder.new(
     balance_amount: 3193.86,
-    completed_at: DateTime.iso8601('2026-11-13T20:46:36.941Z'),
+    completed_at: DateTime.iso8601('2026-11-14T20:31:17.702Z'),
     created_at: DateTime.iso8601('2022-10-25T15:50:48.007Z'),
     currency: 'USD',
     discount_amount: 0.0,
     estimate_amount: 3264.0,
-    id: 'b720759e-11f4-4eb2-ad18-7a1d74a22d36',
+    id: '8a1a76ae-bd85-49f7-86ba-1a1d05f85b3c',
     jobs: [
       Models::Shared::DmsRepairorderJob.new(
         actual_hours: 3.6,
         cause: 'Scheduled maintenance',
         complaint: 'Due for service',
         correction: 'Aufero cumque vicinus aptus assumenda quis aptus.',
-        id: '670ca467-7702-4acb-869b-7d1e8ce28266',
+        id: 'b9cecaed-2043-442c-a422-6bc4341bd3ae',
         labor_amount: 681.6,
         labors: [
           Models::Shared::DmsRepairorderLabor.new(
-            id: 'bcaa6d56-8514-4178-adca-c20a6ce1f587',
+            id: '7c865390-c20a-47b6-a4ec-3cff9faa270b',
             pay_type: Models::Shared::DmsRepairorderLaborPayType::WARRANTY,
             rate_amount: 213.0,
             sold_hours: 3.2,
@@ -1713,11 +1713,11 @@ req = Models::Operations::PatchDmsRepairorderRequest.new(
         cause: 'Worn brake pads',
         complaint: 'Vibration at highway speed',
         correction: 'Somnus avaritia utroque vulnero ullam ancilla.',
-        id: '9f6fd07a-bf0a-4b8e-8d58-cb14fc6cf5bf',
+        id: '7ead4c92-c24e-4b7a-8ad3-a019528a5565',
         labor_amount: 446.4,
         labors: [
           Models::Shared::DmsRepairorderLabor.new(
-            id: '5c6e84bb-2bad-420c-9d8a-26651be27b4a',
+            id: 'ae8450dd-c9da-4de9-8c75-78daf73d6b1d',
             pay_type: Models::Shared::DmsRepairorderLaborPayType::WARRANTY,
             rate_amount: 144.0,
             sold_hours: 3.1,
@@ -1729,7 +1729,7 @@ req = Models::Operations::PatchDmsRepairorderRequest.new(
         number: 'B',
         parts: [
           Models::Shared::DmsPartline.new(
-            id: 'ed031a7f-b7f2-4fbb-a329-593472b5b96e',
+            id: '06173ad0-2a41-4163-b31f-77e9304c094f',
             pay_type: Models::Shared::DmsPartlinePayType::WARRANTY,
             quantity: 4.0,
             quantity_ordered: 4.0,
@@ -1737,7 +1737,7 @@ req = Models::Operations::PatchDmsRepairorderRequest.new(
             unit_price_amount: 222.61
           ),
           Models::Shared::DmsPartline.new(
-            id: '833e60aa-69fc-4de7-b1f8-ee482ae2a91a',
+            id: '60660713-d52b-4294-a9f8-e9d88844c842',
             pay_type: Models::Shared::DmsPartlinePayType::WARRANTY,
             quantity: 2.0,
             quantity_ordered: 2.0,
@@ -1757,11 +1757,11 @@ req = Models::Operations::PatchDmsRepairorderRequest.new(
         cause: 'Scheduled maintenance',
         complaint: 'Noise when braking',
         correction: 'Degero theca natus.',
-        id: 'fa12bb24-e759-42c9-8a0b-295aa78c127f',
+        id: '6dd97c4b-9018-4162-9f39-a3142bd8b8e1',
         labor_amount: 232.4,
         labors: [
           Models::Shared::DmsRepairorderLabor.new(
-            id: '1b80abd2-5045-4b05-a22b-e34917caedee',
+            id: 'be71c310-2a02-4cba-ab02-55a6a8c07cdd',
             pay_type: Models::Shared::DmsRepairorderLaborPayType::CUSTOMER,
             rate_amount: 166.0,
             sold_hours: 1.4,
@@ -1773,7 +1773,7 @@ req = Models::Operations::PatchDmsRepairorderRequest.new(
         number: 'C',
         parts: [
           Models::Shared::DmsPartline.new(
-            id: '39cc5561-9bf9-4ece-acbb-88a70fbac770',
+            id: 'ecd8655b-bb22-401b-a16b-35996860a6db',
             pay_type: Models::Shared::DmsPartlinePayType::CUSTOMER,
             quantity: 1.0,
             quantity_ordered: 1.0,
@@ -1781,7 +1781,7 @@ req = Models::Operations::PatchDmsRepairorderRequest.new(
             unit_price_amount: 216.02
           ),
           Models::Shared::DmsPartline.new(
-            id: 'ddfe075d-c64e-44ba-9016-0bc506dfa5d4',
+            id: 'cf8ac799-9e6c-46ee-85a8-f60d5d60fcb6',
             pay_type: Models::Shared::DmsPartlinePayType::CUSTOMER,
             quantity: 2.0,
             quantity_ordered: 2.0,
@@ -1804,10 +1804,10 @@ req = Models::Operations::PatchDmsRepairorderRequest.new(
     odometer_in: 7776.0,
     odometer_out: 7776.0,
     odometer_unit: Models::Shared::DmsRepairorderOdometerUnit::MILES,
-    opened_at: DateTime.iso8601('2025-02-08T09:37:32.744Z'),
+    opened_at: DateTime.iso8601('2025-02-08T23:02:53.902Z'),
     parts_amount: 1680.8_000_000_000_002,
     pay_type: Models::Shared::DmsRepairorderPayType::WARRANTY,
-    promised_at: DateTime.iso8601('2025-02-09T17:37:32.744Z'),
+    promised_at: DateTime.iso8601('2025-02-10T07:02:53.902Z'),
     purchase_order_number: '182743',
     status: Models::Shared::DmsRepairorderStatus::COMPLETED,
     sublet_amount: 0.0,
@@ -1834,7 +1834,7 @@ req = Models::Operations::PatchDmsRepairorderRequest.new(
       ),
     ],
     transport_type: Models::Shared::DmsRepairorderTransportType::LOANER,
-    updated_at: DateTime.iso8601('2025-11-28T17:32:57.101Z')
+    updated_at: DateTime.iso8601('2025-11-29T11:40:37.857Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1890,7 +1890,7 @@ req = Models::Operations::PatchDmsVehicleRequest.new(
     description: '2023 Citroën Silverado',
     exterior_color: 'lavender',
     fuel_type: Models::Shared::FuelType::ELECTRIC,
-    id: 'efdfb740-0c86-4c38-aa92-d8d17f8d20b4',
+    id: '57c592a9-91f2-4278-ac47-b269696bf346',
     image_urls: [
       'https://picsum.photos/seed/tOUr5K/1358/1877',
     ],
@@ -1930,7 +1930,7 @@ req = Models::Operations::PatchDmsVehicleRequest.new(
     transmission: 'Manual',
     trim: 'Base',
     type: Models::Shared::DmsVehicleType::SUV,
-    updated_at: DateTime.iso8601('2023-11-03T13:51:45.393Z'),
+    updated_at: DateTime.iso8601('2023-11-04T01:11:04.980Z'),
     vin: 'C29ZDU474DDR70955',
     warranty_expires_at: DateTime.iso8601('2022-03-28T09:10:09.889Z'),
     year: 2023.0
@@ -2000,7 +2000,7 @@ req = Models::Operations::PatchDmsVehiclesaleRequest.new(
     ],
     finance: Models::Shared::PropertyDmsVehiclesaleFinance.new(
       financed_amount: 0.0,
-      first_payment_at: DateTime.iso8601('2022-08-16T11:37:29.897Z'),
+      first_payment_at: DateTime.iso8601('2022-08-16T20:08:55.028Z'),
       interest_rate: 6.68,
       lender_name: 'Mueller, Yundt and Murray Financial',
       payment_amount: 339.0,
@@ -2008,7 +2008,7 @@ req = Models::Operations::PatchDmsVehiclesaleRequest.new(
       term_months: 72.0
     ),
     finance_type: Models::Shared::FinanceType::FINANCE,
-    id: '3f89399e-041f-4ed9-a414-18674421f1b5',
+    id: 'd33585c7-06db-40fc-8912-ac9c20fea71a',
     metadata: [],
     number: 'D84591',
     products: [
@@ -2033,7 +2033,7 @@ req = Models::Operations::PatchDmsVehiclesaleRequest.new(
       ),
     ],
     rebate_amount: 500.0,
-    sold_at: DateTime.iso8601('2022-08-14T20:21:55.610Z'),
+    sold_at: DateTime.iso8601('2022-08-15T04:53:20.741Z'),
     source: 'Website',
     status: Models::Shared::DmsVehiclesaleStatus::SOLD,
     tax_amount: 0.0,
@@ -2047,7 +2047,7 @@ req = Models::Operations::PatchDmsVehiclesaleRequest.new(
     total_amount: 7891.0,
     trade_ins: [],
     type: Models::Shared::DmsVehiclesaleType::RETAIL,
-    updated_at: DateTime.iso8601('2025-04-16T21:53:33.496Z'),
+    updated_at: DateTime.iso8601('2025-04-17T16:02:23.477Z'),
     vehicles: []
   ),
   connection_id: '<id>',
@@ -2138,37 +2138,37 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateDmsAppointmentRequest.new(
   dms_appointment: Models::Shared::DmsAppointment.new(
     created_at: DateTime.iso8601('2023-10-16T02:56:45.127Z'),
-    end_at: DateTime.iso8601('2026-05-08T02:41:53.686Z'),
-    id: '5a47c683-e8a4-4933-9119-d7ad05bcf24b',
+    end_at: DateTime.iso8601('2026-05-08T22:22:34.022Z'),
+    id: '37f2bc4f-e216-4e87-af75-28b191349fa4',
     metadata: [],
     notes: 'Soluta conitor timidus confero.',
     number: 'A541909',
     services: [
       Models::Shared::DmsAppointmentService.new(
-        id: 'bcc95f56-1ce6-486f-a905-540527e4e254',
+        id: '077a6ee3-159c-4b9c-9e17-422c9b4fc33d',
         name: 'Customer concern',
         pay_type: Models::Shared::PayType::WARRANTY,
         technician_user_ids: []
       ),
       Models::Shared::DmsAppointmentService.new(
         complaint: 'Check engine light on',
-        id: '2d1d40f9-a6c0-40ae-b104-7717687702fa',
+        id: '307d9e0f-7f83-4f0c-b508-64417bc0d704',
         name: 'Customer concern',
         pay_type: Models::Shared::PayType::CUSTOMER,
         technician_user_ids: []
       ),
       Models::Shared::DmsAppointmentService.new(
         complaint: 'Due for service',
-        id: 'aa78fbfc-88be-4cd3-9cfb-4ec090bd3711',
+        id: 'c8eec44c-eaae-4a04-971d-4448bc6c0fe4',
         name: 'Customer concern',
         pay_type: Models::Shared::PayType::CUSTOMER,
         technician_user_ids: []
       ),
     ],
-    start_at: DateTime.iso8601('2026-05-07T19:41:53.686Z'),
+    start_at: DateTime.iso8601('2026-05-08T15:22:34.022Z'),
     status: Models::Shared::DmsAppointmentStatus::CANCELLED,
     transport_type: Models::Shared::TransportType::LOANER,
-    updated_at: DateTime.iso8601('2025-04-06T16:31:30.897Z')
+    updated_at: DateTime.iso8601('2025-04-07T03:51:48.554Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2223,7 +2223,7 @@ req = Models::Operations::UpdateDmsOpcodeRequest.new(
     description: 'Oil and filter change',
     estimated_hours: 3.2,
     flat_rate_hours: 3.5,
-    id: '02963f4e-2712-4766-aacf-ea6459458bb1',
+    id: 'a00a0c51-3231-4a93-974f-5f1dcae5d599',
     is_active: true,
     labor_rate_amount: 216.0,
     metadata: [],
@@ -2232,7 +2232,7 @@ req = Models::Operations::UpdateDmsOpcodeRequest.new(
     pay_type: Models::Shared::DmsOpcodePayType::CUSTOMER,
     skill_code: 'A',
     type: Models::Shared::DmsOpcodeType::LABOR,
-    updated_at: DateTime.iso8601('2021-11-03T15:49:20.093Z')
+    updated_at: DateTime.iso8601('2021-11-03T19:06:59.500Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2288,8 +2288,8 @@ req = Models::Operations::UpdateDmsPartRequest.new(
     created_at: DateTime.iso8601('2020-07-02T08:18:03.858Z'),
     currency: 'USD',
     description: 'Cabin filter',
-    id: '97295eb5-60e5-43fb-92e3-c5b73a2000cd',
-    last_sold_at: DateTime.iso8601('2020-11-23T04:33:23.297Z'),
+    id: '65d32cfa-532a-4bf5-93c7-d84f150934da',
+    last_sold_at: DateTime.iso8601('2020-11-23T06:01:47.637Z'),
     list_price_amount: 39.61,
     manufacturer_code: 'TOY',
     max_stock_quantity: 21.0,
@@ -2302,7 +2302,7 @@ req = Models::Operations::UpdateDmsPartRequest.new(
     quantity_on_order: 14.0,
     source_code: '30',
     trade_price_amount: 29.05,
-    updated_at: DateTime.iso8601('2023-11-23T07:07:21.106Z')
+    updated_at: DateTime.iso8601('2023-11-23T19:48:48.226Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2355,10 +2355,10 @@ req = Models::Operations::UpdateDmsPartsaleRequest.new(
     currency: 'USD',
     discount_amount: 0.0,
     freight_amount: 0.0,
-    id: '73461ce7-3e75-4a6c-b8a9-ca20a45e2f8f',
+    id: '5802d267-3c50-4214-a7e4-05b55c6fbea0',
     lines: [
       Models::Shared::DmsPartline.new(
-        id: '64206528-da75-40d9-b936-5acc30f317b0',
+        id: '63d042ef-f665-4790-b12b-8e37a4dacec7',
         pay_type: Models::Shared::DmsPartlinePayType::CUSTOMER,
         quantity: 5.0,
         quantity_ordered: 5.0,
@@ -2366,7 +2366,7 @@ req = Models::Operations::UpdateDmsPartsaleRequest.new(
         unit_price_amount: 98.29
       ),
       Models::Shared::DmsPartline.new(
-        id: '2128fe82-f689-4acf-a553-23b2ff8b4bf3',
+        id: '93c525db-8b79-4fb4-a430-c72cf46a3a7d',
         pay_type: Models::Shared::DmsPartlinePayType::CUSTOMER,
         quantity: 2.0,
         quantity_ordered: 2.0,
@@ -2374,7 +2374,7 @@ req = Models::Operations::UpdateDmsPartsaleRequest.new(
         unit_price_amount: 120.45
       ),
       Models::Shared::DmsPartline.new(
-        id: '42a50637-ffaa-44f5-973e-4066f6505ff7',
+        id: '6fa447aa-d204-48e8-b568-b7c5aaf04a5c',
         pay_type: Models::Shared::DmsPartlinePayType::CUSTOMER,
         quantity: 3.0,
         quantity_ordered: 3.0,
@@ -2390,7 +2390,7 @@ req = Models::Operations::UpdateDmsPartsaleRequest.new(
     tax_amount: 68.73,
     total_amount: 1050.62,
     type: Models::Shared::DmsPartsaleType::SALE,
-    updated_at: DateTime.iso8601('2026-04-18T13:18:43.913Z')
+    updated_at: DateTime.iso8601('2026-04-19T09:07:12.597Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2439,23 +2439,23 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateDmsRepairorderRequest.new(
   dms_repairorder: Models::Shared::DmsRepairorder.new(
     balance_amount: 3193.86,
-    completed_at: DateTime.iso8601('2026-11-13T20:46:36.941Z'),
+    completed_at: DateTime.iso8601('2026-11-14T20:31:17.702Z'),
     created_at: DateTime.iso8601('2022-10-25T15:50:48.007Z'),
     currency: 'USD',
     discount_amount: 0.0,
     estimate_amount: 3264.0,
-    id: 'b720759e-11f4-4eb2-ad18-7a1d74a22d36',
+    id: '8a1a76ae-bd85-49f7-86ba-1a1d05f85b3c',
     jobs: [
       Models::Shared::DmsRepairorderJob.new(
         actual_hours: 3.6,
         cause: 'Scheduled maintenance',
         complaint: 'Due for service',
         correction: 'Aufero cumque vicinus aptus assumenda quis aptus.',
-        id: '670ca467-7702-4acb-869b-7d1e8ce28266',
+        id: 'b9cecaed-2043-442c-a422-6bc4341bd3ae',
         labor_amount: 681.6,
         labors: [
           Models::Shared::DmsRepairorderLabor.new(
-            id: 'bcaa6d56-8514-4178-adca-c20a6ce1f587',
+            id: '7c865390-c20a-47b6-a4ec-3cff9faa270b',
             pay_type: Models::Shared::DmsRepairorderLaborPayType::WARRANTY,
             rate_amount: 213.0,
             sold_hours: 3.2,
@@ -2478,11 +2478,11 @@ req = Models::Operations::UpdateDmsRepairorderRequest.new(
         cause: 'Worn brake pads',
         complaint: 'Vibration at highway speed',
         correction: 'Somnus avaritia utroque vulnero ullam ancilla.',
-        id: '9f6fd07a-bf0a-4b8e-8d58-cb14fc6cf5bf',
+        id: '7ead4c92-c24e-4b7a-8ad3-a019528a5565',
         labor_amount: 446.4,
         labors: [
           Models::Shared::DmsRepairorderLabor.new(
-            id: '5c6e84bb-2bad-420c-9d8a-26651be27b4a',
+            id: 'ae8450dd-c9da-4de9-8c75-78daf73d6b1d',
             pay_type: Models::Shared::DmsRepairorderLaborPayType::WARRANTY,
             rate_amount: 144.0,
             sold_hours: 3.1,
@@ -2494,7 +2494,7 @@ req = Models::Operations::UpdateDmsRepairorderRequest.new(
         number: 'B',
         parts: [
           Models::Shared::DmsPartline.new(
-            id: 'ed031a7f-b7f2-4fbb-a329-593472b5b96e',
+            id: '06173ad0-2a41-4163-b31f-77e9304c094f',
             pay_type: Models::Shared::DmsPartlinePayType::WARRANTY,
             quantity: 4.0,
             quantity_ordered: 4.0,
@@ -2502,7 +2502,7 @@ req = Models::Operations::UpdateDmsRepairorderRequest.new(
             unit_price_amount: 222.61
           ),
           Models::Shared::DmsPartline.new(
-            id: '833e60aa-69fc-4de7-b1f8-ee482ae2a91a',
+            id: '60660713-d52b-4294-a9f8-e9d88844c842',
             pay_type: Models::Shared::DmsPartlinePayType::WARRANTY,
             quantity: 2.0,
             quantity_ordered: 2.0,
@@ -2522,11 +2522,11 @@ req = Models::Operations::UpdateDmsRepairorderRequest.new(
         cause: 'Scheduled maintenance',
         complaint: 'Noise when braking',
         correction: 'Degero theca natus.',
-        id: 'fa12bb24-e759-42c9-8a0b-295aa78c127f',
+        id: '6dd97c4b-9018-4162-9f39-a3142bd8b8e1',
         labor_amount: 232.4,
         labors: [
           Models::Shared::DmsRepairorderLabor.new(
-            id: '1b80abd2-5045-4b05-a22b-e34917caedee',
+            id: 'be71c310-2a02-4cba-ab02-55a6a8c07cdd',
             pay_type: Models::Shared::DmsRepairorderLaborPayType::CUSTOMER,
             rate_amount: 166.0,
             sold_hours: 1.4,
@@ -2538,7 +2538,7 @@ req = Models::Operations::UpdateDmsRepairorderRequest.new(
         number: 'C',
         parts: [
           Models::Shared::DmsPartline.new(
-            id: '39cc5561-9bf9-4ece-acbb-88a70fbac770',
+            id: 'ecd8655b-bb22-401b-a16b-35996860a6db',
             pay_type: Models::Shared::DmsPartlinePayType::CUSTOMER,
             quantity: 1.0,
             quantity_ordered: 1.0,
@@ -2546,7 +2546,7 @@ req = Models::Operations::UpdateDmsRepairorderRequest.new(
             unit_price_amount: 216.02
           ),
           Models::Shared::DmsPartline.new(
-            id: 'ddfe075d-c64e-44ba-9016-0bc506dfa5d4',
+            id: 'cf8ac799-9e6c-46ee-85a8-f60d5d60fcb6',
             pay_type: Models::Shared::DmsPartlinePayType::CUSTOMER,
             quantity: 2.0,
             quantity_ordered: 2.0,
@@ -2569,10 +2569,10 @@ req = Models::Operations::UpdateDmsRepairorderRequest.new(
     odometer_in: 7776.0,
     odometer_out: 7776.0,
     odometer_unit: Models::Shared::DmsRepairorderOdometerUnit::MILES,
-    opened_at: DateTime.iso8601('2025-02-08T09:37:32.744Z'),
+    opened_at: DateTime.iso8601('2025-02-08T23:02:53.902Z'),
     parts_amount: 1680.8_000_000_000_002,
     pay_type: Models::Shared::DmsRepairorderPayType::WARRANTY,
-    promised_at: DateTime.iso8601('2025-02-09T17:37:32.744Z'),
+    promised_at: DateTime.iso8601('2025-02-10T07:02:53.902Z'),
     purchase_order_number: '182743',
     status: Models::Shared::DmsRepairorderStatus::COMPLETED,
     sublet_amount: 0.0,
@@ -2599,7 +2599,7 @@ req = Models::Operations::UpdateDmsRepairorderRequest.new(
       ),
     ],
     transport_type: Models::Shared::DmsRepairorderTransportType::LOANER,
-    updated_at: DateTime.iso8601('2025-11-28T17:32:57.101Z')
+    updated_at: DateTime.iso8601('2025-11-29T11:40:37.857Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2655,7 +2655,7 @@ req = Models::Operations::UpdateDmsVehicleRequest.new(
     description: '2023 Citroën Silverado',
     exterior_color: 'lavender',
     fuel_type: Models::Shared::FuelType::ELECTRIC,
-    id: 'efdfb740-0c86-4c38-aa92-d8d17f8d20b4',
+    id: '57c592a9-91f2-4278-ac47-b269696bf346',
     image_urls: [
       'https://picsum.photos/seed/tOUr5K/1358/1877',
     ],
@@ -2695,7 +2695,7 @@ req = Models::Operations::UpdateDmsVehicleRequest.new(
     transmission: 'Manual',
     trim: 'Base',
     type: Models::Shared::DmsVehicleType::SUV,
-    updated_at: DateTime.iso8601('2023-11-03T13:51:45.393Z'),
+    updated_at: DateTime.iso8601('2023-11-04T01:11:04.980Z'),
     vin: 'C29ZDU474DDR70955',
     warranty_expires_at: DateTime.iso8601('2022-03-28T09:10:09.889Z'),
     year: 2023.0
@@ -2765,7 +2765,7 @@ req = Models::Operations::UpdateDmsVehiclesaleRequest.new(
     ],
     finance: Models::Shared::PropertyDmsVehiclesaleFinance.new(
       financed_amount: 0.0,
-      first_payment_at: DateTime.iso8601('2022-08-16T11:37:29.897Z'),
+      first_payment_at: DateTime.iso8601('2022-08-16T20:08:55.028Z'),
       interest_rate: 6.68,
       lender_name: 'Mueller, Yundt and Murray Financial',
       payment_amount: 339.0,
@@ -2773,7 +2773,7 @@ req = Models::Operations::UpdateDmsVehiclesaleRequest.new(
       term_months: 72.0
     ),
     finance_type: Models::Shared::FinanceType::FINANCE,
-    id: '3f89399e-041f-4ed9-a414-18674421f1b5',
+    id: 'd33585c7-06db-40fc-8912-ac9c20fea71a',
     metadata: [],
     number: 'D84591',
     products: [
@@ -2798,7 +2798,7 @@ req = Models::Operations::UpdateDmsVehiclesaleRequest.new(
       ),
     ],
     rebate_amount: 500.0,
-    sold_at: DateTime.iso8601('2022-08-14T20:21:55.610Z'),
+    sold_at: DateTime.iso8601('2022-08-15T04:53:20.741Z'),
     source: 'Website',
     status: Models::Shared::DmsVehiclesaleStatus::SOLD,
     tax_amount: 0.0,
@@ -2812,7 +2812,7 @@ req = Models::Operations::UpdateDmsVehiclesaleRequest.new(
     total_amount: 7891.0,
     trade_ins: [],
     type: Models::Shared::DmsVehiclesaleType::RETAIL,
-    updated_at: DateTime.iso8601('2025-04-16T21:53:33.496Z'),
+    updated_at: DateTime.iso8601('2025-04-17T16:02:23.477Z'),
     vehicles: []
   ),
   connection_id: '<id>',

@@ -88,7 +88,7 @@ res = s.crm.create_crm_company(crm_company: Models::Shared::CrmCompany.new(
     ),
   ],
   employees: 4177.0,
-  id: '8683b6d5-13db-4e5e-8317-488dced6c7f3',
+  id: '91a47b07-0504-4043-a409-9942d298ffb7',
   industry: 'Accounts',
   is_active: true,
   link_urls: [
@@ -100,7 +100,7 @@ res = s.crm.create_crm_company(crm_company: Models::Shared::CrmCompany.new(
         'display_name' => 'Custom Property',
       },
       format: Models::Shared::CrmMetadataFormat::TEXT,
-      id: 'd000e5c4-f515-4e81-8f62-711379eeaf87',
+      id: '6624187c-5280-46fe-be14-79ee57e11365',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'crur'
@@ -119,7 +119,7 @@ res = s.crm.create_crm_company(crm_company: Models::Shared::CrmCompany.new(
     ),
   ],
   timezone: 'Australia/Hobart',
-  updated_at: DateTime.iso8601('2025-03-30T18:51:23.024Z'),
+  updated_at: DateTime.iso8601('2025-03-31T12:44:09.741Z'),
   websites: [
     'https://www.muellergroup.com',
   ]
@@ -185,7 +185,7 @@ res = s.crm.create_crm_contact(crm_contact: Models::Shared::CrmContact.new(
     ),
   ],
   first_name: 'Alexandro',
-  id: 'e20c3119-6cc5-445b-997b-a5b329d9b18b',
+  id: 'ddd1f93c-b308-4665-b859-18df23d2fdd6',
   image_url: 'https://avatars.githubusercontent.com/u/26594214',
   last_name: 'Kuphal',
   link_urls: [
@@ -197,7 +197,7 @@ res = s.crm.create_crm_contact(crm_contact: Models::Shared::CrmContact.new(
         'display_name' => 'Custom Property',
       },
       format: Models::Shared::CrmMetadataFormat::TEXT,
-      id: 'f8d7cced-3993-4b2d-bfa5-468bc8d176d1',
+      id: '09929c68-4c22-48bd-8263-c97dbf2fd658',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'amplus'
@@ -215,7 +215,7 @@ res = s.crm.create_crm_contact(crm_contact: Models::Shared::CrmContact.new(
     ),
   ],
   title: 'Direct Infrastructure Administrator',
-  updated_at: DateTime.iso8601('2021-02-25T03:25:07.334Z')
+  updated_at: DateTime.iso8601('2021-02-25T04:01:12.875Z')
 ), connection_id: '<id>')
 
 unless res.crm_contact.nil?
@@ -261,19 +261,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.crm.create_crm_deal(crm_deal: Models::Shared::CrmDeal.new(
   amount: 98_162.0,
-  closed_at: DateTime.iso8601('2024-03-18T02:26:08.566Z'),
-  closing_at: DateTime.iso8601('2025-09-24T18:37:13.401Z'),
+  closed_at: DateTime.iso8601('2024-03-18T07:24:20.524Z'),
+  closing_at: DateTime.iso8601('2025-09-25T10:18:45.333Z'),
   created_at: DateTime.iso8601('2023-07-04T12:48:48.470Z'),
   currency: 'USD',
   description: 'Trans tubineus adfectus cubo causa suus.',
-  id: '1edcd825-5aba-453f-b833-f7bf68a01803',
+  id: '9b3d3274-1cf8-4718-a7fe-d83e7aa748e2',
   metadata: [
     Models::Shared::CrmMetadata.new(
       extra_data: {
         'display_name' => 'Custom Property',
       },
       format: Models::Shared::CrmMetadataFormat::TEXT,
-      id: 'e3dc7e35-3251-4ff0-978d-e70271c58dc9',
+      id: '45a2788a-79b3-4530-8e1b-d15ed8b2e73e',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'tandem'
@@ -286,7 +286,7 @@ res = s.crm.create_crm_deal(crm_deal: Models::Shared::CrmDeal.new(
     'sol',
     'odit',
   ],
-  updated_at: DateTime.iso8601('2024-10-26T04:28:29.968Z'),
+  updated_at: DateTime.iso8601('2024-10-26T13:43:49.080Z'),
   won_reason: 'Libero soleo cetera unus caterva.'
 ), connection_id: '<id>')
 
@@ -335,13 +335,13 @@ res = s.crm.create_crm_event(crm_event: Models::Shared::CrmEvent.new(
   call: Models::Shared::PropertyCrmEventCall.new(
     description: 'Accusantium attero deludo.',
     duration: 64.0,
-    start_at: DateTime.iso8601('2025-01-06T01:48:55.283Z')
+    start_at: DateTime.iso8601('2025-01-06T18:40:03.127Z')
   ),
   created_at: DateTime.iso8601('2020-07-14T04:53:23.784Z'),
-  id: '99902e7e-aa77-4a4d-956b-6482e777b6d5',
+  id: 'cb43f403-7029-4833-85c8-552f64ac05dc',
   metadata: [],
   type: Models::Shared::CrmEventType::CALL,
-  updated_at: DateTime.iso8601('2026-11-17T09:42:35.651Z')
+  updated_at: DateTime.iso8601('2026-11-18T09:33:58.718Z')
 ), connection_id: '<id>')
 
 unless res.crm_event.nil?
@@ -403,7 +403,7 @@ res = s.crm.create_crm_lead(crm_lead: Models::Shared::CrmLead.new(
     ),
   ],
   first_name: 'Robbie',
-  id: '17a68ce9-9551-43de-a99c-0f4c68ffa01c',
+  id: '7d746eca-75f5-4b68-8237-88b5b26a5f40',
   is_active: true,
   last_name: 'Wiegand',
   link_urls: [
@@ -415,7 +415,7 @@ res = s.crm.create_crm_lead(crm_lead: Models::Shared::CrmLead.new(
         'display_name' => 'Custom Property',
       },
       format: Models::Shared::CrmMetadataFormat::TEXT,
-      id: '5c97bd2d-b632-452c-a31a-76bd87dfcb2f',
+      id: '357eb687-6dbc-4b68-8df3-4cbe081e0a3d',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'tripudio'
@@ -439,7 +439,7 @@ res = s.crm.create_crm_lead(crm_lead: Models::Shared::CrmLead.new(
     ),
   ],
   title: 'Future Response Specialist',
-  updated_at: DateTime.iso8601('2020-05-21T01:13:15.056Z')
+  updated_at: DateTime.iso8601('2020-05-21T03:15:37.236Z')
 ), connection_id: '<id>')
 
 unless res.crm_lead.nil?
@@ -487,7 +487,7 @@ res = s.crm.create_crm_pipeline(crm_pipeline: Models::Shared::CrmPipeline.new(
   created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
   deal_probability: 99.0,
   display_order: 8.0,
-  id: 'fd95a83c-5d92-4850-8daf-48b46f49fec9',
+  id: 'bf2392f3-2bb2-4305-8a34-246f04032bc6',
   is_active: true,
   metadata: [],
   name: 'Bespoke Steel Chicken',
@@ -497,13 +497,13 @@ res = s.crm.create_crm_pipeline(crm_pipeline: Models::Shared::CrmPipeline.new(
       created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
       deal_probability: 84.0,
       display_order: 72.0,
-      id: '4d2af2e7-e2ed-4c5e-b889-a366d1f3dd44',
+      id: 'ee6a0823-b30d-4cf3-8254-c06229df033a',
       is_closed: true,
       name: 'Barba.',
-      updated_at: DateTime.iso8601('2025-11-06T13:21:04.120Z')
+      updated_at: DateTime.iso8601('2025-11-07T06:50:48.573Z')
     ),
   ],
-  updated_at: DateTime.iso8601('2025-11-28T20:39:10.346Z')
+  updated_at: DateTime.iso8601('2025-11-29T14:31:20.434Z')
 ), connection_id: '<id>')
 
 unless res.crm_pipeline.nil?
@@ -1145,7 +1145,7 @@ req = Models::Operations::PatchCrmCompanyRequest.new(
       ),
     ],
     employees: 4177.0,
-    id: '99a61e9e-03a4-4b68-947e-b02130b7cb5e',
+    id: '57775774-6f4b-4e9a-b783-1c782e25d6a2',
     industry: 'Accounts',
     is_active: true,
     link_urls: [
@@ -1157,7 +1157,7 @@ req = Models::Operations::PatchCrmCompanyRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: 'b59dd4d8-b4c5-4fbb-9f44-83258eece8e7',
+        id: 'c3ffad0d-99d0-4689-aa5f-d34627365ca3',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'crur'
@@ -1176,7 +1176,7 @@ req = Models::Operations::PatchCrmCompanyRequest.new(
       ),
     ],
     timezone: 'Australia/Hobart',
-    updated_at: DateTime.iso8601('2025-03-30T18:51:23.037Z'),
+    updated_at: DateTime.iso8601('2025-03-31T12:44:09.753Z'),
     websites: [
       'https://www.muellergroup.com',
     ]
@@ -1245,7 +1245,7 @@ req = Models::Operations::PatchCrmContactRequest.new(
       ),
     ],
     first_name: 'Alexandro',
-    id: '3e0653fc-1198-4e31-bfd2-cde24e5bac8d',
+    id: 'd754e64c-036b-4349-a65c-45a08b209990',
     image_url: 'https://avatars.githubusercontent.com/u/26594214',
     last_name: 'Kuphal',
     link_urls: [
@@ -1257,7 +1257,7 @@ req = Models::Operations::PatchCrmContactRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '1f0cf654-0587-46ff-a50d-cdef1cd3c61e',
+        id: '546d19d6-bab9-4fc1-bbe4-07aed61c89f3',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'amplus'
@@ -1275,7 +1275,7 @@ req = Models::Operations::PatchCrmContactRequest.new(
       ),
     ],
     title: 'Direct Infrastructure Administrator',
-    updated_at: DateTime.iso8601('2021-02-25T03:25:07.334Z')
+    updated_at: DateTime.iso8601('2021-02-25T04:01:12.876Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1324,19 +1324,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchCrmDealRequest.new(
   crm_deal: Models::Shared::CrmDeal.new(
     amount: 98_162.0,
-    closed_at: DateTime.iso8601('2024-03-18T02:26:08.568Z'),
-    closing_at: DateTime.iso8601('2025-09-24T18:37:13.409Z'),
+    closed_at: DateTime.iso8601('2024-03-18T07:24:20.526Z'),
+    closing_at: DateTime.iso8601('2025-09-25T10:18:45.341Z'),
     created_at: DateTime.iso8601('2023-07-04T12:48:48.470Z'),
     currency: 'USD',
     description: 'Trans tubineus adfectus cubo causa suus.',
-    id: 'ab0bb2d1-2751-432c-9f34-29b91242ddf2',
+    id: '348ac789-3628-447b-8b8b-4ffa92d26dac',
     metadata: [
       Models::Shared::CrmMetadata.new(
         extra_data: {
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '437351e0-699b-4de8-9713-1258c29f4cbd',
+        id: '99791940-3b11-4883-b23b-5d47f0a32694',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'tandem'
@@ -1349,7 +1349,7 @@ req = Models::Operations::PatchCrmDealRequest.new(
       'sol',
       'odit',
     ],
-    updated_at: DateTime.iso8601('2024-10-26T04:28:29.972Z'),
+    updated_at: DateTime.iso8601('2024-10-26T13:43:49.084Z'),
     won_reason: 'Libero soleo cetera unus caterva.'
   ),
   connection_id: '<id>',
@@ -1401,13 +1401,13 @@ req = Models::Operations::PatchCrmEventRequest.new(
     call: Models::Shared::PropertyCrmEventCall.new(
       description: 'Accusantium attero deludo.',
       duration: 64.0,
-      start_at: DateTime.iso8601('2025-01-06T01:48:55.306Z')
+      start_at: DateTime.iso8601('2025-01-06T18:40:03.165Z')
     ),
     created_at: DateTime.iso8601('2020-07-14T04:53:23.784Z'),
-    id: '24e6b081-1d34-42b2-92b7-d5d35f917fb5',
+    id: 'a6e7a34a-e9bb-45db-8b93-bd8ef7fc4e1a',
     metadata: [],
     type: Models::Shared::CrmEventType::CALL,
-    updated_at: DateTime.iso8601('2026-11-17T09:42:35.684Z')
+    updated_at: DateTime.iso8601('2026-11-18T09:33:58.772Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1472,7 +1472,7 @@ req = Models::Operations::PatchCrmLeadRequest.new(
       ),
     ],
     first_name: 'Robbie',
-    id: 'f6233bc6-0485-47f1-bcd9-04a53fc0c251',
+    id: 'a2e6bac7-9d80-4f1c-a074-f3632f1c7d7f',
     is_active: true,
     last_name: 'Wiegand',
     link_urls: [
@@ -1484,7 +1484,7 @@ req = Models::Operations::PatchCrmLeadRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '3b4eadbc-a1cc-4cc3-92e2-24170f7e3737',
+        id: '116bb13c-da47-45bb-b7e2-1f9b558461d4',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'tripudio'
@@ -1508,7 +1508,7 @@ req = Models::Operations::PatchCrmLeadRequest.new(
       ),
     ],
     title: 'Future Response Specialist',
-    updated_at: DateTime.iso8601('2020-05-21T01:13:15.057Z')
+    updated_at: DateTime.iso8601('2020-05-21T03:15:37.237Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1559,7 +1559,7 @@ req = Models::Operations::PatchCrmPipelineRequest.new(
     created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
     deal_probability: 99.0,
     display_order: 8.0,
-    id: '5b0c630e-133c-4ee1-8560-6132985fb089',
+    id: 'e0043ab1-7267-4a2f-a8d0-c0468bb0f1e5',
     is_active: true,
     metadata: [],
     name: 'Bespoke Steel Chicken',
@@ -1569,13 +1569,13 @@ req = Models::Operations::PatchCrmPipelineRequest.new(
         created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
         deal_probability: 84.0,
         display_order: 72.0,
-        id: 'bfff2269-85c8-45f6-acbc-6a0d638e1bec',
+        id: '428cf6a9-f7a5-4047-a92b-fbb89e69cda1',
         is_closed: true,
         name: 'Barba.',
-        updated_at: DateTime.iso8601('2025-11-06T13:21:04.127Z')
+        updated_at: DateTime.iso8601('2025-11-07T06:50:48.579Z')
       ),
     ],
-    updated_at: DateTime.iso8601('2025-11-28T20:39:10.353Z')
+    updated_at: DateTime.iso8601('2025-11-29T14:31:20.441Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1898,7 +1898,7 @@ req = Models::Operations::UpdateCrmCompanyRequest.new(
       ),
     ],
     employees: 4177.0,
-    id: '99a61e9e-03a4-4b68-947e-b02130b7cb5e',
+    id: '57775774-6f4b-4e9a-b783-1c782e25d6a2',
     industry: 'Accounts',
     is_active: true,
     link_urls: [
@@ -1910,7 +1910,7 @@ req = Models::Operations::UpdateCrmCompanyRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: 'b59dd4d8-b4c5-4fbb-9f44-83258eece8e7',
+        id: 'c3ffad0d-99d0-4689-aa5f-d34627365ca3',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'crur'
@@ -1929,7 +1929,7 @@ req = Models::Operations::UpdateCrmCompanyRequest.new(
       ),
     ],
     timezone: 'Australia/Hobart',
-    updated_at: DateTime.iso8601('2025-03-30T18:51:23.037Z'),
+    updated_at: DateTime.iso8601('2025-03-31T12:44:09.753Z'),
     websites: [
       'https://www.muellergroup.com',
     ]
@@ -1998,7 +1998,7 @@ req = Models::Operations::UpdateCrmContactRequest.new(
       ),
     ],
     first_name: 'Alexandro',
-    id: '3e0653fc-1198-4e31-bfd2-cde24e5bac8d',
+    id: 'd754e64c-036b-4349-a65c-45a08b209990',
     image_url: 'https://avatars.githubusercontent.com/u/26594214',
     last_name: 'Kuphal',
     link_urls: [
@@ -2010,7 +2010,7 @@ req = Models::Operations::UpdateCrmContactRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '1f0cf654-0587-46ff-a50d-cdef1cd3c61e',
+        id: '546d19d6-bab9-4fc1-bbe4-07aed61c89f3',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'amplus'
@@ -2028,7 +2028,7 @@ req = Models::Operations::UpdateCrmContactRequest.new(
       ),
     ],
     title: 'Direct Infrastructure Administrator',
-    updated_at: DateTime.iso8601('2021-02-25T03:25:07.334Z')
+    updated_at: DateTime.iso8601('2021-02-25T04:01:12.876Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2077,19 +2077,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateCrmDealRequest.new(
   crm_deal: Models::Shared::CrmDeal.new(
     amount: 98_162.0,
-    closed_at: DateTime.iso8601('2024-03-18T02:26:08.568Z'),
-    closing_at: DateTime.iso8601('2025-09-24T18:37:13.409Z'),
+    closed_at: DateTime.iso8601('2024-03-18T07:24:20.526Z'),
+    closing_at: DateTime.iso8601('2025-09-25T10:18:45.341Z'),
     created_at: DateTime.iso8601('2023-07-04T12:48:48.470Z'),
     currency: 'USD',
     description: 'Trans tubineus adfectus cubo causa suus.',
-    id: 'ab0bb2d1-2751-432c-9f34-29b91242ddf2',
+    id: '348ac789-3628-447b-8b8b-4ffa92d26dac',
     metadata: [
       Models::Shared::CrmMetadata.new(
         extra_data: {
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '437351e0-699b-4de8-9713-1258c29f4cbd',
+        id: '99791940-3b11-4883-b23b-5d47f0a32694',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'tandem'
@@ -2102,7 +2102,7 @@ req = Models::Operations::UpdateCrmDealRequest.new(
       'sol',
       'odit',
     ],
-    updated_at: DateTime.iso8601('2024-10-26T04:28:29.972Z'),
+    updated_at: DateTime.iso8601('2024-10-26T13:43:49.084Z'),
     won_reason: 'Libero soleo cetera unus caterva.'
   ),
   connection_id: '<id>',
@@ -2154,13 +2154,13 @@ req = Models::Operations::UpdateCrmEventRequest.new(
     call: Models::Shared::PropertyCrmEventCall.new(
       description: 'Accusantium attero deludo.',
       duration: 64.0,
-      start_at: DateTime.iso8601('2025-01-06T01:48:55.306Z')
+      start_at: DateTime.iso8601('2025-01-06T18:40:03.165Z')
     ),
     created_at: DateTime.iso8601('2020-07-14T04:53:23.784Z'),
-    id: '24e6b081-1d34-42b2-92b7-d5d35f917fb5',
+    id: 'a6e7a34a-e9bb-45db-8b93-bd8ef7fc4e1a',
     metadata: [],
     type: Models::Shared::CrmEventType::CALL,
-    updated_at: DateTime.iso8601('2026-11-17T09:42:35.684Z')
+    updated_at: DateTime.iso8601('2026-11-18T09:33:58.772Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2225,7 +2225,7 @@ req = Models::Operations::UpdateCrmLeadRequest.new(
       ),
     ],
     first_name: 'Robbie',
-    id: 'f6233bc6-0485-47f1-bcd9-04a53fc0c251',
+    id: 'a2e6bac7-9d80-4f1c-a074-f3632f1c7d7f',
     is_active: true,
     last_name: 'Wiegand',
     link_urls: [
@@ -2237,7 +2237,7 @@ req = Models::Operations::UpdateCrmLeadRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '3b4eadbc-a1cc-4cc3-92e2-24170f7e3737',
+        id: '116bb13c-da47-45bb-b7e2-1f9b558461d4',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'tripudio'
@@ -2261,7 +2261,7 @@ req = Models::Operations::UpdateCrmLeadRequest.new(
       ),
     ],
     title: 'Future Response Specialist',
-    updated_at: DateTime.iso8601('2020-05-21T01:13:15.057Z')
+    updated_at: DateTime.iso8601('2020-05-21T03:15:37.237Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2312,7 +2312,7 @@ req = Models::Operations::UpdateCrmPipelineRequest.new(
     created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
     deal_probability: 99.0,
     display_order: 8.0,
-    id: '5b0c630e-133c-4ee1-8560-6132985fb089',
+    id: 'e0043ab1-7267-4a2f-a8d0-c0468bb0f1e5',
     is_active: true,
     metadata: [],
     name: 'Bespoke Steel Chicken',
@@ -2322,13 +2322,13 @@ req = Models::Operations::UpdateCrmPipelineRequest.new(
         created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
         deal_probability: 84.0,
         display_order: 72.0,
-        id: 'bfff2269-85c8-45f6-acbc-6a0d638e1bec',
+        id: '428cf6a9-f7a5-4047-a92b-fbb89e69cda1',
         is_closed: true,
         name: 'Barba.',
-        updated_at: DateTime.iso8601('2025-11-06T13:21:04.127Z')
+        updated_at: DateTime.iso8601('2025-11-07T06:50:48.579Z')
       ),
     ],
-    updated_at: DateTime.iso8601('2025-11-28T20:39:10.353Z')
+    updated_at: DateTime.iso8601('2025-11-29T14:31:20.441Z')
   ),
   connection_id: '<id>',
   id: '<id>'

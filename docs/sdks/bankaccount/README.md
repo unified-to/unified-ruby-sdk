@@ -35,7 +35,7 @@ res = s.bankaccount.create_hris_bankaccount(hris_bankaccount: Models::Shared::Hr
   country_code: 'US',
   created_at: DateTime.iso8601('2019-11-16T16:43:45.976Z'),
   currency: 'USD',
-  id: '1900d08f-6f56-493c-b6b0-e1fd986f10ae',
+  id: 'aa959da9-4cad-4e62-98ab-0c04c7157375',
   is_primary: true,
   metadata: [],
   name: 'Rafaela Romaguera - Checking',
@@ -43,7 +43,7 @@ res = s.bankaccount.create_hris_bankaccount(hris_bankaccount: Models::Shared::Hr
   routing_number: '021172195',
   split_amount: 98.0,
   split_type: Models::Shared::SplitType::PERCENTAGE,
-  updated_at: DateTime.iso8601('2025-07-31T07:24:47.834Z')
+  updated_at: DateTime.iso8601('2025-08-01T02:51:19.128Z')
 ), connection_id: '<id>')
 
 unless res.hris_bankaccount.nil?
@@ -184,7 +184,7 @@ req = Models::Operations::PatchHrisBankaccountRequest.new(
     country_code: 'US',
     created_at: DateTime.iso8601('2019-11-16T16:43:45.976Z'),
     currency: 'USD',
-    id: 'b4d941f3-cbf4-49de-9823-e7af451c83d4',
+    id: '46cb24e9-c3d5-47b7-bf38-caa40f21a065',
     is_primary: true,
     metadata: [],
     name: 'Rafaela Romaguera - Checking',
@@ -192,7 +192,7 @@ req = Models::Operations::PatchHrisBankaccountRequest.new(
     routing_number: '021172195',
     split_amount: 98.0,
     split_type: Models::Shared::SplitType::PERCENTAGE,
-    updated_at: DateTime.iso8601('2025-07-31T07:24:47.842Z')
+    updated_at: DateTime.iso8601('2025-08-01T02:51:19.140Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -288,7 +288,7 @@ req = Models::Operations::UpdateHrisBankaccountRequest.new(
     country_code: 'US',
     created_at: DateTime.iso8601('2019-11-16T16:43:45.976Z'),
     currency: 'USD',
-    id: 'b4d941f3-cbf4-49de-9823-e7af451c83d4',
+    id: '46cb24e9-c3d5-47b7-bf38-caa40f21a065',
     is_primary: true,
     metadata: [],
     name: 'Rafaela Romaguera - Checking',
@@ -296,7 +296,7 @@ req = Models::Operations::UpdateHrisBankaccountRequest.new(
     routing_number: '021172195',
     split_amount: 98.0,
     split_type: Models::Shared::SplitType::PERCENTAGE,
-    updated_at: DateTime.iso8601('2025-07-31T07:24:47.842Z')
+    updated_at: DateTime.iso8601('2025-08-01T02:51:19.140Z')
   ),
   connection_id: '<id>',
   id: '<id>'

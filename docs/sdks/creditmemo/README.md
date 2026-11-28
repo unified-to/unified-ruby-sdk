@@ -35,7 +35,7 @@ res = s.creditmemo.create_accounting_creditmemo(accounting_creditmemo: Models::S
   creditmemo_number: 'CM-99537',
   currency: 'AUD',
   discount_amount: 0.0,
-  id: '936d79c3-83d4-4fa3-8177-7942b5425f94',
+  id: '48d926f0-5f58-4f3a-91d0-57157917850b',
   lineitems: [],
   metadata: [],
   notes: 'Amo adfero torqueo quas victoria.',
@@ -44,7 +44,7 @@ res = s.creditmemo.create_accounting_creditmemo(accounting_creditmemo: Models::S
   status: Models::Shared::AccountingCreditmemoStatus::AUTHORIZED,
   tax_amount: 0.0,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2025-10-05T01:22:36.168Z')
+  updated_at: DateTime.iso8601('2025-10-05T16:43:48.516Z')
 ), connection_id: '<id>')
 
 unless res.accounting_creditmemo.nil?
@@ -185,7 +185,7 @@ req = Models::Operations::PatchAccountingCreditmemoRequest.new(
     creditmemo_number: 'CM-99537',
     currency: 'AUD',
     discount_amount: 0.0,
-    id: 'ac98469a-a43f-4bbc-9bfc-655b003c2ef4',
+    id: '412ae93e-96e9-49d0-983f-6e93a5dec832',
     lineitems: [],
     metadata: [],
     notes: 'Amo adfero torqueo quas victoria.',
@@ -194,7 +194,7 @@ req = Models::Operations::PatchAccountingCreditmemoRequest.new(
     status: Models::Shared::AccountingCreditmemoStatus::AUTHORIZED,
     tax_amount: 0.0,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2025-10-05T01:22:36.190Z')
+    updated_at: DateTime.iso8601('2025-10-05T16:43:48.545Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -290,7 +290,7 @@ req = Models::Operations::UpdateAccountingCreditmemoRequest.new(
     creditmemo_number: 'CM-99537',
     currency: 'AUD',
     discount_amount: 0.0,
-    id: 'ac98469a-a43f-4bbc-9bfc-655b003c2ef4',
+    id: '412ae93e-96e9-49d0-983f-6e93a5dec832',
     lineitems: [],
     metadata: [],
     notes: 'Amo adfero torqueo quas victoria.',
@@ -299,7 +299,7 @@ req = Models::Operations::UpdateAccountingCreditmemoRequest.new(
     status: Models::Shared::AccountingCreditmemoStatus::AUTHORIZED,
     tax_amount: 0.0,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2025-10-05T01:22:36.190Z')
+    updated_at: DateTime.iso8601('2025-10-05T16:43:48.545Z')
   ),
   connection_id: '<id>',
   id: '<id>'

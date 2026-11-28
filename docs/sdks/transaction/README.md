@@ -29,12 +29,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.transaction.create_accounting_transaction(accounting_transaction: Models::Shared::AccountingTransaction.new(
   created_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-  id: '18549007-e4c0-489b-8a88-79e0dd197b8f',
+  id: 'd4669198-fb91-413e-8131-b12ce3f6c599',
   lineitems: [
     Models::Shared::AccountingTransactionLineItem.new(
       category_ids: [],
       description: 'The Wilma Car is the latest in a series of beneficial products from Fritsch Group',
-      id: '1a09fd08-6151-4f2a-825f-cca990dfa506',
+      id: '4a72a3e8-4191-453b-93bd-c262c31f58b0',
       name: 'Table',
       total_amount: 10_184.0,
       unit_amount: 536.0,
@@ -46,7 +46,7 @@ res = s.transaction.create_accounting_transaction(accounting_transaction: Models
   tax_amount: 0.0,
   total_amount: 10_184.0,
   transaction_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-  updated_at: DateTime.iso8601('2019-10-14T12:35:55.035Z')
+  updated_at: DateTime.iso8601('2019-10-14T12:46:21.812Z')
 ), connection_id: '<id>')
 
 unless res.accounting_transaction.nil?
@@ -181,12 +181,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAccountingTransactionRequest.new(
   accounting_transaction: Models::Shared::AccountingTransaction.new(
     created_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-    id: '3510f506-8e07-4203-b086-ef684897de18',
+    id: '9e567731-22e8-47c9-a45e-5ffe13ee1a60',
     lineitems: [
       Models::Shared::AccountingTransactionLineItem.new(
         category_ids: [],
         description: 'The Wilma Car is the latest in a series of beneficial products from Fritsch Group',
-        id: '4051143c-266c-4851-b526-e00415813ee8',
+        id: '1ce0e7a7-2c0c-427e-af65-999d51fe6487',
         name: 'Table',
         total_amount: 10_184.0,
         unit_amount: 536.0,
@@ -198,7 +198,7 @@ req = Models::Operations::PatchAccountingTransactionRequest.new(
     tax_amount: 0.0,
     total_amount: 10_184.0,
     transaction_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-    updated_at: DateTime.iso8601('2019-10-14T12:35:55.035Z')
+    updated_at: DateTime.iso8601('2019-10-14T12:46:21.812Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -288,12 +288,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAccountingTransactionRequest.new(
   accounting_transaction: Models::Shared::AccountingTransaction.new(
     created_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-    id: '3510f506-8e07-4203-b086-ef684897de18',
+    id: '9e567731-22e8-47c9-a45e-5ffe13ee1a60',
     lineitems: [
       Models::Shared::AccountingTransactionLineItem.new(
         category_ids: [],
         description: 'The Wilma Car is the latest in a series of beneficial products from Fritsch Group',
-        id: '4051143c-266c-4851-b526-e00415813ee8',
+        id: '1ce0e7a7-2c0c-427e-af65-999d51fe6487',
         name: 'Table',
         total_amount: 10_184.0,
         unit_amount: 536.0,
@@ -305,7 +305,7 @@ req = Models::Operations::UpdateAccountingTransactionRequest.new(
     tax_amount: 0.0,
     total_amount: 10_184.0,
     transaction_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-    updated_at: DateTime.iso8601('2019-10-14T12:35:55.035Z')
+    updated_at: DateTime.iso8601('2019-10-14T12:46:21.812Z')
   ),
   connection_id: '<id>',
   id: '<id>'

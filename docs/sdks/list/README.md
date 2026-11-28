@@ -38,7 +38,7 @@ res = s.list.create_martech_list(marketing_list: Models::Shared::MarketingList.n
   ),
   created_at: DateTime.iso8601('2019-09-18T02:01:36.950Z'),
   description: 'Adamo currus at tutamen cubo.',
-  id: 'bb452702-0bdb-4d0d-b31f-d587d6a46c48',
+  id: '72f0f414-f80e-4a61-b0dd-a209fd53ba9b',
   is_active: true,
   language: 'pl',
   metadata: [],
@@ -48,7 +48,7 @@ res = s.list.create_martech_list(marketing_list: Models::Shared::MarketingList.n
   sender_name: 'Kaci Weissnat',
   sender_phone: '595.823.3882 x724',
   subject: 'Celo calco contra asporto vallum solutio deficio paens demergo.',
-  updated_at: DateTime.iso8601('2022-09-29T00:31:14.686Z')
+  updated_at: DateTime.iso8601('2022-09-29T10:36:54.223Z')
 ), connection_id: '<id>')
 
 unless res.marketing_list.nil?
@@ -192,7 +192,7 @@ req = Models::Operations::PatchMartechListRequest.new(
     ),
     created_at: DateTime.iso8601('2019-09-18T02:01:36.950Z'),
     description: 'Adamo currus at tutamen cubo.',
-    id: 'fc3c01be-b97a-4d87-aa63-c04fdd256e64',
+    id: '642c4aec-ad18-4be8-8310-2372a1851283',
     is_active: true,
     language: 'pl',
     metadata: [],
@@ -202,7 +202,7 @@ req = Models::Operations::PatchMartechListRequest.new(
     sender_name: 'Kaci Weissnat',
     sender_phone: '595.823.3882 x724',
     subject: 'Celo calco contra asporto vallum solutio deficio paens demergo.',
-    updated_at: DateTime.iso8601('2022-09-29T00:31:14.692Z')
+    updated_at: DateTime.iso8601('2022-09-29T10:36:54.230Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -301,7 +301,7 @@ req = Models::Operations::UpdateMartechListRequest.new(
     ),
     created_at: DateTime.iso8601('2019-09-18T02:01:36.950Z'),
     description: 'Adamo currus at tutamen cubo.',
-    id: 'fc3c01be-b97a-4d87-aa63-c04fdd256e64',
+    id: '642c4aec-ad18-4be8-8310-2372a1851283',
     is_active: true,
     language: 'pl',
     metadata: [],
@@ -311,7 +311,7 @@ req = Models::Operations::UpdateMartechListRequest.new(
     sender_name: 'Kaci Weissnat',
     sender_phone: '595.823.3882 x724',
     subject: 'Celo calco contra asporto vallum solutio deficio paens demergo.',
-    updated_at: DateTime.iso8601('2022-09-29T00:31:14.692Z')
+    updated_at: DateTime.iso8601('2022-09-29T10:36:54.230Z')
   ),
   connection_id: '<id>',
   id: '<id>'

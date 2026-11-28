@@ -40,18 +40,18 @@ res = s.campaign.create_ads_campaign(ads_campaign: Models::Shared::AdsCampaign.n
   created_at: DateTime.iso8601('2022-05-21T08:51:41.868Z'),
   currency: 'USD',
   effective_status: Models::Shared::EffectiveStatus::NOT_ELIGIBLE,
-  end_at: DateTime.iso8601('2025-06-26T08:47:53.925Z'),
-  id: 'adcb68fb-94ce-48d5-ad50-ec165cfa3b87',
+  end_at: DateTime.iso8601('2025-06-27T01:13:36.363Z'),
+  id: 'd8bef5b3-5a59-496e-a84b-d2a8864c597c',
   labels: [
     'adsuesco',
   ],
   metadata: [],
   name: 'Davis-Ziemann - Gerhold',
-  start_at: DateTime.iso8601('2022-07-22T20:28:14.873Z'),
+  start_at: DateTime.iso8601('2022-07-22T21:22:39.403Z'),
   status: Models::Shared::AdsCampaignStatus::PROCESSING_FAILED,
   targeting: Models::Shared::PropertyAdsCampaignTargeting.new,
   total_spend_amount: 2349.8_642_875_347_286,
-  updated_at: DateTime.iso8601('2026-01-31T21:35:04.742Z')
+  updated_at: DateTime.iso8601('2026-02-01T17:11:56.908Z')
 ), connection_id: '<id>')
 
 unless res.ads_campaign.nil?
@@ -99,7 +99,7 @@ res = s.campaign.create_martech_campaign(marketing_campaign: Models::Shared::Mar
   created_at: DateTime.iso8601('2019-05-19T11:18:15.589Z'),
   from_email: 'liana.dare@gmail.com',
   from_name: 'Liana Dare',
-  id: '352b170f-91e4-42c3-95f0-0285eda96437',
+  id: '55175076-9550-49fb-96a8-121c3983cc7f',
   metadata: [],
   name: 'Sumo trepide utpote conculco tibi solio supplanto.',
   preview_text: 'Spoliatio tamen strues auxilium benigne tempus error eaque suasoria soleo tergeo contra solutio vilitas.',
@@ -108,7 +108,7 @@ res = s.campaign.create_martech_campaign(marketing_campaign: Models::Shared::Mar
   status: Models::Shared::MarketingCampaignStatus::SCHEDULED,
   subject_line: 'Tibi volo auctus votum ver umbra corroboro.',
   type: 'absplit',
-  updated_at: DateTime.iso8601('2022-07-07T12:58:35.396Z')
+  updated_at: DateTime.iso8601('2022-07-07T22:57:23.490Z')
 ), connection_id: '<id>')
 
 unless res.marketing_campaign.nil?
@@ -335,18 +335,18 @@ req = Models::Operations::PatchAdsCampaignRequest.new(
     created_at: DateTime.iso8601('2022-05-21T08:51:41.868Z'),
     currency: 'USD',
     effective_status: Models::Shared::EffectiveStatus::NOT_ELIGIBLE,
-    end_at: DateTime.iso8601('2025-06-26T08:47:54.024Z'),
-    id: 'd6c24281-898b-4032-bef8-d1e8507c640f',
+    end_at: DateTime.iso8601('2025-06-27T01:13:36.433Z'),
+    id: 'c85902bd-34af-4f68-a0ba-0d50eab7afed',
     labels: [
       'adsuesco',
     ],
     metadata: [],
     name: 'Davis-Ziemann - Gerhold',
-    start_at: DateTime.iso8601('2022-07-22T20:28:14.878Z'),
+    start_at: DateTime.iso8601('2022-07-22T21:22:39.406Z'),
     status: Models::Shared::AdsCampaignStatus::PROCESSING_FAILED,
     targeting: Models::Shared::PropertyAdsCampaignTargeting.new,
     total_spend_amount: 2349.8_642_875_347_286,
-    updated_at: DateTime.iso8601('2026-01-31T21:35:04.859Z')
+    updated_at: DateTime.iso8601('2026-02-01T17:11:56.992Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -397,7 +397,7 @@ req = Models::Operations::PatchMartechCampaignRequest.new(
     created_at: DateTime.iso8601('2019-05-19T11:18:15.589Z'),
     from_email: 'liana.dare@gmail.com',
     from_name: 'Liana Dare',
-    id: 'be5f8900-233b-452f-87f0-697f4ddbcf1a',
+    id: 'b3baf804-85a2-48dc-a480-0700b609e9f0',
     metadata: [],
     name: 'Sumo trepide utpote conculco tibi solio supplanto.',
     preview_text: 'Spoliatio tamen strues auxilium benigne tempus error eaque suasoria soleo tergeo contra solutio vilitas.',
@@ -406,7 +406,7 @@ req = Models::Operations::PatchMartechCampaignRequest.new(
     status: Models::Shared::MarketingCampaignStatus::SCHEDULED,
     subject_line: 'Tibi volo auctus votum ver umbra corroboro.',
     type: 'absplit',
-    updated_at: DateTime.iso8601('2022-07-07T12:58:35.400Z')
+    updated_at: DateTime.iso8601('2022-07-07T22:57:23.494Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -542,18 +542,18 @@ req = Models::Operations::UpdateAdsCampaignRequest.new(
     created_at: DateTime.iso8601('2022-05-21T08:51:41.868Z'),
     currency: 'USD',
     effective_status: Models::Shared::EffectiveStatus::NOT_ELIGIBLE,
-    end_at: DateTime.iso8601('2025-06-26T08:47:54.024Z'),
-    id: 'd6c24281-898b-4032-bef8-d1e8507c640f',
+    end_at: DateTime.iso8601('2025-06-27T01:13:36.433Z'),
+    id: 'c85902bd-34af-4f68-a0ba-0d50eab7afed',
     labels: [
       'adsuesco',
     ],
     metadata: [],
     name: 'Davis-Ziemann - Gerhold',
-    start_at: DateTime.iso8601('2022-07-22T20:28:14.878Z'),
+    start_at: DateTime.iso8601('2022-07-22T21:22:39.406Z'),
     status: Models::Shared::AdsCampaignStatus::PROCESSING_FAILED,
     targeting: Models::Shared::PropertyAdsCampaignTargeting.new,
     total_spend_amount: 2349.8_642_875_347_286,
-    updated_at: DateTime.iso8601('2026-01-31T21:35:04.859Z')
+    updated_at: DateTime.iso8601('2026-02-01T17:11:56.992Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -604,7 +604,7 @@ req = Models::Operations::UpdateMartechCampaignRequest.new(
     created_at: DateTime.iso8601('2019-05-19T11:18:15.589Z'),
     from_email: 'liana.dare@gmail.com',
     from_name: 'Liana Dare',
-    id: 'be5f8900-233b-452f-87f0-697f4ddbcf1a',
+    id: 'b3baf804-85a2-48dc-a480-0700b609e9f0',
     metadata: [],
     name: 'Sumo trepide utpote conculco tibi solio supplanto.',
     preview_text: 'Spoliatio tamen strues auxilium benigne tempus error eaque suasoria soleo tergeo contra solutio vilitas.',
@@ -613,7 +613,7 @@ req = Models::Operations::UpdateMartechCampaignRequest.new(
     status: Models::Shared::MarketingCampaignStatus::SCHEDULED,
     subject_line: 'Tibi volo auctus votum ver umbra corroboro.',
     type: 'absplit',
-    updated_at: DateTime.iso8601('2022-07-07T12:58:35.400Z')
+    updated_at: DateTime.iso8601('2022-07-07T22:57:23.494Z')
   ),
   connection_id: '<id>',
   id: '<id>'

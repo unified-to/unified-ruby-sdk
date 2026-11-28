@@ -50,7 +50,7 @@ res = s.legal.create_legal_expense(legal_expense: Models::Shared::LegalExpense.n
   created_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
   currency: 'GBP',
   description: 'Nihil sono villa voluptate cohibeo quas volo succurro.',
-  id: '0a62e14a-6fd2-4c32-a93c-16a3a4d7d9ba',
+  id: '768cb745-6879-4238-9cd8-0b326ca56284',
   incurred_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
   is_billed: false,
   metadata: [],
@@ -58,7 +58,7 @@ res = s.legal.create_legal_expense(legal_expense: Models::Shared::LegalExpense.n
   quantity: 3.0,
   total_amount: 300.0,
   type: Models::Shared::LegalExpenseType::OTHER,
-  updated_at: DateTime.iso8601('2024-04-21T01:54:51.883Z')
+  updated_at: DateTime.iso8601('2024-04-21T15:34:22.554Z')
 ), connection_id: '<id>')
 
 unless res.legal_expense.nil?
@@ -110,11 +110,11 @@ res = s.legal.create_legal_matter(legal_matter: Models::Shared::LegalMatter.new(
   created_at: DateTime.iso8601('2023-05-28T04:10:42.375Z'),
   currency: 'CRC',
   description: 'Arma currus curiositas utilis decor color summa peior occaecati.',
-  id: '69f9d1aa-c215-46a7-aef4-7488b4c89f14',
+  id: 'a15bd309-5820-45d2-8423-42fda4e95fe2',
   metadata: [],
   name: 'Spinka v. Dickinson Inc',
   number: '2023-3062',
-  opened_at: DateTime.iso8601('2023-07-06T09:33:45.222Z'),
+  opened_at: DateTime.iso8601('2023-07-06T10:17:50.358Z'),
   parties: [
     Models::Shared::LegalParty.new(
       description: 'Tremayne Spinka',
@@ -123,8 +123,8 @@ res = s.legal.create_legal_matter(legal_matter: Models::Shared::LegalMatter.new(
   ],
   stage: 'recusandae',
   status: Models::Shared::LegalMatterStatus::OPEN,
-  statute_of_limitations_at: DateTime.iso8601('2029-09-16T07:54:06.016Z'),
-  updated_at: DateTime.iso8601('2023-07-18T22:02:18.470Z')
+  statute_of_limitations_at: DateTime.iso8601('2029-09-17T07:51:25.362Z'),
+  updated_at: DateTime.iso8601('2023-07-18T23:00:27.894Z')
 ), connection_id: '<id>')
 
 unless res.legal_matter.nil?
@@ -171,11 +171,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.legal.create_legal_practicearea(legal_practicearea: Models::Shared::LegalPracticearea.new(
   code: 'TLV',
   created_at: DateTime.iso8601('2023-01-28T21:00:26.264Z'),
-  id: '0cfa7030-9a80-469d-8730-562e528b1b65',
+  id: '7b480a9c-0e39-4f68-8692-2028bb43de95',
   metadata: [],
   name: 'advanced Law',
   type: Models::Shared::LegalPracticeareaType::EDUCATION,
-  updated_at: DateTime.iso8601('2025-09-22T07:55:03.549Z')
+  updated_at: DateTime.iso8601('2025-09-23T00:29:38.036Z')
 ), connection_id: '<id>')
 
 unless res.legal_practicearea.nil?
@@ -224,13 +224,13 @@ res = s.legal.create_legal_timeentry(legal_timeentry: Models::Shared::LegalTimee
   created_at: DateTime.iso8601('2022-05-06T03:26:03.756Z'),
   currency: 'JOD',
   description: 'Torrens volaticus comburo.',
-  id: 'c2ff16be-916d-40f8-849b-d4be18a826d4',
+  id: '3fe93691-1460-4cd5-b31d-3c420bc694ec',
   is_billable: true,
   metadata: [],
   minutes: 390.0,
   rate_amount: 637.0,
   total_amount: 4140.5,
-  updated_at: DateTime.iso8601('2022-07-01T07:47:13.139Z'),
+  updated_at: DateTime.iso8601('2022-07-01T08:35:41.571Z'),
   worked_at: DateTime.iso8601('2022-05-06T03:26:03.756Z')
 ), connection_id: '<id>')
 
@@ -630,7 +630,7 @@ req = Models::Operations::PatchLegalExpenseRequest.new(
     created_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
     currency: 'GBP',
     description: 'Nihil sono villa voluptate cohibeo quas volo succurro.',
-    id: 'f5ea24b7-f4e7-41ce-a0c9-3ac79bb14f1d',
+    id: '2868d749-af5b-45ee-ae3e-3ad272b17e2b',
     incurred_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
     is_billed: false,
     metadata: [],
@@ -638,7 +638,7 @@ req = Models::Operations::PatchLegalExpenseRequest.new(
     quantity: 3.0,
     total_amount: 300.0,
     type: Models::Shared::LegalExpenseType::OTHER,
-    updated_at: DateTime.iso8601('2024-04-21T01:54:51.890Z')
+    updated_at: DateTime.iso8601('2024-04-21T15:34:22.566Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -693,11 +693,11 @@ req = Models::Operations::PatchLegalMatterRequest.new(
     created_at: DateTime.iso8601('2023-05-28T04:10:42.375Z'),
     currency: 'CRC',
     description: 'Arma currus curiositas utilis decor color summa peior occaecati.',
-    id: '65a9c800-3599-4f3d-bd87-ce6d02731460',
+    id: 'be76c5aa-9cc5-4df9-87b5-8490f729f21f',
     metadata: [],
     name: 'Spinka v. Dickinson Inc',
     number: '2023-3062',
-    opened_at: DateTime.iso8601('2023-07-06T09:33:45.223Z'),
+    opened_at: DateTime.iso8601('2023-07-06T10:17:50.359Z'),
     parties: [
       Models::Shared::LegalParty.new(
         description: 'Tremayne Spinka',
@@ -706,8 +706,8 @@ req = Models::Operations::PatchLegalMatterRequest.new(
     ],
     stage: 'recusandae',
     status: Models::Shared::LegalMatterStatus::OPEN,
-    statute_of_limitations_at: DateTime.iso8601('2029-09-16T07:54:06.036Z'),
-    updated_at: DateTime.iso8601('2023-07-18T22:02:18.471Z')
+    statute_of_limitations_at: DateTime.iso8601('2029-09-17T07:51:25.389Z'),
+    updated_at: DateTime.iso8601('2023-07-18T23:00:27.895Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -757,11 +757,11 @@ req = Models::Operations::PatchLegalPracticeareaRequest.new(
   legal_practicearea: Models::Shared::LegalPracticearea.new(
     code: 'TLV',
     created_at: DateTime.iso8601('2023-01-28T21:00:26.264Z'),
-    id: 'aec5dead-4f28-4106-b986-da5d490f48e9',
+    id: '1460dcf0-e3e4-4d8e-80ba-aa00e88b48f8',
     metadata: [],
     name: 'advanced Law',
     type: Models::Shared::LegalPracticeareaType::EDUCATION,
-    updated_at: DateTime.iso8601('2025-09-22T07:55:03.556Z')
+    updated_at: DateTime.iso8601('2025-09-23T00:29:38.046Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -813,13 +813,13 @@ req = Models::Operations::PatchLegalTimeentryRequest.new(
     created_at: DateTime.iso8601('2022-05-06T03:26:03.756Z'),
     currency: 'JOD',
     description: 'Torrens volaticus comburo.',
-    id: '295e65d4-baa5-4b58-8370-fd88c8d53914',
+    id: 'cc2b0a72-65c1-40c1-9fbe-b0aebf210fd8',
     is_billable: true,
     metadata: [],
     minutes: 390.0,
     rate_amount: 637.0,
     total_amount: 4140.5,
-    updated_at: DateTime.iso8601('2022-07-01T07:47:13.140Z'),
+    updated_at: DateTime.iso8601('2022-07-01T08:35:41.572Z'),
     worked_at: DateTime.iso8601('2022-05-06T03:26:03.756Z')
   ),
   connection_id: '<id>',
@@ -1036,7 +1036,7 @@ req = Models::Operations::UpdateLegalExpenseRequest.new(
     created_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
     currency: 'GBP',
     description: 'Nihil sono villa voluptate cohibeo quas volo succurro.',
-    id: 'f5ea24b7-f4e7-41ce-a0c9-3ac79bb14f1d',
+    id: '2868d749-af5b-45ee-ae3e-3ad272b17e2b',
     incurred_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
     is_billed: false,
     metadata: [],
@@ -1044,7 +1044,7 @@ req = Models::Operations::UpdateLegalExpenseRequest.new(
     quantity: 3.0,
     total_amount: 300.0,
     type: Models::Shared::LegalExpenseType::OTHER,
-    updated_at: DateTime.iso8601('2024-04-21T01:54:51.890Z')
+    updated_at: DateTime.iso8601('2024-04-21T15:34:22.566Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1099,11 +1099,11 @@ req = Models::Operations::UpdateLegalMatterRequest.new(
     created_at: DateTime.iso8601('2023-05-28T04:10:42.375Z'),
     currency: 'CRC',
     description: 'Arma currus curiositas utilis decor color summa peior occaecati.',
-    id: '65a9c800-3599-4f3d-bd87-ce6d02731460',
+    id: 'be76c5aa-9cc5-4df9-87b5-8490f729f21f',
     metadata: [],
     name: 'Spinka v. Dickinson Inc',
     number: '2023-3062',
-    opened_at: DateTime.iso8601('2023-07-06T09:33:45.223Z'),
+    opened_at: DateTime.iso8601('2023-07-06T10:17:50.359Z'),
     parties: [
       Models::Shared::LegalParty.new(
         description: 'Tremayne Spinka',
@@ -1112,8 +1112,8 @@ req = Models::Operations::UpdateLegalMatterRequest.new(
     ],
     stage: 'recusandae',
     status: Models::Shared::LegalMatterStatus::OPEN,
-    statute_of_limitations_at: DateTime.iso8601('2029-09-16T07:54:06.036Z'),
-    updated_at: DateTime.iso8601('2023-07-18T22:02:18.471Z')
+    statute_of_limitations_at: DateTime.iso8601('2029-09-17T07:51:25.389Z'),
+    updated_at: DateTime.iso8601('2023-07-18T23:00:27.895Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1163,11 +1163,11 @@ req = Models::Operations::UpdateLegalPracticeareaRequest.new(
   legal_practicearea: Models::Shared::LegalPracticearea.new(
     code: 'TLV',
     created_at: DateTime.iso8601('2023-01-28T21:00:26.264Z'),
-    id: 'aec5dead-4f28-4106-b986-da5d490f48e9',
+    id: '1460dcf0-e3e4-4d8e-80ba-aa00e88b48f8',
     metadata: [],
     name: 'advanced Law',
     type: Models::Shared::LegalPracticeareaType::EDUCATION,
-    updated_at: DateTime.iso8601('2025-09-22T07:55:03.556Z')
+    updated_at: DateTime.iso8601('2025-09-23T00:29:38.046Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1219,13 +1219,13 @@ req = Models::Operations::UpdateLegalTimeentryRequest.new(
     created_at: DateTime.iso8601('2022-05-06T03:26:03.756Z'),
     currency: 'JOD',
     description: 'Torrens volaticus comburo.',
-    id: '295e65d4-baa5-4b58-8370-fd88c8d53914',
+    id: 'cc2b0a72-65c1-40c1-9fbe-b0aebf210fd8',
     is_billable: true,
     metadata: [],
     minutes: 390.0,
     rate_amount: 637.0,
     total_amount: 4140.5,
-    updated_at: DateTime.iso8601('2022-07-01T07:47:13.140Z'),
+    updated_at: DateTime.iso8601('2022-07-01T08:35:41.572Z'),
     worked_at: DateTime.iso8601('2022-05-06T03:26:03.756Z')
   ),
   connection_id: '<id>',

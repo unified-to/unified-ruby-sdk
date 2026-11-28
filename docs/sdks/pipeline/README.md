@@ -31,7 +31,7 @@ res = s.pipeline.create_crm_pipeline(crm_pipeline: Models::Shared::CrmPipeline.n
   created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
   deal_probability: 99.0,
   display_order: 8.0,
-  id: 'fd95a83c-5d92-4850-8daf-48b46f49fec9',
+  id: 'bf2392f3-2bb2-4305-8a34-246f04032bc6',
   is_active: true,
   metadata: [],
   name: 'Bespoke Steel Chicken',
@@ -41,13 +41,13 @@ res = s.pipeline.create_crm_pipeline(crm_pipeline: Models::Shared::CrmPipeline.n
       created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
       deal_probability: 84.0,
       display_order: 72.0,
-      id: '4d2af2e7-e2ed-4c5e-b889-a366d1f3dd44',
+      id: 'ee6a0823-b30d-4cf3-8254-c06229df033a',
       is_closed: true,
       name: 'Barba.',
-      updated_at: DateTime.iso8601('2025-11-06T13:21:04.120Z')
+      updated_at: DateTime.iso8601('2025-11-07T06:50:48.573Z')
     ),
   ],
-  updated_at: DateTime.iso8601('2025-11-28T20:39:10.346Z')
+  updated_at: DateTime.iso8601('2025-11-29T14:31:20.434Z')
 ), connection_id: '<id>')
 
 unless res.crm_pipeline.nil?
@@ -184,7 +184,7 @@ req = Models::Operations::PatchCrmPipelineRequest.new(
     created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
     deal_probability: 99.0,
     display_order: 8.0,
-    id: '5b0c630e-133c-4ee1-8560-6132985fb089',
+    id: 'e0043ab1-7267-4a2f-a8d0-c0468bb0f1e5',
     is_active: true,
     metadata: [],
     name: 'Bespoke Steel Chicken',
@@ -194,13 +194,13 @@ req = Models::Operations::PatchCrmPipelineRequest.new(
         created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
         deal_probability: 84.0,
         display_order: 72.0,
-        id: 'bfff2269-85c8-45f6-acbc-6a0d638e1bec',
+        id: '428cf6a9-f7a5-4047-a92b-fbb89e69cda1',
         is_closed: true,
         name: 'Barba.',
-        updated_at: DateTime.iso8601('2025-11-06T13:21:04.127Z')
+        updated_at: DateTime.iso8601('2025-11-07T06:50:48.579Z')
       ),
     ],
-    updated_at: DateTime.iso8601('2025-11-28T20:39:10.353Z')
+    updated_at: DateTime.iso8601('2025-11-29T14:31:20.441Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -292,7 +292,7 @@ req = Models::Operations::UpdateCrmPipelineRequest.new(
     created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
     deal_probability: 99.0,
     display_order: 8.0,
-    id: '5b0c630e-133c-4ee1-8560-6132985fb089',
+    id: 'e0043ab1-7267-4a2f-a8d0-c0468bb0f1e5',
     is_active: true,
     metadata: [],
     name: 'Bespoke Steel Chicken',
@@ -302,13 +302,13 @@ req = Models::Operations::UpdateCrmPipelineRequest.new(
         created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
         deal_probability: 84.0,
         display_order: 72.0,
-        id: 'bfff2269-85c8-45f6-acbc-6a0d638e1bec',
+        id: '428cf6a9-f7a5-4047-a92b-fbb89e69cda1',
         is_closed: true,
         name: 'Barba.',
-        updated_at: DateTime.iso8601('2025-11-06T13:21:04.127Z')
+        updated_at: DateTime.iso8601('2025-11-07T06:50:48.579Z')
       ),
     ],
-    updated_at: DateTime.iso8601('2025-11-28T20:39:10.353Z')
+    updated_at: DateTime.iso8601('2025-11-29T14:31:20.441Z')
   ),
   connection_id: '<id>',
   id: '<id>'

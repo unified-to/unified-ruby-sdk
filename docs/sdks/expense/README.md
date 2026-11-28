@@ -37,13 +37,13 @@ res = s.expense.create_accounting_expense(accounting_expense: Models::Shared::Ac
   attachments: [
     Models::Shared::AccountingAttachment.new(
       download_url: 'https://avaricious-larva.biz',
-      id: 'dec46abc-5a15-448f-9b14-18cc37fa25f0',
+      id: '97f40486-abcd-4ad8-bfc2-b56cdb90d96c',
       mime_type: 'application/pdf',
       name: 'receipt-9696.pdf'
     ),
     Models::Shared::AccountingAttachment.new(
       download_url: 'https://precious-comparison.net/',
-      id: 'cf88c7a6-1de3-45df-a896-89365a21fd5b',
+      id: 'b584132f-8f9b-4458-9a8d-1643da402a60',
       mime_type: 'application/pdf',
       name: 'receipt-9696-1.pdf'
     ),
@@ -52,10 +52,10 @@ res = s.expense.create_accounting_expense(accounting_expense: Models::Shared::Ac
   created_at: DateTime.iso8601('2020-06-11T03:39:37.305Z'),
   currency: 'GBP',
   external_number: 'EXP-38303',
-  id: 'fb1c0f0a-9877-40c9-b301-41f255450886',
+  id: '8ec7f796-30b8-45e6-bca7-854ea9a9d2a0',
   lineitems: [
     Models::Shared::AccountingLineitem.new(
-      id: 'cfee7387-2f31-4de5-bab4-151f0d477f9a',
+      id: '60eeffe7-7507-4d00-95c9-b96987b51e19',
       item_name: 'Client dinner',
       tax_amount: 0.0,
       total_amount: 364.74,
@@ -63,7 +63,7 @@ res = s.expense.create_accounting_expense(accounting_expense: Models::Shared::Ac
       unit_quantity: 1.0
     ),
     Models::Shared::AccountingLineitem.new(
-      id: 'c3068df1-5577-4c2d-a4d0-b1ebe8508fc0',
+      id: '5916c7d3-da8e-404a-b8e1-1957e1b653e5',
       item_name: 'Client dinner',
       tax_amount: 0.0,
       total_amount: 258.35,
@@ -71,7 +71,7 @@ res = s.expense.create_accounting_expense(accounting_expense: Models::Shared::Ac
       unit_quantity: 1.0
     ),
     Models::Shared::AccountingLineitem.new(
-      id: '80672826-623d-4596-8a14-ab4de53cb19a',
+      id: 'cb104d32-e9fc-4549-a467-56659a20a47c',
       item_name: 'Conference ticket',
       notes: 'Sint spiculum carcer ago charisma.',
       tax_amount: 0.0,
@@ -80,7 +80,7 @@ res = s.expense.create_accounting_expense(accounting_expense: Models::Shared::Ac
       unit_quantity: 1.0
     ),
     Models::Shared::AccountingLineitem.new(
-      id: '4109ff21-47a1-4927-b5c5-ce4f14d0b87f',
+      id: '8cf27a7c-279d-4b31-9290-22dc5aa2c584',
       item_name: 'Hotel',
       tax_amount: 0.0,
       total_amount: 157.04,
@@ -88,7 +88,7 @@ res = s.expense.create_accounting_expense(accounting_expense: Models::Shared::Ac
       unit_quantity: 1.0
     ),
     Models::Shared::AccountingLineitem.new(
-      id: '93cd74b6-dbc8-43e9-a58b-691a57a34212',
+      id: '4f1c086a-aba2-4f9a-9023-56df4ea75c65',
       item_name: 'Hotel',
       tax_amount: 0.0,
       total_amount: 164.02,
@@ -104,7 +104,7 @@ res = s.expense.create_accounting_expense(accounting_expense: Models::Shared::Ac
   tax_amount: 0.0,
   total_amount: 972.29,
   type: Models::Shared::AccountingExpenseType::COMPANY,
-  updated_at: DateTime.iso8601('2020-09-03T15:05:26.318Z')
+  updated_at: DateTime.iso8601('2020-09-03T15:56:53.454Z')
 ), connection_id: '<id>')
 
 unless res.accounting_expense.nil?
@@ -153,7 +153,7 @@ res = s.expense.create_legal_expense(legal_expense: Models::Shared::LegalExpense
   created_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
   currency: 'GBP',
   description: 'Nihil sono villa voluptate cohibeo quas volo succurro.',
-  id: '0a62e14a-6fd2-4c32-a93c-16a3a4d7d9ba',
+  id: '768cb745-6879-4238-9cd8-0b326ca56284',
   incurred_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
   is_billed: false,
   metadata: [],
@@ -161,7 +161,7 @@ res = s.expense.create_legal_expense(legal_expense: Models::Shared::LegalExpense
   quantity: 3.0,
   total_amount: 300.0,
   type: Models::Shared::LegalExpenseType::OTHER,
-  updated_at: DateTime.iso8601('2024-04-21T01:54:51.883Z')
+  updated_at: DateTime.iso8601('2024-04-21T15:34:22.554Z')
 ), connection_id: '<id>')
 
 unless res.legal_expense.nil?
@@ -385,13 +385,13 @@ req = Models::Operations::PatchAccountingExpenseRequest.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://avaricious-larva.biz',
-        id: 'cec7613a-5ba0-4e75-a685-6a41d6964e46',
+        id: '2b8227c1-2ac6-49b9-b294-725ee06f19b8',
         mime_type: 'application/pdf',
         name: 'receipt-9696.pdf'
       ),
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://precious-comparison.net/',
-        id: '560cbef3-35fc-4a11-95fb-32f03a26d9fc',
+        id: '09fb78c4-1565-4b45-8b02-b26fdb56b5f5',
         mime_type: 'application/pdf',
         name: 'receipt-9696-1.pdf'
       ),
@@ -400,10 +400,10 @@ req = Models::Operations::PatchAccountingExpenseRequest.new(
     created_at: DateTime.iso8601('2020-06-11T03:39:37.305Z'),
     currency: 'GBP',
     external_number: 'EXP-38303',
-    id: '18bea025-2de5-4e67-89f9-707de41ee201',
+    id: '05e51bf8-f42f-4ec0-a1f4-5beec05fa1e9',
     lineitems: [
       Models::Shared::AccountingLineitem.new(
-        id: '80e6b4d4-10fc-4063-a802-7d085b1d1666',
+        id: '459ae45b-f6e8-4974-8dfc-9327f50aa7d5',
         item_name: 'Client dinner',
         tax_amount: 0.0,
         total_amount: 364.74,
@@ -411,7 +411,7 @@ req = Models::Operations::PatchAccountingExpenseRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '614e013c-2493-461f-b341-b70729b450a1',
+        id: 'a54020c1-431d-4d12-8c97-d6e81a1edee2',
         item_name: 'Client dinner',
         tax_amount: 0.0,
         total_amount: 258.35,
@@ -419,7 +419,7 @@ req = Models::Operations::PatchAccountingExpenseRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'a37abc2e-9a8d-4c54-8b54-7f2a057a8cb7',
+        id: '30c377fb-c825-4796-9b1d-d645466789d7',
         item_name: 'Conference ticket',
         notes: 'Sint spiculum carcer ago charisma.',
         tax_amount: 0.0,
@@ -428,7 +428,7 @@ req = Models::Operations::PatchAccountingExpenseRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'c6080496-cba3-43f4-8469-19a192e7ff1d',
+        id: '0890c3d2-9e2d-477d-b59a-b33853c2b614',
         item_name: 'Hotel',
         tax_amount: 0.0,
         total_amount: 157.04,
@@ -436,7 +436,7 @@ req = Models::Operations::PatchAccountingExpenseRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '19b101d0-4817-48be-9897-641b310e00e6',
+        id: '049ca3d7-6a7e-4a0e-95a0-fb5d22276d3e',
         item_name: 'Hotel',
         tax_amount: 0.0,
         total_amount: 164.02,
@@ -452,7 +452,7 @@ req = Models::Operations::PatchAccountingExpenseRequest.new(
     tax_amount: 0.0,
     total_amount: 972.29,
     type: Models::Shared::AccountingExpenseType::COMPANY,
-    updated_at: DateTime.iso8601('2020-09-03T15:05:26.319Z')
+    updated_at: DateTime.iso8601('2020-09-03T15:56:53.455Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -504,7 +504,7 @@ req = Models::Operations::PatchLegalExpenseRequest.new(
     created_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
     currency: 'GBP',
     description: 'Nihil sono villa voluptate cohibeo quas volo succurro.',
-    id: 'f5ea24b7-f4e7-41ce-a0c9-3ac79bb14f1d',
+    id: '2868d749-af5b-45ee-ae3e-3ad272b17e2b',
     incurred_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
     is_billed: false,
     metadata: [],
@@ -512,7 +512,7 @@ req = Models::Operations::PatchLegalExpenseRequest.new(
     quantity: 3.0,
     total_amount: 300.0,
     type: Models::Shared::LegalExpenseType::OTHER,
-    updated_at: DateTime.iso8601('2024-04-21T01:54:51.890Z')
+    updated_at: DateTime.iso8601('2024-04-21T15:34:22.566Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -645,13 +645,13 @@ req = Models::Operations::UpdateAccountingExpenseRequest.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://avaricious-larva.biz',
-        id: 'cec7613a-5ba0-4e75-a685-6a41d6964e46',
+        id: '2b8227c1-2ac6-49b9-b294-725ee06f19b8',
         mime_type: 'application/pdf',
         name: 'receipt-9696.pdf'
       ),
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://precious-comparison.net/',
-        id: '560cbef3-35fc-4a11-95fb-32f03a26d9fc',
+        id: '09fb78c4-1565-4b45-8b02-b26fdb56b5f5',
         mime_type: 'application/pdf',
         name: 'receipt-9696-1.pdf'
       ),
@@ -660,10 +660,10 @@ req = Models::Operations::UpdateAccountingExpenseRequest.new(
     created_at: DateTime.iso8601('2020-06-11T03:39:37.305Z'),
     currency: 'GBP',
     external_number: 'EXP-38303',
-    id: '18bea025-2de5-4e67-89f9-707de41ee201',
+    id: '05e51bf8-f42f-4ec0-a1f4-5beec05fa1e9',
     lineitems: [
       Models::Shared::AccountingLineitem.new(
-        id: '80e6b4d4-10fc-4063-a802-7d085b1d1666',
+        id: '459ae45b-f6e8-4974-8dfc-9327f50aa7d5',
         item_name: 'Client dinner',
         tax_amount: 0.0,
         total_amount: 364.74,
@@ -671,7 +671,7 @@ req = Models::Operations::UpdateAccountingExpenseRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '614e013c-2493-461f-b341-b70729b450a1',
+        id: 'a54020c1-431d-4d12-8c97-d6e81a1edee2',
         item_name: 'Client dinner',
         tax_amount: 0.0,
         total_amount: 258.35,
@@ -679,7 +679,7 @@ req = Models::Operations::UpdateAccountingExpenseRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'a37abc2e-9a8d-4c54-8b54-7f2a057a8cb7',
+        id: '30c377fb-c825-4796-9b1d-d645466789d7',
         item_name: 'Conference ticket',
         notes: 'Sint spiculum carcer ago charisma.',
         tax_amount: 0.0,
@@ -688,7 +688,7 @@ req = Models::Operations::UpdateAccountingExpenseRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'c6080496-cba3-43f4-8469-19a192e7ff1d',
+        id: '0890c3d2-9e2d-477d-b59a-b33853c2b614',
         item_name: 'Hotel',
         tax_amount: 0.0,
         total_amount: 157.04,
@@ -696,7 +696,7 @@ req = Models::Operations::UpdateAccountingExpenseRequest.new(
         unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '19b101d0-4817-48be-9897-641b310e00e6',
+        id: '049ca3d7-6a7e-4a0e-95a0-fb5d22276d3e',
         item_name: 'Hotel',
         tax_amount: 0.0,
         total_amount: 164.02,
@@ -712,7 +712,7 @@ req = Models::Operations::UpdateAccountingExpenseRequest.new(
     tax_amount: 0.0,
     total_amount: 972.29,
     type: Models::Shared::AccountingExpenseType::COMPANY,
-    updated_at: DateTime.iso8601('2020-09-03T15:05:26.319Z')
+    updated_at: DateTime.iso8601('2020-09-03T15:56:53.455Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -764,7 +764,7 @@ req = Models::Operations::UpdateLegalExpenseRequest.new(
     created_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
     currency: 'GBP',
     description: 'Nihil sono villa voluptate cohibeo quas volo succurro.',
-    id: 'f5ea24b7-f4e7-41ce-a0c9-3ac79bb14f1d',
+    id: '2868d749-af5b-45ee-ae3e-3ad272b17e2b',
     incurred_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
     is_billed: false,
     metadata: [],
@@ -772,7 +772,7 @@ req = Models::Operations::UpdateLegalExpenseRequest.new(
     quantity: 3.0,
     total_amount: 300.0,
     type: Models::Shared::LegalExpenseType::OTHER,
-    updated_at: DateTime.iso8601('2024-04-21T01:54:51.890Z')
+    updated_at: DateTime.iso8601('2024-04-21T15:34:22.566Z')
   ),
   connection_id: '<id>',
   id: '<id>'

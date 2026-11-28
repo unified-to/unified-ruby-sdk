@@ -49,13 +49,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.event.create_analytics_event(analytics_event: Models::Shared::AnalyticsEvent.new(
   created_at: DateTime.iso8601('2023-06-21T03:13:22.954Z'),
   event_type: Models::Shared::EventType::SCREEN_VIEW,
-  id: 'f3c7188a-8f3e-4992-a936-45ef7bdffbbe',
+  id: '11b9f5cc-e648-4286-a193-b9676da5caa3',
   metadata: {
     'key' => Models::Shared::PropertyAnalyticsEventMetadata.new,
   },
   name: 'page_view',
   page_url: 'https://colossal-intellect.info/',
-  updated_at: DateTime.iso8601('2023-09-27T14:05:19.444Z')
+  updated_at: DateTime.iso8601('2023-09-27T15:58:05.473Z')
 ), connection_id: '<id>')
 
 unless res.analytics_event.nil?
@@ -103,9 +103,9 @@ res = s.event.create_calendar_event(calendar_event: Models::Shared::CalendarEven
   attachments: [],
   conference: [],
   created_at: '2019-08-04T14:33:51.814Z',
-  end_at: '2020-05-28T10:03:53.580Z',
+  end_at: '2020-05-28T12:44:07.709Z',
   has_conference: false,
-  id: '02897e45-aac6-49a2-8f72-94b415925d3b',
+  id: 'd2d9501c-f116-4dd7-8b50-a4177afb9e90',
   is_all_day: false,
   is_free: false,
   is_private: false,
@@ -115,15 +115,15 @@ res = s.event.create_calendar_event(calendar_event: Models::Shared::CalendarEven
   recurrence: [
     Models::Shared::CalendarEventRecurrence.new(
       count: 4.0,
-      end_at: DateTime.iso8601('2025-04-22T14:05:58.111Z'),
+      end_at: DateTime.iso8601('2025-04-23T08:49:23.321Z'),
       excluded_dates: [
-        '2024-02-25T20:55:19.368Z',
+        '2024-02-26T11:51:50.544Z',
       ],
       frequency: Models::Shared::CalendarEventRecurrenceFrequency::YEARLY,
       included_dates: [
-        '2023-07-27T04:33:55.864Z',
-        '2025-02-20T23:56:15.688Z',
-        '2024-04-25T21:48:56.423Z',
+        '2023-07-27T17:35:28.870Z',
+        '2025-02-21T18:07:04.899Z',
+        '2024-04-26T13:17:45.751Z',
       ],
       interval: 7.0,
       on_days: [
@@ -460,11 +460,11 @@ res = s.event.create_calendar_event(calendar_event: Models::Shared::CalendarEven
       week_start: Models::Shared::WeekStart::TU
     ),
   ],
-  start_at: '2020-05-28T00:42:29.581Z',
+  start_at: '2020-05-28T03:22:31.124Z',
   status: Models::Shared::CalendarEventStatus::CONFIRMED,
   subject: 'Bestia vigor credo coadunatio appello error centum aegre.',
   timezone: 'Europe/Moscow',
-  updated_at: '2020-07-04T20:53:49.751Z',
+  updated_at: '2020-07-04T23:54:12.902Z',
   web_url: 'https://good-natured-numeracy.net'
 ), connection_id: '<id>')
 
@@ -556,13 +556,13 @@ res = s.event.create_crm_event(crm_event: Models::Shared::CrmEvent.new(
   call: Models::Shared::PropertyCrmEventCall.new(
     description: 'Accusantium attero deludo.',
     duration: 64.0,
-    start_at: DateTime.iso8601('2025-01-06T01:48:55.283Z')
+    start_at: DateTime.iso8601('2025-01-06T18:40:03.127Z')
   ),
   created_at: DateTime.iso8601('2020-07-14T04:53:23.784Z'),
-  id: '99902e7e-aa77-4a4d-956b-6482e777b6d5',
+  id: 'cb43f403-7029-4833-85c8-552f64ac05dc',
   metadata: [],
   type: Models::Shared::CrmEventType::CALL,
-  updated_at: DateTime.iso8601('2026-11-17T09:42:35.651Z')
+  updated_at: DateTime.iso8601('2026-11-18T09:33:58.718Z')
 ), connection_id: '<id>')
 
 unless res.crm_event.nil?
@@ -1047,9 +1047,9 @@ req = Models::Operations::PatchCalendarEventRequest.new(
     attachments: [],
     conference: [],
     created_at: '2019-08-04T14:33:51.814Z',
-    end_at: '2020-05-28T10:03:53.584Z',
+    end_at: '2020-05-28T12:44:07.712Z',
     has_conference: false,
-    id: '69cf1eb1-2202-4b51-9bdb-8fc7a88c8e62',
+    id: '31e46c04-c525-4744-ae1b-60d080f0350e',
     is_all_day: false,
     is_free: false,
     is_private: false,
@@ -1059,15 +1059,15 @@ req = Models::Operations::PatchCalendarEventRequest.new(
     recurrence: [
       Models::Shared::CalendarEventRecurrence.new(
         count: 4.0,
-        end_at: DateTime.iso8601('2025-04-22T14:05:58.143Z'),
+        end_at: DateTime.iso8601('2025-04-23T08:49:23.342Z'),
         excluded_dates: [
-          '2024-02-25T20:55:19.393Z',
+          '2024-02-26T11:51:50.561Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::YEARLY,
         included_dates: [
-          '2023-07-27T04:33:55.886Z',
-          '2025-02-20T23:56:15.720Z',
-          '2024-04-25T21:48:56.450Z',
+          '2023-07-27T17:35:28.884Z',
+          '2025-02-21T18:07:04.920Z',
+          '2024-04-26T13:17:45.769Z',
         ],
         interval: 7.0,
         on_days: [
@@ -1404,11 +1404,11 @@ req = Models::Operations::PatchCalendarEventRequest.new(
         week_start: Models::Shared::WeekStart::TU
       ),
     ],
-    start_at: '2020-05-28T00:42:29.585Z',
+    start_at: '2020-05-28T03:22:31.127Z',
     status: Models::Shared::CalendarEventStatus::CONFIRMED,
     subject: 'Bestia vigor credo coadunatio appello error centum aegre.',
     timezone: 'Europe/Moscow',
-    updated_at: '2020-07-04T20:53:49.756Z',
+    updated_at: '2020-07-04T23:54:12.906Z',
     web_url: 'https://good-natured-numeracy.net'
   ),
   connection_id: '<id>',
@@ -1506,13 +1506,13 @@ req = Models::Operations::PatchCrmEventRequest.new(
     call: Models::Shared::PropertyCrmEventCall.new(
       description: 'Accusantium attero deludo.',
       duration: 64.0,
-      start_at: DateTime.iso8601('2025-01-06T01:48:55.306Z')
+      start_at: DateTime.iso8601('2025-01-06T18:40:03.165Z')
     ),
     created_at: DateTime.iso8601('2020-07-14T04:53:23.784Z'),
-    id: '24e6b081-1d34-42b2-92b7-d5d35f917fb5',
+    id: 'a6e7a34a-e9bb-45db-8b93-bd8ef7fc4e1a',
     metadata: [],
     type: Models::Shared::CrmEventType::CALL,
-    updated_at: DateTime.iso8601('2026-11-17T09:42:35.684Z')
+    updated_at: DateTime.iso8601('2026-11-18T09:33:58.772Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1565,7 +1565,7 @@ req = Models::Operations::PatchMessagingEventRequest.new(
       name: ''
     ),
     created_at: DateTime.iso8601('2019-05-30T19:44:46.461Z'),
-    id: 'c32d24cf-0970-4545-995a-23c39c2aa475',
+    id: '791109e8-f2e4-4e22-9108-fecfdc0d3e6d',
     is_replacing_original: false,
     metadata: [],
     type: Models::Shared::MessagingEventType::BUTTON_CLICK
@@ -1742,9 +1742,9 @@ req = Models::Operations::UpdateCalendarEventRequest.new(
     attachments: [],
     conference: [],
     created_at: '2019-08-04T14:33:51.814Z',
-    end_at: '2020-05-28T10:03:53.584Z',
+    end_at: '2020-05-28T12:44:07.712Z',
     has_conference: false,
-    id: '69cf1eb1-2202-4b51-9bdb-8fc7a88c8e62',
+    id: '31e46c04-c525-4744-ae1b-60d080f0350e',
     is_all_day: false,
     is_free: false,
     is_private: false,
@@ -1754,15 +1754,15 @@ req = Models::Operations::UpdateCalendarEventRequest.new(
     recurrence: [
       Models::Shared::CalendarEventRecurrence.new(
         count: 4.0,
-        end_at: DateTime.iso8601('2025-04-22T14:05:58.143Z'),
+        end_at: DateTime.iso8601('2025-04-23T08:49:23.342Z'),
         excluded_dates: [
-          '2024-02-25T20:55:19.393Z',
+          '2024-02-26T11:51:50.561Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::YEARLY,
         included_dates: [
-          '2023-07-27T04:33:55.886Z',
-          '2025-02-20T23:56:15.720Z',
-          '2024-04-25T21:48:56.450Z',
+          '2023-07-27T17:35:28.884Z',
+          '2025-02-21T18:07:04.920Z',
+          '2024-04-26T13:17:45.769Z',
         ],
         interval: 7.0,
         on_days: [
@@ -2099,11 +2099,11 @@ req = Models::Operations::UpdateCalendarEventRequest.new(
         week_start: Models::Shared::WeekStart::TU
       ),
     ],
-    start_at: '2020-05-28T00:42:29.585Z',
+    start_at: '2020-05-28T03:22:31.127Z',
     status: Models::Shared::CalendarEventStatus::CONFIRMED,
     subject: 'Bestia vigor credo coadunatio appello error centum aegre.',
     timezone: 'Europe/Moscow',
-    updated_at: '2020-07-04T20:53:49.756Z',
+    updated_at: '2020-07-04T23:54:12.906Z',
     web_url: 'https://good-natured-numeracy.net'
   ),
   connection_id: '<id>',
@@ -2201,13 +2201,13 @@ req = Models::Operations::UpdateCrmEventRequest.new(
     call: Models::Shared::PropertyCrmEventCall.new(
       description: 'Accusantium attero deludo.',
       duration: 64.0,
-      start_at: DateTime.iso8601('2025-01-06T01:48:55.306Z')
+      start_at: DateTime.iso8601('2025-01-06T18:40:03.165Z')
     ),
     created_at: DateTime.iso8601('2020-07-14T04:53:23.784Z'),
-    id: '24e6b081-1d34-42b2-92b7-d5d35f917fb5',
+    id: 'a6e7a34a-e9bb-45db-8b93-bd8ef7fc4e1a',
     metadata: [],
     type: Models::Shared::CrmEventType::CALL,
-    updated_at: DateTime.iso8601('2026-11-17T09:42:35.684Z')
+    updated_at: DateTime.iso8601('2026-11-18T09:33:58.772Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2260,7 +2260,7 @@ req = Models::Operations::UpdateMessagingEventRequest.new(
       name: ''
     ),
     created_at: DateTime.iso8601('2019-05-30T19:44:46.461Z'),
-    id: 'c32d24cf-0970-4545-995a-23c39c2aa475',
+    id: '791109e8-f2e4-4e22-9108-fecfdc0d3e6d',
     is_replacing_original: false,
     metadata: [],
     type: Models::Shared::MessagingEventType::BUTTON_CLICK

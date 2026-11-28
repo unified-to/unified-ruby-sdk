@@ -38,11 +38,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.category.create_accounting_category(accounting_category: Models::Shared::AccountingCategory.new(
   created_at: DateTime.iso8601('2023-05-30T12:29:04.257Z'),
   description: 'Labore basium corrumpo crinis ars subito pecto.',
-  id: '335c43a6-562b-4abd-a2ba-e69978c1c636',
+  id: 'cc992af9-2681-472d-95ba-3bf93601a730',
   is_active: false,
   metadata: [],
   name: 'Automotive',
-  updated_at: DateTime.iso8601('2025-10-06T10:42:03.339Z')
+  updated_at: DateTime.iso8601('2025-10-07T02:50:20.028Z')
 ), connection_id: '<id>')
 
 unless res.accounting_category.nil?
@@ -89,11 +89,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.category.create_ticketing_category(ticketing_category: Models::Shared::TicketingCategory.new(
   created_at: DateTime.iso8601('2019-10-19T22:02:51.067Z'),
   description: 'Carpo depulso torqueo coniecto curtus. Nam optio tendo utroque. Tumultus delectus arbitro amplus. Coerceo clam comprehendo vulnero triduana deprimo cruciamentum talio virtus. Substantia cogito deleo derelinquo traho.',
-  id: '22e11cd3-b896-4f4f-a9fb-87e4804735c0',
+  id: 'f91b7687-3826-45c7-a700-28c0a66d00f2',
   is_active: true,
   metadata: [],
   name: 'tempus',
-  updated_at: DateTime.iso8601('2026-02-15T23:46:46.083Z')
+  updated_at: DateTime.iso8601('2026-02-16T21:06:46.770Z')
 ), connection_id: '<id>')
 
 unless res.ticketing_category.nil?
@@ -403,11 +403,11 @@ req = Models::Operations::PatchAccountingCategoryRequest.new(
   accounting_category: Models::Shared::AccountingCategory.new(
     created_at: DateTime.iso8601('2023-05-30T12:29:04.257Z'),
     description: 'Labore basium corrumpo crinis ars subito pecto.',
-    id: '08223fd0-d381-4a52-a6a3-2b61abc98500',
+    id: 'bfed6482-a9fc-4f7b-bdc0-6f4a7a06975c',
     is_active: false,
     metadata: [],
     name: 'Automotive',
-    updated_at: DateTime.iso8601('2025-10-06T10:42:03.347Z')
+    updated_at: DateTime.iso8601('2025-10-07T02:50:20.033Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -457,11 +457,11 @@ req = Models::Operations::PatchTicketingCategoryRequest.new(
   ticketing_category: Models::Shared::TicketingCategory.new(
     created_at: DateTime.iso8601('2019-10-19T22:02:51.067Z'),
     description: 'Carpo depulso torqueo coniecto curtus. Nam optio tendo utroque. Tumultus delectus arbitro amplus. Coerceo clam comprehendo vulnero triduana deprimo cruciamentum talio virtus. Substantia cogito deleo derelinquo traho.',
-    id: 'debd4fb5-a523-4009-afc9-5da77d1b113e',
+    id: '67b606e3-bb13-4c02-b7a8-02b91ccb05c2',
     is_active: true,
     metadata: [],
     name: 'tempus',
-    updated_at: DateTime.iso8601('2026-02-15T23:46:46.088Z')
+    updated_at: DateTime.iso8601('2026-02-16T21:06:46.775Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -593,11 +593,11 @@ req = Models::Operations::UpdateAccountingCategoryRequest.new(
   accounting_category: Models::Shared::AccountingCategory.new(
     created_at: DateTime.iso8601('2023-05-30T12:29:04.257Z'),
     description: 'Labore basium corrumpo crinis ars subito pecto.',
-    id: '08223fd0-d381-4a52-a6a3-2b61abc98500',
+    id: 'bfed6482-a9fc-4f7b-bdc0-6f4a7a06975c',
     is_active: false,
     metadata: [],
     name: 'Automotive',
-    updated_at: DateTime.iso8601('2025-10-06T10:42:03.347Z')
+    updated_at: DateTime.iso8601('2025-10-07T02:50:20.033Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -647,11 +647,11 @@ req = Models::Operations::UpdateTicketingCategoryRequest.new(
   ticketing_category: Models::Shared::TicketingCategory.new(
     created_at: DateTime.iso8601('2019-10-19T22:02:51.067Z'),
     description: 'Carpo depulso torqueo coniecto curtus. Nam optio tendo utroque. Tumultus delectus arbitro amplus. Coerceo clam comprehendo vulnero triduana deprimo cruciamentum talio virtus. Substantia cogito deleo derelinquo traho.',
-    id: 'debd4fb5-a523-4009-afc9-5da77d1b113e',
+    id: '67b606e3-bb13-4c02-b7a8-02b91ccb05c2',
     is_active: true,
     metadata: [],
     name: 'tempus',
-    updated_at: DateTime.iso8601('2026-02-15T23:46:46.088Z')
+    updated_at: DateTime.iso8601('2026-02-16T21:06:46.775Z')
   ),
   connection_id: '<id>',
   id: '<id>'

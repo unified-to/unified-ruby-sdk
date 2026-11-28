@@ -28,7 +28,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
   )
 )
 res = s.timeoff.create_hris_timeoff(hris_timeoff: Models::Shared::HrisTimeoff.new(
-  approved_at: DateTime.iso8601('2022-02-26T04:33:22.782Z'),
+  approved_at: DateTime.iso8601('2022-02-26T06:22:26.313Z'),
   attachments: [
     Models::Shared::HrisAttachment.new(
       content_type: 'application/pdf',
@@ -42,16 +42,16 @@ res = s.timeoff.create_hris_timeoff(hris_timeoff: Models::Shared::HrisTimeoff.ne
   created_at: DateTime.iso8601('2021-10-06T18:00:20.615Z'),
   duration: 4.0,
   duration_type: Models::Shared::DurationType::DAY,
-  end_at: DateTime.iso8601('2025-01-21T10:29:57.479Z'),
-  id: '3298e255-452a-48fc-9466-02336f582219',
+  end_at: DateTime.iso8601('2025-01-22T01:50:47.707Z'),
+  id: 'e607205c-03bf-4153-81b3-d327123928e6',
   is_paid: true,
   metadata: [],
   original_type: 'blandior ventus',
   reason: 'tam',
-  start_at: DateTime.iso8601('2023-09-18T20:25:16.305Z'),
+  start_at: DateTime.iso8601('2023-09-19T05:30:29.484Z'),
   status: Models::Shared::HrisTimeoffStatus::DENIED,
   type: Models::Shared::HrisTimeoffType::IN_LIEU,
-  updated_at: DateTime.iso8601('2022-07-18T10:25:56.727Z'),
+  updated_at: DateTime.iso8601('2022-07-18T14:03:54.840Z'),
   user_id: '<id>'
 ), connection_id: '<id>')
 
@@ -186,7 +186,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchHrisTimeoffRequest.new(
   hris_timeoff: Models::Shared::HrisTimeoff.new(
-    approved_at: DateTime.iso8601('2022-02-26T04:33:22.783Z'),
+    approved_at: DateTime.iso8601('2022-02-26T06:22:26.314Z'),
     attachments: [
       Models::Shared::HrisAttachment.new(
         content_type: 'application/pdf',
@@ -200,16 +200,16 @@ req = Models::Operations::PatchHrisTimeoffRequest.new(
     created_at: DateTime.iso8601('2021-10-06T18:00:20.615Z'),
     duration: 4.0,
     duration_type: Models::Shared::DurationType::DAY,
-    end_at: DateTime.iso8601('2025-01-21T10:29:57.486Z'),
-    id: 'cc8d98c1-61d9-455f-9b11-b1b14e7e60c6',
+    end_at: DateTime.iso8601('2025-01-22T01:50:47.716Z'),
+    id: 'f7f1e847-a9ed-461b-a6c2-960a561244bd',
     is_paid: true,
     metadata: [],
     original_type: 'blandior ventus',
     reason: 'tam',
-    start_at: DateTime.iso8601('2023-09-18T20:25:16.309Z'),
+    start_at: DateTime.iso8601('2023-09-19T05:30:29.489Z'),
     status: Models::Shared::HrisTimeoffStatus::DENIED,
     type: Models::Shared::HrisTimeoffType::IN_LIEU,
-    updated_at: DateTime.iso8601('2022-07-18T10:25:56.728Z'),
+    updated_at: DateTime.iso8601('2022-07-18T14:03:54.842Z'),
     user_id: '<id>'
   ),
   connection_id: '<id>',
@@ -299,7 +299,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateHrisTimeoffRequest.new(
   hris_timeoff: Models::Shared::HrisTimeoff.new(
-    approved_at: DateTime.iso8601('2022-02-26T04:33:22.783Z'),
+    approved_at: DateTime.iso8601('2022-02-26T06:22:26.314Z'),
     attachments: [
       Models::Shared::HrisAttachment.new(
         content_type: 'application/pdf',
@@ -313,16 +313,16 @@ req = Models::Operations::UpdateHrisTimeoffRequest.new(
     created_at: DateTime.iso8601('2021-10-06T18:00:20.615Z'),
     duration: 4.0,
     duration_type: Models::Shared::DurationType::DAY,
-    end_at: DateTime.iso8601('2025-01-21T10:29:57.486Z'),
-    id: 'cc8d98c1-61d9-455f-9b11-b1b14e7e60c6',
+    end_at: DateTime.iso8601('2025-01-22T01:50:47.716Z'),
+    id: 'f7f1e847-a9ed-461b-a6c2-960a561244bd',
     is_paid: true,
     metadata: [],
     original_type: 'blandior ventus',
     reason: 'tam',
-    start_at: DateTime.iso8601('2023-09-18T20:25:16.309Z'),
+    start_at: DateTime.iso8601('2023-09-19T05:30:29.489Z'),
     status: Models::Shared::HrisTimeoffStatus::DENIED,
     type: Models::Shared::HrisTimeoffType::IN_LIEU,
-    updated_at: DateTime.iso8601('2022-07-18T10:25:56.728Z'),
+    updated_at: DateTime.iso8601('2022-07-18T14:03:54.842Z'),
     user_id: '<id>'
   ),
   connection_id: '<id>',

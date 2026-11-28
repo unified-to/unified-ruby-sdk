@@ -46,7 +46,7 @@ res = s.vehiclesale.create_dms_vehiclesale(dms_vehiclesale: Models::Shared::DmsV
   ],
   finance: Models::Shared::PropertyDmsVehiclesaleFinance.new(
     financed_amount: 0.0,
-    first_payment_at: DateTime.iso8601('2022-08-16T11:37:29.878Z'),
+    first_payment_at: DateTime.iso8601('2022-08-16T20:08:55.009Z'),
     interest_rate: 6.68,
     lender_name: 'Mueller, Yundt and Murray Financial',
     payment_amount: 339.0,
@@ -54,7 +54,7 @@ res = s.vehiclesale.create_dms_vehiclesale(dms_vehiclesale: Models::Shared::DmsV
     term_months: 72.0
   ),
   finance_type: Models::Shared::FinanceType::FINANCE,
-  id: 'b91e3f9c-0180-42c5-9d38-83e2362d9c50',
+  id: '463f3491-b40d-4e85-8594-285725553d79',
   metadata: [],
   number: 'D84591',
   products: [
@@ -79,7 +79,7 @@ res = s.vehiclesale.create_dms_vehiclesale(dms_vehiclesale: Models::Shared::DmsV
     ),
   ],
   rebate_amount: 500.0,
-  sold_at: DateTime.iso8601('2022-08-14T20:21:55.591Z'),
+  sold_at: DateTime.iso8601('2022-08-15T04:53:20.722Z'),
   source: 'Website',
   status: Models::Shared::DmsVehiclesaleStatus::SOLD,
   tax_amount: 0.0,
@@ -93,7 +93,7 @@ res = s.vehiclesale.create_dms_vehiclesale(dms_vehiclesale: Models::Shared::DmsV
   total_amount: 7891.0,
   trade_ins: [],
   type: Models::Shared::DmsVehiclesaleType::RETAIL,
-  updated_at: DateTime.iso8601('2025-04-16T21:53:33.456Z'),
+  updated_at: DateTime.iso8601('2025-04-17T16:02:23.436Z'),
   vehicles: []
 ), connection_id: '<id>')
 
@@ -247,7 +247,7 @@ req = Models::Operations::PatchDmsVehiclesaleRequest.new(
     ],
     finance: Models::Shared::PropertyDmsVehiclesaleFinance.new(
       financed_amount: 0.0,
-      first_payment_at: DateTime.iso8601('2022-08-16T11:37:29.897Z'),
+      first_payment_at: DateTime.iso8601('2022-08-16T20:08:55.028Z'),
       interest_rate: 6.68,
       lender_name: 'Mueller, Yundt and Murray Financial',
       payment_amount: 339.0,
@@ -255,7 +255,7 @@ req = Models::Operations::PatchDmsVehiclesaleRequest.new(
       term_months: 72.0
     ),
     finance_type: Models::Shared::FinanceType::FINANCE,
-    id: '3f89399e-041f-4ed9-a414-18674421f1b5',
+    id: 'd33585c7-06db-40fc-8912-ac9c20fea71a',
     metadata: [],
     number: 'D84591',
     products: [
@@ -280,7 +280,7 @@ req = Models::Operations::PatchDmsVehiclesaleRequest.new(
       ),
     ],
     rebate_amount: 500.0,
-    sold_at: DateTime.iso8601('2022-08-14T20:21:55.610Z'),
+    sold_at: DateTime.iso8601('2022-08-15T04:53:20.741Z'),
     source: 'Website',
     status: Models::Shared::DmsVehiclesaleStatus::SOLD,
     tax_amount: 0.0,
@@ -294,7 +294,7 @@ req = Models::Operations::PatchDmsVehiclesaleRequest.new(
     total_amount: 7891.0,
     trade_ins: [],
     type: Models::Shared::DmsVehiclesaleType::RETAIL,
-    updated_at: DateTime.iso8601('2025-04-16T21:53:33.496Z'),
+    updated_at: DateTime.iso8601('2025-04-17T16:02:23.477Z'),
     vehicles: []
   ),
   connection_id: '<id>',
@@ -362,7 +362,7 @@ req = Models::Operations::UpdateDmsVehiclesaleRequest.new(
     ],
     finance: Models::Shared::PropertyDmsVehiclesaleFinance.new(
       financed_amount: 0.0,
-      first_payment_at: DateTime.iso8601('2022-08-16T11:37:29.897Z'),
+      first_payment_at: DateTime.iso8601('2022-08-16T20:08:55.028Z'),
       interest_rate: 6.68,
       lender_name: 'Mueller, Yundt and Murray Financial',
       payment_amount: 339.0,
@@ -370,7 +370,7 @@ req = Models::Operations::UpdateDmsVehiclesaleRequest.new(
       term_months: 72.0
     ),
     finance_type: Models::Shared::FinanceType::FINANCE,
-    id: '3f89399e-041f-4ed9-a414-18674421f1b5',
+    id: 'd33585c7-06db-40fc-8912-ac9c20fea71a',
     metadata: [],
     number: 'D84591',
     products: [
@@ -395,7 +395,7 @@ req = Models::Operations::UpdateDmsVehiclesaleRequest.new(
       ),
     ],
     rebate_amount: 500.0,
-    sold_at: DateTime.iso8601('2022-08-14T20:21:55.610Z'),
+    sold_at: DateTime.iso8601('2022-08-15T04:53:20.741Z'),
     source: 'Website',
     status: Models::Shared::DmsVehiclesaleStatus::SOLD,
     tax_amount: 0.0,
@@ -409,7 +409,7 @@ req = Models::Operations::UpdateDmsVehiclesaleRequest.new(
     total_amount: 7891.0,
     trade_ins: [],
     type: Models::Shared::DmsVehiclesaleType::RETAIL,
-    updated_at: DateTime.iso8601('2025-04-16T21:53:33.496Z'),
+    updated_at: DateTime.iso8601('2025-04-17T16:02:23.477Z'),
     vehicles: []
   ),
   connection_id: '<id>',

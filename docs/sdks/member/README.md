@@ -39,7 +39,7 @@ res = s.member.create_martech_member(marketing_member: Models::Shared::Marketing
     ),
   ],
   first_name: 'Jeremy',
-  id: '64224698-540d-4160-8d00-a351fbf02386',
+  id: 'a96d1d87-6e82-473b-8d1c-5b31be64c419',
   last_name: 'Franecki',
   metadata: [],
   name: 'Jeremy Franecki',
@@ -48,7 +48,7 @@ res = s.member.create_martech_member(marketing_member: Models::Shared::Marketing
     'deleniti',
     'subvenio',
   ],
-  updated_at: DateTime.iso8601('2025-08-04T07:36:00.537Z')
+  updated_at: DateTime.iso8601('2025-08-05T00:44:28.603Z')
 ), connection_id: '<id>')
 
 unless res.marketing_member.nil?
@@ -278,7 +278,7 @@ req = Models::Operations::PatchMartechMemberRequest.new(
       ),
     ],
     first_name: 'Jeremy',
-    id: '15807047-4d27-45c5-9ec2-ba8fe85f6518',
+    id: '39a2a353-b211-45ce-9fe7-69a9c84e1aad',
     last_name: 'Franecki',
     metadata: [],
     name: 'Jeremy Franecki',
@@ -287,7 +287,7 @@ req = Models::Operations::PatchMartechMemberRequest.new(
       'deleniti',
       'subvenio',
     ],
-    updated_at: DateTime.iso8601('2025-08-04T07:36:00.543Z')
+    updated_at: DateTime.iso8601('2025-08-05T00:44:28.612Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -385,7 +385,7 @@ req = Models::Operations::UpdateMartechMemberRequest.new(
       ),
     ],
     first_name: 'Jeremy',
-    id: '15807047-4d27-45c5-9ec2-ba8fe85f6518',
+    id: '39a2a353-b211-45ce-9fe7-69a9c84e1aad',
     last_name: 'Franecki',
     metadata: [],
     name: 'Jeremy Franecki',
@@ -394,7 +394,7 @@ req = Models::Operations::UpdateMartechMemberRequest.new(
       'deleniti',
       'subvenio',
     ],
-    updated_at: DateTime.iso8601('2025-08-04T07:36:00.543Z')
+    updated_at: DateTime.iso8601('2025-08-05T00:44:28.612Z')
   ),
   connection_id: '<id>',
   id: '<id>'

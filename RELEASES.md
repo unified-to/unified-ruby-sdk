@@ -3655,3 +3655,11 @@ Based on:
 - Speakeasy CLI 1.812.1 (2.968.17) https://github.com/speakeasy-api/speakeasy
 ### Generated
 - [ruby v0.69.12] .
+
+## 2026-11-28 00:17:31
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.813.0 (2.969.4) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [ruby v0.69.13] .

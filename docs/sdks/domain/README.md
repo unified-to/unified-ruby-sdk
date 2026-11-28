@@ -29,12 +29,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.domain.create_compute_domain(compute_domain: Models::Shared::ComputeDomain.new(
   created_at: DateTime.iso8601('2019-11-22T16:38:26.009Z'),
-  id: '11f3e460-2b9d-4d76-970a-97c2c933e2e3',
+  id: '74f7b706-f725-4349-8b1e-4c6c5e4116af',
   is_primary: false,
   metadata: [],
   name: 'steel-hovercraft.humiliating-lender.com',
   status: Models::Shared::ComputeDomainStatus::PENDING,
-  updated_at: DateTime.iso8601('2023-11-24T18:42:00.571Z')
+  updated_at: DateTime.iso8601('2023-11-25T08:23:02.709Z')
 ), connection_id: '<id>')
 
 unless res.compute_domain.nil?
@@ -169,12 +169,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchComputeDomainRequest.new(
   compute_domain: Models::Shared::ComputeDomain.new(
     created_at: DateTime.iso8601('2019-11-22T16:38:26.009Z'),
-    id: '83c17443-155f-413c-837c-8193568bca63',
+    id: '6a21929e-c131-46e8-940d-d0913524bcd8',
     is_primary: false,
     metadata: [],
     name: 'steel-hovercraft.humiliating-lender.com',
     status: Models::Shared::ComputeDomainStatus::PENDING,
-    updated_at: DateTime.iso8601('2023-11-24T18:42:00.579Z')
+    updated_at: DateTime.iso8601('2023-11-25T08:23:02.714Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -264,12 +264,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateComputeDomainRequest.new(
   compute_domain: Models::Shared::ComputeDomain.new(
     created_at: DateTime.iso8601('2019-11-22T16:38:26.009Z'),
-    id: '83c17443-155f-413c-837c-8193568bca63',
+    id: '6a21929e-c131-46e8-940d-d0913524bcd8',
     is_primary: false,
     metadata: [],
     name: 'steel-hovercraft.humiliating-lender.com',
     status: Models::Shared::ComputeDomainStatus::PENDING,
-    updated_at: DateTime.iso8601('2023-11-24T18:42:00.579Z')
+    updated_at: DateTime.iso8601('2023-11-25T08:23:02.714Z')
   ),
   connection_id: '<id>',
   id: '<id>'

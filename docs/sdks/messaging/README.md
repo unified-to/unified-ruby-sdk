@@ -39,13 +39,13 @@ res = s.messaging.create_messaging_channel(messaging_channel: Models::Shared::Me
   created_at: DateTime.iso8601('2023-10-05T02:09:22.795Z'),
   description: 'Triduana tenuis.',
   has_subchannels: true,
-  id: '9357fd18-c323-460b-81b9-b62e30da19ae',
+  id: '8891f4c6-319e-4235-9448-1ae9af662580',
   is_active: false,
   is_private: true,
   members: [],
   metadata: [],
   name: 'tutis',
-  updated_at: DateTime.iso8601('2026-06-22T12:33:38.748Z'),
+  updated_at: DateTime.iso8601('2026-06-23T09:13:56.928Z'),
   web_url: 'https://blue-intent.biz'
 ), connection_id: '<id>')
 
@@ -93,17 +93,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.messaging.create_messaging_message(messaging_message: Models::Shared::MessagingMessage.new(
   attachments: [
     Models::Shared::MessagingAttachment.new(
-      content_identifier: '5a4d4100-57fd-4f23-9f0e-c8c76f18ed23',
+      content_identifier: '3df2f576-2eb9-4bfb-b084-4321943fed96',
       content_type: 'coaegresco',
       download_url: 'https://rotating-advertisement.org',
       filename: 'super',
-      message_id: '2d803c97-c81e-452a-95a1-2b74512fa09f',
+      message_id: '0ebb8cf0-e442-4d9f-b280-6fae10acc89e',
       size: 327.0
     ),
   ],
   buttons: [
     Models::Shared::MessagingButton.new(
-      id: '8583f1d2-a8d4-4b44-a970-af3c47a44aa1',
+      id: '418a627c-9da4-478e-9ec0-eb32f0f71c3c',
       text: 'comparo'
     ),
   ],
@@ -111,7 +111,7 @@ res = s.messaging.create_messaging_message(messaging_message: Models::Shared::Me
   destination_members: [],
   has_children: true,
   hidden_members: [],
-  id: '2d803c97-c81e-452a-95a1-2b74512fa09f',
+  id: '0ebb8cf0-e442-4d9f-b280-6fae10acc89e',
   is_unread: false,
   mentioned_members: [],
   message: 'Sum utique aliquid.',
@@ -120,7 +120,7 @@ res = s.messaging.create_messaging_message(messaging_message: Models::Shared::Me
   metadata: [],
   reactions: [],
   subject: 'Summisse in.',
-  updated_at: DateTime.iso8601('2023-07-29T20:52:22.601Z'),
+  updated_at: DateTime.iso8601('2023-07-30T04:52:44.719Z'),
   web_url: 'https://grumpy-kit.net'
 ), connection_id: '<id>')
 
@@ -345,13 +345,13 @@ req = Models::Operations::PatchMessagingChannelRequest.new(
     created_at: DateTime.iso8601('2023-10-05T02:09:22.795Z'),
     description: 'Triduana tenuis.',
     has_subchannels: true,
-    id: 'a650ae8f-558d-49b8-ad5a-ab7c98a9fe92',
+    id: '629563af-9bc0-451d-ba4b-04acc9d4d447',
     is_active: false,
     is_private: true,
     members: [],
     metadata: [],
     name: 'tutis',
-    updated_at: DateTime.iso8601('2026-06-22T12:33:38.761Z'),
+    updated_at: DateTime.iso8601('2026-06-23T09:13:56.937Z'),
     web_url: 'https://blue-intent.biz'
   ),
   connection_id: '<id>',
@@ -405,7 +405,7 @@ req = Models::Operations::PatchMessagingEventRequest.new(
       name: ''
     ),
     created_at: DateTime.iso8601('2019-05-30T19:44:46.461Z'),
-    id: 'c32d24cf-0970-4545-995a-23c39c2aa475',
+    id: '791109e8-f2e4-4e22-9108-fecfdc0d3e6d',
     is_replacing_original: false,
     metadata: [],
     type: Models::Shared::MessagingEventType::BUTTON_CLICK
@@ -458,17 +458,17 @@ req = Models::Operations::PatchMessagingMessageRequest.new(
   messaging_message: Models::Shared::MessagingMessage.new(
     attachments: [
       Models::Shared::MessagingAttachment.new(
-        content_identifier: 'f7708e43-d821-429e-8c6e-db622075af9b',
+        content_identifier: 'e5ad2b36-d812-4e8c-a23e-cefe5c81ce1c',
         content_type: 'coaegresco',
         download_url: 'https://rotating-advertisement.org',
         filename: 'super',
-        message_id: '7cabc2c3-01e9-4a59-93ee-cf5aee884c7b',
+        message_id: 'd1343a24-d02b-44d2-a3c2-95417246cade',
         size: 327.0
       ),
     ],
     buttons: [
       Models::Shared::MessagingButton.new(
-        id: '12f3036c-e827-4ae6-8f3b-3129c0c98b5d',
+        id: '9349b5a1-b905-4942-a9a8-364c47b9e107',
         text: 'comparo'
       ),
     ],
@@ -476,7 +476,7 @@ req = Models::Operations::PatchMessagingMessageRequest.new(
     destination_members: [],
     has_children: true,
     hidden_members: [],
-    id: '7cabc2c3-01e9-4a59-93ee-cf5aee884c7b',
+    id: 'd1343a24-d02b-44d2-a3c2-95417246cade',
     is_unread: false,
     mentioned_members: [],
     message: 'Sum utique aliquid.',
@@ -485,7 +485,7 @@ req = Models::Operations::PatchMessagingMessageRequest.new(
     metadata: [],
     reactions: [],
     subject: 'Summisse in.',
-    updated_at: DateTime.iso8601('2023-07-29T20:52:22.613Z'),
+    updated_at: DateTime.iso8601('2023-07-30T04:52:44.726Z'),
     web_url: 'https://grumpy-kit.net'
   ),
   connection_id: '<id>',
@@ -619,13 +619,13 @@ req = Models::Operations::UpdateMessagingChannelRequest.new(
     created_at: DateTime.iso8601('2023-10-05T02:09:22.795Z'),
     description: 'Triduana tenuis.',
     has_subchannels: true,
-    id: 'a650ae8f-558d-49b8-ad5a-ab7c98a9fe92',
+    id: '629563af-9bc0-451d-ba4b-04acc9d4d447',
     is_active: false,
     is_private: true,
     members: [],
     metadata: [],
     name: 'tutis',
-    updated_at: DateTime.iso8601('2026-06-22T12:33:38.761Z'),
+    updated_at: DateTime.iso8601('2026-06-23T09:13:56.937Z'),
     web_url: 'https://blue-intent.biz'
   ),
   connection_id: '<id>',
@@ -679,7 +679,7 @@ req = Models::Operations::UpdateMessagingEventRequest.new(
       name: ''
     ),
     created_at: DateTime.iso8601('2019-05-30T19:44:46.461Z'),
-    id: 'c32d24cf-0970-4545-995a-23c39c2aa475',
+    id: '791109e8-f2e4-4e22-9108-fecfdc0d3e6d',
     is_replacing_original: false,
     metadata: [],
     type: Models::Shared::MessagingEventType::BUTTON_CLICK
@@ -732,17 +732,17 @@ req = Models::Operations::UpdateMessagingMessageRequest.new(
   messaging_message: Models::Shared::MessagingMessage.new(
     attachments: [
       Models::Shared::MessagingAttachment.new(
-        content_identifier: 'f7708e43-d821-429e-8c6e-db622075af9b',
+        content_identifier: 'e5ad2b36-d812-4e8c-a23e-cefe5c81ce1c',
         content_type: 'coaegresco',
         download_url: 'https://rotating-advertisement.org',
         filename: 'super',
-        message_id: '7cabc2c3-01e9-4a59-93ee-cf5aee884c7b',
+        message_id: 'd1343a24-d02b-44d2-a3c2-95417246cade',
         size: 327.0
       ),
     ],
     buttons: [
       Models::Shared::MessagingButton.new(
-        id: '12f3036c-e827-4ae6-8f3b-3129c0c98b5d',
+        id: '9349b5a1-b905-4942-a9a8-364c47b9e107',
         text: 'comparo'
       ),
     ],
@@ -750,7 +750,7 @@ req = Models::Operations::UpdateMessagingMessageRequest.new(
     destination_members: [],
     has_children: true,
     hidden_members: [],
-    id: '7cabc2c3-01e9-4a59-93ee-cf5aee884c7b',
+    id: 'd1343a24-d02b-44d2-a3c2-95417246cade',
     is_unread: false,
     mentioned_members: [],
     message: 'Sum utique aliquid.',
@@ -759,7 +759,7 @@ req = Models::Operations::UpdateMessagingMessageRequest.new(
     metadata: [],
     reactions: [],
     subject: 'Summisse in.',
-    updated_at: DateTime.iso8601('2023-07-29T20:52:22.613Z'),
+    updated_at: DateTime.iso8601('2023-07-30T04:52:44.726Z'),
     web_url: 'https://grumpy-kit.net'
   ),
   connection_id: '<id>',

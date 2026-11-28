@@ -39,13 +39,13 @@ res = s.reservation.create_commerce_reservation(commerce_reservation: Models::Sh
   guest_email: 'alford.schiller@icloud.com',
   guest_name: 'Alford Schiller',
   guest_phone: '(849) 626-2062',
-  id: 'c167635b-591a-4d49-a55c-f4ca12f0f161',
+  id: '49e5b1e4-155c-4e50-befc-75924a8be711',
   metadata: [],
   notes: 'Despecto stultus calculus.',
   size: 10.0,
   start_at: DateTime.iso8601('2021-12-18T00:40:25.125Z'),
   status: Models::Shared::CommerceReservationStatus::PENDING,
-  updated_at: DateTime.iso8601('2023-01-11T22:33:10.109Z'),
+  updated_at: DateTime.iso8601('2023-01-12T03:45:39.260Z'),
   url: 'https://wee-tuba.biz/'
 ), connection_id: '<id>')
 
@@ -102,7 +102,7 @@ res = s.reservation.create_property_reservation(property_reservation: Models::Sh
   guest_email: 'mariam.metz@hotmail.com',
   guest_name: 'Mariam Metz',
   guests: 6.0,
-  id: '23fa94be-5656-49d8-9ac1-03f5531595c8',
+  id: '7fcd22f6-9bc7-4fba-8d7f-a3e03e695eca',
   line_items: [
     Models::Shared::PropertyLineitem.new(
       amount: 1980.0,
@@ -139,7 +139,7 @@ res = s.reservation.create_property_reservation(property_reservation: Models::Sh
   start_at: DateTime.iso8601('2022-09-25T17:17:08.838Z'),
   status: Models::Shared::PropertyReservationStatus::PENDING,
   total_amount: 2181.6,
-  updated_at: DateTime.iso8601('2022-11-19T08:13:22.194Z'),
+  updated_at: DateTime.iso8601('2022-11-19T10:41:54.642Z'),
   web_url: 'https://winged-lox.name/'
 ), connection_id: '<id>')
 
@@ -366,13 +366,13 @@ req = Models::Operations::PatchCommerceReservationRequest.new(
     guest_email: 'alford.schiller@icloud.com',
     guest_name: 'Alford Schiller',
     guest_phone: '(849) 626-2062',
-    id: '5bb1862d-0ad0-4705-a595-4e0a0febd6c7',
+    id: '2f28a0f7-f6db-4d4f-adb3-2714e134d781',
     metadata: [],
     notes: 'Despecto stultus calculus.',
     size: 10.0,
     start_at: DateTime.iso8601('2021-12-18T00:40:25.125Z'),
     status: Models::Shared::CommerceReservationStatus::PENDING,
-    updated_at: DateTime.iso8601('2023-01-11T22:33:10.112Z'),
+    updated_at: DateTime.iso8601('2023-01-12T03:45:39.264Z'),
     url: 'https://wee-tuba.biz/'
   ),
   connection_id: '<id>',
@@ -432,7 +432,7 @@ req = Models::Operations::PatchPropertyReservationRequest.new(
     guest_email: 'mariam.metz@hotmail.com',
     guest_name: 'Mariam Metz',
     guests: 6.0,
-    id: '64f38b52-849b-44db-b7a7-b69cf0a5cc23',
+    id: '959dbb6d-1e45-48f8-a435-0b6a76846de1',
     line_items: [
       Models::Shared::PropertyLineitem.new(
         amount: 1980.0,
@@ -469,7 +469,7 @@ req = Models::Operations::PatchPropertyReservationRequest.new(
     start_at: DateTime.iso8601('2022-09-25T17:17:08.838Z'),
     status: Models::Shared::PropertyReservationStatus::PENDING,
     total_amount: 2181.6,
-    updated_at: DateTime.iso8601('2022-11-19T08:13:22.196Z'),
+    updated_at: DateTime.iso8601('2022-11-19T10:41:54.644Z'),
     web_url: 'https://winged-lox.name/'
   ),
   connection_id: '<id>',
@@ -605,13 +605,13 @@ req = Models::Operations::UpdateCommerceReservationRequest.new(
     guest_email: 'alford.schiller@icloud.com',
     guest_name: 'Alford Schiller',
     guest_phone: '(849) 626-2062',
-    id: '5bb1862d-0ad0-4705-a595-4e0a0febd6c7',
+    id: '2f28a0f7-f6db-4d4f-adb3-2714e134d781',
     metadata: [],
     notes: 'Despecto stultus calculus.',
     size: 10.0,
     start_at: DateTime.iso8601('2021-12-18T00:40:25.125Z'),
     status: Models::Shared::CommerceReservationStatus::PENDING,
-    updated_at: DateTime.iso8601('2023-01-11T22:33:10.112Z'),
+    updated_at: DateTime.iso8601('2023-01-12T03:45:39.264Z'),
     url: 'https://wee-tuba.biz/'
   ),
   connection_id: '<id>',
@@ -671,7 +671,7 @@ req = Models::Operations::UpdatePropertyReservationRequest.new(
     guest_email: 'mariam.metz@hotmail.com',
     guest_name: 'Mariam Metz',
     guests: 6.0,
-    id: '64f38b52-849b-44db-b7a7-b69cf0a5cc23',
+    id: '959dbb6d-1e45-48f8-a435-0b6a76846de1',
     line_items: [
       Models::Shared::PropertyLineitem.new(
         amount: 1980.0,
@@ -708,7 +708,7 @@ req = Models::Operations::UpdatePropertyReservationRequest.new(
     start_at: DateTime.iso8601('2022-09-25T17:17:08.838Z'),
     status: Models::Shared::PropertyReservationStatus::PENDING,
     total_amount: 2181.6,
-    updated_at: DateTime.iso8601('2022-11-19T08:13:22.196Z'),
+    updated_at: DateTime.iso8601('2022-11-19T10:41:54.644Z'),
     web_url: 'https://winged-lox.name/'
   ),
   connection_id: '<id>',

@@ -29,7 +29,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.creative.create_ads_creative(ads_creative: Models::Shared::AdsCreative.new(
   created_at: DateTime.iso8601('2020-02-17T11:24:51.093Z'),
-  id: 'a41a3133-7506-45a9-8447-032d604b112e',
+  id: 'ba79256e-06ea-47d3-997a-68c24f212df0',
   labels: [
     'ventosus',
     'in',
@@ -38,7 +38,7 @@ res = s.creative.create_ads_creative(ads_creative: Models::Shared::AdsCreative.n
   metadata: [],
   name: 'Sauer, Stiedemann and Bauch',
   status: Models::Shared::AdsCreativeStatus::PAUSED,
-  updated_at: DateTime.iso8601('2021-07-05T07:11:00.278Z')
+  updated_at: DateTime.iso8601('2021-07-05T12:03:38.914Z')
 ), connection_id: '<id>')
 
 unless res.ads_creative.nil?
@@ -173,7 +173,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAdsCreativeRequest.new(
   ads_creative: Models::Shared::AdsCreative.new(
     created_at: DateTime.iso8601('2020-02-17T11:24:51.093Z'),
-    id: '21b5e30e-2480-41f1-bee6-e09a98bfb42e',
+    id: 'c4723691-2de4-439c-b68b-c03ea3b77190',
     labels: [
       'ventosus',
       'in',
@@ -182,7 +182,7 @@ req = Models::Operations::PatchAdsCreativeRequest.new(
     metadata: [],
     name: 'Sauer, Stiedemann and Bauch',
     status: Models::Shared::AdsCreativeStatus::PAUSED,
-    updated_at: DateTime.iso8601('2021-07-05T07:11:00.286Z')
+    updated_at: DateTime.iso8601('2021-07-05T12:03:38.922Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -272,7 +272,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAdsCreativeRequest.new(
   ads_creative: Models::Shared::AdsCreative.new(
     created_at: DateTime.iso8601('2020-02-17T11:24:51.093Z'),
-    id: '21b5e30e-2480-41f1-bee6-e09a98bfb42e',
+    id: 'c4723691-2de4-439c-b68b-c03ea3b77190',
     labels: [
       'ventosus',
       'in',
@@ -281,7 +281,7 @@ req = Models::Operations::UpdateAdsCreativeRequest.new(
     metadata: [],
     name: 'Sauer, Stiedemann and Bauch',
     status: Models::Shared::AdsCreativeStatus::PAUSED,
-    updated_at: DateTime.iso8601('2021-07-05T07:11:00.286Z')
+    updated_at: DateTime.iso8601('2021-07-05T12:03:38.922Z')
   ),
   connection_id: '<id>',
   id: '<id>'

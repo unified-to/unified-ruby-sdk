@@ -31,7 +31,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.metadata.create_metadata_metadata(metadata_metadata: Models::Shared::MetadataMetadata.new(
   created_at: DateTime.iso8601('2021-03-25T03:02:17.656Z'),
   format: Models::Shared::MetadataMetadataFormat::PRICE,
-  id: '326f4a92-d0ef-456e-b6be-60996bba71f6',
+  id: '82894f5c-1c8f-4fe7-bf2a-a483b0d53b40',
   is_required: false,
   name: 'tollo',
   object_type: 'healthcare_document',
@@ -41,7 +41,7 @@ res = s.metadata.create_metadata_metadata(metadata_metadata: Models::Shared::Met
   options: [],
   original_format: 'deputo',
   slug: 'acidus',
-  updated_at: DateTime.iso8601('2025-04-17T11:23:34.624Z')
+  updated_at: DateTime.iso8601('2025-04-18T04:32:48.884Z')
 ), connection_id: '<id>')
 
 unless res.metadata_metadata.nil?
@@ -217,7 +217,7 @@ req = Models::Operations::PatchMetadataMetadataRequest.new(
   metadata_metadata: Models::Shared::MetadataMetadata.new(
     created_at: DateTime.iso8601('2021-03-25T03:02:17.656Z'),
     format: Models::Shared::MetadataMetadataFormat::PRICE,
-    id: '6d770b9b-0f84-4254-8d1a-02c8eaf981d8',
+    id: '2ba92c56-50a5-4e84-a8d5-fd2c5abfd626',
     is_required: false,
     name: 'tollo',
     object_type: 'healthcare_document',
@@ -227,7 +227,7 @@ req = Models::Operations::PatchMetadataMetadataRequest.new(
     options: [],
     original_format: 'deputo',
     slug: 'acidus',
-    updated_at: DateTime.iso8601('2025-04-17T11:23:34.631Z')
+    updated_at: DateTime.iso8601('2025-04-18T04:32:48.891Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -318,7 +318,7 @@ req = Models::Operations::UpdateMetadataMetadataRequest.new(
   metadata_metadata: Models::Shared::MetadataMetadata.new(
     created_at: DateTime.iso8601('2021-03-25T03:02:17.656Z'),
     format: Models::Shared::MetadataMetadataFormat::PRICE,
-    id: '6d770b9b-0f84-4254-8d1a-02c8eaf981d8',
+    id: '2ba92c56-50a5-4e84-a8d5-fd2c5abfd626',
     is_required: false,
     name: 'tollo',
     object_type: 'healthcare_document',
@@ -328,7 +328,7 @@ req = Models::Operations::UpdateMetadataMetadataRequest.new(
     options: [],
     original_format: 'deputo',
     slug: 'acidus',
-    updated_at: DateTime.iso8601('2025-04-17T11:23:34.631Z')
+    updated_at: DateTime.iso8601('2025-04-18T04:32:48.891Z')
   ),
   connection_id: '<id>',
   id: '<id>'

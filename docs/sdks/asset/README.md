@@ -27,12 +27,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.asset.create_ads_asset(ads_asset: Models::Shared::AdsAsset.new(
   created_at: DateTime.iso8601('2020-03-27T20:14:38.603Z'),
   height: 400.0,
-  id: 'c6bde6bb-7486-4445-a826-3b45acd4336d',
+  id: 'a731acb2-15f2-4d50-ab30-0d8c2d3a59ec',
   metadata: [],
   mime_type: 'IMAGE_PNG',
   name: 'Gibson and Sons',
   type: Models::Shared::AdsAssetType::IMAGE,
-  updated_at: DateTime.iso8601('2022-04-05T10:06:51.979Z'),
+  updated_at: DateTime.iso8601('2022-04-05T17:22:48.096Z'),
   url: 'https://soulful-mom.net',
   width: 600.0
 ), connection_id: '<id>')

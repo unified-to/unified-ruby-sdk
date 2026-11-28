@@ -29,14 +29,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.volume.create_compute_volume(compute_volume: Models::Shared::ComputeVolume.new(
   created_at: DateTime.iso8601('2022-11-15T15:12:48.055Z'),
-  id: '5badb4c7-d06c-4421-b0e4-bce401effcd0',
+  id: 'c76aa0e9-0344-4a7b-8dd5-14799beb8f69',
   instance_ids: [],
   metadata: [],
   name: 'vol-accommodo',
   size_mb: 1_024_000.0,
   status: Models::Shared::ComputeVolumeStatus::OTHER,
   type: Models::Shared::ComputeVolumeType::HIGH_PERFORMANCE,
-  updated_at: DateTime.iso8601('2024-02-21T13:10:55.863Z'),
+  updated_at: DateTime.iso8601('2024-02-21T20:42:49.648Z'),
   used_mb: 524_986.0
 ), connection_id: '<id>')
 
@@ -172,14 +172,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchComputeVolumeRequest.new(
   compute_volume: Models::Shared::ComputeVolume.new(
     created_at: DateTime.iso8601('2022-11-15T15:12:48.055Z'),
-    id: '943b0bf0-c9bd-48ac-a05a-2b0a121f06b4',
+    id: '988e7421-20c9-46fd-b967-dc14f36bb8a4',
     instance_ids: [],
     metadata: [],
     name: 'vol-accommodo',
     size_mb: 1_024_000.0,
     status: Models::Shared::ComputeVolumeStatus::OTHER,
     type: Models::Shared::ComputeVolumeType::HIGH_PERFORMANCE,
-    updated_at: DateTime.iso8601('2024-02-21T13:10:55.866Z'),
+    updated_at: DateTime.iso8601('2024-02-21T20:42:49.651Z'),
     used_mb: 524_986.0
   ),
   connection_id: '<id>',
@@ -270,14 +270,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateComputeVolumeRequest.new(
   compute_volume: Models::Shared::ComputeVolume.new(
     created_at: DateTime.iso8601('2022-11-15T15:12:48.055Z'),
-    id: '943b0bf0-c9bd-48ac-a05a-2b0a121f06b4',
+    id: '988e7421-20c9-46fd-b967-dc14f36bb8a4',
     instance_ids: [],
     metadata: [],
     name: 'vol-accommodo',
     size_mb: 1_024_000.0,
     status: Models::Shared::ComputeVolumeStatus::OTHER,
     type: Models::Shared::ComputeVolumeType::HIGH_PERFORMANCE,
-    updated_at: DateTime.iso8601('2024-02-21T13:10:55.866Z'),
+    updated_at: DateTime.iso8601('2024-02-21T20:42:49.651Z'),
     used_mb: 524_986.0
   ),
   connection_id: '<id>',

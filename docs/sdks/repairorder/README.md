@@ -28,23 +28,23 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.repairorder.create_dms_repairorder(dms_repairorder: Models::Shared::DmsRepairorder.new(
   balance_amount: 3193.86,
-  completed_at: DateTime.iso8601('2026-11-13T20:46:36.899Z'),
+  completed_at: DateTime.iso8601('2026-11-14T20:31:17.647Z'),
   created_at: DateTime.iso8601('2022-10-25T15:50:48.007Z'),
   currency: 'USD',
   discount_amount: 0.0,
   estimate_amount: 3264.0,
-  id: '2dbd3442-652f-4c8e-bedb-7c046f53f8e6',
+  id: 'ca22ea94-d52c-42b9-908b-bd1d49bb3384',
   jobs: [
     Models::Shared::DmsRepairorderJob.new(
       actual_hours: 3.6,
       cause: 'Scheduled maintenance',
       complaint: 'Due for service',
       correction: 'Aufero cumque vicinus aptus assumenda quis aptus.',
-      id: '04e44476-af06-4e06-90bf-2004ed987bf9',
+      id: 'e6e34191-b603-4579-8d0e-b0c703c50913',
       labor_amount: 681.6,
       labors: [
         Models::Shared::DmsRepairorderLabor.new(
-          id: '4c5b7595-a23b-4135-8892-ec08cdd170e4',
+          id: '12f8fff0-e687-41bc-8973-9cc56a8227e2',
           pay_type: Models::Shared::DmsRepairorderLaborPayType::WARRANTY,
           rate_amount: 213.0,
           sold_hours: 3.2,
@@ -67,11 +67,11 @@ res = s.repairorder.create_dms_repairorder(dms_repairorder: Models::Shared::DmsR
       cause: 'Worn brake pads',
       complaint: 'Vibration at highway speed',
       correction: 'Somnus avaritia utroque vulnero ullam ancilla.',
-      id: '2ab88935-7740-4fe1-82e3-a03b03e948b9',
+      id: '659a2ea4-e51d-45f4-9e07-6973a1986ed1',
       labor_amount: 446.4,
       labors: [
         Models::Shared::DmsRepairorderLabor.new(
-          id: '90f1d435-d9c9-4870-95ba-af0618cb9f2d',
+          id: 'de0390c5-df31-4fa2-a2c7-d2231368f3af',
           pay_type: Models::Shared::DmsRepairorderLaborPayType::WARRANTY,
           rate_amount: 144.0,
           sold_hours: 3.1,
@@ -83,7 +83,7 @@ res = s.repairorder.create_dms_repairorder(dms_repairorder: Models::Shared::DmsR
       number: 'B',
       parts: [
         Models::Shared::DmsPartline.new(
-          id: '2b52094a-f63d-4423-8fb2-c272e7165827',
+          id: '83286632-8a86-4a27-91b4-46066e9ccb62',
           pay_type: Models::Shared::DmsPartlinePayType::WARRANTY,
           quantity: 4.0,
           quantity_ordered: 4.0,
@@ -91,7 +91,7 @@ res = s.repairorder.create_dms_repairorder(dms_repairorder: Models::Shared::DmsR
           unit_price_amount: 222.61
         ),
         Models::Shared::DmsPartline.new(
-          id: '62a02a04-d631-49d8-bc75-66024bd8d069',
+          id: 'fd9b437e-7971-4ea4-8bdf-b6015e261b1a',
           pay_type: Models::Shared::DmsPartlinePayType::WARRANTY,
           quantity: 2.0,
           quantity_ordered: 2.0,
@@ -111,11 +111,11 @@ res = s.repairorder.create_dms_repairorder(dms_repairorder: Models::Shared::DmsR
       cause: 'Scheduled maintenance',
       complaint: 'Noise when braking',
       correction: 'Degero theca natus.',
-      id: 'a7ab4336-9b66-4f5c-915d-dcb687a08ebf',
+      id: '499ac9ef-56b8-4ed7-9fb7-7fc1ac665bae',
       labor_amount: 232.4,
       labors: [
         Models::Shared::DmsRepairorderLabor.new(
-          id: '253cac94-f6c7-4415-a3d7-37f93e93fd70',
+          id: 'a4732ded-1dce-4df4-9f00-911437eac059',
           pay_type: Models::Shared::DmsRepairorderLaborPayType::CUSTOMER,
           rate_amount: 166.0,
           sold_hours: 1.4,
@@ -127,7 +127,7 @@ res = s.repairorder.create_dms_repairorder(dms_repairorder: Models::Shared::DmsR
       number: 'C',
       parts: [
         Models::Shared::DmsPartline.new(
-          id: '572cdff0-aa4c-4312-9ef7-957738982d0c',
+          id: 'fc4e60cc-ed7b-41ef-bc90-1b9ebc550a71',
           pay_type: Models::Shared::DmsPartlinePayType::CUSTOMER,
           quantity: 1.0,
           quantity_ordered: 1.0,
@@ -135,7 +135,7 @@ res = s.repairorder.create_dms_repairorder(dms_repairorder: Models::Shared::DmsR
           unit_price_amount: 216.02
         ),
         Models::Shared::DmsPartline.new(
-          id: 'de1323ce-e8c3-4835-b72b-3d12fa4265bb',
+          id: '533a5c08-f8f9-49d0-95e9-c0b9a5acf8b3',
           pay_type: Models::Shared::DmsPartlinePayType::CUSTOMER,
           quantity: 2.0,
           quantity_ordered: 2.0,
@@ -158,10 +158,10 @@ res = s.repairorder.create_dms_repairorder(dms_repairorder: Models::Shared::DmsR
   odometer_in: 7776.0,
   odometer_out: 7776.0,
   odometer_unit: Models::Shared::DmsRepairorderOdometerUnit::MILES,
-  opened_at: DateTime.iso8601('2025-02-08T09:37:32.720Z'),
+  opened_at: DateTime.iso8601('2025-02-08T23:02:53.871Z'),
   parts_amount: 1680.8_000_000_000_002,
   pay_type: Models::Shared::DmsRepairorderPayType::WARRANTY,
-  promised_at: DateTime.iso8601('2025-02-09T17:37:32.720Z'),
+  promised_at: DateTime.iso8601('2025-02-10T07:02:53.871Z'),
   purchase_order_number: '182743',
   status: Models::Shared::DmsRepairorderStatus::COMPLETED,
   sublet_amount: 0.0,
@@ -188,7 +188,7 @@ res = s.repairorder.create_dms_repairorder(dms_repairorder: Models::Shared::DmsR
     ),
   ],
   transport_type: Models::Shared::DmsRepairorderTransportType::LOANER,
-  updated_at: DateTime.iso8601('2025-11-28T17:32:57.070Z')
+  updated_at: DateTime.iso8601('2025-11-29T11:40:37.815Z')
 ), connection_id: '<id>')
 
 unless res.dms_repairorder.nil?
@@ -323,23 +323,23 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchDmsRepairorderRequest.new(
   dms_repairorder: Models::Shared::DmsRepairorder.new(
     balance_amount: 3193.86,
-    completed_at: DateTime.iso8601('2026-11-13T20:46:36.941Z'),
+    completed_at: DateTime.iso8601('2026-11-14T20:31:17.702Z'),
     created_at: DateTime.iso8601('2022-10-25T15:50:48.007Z'),
     currency: 'USD',
     discount_amount: 0.0,
     estimate_amount: 3264.0,
-    id: 'b720759e-11f4-4eb2-ad18-7a1d74a22d36',
+    id: '8a1a76ae-bd85-49f7-86ba-1a1d05f85b3c',
     jobs: [
       Models::Shared::DmsRepairorderJob.new(
         actual_hours: 3.6,
         cause: 'Scheduled maintenance',
         complaint: 'Due for service',
         correction: 'Aufero cumque vicinus aptus assumenda quis aptus.',
-        id: '670ca467-7702-4acb-869b-7d1e8ce28266',
+        id: 'b9cecaed-2043-442c-a422-6bc4341bd3ae',
         labor_amount: 681.6,
         labors: [
           Models::Shared::DmsRepairorderLabor.new(
-            id: 'bcaa6d56-8514-4178-adca-c20a6ce1f587',
+            id: '7c865390-c20a-47b6-a4ec-3cff9faa270b',
             pay_type: Models::Shared::DmsRepairorderLaborPayType::WARRANTY,
             rate_amount: 213.0,
             sold_hours: 3.2,
@@ -362,11 +362,11 @@ req = Models::Operations::PatchDmsRepairorderRequest.new(
         cause: 'Worn brake pads',
         complaint: 'Vibration at highway speed',
         correction: 'Somnus avaritia utroque vulnero ullam ancilla.',
-        id: '9f6fd07a-bf0a-4b8e-8d58-cb14fc6cf5bf',
+        id: '7ead4c92-c24e-4b7a-8ad3-a019528a5565',
         labor_amount: 446.4,
         labors: [
           Models::Shared::DmsRepairorderLabor.new(
-            id: '5c6e84bb-2bad-420c-9d8a-26651be27b4a',
+            id: 'ae8450dd-c9da-4de9-8c75-78daf73d6b1d',
             pay_type: Models::Shared::DmsRepairorderLaborPayType::WARRANTY,
             rate_amount: 144.0,
             sold_hours: 3.1,
@@ -378,7 +378,7 @@ req = Models::Operations::PatchDmsRepairorderRequest.new(
         number: 'B',
         parts: [
           Models::Shared::DmsPartline.new(
-            id: 'ed031a7f-b7f2-4fbb-a329-593472b5b96e',
+            id: '06173ad0-2a41-4163-b31f-77e9304c094f',
             pay_type: Models::Shared::DmsPartlinePayType::WARRANTY,
             quantity: 4.0,
             quantity_ordered: 4.0,
@@ -386,7 +386,7 @@ req = Models::Operations::PatchDmsRepairorderRequest.new(
             unit_price_amount: 222.61
           ),
           Models::Shared::DmsPartline.new(
-            id: '833e60aa-69fc-4de7-b1f8-ee482ae2a91a',
+            id: '60660713-d52b-4294-a9f8-e9d88844c842',
             pay_type: Models::Shared::DmsPartlinePayType::WARRANTY,
             quantity: 2.0,
             quantity_ordered: 2.0,
@@ -406,11 +406,11 @@ req = Models::Operations::PatchDmsRepairorderRequest.new(
         cause: 'Scheduled maintenance',
         complaint: 'Noise when braking',
         correction: 'Degero theca natus.',
-        id: 'fa12bb24-e759-42c9-8a0b-295aa78c127f',
+        id: '6dd97c4b-9018-4162-9f39-a3142bd8b8e1',
         labor_amount: 232.4,
         labors: [
           Models::Shared::DmsRepairorderLabor.new(
-            id: '1b80abd2-5045-4b05-a22b-e34917caedee',
+            id: 'be71c310-2a02-4cba-ab02-55a6a8c07cdd',
             pay_type: Models::Shared::DmsRepairorderLaborPayType::CUSTOMER,
             rate_amount: 166.0,
             sold_hours: 1.4,
@@ -422,7 +422,7 @@ req = Models::Operations::PatchDmsRepairorderRequest.new(
         number: 'C',
         parts: [
           Models::Shared::DmsPartline.new(
-            id: '39cc5561-9bf9-4ece-acbb-88a70fbac770',
+            id: 'ecd8655b-bb22-401b-a16b-35996860a6db',
             pay_type: Models::Shared::DmsPartlinePayType::CUSTOMER,
             quantity: 1.0,
             quantity_ordered: 1.0,
@@ -430,7 +430,7 @@ req = Models::Operations::PatchDmsRepairorderRequest.new(
             unit_price_amount: 216.02
           ),
           Models::Shared::DmsPartline.new(
-            id: 'ddfe075d-c64e-44ba-9016-0bc506dfa5d4',
+            id: 'cf8ac799-9e6c-46ee-85a8-f60d5d60fcb6',
             pay_type: Models::Shared::DmsPartlinePayType::CUSTOMER,
             quantity: 2.0,
             quantity_ordered: 2.0,
@@ -453,10 +453,10 @@ req = Models::Operations::PatchDmsRepairorderRequest.new(
     odometer_in: 7776.0,
     odometer_out: 7776.0,
     odometer_unit: Models::Shared::DmsRepairorderOdometerUnit::MILES,
-    opened_at: DateTime.iso8601('2025-02-08T09:37:32.744Z'),
+    opened_at: DateTime.iso8601('2025-02-08T23:02:53.902Z'),
     parts_amount: 1680.8_000_000_000_002,
     pay_type: Models::Shared::DmsRepairorderPayType::WARRANTY,
-    promised_at: DateTime.iso8601('2025-02-09T17:37:32.744Z'),
+    promised_at: DateTime.iso8601('2025-02-10T07:02:53.902Z'),
     purchase_order_number: '182743',
     status: Models::Shared::DmsRepairorderStatus::COMPLETED,
     sublet_amount: 0.0,
@@ -483,7 +483,7 @@ req = Models::Operations::PatchDmsRepairorderRequest.new(
       ),
     ],
     transport_type: Models::Shared::DmsRepairorderTransportType::LOANER,
-    updated_at: DateTime.iso8601('2025-11-28T17:32:57.101Z')
+    updated_at: DateTime.iso8601('2025-11-29T11:40:37.857Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -532,23 +532,23 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateDmsRepairorderRequest.new(
   dms_repairorder: Models::Shared::DmsRepairorder.new(
     balance_amount: 3193.86,
-    completed_at: DateTime.iso8601('2026-11-13T20:46:36.941Z'),
+    completed_at: DateTime.iso8601('2026-11-14T20:31:17.702Z'),
     created_at: DateTime.iso8601('2022-10-25T15:50:48.007Z'),
     currency: 'USD',
     discount_amount: 0.0,
     estimate_amount: 3264.0,
-    id: 'b720759e-11f4-4eb2-ad18-7a1d74a22d36',
+    id: '8a1a76ae-bd85-49f7-86ba-1a1d05f85b3c',
     jobs: [
       Models::Shared::DmsRepairorderJob.new(
         actual_hours: 3.6,
         cause: 'Scheduled maintenance',
         complaint: 'Due for service',
         correction: 'Aufero cumque vicinus aptus assumenda quis aptus.',
-        id: '670ca467-7702-4acb-869b-7d1e8ce28266',
+        id: 'b9cecaed-2043-442c-a422-6bc4341bd3ae',
         labor_amount: 681.6,
         labors: [
           Models::Shared::DmsRepairorderLabor.new(
-            id: 'bcaa6d56-8514-4178-adca-c20a6ce1f587',
+            id: '7c865390-c20a-47b6-a4ec-3cff9faa270b',
             pay_type: Models::Shared::DmsRepairorderLaborPayType::WARRANTY,
             rate_amount: 213.0,
             sold_hours: 3.2,
@@ -571,11 +571,11 @@ req = Models::Operations::UpdateDmsRepairorderRequest.new(
         cause: 'Worn brake pads',
         complaint: 'Vibration at highway speed',
         correction: 'Somnus avaritia utroque vulnero ullam ancilla.',
-        id: '9f6fd07a-bf0a-4b8e-8d58-cb14fc6cf5bf',
+        id: '7ead4c92-c24e-4b7a-8ad3-a019528a5565',
         labor_amount: 446.4,
         labors: [
           Models::Shared::DmsRepairorderLabor.new(
-            id: '5c6e84bb-2bad-420c-9d8a-26651be27b4a',
+            id: 'ae8450dd-c9da-4de9-8c75-78daf73d6b1d',
             pay_type: Models::Shared::DmsRepairorderLaborPayType::WARRANTY,
             rate_amount: 144.0,
             sold_hours: 3.1,
@@ -587,7 +587,7 @@ req = Models::Operations::UpdateDmsRepairorderRequest.new(
         number: 'B',
         parts: [
           Models::Shared::DmsPartline.new(
-            id: 'ed031a7f-b7f2-4fbb-a329-593472b5b96e',
+            id: '06173ad0-2a41-4163-b31f-77e9304c094f',
             pay_type: Models::Shared::DmsPartlinePayType::WARRANTY,
             quantity: 4.0,
             quantity_ordered: 4.0,
@@ -595,7 +595,7 @@ req = Models::Operations::UpdateDmsRepairorderRequest.new(
             unit_price_amount: 222.61
           ),
           Models::Shared::DmsPartline.new(
-            id: '833e60aa-69fc-4de7-b1f8-ee482ae2a91a',
+            id: '60660713-d52b-4294-a9f8-e9d88844c842',
             pay_type: Models::Shared::DmsPartlinePayType::WARRANTY,
             quantity: 2.0,
             quantity_ordered: 2.0,
@@ -615,11 +615,11 @@ req = Models::Operations::UpdateDmsRepairorderRequest.new(
         cause: 'Scheduled maintenance',
         complaint: 'Noise when braking',
         correction: 'Degero theca natus.',
-        id: 'fa12bb24-e759-42c9-8a0b-295aa78c127f',
+        id: '6dd97c4b-9018-4162-9f39-a3142bd8b8e1',
         labor_amount: 232.4,
         labors: [
           Models::Shared::DmsRepairorderLabor.new(
-            id: '1b80abd2-5045-4b05-a22b-e34917caedee',
+            id: 'be71c310-2a02-4cba-ab02-55a6a8c07cdd',
             pay_type: Models::Shared::DmsRepairorderLaborPayType::CUSTOMER,
             rate_amount: 166.0,
             sold_hours: 1.4,
@@ -631,7 +631,7 @@ req = Models::Operations::UpdateDmsRepairorderRequest.new(
         number: 'C',
         parts: [
           Models::Shared::DmsPartline.new(
-            id: '39cc5561-9bf9-4ece-acbb-88a70fbac770',
+            id: 'ecd8655b-bb22-401b-a16b-35996860a6db',
             pay_type: Models::Shared::DmsPartlinePayType::CUSTOMER,
             quantity: 1.0,
             quantity_ordered: 1.0,
@@ -639,7 +639,7 @@ req = Models::Operations::UpdateDmsRepairorderRequest.new(
             unit_price_amount: 216.02
           ),
           Models::Shared::DmsPartline.new(
-            id: 'ddfe075d-c64e-44ba-9016-0bc506dfa5d4',
+            id: 'cf8ac799-9e6c-46ee-85a8-f60d5d60fcb6',
             pay_type: Models::Shared::DmsPartlinePayType::CUSTOMER,
             quantity: 2.0,
             quantity_ordered: 2.0,
@@ -662,10 +662,10 @@ req = Models::Operations::UpdateDmsRepairorderRequest.new(
     odometer_in: 7776.0,
     odometer_out: 7776.0,
     odometer_unit: Models::Shared::DmsRepairorderOdometerUnit::MILES,
-    opened_at: DateTime.iso8601('2025-02-08T09:37:32.744Z'),
+    opened_at: DateTime.iso8601('2025-02-08T23:02:53.902Z'),
     parts_amount: 1680.8_000_000_000_002,
     pay_type: Models::Shared::DmsRepairorderPayType::WARRANTY,
-    promised_at: DateTime.iso8601('2025-02-09T17:37:32.744Z'),
+    promised_at: DateTime.iso8601('2025-02-10T07:02:53.902Z'),
     purchase_order_number: '182743',
     status: Models::Shared::DmsRepairorderStatus::COMPLETED,
     sublet_amount: 0.0,
@@ -692,7 +692,7 @@ req = Models::Operations::UpdateDmsRepairorderRequest.new(
       ),
     ],
     transport_type: Models::Shared::DmsRepairorderTransportType::LOANER,
-    updated_at: DateTime.iso8601('2025-11-28T17:32:57.101Z')
+    updated_at: DateTime.iso8601('2025-11-29T11:40:37.857Z')
   ),
   connection_id: '<id>',
   id: '<id>'

@@ -30,11 +30,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.practicearea.create_legal_practicearea(legal_practicearea: Models::Shared::LegalPracticearea.new(
   code: 'TLV',
   created_at: DateTime.iso8601('2023-01-28T21:00:26.264Z'),
-  id: '0cfa7030-9a80-469d-8730-562e528b1b65',
+  id: '7b480a9c-0e39-4f68-8692-2028bb43de95',
   metadata: [],
   name: 'advanced Law',
   type: Models::Shared::LegalPracticeareaType::EDUCATION,
-  updated_at: DateTime.iso8601('2025-09-22T07:55:03.549Z')
+  updated_at: DateTime.iso8601('2025-09-23T00:29:38.036Z')
 ), connection_id: '<id>')
 
 unless res.legal_practicearea.nil?
@@ -170,11 +170,11 @@ req = Models::Operations::PatchLegalPracticeareaRequest.new(
   legal_practicearea: Models::Shared::LegalPracticearea.new(
     code: 'TLV',
     created_at: DateTime.iso8601('2023-01-28T21:00:26.264Z'),
-    id: 'aec5dead-4f28-4106-b986-da5d490f48e9',
+    id: '1460dcf0-e3e4-4d8e-80ba-aa00e88b48f8',
     metadata: [],
     name: 'advanced Law',
     type: Models::Shared::LegalPracticeareaType::EDUCATION,
-    updated_at: DateTime.iso8601('2025-09-22T07:55:03.556Z')
+    updated_at: DateTime.iso8601('2025-09-23T00:29:38.046Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -265,11 +265,11 @@ req = Models::Operations::UpdateLegalPracticeareaRequest.new(
   legal_practicearea: Models::Shared::LegalPracticearea.new(
     code: 'TLV',
     created_at: DateTime.iso8601('2023-01-28T21:00:26.264Z'),
-    id: 'aec5dead-4f28-4106-b986-da5d490f48e9',
+    id: '1460dcf0-e3e4-4d8e-80ba-aa00e88b48f8',
     metadata: [],
     name: 'advanced Law',
     type: Models::Shared::LegalPracticeareaType::EDUCATION,
-    updated_at: DateTime.iso8601('2025-09-22T07:55:03.556Z')
+    updated_at: DateTime.iso8601('2025-09-23T00:29:38.046Z')
   ),
   connection_id: '<id>',
   id: '<id>'

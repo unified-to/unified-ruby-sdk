@@ -30,7 +30,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.memory.create_genai_memory(genai_memory: Models::Shared::GenaiMemory.new(
   content: 'Spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis.',
   created_at: DateTime.iso8601('2021-10-22T04:14:41.668Z'),
-  id: 'c344d89d-18b8-4eea-ba41-7ae145178f57',
+  id: '8bdf75dc-add6-4229-b73d-595b52dd65b7',
   metadata: [
     Models::Shared::GenaiMetadata.new(
       extra_data: {
@@ -45,7 +45,7 @@ res = s.memory.create_genai_memory(genai_memory: Models::Shared::GenaiMemory.new
   ],
   name: 'tabella.md',
   type: Models::Shared::GenaiMemoryType::MEMORY,
-  updated_at: DateTime.iso8601('2023-05-07T01:36:40.038Z'),
+  updated_at: DateTime.iso8601('2023-05-07T08:50:26.652Z'),
   user_identifier: '70613433-847d-4db6-a8ea-96a2d7513dad'
 ), connection_id: '<id>')
 
@@ -182,7 +182,7 @@ req = Models::Operations::PatchGenaiMemoryRequest.new(
   genai_memory: Models::Shared::GenaiMemory.new(
     content: 'Spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis.',
     created_at: DateTime.iso8601('2021-10-22T04:14:41.668Z'),
-    id: '72a2af7f-b0f2-4952-9674-00804c9341dd',
+    id: '75e69d30-e745-4881-9b94-213ff738e7a1',
     metadata: [
       Models::Shared::GenaiMetadata.new(
         extra_data: {
@@ -197,7 +197,7 @@ req = Models::Operations::PatchGenaiMemoryRequest.new(
     ],
     name: 'tabella.md',
     type: Models::Shared::GenaiMemoryType::MEMORY,
-    updated_at: DateTime.iso8601('2023-05-07T01:36:40.042Z'),
+    updated_at: DateTime.iso8601('2023-05-07T08:50:26.656Z'),
     user_identifier: '70613433-847d-4db6-a8ea-96a2d7513dad'
   ),
   connection_id: '<id>',
@@ -289,7 +289,7 @@ req = Models::Operations::UpdateGenaiMemoryRequest.new(
   genai_memory: Models::Shared::GenaiMemory.new(
     content: 'Spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis.',
     created_at: DateTime.iso8601('2021-10-22T04:14:41.668Z'),
-    id: '72a2af7f-b0f2-4952-9674-00804c9341dd',
+    id: '75e69d30-e745-4881-9b94-213ff738e7a1',
     metadata: [
       Models::Shared::GenaiMetadata.new(
         extra_data: {
@@ -304,7 +304,7 @@ req = Models::Operations::UpdateGenaiMemoryRequest.new(
     ],
     name: 'tabella.md',
     type: Models::Shared::GenaiMemoryType::MEMORY,
-    updated_at: DateTime.iso8601('2023-05-07T01:36:40.042Z'),
+    updated_at: DateTime.iso8601('2023-05-07T08:50:26.656Z'),
     user_identifier: '70613433-847d-4db6-a8ea-96a2d7513dad'
   ),
   connection_id: '<id>',

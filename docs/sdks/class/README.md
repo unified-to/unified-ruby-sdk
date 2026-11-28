@@ -30,7 +30,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.class_.create_lms_class(lms_class: Models::Shared::LmsClass.new(
   created_at: DateTime.iso8601('2020-02-20T14:48:51.845Z'),
   description: 'Animus callide corpus.',
-  id: 'fef42aac-944a-4d4e-8b93-abfbb0198bc2',
+  id: 'aeef2a20-b579-4d72-9875-317eb31bfd33',
   instructors: [],
   languages: [
     'in',
@@ -52,7 +52,7 @@ res = s.class_.create_lms_class(lms_class: Models::Shared::LmsClass.new(
   metadata: [],
   name: 'sperno',
   students: [],
-  updated_at: DateTime.iso8601('2025-09-03T04:14:55.043Z')
+  updated_at: DateTime.iso8601('2025-09-03T23:50:37.470Z')
 ), connection_id: '<id>')
 
 unless res.lms_class.nil?
@@ -188,7 +188,7 @@ req = Models::Operations::PatchLmsClassRequest.new(
   lms_class: Models::Shared::LmsClass.new(
     created_at: DateTime.iso8601('2020-02-20T14:48:51.845Z'),
     description: 'Animus callide corpus.',
-    id: '2bf14277-0ce7-42ee-9343-148ae890304a',
+    id: '2e56e70b-3053-4005-9e6f-402c8d968529',
     instructors: [],
     languages: [
       'in',
@@ -210,7 +210,7 @@ req = Models::Operations::PatchLmsClassRequest.new(
     metadata: [],
     name: 'sperno',
     students: [],
-    updated_at: DateTime.iso8601('2025-09-03T04:14:55.059Z')
+    updated_at: DateTime.iso8601('2025-09-03T23:50:37.486Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -301,7 +301,7 @@ req = Models::Operations::UpdateLmsClassRequest.new(
   lms_class: Models::Shared::LmsClass.new(
     created_at: DateTime.iso8601('2020-02-20T14:48:51.845Z'),
     description: 'Animus callide corpus.',
-    id: '2bf14277-0ce7-42ee-9343-148ae890304a',
+    id: '2e56e70b-3053-4005-9e6f-402c8d968529',
     instructors: [],
     languages: [
       'in',
@@ -323,7 +323,7 @@ req = Models::Operations::UpdateLmsClassRequest.new(
     metadata: [],
     name: 'sperno',
     students: [],
-    updated_at: DateTime.iso8601('2025-09-03T04:14:55.059Z')
+    updated_at: DateTime.iso8601('2025-09-03T23:50:37.486Z')
   ),
   connection_id: '<id>',
   id: '<id>'

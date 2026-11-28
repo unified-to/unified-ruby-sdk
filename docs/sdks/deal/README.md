@@ -29,19 +29,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.deal.create_crm_deal(crm_deal: Models::Shared::CrmDeal.new(
   amount: 98_162.0,
-  closed_at: DateTime.iso8601('2024-03-18T02:26:08.566Z'),
-  closing_at: DateTime.iso8601('2025-09-24T18:37:13.401Z'),
+  closed_at: DateTime.iso8601('2024-03-18T07:24:20.524Z'),
+  closing_at: DateTime.iso8601('2025-09-25T10:18:45.333Z'),
   created_at: DateTime.iso8601('2023-07-04T12:48:48.470Z'),
   currency: 'USD',
   description: 'Trans tubineus adfectus cubo causa suus.',
-  id: '1edcd825-5aba-453f-b833-f7bf68a01803',
+  id: '9b3d3274-1cf8-4718-a7fe-d83e7aa748e2',
   metadata: [
     Models::Shared::CrmMetadata.new(
       extra_data: {
         'display_name' => 'Custom Property',
       },
       format: Models::Shared::CrmMetadataFormat::TEXT,
-      id: 'e3dc7e35-3251-4ff0-978d-e70271c58dc9',
+      id: '45a2788a-79b3-4530-8e1b-d15ed8b2e73e',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'tandem'
@@ -54,7 +54,7 @@ res = s.deal.create_crm_deal(crm_deal: Models::Shared::CrmDeal.new(
     'sol',
     'odit',
   ],
-  updated_at: DateTime.iso8601('2024-10-26T04:28:29.968Z'),
+  updated_at: DateTime.iso8601('2024-10-26T13:43:49.080Z'),
   won_reason: 'Libero soleo cetera unus caterva.'
 ), connection_id: '<id>')
 
@@ -190,19 +190,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchCrmDealRequest.new(
   crm_deal: Models::Shared::CrmDeal.new(
     amount: 98_162.0,
-    closed_at: DateTime.iso8601('2024-03-18T02:26:08.568Z'),
-    closing_at: DateTime.iso8601('2025-09-24T18:37:13.409Z'),
+    closed_at: DateTime.iso8601('2024-03-18T07:24:20.526Z'),
+    closing_at: DateTime.iso8601('2025-09-25T10:18:45.341Z'),
     created_at: DateTime.iso8601('2023-07-04T12:48:48.470Z'),
     currency: 'USD',
     description: 'Trans tubineus adfectus cubo causa suus.',
-    id: 'ab0bb2d1-2751-432c-9f34-29b91242ddf2',
+    id: '348ac789-3628-447b-8b8b-4ffa92d26dac',
     metadata: [
       Models::Shared::CrmMetadata.new(
         extra_data: {
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '437351e0-699b-4de8-9713-1258c29f4cbd',
+        id: '99791940-3b11-4883-b23b-5d47f0a32694',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'tandem'
@@ -215,7 +215,7 @@ req = Models::Operations::PatchCrmDealRequest.new(
       'sol',
       'odit',
     ],
-    updated_at: DateTime.iso8601('2024-10-26T04:28:29.972Z'),
+    updated_at: DateTime.iso8601('2024-10-26T13:43:49.084Z'),
     won_reason: 'Libero soleo cetera unus caterva.'
   ),
   connection_id: '<id>',
@@ -306,19 +306,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateCrmDealRequest.new(
   crm_deal: Models::Shared::CrmDeal.new(
     amount: 98_162.0,
-    closed_at: DateTime.iso8601('2024-03-18T02:26:08.568Z'),
-    closing_at: DateTime.iso8601('2025-09-24T18:37:13.409Z'),
+    closed_at: DateTime.iso8601('2024-03-18T07:24:20.526Z'),
+    closing_at: DateTime.iso8601('2025-09-25T10:18:45.341Z'),
     created_at: DateTime.iso8601('2023-07-04T12:48:48.470Z'),
     currency: 'USD',
     description: 'Trans tubineus adfectus cubo causa suus.',
-    id: 'ab0bb2d1-2751-432c-9f34-29b91242ddf2',
+    id: '348ac789-3628-447b-8b8b-4ffa92d26dac',
     metadata: [
       Models::Shared::CrmMetadata.new(
         extra_data: {
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '437351e0-699b-4de8-9713-1258c29f4cbd',
+        id: '99791940-3b11-4883-b23b-5d47f0a32694',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'tandem'
@@ -331,7 +331,7 @@ req = Models::Operations::UpdateCrmDealRequest.new(
       'sol',
       'odit',
     ],
-    updated_at: DateTime.iso8601('2024-10-26T04:28:29.972Z'),
+    updated_at: DateTime.iso8601('2024-10-26T13:43:49.084Z'),
     won_reason: 'Libero soleo cetera unus caterva.'
   ),
   connection_id: '<id>',

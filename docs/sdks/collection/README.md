@@ -36,7 +36,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.collection.create_commerce_collection(commerce_collection: Models::Shared::CommerceCollection.new(
   created_at: DateTime.iso8601('2023-07-14T00:42:54.742Z'),
   description: 'Ward - Hudson\'s most advanced Computer technology increases graceful capabilities',
-  id: '034ed058-28d0-4d28-8507-75fa4b551946',
+  id: '85a731d8-627e-407f-8463-c9a691850e4a',
   is_active: true,
   is_featured: false,
   is_visible: false,
@@ -45,10 +45,10 @@ res = s.collection.create_commerce_collection(commerce_collection: Models::Share
     Models::Shared::CommerceItemMedia.new(
       alt: 'Armarium amiculum amet defendo.',
       height: 759.0,
-      id: 'ee8bc23f-933d-44e6-96f0-f9dd61baf419',
+      id: '9a19fc7f-0ef0-4308-b4f5-3cff38e0e0c4',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: '39282bf5-5a2f-4091-b4ff-bb91154f3a03',
+          id: 'c937b0a1-c141-446d-a4f0-0b3703b74ccf',
           slug: 'cernuus',
           value: 'torrens'
         ),
@@ -61,7 +61,7 @@ res = s.collection.create_commerce_collection(commerce_collection: Models::Share
   ],
   metadata: [
     Models::Shared::CommerceMetadata.new(
-      id: 'c5103080-a903-48e6-988a-8b20829ef408',
+      id: '6994131a-4179-4fc1-a6cc-d3a6c6417e0d',
       slug: 'velit',
       value: 'aureus'
     ),
@@ -75,7 +75,7 @@ res = s.collection.create_commerce_collection(commerce_collection: Models::Share
     'comparo',
   ],
   type: Models::Shared::CommerceCollectionType::COLLECTION,
-  updated_at: DateTime.iso8601('2025-04-02T22:51:25.850Z')
+  updated_at: DateTime.iso8601('2025-04-03T11:05:11.005Z')
 ), connection_id: '<id>')
 
 unless res.commerce_collection.nil?
@@ -122,7 +122,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.collection.create_lms_collection(lms_collection: Models::Shared::LmsCollection.new(
   created_at: DateTime.iso8601('2019-08-19T14:40:29.227Z'),
   description: 'Defluo.',
-  id: '05c44bf5-60c4-42b1-946a-ffe80de47a36',
+  id: '4e99de02-b89c-49a9-822a-e2dfb1339cd5',
   is_active: true,
   media: [
     Models::Shared::LmsMedia.new(
@@ -139,7 +139,7 @@ res = s.collection.create_lms_collection(lms_collection: Models::Shared::LmsColl
   ],
   metadata: [],
   name: 'spargo',
-  updated_at: DateTime.iso8601('2026-09-04T03:28:53.488Z')
+  updated_at: DateTime.iso8601('2026-09-05T02:40:50.232Z')
 ), connection_id: '<id>')
 
 unless res.lms_collection.nil?
@@ -362,7 +362,7 @@ req = Models::Operations::PatchCommerceCollectionRequest.new(
   commerce_collection: Models::Shared::CommerceCollection.new(
     created_at: DateTime.iso8601('2023-07-14T00:42:54.742Z'),
     description: 'Ward - Hudson\'s most advanced Computer technology increases graceful capabilities',
-    id: 'f1253c30-d65a-42d6-8826-d7f8d4c29a3b',
+    id: 'b376697b-edff-4994-ba7e-efb66cdf87eb',
     is_active: true,
     is_featured: false,
     is_visible: false,
@@ -371,10 +371,10 @@ req = Models::Operations::PatchCommerceCollectionRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Armarium amiculum amet defendo.',
         height: 759.0,
-        id: 'a0a1df3a-ccc7-466e-91d7-b3ca9e7c2368',
+        id: '0292b7b8-f483-440d-b523-77058aad6bf5',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '3bdf66f5-6fba-41fa-b498-0019017ee203',
+            id: '6f4ad79f-ceda-46e8-9d81-bc010d8e7209',
             slug: 'cernuus',
             value: 'torrens'
           ),
@@ -387,7 +387,7 @@ req = Models::Operations::PatchCommerceCollectionRequest.new(
     ],
     metadata: [
       Models::Shared::CommerceMetadata.new(
-        id: 'dddb24de-201a-4d48-8f55-473bbbd60df1',
+        id: '118157b8-e27d-410d-8b3f-058bc5e2f30f',
         slug: 'velit',
         value: 'aureus'
       ),
@@ -401,7 +401,7 @@ req = Models::Operations::PatchCommerceCollectionRequest.new(
       'comparo',
     ],
     type: Models::Shared::CommerceCollectionType::COLLECTION,
-    updated_at: DateTime.iso8601('2025-04-02T22:51:25.860Z')
+    updated_at: DateTime.iso8601('2025-04-03T11:05:11.016Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -451,7 +451,7 @@ req = Models::Operations::PatchLmsCollectionRequest.new(
   lms_collection: Models::Shared::LmsCollection.new(
     created_at: DateTime.iso8601('2019-08-19T14:40:29.227Z'),
     description: 'Defluo.',
-    id: 'ef7025ad-8db8-4a1b-9c1b-9ee55ce5b312',
+    id: '44457881-827e-49a9-a1ef-0c9a04910e55',
     is_active: true,
     media: [
       Models::Shared::LmsMedia.new(
@@ -468,7 +468,7 @@ req = Models::Operations::PatchLmsCollectionRequest.new(
     ],
     metadata: [],
     name: 'spargo',
-    updated_at: DateTime.iso8601('2026-09-04T03:28:53.498Z')
+    updated_at: DateTime.iso8601('2026-09-05T02:40:50.247Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -600,7 +600,7 @@ req = Models::Operations::UpdateCommerceCollectionRequest.new(
   commerce_collection: Models::Shared::CommerceCollection.new(
     created_at: DateTime.iso8601('2023-07-14T00:42:54.742Z'),
     description: 'Ward - Hudson\'s most advanced Computer technology increases graceful capabilities',
-    id: 'f1253c30-d65a-42d6-8826-d7f8d4c29a3b',
+    id: 'b376697b-edff-4994-ba7e-efb66cdf87eb',
     is_active: true,
     is_featured: false,
     is_visible: false,
@@ -609,10 +609,10 @@ req = Models::Operations::UpdateCommerceCollectionRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Armarium amiculum amet defendo.',
         height: 759.0,
-        id: 'a0a1df3a-ccc7-466e-91d7-b3ca9e7c2368',
+        id: '0292b7b8-f483-440d-b523-77058aad6bf5',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '3bdf66f5-6fba-41fa-b498-0019017ee203',
+            id: '6f4ad79f-ceda-46e8-9d81-bc010d8e7209',
             slug: 'cernuus',
             value: 'torrens'
           ),
@@ -625,7 +625,7 @@ req = Models::Operations::UpdateCommerceCollectionRequest.new(
     ],
     metadata: [
       Models::Shared::CommerceMetadata.new(
-        id: 'dddb24de-201a-4d48-8f55-473bbbd60df1',
+        id: '118157b8-e27d-410d-8b3f-058bc5e2f30f',
         slug: 'velit',
         value: 'aureus'
       ),
@@ -639,7 +639,7 @@ req = Models::Operations::UpdateCommerceCollectionRequest.new(
       'comparo',
     ],
     type: Models::Shared::CommerceCollectionType::COLLECTION,
-    updated_at: DateTime.iso8601('2025-04-02T22:51:25.860Z')
+    updated_at: DateTime.iso8601('2025-04-03T11:05:11.016Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -689,7 +689,7 @@ req = Models::Operations::UpdateLmsCollectionRequest.new(
   lms_collection: Models::Shared::LmsCollection.new(
     created_at: DateTime.iso8601('2019-08-19T14:40:29.227Z'),
     description: 'Defluo.',
-    id: 'ef7025ad-8db8-4a1b-9c1b-9ee55ce5b312',
+    id: '44457881-827e-49a9-a1ef-0c9a04910e55',
     is_active: true,
     media: [
       Models::Shared::LmsMedia.new(
@@ -706,7 +706,7 @@ req = Models::Operations::UpdateLmsCollectionRequest.new(
     ],
     metadata: [],
     name: 'spargo',
-    updated_at: DateTime.iso8601('2026-09-04T03:28:53.498Z')
+    updated_at: DateTime.iso8601('2026-09-05T02:40:50.247Z')
   ),
   connection_id: '<id>',
   id: '<id>'

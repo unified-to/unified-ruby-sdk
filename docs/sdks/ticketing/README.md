@@ -48,11 +48,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.ticketing.create_ticketing_category(ticketing_category: Models::Shared::TicketingCategory.new(
   created_at: DateTime.iso8601('2019-10-19T22:02:51.067Z'),
   description: 'Carpo depulso torqueo coniecto curtus. Nam optio tendo utroque. Tumultus delectus arbitro amplus. Coerceo clam comprehendo vulnero triduana deprimo cruciamentum talio virtus. Substantia cogito deleo derelinquo traho.',
-  id: '22e11cd3-b896-4f4f-a9fb-87e4804735c0',
+  id: 'f91b7687-3826-45c7-a700-28c0a66d00f2',
   is_active: true,
   metadata: [],
   name: 'tempus',
-  updated_at: DateTime.iso8601('2026-02-15T23:46:46.083Z')
+  updated_at: DateTime.iso8601('2026-02-16T21:06:46.770Z')
 ), connection_id: '<id>')
 
 unless res.ticketing_category.nil?
@@ -104,7 +104,7 @@ res = s.ticketing.create_ticketing_customer(ticketing_customer: Models::Shared::
       type: Models::Shared::TicketingEmailType::HOME
     ),
   ],
-  id: 'fb7d7c88-c523-458b-80dc-22f96b5dcf47',
+  id: 'd344520e-f1b6-450d-b36d-984566779b2e',
   metadata: [],
   name: 'Veronica Waters',
   tags: [
@@ -125,7 +125,7 @@ res = s.ticketing.create_ticketing_customer(ticketing_customer: Models::Shared::
       type: Models::Shared::TicketingTelephoneType::MOBILE
     ),
   ],
-  updated_at: DateTime.iso8601('2026-07-08T14:03:03.458Z')
+  updated_at: DateTime.iso8601('2026-07-09T12:22:45.988Z')
 ), connection_id: '<id>')
 
 unless res.ticketing_customer.nil?
@@ -172,9 +172,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.ticketing.create_ticketing_note(ticketing_note: Models::Shared::TicketingNote.new(
   created_at: DateTime.iso8601('2019-07-23T15:05:03.241Z'),
   description: 'Vitiosus recusandae tristis.',
-  id: '17dc0398-aa61-40fd-9b9b-6fef6944e780',
+  id: '5a675748-9848-4c8b-9fe2-f768f72d5efe',
   metadata: [],
-  updated_at: DateTime.iso8601('2024-10-25T18:48:10.351Z')
+  updated_at: DateTime.iso8601('2024-10-26T11:57:12.848Z')
 ), connection_id: '<id>')
 
 unless res.ticketing_note.nil?
@@ -223,7 +223,7 @@ res = s.ticketing.create_ticketing_ticket(ticketing_ticket: Models::Shared::Tick
   created_at: DateTime.iso8601('2021-06-25T19:19:31.279Z'),
   description: 'Aut clibanus vulgaris patrocinor confugo laborum acies. Antepono coniuratio conculco correptius curiositas sono. Coma socius bestia suus tot.',
   due_at: DateTime.iso8601('2021-07-07T17:39:49.813Z'),
-  id: '78ef7bb2-c0a3-476e-a8f3-b6921b391a08',
+  id: 'a1584f60-c081-4fa9-b560-71761ab5519f',
   metadata: [],
   priority: 'MEDIUM',
   source: 'email',
@@ -232,7 +232,7 @@ res = s.ticketing.create_ticketing_ticket(ticketing_ticket: Models::Shared::Tick
   tags: [
     'cotidie',
   ],
-  updated_at: DateTime.iso8601('2021-07-03T22:07:26.664Z'),
+  updated_at: DateTime.iso8601('2021-07-03T22:13:20.148Z'),
   url: 'https://royal-flu.com'
 ), connection_id: '<id>')
 
@@ -630,11 +630,11 @@ req = Models::Operations::PatchTicketingCategoryRequest.new(
   ticketing_category: Models::Shared::TicketingCategory.new(
     created_at: DateTime.iso8601('2019-10-19T22:02:51.067Z'),
     description: 'Carpo depulso torqueo coniecto curtus. Nam optio tendo utroque. Tumultus delectus arbitro amplus. Coerceo clam comprehendo vulnero triduana deprimo cruciamentum talio virtus. Substantia cogito deleo derelinquo traho.',
-    id: 'debd4fb5-a523-4009-afc9-5da77d1b113e',
+    id: '67b606e3-bb13-4c02-b7a8-02b91ccb05c2',
     is_active: true,
     metadata: [],
     name: 'tempus',
-    updated_at: DateTime.iso8601('2026-02-15T23:46:46.088Z')
+    updated_at: DateTime.iso8601('2026-02-16T21:06:46.775Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -689,7 +689,7 @@ req = Models::Operations::PatchTicketingCustomerRequest.new(
         type: Models::Shared::TicketingEmailType::HOME
       ),
     ],
-    id: '81497a26-253c-40b5-a6e7-defda828c172',
+    id: '2b0e7931-bf06-4ec8-ad43-bf6198feb62c',
     metadata: [],
     name: 'Veronica Waters',
     tags: [
@@ -710,7 +710,7 @@ req = Models::Operations::PatchTicketingCustomerRequest.new(
         type: Models::Shared::TicketingTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2026-07-08T14:03:03.469Z')
+    updated_at: DateTime.iso8601('2026-07-09T12:22:45.999Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -760,9 +760,9 @@ req = Models::Operations::PatchTicketingNoteRequest.new(
   ticketing_note: Models::Shared::TicketingNote.new(
     created_at: DateTime.iso8601('2019-07-23T15:05:03.241Z'),
     description: 'Vitiosus recusandae tristis.',
-    id: 'ef793915-e12f-4cc9-8b54-60865b752020',
+    id: '65a4d859-7030-4b49-ab10-2c6266307b3b',
     metadata: [],
-    updated_at: DateTime.iso8601('2024-10-25T18:48:10.355Z')
+    updated_at: DateTime.iso8601('2024-10-26T11:57:12.853Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -814,7 +814,7 @@ req = Models::Operations::PatchTicketingTicketRequest.new(
     created_at: DateTime.iso8601('2021-06-25T19:19:31.279Z'),
     description: 'Aut clibanus vulgaris patrocinor confugo laborum acies. Antepono coniuratio conculco correptius curiositas sono. Coma socius bestia suus tot.',
     due_at: DateTime.iso8601('2021-07-07T17:39:49.813Z'),
-    id: 'a57e1b27-67c9-474c-8768-65315f3b4c05',
+    id: 'c39fce20-0f0f-4caa-9666-17384862e000',
     metadata: [],
     priority: 'MEDIUM',
     source: 'email',
@@ -823,7 +823,7 @@ req = Models::Operations::PatchTicketingTicketRequest.new(
     tags: [
       'cotidie',
     ],
-    updated_at: DateTime.iso8601('2021-07-03T22:07:26.664Z'),
+    updated_at: DateTime.iso8601('2021-07-03T22:13:20.148Z'),
     url: 'https://royal-flu.com'
   ),
   connection_id: '<id>',
@@ -1038,11 +1038,11 @@ req = Models::Operations::UpdateTicketingCategoryRequest.new(
   ticketing_category: Models::Shared::TicketingCategory.new(
     created_at: DateTime.iso8601('2019-10-19T22:02:51.067Z'),
     description: 'Carpo depulso torqueo coniecto curtus. Nam optio tendo utroque. Tumultus delectus arbitro amplus. Coerceo clam comprehendo vulnero triduana deprimo cruciamentum talio virtus. Substantia cogito deleo derelinquo traho.',
-    id: 'debd4fb5-a523-4009-afc9-5da77d1b113e',
+    id: '67b606e3-bb13-4c02-b7a8-02b91ccb05c2',
     is_active: true,
     metadata: [],
     name: 'tempus',
-    updated_at: DateTime.iso8601('2026-02-15T23:46:46.088Z')
+    updated_at: DateTime.iso8601('2026-02-16T21:06:46.775Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1097,7 +1097,7 @@ req = Models::Operations::UpdateTicketingCustomerRequest.new(
         type: Models::Shared::TicketingEmailType::HOME
       ),
     ],
-    id: '81497a26-253c-40b5-a6e7-defda828c172',
+    id: '2b0e7931-bf06-4ec8-ad43-bf6198feb62c',
     metadata: [],
     name: 'Veronica Waters',
     tags: [
@@ -1118,7 +1118,7 @@ req = Models::Operations::UpdateTicketingCustomerRequest.new(
         type: Models::Shared::TicketingTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2026-07-08T14:03:03.469Z')
+    updated_at: DateTime.iso8601('2026-07-09T12:22:45.999Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1168,9 +1168,9 @@ req = Models::Operations::UpdateTicketingNoteRequest.new(
   ticketing_note: Models::Shared::TicketingNote.new(
     created_at: DateTime.iso8601('2019-07-23T15:05:03.241Z'),
     description: 'Vitiosus recusandae tristis.',
-    id: 'ef793915-e12f-4cc9-8b54-60865b752020',
+    id: '65a4d859-7030-4b49-ab10-2c6266307b3b',
     metadata: [],
-    updated_at: DateTime.iso8601('2024-10-25T18:48:10.355Z')
+    updated_at: DateTime.iso8601('2024-10-26T11:57:12.853Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1222,7 +1222,7 @@ req = Models::Operations::UpdateTicketingTicketRequest.new(
     created_at: DateTime.iso8601('2021-06-25T19:19:31.279Z'),
     description: 'Aut clibanus vulgaris patrocinor confugo laborum acies. Antepono coniuratio conculco correptius curiositas sono. Coma socius bestia suus tot.',
     due_at: DateTime.iso8601('2021-07-07T17:39:49.813Z'),
-    id: 'a57e1b27-67c9-474c-8768-65315f3b4c05',
+    id: 'c39fce20-0f0f-4caa-9666-17384862e000',
     metadata: [],
     priority: 'MEDIUM',
     source: 'email',
@@ -1231,7 +1231,7 @@ req = Models::Operations::UpdateTicketingTicketRequest.new(
     tags: [
       'cotidie',
     ],
-    updated_at: DateTime.iso8601('2021-07-03T22:07:26.664Z'),
+    updated_at: DateTime.iso8601('2021-07-03T22:13:20.148Z'),
     url: 'https://royal-flu.com'
   ),
   connection_id: '<id>',

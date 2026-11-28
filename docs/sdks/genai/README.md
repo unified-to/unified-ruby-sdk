@@ -55,11 +55,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.genai.create_genai_agent(genai_agent: Models::Shared::GenaiAgent.new(
   created_at: DateTime.iso8601('2020-12-18T02:23:33.723Z'),
   description: 'Sperno despecto.',
-  id: '32632282-a4c6-4d79-aa4a-c0c897fd8457',
+  id: '075ce33e-4278-41c5-8646-d4005a69fbaf',
   instructions: 'Addo vita ver auctus corrumpo substantia conscendo auctus. Astrum sulum aufero bis stella sumptus non.',
   is_active: false,
   name: 'testimonial suddenly',
-  updated_at: DateTime.iso8601('2025-11-15T00:53:50.662Z')
+  updated_at: DateTime.iso8601('2025-11-15T20:41:28.087Z')
 ), connection_id: '<id>')
 
 unless res.genai_agent.nil?
@@ -112,7 +112,7 @@ res = s.genai.create_genai_embedding(genai_embedding: Models::Shared::GenaiEmbed
   dimension: 423.0,
   embeddings: 'Venia tutis cernuus viscus officiis utilis porro utique.',
   encoding_format: Models::Shared::EncodingFormat::FLOAT,
-  id: '46010533-689a-403e-bed0-7921bace9ef5',
+  id: '777e8c37-3472-4c10-8be7-479673a97cc2',
   max_tokens: 223.0,
   tokens_used: 836.0,
   type: 'classification'
@@ -162,7 +162,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.genai.create_genai_memory(genai_memory: Models::Shared::GenaiMemory.new(
   content: 'Spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis.',
   created_at: DateTime.iso8601('2021-10-22T04:14:41.668Z'),
-  id: 'c344d89d-18b8-4eea-ba41-7ae145178f57',
+  id: '8bdf75dc-add6-4229-b73d-595b52dd65b7',
   metadata: [
     Models::Shared::GenaiMetadata.new(
       extra_data: {
@@ -177,7 +177,7 @@ res = s.genai.create_genai_memory(genai_memory: Models::Shared::GenaiMemory.new(
   ],
   name: 'tabella.md',
   type: Models::Shared::GenaiMemoryType::MEMORY,
-  updated_at: DateTime.iso8601('2023-05-07T01:36:40.038Z'),
+  updated_at: DateTime.iso8601('2023-05-07T08:50:26.652Z'),
   user_identifier: '70613433-847d-4db6-a8ea-96a2d7513dad'
 ), connection_id: '<id>')
 
@@ -225,10 +225,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.genai.create_genai_organization(genai_organization: Models::Shared::GenaiOrganization.new(
   created_at: DateTime.iso8601('2020-10-27T16:03:47.122Z'),
   description: 'Subito teneo arbor.',
-  id: 'e8478fc5-9e3a-47ff-8635-9720bf74f078',
+  id: 'f3215f09-c873-4191-bde1-73bf6c246964',
   is_active: false,
   name: 'yum yuck',
-  updated_at: DateTime.iso8601('2023-02-09T08:29:00.814Z')
+  updated_at: DateTime.iso8601('2023-02-09T17:29:05.940Z')
 ), connection_id: '<id>')
 
 unless res.genai_organization.nil?
@@ -391,10 +391,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
   )
 )
 res = s.genai.create_genai_task(genai_task: Models::Shared::GenaiTask.new(
-  completed_at: DateTime.iso8601('2025-10-31T18:46:24.365Z'),
+  completed_at: DateTime.iso8601('2025-11-01T14:30:47.692Z'),
   created_at: DateTime.iso8601('2020-10-25T20:19:33.247Z'),
   files_changed: 19.0,
-  id: '0f5fbe51-344a-403a-af20-1a8f14e354d6',
+  id: '1cdd8b31-b5b8-4d20-9dcb-d31f77e04f57',
   instructions: 'Angustus cubo cupio abundans admoveo sumptus.',
   lines_added: 244.0,
   lines_deleted: 118.0,
@@ -409,12 +409,12 @@ res = s.genai.create_genai_task(genai_task: Models::Shared::GenaiTask.new(
   pullrequest_url: 'https://github.com/felicity.rowe61/eek-save/pull/383',
   repo_url: 'https://github.com/felicity.rowe61/eek-save',
   source_branch_identifier: 'main',
-  started_at: DateTime.iso8601('2024-06-12T12:16:38.226Z'),
+  started_at: DateTime.iso8601('2024-06-13T02:33:42.607Z'),
   status: Models::Shared::GenaiTaskStatus::BLOCKED,
   summary: 'Tenus via tamisium denego teres adsidue cura crur. Coma defungo magnam delicate confero amaritudo varius.',
   target_branch_identifier: 'agent/eek-save',
   tokens_used: 2165.0,
-  updated_at: DateTime.iso8601('2023-03-12T18:05:49.443Z'),
+  updated_at: DateTime.iso8601('2023-03-13T03:26:56.772Z'),
   web_url: 'https://monstrous-honesty.net'
 ), connection_id: '<id>')
 
@@ -986,11 +986,11 @@ req = Models::Operations::PatchGenaiAgentRequest.new(
   genai_agent: Models::Shared::GenaiAgent.new(
     created_at: DateTime.iso8601('2020-12-18T02:23:33.723Z'),
     description: 'Sperno despecto.',
-    id: '83a21c42-dc03-4363-8aa3-e742a371fd4b',
+    id: '8a6a47c4-6a6d-4b33-9712-4f544e6a1c8c',
     instructions: 'Addo vita ver auctus corrumpo substantia conscendo auctus. Astrum sulum aufero bis stella sumptus non.',
     is_active: false,
     name: 'testimonial suddenly',
-    updated_at: DateTime.iso8601('2025-11-15T00:53:50.666Z')
+    updated_at: DateTime.iso8601('2025-11-15T20:41:28.093Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1040,7 +1040,7 @@ req = Models::Operations::PatchGenaiMemoryRequest.new(
   genai_memory: Models::Shared::GenaiMemory.new(
     content: 'Spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis.',
     created_at: DateTime.iso8601('2021-10-22T04:14:41.668Z'),
-    id: '72a2af7f-b0f2-4952-9674-00804c9341dd',
+    id: '75e69d30-e745-4881-9b94-213ff738e7a1',
     metadata: [
       Models::Shared::GenaiMetadata.new(
         extra_data: {
@@ -1055,7 +1055,7 @@ req = Models::Operations::PatchGenaiMemoryRequest.new(
     ],
     name: 'tabella.md',
     type: Models::Shared::GenaiMemoryType::MEMORY,
-    updated_at: DateTime.iso8601('2023-05-07T01:36:40.042Z'),
+    updated_at: DateTime.iso8601('2023-05-07T08:50:26.656Z'),
     user_identifier: '70613433-847d-4db6-a8ea-96a2d7513dad'
   ),
   connection_id: '<id>',
@@ -1106,10 +1106,10 @@ req = Models::Operations::PatchGenaiOrganizationRequest.new(
   genai_organization: Models::Shared::GenaiOrganization.new(
     created_at: DateTime.iso8601('2020-10-27T16:03:47.122Z'),
     description: 'Subito teneo arbor.',
-    id: 'b1db4b66-a920-4541-bf46-ff9235b53447',
+    id: '2303f347-a1d2-4c74-b8a4-09120d3de405',
     is_active: false,
     name: 'yum yuck',
-    updated_at: DateTime.iso8601('2023-02-09T08:29:00.816Z')
+    updated_at: DateTime.iso8601('2023-02-09T17:29:05.942Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1157,10 +1157,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchGenaiTaskRequest.new(
   genai_task: Models::Shared::GenaiTask.new(
-    completed_at: DateTime.iso8601('2025-10-31T18:46:24.388Z'),
+    completed_at: DateTime.iso8601('2025-11-01T14:30:47.709Z'),
     created_at: DateTime.iso8601('2020-10-25T20:19:33.247Z'),
     files_changed: 19.0,
-    id: '35bcc717-6827-428d-ae50-ca48f9066d1a',
+    id: '314721fd-c922-4fae-a99a-097423ec297b',
     instructions: 'Angustus cubo cupio abundans admoveo sumptus.',
     lines_added: 244.0,
     lines_deleted: 118.0,
@@ -1175,12 +1175,12 @@ req = Models::Operations::PatchGenaiTaskRequest.new(
     pullrequest_url: 'https://github.com/felicity.rowe61/eek-save/pull/383',
     repo_url: 'https://github.com/felicity.rowe61/eek-save',
     source_branch_identifier: 'main',
-    started_at: DateTime.iso8601('2024-06-12T12:16:38.242Z'),
+    started_at: DateTime.iso8601('2024-06-13T02:33:42.619Z'),
     status: Models::Shared::GenaiTaskStatus::BLOCKED,
     summary: 'Tenus via tamisium denego teres adsidue cura crur. Coma defungo magnam delicate confero amaritudo varius.',
     target_branch_identifier: 'agent/eek-save',
     tokens_used: 2165.0,
-    updated_at: DateTime.iso8601('2023-03-12T18:05:49.454Z'),
+    updated_at: DateTime.iso8601('2023-03-13T03:26:56.780Z'),
     web_url: 'https://monstrous-honesty.net'
   ),
   connection_id: '<id>',
@@ -1436,11 +1436,11 @@ req = Models::Operations::UpdateGenaiAgentRequest.new(
   genai_agent: Models::Shared::GenaiAgent.new(
     created_at: DateTime.iso8601('2020-12-18T02:23:33.723Z'),
     description: 'Sperno despecto.',
-    id: '83a21c42-dc03-4363-8aa3-e742a371fd4b',
+    id: '8a6a47c4-6a6d-4b33-9712-4f544e6a1c8c',
     instructions: 'Addo vita ver auctus corrumpo substantia conscendo auctus. Astrum sulum aufero bis stella sumptus non.',
     is_active: false,
     name: 'testimonial suddenly',
-    updated_at: DateTime.iso8601('2025-11-15T00:53:50.666Z')
+    updated_at: DateTime.iso8601('2025-11-15T20:41:28.093Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1490,7 +1490,7 @@ req = Models::Operations::UpdateGenaiMemoryRequest.new(
   genai_memory: Models::Shared::GenaiMemory.new(
     content: 'Spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis.',
     created_at: DateTime.iso8601('2021-10-22T04:14:41.668Z'),
-    id: '72a2af7f-b0f2-4952-9674-00804c9341dd',
+    id: '75e69d30-e745-4881-9b94-213ff738e7a1',
     metadata: [
       Models::Shared::GenaiMetadata.new(
         extra_data: {
@@ -1505,7 +1505,7 @@ req = Models::Operations::UpdateGenaiMemoryRequest.new(
     ],
     name: 'tabella.md',
     type: Models::Shared::GenaiMemoryType::MEMORY,
-    updated_at: DateTime.iso8601('2023-05-07T01:36:40.042Z'),
+    updated_at: DateTime.iso8601('2023-05-07T08:50:26.656Z'),
     user_identifier: '70613433-847d-4db6-a8ea-96a2d7513dad'
   ),
   connection_id: '<id>',
@@ -1556,10 +1556,10 @@ req = Models::Operations::UpdateGenaiOrganizationRequest.new(
   genai_organization: Models::Shared::GenaiOrganization.new(
     created_at: DateTime.iso8601('2020-10-27T16:03:47.122Z'),
     description: 'Subito teneo arbor.',
-    id: 'b1db4b66-a920-4541-bf46-ff9235b53447',
+    id: '2303f347-a1d2-4c74-b8a4-09120d3de405',
     is_active: false,
     name: 'yum yuck',
-    updated_at: DateTime.iso8601('2023-02-09T08:29:00.816Z')
+    updated_at: DateTime.iso8601('2023-02-09T17:29:05.942Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1607,10 +1607,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateGenaiTaskRequest.new(
   genai_task: Models::Shared::GenaiTask.new(
-    completed_at: DateTime.iso8601('2025-10-31T18:46:24.388Z'),
+    completed_at: DateTime.iso8601('2025-11-01T14:30:47.709Z'),
     created_at: DateTime.iso8601('2020-10-25T20:19:33.247Z'),
     files_changed: 19.0,
-    id: '35bcc717-6827-428d-ae50-ca48f9066d1a',
+    id: '314721fd-c922-4fae-a99a-097423ec297b',
     instructions: 'Angustus cubo cupio abundans admoveo sumptus.',
     lines_added: 244.0,
     lines_deleted: 118.0,
@@ -1625,12 +1625,12 @@ req = Models::Operations::UpdateGenaiTaskRequest.new(
     pullrequest_url: 'https://github.com/felicity.rowe61/eek-save/pull/383',
     repo_url: 'https://github.com/felicity.rowe61/eek-save',
     source_branch_identifier: 'main',
-    started_at: DateTime.iso8601('2024-06-12T12:16:38.242Z'),
+    started_at: DateTime.iso8601('2024-06-13T02:33:42.619Z'),
     status: Models::Shared::GenaiTaskStatus::BLOCKED,
     summary: 'Tenus via tamisium denego teres adsidue cura crur. Coma defungo magnam delicate confero amaritudo varius.',
     target_branch_identifier: 'agent/eek-save',
     tokens_used: 2165.0,
-    updated_at: DateTime.iso8601('2023-03-12T18:05:49.454Z'),
+    updated_at: DateTime.iso8601('2023-03-13T03:26:56.780Z'),
     web_url: 'https://monstrous-honesty.net'
   ),
   connection_id: '<id>',

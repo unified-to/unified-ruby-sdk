@@ -48,10 +48,10 @@ res = s.company.create_ats_company(ats_company: Models::Shared::AtsCompany.new(
       type: Models::Shared::AtsFeeType::CONTINGENCY
     ),
   ],
-  id: '4b695497-a4d7-4ec9-a1f7-81bfb2d35db9',
+  id: '9f15e026-f097-4d3f-a617-64d035110d6e',
   name: 'Streich, Mohr and Barton',
   phone: '245-586-5728 x0090',
-  updated_at: DateTime.iso8601('2020-10-08T07:29:21.173Z'),
+  updated_at: DateTime.iso8601('2020-10-08T12:06:27.092Z'),
   website_url: 'https://www.streichmohr.com'
 ), connection_id: '<id>')
 
@@ -126,7 +126,7 @@ res = s.company.create_crm_company(crm_company: Models::Shared::CrmCompany.new(
     ),
   ],
   employees: 4177.0,
-  id: '8683b6d5-13db-4e5e-8317-488dced6c7f3',
+  id: '91a47b07-0504-4043-a409-9942d298ffb7',
   industry: 'Accounts',
   is_active: true,
   link_urls: [
@@ -138,7 +138,7 @@ res = s.company.create_crm_company(crm_company: Models::Shared::CrmCompany.new(
         'display_name' => 'Custom Property',
       },
       format: Models::Shared::CrmMetadataFormat::TEXT,
-      id: 'd000e5c4-f515-4e81-8f62-711379eeaf87',
+      id: '6624187c-5280-46fe-be14-79ee57e11365',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'crur'
@@ -157,7 +157,7 @@ res = s.company.create_crm_company(crm_company: Models::Shared::CrmCompany.new(
     ),
   ],
   timezone: 'Australia/Hobart',
-  updated_at: DateTime.iso8601('2025-03-30T18:51:23.024Z'),
+  updated_at: DateTime.iso8601('2025-03-31T12:44:09.741Z'),
   websites: [
     'https://www.muellergroup.com',
   ]
@@ -214,11 +214,11 @@ res = s.company.create_hris_company(hris_company: Models::Shared::HrisCompany.ne
     region_code: 'DE'
   ),
   created_at: DateTime.iso8601('2021-05-02T22:27:38.970Z'),
-  id: '530af9ef-6077-4b18-9609-e99799c593a9',
+  id: '5232267b-78af-4f2f-80ee-4a046226dc9c',
   legal_name: 'Robel LLC LLC',
   metadata: [],
   name: 'Robel LLC',
-  updated_at: DateTime.iso8601('2026-11-14T11:21:17.639Z')
+  updated_at: DateTime.iso8601('2026-11-15T11:09:45.367Z')
 ), connection_id: '<id>')
 
 unless res.hris_company.nil?
@@ -575,10 +575,10 @@ req = Models::Operations::PatchAtsCompanyRequest.new(
         type: Models::Shared::AtsFeeType::CONTINGENCY
       ),
     ],
-    id: '069bec3c-072c-4809-b557-543e12a8c350',
+    id: '234a8086-78c0-41e0-b03d-67176ef65edc',
     name: 'Streich, Mohr and Barton',
     phone: '245-586-5728 x0090',
-    updated_at: DateTime.iso8601('2020-10-08T07:29:21.175Z'),
+    updated_at: DateTime.iso8601('2020-10-08T12:06:27.096Z'),
     website_url: 'https://www.streichmohr.com'
   ),
   connection_id: '<id>',
@@ -656,7 +656,7 @@ req = Models::Operations::PatchCrmCompanyRequest.new(
       ),
     ],
     employees: 4177.0,
-    id: '99a61e9e-03a4-4b68-947e-b02130b7cb5e',
+    id: '57775774-6f4b-4e9a-b783-1c782e25d6a2',
     industry: 'Accounts',
     is_active: true,
     link_urls: [
@@ -668,7 +668,7 @@ req = Models::Operations::PatchCrmCompanyRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: 'b59dd4d8-b4c5-4fbb-9f44-83258eece8e7',
+        id: 'c3ffad0d-99d0-4689-aa5f-d34627365ca3',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'crur'
@@ -687,7 +687,7 @@ req = Models::Operations::PatchCrmCompanyRequest.new(
       ),
     ],
     timezone: 'Australia/Hobart',
-    updated_at: DateTime.iso8601('2025-03-30T18:51:23.037Z'),
+    updated_at: DateTime.iso8601('2025-03-31T12:44:09.753Z'),
     websites: [
       'https://www.muellergroup.com',
     ]
@@ -747,11 +747,11 @@ req = Models::Operations::PatchHrisCompanyRequest.new(
       region_code: 'DE'
     ),
     created_at: DateTime.iso8601('2021-05-02T22:27:38.970Z'),
-    id: 'e8afa5c6-716d-449a-ac06-e260a53c6512',
+    id: '75685ee2-e7ed-4037-b771-054af2e4ddc5',
     legal_name: 'Robel LLC LLC',
     metadata: [],
     name: 'Robel LLC',
-    updated_at: DateTime.iso8601('2026-11-14T11:21:17.649Z')
+    updated_at: DateTime.iso8601('2026-11-15T11:09:45.383Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -929,10 +929,10 @@ req = Models::Operations::UpdateAtsCompanyRequest.new(
         type: Models::Shared::AtsFeeType::CONTINGENCY
       ),
     ],
-    id: '069bec3c-072c-4809-b557-543e12a8c350',
+    id: '234a8086-78c0-41e0-b03d-67176ef65edc',
     name: 'Streich, Mohr and Barton',
     phone: '245-586-5728 x0090',
-    updated_at: DateTime.iso8601('2020-10-08T07:29:21.175Z'),
+    updated_at: DateTime.iso8601('2020-10-08T12:06:27.096Z'),
     website_url: 'https://www.streichmohr.com'
   ),
   connection_id: '<id>',
@@ -1010,7 +1010,7 @@ req = Models::Operations::UpdateCrmCompanyRequest.new(
       ),
     ],
     employees: 4177.0,
-    id: '99a61e9e-03a4-4b68-947e-b02130b7cb5e',
+    id: '57775774-6f4b-4e9a-b783-1c782e25d6a2',
     industry: 'Accounts',
     is_active: true,
     link_urls: [
@@ -1022,7 +1022,7 @@ req = Models::Operations::UpdateCrmCompanyRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: 'b59dd4d8-b4c5-4fbb-9f44-83258eece8e7',
+        id: 'c3ffad0d-99d0-4689-aa5f-d34627365ca3',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'crur'
@@ -1041,7 +1041,7 @@ req = Models::Operations::UpdateCrmCompanyRequest.new(
       ),
     ],
     timezone: 'Australia/Hobart',
-    updated_at: DateTime.iso8601('2025-03-30T18:51:23.037Z'),
+    updated_at: DateTime.iso8601('2025-03-31T12:44:09.753Z'),
     websites: [
       'https://www.muellergroup.com',
     ]
@@ -1101,11 +1101,11 @@ req = Models::Operations::UpdateHrisCompanyRequest.new(
       region_code: 'DE'
     ),
     created_at: DateTime.iso8601('2021-05-02T22:27:38.970Z'),
-    id: 'e8afa5c6-716d-449a-ac06-e260a53c6512',
+    id: '75685ee2-e7ed-4037-b771-054af2e4ddc5',
     legal_name: 'Robel LLC LLC',
     metadata: [],
     name: 'Robel LLC',
-    updated_at: DateTime.iso8601('2026-11-14T11:21:17.649Z')
+    updated_at: DateTime.iso8601('2026-11-15T11:09:45.383Z')
   ),
   connection_id: '<id>',
   id: '<id>'

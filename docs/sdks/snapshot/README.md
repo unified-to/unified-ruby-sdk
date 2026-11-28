@@ -29,13 +29,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.snapshot.create_compute_snapshot(compute_snapshot: Models::Shared::ComputeSnapshot.new(
   created_at: DateTime.iso8601('2021-09-24T14:40:06.110Z'),
-  id: '850da607-1662-449a-b96b-fa529935e675',
+  id: '1bb0b155-37aa-4365-8dba-0036c2148086',
   metadata: [],
   name: 'snap-cito',
   size_mb: 169_984.0,
   status: Models::Shared::ComputeSnapshotStatus::DELETING,
   type: Models::Shared::ComputeSnapshotType::DISK,
-  updated_at: DateTime.iso8601('2026-05-02T19:57:52.176Z')
+  updated_at: DateTime.iso8601('2026-05-03T17:16:49.749Z')
 ), connection_id: '<id>')
 
 unless res.compute_snapshot.nil?
@@ -170,13 +170,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchComputeSnapshotRequest.new(
   compute_snapshot: Models::Shared::ComputeSnapshot.new(
     created_at: DateTime.iso8601('2021-09-24T14:40:06.110Z'),
-    id: '549e6f78-294f-4d5b-a503-6b057f5d8a0c',
+    id: '8d77ed4d-40e1-43a5-9b86-078cbbcd9162',
     metadata: [],
     name: 'snap-cito',
     size_mb: 169_984.0,
     status: Models::Shared::ComputeSnapshotStatus::DELETING,
     type: Models::Shared::ComputeSnapshotType::DISK,
-    updated_at: DateTime.iso8601('2026-05-02T19:57:52.183Z')
+    updated_at: DateTime.iso8601('2026-05-03T17:16:49.759Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -266,13 +266,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateComputeSnapshotRequest.new(
   compute_snapshot: Models::Shared::ComputeSnapshot.new(
     created_at: DateTime.iso8601('2021-09-24T14:40:06.110Z'),
-    id: '549e6f78-294f-4d5b-a503-6b057f5d8a0c',
+    id: '8d77ed4d-40e1-43a5-9b86-078cbbcd9162',
     metadata: [],
     name: 'snap-cito',
     size_mb: 169_984.0,
     status: Models::Shared::ComputeSnapshotStatus::DELETING,
     type: Models::Shared::ComputeSnapshotType::DISK,
-    updated_at: DateTime.iso8601('2026-05-02T19:57:52.183Z')
+    updated_at: DateTime.iso8601('2026-05-03T17:16:49.759Z')
   ),
   connection_id: '<id>',
   id: '<id>'

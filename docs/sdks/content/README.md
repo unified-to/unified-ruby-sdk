@@ -35,7 +35,7 @@ res = s.content.create_lms_content(lms_content: Models::Shared::LmsContent.new(
   description: 'Adflicto despecto suppellex socius cresco.',
   difficulty: 'Beginner',
   duration_minutes: 19.0,
-  id: 'fe1ad914-67ce-4900-bbd9-1807fd6f1c62',
+  id: '82b2da94-99b0-4e3d-963b-4d5155299567',
   instructors: [],
   is_active: true,
   languages: [
@@ -95,7 +95,7 @@ res = s.content.create_lms_content(lms_content: Models::Shared::LmsContent.new(
   metadata: [],
   name: 'laboriosam',
   provider_name: 'Mraz - Keeling',
-  published_at: DateTime.iso8601('2022-09-14T18:25:33.374Z'),
+  published_at: DateTime.iso8601('2022-09-15T01:52:15.286Z'),
   short_description: 'Videlicet pauci.',
   skills: [
     'soleo',
@@ -110,7 +110,7 @@ res = s.content.create_lms_content(lms_content: Models::Shared::LmsContent.new(
   tags: [
     'audio',
   ],
-  updated_at: DateTime.iso8601('2022-10-16T05:15:01.227Z')
+  updated_at: DateTime.iso8601('2022-10-16T13:02:01.571Z')
 ), connection_id: '<id>')
 
 unless res.lms_content.nil?
@@ -251,7 +251,7 @@ req = Models::Operations::PatchLmsContentRequest.new(
     description: 'Adflicto despecto suppellex socius cresco.',
     difficulty: 'Beginner',
     duration_minutes: 19.0,
-    id: '7c699388-ed1b-4295-88ab-d5d6ba1b694a',
+    id: '404a9ce3-33da-4a03-9dac-d944eeba3ce9',
     instructors: [],
     is_active: true,
     languages: [
@@ -311,7 +311,7 @@ req = Models::Operations::PatchLmsContentRequest.new(
     metadata: [],
     name: 'laboriosam',
     provider_name: 'Mraz - Keeling',
-    published_at: DateTime.iso8601('2022-09-14T18:25:33.381Z'),
+    published_at: DateTime.iso8601('2022-09-15T01:52:15.296Z'),
     short_description: 'Videlicet pauci.',
     skills: [
       'soleo',
@@ -326,7 +326,7 @@ req = Models::Operations::PatchLmsContentRequest.new(
     tags: [
       'audio',
     ],
-    updated_at: DateTime.iso8601('2022-10-16T05:15:01.233Z')
+    updated_at: DateTime.iso8601('2022-10-16T13:02:01.581Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -422,7 +422,7 @@ req = Models::Operations::UpdateLmsContentRequest.new(
     description: 'Adflicto despecto suppellex socius cresco.',
     difficulty: 'Beginner',
     duration_minutes: 19.0,
-    id: '7c699388-ed1b-4295-88ab-d5d6ba1b694a',
+    id: '404a9ce3-33da-4a03-9dac-d944eeba3ce9',
     instructors: [],
     is_active: true,
     languages: [
@@ -482,7 +482,7 @@ req = Models::Operations::UpdateLmsContentRequest.new(
     metadata: [],
     name: 'laboriosam',
     provider_name: 'Mraz - Keeling',
-    published_at: DateTime.iso8601('2022-09-14T18:25:33.381Z'),
+    published_at: DateTime.iso8601('2022-09-15T01:52:15.296Z'),
     short_description: 'Videlicet pauci.',
     skills: [
       'soleo',
@@ -497,7 +497,7 @@ req = Models::Operations::UpdateLmsContentRequest.new(
     tags: [
       'audio',
     ],
-    updated_at: DateTime.iso8601('2022-10-16T05:15:01.233Z')
+    updated_at: DateTime.iso8601('2022-10-16T13:02:01.581Z')
   ),
   connection_id: '<id>',
   id: '<id>'

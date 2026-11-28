@@ -36,7 +36,7 @@ res = s.course.create_lms_course(lms_course: Models::Shared::LmsCourse.new(
   currency: 'DZD',
   description: 'Aut.',
   duration_minutes: 148.0,
-  id: '40a97e02-eb36-47f0-8bd0-c5f0eb3a92b7',
+  id: '248a2787-3388-4337-8723-f74275fba791',
   instructors: [],
   is_active: true,
   is_private: false,
@@ -63,14 +63,14 @@ res = s.course.create_lms_course(lms_course: Models::Shared::LmsCourse.new(
   name: 'vinco',
   price_amount: 84.0,
   provider_name: 'Roberts Group',
-  published_at: DateTime.iso8601('2022-11-06T12:27:14.244Z'),
+  published_at: DateTime.iso8601('2022-11-06T12:56:47.561Z'),
   skills: [
     'aveho',
     'via',
   ],
   students: [],
   time_estimate_minutes: 100.0,
-  updated_at: DateTime.iso8601('2023-02-12T22:24:37.401Z')
+  updated_at: DateTime.iso8601('2023-02-13T00:27:41.771Z')
 ), connection_id: '<id>')
 
 unless res.lms_course.nil?
@@ -212,7 +212,7 @@ req = Models::Operations::PatchLmsCourseRequest.new(
     currency: 'DZD',
     description: 'Aut.',
     duration_minutes: 148.0,
-    id: 'e542c7a9-4fa3-4357-bfca-4353797da1e9',
+    id: 'b2467c99-d774-4b46-91d0-744889fd21ad',
     instructors: [],
     is_active: true,
     is_private: false,
@@ -239,14 +239,14 @@ req = Models::Operations::PatchLmsCourseRequest.new(
     name: 'vinco',
     price_amount: 84.0,
     provider_name: 'Roberts Group',
-    published_at: DateTime.iso8601('2022-11-06T12:27:14.245Z'),
+    published_at: DateTime.iso8601('2022-11-06T12:56:47.562Z'),
     skills: [
       'aveho',
       'via',
     ],
     students: [],
     time_estimate_minutes: 100.0,
-    updated_at: DateTime.iso8601('2023-02-12T22:24:37.403Z')
+    updated_at: DateTime.iso8601('2023-02-13T00:27:41.773Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -343,7 +343,7 @@ req = Models::Operations::UpdateLmsCourseRequest.new(
     currency: 'DZD',
     description: 'Aut.',
     duration_minutes: 148.0,
-    id: 'e542c7a9-4fa3-4357-bfca-4353797da1e9',
+    id: 'b2467c99-d774-4b46-91d0-744889fd21ad',
     instructors: [],
     is_active: true,
     is_private: false,
@@ -370,14 +370,14 @@ req = Models::Operations::UpdateLmsCourseRequest.new(
     name: 'vinco',
     price_amount: 84.0,
     provider_name: 'Roberts Group',
-    published_at: DateTime.iso8601('2022-11-06T12:27:14.245Z'),
+    published_at: DateTime.iso8601('2022-11-06T12:56:47.562Z'),
     skills: [
       'aveho',
       'via',
     ],
     students: [],
     time_estimate_minutes: 100.0,
-    updated_at: DateTime.iso8601('2023-02-12T22:24:37.403Z')
+    updated_at: DateTime.iso8601('2023-02-13T00:27:41.773Z')
   ),
   connection_id: '<id>',
   id: '<id>'

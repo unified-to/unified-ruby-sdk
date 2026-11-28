@@ -36,7 +36,7 @@ res = s.patient.create_healthcare_patient(healthcare_patient: Models::Shared::He
     postal_code: '99263-6004',
     region: 'New Jersey'
   ),
-  birthdate: '1941-12-26',
+  birthdate: '1941-12-27',
   contacts: [
     Models::Shared::HealthcarePatientContact.new(
       emails: [],
@@ -59,7 +59,7 @@ res = s.patient.create_healthcare_patient(healthcare_patient: Models::Shared::He
   ],
   first_name: 'Monroe',
   gender: Models::Shared::HealthcarePatientGender::FEMALE,
-  id: '7480d151-1940-480a-b239-7e586ba3ebef',
+  id: 'e75fb571-0f66-4825-b329-ee9daac31195',
   identifiers: [
     Models::Shared::HealthcareIdentifier.new(
       type: Models::Shared::HealthcareIdentifierType::MRN,
@@ -79,7 +79,7 @@ res = s.patient.create_healthcare_patient(healthcare_patient: Models::Shared::He
       type: Models::Shared::HealthcareTelephoneType::MOBILE
     ),
   ],
-  updated_at: DateTime.iso8601('2026-07-27T14:23:00.268Z')
+  updated_at: DateTime.iso8601('2026-07-28T12:52:21.913Z')
 ), connection_id: '<id>')
 
 unless res.healthcare_patient.nil?
@@ -305,7 +305,7 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
       postal_code: '99263-6004',
       region: 'New Jersey'
     ),
-    birthdate: '1941-12-26',
+    birthdate: '1941-12-27',
     contacts: [
       Models::Shared::HealthcarePatientContact.new(
         emails: [],
@@ -328,7 +328,7 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
     ],
     first_name: 'Monroe',
     gender: Models::Shared::HealthcarePatientGender::FEMALE,
-    id: 'bd04b0be-e6f4-4802-bdc0-6f406f2f9a90',
+    id: 'fe8fe141-d18c-47f8-9b92-e569a55cb9b4',
     identifiers: [
       Models::Shared::HealthcareIdentifier.new(
         type: Models::Shared::HealthcareIdentifierType::MRN,
@@ -348,7 +348,7 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
         type: Models::Shared::HealthcareTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2026-07-27T14:23:00.310Z')
+    updated_at: DateTime.iso8601('2026-07-28T12:52:21.964Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -403,7 +403,7 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
       postal_code: '99263-6004',
       region: 'New Jersey'
     ),
-    birthdate: '1941-12-26',
+    birthdate: '1941-12-27',
     contacts: [
       Models::Shared::HealthcarePatientContact.new(
         emails: [],
@@ -426,7 +426,7 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
     ],
     first_name: 'Monroe',
     gender: Models::Shared::HealthcarePatientGender::FEMALE,
-    id: 'bd04b0be-e6f4-4802-bdc0-6f406f2f9a90',
+    id: 'fe8fe141-d18c-47f8-9b92-e569a55cb9b4',
     identifiers: [
       Models::Shared::HealthcareIdentifier.new(
         type: Models::Shared::HealthcareIdentifierType::MRN,
@@ -446,7 +446,7 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
         type: Models::Shared::HealthcareTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2026-07-27T14:23:00.310Z')
+    updated_at: DateTime.iso8601('2026-07-28T12:52:21.964Z')
   ),
   connection_id: '<id>',
   id: '<id>'

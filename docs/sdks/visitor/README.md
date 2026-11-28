@@ -31,13 +31,13 @@ res = s.visitor.create_analytics_visitor(analytics_visitor: Models::Shared::Anal
   created_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
   email: 'madisen.jenkins@icloud.com',
   first_seen_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
-  id: '2c660cc5-e326-42c5-8df0-b3aafb93fd93',
-  last_seen_at: DateTime.iso8601('2025-02-07T06:00:50.040Z'),
+  id: '9118746d-bf44-4381-a06b-11768b8fa468',
+  last_seen_at: DateTime.iso8601('2025-02-07T23:26:42.462Z'),
   metadata: {
     'segment' => Models::Shared::PropertyAnalyticsVisitorMetadata.new,
   },
   total_events: 2916.0,
-  updated_at: DateTime.iso8601('2025-07-29T07:01:04.912Z')
+  updated_at: DateTime.iso8601('2025-07-30T02:09:20.536Z')
 ), connection_id: '<id>')
 
 unless res.analytics_visitor.nil?
@@ -174,13 +174,13 @@ req = Models::Operations::PatchAnalyticsVisitorRequest.new(
     created_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
     email: 'madisen.jenkins@icloud.com',
     first_seen_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
-    id: 'a773c877-737d-457f-acf6-6c071368e879',
-    last_seen_at: DateTime.iso8601('2025-02-07T06:00:50.049Z'),
+    id: 'c571fd05-c839-449b-8197-53e3de16eef3',
+    last_seen_at: DateTime.iso8601('2025-02-07T23:26:42.471Z'),
     metadata: {
       'segment' => Models::Shared::PropertyAnalyticsVisitorMetadata.new,
     },
     total_events: 2916.0,
-    updated_at: DateTime.iso8601('2025-07-29T07:01:04.922Z')
+    updated_at: DateTime.iso8601('2025-07-30T02:09:20.546Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -272,13 +272,13 @@ req = Models::Operations::UpdateAnalyticsVisitorRequest.new(
     created_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
     email: 'madisen.jenkins@icloud.com',
     first_seen_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
-    id: 'a773c877-737d-457f-acf6-6c071368e879',
-    last_seen_at: DateTime.iso8601('2025-02-07T06:00:50.049Z'),
+    id: 'c571fd05-c839-449b-8197-53e3de16eef3',
+    last_seen_at: DateTime.iso8601('2025-02-07T23:26:42.471Z'),
     metadata: {
       'segment' => Models::Shared::PropertyAnalyticsVisitorMetadata.new,
     },
     total_events: 2916.0,
-    updated_at: DateTime.iso8601('2025-07-29T07:01:04.922Z')
+    updated_at: DateTime.iso8601('2025-07-30T02:09:20.546Z')
   ),
   connection_id: '<id>',
   id: '<id>'

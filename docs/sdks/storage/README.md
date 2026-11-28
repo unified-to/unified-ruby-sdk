@@ -32,7 +32,7 @@ res = s.storage.create_storage_file(storage_file: Models::Shared::StorageFile.ne
   description: 'Debilito cimentarius virgo acidus thymbra.',
   download_url: 'https://messy-clamp.net/',
   hash: '9d88dda7bc0acaa8472fdef2307f94a1fc355cef',
-  id: '3ee25bdc-2450-45f6-8a6a-09424cd8ed52',
+  id: 'd7093f6a-ac8a-4c92-b8b4-6457f0a28725',
   metadata: [],
   mime_type: 'application/pdf',
   name: 'joshingly.pdf',
@@ -41,7 +41,7 @@ res = s.storage.create_storage_file(storage_file: Models::Shared::StorageFile.ne
     'derelinquo',
   ],
   type: Models::Shared::StorageFileType::FOLDER,
-  updated_at: DateTime.iso8601('2023-02-15T16:27:08.824Z'),
+  updated_at: DateTime.iso8601('2023-02-15T23:00:59.682Z'),
   version: '1',
   web_url: 'https://likable-widow.org/'
 ), connection_id: '<id>')
@@ -181,7 +181,7 @@ req = Models::Operations::PatchStorageFileRequest.new(
     description: 'Debilito cimentarius virgo acidus thymbra.',
     download_url: 'https://messy-clamp.net/',
     hash: '9d88dda7bc0acaa8472fdef2307f94a1fc355cef',
-    id: '953912c3-8ca0-4b6f-846e-3b519e79e933',
+    id: '457fdfd5-5192-42b2-b1c1-ebcf5b07c5a5',
     metadata: [],
     mime_type: 'application/pdf',
     name: 'joshingly.pdf',
@@ -190,7 +190,7 @@ req = Models::Operations::PatchStorageFileRequest.new(
       'derelinquo',
     ],
     type: Models::Shared::StorageFileType::FOLDER,
-    updated_at: DateTime.iso8601('2023-02-15T16:27:08.828Z'),
+    updated_at: DateTime.iso8601('2023-02-15T23:00:59.686Z'),
     version: '1',
     web_url: 'https://likable-widow.org/'
   ),
@@ -285,7 +285,7 @@ req = Models::Operations::UpdateStorageFileRequest.new(
     description: 'Debilito cimentarius virgo acidus thymbra.',
     download_url: 'https://messy-clamp.net/',
     hash: '9d88dda7bc0acaa8472fdef2307f94a1fc355cef',
-    id: '953912c3-8ca0-4b6f-846e-3b519e79e933',
+    id: '457fdfd5-5192-42b2-b1c1-ebcf5b07c5a5',
     metadata: [],
     mime_type: 'application/pdf',
     name: 'joshingly.pdf',
@@ -294,7 +294,7 @@ req = Models::Operations::UpdateStorageFileRequest.new(
       'derelinquo',
     ],
     type: Models::Shared::StorageFileType::FOLDER,
-    updated_at: DateTime.iso8601('2023-02-15T16:27:08.828Z'),
+    updated_at: DateTime.iso8601('2023-02-15T23:00:59.686Z'),
     version: '1',
     web_url: 'https://likable-widow.org/'
   ),

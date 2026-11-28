@@ -48,15 +48,15 @@ res = s.group.create_ads_group(ads_group: Models::Shared::AdsGroup.new(
   created_at: DateTime.iso8601('2019-08-29T17:59:41.045Z'),
   currency: 'USD',
   effective_status: Models::Shared::AdsGroupEffectiveStatus::PAUSED,
-  end_at: DateTime.iso8601('2026-07-30T09:52:31.075Z'),
-  id: 'a7c35642-58c3-4b2e-b7dc-e0cc0f90b837',
+  end_at: DateTime.iso8601('2026-07-31T08:44:52.838Z'),
+  id: '3bb4e09f-6661-460e-8406-5c3396ea513e',
   language_locale: 'fr-FR',
   metadata: [],
   name: 'Shanahan, Schumm and Emard',
-  start_at: DateTime.iso8601('2026-02-11T06:19:29.148Z'),
+  start_at: DateTime.iso8601('2026-02-12T03:39:58.522Z'),
   status: Models::Shared::AdsGroupStatus::PROCESSING,
   targeting: Models::Shared::PropertyAdsGroupTargeting.new,
-  updated_at: DateTime.iso8601('2022-01-25T23:45:46.887Z')
+  updated_at: DateTime.iso8601('2022-01-26T07:43:53.174Z')
 ), connection_id: '<id>')
 
 unless res.ads_group.nil?
@@ -103,12 +103,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.group.create_hris_group(hris_group: Models::Shared::HrisGroup.new(
   created_at: DateTime.iso8601('2023-11-01T13:13:40.714Z'),
   description: 'Umbra comptus temporibus.',
-  id: '37196897-80b3-47a0-8f05-b9dc08c4039d',
+  id: 'adc08b1e-aab3-4d4a-8b1f-529975bea0ae',
   is_active: false,
   metadata: [],
   name: 'Computers',
   type: Models::Shared::HrisGroupType::BRANCH,
-  updated_at: DateTime.iso8601('2026-06-22T19:22:17.853Z')
+  updated_at: DateTime.iso8601('2026-06-23T15:58:08.519Z')
 ), connection_id: '<id>')
 
 unless res.hris_group.nil?
@@ -550,15 +550,15 @@ req = Models::Operations::PatchAdsGroupRequest.new(
     created_at: DateTime.iso8601('2019-08-29T17:59:41.045Z'),
     currency: 'USD',
     effective_status: Models::Shared::AdsGroupEffectiveStatus::PAUSED,
-    end_at: DateTime.iso8601('2026-07-30T09:52:31.259Z'),
-    id: '52378591-59b7-4bfa-b370-1841d8115aa6',
+    end_at: DateTime.iso8601('2026-07-31T08:44:53.009Z'),
+    id: 'b9ba815a-4da4-419c-bf52-9363d0d9cc10',
     language_locale: 'fr-FR',
     metadata: [],
     name: 'Shanahan, Schumm and Emard',
-    start_at: DateTime.iso8601('2026-02-11T06:19:29.319Z'),
+    start_at: DateTime.iso8601('2026-02-12T03:39:58.682Z'),
     status: Models::Shared::AdsGroupStatus::PROCESSING,
     targeting: Models::Shared::PropertyAdsGroupTargeting.new,
-    updated_at: DateTime.iso8601('2022-01-25T23:45:46.951Z')
+    updated_at: DateTime.iso8601('2022-01-26T07:43:53.234Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -608,12 +608,12 @@ req = Models::Operations::PatchHrisGroupRequest.new(
   hris_group: Models::Shared::HrisGroup.new(
     created_at: DateTime.iso8601('2023-11-01T13:13:40.714Z'),
     description: 'Umbra comptus temporibus.',
-    id: '02c27e28-225e-4b9f-8166-a4a4776c0b17',
+    id: '35ac1286-fb0c-41ba-a492-b7cd6f8c943b',
     is_active: false,
     metadata: [],
     name: 'Computers',
     type: Models::Shared::HrisGroupType::BRANCH,
-    updated_at: DateTime.iso8601('2026-06-22T19:22:17.860Z')
+    updated_at: DateTime.iso8601('2026-06-23T15:58:08.532Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -834,15 +834,15 @@ req = Models::Operations::UpdateAdsGroupRequest.new(
     created_at: DateTime.iso8601('2019-08-29T17:59:41.045Z'),
     currency: 'USD',
     effective_status: Models::Shared::AdsGroupEffectiveStatus::PAUSED,
-    end_at: DateTime.iso8601('2026-07-30T09:52:31.259Z'),
-    id: '52378591-59b7-4bfa-b370-1841d8115aa6',
+    end_at: DateTime.iso8601('2026-07-31T08:44:53.009Z'),
+    id: 'b9ba815a-4da4-419c-bf52-9363d0d9cc10',
     language_locale: 'fr-FR',
     metadata: [],
     name: 'Shanahan, Schumm and Emard',
-    start_at: DateTime.iso8601('2026-02-11T06:19:29.319Z'),
+    start_at: DateTime.iso8601('2026-02-12T03:39:58.682Z'),
     status: Models::Shared::AdsGroupStatus::PROCESSING,
     targeting: Models::Shared::PropertyAdsGroupTargeting.new,
-    updated_at: DateTime.iso8601('2022-01-25T23:45:46.951Z')
+    updated_at: DateTime.iso8601('2022-01-26T07:43:53.234Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -892,12 +892,12 @@ req = Models::Operations::UpdateHrisGroupRequest.new(
   hris_group: Models::Shared::HrisGroup.new(
     created_at: DateTime.iso8601('2023-11-01T13:13:40.714Z'),
     description: 'Umbra comptus temporibus.',
-    id: '02c27e28-225e-4b9f-8166-a4a4776c0b17',
+    id: '35ac1286-fb0c-41ba-a492-b7cd6f8c943b',
     is_active: false,
     metadata: [],
     name: 'Computers',
     type: Models::Shared::HrisGroupType::BRANCH,
-    updated_at: DateTime.iso8601('2026-06-22T19:22:17.860Z')
+    updated_at: DateTime.iso8601('2026-06-23T15:58:08.532Z')
   ),
   connection_id: '<id>',
   id: '<id>'

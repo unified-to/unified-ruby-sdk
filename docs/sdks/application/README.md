@@ -29,17 +29,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.application.create_ats_application(ats_application: Models::Shared::AtsApplication.new(
   answers: [],
-  applied_at: DateTime.iso8601('2025-10-23T19:07:12.847Z'),
+  applied_at: DateTime.iso8601('2025-10-24T10:39:44.717Z'),
   created_at: DateTime.iso8601('2023-10-17T07:19:48.787Z'),
-  hired_at: DateTime.iso8601('2026-06-13T08:42:30.443Z'),
-  id: 'f560bd48-cf7a-48bb-b169-5b08f8ece3d8',
+  hired_at: DateTime.iso8601('2026-06-14T05:09:06.607Z'),
+  id: 'd79afaba-ee6a-475c-83cd-7c18be29879d',
   metadata: [
     Models::Shared::AtsMetadata.new(
       extra_data: {
 
       },
       format: Models::Shared::AtsMetadataFormat::TEXT,
-      id: 'db123a63-dc6d-44be-b46a-2e2e5a45dfe3',
+      id: '51ca9aeb-5c4f-40dd-a08d-ff3ca53d68d6',
       namespace: 'application',
       slug: 'arguo',
       value: 'Defessus occaecati adflicto caecus claustrum annus addo.'
@@ -48,12 +48,12 @@ res = s.application.create_ats_application(ats_application: Models::Shared::AtsA
   offers: [],
   original_status: 'caput',
   original_substatus: 'admiratio',
-  rejected_at: DateTime.iso8601('2026-11-17T05:56:17.250Z'),
+  rejected_at: DateTime.iso8601('2026-11-18T05:41:15.907Z'),
   rejected_reason: 'Talio credo vomica allatus stella.',
   source: 'alii',
   status: Models::Shared::AtsApplicationStatus::REVIEWING,
   summary: 'Crebro nostrum alias sponte turbo sopor vergo surculus nam copiose. Enim casso cursus aestus deprecator. Despecto tabella argentum decretum cultellus aveho distinctio verecundia stella.',
-  updated_at: DateTime.iso8601('2026-11-24T07:42:17.057Z')
+  updated_at: DateTime.iso8601('2026-11-25T07:36:12.374Z')
 ), connection_id: '<id>')
 
 unless res.ats_application.nil?
@@ -188,17 +188,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAtsApplicationRequest.new(
   ats_application: Models::Shared::AtsApplication.new(
     answers: [],
-    applied_at: DateTime.iso8601('2025-10-23T19:07:12.860Z'),
+    applied_at: DateTime.iso8601('2025-10-24T10:39:44.736Z'),
     created_at: DateTime.iso8601('2023-10-17T07:19:48.787Z'),
-    hired_at: DateTime.iso8601('2026-06-13T08:42:30.460Z'),
-    id: 'c16d7158-809e-444e-8a8c-5bc508759c7f',
+    hired_at: DateTime.iso8601('2026-06-14T05:09:06.632Z'),
+    id: '1f8d97ba-ec20-4b90-b874-17e68a52013e',
     metadata: [
       Models::Shared::AtsMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '2a28fead-11ce-40bc-a8b2-851c1bbd0904',
+        id: '65a052a8-8e5c-470c-a37a-d85fadef393a',
         namespace: 'application',
         slug: 'arguo',
         value: 'Defessus occaecati adflicto caecus claustrum annus addo.'
@@ -207,12 +207,12 @@ req = Models::Operations::PatchAtsApplicationRequest.new(
     offers: [],
     original_status: 'caput',
     original_substatus: 'admiratio',
-    rejected_at: DateTime.iso8601('2026-11-17T05:56:17.269Z'),
+    rejected_at: DateTime.iso8601('2026-11-18T05:41:15.937Z'),
     rejected_reason: 'Talio credo vomica allatus stella.',
     source: 'alii',
     status: Models::Shared::AtsApplicationStatus::REVIEWING,
     summary: 'Crebro nostrum alias sponte turbo sopor vergo surculus nam copiose. Enim casso cursus aestus deprecator. Despecto tabella argentum decretum cultellus aveho distinctio verecundia stella.',
-    updated_at: DateTime.iso8601('2026-11-24T07:42:17.076Z')
+    updated_at: DateTime.iso8601('2026-11-25T07:36:12.404Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -302,17 +302,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAtsApplicationRequest.new(
   ats_application: Models::Shared::AtsApplication.new(
     answers: [],
-    applied_at: DateTime.iso8601('2025-10-23T19:07:12.860Z'),
+    applied_at: DateTime.iso8601('2025-10-24T10:39:44.736Z'),
     created_at: DateTime.iso8601('2023-10-17T07:19:48.787Z'),
-    hired_at: DateTime.iso8601('2026-06-13T08:42:30.460Z'),
-    id: 'c16d7158-809e-444e-8a8c-5bc508759c7f',
+    hired_at: DateTime.iso8601('2026-06-14T05:09:06.632Z'),
+    id: '1f8d97ba-ec20-4b90-b874-17e68a52013e',
     metadata: [
       Models::Shared::AtsMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '2a28fead-11ce-40bc-a8b2-851c1bbd0904',
+        id: '65a052a8-8e5c-470c-a37a-d85fadef393a',
         namespace: 'application',
         slug: 'arguo',
         value: 'Defessus occaecati adflicto caecus claustrum annus addo.'
@@ -321,12 +321,12 @@ req = Models::Operations::UpdateAtsApplicationRequest.new(
     offers: [],
     original_status: 'caput',
     original_substatus: 'admiratio',
-    rejected_at: DateTime.iso8601('2026-11-17T05:56:17.269Z'),
+    rejected_at: DateTime.iso8601('2026-11-18T05:41:15.937Z'),
     rejected_reason: 'Talio credo vomica allatus stella.',
     source: 'alii',
     status: Models::Shared::AtsApplicationStatus::REVIEWING,
     summary: 'Crebro nostrum alias sponte turbo sopor vergo surculus nam copiose. Enim casso cursus aestus deprecator. Despecto tabella argentum decretum cultellus aveho distinctio verecundia stella.',
-    updated_at: DateTime.iso8601('2026-11-24T07:42:17.076Z')
+    updated_at: DateTime.iso8601('2026-11-25T07:36:12.404Z')
   ),
   connection_id: '<id>',
   id: '<id>'

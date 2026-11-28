@@ -36,7 +36,7 @@ res = s.device.create_hris_device(hris_device: Models::Shared::HrisDevice.new(
   has_hd_encrypted: true,
   has_password_manager: true,
   has_screenlock: false,
-  id: '49b68bd9-8adf-4fa8-ab01-ea00abd8430d',
+  id: '8c16a417-0b91-4c54-8329-ba916023b18a',
   is_missing: false,
   manufacturer: 'Erdman - Huels',
   metadata: [],
@@ -44,7 +44,7 @@ res = s.device.create_hris_device(hris_device: Models::Shared::HrisDevice.new(
   name: 'nedra-laptop',
   os: 'program',
   os_version: '4.14.16',
-  updated_at: DateTime.iso8601('2023-06-28T19:06:09.157Z'),
+  updated_at: DateTime.iso8601('2023-06-29T08:21:42.392Z'),
   version: '2.15.16'
 ), connection_id: '<id>')
 
@@ -187,7 +187,7 @@ req = Models::Operations::PatchHrisDeviceRequest.new(
     has_hd_encrypted: true,
     has_password_manager: true,
     has_screenlock: false,
-    id: 'c4a9e7d4-0256-4844-9c69-98c45a2c64fd',
+    id: 'ecad7b88-952a-4c4b-b8f5-dfee15b3b851',
     is_missing: false,
     manufacturer: 'Erdman - Huels',
     metadata: [],
@@ -195,7 +195,7 @@ req = Models::Operations::PatchHrisDeviceRequest.new(
     name: 'nedra-laptop',
     os: 'program',
     os_version: '4.14.16',
-    updated_at: DateTime.iso8601('2023-06-28T19:06:09.163Z'),
+    updated_at: DateTime.iso8601('2023-06-29T08:21:42.408Z'),
     version: '2.15.16'
   ),
   connection_id: '<id>',
@@ -293,7 +293,7 @@ req = Models::Operations::UpdateHrisDeviceRequest.new(
     has_hd_encrypted: true,
     has_password_manager: true,
     has_screenlock: false,
-    id: 'c4a9e7d4-0256-4844-9c69-98c45a2c64fd',
+    id: 'ecad7b88-952a-4c4b-b8f5-dfee15b3b851',
     is_missing: false,
     manufacturer: 'Erdman - Huels',
     metadata: [],
@@ -301,7 +301,7 @@ req = Models::Operations::UpdateHrisDeviceRequest.new(
     name: 'nedra-laptop',
     os: 'program',
     os_version: '4.14.16',
-    updated_at: DateTime.iso8601('2023-06-28T19:06:09.163Z'),
+    updated_at: DateTime.iso8601('2023-06-29T08:21:42.408Z'),
     version: '2.15.16'
   ),
   connection_id: '<id>',

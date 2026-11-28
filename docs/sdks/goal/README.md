@@ -32,14 +32,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.goal.create_performance_goal(performance_goal: Models::Shared::PerformanceGoal.new(
   created_at: DateTime.iso8601('2020-01-09T20:43:07.380Z'),
   description: 'Vel facere valeo vallum degero vado thymum patruus.',
-  due_at: DateTime.iso8601('2026-09-03T12:59:59.002Z'),
-  id: 'fddb90a7-ac37-4e4b-95e4-ba63c5ee97d9',
+  due_at: DateTime.iso8601('2026-09-04T12:08:59.910Z'),
+  id: '61ee5110-77dc-47a7-b0f9-fd9f012e813c',
   metadata: [],
   milestones: [
     Models::Shared::PerformanceGoalMilestone.new(
       current_value: 10.0,
-      due_at: DateTime.iso8601('2026-07-08T19:38:39.536Z'),
-      id: 'd971d348-83e4-47bd-b872-8cd0be5e7078',
+      due_at: DateTime.iso8601('2026-07-09T18:15:13.970Z'),
+      id: '4102dc5d-c95b-440d-84c3-a310d0e0e61d',
       is_completed: true,
       name: 'Balanced system-worthy collaboration',
       target_value: 32.0,
@@ -48,8 +48,8 @@ res = s.goal.create_performance_goal(performance_goal: Models::Shared::Performan
     ),
     Models::Shared::PerformanceGoalMilestone.new(
       current_value: 0.0,
-      due_at: DateTime.iso8601('2026-09-13T09:19:39.255Z'),
-      id: '62f583fa-f932-4a15-a025-4d61a2e9437f',
+      due_at: DateTime.iso8601('2026-09-14T08:34:18.066Z'),
+      id: 'b0c3fdbf-01a1-4cf7-a41c-55dd4534b208',
       is_completed: true,
       name: 'Persevering zero tolerance forecast',
       target_value: 32.0,
@@ -58,8 +58,8 @@ res = s.goal.create_performance_goal(performance_goal: Models::Shared::Performan
     Models::Shared::PerformanceGoalMilestone.new(
       current_value: 31.0,
       description: 'Adiuvo ullus magnam eos cohors.',
-      due_at: DateTime.iso8601('2026-11-16T06:44:53.686Z'),
-      id: '44f4217c-6592-4327-9db7-f9b7205f9eb5',
+      due_at: DateTime.iso8601('2026-11-17T06:36:04.991Z'),
+      id: '754dee1d-4871-47a4-a765-b5f856691edd',
       is_completed: true,
       name: 'Networked logistical toolset',
       target_value: 32.0,
@@ -68,10 +68,10 @@ res = s.goal.create_performance_goal(performance_goal: Models::Shared::Performan
   ],
   name: 'User-centric radical parallelism',
   progress: 3.0,
-  start_at: DateTime.iso8601('2025-08-22T14:31:49.502Z'),
+  start_at: DateTime.iso8601('2025-08-23T10:05:15.717Z'),
   status: Models::Shared::PerformanceGoalStatus::CLOSED,
   type: Models::Shared::PerformanceGoalSchemasType::COMPANY,
-  updated_at: DateTime.iso8601('2022-09-27T16:06:32.137Z'),
+  updated_at: DateTime.iso8601('2022-09-28T01:33:46.357Z'),
   weight: 5.0
 ), connection_id: '<id>')
 
@@ -295,14 +295,14 @@ req = Models::Operations::PatchPerformanceGoalRequest.new(
   performance_goal: Models::Shared::PerformanceGoal.new(
     created_at: DateTime.iso8601('2020-01-09T20:43:07.380Z'),
     description: 'Vel facere valeo vallum degero vado thymum patruus.',
-    due_at: DateTime.iso8601('2026-09-03T12:59:59.019Z'),
-    id: '24cb294e-ca57-4b15-b9cb-6f1a06e8d3b7',
+    due_at: DateTime.iso8601('2026-09-04T12:08:59.932Z'),
+    id: 'fa95da16-ac29-4eae-97f1-8504304ae3fb',
     metadata: [],
     milestones: [
       Models::Shared::PerformanceGoalMilestone.new(
         current_value: 10.0,
-        due_at: DateTime.iso8601('2026-07-08T19:38:39.552Z'),
-        id: 'e4de403d-ffc7-45dc-be08-bf8b454ac29e',
+        due_at: DateTime.iso8601('2026-07-09T18:15:13.991Z'),
+        id: 'afd8c6cc-ec82-4383-8535-1a1b0338c53f',
         is_completed: true,
         name: 'Balanced system-worthy collaboration',
         target_value: 32.0,
@@ -311,8 +311,8 @@ req = Models::Operations::PatchPerformanceGoalRequest.new(
       ),
       Models::Shared::PerformanceGoalMilestone.new(
         current_value: 0.0,
-        due_at: DateTime.iso8601('2026-09-13T09:19:39.272Z'),
-        id: '0a182ec4-4b10-43af-9eb2-03f74b8f033b',
+        due_at: DateTime.iso8601('2026-09-14T08:34:18.088Z'),
+        id: '75a32576-dd36-4f2c-b314-e217940663b3',
         is_completed: true,
         name: 'Persevering zero tolerance forecast',
         target_value: 32.0,
@@ -321,8 +321,8 @@ req = Models::Operations::PatchPerformanceGoalRequest.new(
       Models::Shared::PerformanceGoalMilestone.new(
         current_value: 31.0,
         description: 'Adiuvo ullus magnam eos cohors.',
-        due_at: DateTime.iso8601('2026-11-16T06:44:53.704Z'),
-        id: '124eb631-e87c-453a-8a95-f34660f25616',
+        due_at: DateTime.iso8601('2026-11-17T06:36:05.013Z'),
+        id: 'ebbcaf44-911d-470e-88cb-e1a871fb462b',
         is_completed: true,
         name: 'Networked logistical toolset',
         target_value: 32.0,
@@ -331,10 +331,10 @@ req = Models::Operations::PatchPerformanceGoalRequest.new(
     ],
     name: 'User-centric radical parallelism',
     progress: 3.0,
-    start_at: DateTime.iso8601('2025-08-22T14:31:49.515Z'),
+    start_at: DateTime.iso8601('2025-08-23T10:05:15.735Z'),
     status: Models::Shared::PerformanceGoalStatus::CLOSED,
     type: Models::Shared::PerformanceGoalSchemasType::COMPANY,
-    updated_at: DateTime.iso8601('2022-09-27T16:06:32.144Z'),
+    updated_at: DateTime.iso8601('2022-09-28T01:33:46.365Z'),
     weight: 5.0
   ),
   connection_id: '<id>',
@@ -426,14 +426,14 @@ req = Models::Operations::UpdatePerformanceGoalRequest.new(
   performance_goal: Models::Shared::PerformanceGoal.new(
     created_at: DateTime.iso8601('2020-01-09T20:43:07.380Z'),
     description: 'Vel facere valeo vallum degero vado thymum patruus.',
-    due_at: DateTime.iso8601('2026-09-03T12:59:59.019Z'),
-    id: '24cb294e-ca57-4b15-b9cb-6f1a06e8d3b7',
+    due_at: DateTime.iso8601('2026-09-04T12:08:59.932Z'),
+    id: 'fa95da16-ac29-4eae-97f1-8504304ae3fb',
     metadata: [],
     milestones: [
       Models::Shared::PerformanceGoalMilestone.new(
         current_value: 10.0,
-        due_at: DateTime.iso8601('2026-07-08T19:38:39.552Z'),
-        id: 'e4de403d-ffc7-45dc-be08-bf8b454ac29e',
+        due_at: DateTime.iso8601('2026-07-09T18:15:13.991Z'),
+        id: 'afd8c6cc-ec82-4383-8535-1a1b0338c53f',
         is_completed: true,
         name: 'Balanced system-worthy collaboration',
         target_value: 32.0,
@@ -442,8 +442,8 @@ req = Models::Operations::UpdatePerformanceGoalRequest.new(
       ),
       Models::Shared::PerformanceGoalMilestone.new(
         current_value: 0.0,
-        due_at: DateTime.iso8601('2026-09-13T09:19:39.272Z'),
-        id: '0a182ec4-4b10-43af-9eb2-03f74b8f033b',
+        due_at: DateTime.iso8601('2026-09-14T08:34:18.088Z'),
+        id: '75a32576-dd36-4f2c-b314-e217940663b3',
         is_completed: true,
         name: 'Persevering zero tolerance forecast',
         target_value: 32.0,
@@ -452,8 +452,8 @@ req = Models::Operations::UpdatePerformanceGoalRequest.new(
       Models::Shared::PerformanceGoalMilestone.new(
         current_value: 31.0,
         description: 'Adiuvo ullus magnam eos cohors.',
-        due_at: DateTime.iso8601('2026-11-16T06:44:53.704Z'),
-        id: '124eb631-e87c-453a-8a95-f34660f25616',
+        due_at: DateTime.iso8601('2026-11-17T06:36:05.013Z'),
+        id: 'ebbcaf44-911d-470e-88cb-e1a871fb462b',
         is_completed: true,
         name: 'Networked logistical toolset',
         target_value: 32.0,
@@ -462,10 +462,10 @@ req = Models::Operations::UpdatePerformanceGoalRequest.new(
     ],
     name: 'User-centric radical parallelism',
     progress: 3.0,
-    start_at: DateTime.iso8601('2025-08-22T14:31:49.515Z'),
+    start_at: DateTime.iso8601('2025-08-23T10:05:15.735Z'),
     status: Models::Shared::PerformanceGoalStatus::CLOSED,
     type: Models::Shared::PerformanceGoalSchemasType::COMPANY,
-    updated_at: DateTime.iso8601('2022-09-27T16:06:32.144Z'),
+    updated_at: DateTime.iso8601('2022-09-28T01:33:46.365Z'),
     weight: 5.0
   ),
   connection_id: '<id>',

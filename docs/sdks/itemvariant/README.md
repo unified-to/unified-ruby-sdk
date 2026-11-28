@@ -32,7 +32,7 @@ res = s.itemvariant.create_commerce_itemvariant(commerce_itemvariant: Models::Sh
   created_at: DateTime.iso8601('2022-01-20T13:49:12.968Z'),
   description: 'Our dog-friendly Bacon ensures pessimistic comfort for your pets',
   height: 54.0,
-  id: 'cd9f8b44-cb99-4ab1-a4bc-54e391270d9d',
+  id: '6d0b24f4-24ab-43c0-aab2-6966617bb77c',
   is_active: true,
   is_featured: false,
   is_visible: false,
@@ -41,10 +41,10 @@ res = s.itemvariant.create_commerce_itemvariant(commerce_itemvariant: Models::Sh
     Models::Shared::CommerceItemMedia.new(
       alt: 'Calcar delibero cursim summisse.',
       height: 961.0,
-      id: '661622d9-6aa8-4ec2-a9cf-18e4fffc17ee',
+      id: '15d7acdb-b93b-4394-850f-053ca0d2a63c',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: 'cf16a3a2-3786-40ff-a55d-726aced6ba28',
+          id: '72bc22b3-1507-4472-ac8e-cec8e1fda9bc',
           slug: 'illo',
           value: 'quia'
         ),
@@ -61,7 +61,7 @@ res = s.itemvariant.create_commerce_itemvariant(commerce_itemvariant: Models::Sh
         'display_name' => 'Custom Property',
       },
       format: Models::Shared::CommerceMetadataFormat::TEXT,
-      id: '2da69df2-ee76-4baf-9387-6dd7e772537e',
+      id: '54ca4831-0788-494f-b6bf-790fec201f7e',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'colligo'
@@ -70,7 +70,7 @@ res = s.itemvariant.create_commerce_itemvariant(commerce_itemvariant: Models::Sh
   name: 'Table',
   options: [
     Models::Shared::CommerceItemOption.new(
-      id: 'df4d713d-af3e-4a08-98d8-12e914a4c259',
+      id: '1c721563-1a9e-4ed5-bef6-71f7818e1cf4',
       name: 'Color',
       position: 1.0,
       values: [
@@ -78,7 +78,7 @@ res = s.itemvariant.create_commerce_itemvariant(commerce_itemvariant: Models::Sh
       ]
     ),
     Models::Shared::CommerceItemOption.new(
-      id: '52efc9a6-b205-4030-8724-0d96124d8fee',
+      id: '41388f81-3496-4df1-9a20-5d0c02a11280',
       name: 'Size',
       position: 2.0,
       values: [
@@ -101,7 +101,7 @@ res = s.itemvariant.create_commerce_itemvariant(commerce_itemvariant: Models::Sh
     'labore',
   ],
   total_stock: 436.0,
-  updated_at: DateTime.iso8601('2026-04-10T21:22:47.207Z'),
+  updated_at: DateTime.iso8601('2026-04-11T18:13:23.813Z'),
   weight: 46.0,
   weight_unit: Models::Shared::CommerceItemvariantWeightUnit::OZ,
   width: 40.0
@@ -242,7 +242,7 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
     created_at: DateTime.iso8601('2022-01-20T13:49:12.968Z'),
     description: 'Our dog-friendly Bacon ensures pessimistic comfort for your pets',
     height: 54.0,
-    id: '0107d303-36d9-4202-81e6-e20852ce5feb',
+    id: '256e5f8d-7085-40d9-9a5e-3dab11cb55df',
     is_active: true,
     is_featured: false,
     is_visible: false,
@@ -251,10 +251,10 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Calcar delibero cursim summisse.',
         height: 961.0,
-        id: '0fc6b770-0dac-4d37-ac39-2a69fedd0806',
+        id: '413c8fa6-cd8d-4ba7-bcb9-038f9fabe071',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'baab798e-bcd0-46fe-88be-da56d0c934d5',
+            id: '9b4d6c5c-4600-4486-a680-82007fc670e3',
             slug: 'illo',
             value: 'quia'
           ),
@@ -271,7 +271,7 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CommerceMetadataFormat::TEXT,
-        id: 'c11d83eb-b62d-491f-be35-f807890fbf9d',
+        id: 'e6aa8dd6-60bd-4c54-9c2c-8226e2f2ddea',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'colligo'
@@ -280,7 +280,7 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
     name: 'Table',
     options: [
       Models::Shared::CommerceItemOption.new(
-        id: '31891a7f-a0c8-43bf-8add-c4bccb511698',
+        id: 'cb3518e0-c8a4-4dbc-8877-3ffb88f2c1fa',
         name: 'Color',
         position: 1.0,
         values: [
@@ -288,7 +288,7 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
         ]
       ),
       Models::Shared::CommerceItemOption.new(
-        id: 'cb04efeb-55e3-493c-ac25-7e3efcba5ec2',
+        id: '2d98311e-0143-47aa-89ae-0119f68c28a7',
         name: 'Size',
         position: 2.0,
         values: [
@@ -311,7 +311,7 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
       'labore',
     ],
     total_stock: 436.0,
-    updated_at: DateTime.iso8601('2026-04-10T21:22:47.230Z'),
+    updated_at: DateTime.iso8601('2026-04-11T18:13:23.849Z'),
     weight: 46.0,
     weight_unit: Models::Shared::CommerceItemvariantWeightUnit::OZ,
     width: 40.0
@@ -407,7 +407,7 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
     created_at: DateTime.iso8601('2022-01-20T13:49:12.968Z'),
     description: 'Our dog-friendly Bacon ensures pessimistic comfort for your pets',
     height: 54.0,
-    id: '0107d303-36d9-4202-81e6-e20852ce5feb',
+    id: '256e5f8d-7085-40d9-9a5e-3dab11cb55df',
     is_active: true,
     is_featured: false,
     is_visible: false,
@@ -416,10 +416,10 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Calcar delibero cursim summisse.',
         height: 961.0,
-        id: '0fc6b770-0dac-4d37-ac39-2a69fedd0806',
+        id: '413c8fa6-cd8d-4ba7-bcb9-038f9fabe071',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'baab798e-bcd0-46fe-88be-da56d0c934d5',
+            id: '9b4d6c5c-4600-4486-a680-82007fc670e3',
             slug: 'illo',
             value: 'quia'
           ),
@@ -436,7 +436,7 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
           'display_name' => 'Custom Property',
         },
         format: Models::Shared::CommerceMetadataFormat::TEXT,
-        id: 'c11d83eb-b62d-491f-be35-f807890fbf9d',
+        id: 'e6aa8dd6-60bd-4c54-9c2c-8226e2f2ddea',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'colligo'
@@ -445,7 +445,7 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
     name: 'Table',
     options: [
       Models::Shared::CommerceItemOption.new(
-        id: '31891a7f-a0c8-43bf-8add-c4bccb511698',
+        id: 'cb3518e0-c8a4-4dbc-8877-3ffb88f2c1fa',
         name: 'Color',
         position: 1.0,
         values: [
@@ -453,7 +453,7 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
         ]
       ),
       Models::Shared::CommerceItemOption.new(
-        id: 'cb04efeb-55e3-493c-ac25-7e3efcba5ec2',
+        id: '2d98311e-0143-47aa-89ae-0119f68c28a7',
         name: 'Size',
         position: 2.0,
         values: [
@@ -476,7 +476,7 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
       'labore',
     ],
     total_stock: 436.0,
-    updated_at: DateTime.iso8601('2026-04-10T21:22:47.230Z'),
+    updated_at: DateTime.iso8601('2026-04-11T18:13:23.849Z'),
     weight: 46.0,
     weight_unit: Models::Shared::CommerceItemvariantWeightUnit::OZ,
     width: 40.0

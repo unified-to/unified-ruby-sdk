@@ -46,7 +46,7 @@ res = s.review.create_commerce_review(commerce_review: Models::Shared::CommerceR
   content: 'Vix taedium thymum adipiscor amicitia.',
   created_at: DateTime.iso8601('2019-12-12T18:10:22.988Z'),
   helpful_votes: 66.0,
-  id: '402892b6-b5da-40f9-899c-ab493b7c26b2',
+  id: 'd288234b-23a6-4511-860b-a4f3d7c6e98a',
   is_featured: false,
   is_public: true,
   is_verified: false,
@@ -54,10 +54,10 @@ res = s.review.create_commerce_review(commerce_review: Models::Shared::CommerceR
     Models::Shared::CommerceItemMedia.new(
       alt: 'Teneo.',
       height: 749.0,
-      id: 'ee5e5269-b003-4df3-ab30-a0e41b87175a',
+      id: '47d25bed-22e4-4b17-afaa-e3b4c150833d',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: 'd3edc7da-5cae-4c5d-9f78-b8ce09b8c1f5',
+          id: 'c3c1f905-2b86-4afd-8b8d-acbc362dddc8',
           slug: 'numquam',
           value: 'bos'
         ),
@@ -70,10 +70,10 @@ res = s.review.create_commerce_review(commerce_review: Models::Shared::CommerceR
     Models::Shared::CommerceItemMedia.new(
       alt: 'Ratione vulticulus arbitro ultio pauci.',
       height: 957.0,
-      id: '43d68c31-b587-4620-b958-6c80166f1058',
+      id: '69440ea0-c80b-4d2f-b70b-994f2a243ccb',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: 'ea7a76b8-99bb-4b03-9ff1-8c08ca492c98',
+          id: 'f05e234f-0a7c-4d1c-95ac-e044a68021e0',
           slug: 'timidus',
           value: 'sol'
         ),
@@ -89,7 +89,7 @@ res = s.review.create_commerce_review(commerce_review: Models::Shared::CommerceR
   status: Models::Shared::CommerceReviewStatus::APPROVED,
   title: 'Auxilium.',
   unhelpful_votes: 88.0,
-  updated_at: DateTime.iso8601('2025-09-21T02:09:15.488Z'),
+  updated_at: DateTime.iso8601('2025-09-21T22:02:17.419Z'),
   url: 'https://whispered-hawk.name',
   verified_purchase: true
 ), connection_id: '<id>')
@@ -494,7 +494,7 @@ req = Models::Operations::PatchCommerceReviewRequest.new(
     content: 'Vix taedium thymum adipiscor amicitia.',
     created_at: DateTime.iso8601('2019-12-12T18:10:22.988Z'),
     helpful_votes: 66.0,
-    id: '480ed21e-143c-4117-97ac-c7b5617edf0c',
+    id: '3a4aa53d-912f-49a3-96fd-02e062b4076d',
     is_featured: false,
     is_public: true,
     is_verified: false,
@@ -502,10 +502,10 @@ req = Models::Operations::PatchCommerceReviewRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Teneo.',
         height: 749.0,
-        id: '1899abe4-d684-4c7a-84d4-ff8941200b8e',
+        id: '622f2288-e5ce-401f-ad90-ebd80e1a5943',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '7321cac9-36c7-4396-a8a1-f2e55a5dc1b5',
+            id: '411f8d19-6c2e-4562-b0f9-14031f971730',
             slug: 'numquam',
             value: 'bos'
           ),
@@ -518,10 +518,10 @@ req = Models::Operations::PatchCommerceReviewRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Ratione vulticulus arbitro ultio pauci.',
         height: 957.0,
-        id: '8f88275e-c3fa-49ec-82d6-dbf5480a28bb',
+        id: 'fb49280a-dd18-43a7-b28e-dc7a1d615736',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'e51d9eec-2d03-4995-9191-0f0b64097545',
+            id: '5ff06c08-8cfe-4e27-9f1a-cdf12c123f7c',
             slug: 'timidus',
             value: 'sol'
           ),
@@ -537,7 +537,7 @@ req = Models::Operations::PatchCommerceReviewRequest.new(
     status: Models::Shared::CommerceReviewStatus::APPROVED,
     title: 'Auxilium.',
     unhelpful_votes: 88.0,
-    updated_at: DateTime.iso8601('2025-09-21T02:09:15.522Z'),
+    updated_at: DateTime.iso8601('2025-09-21T22:02:17.454Z'),
     url: 'https://whispered-hawk.name',
     verified_purchase: true
   ),
@@ -619,13 +619,13 @@ req = Models::Operations::PatchPropertyReviewRequest.new(
     ],
     content: 'Attonbitus comitatus auditor. Tergo nostrum deleo vomica comprehendo tertius summopere. Apparatus incidunt tabula pauci confido colo fugiat umquam perferendis amitto.',
     created_at: DateTime.iso8601('2022-10-17T11:17:07.682Z'),
-    id: 'a851fbda-2850-480a-bdc2-c361e0987a70',
+    id: '7e18e7f6-c3eb-454c-a837-d269e0c29e1d',
     is_public: true,
     metadata: [],
     private_feedback: 'Patria stella magni.',
     rating: 3.0,
     source: 'Airbnb',
-    updated_at: DateTime.iso8601('2026-03-13T13:46:45.181Z')
+    updated_at: DateTime.iso8601('2026-03-14T09:36:41.828Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -768,7 +768,7 @@ req = Models::Operations::UpdateCommerceReviewRequest.new(
     content: 'Vix taedium thymum adipiscor amicitia.',
     created_at: DateTime.iso8601('2019-12-12T18:10:22.988Z'),
     helpful_votes: 66.0,
-    id: '480ed21e-143c-4117-97ac-c7b5617edf0c',
+    id: '3a4aa53d-912f-49a3-96fd-02e062b4076d',
     is_featured: false,
     is_public: true,
     is_verified: false,
@@ -776,10 +776,10 @@ req = Models::Operations::UpdateCommerceReviewRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Teneo.',
         height: 749.0,
-        id: '1899abe4-d684-4c7a-84d4-ff8941200b8e',
+        id: '622f2288-e5ce-401f-ad90-ebd80e1a5943',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '7321cac9-36c7-4396-a8a1-f2e55a5dc1b5',
+            id: '411f8d19-6c2e-4562-b0f9-14031f971730',
             slug: 'numquam',
             value: 'bos'
           ),
@@ -792,10 +792,10 @@ req = Models::Operations::UpdateCommerceReviewRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Ratione vulticulus arbitro ultio pauci.',
         height: 957.0,
-        id: '8f88275e-c3fa-49ec-82d6-dbf5480a28bb',
+        id: 'fb49280a-dd18-43a7-b28e-dc7a1d615736',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'e51d9eec-2d03-4995-9191-0f0b64097545',
+            id: '5ff06c08-8cfe-4e27-9f1a-cdf12c123f7c',
             slug: 'timidus',
             value: 'sol'
           ),
@@ -811,7 +811,7 @@ req = Models::Operations::UpdateCommerceReviewRequest.new(
     status: Models::Shared::CommerceReviewStatus::APPROVED,
     title: 'Auxilium.',
     unhelpful_votes: 88.0,
-    updated_at: DateTime.iso8601('2025-09-21T02:09:15.522Z'),
+    updated_at: DateTime.iso8601('2025-09-21T22:02:17.454Z'),
     url: 'https://whispered-hawk.name',
     verified_purchase: true
   ),
@@ -893,13 +893,13 @@ req = Models::Operations::UpdatePropertyReviewRequest.new(
     ],
     content: 'Attonbitus comitatus auditor. Tergo nostrum deleo vomica comprehendo tertius summopere. Apparatus incidunt tabula pauci confido colo fugiat umquam perferendis amitto.',
     created_at: DateTime.iso8601('2022-10-17T11:17:07.682Z'),
-    id: 'a851fbda-2850-480a-bdc2-c361e0987a70',
+    id: '7e18e7f6-c3eb-454c-a837-d269e0c29e1d',
     is_public: true,
     metadata: [],
     private_feedback: 'Patria stella magni.',
     rating: 3.0,
     source: 'Airbnb',
-    updated_at: DateTime.iso8601('2026-03-13T13:46:45.181Z')
+    updated_at: DateTime.iso8601('2026-03-14T09:36:41.828Z')
   ),
   connection_id: '<id>',
   id: '<id>'

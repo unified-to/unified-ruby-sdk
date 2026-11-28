@@ -35,11 +35,11 @@ res = s.matter.create_legal_matter(legal_matter: Models::Shared::LegalMatter.new
   created_at: DateTime.iso8601('2023-05-28T04:10:42.375Z'),
   currency: 'CRC',
   description: 'Arma currus curiositas utilis decor color summa peior occaecati.',
-  id: '69f9d1aa-c215-46a7-aef4-7488b4c89f14',
+  id: 'a15bd309-5820-45d2-8423-42fda4e95fe2',
   metadata: [],
   name: 'Spinka v. Dickinson Inc',
   number: '2023-3062',
-  opened_at: DateTime.iso8601('2023-07-06T09:33:45.222Z'),
+  opened_at: DateTime.iso8601('2023-07-06T10:17:50.358Z'),
   parties: [
     Models::Shared::LegalParty.new(
       description: 'Tremayne Spinka',
@@ -48,8 +48,8 @@ res = s.matter.create_legal_matter(legal_matter: Models::Shared::LegalMatter.new
   ],
   stage: 'recusandae',
   status: Models::Shared::LegalMatterStatus::OPEN,
-  statute_of_limitations_at: DateTime.iso8601('2029-09-16T07:54:06.016Z'),
-  updated_at: DateTime.iso8601('2023-07-18T22:02:18.470Z')
+  statute_of_limitations_at: DateTime.iso8601('2029-09-17T07:51:25.362Z'),
+  updated_at: DateTime.iso8601('2023-07-18T23:00:27.894Z')
 ), connection_id: '<id>')
 
 unless res.legal_matter.nil?
@@ -190,11 +190,11 @@ req = Models::Operations::PatchLegalMatterRequest.new(
     created_at: DateTime.iso8601('2023-05-28T04:10:42.375Z'),
     currency: 'CRC',
     description: 'Arma currus curiositas utilis decor color summa peior occaecati.',
-    id: '65a9c800-3599-4f3d-bd87-ce6d02731460',
+    id: 'be76c5aa-9cc5-4df9-87b5-8490f729f21f',
     metadata: [],
     name: 'Spinka v. Dickinson Inc',
     number: '2023-3062',
-    opened_at: DateTime.iso8601('2023-07-06T09:33:45.223Z'),
+    opened_at: DateTime.iso8601('2023-07-06T10:17:50.359Z'),
     parties: [
       Models::Shared::LegalParty.new(
         description: 'Tremayne Spinka',
@@ -203,8 +203,8 @@ req = Models::Operations::PatchLegalMatterRequest.new(
     ],
     stage: 'recusandae',
     status: Models::Shared::LegalMatterStatus::OPEN,
-    statute_of_limitations_at: DateTime.iso8601('2029-09-16T07:54:06.036Z'),
-    updated_at: DateTime.iso8601('2023-07-18T22:02:18.471Z')
+    statute_of_limitations_at: DateTime.iso8601('2029-09-17T07:51:25.389Z'),
+    updated_at: DateTime.iso8601('2023-07-18T23:00:27.895Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -300,11 +300,11 @@ req = Models::Operations::UpdateLegalMatterRequest.new(
     created_at: DateTime.iso8601('2023-05-28T04:10:42.375Z'),
     currency: 'CRC',
     description: 'Arma currus curiositas utilis decor color summa peior occaecati.',
-    id: '65a9c800-3599-4f3d-bd87-ce6d02731460',
+    id: 'be76c5aa-9cc5-4df9-87b5-8490f729f21f',
     metadata: [],
     name: 'Spinka v. Dickinson Inc',
     number: '2023-3062',
-    opened_at: DateTime.iso8601('2023-07-06T09:33:45.223Z'),
+    opened_at: DateTime.iso8601('2023-07-06T10:17:50.359Z'),
     parties: [
       Models::Shared::LegalParty.new(
         description: 'Tremayne Spinka',
@@ -313,8 +313,8 @@ req = Models::Operations::UpdateLegalMatterRequest.new(
     ],
     stage: 'recusandae',
     status: Models::Shared::LegalMatterStatus::OPEN,
-    statute_of_limitations_at: DateTime.iso8601('2029-09-16T07:54:06.036Z'),
-    updated_at: DateTime.iso8601('2023-07-18T22:02:18.471Z')
+    statute_of_limitations_at: DateTime.iso8601('2029-09-17T07:51:25.389Z'),
+    updated_at: DateTime.iso8601('2023-07-18T23:00:27.895Z')
   ),
   connection_id: '<id>',
   id: '<id>'

@@ -30,14 +30,14 @@ res = s.fax.create_uc_fax(uc_fax: Models::Shared::UcFax.new(
   created_at: DateTime.iso8601('2022-10-25T13:37:51.431Z'),
   currency: 'USD',
   from_telephone: '+15108540908',
-  id: '62a9fa88-567d-4b6e-b88c-3dba1b4bce56',
+  id: '5ed7e16d-31dd-4434-8f4f-6c985b13931f',
   media_url: 'https://pitiful-stranger.net/',
   metadata: [],
   pages: 10.0,
   status: Models::Shared::UcFaxStatus::DELIVERED,
   to_telephone: '+13999866972',
   type: Models::Shared::UcFaxType::INBOUND,
-  updated_at: DateTime.iso8601('2023-04-18T02:53:16.924Z')
+  updated_at: DateTime.iso8601('2023-04-18T05:41:16.499Z')
 ), connection_id: '<id>')
 
 unless res.uc_fax.nil?

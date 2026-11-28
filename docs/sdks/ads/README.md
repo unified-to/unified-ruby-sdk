@@ -75,11 +75,11 @@ res = s.ads.create_ads_ad(ads_ad: Models::Shared::AdsAd.new(
   creative_asset_url: 'https://picsum.photos/seed/RjqoANMizQ/2569/2440',
   description: 'Adulescens cursim clam vorago fugiat amitto tardus bibo.',
   final_url: 'https://tight-horde.biz',
-  id: 'e51ee4ed-05ea-4aa3-86a0-1ee3a17422c9',
+  id: '31569317-a7d2-4f76-8e39-fe5554ad5d8f',
   metadata: [],
   name: 'Rau, Runolfsson and Leannon',
   status: Models::Shared::AdsAdStatus::ARCHIVED,
-  updated_at: DateTime.iso8601('2024-07-03T15:59:13.035Z')
+  updated_at: DateTime.iso8601('2024-07-04T01:45:23.148Z')
 ), connection_id: '<id>')
 
 unless res.ads_ad.nil?
@@ -126,12 +126,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.ads.create_ads_asset(ads_asset: Models::Shared::AdsAsset.new(
   created_at: DateTime.iso8601('2020-03-27T20:14:38.603Z'),
   height: 400.0,
-  id: 'c6bde6bb-7486-4445-a826-3b45acd4336d',
+  id: 'a731acb2-15f2-4d50-ab30-0d8c2d3a59ec',
   metadata: [],
   mime_type: 'IMAGE_PNG',
   name: 'Gibson and Sons',
   type: Models::Shared::AdsAssetType::IMAGE,
-  updated_at: DateTime.iso8601('2022-04-05T10:06:51.979Z'),
+  updated_at: DateTime.iso8601('2022-04-05T17:22:48.096Z'),
   url: 'https://soulful-mom.net',
   width: 600.0
 ), connection_id: '<id>')
@@ -184,18 +184,18 @@ res = s.ads.create_ads_campaign(ads_campaign: Models::Shared::AdsCampaign.new(
   created_at: DateTime.iso8601('2022-05-21T08:51:41.868Z'),
   currency: 'USD',
   effective_status: Models::Shared::EffectiveStatus::NOT_ELIGIBLE,
-  end_at: DateTime.iso8601('2025-06-26T08:47:53.925Z'),
-  id: 'adcb68fb-94ce-48d5-ad50-ec165cfa3b87',
+  end_at: DateTime.iso8601('2025-06-27T01:13:36.363Z'),
+  id: 'd8bef5b3-5a59-496e-a84b-d2a8864c597c',
   labels: [
     'adsuesco',
   ],
   metadata: [],
   name: 'Davis-Ziemann - Gerhold',
-  start_at: DateTime.iso8601('2022-07-22T20:28:14.873Z'),
+  start_at: DateTime.iso8601('2022-07-22T21:22:39.403Z'),
   status: Models::Shared::AdsCampaignStatus::PROCESSING_FAILED,
   targeting: Models::Shared::PropertyAdsCampaignTargeting.new,
   total_spend_amount: 2349.8_642_875_347_286,
-  updated_at: DateTime.iso8601('2026-01-31T21:35:04.742Z')
+  updated_at: DateTime.iso8601('2026-02-01T17:11:56.908Z')
 ), connection_id: '<id>')
 
 unless res.ads_campaign.nil?
@@ -241,7 +241,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.ads.create_ads_creative(ads_creative: Models::Shared::AdsCreative.new(
   created_at: DateTime.iso8601('2020-02-17T11:24:51.093Z'),
-  id: 'a41a3133-7506-45a9-8447-032d604b112e',
+  id: 'ba79256e-06ea-47d3-997a-68c24f212df0',
   labels: [
     'ventosus',
     'in',
@@ -250,7 +250,7 @@ res = s.ads.create_ads_creative(ads_creative: Models::Shared::AdsCreative.new(
   metadata: [],
   name: 'Sauer, Stiedemann and Bauch',
   status: Models::Shared::AdsCreativeStatus::PAUSED,
-  updated_at: DateTime.iso8601('2021-07-05T07:11:00.278Z')
+  updated_at: DateTime.iso8601('2021-07-05T12:03:38.914Z')
 ), connection_id: '<id>')
 
 unless res.ads_creative.nil?
@@ -301,15 +301,15 @@ res = s.ads.create_ads_group(ads_group: Models::Shared::AdsGroup.new(
   created_at: DateTime.iso8601('2019-08-29T17:59:41.045Z'),
   currency: 'USD',
   effective_status: Models::Shared::AdsGroupEffectiveStatus::PAUSED,
-  end_at: DateTime.iso8601('2026-07-30T09:52:31.075Z'),
-  id: 'a7c35642-58c3-4b2e-b7dc-e0cc0f90b837',
+  end_at: DateTime.iso8601('2026-07-31T08:44:52.838Z'),
+  id: '3bb4e09f-6661-460e-8406-5c3396ea513e',
   language_locale: 'fr-FR',
   metadata: [],
   name: 'Shanahan, Schumm and Emard',
-  start_at: DateTime.iso8601('2026-02-11T06:19:29.148Z'),
+  start_at: DateTime.iso8601('2026-02-12T03:39:58.522Z'),
   status: Models::Shared::AdsGroupStatus::PROCESSING,
   targeting: Models::Shared::PropertyAdsGroupTargeting.new,
-  updated_at: DateTime.iso8601('2022-01-25T23:45:46.887Z')
+  updated_at: DateTime.iso8601('2022-01-26T07:43:53.174Z')
 ), connection_id: '<id>')
 
 unless res.ads_group.nil?
@@ -355,11 +355,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 )
 res = s.ads.create_ads_insertionorder(ads_insertionorder: Models::Shared::AdsInsertionorder.new(
   created_at: DateTime.iso8601('2021-04-10T06:57:36.611Z'),
-  id: 'efa3e2c8-ef00-4e07-8532-e6eec0c1f2d7',
+  id: 'eaf2534a-87cb-4e90-b58f-755e9b0a1f0e',
   metadata: [],
   name: 'Barton, Gorczany and Marks',
   status: Models::Shared::AdsInsertionorderStatus::UNSPECIFIED,
-  updated_at: DateTime.iso8601('2021-04-29T03:56:41.226Z')
+  updated_at: DateTime.iso8601('2021-04-29T04:09:52.639Z')
 ), connection_id: '<id>')
 
 unless res.ads_insertionorder.nil?
@@ -407,13 +407,13 @@ res = s.ads.create_ads_organization(ads_organization: Models::Shared::AdsOrganiz
   account_number: 'TgWQyrQXzW',
   created_at: DateTime.iso8601('2020-07-23T21:47:11.440Z'),
   currency: 'USD',
-  id: '1afa37f6-e5d6-4b89-bd27-43bb80135970',
+  id: '6b962835-9299-4316-910d-bc38e7775f3d',
   managers: [],
   metadata: [],
   name: 'Ullrich, Collier and Metz',
   status: Models::Shared::AdsOrganizationStatus::PROCESSING,
   timezone: 'Pacific/Kanton',
-  updated_at: DateTime.iso8601('2026-05-01T19:18:43.493Z')
+  updated_at: DateTime.iso8601('2026-05-02T17:06:16.619Z')
 ), connection_id: '<id>')
 
 unless res.ads_organization.nil?
@@ -1381,11 +1381,11 @@ req = Models::Operations::PatchAdsAdRequest.new(
     creative_asset_url: 'https://picsum.photos/seed/RjqoANMizQ/2569/2440',
     description: 'Adulescens cursim clam vorago fugiat amitto tardus bibo.',
     final_url: 'https://tight-horde.biz',
-    id: '7a04bd7f-0881-4091-82b7-98ceb1811ec1',
+    id: 'd7b54f42-7793-4070-871e-f645e188a350',
     metadata: [],
     name: 'Rau, Runolfsson and Leannon',
     status: Models::Shared::AdsAdStatus::ARCHIVED,
-    updated_at: DateTime.iso8601('2024-07-03T15:59:13.048Z')
+    updated_at: DateTime.iso8601('2024-07-04T01:45:23.160Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1439,18 +1439,18 @@ req = Models::Operations::PatchAdsCampaignRequest.new(
     created_at: DateTime.iso8601('2022-05-21T08:51:41.868Z'),
     currency: 'USD',
     effective_status: Models::Shared::EffectiveStatus::NOT_ELIGIBLE,
-    end_at: DateTime.iso8601('2025-06-26T08:47:54.024Z'),
-    id: 'd6c24281-898b-4032-bef8-d1e8507c640f',
+    end_at: DateTime.iso8601('2025-06-27T01:13:36.433Z'),
+    id: 'c85902bd-34af-4f68-a0ba-0d50eab7afed',
     labels: [
       'adsuesco',
     ],
     metadata: [],
     name: 'Davis-Ziemann - Gerhold',
-    start_at: DateTime.iso8601('2022-07-22T20:28:14.878Z'),
+    start_at: DateTime.iso8601('2022-07-22T21:22:39.406Z'),
     status: Models::Shared::AdsCampaignStatus::PROCESSING_FAILED,
     targeting: Models::Shared::PropertyAdsCampaignTargeting.new,
     total_spend_amount: 2349.8_642_875_347_286,
-    updated_at: DateTime.iso8601('2026-01-31T21:35:04.859Z')
+    updated_at: DateTime.iso8601('2026-02-01T17:11:56.992Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1499,7 +1499,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAdsCreativeRequest.new(
   ads_creative: Models::Shared::AdsCreative.new(
     created_at: DateTime.iso8601('2020-02-17T11:24:51.093Z'),
-    id: '21b5e30e-2480-41f1-bee6-e09a98bfb42e',
+    id: 'c4723691-2de4-439c-b68b-c03ea3b77190',
     labels: [
       'ventosus',
       'in',
@@ -1508,7 +1508,7 @@ req = Models::Operations::PatchAdsCreativeRequest.new(
     metadata: [],
     name: 'Sauer, Stiedemann and Bauch',
     status: Models::Shared::AdsCreativeStatus::PAUSED,
-    updated_at: DateTime.iso8601('2021-07-05T07:11:00.286Z')
+    updated_at: DateTime.iso8601('2021-07-05T12:03:38.922Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1562,15 +1562,15 @@ req = Models::Operations::PatchAdsGroupRequest.new(
     created_at: DateTime.iso8601('2019-08-29T17:59:41.045Z'),
     currency: 'USD',
     effective_status: Models::Shared::AdsGroupEffectiveStatus::PAUSED,
-    end_at: DateTime.iso8601('2026-07-30T09:52:31.259Z'),
-    id: '52378591-59b7-4bfa-b370-1841d8115aa6',
+    end_at: DateTime.iso8601('2026-07-31T08:44:53.009Z'),
+    id: 'b9ba815a-4da4-419c-bf52-9363d0d9cc10',
     language_locale: 'fr-FR',
     metadata: [],
     name: 'Shanahan, Schumm and Emard',
-    start_at: DateTime.iso8601('2026-02-11T06:19:29.319Z'),
+    start_at: DateTime.iso8601('2026-02-12T03:39:58.682Z'),
     status: Models::Shared::AdsGroupStatus::PROCESSING,
     targeting: Models::Shared::PropertyAdsGroupTargeting.new,
-    updated_at: DateTime.iso8601('2022-01-25T23:45:46.951Z')
+    updated_at: DateTime.iso8601('2022-01-26T07:43:53.234Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1619,11 +1619,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAdsInsertionorderRequest.new(
   ads_insertionorder: Models::Shared::AdsInsertionorder.new(
     created_at: DateTime.iso8601('2021-04-10T06:57:36.611Z'),
-    id: 'fc93812b-ce32-4813-b8da-3fed9901752c',
+    id: 'c043b176-4357-4418-83b0-68026a2d4401',
     metadata: [],
     name: 'Barton, Gorczany and Marks',
     status: Models::Shared::AdsInsertionorderStatus::UNSPECIFIED,
-    updated_at: DateTime.iso8601('2021-04-29T03:56:41.227Z')
+    updated_at: DateTime.iso8601('2021-04-29T04:09:52.639Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1674,13 +1674,13 @@ req = Models::Operations::PatchAdsOrganizationRequest.new(
     account_number: 'TgWQyrQXzW',
     created_at: DateTime.iso8601('2020-07-23T21:47:11.440Z'),
     currency: 'USD',
-    id: '72ffac95-d0f0-42e5-8433-01cba974411a',
+    id: 'cbf60c84-424a-422e-bc98-5e49626f9611',
     managers: [],
     metadata: [],
     name: 'Ullrich, Collier and Metz',
     status: Models::Shared::AdsOrganizationStatus::PROCESSING,
     timezone: 'Pacific/Kanton',
-    updated_at: DateTime.iso8601('2026-05-01T19:18:43.505Z')
+    updated_at: DateTime.iso8601('2026-05-02T17:06:16.628Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -1981,11 +1981,11 @@ req = Models::Operations::UpdateAdsAdRequest.new(
     creative_asset_url: 'https://picsum.photos/seed/RjqoANMizQ/2569/2440',
     description: 'Adulescens cursim clam vorago fugiat amitto tardus bibo.',
     final_url: 'https://tight-horde.biz',
-    id: '7a04bd7f-0881-4091-82b7-98ceb1811ec1',
+    id: 'd7b54f42-7793-4070-871e-f645e188a350',
     metadata: [],
     name: 'Rau, Runolfsson and Leannon',
     status: Models::Shared::AdsAdStatus::ARCHIVED,
-    updated_at: DateTime.iso8601('2024-07-03T15:59:13.048Z')
+    updated_at: DateTime.iso8601('2024-07-04T01:45:23.160Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2039,18 +2039,18 @@ req = Models::Operations::UpdateAdsCampaignRequest.new(
     created_at: DateTime.iso8601('2022-05-21T08:51:41.868Z'),
     currency: 'USD',
     effective_status: Models::Shared::EffectiveStatus::NOT_ELIGIBLE,
-    end_at: DateTime.iso8601('2025-06-26T08:47:54.024Z'),
-    id: 'd6c24281-898b-4032-bef8-d1e8507c640f',
+    end_at: DateTime.iso8601('2025-06-27T01:13:36.433Z'),
+    id: 'c85902bd-34af-4f68-a0ba-0d50eab7afed',
     labels: [
       'adsuesco',
     ],
     metadata: [],
     name: 'Davis-Ziemann - Gerhold',
-    start_at: DateTime.iso8601('2022-07-22T20:28:14.878Z'),
+    start_at: DateTime.iso8601('2022-07-22T21:22:39.406Z'),
     status: Models::Shared::AdsCampaignStatus::PROCESSING_FAILED,
     targeting: Models::Shared::PropertyAdsCampaignTargeting.new,
     total_spend_amount: 2349.8_642_875_347_286,
-    updated_at: DateTime.iso8601('2026-01-31T21:35:04.859Z')
+    updated_at: DateTime.iso8601('2026-02-01T17:11:56.992Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2099,7 +2099,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAdsCreativeRequest.new(
   ads_creative: Models::Shared::AdsCreative.new(
     created_at: DateTime.iso8601('2020-02-17T11:24:51.093Z'),
-    id: '21b5e30e-2480-41f1-bee6-e09a98bfb42e',
+    id: 'c4723691-2de4-439c-b68b-c03ea3b77190',
     labels: [
       'ventosus',
       'in',
@@ -2108,7 +2108,7 @@ req = Models::Operations::UpdateAdsCreativeRequest.new(
     metadata: [],
     name: 'Sauer, Stiedemann and Bauch',
     status: Models::Shared::AdsCreativeStatus::PAUSED,
-    updated_at: DateTime.iso8601('2021-07-05T07:11:00.286Z')
+    updated_at: DateTime.iso8601('2021-07-05T12:03:38.922Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2162,15 +2162,15 @@ req = Models::Operations::UpdateAdsGroupRequest.new(
     created_at: DateTime.iso8601('2019-08-29T17:59:41.045Z'),
     currency: 'USD',
     effective_status: Models::Shared::AdsGroupEffectiveStatus::PAUSED,
-    end_at: DateTime.iso8601('2026-07-30T09:52:31.259Z'),
-    id: '52378591-59b7-4bfa-b370-1841d8115aa6',
+    end_at: DateTime.iso8601('2026-07-31T08:44:53.009Z'),
+    id: 'b9ba815a-4da4-419c-bf52-9363d0d9cc10',
     language_locale: 'fr-FR',
     metadata: [],
     name: 'Shanahan, Schumm and Emard',
-    start_at: DateTime.iso8601('2026-02-11T06:19:29.319Z'),
+    start_at: DateTime.iso8601('2026-02-12T03:39:58.682Z'),
     status: Models::Shared::AdsGroupStatus::PROCESSING,
     targeting: Models::Shared::PropertyAdsGroupTargeting.new,
-    updated_at: DateTime.iso8601('2022-01-25T23:45:46.951Z')
+    updated_at: DateTime.iso8601('2022-01-26T07:43:53.234Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2219,11 +2219,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAdsInsertionorderRequest.new(
   ads_insertionorder: Models::Shared::AdsInsertionorder.new(
     created_at: DateTime.iso8601('2021-04-10T06:57:36.611Z'),
-    id: 'fc93812b-ce32-4813-b8da-3fed9901752c',
+    id: 'c043b176-4357-4418-83b0-68026a2d4401',
     metadata: [],
     name: 'Barton, Gorczany and Marks',
     status: Models::Shared::AdsInsertionorderStatus::UNSPECIFIED,
-    updated_at: DateTime.iso8601('2021-04-29T03:56:41.227Z')
+    updated_at: DateTime.iso8601('2021-04-29T04:09:52.639Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -2274,13 +2274,13 @@ req = Models::Operations::UpdateAdsOrganizationRequest.new(
     account_number: 'TgWQyrQXzW',
     created_at: DateTime.iso8601('2020-07-23T21:47:11.440Z'),
     currency: 'USD',
-    id: '72ffac95-d0f0-42e5-8433-01cba974411a',
+    id: 'cbf60c84-424a-422e-bc98-5e49626f9611',
     managers: [],
     metadata: [],
     name: 'Ullrich, Collier and Metz',
     status: Models::Shared::AdsOrganizationStatus::PROCESSING,
     timezone: 'Pacific/Kanton',
-    updated_at: DateTime.iso8601('2026-05-01T19:18:43.505Z')
+    updated_at: DateTime.iso8601('2026-05-02T17:06:16.628Z')
   ),
   connection_id: '<id>',
   id: '<id>'

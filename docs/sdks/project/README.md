@@ -81,14 +81,14 @@ res = s.project.create_task_project(task_project: Models::Shared::TaskProject.ne
   description: 'Curiositas.',
   has_children: false,
   has_tasks: false,
-  id: '025cf93b-9c26-4159-a392-6269615196f2',
+  id: 'c7f0ea8c-7272-4314-b887-dca431e6fa57',
   metadata: [
     Models::Shared::TaskMetadata.new(
       extra_data: {
 
       },
       format: Models::Shared::TaskMetadataFormat::TEXT,
-      id: '191b4831-5250-435c-bd64-b935f19dc541',
+      id: '8c8fd8a1-f187-4081-b6ec-5bf7cb2782af',
       namespace: 'custom',
       slug: 'vox',
       value: 'decens'
@@ -98,14 +98,14 @@ res = s.project.create_task_project(task_project: Models::Shared::TaskProject.ne
 
       },
       format: Models::Shared::TaskMetadataFormat::TEXT,
-      id: '117a8689-58a2-4738-ba05-32bad14d7f80',
+      id: '0ce7b1a3-663a-4fab-80bb-5e91671227c9',
       namespace: 'custom',
       slug: 'uterque',
       value: 'benevolentia'
     ),
   ],
   name: 'Baby',
-  updated_at: DateTime.iso8601('2023-10-14T22:51:35.203Z')
+  updated_at: DateTime.iso8601('2023-10-15T01:01:34.644Z')
 ), connection_id: '<id>')
 
 unless res.task_project.nil?
@@ -376,14 +376,14 @@ req = Models::Operations::PatchTaskProjectRequest.new(
     description: 'Curiositas.',
     has_children: false,
     has_tasks: false,
-    id: '3c017455-03c7-4bd8-97d3-9457f055e2e6',
+    id: '73d910a8-5d6d-4ea7-820d-3df45c52594c',
     metadata: [
       Models::Shared::TaskMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: '1daf09ad-80c9-43e6-8caf-3e7a4e9cb6e6',
+        id: '35bb98cf-8975-4c88-8629-8df6c6536b5b',
         namespace: 'custom',
         slug: 'vox',
         value: 'decens'
@@ -393,14 +393,14 @@ req = Models::Operations::PatchTaskProjectRequest.new(
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: '13d9f15a-ae96-46b9-9394-9086e571cfc2',
+        id: 'b1919758-9d9c-48f2-8220-8e7a6a591919',
         namespace: 'custom',
         slug: 'uterque',
         value: 'benevolentia'
       ),
     ],
     name: 'Baby',
-    updated_at: DateTime.iso8601('2023-10-14T22:51:35.204Z')
+    updated_at: DateTime.iso8601('2023-10-15T01:01:34.645Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -580,14 +580,14 @@ req = Models::Operations::UpdateTaskProjectRequest.new(
     description: 'Curiositas.',
     has_children: false,
     has_tasks: false,
-    id: '3c017455-03c7-4bd8-97d3-9457f055e2e6',
+    id: '73d910a8-5d6d-4ea7-820d-3df45c52594c',
     metadata: [
       Models::Shared::TaskMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: '1daf09ad-80c9-43e6-8caf-3e7a4e9cb6e6',
+        id: '35bb98cf-8975-4c88-8629-8df6c6536b5b',
         namespace: 'custom',
         slug: 'vox',
         value: 'decens'
@@ -597,14 +597,14 @@ req = Models::Operations::UpdateTaskProjectRequest.new(
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: '13d9f15a-ae96-46b9-9394-9086e571cfc2',
+        id: 'b1919758-9d9c-48f2-8220-8e7a6a591919',
         namespace: 'custom',
         slug: 'uterque',
         value: 'benevolentia'
       ),
     ],
     name: 'Baby',
-    updated_at: DateTime.iso8601('2023-10-14T22:51:35.204Z')
+    updated_at: DateTime.iso8601('2023-10-15T01:01:34.645Z')
   ),
   connection_id: '<id>',
   id: '<id>'

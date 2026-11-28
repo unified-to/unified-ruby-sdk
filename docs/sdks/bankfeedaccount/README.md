@@ -36,12 +36,12 @@ res = s.bankfeedaccount.create_accounting_bankfeedaccount(accounting_bankfeedacc
   created_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
   currency: 'AUD',
   feed_start_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
-  id: '0986d19c-d9a3-4195-aca0-14ab8a2ad69e',
+  id: '435ec4c0-1e2e-4885-9c63-aa3dd6612571',
   metadata: [],
   name: 'Kirlin - Rowe Checking',
   routing_number: '104153154',
   status: Models::Shared::AccountingBankfeedaccountStatus::ACTIVE,
-  updated_at: DateTime.iso8601('2024-05-07T14:49:31.568Z')
+  updated_at: DateTime.iso8601('2024-05-07T23:44:49.909Z')
 ), connection_id: '<id>')
 
 unless res.accounting_bankfeedaccount.nil?
@@ -183,12 +183,12 @@ req = Models::Operations::PatchAccountingBankfeedaccountRequest.new(
     created_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
     currency: 'AUD',
     feed_start_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
-    id: '5e509e43-0090-4e87-a859-4a5d2e115b53',
+    id: '5f4f1434-bfae-444b-bace-c3e172cd6c19',
     metadata: [],
     name: 'Kirlin - Rowe Checking',
     routing_number: '104153154',
     status: Models::Shared::AccountingBankfeedaccountStatus::ACTIVE,
-    updated_at: DateTime.iso8601('2024-05-07T14:49:31.577Z')
+    updated_at: DateTime.iso8601('2024-05-07T23:44:49.915Z')
   ),
   connection_id: '<id>',
   id: '<id>'
@@ -285,12 +285,12 @@ req = Models::Operations::UpdateAccountingBankfeedaccountRequest.new(
     created_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
     currency: 'AUD',
     feed_start_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
-    id: '5e509e43-0090-4e87-a859-4a5d2e115b53',
+    id: '5f4f1434-bfae-444b-bace-c3e172cd6c19',
     metadata: [],
     name: 'Kirlin - Rowe Checking',
     routing_number: '104153154',
     status: Models::Shared::AccountingBankfeedaccountStatus::ACTIVE,
-    updated_at: DateTime.iso8601('2024-05-07T14:49:31.577Z')
+    updated_at: DateTime.iso8601('2024-05-07T23:44:49.915Z')
   ),
   connection_id: '<id>',
   id: '<id>'
